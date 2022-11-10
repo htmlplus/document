@@ -7,8 +7,8 @@ const path = require('path');
 
 const DIRECTORY = './src/containers/example/examples';
 const FILE = './src/data/examples.ts';
-const LOCALE = path.join(__dirname, '../../examples/src/db.json');
-const REMOTE = 'https://github.com/htmlplus/examples/raw/main/src/db.json';
+const LOCALE = path.join(__dirname, '../../examples/dist/db.json');
+const REMOTE = 'https://github.com/htmlplus/examples/raw/main/dist/db.json';
 const HEADER = [
   '/**************************************************',
   ' * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY',
