@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Grid, Spinner } from '@htmlplus/react';
-
 const SpinnerType = () => {
   return (
     <Grid justifyContent="evenly">

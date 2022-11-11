@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Switch } from '@htmlplus/react';
-
 const Switch3D = () => {
   return (
     <div className="center">

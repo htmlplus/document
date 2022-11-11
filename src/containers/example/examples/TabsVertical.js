@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Tabs } from '@htmlplus/react';
-
 const TabsVertical = () => {
   return (
     <Tabs value="1" vertical>

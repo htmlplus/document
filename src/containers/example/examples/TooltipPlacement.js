@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Grid, Tooltip } from '@htmlplus/react';
-
 const TooltipPlacement = () => {
   return (
     <Grid gutter="md">

@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Breadcrumb } from '@htmlplus/react';
-
 const BreadcrumbDefault = () => {
   return (
     <div className="center">

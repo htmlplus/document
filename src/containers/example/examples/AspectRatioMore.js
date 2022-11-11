@@ -3,7 +3,6 @@
  **************************************************/
 
 import { AspectRatio, Grid } from '@htmlplus/react';
-
 const AspectRatioMore = () => {
   return (
     <Grid>

@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Card, Grid } from '@htmlplus/react';
-
 const CardBorderWidth = () => {
   return (
     <Grid justifyContent="evenly" gutter="md">

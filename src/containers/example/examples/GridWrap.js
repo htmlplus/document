@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Grid } from '@htmlplus/react';
-
 const GridWrap = () => {
   return (
     <Grid wrap="off">

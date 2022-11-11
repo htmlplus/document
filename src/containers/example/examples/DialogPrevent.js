@@ -3,13 +3,11 @@
  **************************************************/
 
 import { Dialog } from '@htmlplus/react';
-
 const DialogPrevent = () => {
   const ensure = (type, event) => {
     if (window.confirm(`Are you sure you want to ${type} it?`)) return;
     event.preventDefault();
   };
-
   return (
     <>
       <div className="center">

@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Cropper, Grid } from '@htmlplus/react';
-
 const CropperStyles = () => {
   return (
     <Grid gutter="md">

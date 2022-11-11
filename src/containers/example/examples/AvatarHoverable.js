@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Avatar } from '@htmlplus/react';
-
 const AvatarHoverable = () => {
   return (
     <div className="center">

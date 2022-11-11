@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Dialog } from '@htmlplus/react';
-
 const DialogFullscreen = () => {
   return (
     <>

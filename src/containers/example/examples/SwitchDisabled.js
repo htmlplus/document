@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Switch } from '@htmlplus/react';
-
 const SwitchDisabled = () => {
   return (
     <div className="center">

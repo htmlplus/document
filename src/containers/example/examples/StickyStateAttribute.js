@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Sticky } from '@htmlplus/react';
-
 const StickyStateAttribute = () => {
   return (
     <div className="container">

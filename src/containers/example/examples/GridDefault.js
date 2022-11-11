@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Grid } from '@htmlplus/react';
-
 const GridDefault = () => {
   return (
     <Grid>

@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Avatar } from '@htmlplus/react';
-
 const AvatarSize = () => {
   return (
     <div className="center">

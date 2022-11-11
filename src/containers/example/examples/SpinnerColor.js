@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Grid, Spinner } from '@htmlplus/react';
-
 const SpinnerColor = () => {
   return (
     <Grid justifyContent="evenly">

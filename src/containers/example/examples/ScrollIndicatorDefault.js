@@ -3,7 +3,6 @@
  **************************************************/
 
 import { ScrollIndicator } from '@htmlplus/react';
-
 const ScrollIndicatorDefault = () => {
   return (
     <div className="container">

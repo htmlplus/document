@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Switch } from '@htmlplus/react';
-
 const SwitchDefault = () => {
   return (
     <div className="center">

@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Icon } from '@htmlplus/react';
-
 const IconRotate = () => {
   return (
     <div className="center">

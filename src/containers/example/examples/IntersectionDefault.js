@@ -4,14 +4,11 @@
 
 import { useState } from 'react';
 import { Card, Intersection } from '@htmlplus/react';
-
 const IntersectionDefault = () => {
   const [intersecting, setIntersecting] = useState(false);
-
   const onChange = (event) => {
     setIntersecting(event.detail.isIntersecting);
   };
-
   return (
     <div className="container">
       <div className="status">

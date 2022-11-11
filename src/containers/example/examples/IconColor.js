@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Icon } from '@htmlplus/react';
-
 const IconColor = () => {
   return (
     <div className="center">

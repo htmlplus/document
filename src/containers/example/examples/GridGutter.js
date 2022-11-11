@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Grid } from '@htmlplus/react';
-
 const GridGutter = () => {
   return (
     <Grid gutter="lg">

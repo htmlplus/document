@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Spinner } from '@htmlplus/react';
-
 const SpinnerDefault = () => {
   return (
     <div className="center">

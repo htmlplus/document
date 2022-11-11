@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Icon } from '@htmlplus/react';
-
 const IconSize = () => {
   return (
     <div className="center">

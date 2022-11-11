@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Portal } from '@htmlplus/react';
-
 const PortalDefault = () => {
   return (
     <>

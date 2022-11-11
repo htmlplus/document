@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Breadcrumb } from '@htmlplus/react';
-
 const BreadcrumbSeparator = () => {
   return (
     <div className="center">

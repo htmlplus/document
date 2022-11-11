@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Grid, Tooltip } from '@htmlplus/react';
-
 const TooltipTrigger = () => {
   return (
     <Grid justifyContent="evenly">

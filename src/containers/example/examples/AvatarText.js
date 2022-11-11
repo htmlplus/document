@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Avatar } from '@htmlplus/react';
-
 const AvatarText = () => {
   return (
     <div className="center">

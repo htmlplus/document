@@ -4,14 +4,11 @@
 
 import { useState } from 'react';
 import { Cropper, Dialog } from '@htmlplus/react';
-
 const CropperDialog = () => {
   const [disabled, setDisabled] = useState(true);
-
   const change = (disabled) => {
     setDisabled(disabled);
   };
-
   return (
     <>
       <div className="center">

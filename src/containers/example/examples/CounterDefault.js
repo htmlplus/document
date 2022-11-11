@@ -4,7 +4,6 @@
 
 import { useState } from 'react';
 import { Counter } from '@htmlplus/react';
-
 const CounterDefault = () => {
   const [play, setPlay] = useState(false);
   return (

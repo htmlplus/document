@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Icon } from '@htmlplus/react';
-
 const IconDefault = () => {
   return (
     <div className="center">

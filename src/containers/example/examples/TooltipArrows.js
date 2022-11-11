@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Tooltip } from '@htmlplus/react';
-
 const TooltipArrows = () => {
   return (
     <>

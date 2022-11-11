@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Divider } from '@htmlplus/react';
-
 const DividerWidth = () => {
   return (
     <>

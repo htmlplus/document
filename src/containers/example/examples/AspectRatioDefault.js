@@ -3,7 +3,6 @@
  **************************************************/
 
 import { AspectRatio, Card } from '@htmlplus/react';
-
 const AspectRatioDefault = () => {
   return (
     <AspectRatio value="16/9">

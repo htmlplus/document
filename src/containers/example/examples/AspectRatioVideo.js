@@ -3,7 +3,6 @@
  **************************************************/
 
 import { AspectRatio } from '@htmlplus/react';
-
 const AspectRatioVideo = () => {
   return (
     <AspectRatio value="16/9">

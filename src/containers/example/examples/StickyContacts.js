@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Sticky } from '@htmlplus/react';
-
 const StickyContacts = () => {
   return (
     <div className="container">

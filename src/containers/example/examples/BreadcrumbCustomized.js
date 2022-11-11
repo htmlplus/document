@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Breadcrumb } from '@htmlplus/react';
-
 const BreadcrumbCustomized = () => {
   return (
     <Breadcrumb max={2}>

@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Grid, Spinner } from '@htmlplus/react';
-
 const SpinnerSize = () => {
   return (
     <Grid alignItems="center" justifyContent="evenly">

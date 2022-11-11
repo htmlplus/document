@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Tabs } from '@htmlplus/react';
-
 const TabsGrow = () => {
   return (
     <Tabs>

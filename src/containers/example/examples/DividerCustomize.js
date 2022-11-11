@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Divider, Grid } from '@htmlplus/react';
-
 const DividerCustomize = () => {
   return (
     <Grid alignItems="center" justifyContent="evenly">

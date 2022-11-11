@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Grid } from '@htmlplus/react';
-
 const GridJustifyContent = () => {
   return (
     <Grid justifyContent="center">

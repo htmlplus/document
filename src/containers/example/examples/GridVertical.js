@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Grid } from '@htmlplus/react';
-
 const GridVertical = () => {
   return (
     <Grid alignItems="center" vertical>

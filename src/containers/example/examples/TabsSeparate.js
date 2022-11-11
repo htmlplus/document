@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Tabs } from '@htmlplus/react';
-
 const TabsSeparate = () => {
   return (
     <>

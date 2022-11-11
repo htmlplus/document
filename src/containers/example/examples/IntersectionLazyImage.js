@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Card, Intersection, Spinner } from '@htmlplus/react';
-
 const IntersectionLazyImage = () => {
   const onChange = (event) => {
     if (!event.detail.isIntersecting) return;
@@ -16,7 +15,6 @@ const IntersectionLazyImage = () => {
       spinner.setAttribute('data-hidden', 'true');
     }, 1000);
   };
-
   return (
     <div className="container">
       <Intersection once onChange={(event) => onChange(event)}>

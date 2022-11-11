@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Card, Divider } from '@htmlplus/react';
-
 const DividerCard = () => {
   return (
     <Card elevation="10">

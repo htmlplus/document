@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Switch } from '@htmlplus/react';
-
 const SwitchCustomized = () => {
   return (
     <div className="container">

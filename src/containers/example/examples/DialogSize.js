@@ -4,20 +4,16 @@
 
 import { useState } from 'react';
 import { Dialog, Grid } from '@htmlplus/react';
-
 const DialogSize = () => {
   const [open, setOpen] = useState(false);
   const [size, setSize] = useState('md');
-
   const hide = () => {
     setOpen(false);
   };
-
   const show = (size) => {
     setSize(size);
     setOpen(true);
   };
-
   return (
     <>
       <Grid justifyContent="center" gutter="md">

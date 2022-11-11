@@ -4,19 +4,15 @@
 
 import { useState } from 'react';
 import { Card, ClickOutside } from '@htmlplus/react';
-
 const ClickOutsideDefault = () => {
   const [inside, setInside] = useState(0);
   const [outside, setOutside] = useState(0);
-
   const onClick = () => {
     setInside(inside + 1);
   };
-
   const onClickOutside = () => {
     setOutside(outside + 1);
   };
-
   return (
     <ClickOutside
       onClick={() => onClick()}

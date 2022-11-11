@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Tabs } from '@htmlplus/react';
-
 const TabsDefault = () => {
   return (
     <Tabs value="1">

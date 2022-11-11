@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Card, Grid } from '@htmlplus/react';
-
 const CardTile = () => {
   return (
     <div className="container">

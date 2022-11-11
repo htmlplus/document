@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Breadcrumb } from '@htmlplus/react';
-
 const BreadcrumbCustomExpander = () => {
   return (
     <div className="center">

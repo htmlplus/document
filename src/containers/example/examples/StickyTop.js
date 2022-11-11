@@ -3,7 +3,6 @@
  **************************************************/
 
 import { Sticky } from '@htmlplus/react';
-
 const StickyTop = () => {
   return (
     <div className="container">
