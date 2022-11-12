@@ -2,6 +2,8 @@
   - Containers
   - Forms
   - Griding System
+  - Dialogs/Popups
+  - Advanced
   - etc
 - Statistics
   - Total Frameworks
@@ -11,8 +13,9 @@
   - Total Examples Count Per Framework
   - Theme Count
 - Statistics 2
-  - dowanload
+  - dowanloads
   - stars
+  - issues count
   - etc
 - Features
   - Cross Framework
@@ -45,7 +48,6 @@
   - Razor
   - Blade
 - Platforms
-  - Server
   - Web
   - Mobile (Hybrid)
   - Desktop (electron)
