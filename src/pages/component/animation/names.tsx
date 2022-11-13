@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 
 // TODO
 import '@htmlplus/core/animation/names/all.js';
@@ -10,6 +10,7 @@ import { Toc } from '@app/containers';
 import { LayoutDefault } from '@app/layouts';
 
 const Animations = ({ categories }: any) => {
+  const [playing, setPlaying] = useState('');
   return (
     <LayoutDefault>
       <h1>Animations</h1>
@@ -60,15 +61,13 @@ const Animations = ({ categories }: any) => {
           <Grid gutter="md">
             {category.items.map((item: any) => (
               <Grid.Item class="animation" key={`${category.key}:${item.key}`}>
-                <Animation
-                  name={item.key}
-                  onMouseEnter={(event) => {
-                    (event.target as any)['run'] = false;
-                    requestAnimationFrame(() => {
-                      (event.target as any)['run'] = true;
-                    });
-                  }}
-                />
+                <div
+                  className={playing == item.key ? '' : 'stop'}
+                  onMouseEnter={() => setPlaying(item.key)}
+                  onMouseLeave={() => setPlaying('')}
+                >
+                  {playing == item.key && <Animation name={item.key} run />}
+                </div>
                 <small>{item.title}</small>
               </Grid.Item>
             ))}
