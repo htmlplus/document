@@ -63,9 +63,9 @@ const Animations = ({ categories }: any) => {
                 <Animation
                   name={item.key}
                   onMouseEnter={(event) => {
-                    (event.target as any)['play'] = false;
+                    (event.target as any)['run'] = false;
                     requestAnimationFrame(() => {
-                      (event.target as any)['play'] = true;
+                      (event.target as any)['run'] = true;
                     });
                   }}
                 />
