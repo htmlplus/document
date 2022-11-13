@@ -63,7 +63,7 @@ const Home: NextPage = () => {
           <h1 style={{ border: 'none' }}>The Most Flexible Open Source Web Component Library.</h1>
           <p style={{ maxWidth: '700px', margin: 'auto' }}>
             HTMLPLUS is framework-less and lightweight. It's totally native and developed purely with javascript. All
-            HTMLPLUS components are customizable and configurable
+            HTMLPLUS components are customizable and configurable.
           </p>
           <div>
             <NextLink
