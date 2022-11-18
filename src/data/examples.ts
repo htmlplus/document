@@ -8,7 +8,7 @@ export const examples: any[] = [
     "category": "angular",
     "component": "animation",
     "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
       "style": ".center {\n  text-align: center;\n}\nplus-animation {\n  display: inline-block;\n}\n",
       "template": "<div class=\"center\">\n  <plus-animation id=\"animation1\" name=\"tada\">\n    <button (click)=\"window.animation1.run = true\">Click Me</button>\n  </plus-animation>\n</div>\n"
     }
@@ -28,7 +28,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "animation",
     "detail": {
-      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationButton = () => {\n  return (\n    <div className=\"center\">\n      <Animation id=\"animation1\" name=\"tada\">\n        <button onClick={() => (window.animation1.run = true)}>Click Me</button>\n      </Animation>\n    </div>\n  );\n};\nexport default AnimationButton;\n",
+      "script": "import { Animation } from '@htmlplus/react';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\nconst AnimationButton = () => {\n  return (\n    <div className=\"center\">\n      <Animation id=\"animation1\" name=\"tada\">\n        <button onClick={() => (window.animation1.run = true)}>Click Me</button>\n      </Animation>\n    </div>\n  );\n};\nexport default AnimationButton;\n",
       "style": ".center {\n  text-align: center;\n}\nplus-animation {\n  display: inline-block;\n}\n"
     }
   },
@@ -37,7 +37,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\nconst AnimationButton = () => {\n  return (\n    <div className=\"center\">\n      <plus-animation id=\"animation1\" name=\"tada\">\n        <button onClick={() => (window.animation1.run = true)}>Click Me</button>\n      </plus-animation>\n    </div>\n  );\n};\nexport default AnimationButton;\n",
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\nconst AnimationButton = () => {\n  return (\n    <div className=\"center\">\n      <plus-animation id=\"animation1\" name=\"tada\">\n        <button onClick={() => (window.animation1.run = true)}>Click Me</button>\n      </plus-animation>\n    </div>\n  );\n};\nexport default AnimationButton;\n",
       "style": ".center {\n  text-align: center;\n}\nplus-animation {\n  display: inline-block;\n}\n"
     }
   },
@@ -46,7 +46,7 @@ export const examples: any[] = [
     "category": "svelte",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\n",
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\n",
       "style": ".center {\n  text-align: center;\n}\nplus-animation {\n  display: inline-block;\n}\n",
       "template": "<div class=\"center\">\n  <plus-animation id=\"animation1\" name=\"tada\">\n    <button on:click=\"{() => window.animation1.run = true}\">Click Me</button>\n  </plus-animation>\n</div>\n"
     }
@@ -56,7 +56,7 @@ export const examples: any[] = [
     "category": "vue",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\n",
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\n",
       "style": ".center {\n  text-align: center;\n}\nplus-animation {\n  display: inline-block;\n}\n",
       "template": "<div class=\"center\">\n  <plus-animation id=\"animation1\" name=\"tada\">\n    <button @click=\"window.animation1.run = true\">Click Me</button>\n  </plus-animation>\n</div>\n"
     }
@@ -66,7 +66,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "animation",
     "detail": {
-      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationButton = () => {\n  return (\n    <div className=\"center\">\n      <Animation id=\"animation1\" name=\"tada\">\n        <button onClick={() => (window.animation1.run = true)}>Click Me</button>\n      </Animation>\n    </div>\n  );\n};\n\nconst AnimationButtonExample = () => {\n  return (\n    <div className=\"ex-animation-button\">\n      <AnimationButton />\n      <style>{`.ex-animation-button .center {  text-align: center;}.ex-animation-button plus-animation {  display: inline-block;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationButtonExample;"
+      "script": "import { Animation } from '@htmlplus/react';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\nconst AnimationButton = () => {\n  return (\n    <div className=\"center\">\n      <Animation id=\"animation1\" name=\"tada\">\n        <button onClick={() => (window.animation1.run = true)}>Click Me</button>\n      </Animation>\n    </div>\n  );\n};\n\nconst AnimationButtonExample = () => {\n  return (\n    <div className=\"ex-animation-button\">\n      <AnimationButton />\n      <style>{`.ex-animation-button .center {  text-align: center;}.ex-animation-button plus-animation {  display: inline-block;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationButtonExample;"
     }
   },
   {
