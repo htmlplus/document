@@ -4,13 +4,79 @@
 
 export const examples: any[] = [
   {
+    "key": "button",
+    "category": "angular",
+    "component": "animation",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": ".center {\n  text-align: center;\n}\nplus-animation {\n  display: inline-block;\n}\n",
+      "template": "<div class=\"center\">\n  <plus-animation id=\"animation1\" name=\"tada\">\n    <button (click)=\"window.animation1.run = true\">Click Me</button>\n  </plus-animation>\n</div>\n"
+    }
+  },
+  {
+    "key": "button",
+    "category": "javascript",
+    "component": "animation",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\n\nbutton1.addEventListener('click', () => {\r\n  animation1.run = true;\r\n});",
+      "style": ".center {\n  text-align: center;\n}\nplus-animation {\n  display: inline-block;\n}\n",
+      "template": "<div class=\"center\">\r\n  <plus-animation id=\"animation1\" name=\"tada\">\r\n    <button id=\"button1\">Click Me</button>\r\n  </plus-animation>\r\n</div>"
+    }
+  },
+  {
+    "key": "button",
+    "category": "react",
+    "component": "animation",
+    "detail": {
+      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationButton = () => {\n  return (\n    <div className=\"center\">\n      <Animation id=\"animation1\" name=\"tada\">\n        <button onClick={() => (window.animation1.run = true)}>Click Me</button>\n      </Animation>\n    </div>\n  );\n};\nexport default AnimationButton;\n",
+      "style": ".center {\n  text-align: center;\n}\nplus-animation {\n  display: inline-block;\n}\n"
+    }
+  },
+  {
+    "key": "button",
+    "category": "react@experimental",
+    "component": "animation",
+    "detail": {
+      "script": "import '@htmlplus/core/animation.js';\nconst AnimationButton = () => {\n  return (\n    <div className=\"center\">\n      <plus-animation id=\"animation1\" name=\"tada\">\n        <button onClick={() => (window.animation1.run = true)}>Click Me</button>\n      </plus-animation>\n    </div>\n  );\n};\nexport default AnimationButton;\n",
+      "style": ".center {\n  text-align: center;\n}\nplus-animation {\n  display: inline-block;\n}\n"
+    }
+  },
+  {
+    "key": "button",
+    "category": "svelte",
+    "component": "animation",
+    "detail": {
+      "script": "import '@htmlplus/core/animation.js';\n",
+      "style": ".center {\n  text-align: center;\n}\nplus-animation {\n  display: inline-block;\n}\n",
+      "template": "<div class=\"center\">\n  <plus-animation id=\"animation1\" name=\"tada\">\n    <button on:click=\"{() => window.animation1.run = true}\">Click Me</button>\n  </plus-animation>\n</div>\n"
+    }
+  },
+  {
+    "key": "button",
+    "category": "vue",
+    "component": "animation",
+    "detail": {
+      "script": "import '@htmlplus/core/animation.js';\n",
+      "style": ".center {\n  text-align: center;\n}\nplus-animation {\n  display: inline-block;\n}\n",
+      "template": "<div class=\"center\">\n  <plus-animation id=\"animation1\" name=\"tada\">\n    <button @click=\"window.animation1.run = true\">Click Me</button>\n  </plus-animation>\n</div>\n"
+    }
+  },
+  {
+    "key": "button",
+    "category": "preview",
+    "component": "animation",
+    "detail": {
+      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationButton = () => {\n  return (\n    <div className=\"center\">\n      <Animation id=\"animation1\" name=\"tada\">\n        <button onClick={() => (window.animation1.run = true)}>Click Me</button>\n      </Animation>\n    </div>\n  );\n};\n\nconst AnimationButtonExample = () => {\n  return (\n    <div className=\"ex-animation-button\">\n      <AnimationButton />\n      <style>{`.ex-animation-button .center {  text-align: center;}.ex-animation-button plus-animation {  display: inline-block;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationButtonExample;"
+    }
+  },
+  {
     "key": "default",
     "category": "angular",
     "component": "animation",
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
       "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
-      "template": "<plus-animation name=\"fade-in\" iterations=\"Infinity\" run></plus-animation>\n"
+      "template": "<plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n"
     }
   },
   {
@@ -20,7 +86,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\n",
       "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
-      "template": "<plus-animation name=\"fade-in\" iterations=\"Infinity\" run></plus-animation>\n"
+      "template": "<plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n"
     }
   },
   {
@@ -28,7 +94,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "animation",
     "detail": {
-      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationDefault = () => {\n  return <Animation name=\"fade-in\" iterations=\"Infinity\" run></Animation>;\n};\nexport default AnimationDefault;\n",
+      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationDefault = () => {\n  return <Animation iterations=\"Infinity\" name=\"fade-in\" run></Animation>;\n};\nexport default AnimationDefault;\n",
       "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n"
     }
   },
@@ -37,7 +103,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\nconst AnimationDefault = () => {\n  return (\n    <plus-animation name=\"fade-in\" iterations=\"Infinity\" run></plus-animation>\n  );\n};\nexport default AnimationDefault;\n",
+      "script": "import '@htmlplus/core/animation.js';\nconst AnimationDefault = () => {\n  return (\n    <plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n  );\n};\nexport default AnimationDefault;\n",
       "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n"
     }
   },
@@ -48,7 +114,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import '@htmlplus/core/animation.js';\n",
       "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
-      "template": "<plus-animation name=\"fade-in\" iterations=\"Infinity\" run></plus-animation>\n"
+      "template": "<plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n"
     }
   },
   {
@@ -58,7 +124,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import '@htmlplus/core/animation.js';\n",
       "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
-      "template": "<plus-animation name=\"fade-in\" iterations=\"Infinity\" run></plus-animation>\n"
+      "template": "<plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n"
     }
   },
   {
@@ -66,7 +132,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "animation",
     "detail": {
-      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationDefault = () => {\n  return <Animation name=\"fade-in\" iterations=\"Infinity\" run></Animation>;\n};\n\nconst AnimationDefaultExample = () => {\n  return (\n    <div className=\"ex-animation-default\">\n      <AnimationDefault />\n      <style>{`.ex-animation-default plus-animation {  background: lightgray;  width: 100px;  height: 100px;  margin: auto;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationDefaultExample;"
+      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationDefault = () => {\n  return <Animation iterations=\"Infinity\" name=\"fade-in\" run></Animation>;\n};\n\nconst AnimationDefaultExample = () => {\n  return (\n    <div className=\"ex-animation-default\">\n      <AnimationDefault />\n      <style>{`.ex-animation-default plus-animation {  background: lightgray;  width: 100px;  height: 100px;  margin: auto;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationDefaultExample;"
     }
   },
   {
@@ -76,7 +142,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
       "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
-      "template": "<plus-animation\n  name=\"fade-in\"\n  duration=\"2500\"\n  iterations=\"Infinity\"\n  run\n></plus-animation>\n"
+      "template": "<plus-animation\n  duration=\"2500\"\n  iterations=\"Infinity\"\n  name=\"fade-in\"\n  run\n></plus-animation>\n"
     }
   },
   {
@@ -86,7 +152,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\n",
       "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
-      "template": "<plus-animation\n  name=\"fade-in\"\n  duration=\"2500\"\n  iterations=\"Infinity\"\n  run\n></plus-animation>\n"
+      "template": "<plus-animation\n  duration=\"2500\"\n  iterations=\"Infinity\"\n  name=\"fade-in\"\n  run\n></plus-animation>\n"
     }
   },
   {
@@ -94,7 +160,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "animation",
     "detail": {
-      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationDuration = () => {\n  return (\n    <Animation\n      name=\"fade-in\"\n      duration=\"2500\"\n      iterations=\"Infinity\"\n      run\n    ></Animation>\n  );\n};\nexport default AnimationDuration;\n",
+      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationDuration = () => {\n  return (\n    <Animation\n      duration=\"2500\"\n      iterations=\"Infinity\"\n      name=\"fade-in\"\n      run\n    ></Animation>\n  );\n};\nexport default AnimationDuration;\n",
       "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n"
     }
   },
@@ -103,7 +169,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\nconst AnimationDuration = () => {\n  return (\n    <plus-animation\n      name=\"fade-in\"\n      duration=\"2500\"\n      iterations=\"Infinity\"\n      run\n    ></plus-animation>\n  );\n};\nexport default AnimationDuration;\n",
+      "script": "import '@htmlplus/core/animation.js';\nconst AnimationDuration = () => {\n  return (\n    <plus-animation\n      duration=\"2500\"\n      iterations=\"Infinity\"\n      name=\"fade-in\"\n      run\n    ></plus-animation>\n  );\n};\nexport default AnimationDuration;\n",
       "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n"
     }
   },
@@ -114,7 +180,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import '@htmlplus/core/animation.js';\n",
       "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
-      "template": "<plus-animation\n  name=\"fade-in\"\n  duration=\"2500\"\n  iterations=\"Infinity\"\n  run\n></plus-animation>\n"
+      "template": "<plus-animation\n  duration=\"2500\"\n  iterations=\"Infinity\"\n  name=\"fade-in\"\n  run\n></plus-animation>\n"
     }
   },
   {
@@ -124,7 +190,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import '@htmlplus/core/animation.js';\n",
       "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
-      "template": "<plus-animation\n  name=\"fade-in\"\n  duration=\"2500\"\n  iterations=\"Infinity\"\n  run\n></plus-animation>\n"
+      "template": "<plus-animation\n  duration=\"2500\"\n  iterations=\"Infinity\"\n  name=\"fade-in\"\n  run\n></plus-animation>\n"
     }
   },
   {
@@ -132,7 +198,73 @@ export const examples: any[] = [
     "category": "preview",
     "component": "animation",
     "detail": {
-      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationDuration = () => {\n  return (\n    <Animation\n      name=\"fade-in\"\n      duration=\"2500\"\n      iterations=\"Infinity\"\n      run\n    ></Animation>\n  );\n};\n\nconst AnimationDurationExample = () => {\n  return (\n    <div className=\"ex-animation-duration\">\n      <AnimationDuration />\n      <style>{`.ex-animation-duration plus-animation {  background: lightgray;  width: 100px;  height: 100px;  margin: auto;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationDurationExample;"
+      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationDuration = () => {\n  return (\n    <Animation\n      duration=\"2500\"\n      iterations=\"Infinity\"\n      name=\"fade-in\"\n      run\n    ></Animation>\n  );\n};\n\nconst AnimationDurationExample = () => {\n  return (\n    <div className=\"ex-animation-duration\">\n      <AnimationDuration />\n      <style>{`.ex-animation-duration plus-animation {  background: lightgray;  width: 100px;  height: 100px;  margin: auto;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationDurationExample;"
+    }
+  },
+  {
+    "key": "easing",
+    "category": "angular",
+    "component": "animation",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
+      "template": "<plus-grid justify-content=\"evenly\" gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation\n      easing=\"ease-in\"\n      iterations=\"Infinity\"\n      name=\"fade-in\"\n      run\n    ></plus-animation>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation\n      easing=\"ease-out\"\n      iterations=\"Infinity\"\n      name=\"fade-in\"\n      run\n    ></plus-animation>\n  </plus-grid-item>\n</plus-grid>\n"
+    }
+  },
+  {
+    "key": "easing",
+    "category": "javascript",
+    "component": "animation",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\nimport 'https://unpkg.com/@htmlplus/core/grid.js';\nimport 'https://unpkg.com/@htmlplus/core/grid-item.js';\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
+      "template": "<plus-grid justify-content=\"evenly\" gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation\n      easing=\"ease-in\"\n      iterations=\"Infinity\"\n      name=\"fade-in\"\n      run\n    ></plus-animation>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation\n      easing=\"ease-out\"\n      iterations=\"Infinity\"\n      name=\"fade-in\"\n      run\n    ></plus-animation>\n  </plus-grid-item>\n</plus-grid>\n"
+    }
+  },
+  {
+    "key": "easing",
+    "category": "react",
+    "component": "animation",
+    "detail": {
+      "script": "import { Animation, Grid } from '@htmlplus/react';\nconst AnimationEasing = () => {\n  return (\n    <Grid justifyContent=\"evenly\" gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Animation\n          easing=\"ease-in\"\n          iterations=\"Infinity\"\n          name=\"fade-in\"\n          run\n        ></Animation>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Animation\n          easing=\"ease-out\"\n          iterations=\"Infinity\"\n          name=\"fade-in\"\n          run\n        ></Animation>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default AnimationEasing;\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n"
+    }
+  },
+  {
+    "key": "easing",
+    "category": "react@experimental",
+    "component": "animation",
+    "detail": {
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst AnimationEasing = () => {\n  return (\n    <plus-grid justify-content=\"evenly\" gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"auto\">\n        <plus-animation\n          easing=\"ease-in\"\n          iterations=\"Infinity\"\n          name=\"fade-in\"\n          run\n        ></plus-animation>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"auto\">\n        <plus-animation\n          easing=\"ease-out\"\n          iterations=\"Infinity\"\n          name=\"fade-in\"\n          run\n        ></plus-animation>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default AnimationEasing;\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n"
+    }
+  },
+  {
+    "key": "easing",
+    "category": "svelte",
+    "component": "animation",
+    "detail": {
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
+      "template": "<plus-grid justify-content=\"evenly\" gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation\n      easing=\"ease-in\"\n      iterations=\"Infinity\"\n      name=\"fade-in\"\n      run\n    ></plus-animation>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation\n      easing=\"ease-out\"\n      iterations=\"Infinity\"\n      name=\"fade-in\"\n      run\n    ></plus-animation>\n  </plus-grid-item>\n</plus-grid>\n"
+    }
+  },
+  {
+    "key": "easing",
+    "category": "vue",
+    "component": "animation",
+    "detail": {
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
+      "template": "<plus-grid justify-content=\"evenly\" gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation\n      easing=\"ease-in\"\n      iterations=\"Infinity\"\n      name=\"fade-in\"\n      run\n    ></plus-animation>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation\n      easing=\"ease-out\"\n      iterations=\"Infinity\"\n      name=\"fade-in\"\n      run\n    ></plus-animation>\n  </plus-grid-item>\n</plus-grid>\n"
+    }
+  },
+  {
+    "key": "easing",
+    "category": "preview",
+    "component": "animation",
+    "detail": {
+      "script": "import { Animation, Grid } from '@htmlplus/react';\nconst AnimationEasing = () => {\n  return (\n    <Grid justifyContent=\"evenly\" gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Animation\n          easing=\"ease-in\"\n          iterations=\"Infinity\"\n          name=\"fade-in\"\n          run\n        ></Animation>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Animation\n          easing=\"ease-out\"\n          iterations=\"Infinity\"\n          name=\"fade-in\"\n          run\n        ></Animation>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst AnimationEasingExample = () => {\n  return (\n    <div className=\"ex-animation-easing\">\n      <AnimationEasing />\n      <style>{`.ex-animation-easing plus-animation {  background: lightgray;  width: 100px;  height: 100px;  margin: auto;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationEasingExample;"
     }
   },
   {
@@ -280,7 +412,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
       "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
-      "template": "<plus-grid justify-content=\"evenly\" gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation name=\"fade-in\" iterations=\"Infinity\" run></plus-animation>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation name=\"fade-out\" iterations=\"Infinity\" run></plus-animation>\n  </plus-grid-item>\n</plus-grid>\n"
+      "template": "<plus-grid justify-content=\"evenly\" gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation iterations=\"Infinity\" name=\"fade-out\" run></plus-animation>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -290,7 +422,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\nimport 'https://unpkg.com/@htmlplus/core/grid.js';\nimport 'https://unpkg.com/@htmlplus/core/grid-item.js';\n",
       "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
-      "template": "<plus-grid justify-content=\"evenly\" gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation name=\"fade-in\" iterations=\"Infinity\" run></plus-animation>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation name=\"fade-out\" iterations=\"Infinity\" run></plus-animation>\n  </plus-grid-item>\n</plus-grid>\n"
+      "template": "<plus-grid justify-content=\"evenly\" gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation iterations=\"Infinity\" name=\"fade-out\" run></plus-animation>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -298,7 +430,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "animation",
     "detail": {
-      "script": "import { Animation, Grid } from '@htmlplus/react';\nconst AnimationName = () => {\n  return (\n    <Grid justifyContent=\"evenly\" gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Animation name=\"fade-in\" iterations=\"Infinity\" run></Animation>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Animation name=\"fade-out\" iterations=\"Infinity\" run></Animation>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default AnimationName;\n",
+      "script": "import { Animation, Grid } from '@htmlplus/react';\nconst AnimationName = () => {\n  return (\n    <Grid justifyContent=\"evenly\" gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Animation iterations=\"Infinity\" name=\"fade-in\" run></Animation>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Animation iterations=\"Infinity\" name=\"fade-out\" run></Animation>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default AnimationName;\n",
       "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n"
     }
   },
@@ -307,7 +439,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst AnimationName = () => {\n  return (\n    <plus-grid justify-content=\"evenly\" gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"auto\">\n        <plus-animation\n          name=\"fade-in\"\n          iterations=\"Infinity\"\n          run\n        ></plus-animation>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"auto\">\n        <plus-animation\n          name=\"fade-out\"\n          iterations=\"Infinity\"\n          run\n        ></plus-animation>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default AnimationName;\n",
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst AnimationName = () => {\n  return (\n    <plus-grid justify-content=\"evenly\" gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"auto\">\n        <plus-animation\n          iterations=\"Infinity\"\n          name=\"fade-in\"\n          run\n        ></plus-animation>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"auto\">\n        <plus-animation\n          iterations=\"Infinity\"\n          name=\"fade-out\"\n          run\n        ></plus-animation>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default AnimationName;\n",
       "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n"
     }
   },
@@ -318,7 +450,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n",
       "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
-      "template": "<plus-grid justify-content=\"evenly\" gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation name=\"fade-in\" iterations=\"Infinity\" run></plus-animation>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation name=\"fade-out\" iterations=\"Infinity\" run></plus-animation>\n  </plus-grid-item>\n</plus-grid>\n"
+      "template": "<plus-grid justify-content=\"evenly\" gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation iterations=\"Infinity\" name=\"fade-out\" run></plus-animation>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -328,7 +460,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n",
       "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
-      "template": "<plus-grid justify-content=\"evenly\" gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation name=\"fade-in\" iterations=\"Infinity\" run></plus-animation>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation name=\"fade-out\" iterations=\"Infinity\" run></plus-animation>\n  </plus-grid-item>\n</plus-grid>\n"
+      "template": "<plus-grid justify-content=\"evenly\" gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"auto\">\n    <plus-animation iterations=\"Infinity\" name=\"fade-out\" run></plus-animation>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -336,7 +468,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "animation",
     "detail": {
-      "script": "import { Animation, Grid } from '@htmlplus/react';\nconst AnimationName = () => {\n  return (\n    <Grid justifyContent=\"evenly\" gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Animation name=\"fade-in\" iterations=\"Infinity\" run></Animation>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Animation name=\"fade-out\" iterations=\"Infinity\" run></Animation>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst AnimationNameExample = () => {\n  return (\n    <div className=\"ex-animation-name\">\n      <AnimationName />\n      <style>{`.ex-animation-name plus-animation {  background: lightgray;  width: 100px;  height: 100px;  margin: auto;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationNameExample;"
+      "script": "import { Animation, Grid } from '@htmlplus/react';\nconst AnimationName = () => {\n  return (\n    <Grid justifyContent=\"evenly\" gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Animation iterations=\"Infinity\" name=\"fade-in\" run></Animation>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Animation iterations=\"Infinity\" name=\"fade-out\" run></Animation>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst AnimationNameExample = () => {\n  return (\n    <div className=\"ex-animation-name\">\n      <AnimationName />\n      <style>{`.ex-animation-name plus-animation {  background: lightgray;  width: 100px;  height: 100px;  margin: auto;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationNameExample;"
     }
   },
   {
