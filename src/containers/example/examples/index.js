@@ -8,6 +8,7 @@ export const AnimationButton = dynamic(() => import('./AnimationButton').then((c
 export const AnimationDefault = dynamic(() => import('./AnimationDefault').then((component) => component), { ssr: false });
 export const AnimationDuration = dynamic(() => import('./AnimationDuration').then((component) => component), { ssr: false });
 export const AnimationEasing = dynamic(() => import('./AnimationEasing').then((component) => component), { ssr: false });
+export const AnimationIntersection = dynamic(() => import('./AnimationIntersection').then((component) => component), { ssr: false });
 export const AnimationKeyframes = dynamic(() => import('./AnimationKeyframes').then((component) => component), { ssr: false });
 export const AnimationMethods = dynamic(() => import('./AnimationMethods').then((component) => component), { ssr: false });
 export const AnimationName = dynamic(() => import('./AnimationName').then((component) => component), { ssr: false });
