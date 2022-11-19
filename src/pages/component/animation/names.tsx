@@ -14,12 +14,14 @@ const Animations = ({ categories }: any) => {
   return (
     <LayoutDefault>
       <h1>Animations</h1>
-      <p>TODO</p>
+      <p>
+        A large range of animations for use in the <code>animation</code> component.
+      </p>
       <h2>
         <Toc.Item level={2}>Usage</Toc.Item>
       </h2>
-      <p>Chose one of the ways.</p>
-      <p>1) If you need a transition from a category</p>
+      <p>Three ways to import a transition</p>
+      <p>1) Imports a transition from a category</p>
       <Code language="js">
         {[
           '/* Template */',
@@ -30,7 +32,7 @@ const Animations = ({ categories }: any) => {
         ].join('\n')}
       </Code>
       <br />
-      <p>2) If you need a category</p>
+      <p>2) Imports a category</p>
       <Code language="js">
         {[
           '/* Template */',
@@ -41,13 +43,13 @@ const Animations = ({ categories }: any) => {
         ].join('\n')}
       </Code>
       <br />
-      <p>3) If you need all categories</p>
+      <p>3) Imports all categories</p>
       <Code language="js">{["import '@htmlplus/core/animation/names/transition/all.js';"].join('\n')}</Code>
       <h2>
         <Toc.Item level={2}>Categories</Toc.Item>
       </h2>
       <p>
-        Animations are based on those found in the popular{' '}
+        All animations are based on the popular{' '}
         <a href="https://animate.style" target="_blank">
           Animate.css
         </a>{' '}
