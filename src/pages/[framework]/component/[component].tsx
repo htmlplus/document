@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 
-import { headerCase, pascalCase } from 'change-case';
+import { capitalCase, headerCase, pascalCase } from 'change-case';
 
 import { LastModified, Markup } from '@app/containers';
 import { components, examples, frameworks } from '@app/data';
@@ -55,7 +55,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
         const tabs: any[] = [];
 
-        const title = headerCase(example.key);
+        const title = capitalCase(example.key);
 
         const componentName = `${pascalCase(example.component)}${pascalCase(example.key)}`;
 

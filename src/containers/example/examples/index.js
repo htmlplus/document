@@ -12,6 +12,7 @@ export const AnimationIntersection = dynamic(() => import('./AnimationIntersecti
 export const AnimationKeyframes = dynamic(() => import('./AnimationKeyframes').then((component) => component), { ssr: false });
 export const AnimationMethods = dynamic(() => import('./AnimationMethods').then((component) => component), { ssr: false });
 export const AnimationName = dynamic(() => import('./AnimationName').then((component) => component), { ssr: false });
+export const AnimationRegisterACustomName = dynamic(() => import('./AnimationRegisterACustomName').then((component) => component), { ssr: false });
 export const AspectRatioDefault = dynamic(() => import('./AspectRatioDefault').then((component) => component), { ssr: false });
 export const AspectRatioMore = dynamic(() => import('./AspectRatioMore').then((component) => component), { ssr: false });
 export const AspectRatioVideo = dynamic(() => import('./AspectRatioVideo').then((component) => component), { ssr: false });
