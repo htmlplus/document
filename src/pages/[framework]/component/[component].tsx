@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 import { capitalCase, headerCase, pascalCase } from 'change-case';
+import fs from 'fs';
 
 import { LastModified, Markup } from '@app/containers';
 import { components, examples, frameworks } from '@app/data';
@@ -23,9 +24,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const current = components.find((x) => x.key == component);
 
-  if (current)
+  if (current) {
     current.readmeContent =
-      current.readmeContent?.replace(/<Example value=(".*") /g, `<Example value={example[$1]} `) || null;
+      fs
+        .readFileSync(`src/content/en/components/${component}.md`, 'utf8')
+        .replace(/<Example value=(".*") /g, `<Example value={example[$1]} `) || null;
+  }
 
   // TODO
   const example = (() => {
