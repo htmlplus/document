@@ -203,12 +203,6 @@ export const examples: any[] = [
   },
   {
     "key": "easing",
-    "category": "description",
-    "component": "animation",
-    "detail": "To see all easings click [here](https://github.com/htmlplus/core/blob/main/src/components/animation/animation.constants.ts)."
-  },
-  {
-    "key": "easing",
     "category": "angular",
     "component": "animation",
     "detail": {
@@ -473,12 +467,6 @@ export const examples: any[] = [
   },
   {
     "key": "name",
-    "category": "description",
-    "component": "animation",
-    "detail": "To see all names click [here](/component/animation/names)."
-  },
-  {
-    "key": "name",
     "category": "angular",
     "component": "animation",
     "detail": {
@@ -548,7 +536,7 @@ export const examples: any[] = [
     "category": "angular",
     "component": "animation",
     "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\nimport { setConfig } from '@htmlplus/core/config.js';\nsetConfig({\n  component: {\n    'plus-animation': {\n      asset: {\n        name: {\n          'custom-pulse': [\n            {\n              offset: 0,\n              opacity: '0.6',\n              transform: 'scale(1.0)'\n            },\n            {\n              offset: 1,\n              opacity: '0.0',\n              transform: 'scale(1.5)'\n            }\n          ]\n        }\n      }\n    }\n  }\n});\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
       "style": ".root {\n  text-align: center;\n  padding: 1.5rem;\n}\nplus-animation {\n  border: solid 5px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
       "template": "<div class=\"root\">\n  <plus-avatar shape=\"circle\" size=\"xl\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"http://placeimg.com/94/94/people\" />\n  </plus-avatar>\n</div>\n"
     }
@@ -558,7 +546,7 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "animation",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\nimport 'https://unpkg.com/@htmlplus/core/avatar.js';\n\nimport { setConfig } from 'https://unpkg.com/@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.0)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.5)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
+      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\nimport 'https://unpkg.com/@htmlplus/core/avatar.js';\n",
       "style": ".root {\n  text-align: center;\n  padding: 1.5rem;\n}\nplus-animation {\n  border: solid 5px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
       "template": "<div class=\"root\">\n  <plus-avatar shape=\"circle\" size=\"xl\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"http://placeimg.com/94/94/people\" />\n  </plus-avatar>\n</div>\n"
     }
@@ -568,7 +556,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "animation",
     "detail": {
-      "script": "import { Animation, Avatar } from '@htmlplus/react';\nimport { setConfig } from '@htmlplus/core/config.js';\nsetConfig({\n  component: {\n    'plus-animation': {\n      asset: {\n        name: {\n          'custom-pulse': [\n            {\n              offset: 0,\n              opacity: '0.6',\n              transform: 'scale(1.0)'\n            },\n            {\n              offset: 1,\n              opacity: '0.0',\n              transform: 'scale(1.5)'\n            }\n          ]\n        }\n      }\n    }\n  }\n});\nconst AnimationRegisterACustomName = () => {\n  return (\n    <div className=\"root\">\n      <Avatar shape=\"circle\" size=\"xl\">\n        <Animation\n          delay=\"0000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></Animation>\n        <Animation\n          delay=\"1000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></Animation>\n        <img src=\"http://placeimg.com/94/94/people\" />\n      </Avatar>\n    </div>\n  );\n};\nexport default AnimationRegisterACustomName;\n",
+      "script": "import { Animation, Avatar } from '@htmlplus/react';\nconst AnimationRegisterACustomName = () => {\n  return (\n    <div className=\"root\">\n      <Avatar shape=\"circle\" size=\"xl\">\n        <Animation\n          delay=\"0000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></Animation>\n        <Animation\n          delay=\"1000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></Animation>\n        <img src=\"http://placeimg.com/94/94/people\" />\n      </Avatar>\n    </div>\n  );\n};\nexport default AnimationRegisterACustomName;\n",
       "style": ".root {\n  text-align: center;\n  padding: 1.5rem;\n}\nplus-animation {\n  border: solid 5px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n"
     }
   },
@@ -577,7 +565,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\nimport { setConfig } from '@htmlplus/core/config.js';\nsetConfig({\n  component: {\n    'plus-animation': {\n      asset: {\n        name: {\n          'custom-pulse': [\n            {\n              offset: 0,\n              opacity: '0.6',\n              transform: 'scale(1.0)'\n            },\n            {\n              offset: 1,\n              opacity: '0.0',\n              transform: 'scale(1.5)'\n            }\n          ]\n        }\n      }\n    }\n  }\n});\nconst AnimationRegisterACustomName = () => {\n  return (\n    <div className=\"root\">\n      <plus-avatar shape=\"circle\" size=\"xl\">\n        <plus-animation\n          delay=\"0000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></plus-animation>\n        <plus-animation\n          delay=\"1000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></plus-animation>\n        <img src=\"http://placeimg.com/94/94/people\" />\n      </plus-avatar>\n    </div>\n  );\n};\nexport default AnimationRegisterACustomName;\n",
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\nconst AnimationRegisterACustomName = () => {\n  return (\n    <div className=\"root\">\n      <plus-avatar shape=\"circle\" size=\"xl\">\n        <plus-animation\n          delay=\"0000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></plus-animation>\n        <plus-animation\n          delay=\"1000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></plus-animation>\n        <img src=\"http://placeimg.com/94/94/people\" />\n      </plus-avatar>\n    </div>\n  );\n};\nexport default AnimationRegisterACustomName;\n",
       "style": ".root {\n  text-align: center;\n  padding: 1.5rem;\n}\nplus-animation {\n  border: solid 5px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n"
     }
   },
@@ -586,7 +574,7 @@ export const examples: any[] = [
     "category": "svelte",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\nimport { setConfig } from '@htmlplus/core/config.js';\nsetConfig({\n  component: {\n    'plus-animation': {\n      asset: {\n        name: {\n          'custom-pulse': [\n            {\n              offset: 0,\n              opacity: '0.6',\n              transform: 'scale(1.0)'\n            },\n            {\n              offset: 1,\n              opacity: '0.0',\n              transform: 'scale(1.5)'\n            }\n          ]\n        }\n      }\n    }\n  }\n});\n",
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\n",
       "style": ".root {\n  text-align: center;\n  padding: 1.5rem;\n}\nplus-animation {\n  border: solid 5px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
       "template": "<div class=\"root\">\n  <plus-avatar shape=\"circle\" size=\"xl\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"http://placeimg.com/94/94/people\" />\n  </plus-avatar>\n</div>\n"
     }
@@ -596,7 +584,7 @@ export const examples: any[] = [
     "category": "vue",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\nimport { setConfig } from '@htmlplus/core/config.js';\nsetConfig({\n  component: {\n    'plus-animation': {\n      asset: {\n        name: {\n          'custom-pulse': [\n            {\n              offset: 0,\n              opacity: '0.6',\n              transform: 'scale(1.0)'\n            },\n            {\n              offset: 1,\n              opacity: '0.0',\n              transform: 'scale(1.5)'\n            }\n          ]\n        }\n      }\n    }\n  }\n});\n",
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\n",
       "style": ".root {\n  text-align: center;\n  padding: 1.5rem;\n}\nplus-animation {\n  border: solid 5px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
       "template": "<div class=\"root\">\n  <plus-avatar shape=\"circle\" size=\"xl\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"http://placeimg.com/94/94/people\" />\n  </plus-avatar>\n</div>\n"
     }
@@ -606,7 +594,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "animation",
     "detail": {
-      "script": "import { Animation, Avatar } from '@htmlplus/react';\nimport { setConfig } from '@htmlplus/core/config.js';\nsetConfig({\n  component: {\n    'plus-animation': {\n      asset: {\n        name: {\n          'custom-pulse': [\n            {\n              offset: 0,\n              opacity: '0.6',\n              transform: 'scale(1.0)'\n            },\n            {\n              offset: 1,\n              opacity: '0.0',\n              transform: 'scale(1.5)'\n            }\n          ]\n        }\n      }\n    }\n  }\n});\nconst AnimationRegisterACustomName = () => {\n  return (\n    <div className=\"root\">\n      <Avatar shape=\"circle\" size=\"xl\">\n        <Animation\n          delay=\"0000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></Animation>\n        <Animation\n          delay=\"1000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></Animation>\n        <img src=\"http://placeimg.com/94/94/people\" />\n      </Avatar>\n    </div>\n  );\n};\n\nconst AnimationRegisterACustomNameExample = () => {\n  return (\n    <div className=\"ex-animation-register-a-custom-name\">\n      <AnimationRegisterACustomName />\n      <style>{`.ex-animation-register-a-custom-name .root {  text-align: center;  padding: 1.5rem;}.ex-animation-register-a-custom-name plus-animation {  border: solid 5px black;  display: inline-block;  position: absolute;  inset: 0;  border-radius: 50%;  z-index: -1;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationRegisterACustomNameExample;"
+      "script": "import { Animation, Avatar } from '@htmlplus/react';\nimport { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.0)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.5)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});\n\nconst AnimationRegisterACustomName = () => {\n  return (\n    <div className=\"root\">\n      <Avatar shape=\"circle\" size=\"xl\">\n        <Animation\n          delay=\"0000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></Animation>\n        <Animation\n          delay=\"1000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></Animation>\n        <img src=\"http://placeimg.com/94/94/people\" />\n      </Avatar>\n    </div>\n  );\n};\n\nconst AnimationRegisterACustomNameExample = () => {\n  return (\n    <div className=\"ex-animation-register-a-custom-name\">\n      <AnimationRegisterACustomName />\n      <style>{`.ex-animation-register-a-custom-name .root {  text-align: center;  padding: 1.5rem;}.ex-animation-register-a-custom-name plus-animation {  border: solid 5px black;  display: inline-block;  position: absolute;  inset: 0;  border-radius: 50%;  z-index: -1;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationRegisterACustomNameExample;"
     }
   },
   {
@@ -2123,12 +2111,6 @@ export const examples: any[] = [
   },
   {
     "key": "border-width",
-    "category": "description",
-    "component": "card",
-    "detail": "By default, the card component has no border. outlined property Adds border."
-  },
-  {
-    "key": "border-width",
     "category": "angular",
     "component": "card",
     "detail": {
@@ -2327,12 +2309,6 @@ export const examples: any[] = [
   },
   {
     "key": "elevation",
-    "category": "description",
-    "component": "card",
-    "detail": "The card component accepts a custom elevation between `1` and `24`. The elevation property specifies the value of the box-shodow property."
-  },
-  {
-    "key": "elevation",
     "category": "angular",
     "component": "card",
     "detail": {
@@ -2399,12 +2375,6 @@ export const examples: any[] = [
   },
   {
     "key": "outlined",
-    "category": "description",
-    "component": "card",
-    "detail": "By default, the card component has no border. outlined property Adds border."
-  },
-  {
-    "key": "outlined",
     "category": "angular",
     "component": "card",
     "detail": {
@@ -2468,12 +2438,6 @@ export const examples: any[] = [
     "detail": {
       "script": "import { Card } from '@htmlplus/react';\nconst CardOutlined = () => {\n  return <Card outlined></Card>;\n};\n\nconst CardOutlinedExample = () => {\n  return (\n    <div className=\"ex-card-outlined\">\n      <CardOutlined />\n      <style>{`.ex-card-outlined plus-card {  height: 12rem;  width: 12rem;  margin: auto;}`}</style>\n    </div>\n  )\n};\n\nexport default CardOutlinedExample;"
     }
-  },
-  {
-    "key": "tile",
-    "category": "description",
-    "component": "card",
-    "detail": "By default, the card component has border-radius. The tile property neutralizes border-radius."
   },
   {
     "key": "tile",
@@ -6233,12 +6197,6 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "description",
-    "component": "intersection",
-    "detail": "The intersection component observes the viewport and updates the status when the card component\r\nenters or exits the viewport. (Its a component for detecting when elements are visible within the user's viewport)."
-  },
-  {
-    "key": "default",
     "category": "angular",
     "component": "intersection",
     "detail": {
@@ -6302,12 +6260,6 @@ export const examples: any[] = [
     "detail": {
       "script": "import { useState } from 'react';\nimport { Card, Intersection } from '@htmlplus/react';\nconst IntersectionDefault = () => {\n  const [intersecting, setIntersecting] = useState(false);\n  const onChange = (event) => {\n    setIntersecting(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"status\">\n        {intersecting ? 'In Viewport' : 'Out of Viewport'}\n      </div>\n      <div className=\"content\">\n        <div className=\"spacer\"></div>\n        <Intersection onChange={(event) => onChange(event)}>\n          <Card elevation=\"10\">\n            <Card.Body>\n              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n              eiusmod tempor incididunt ut labore et dolore magna aliqua.\n            </Card.Body>\n          </Card>\n        </Intersection>\n        <div className=\"spacer\"></div>\n      </div>\n    </div>\n  );\n};\n\nconst IntersectionDefaultExample = () => {\n  return (\n    <div className=\"ex-intersection-default dock\">\n      <IntersectionDefault />\n      <style>{`.ex-intersection-default .container {  position: relative;  background-color: #eeeeee;}.ex-intersection-default .status {  color: #fafafa;  background-color: #212121;  position: absolute;  top: 1rem;  left: 50%;  transform: translateX(-50%);  padding: 0.5rem 1rem;  border-radius: 2rem;  z-index: 1;}.ex-intersection-default .content {  height: 20rem;  overflow: auto;}.ex-intersection-default .spacer {  padding: 500px 0;}.ex-intersection-default plus-card {  width: 15rem;  margin: auto;}`}</style>\n    </div>\n  )\n};\n\nexport default IntersectionDefaultExample;"
     }
-  },
-  {
-    "key": "lazy-image",
-    "category": "description",
-    "component": "intersection",
-    "detail": "This is also used for lazy loading."
   },
   {
     "key": "lazy-image",
@@ -6575,12 +6527,6 @@ export const examples: any[] = [
   },
   {
     "key": "color",
-    "category": "description",
-    "component": "spinner",
-    "detail": "Examples of Spinners with different colors."
-  },
-  {
-    "key": "color",
     "category": "angular",
     "component": "spinner",
     "detail": {
@@ -6845,12 +6791,6 @@ export const examples: any[] = [
   },
   {
     "key": "size",
-    "category": "description",
-    "component": "spinner",
-    "detail": "Examples of Spinners with different sizes."
-  },
-  {
-    "key": "size",
     "category": "angular",
     "component": "spinner",
     "detail": {
@@ -6908,12 +6848,6 @@ export const examples: any[] = [
     "detail": {
       "script": "import { Grid, Spinner } from '@htmlplus/react';\nconst SpinnerSize = () => {\n  return (\n    <Grid alignItems=\"center\" justifyContent=\"evenly\">\n      <Grid.Item>\n        <Spinner size=\"sm\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"lg\"></Spinner>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst SpinnerSizeExample = () => {\n  return (\n    <div className=\"ex-spinner-size\">\n      <SpinnerSize />\n      <style>{`undefined`}</style>\n    </div>\n  )\n};\n\nexport default SpinnerSizeExample;"
     }
-  },
-  {
-    "key": "type",
-    "category": "description",
-    "component": "spinner",
-    "detail": "Examples of Spinners with different types."
   },
   {
     "key": "type",
