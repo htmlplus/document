@@ -536,6 +536,7 @@ export const examples: any[] = [
     "category": "angular",
     "component": "animation",
     "detail": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
       "style": ".root {\n  text-align: center;\n  padding: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
       "template": "<div class=\"root\">\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"http://placeimg.com/94/94/people\" />\n  </plus-avatar>\n</div>\n"
@@ -546,6 +547,7 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "animation",
     "detail": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
       "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\nimport 'https://unpkg.com/@htmlplus/core/avatar.js';\n",
       "style": ".root {\n  text-align: center;\n  padding: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
       "template": "<div class=\"root\">\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"http://placeimg.com/94/94/people\" />\n  </plus-avatar>\n</div>\n"
@@ -556,6 +558,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "animation",
     "detail": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
       "script": "import { Animation, Avatar } from '@htmlplus/react';\nconst AnimationRegisterACustomName = () => {\n  return (\n    <div className=\"root\">\n      <Avatar shape=\"circle\">\n        <Animation\n          delay=\"0000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></Animation>\n        <Animation\n          delay=\"1000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></Animation>\n        <img src=\"http://placeimg.com/94/94/people\" />\n      </Avatar>\n    </div>\n  );\n};\nexport default AnimationRegisterACustomName;\n",
       "style": ".root {\n  text-align: center;\n  padding: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n"
     }
@@ -565,6 +568,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "animation",
     "detail": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
       "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\nconst AnimationRegisterACustomName = () => {\n  return (\n    <div className=\"root\">\n      <plus-avatar shape=\"circle\">\n        <plus-animation\n          delay=\"0000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></plus-animation>\n        <plus-animation\n          delay=\"1000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></plus-animation>\n        <img src=\"http://placeimg.com/94/94/people\" />\n      </plus-avatar>\n    </div>\n  );\n};\nexport default AnimationRegisterACustomName;\n",
       "style": ".root {\n  text-align: center;\n  padding: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n"
     }
@@ -574,6 +578,7 @@ export const examples: any[] = [
     "category": "svelte",
     "component": "animation",
     "detail": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
       "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\n",
       "style": ".root {\n  text-align: center;\n  padding: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
       "template": "<div class=\"root\">\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"http://placeimg.com/94/94/people\" />\n  </plus-avatar>\n</div>\n"
@@ -584,6 +589,7 @@ export const examples: any[] = [
     "category": "vue",
     "component": "animation",
     "detail": {
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
       "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\n",
       "style": ".root {\n  text-align: center;\n  padding: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
       "template": "<div class=\"root\">\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"http://placeimg.com/94/94/people\" />\n  </plus-avatar>\n</div>\n"

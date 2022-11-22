@@ -70,9 +70,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
           title
         };
 
-        for (const key of ['template', 'script', 'style']) {
+        for (const key of ['template', 'script', 'style', 'config']) {
           if (framework == 'react' && key == 'template') continue;
+
           const content = example.detail?.[key] ?? null;
+
+          if (key == 'config' && !content) continue;
+
           tabs.push({
             key,
             content,
