@@ -10,6 +10,8 @@ Allows you to select file or files by using click or drag & drop functionality.
 
 <Examples />
 
+### Default
+
 <Example value="default" />
 
 <Checklist 

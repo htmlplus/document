@@ -73,16 +73,26 @@ To use an icon simply wrap the icon name (font ligature) with the `plus-icon` co
 <Api />
 
 <Examples />
-
+### Default
 <Example value="default" />
+
+### Color
 
 <Example value="color" />
 
+### Custom Color
+
 <Example value="custom-color" />
+
+### Size
 
 <Example value="size" />
 
+### Flip
+
 <Example value="flip" />
+
+### Rotate
 
 <Example value="rotate" />
 

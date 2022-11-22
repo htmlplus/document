@@ -10,6 +10,8 @@ This component lets you add collapsible side contents like navigation alongside 
 
 <Examples />
 
+### Default
+
 <Example value="default" />
 
 <Checklist 

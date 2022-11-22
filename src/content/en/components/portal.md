@@ -13,6 +13,8 @@ they're placed in the DOM tree.
 
 <Examples />
 
+### Default
+
 <Example value="default" />
 
 <Checklist 

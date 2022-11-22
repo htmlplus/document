@@ -10,21 +10,41 @@ Creates an animation and applies it to the content. Powered by the [Web Animatio
 
 <Examples />
 
+### Default
+
 <Example value="default" />
 
+### Name
+
+To see all names click [here](/component/animation/names).
 <Example value="name" />
+
+### Duration
 
 <Example value="duration" />
 
+### Easing
+
+To see all easings click [here](https://github.com/htmlplus/core/blob/main/src/components/animation/animation.constants.ts).
 <Example value="easing" />
+
+### Methods
 
 <Example value="methods" />
 
+### Keyframes
+
 <Example value="keyframes" />
+
+### Register A Custom Name
 
 <Example value="register-a-custom-name" />
 
+### Button
+
 <Example value="button" />
+
+### Intersection
 
 <Example value="intersection" />
 

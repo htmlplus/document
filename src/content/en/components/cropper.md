@@ -11,23 +11,43 @@ an area of images before they're uploaded to the server.
 
 <Examples />
 
+### Default
+
 <Example value="default" />
+
+### Area
 
 <Example value="area" />
 
+### Aspect Ratio
+
 <Example value="aspect-ratio" />
+
+### Backdrop
 
 <Example value="backdrop" />
 
+### Background
+
 <Example value="background" />
+
+### Guides
 
 <Example value="guides" />
 
+### Indicator
+
 <Example value="indicator" />
+
+### Mode
 
 <Example value="mode" />
 
+### Shape
+
 <Example value="shape" />
+
+### Styles
 
 <Example value="styles" />
 

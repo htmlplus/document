@@ -10,8 +10,15 @@ This component provides a way to asynchronously observe changes in the intersect
 
 <Examples />
 
+### Default
+
+The intersection component observes the viewport and updates the status when the card component
+enters or exits the viewport. (Its a component for detecting when elements are visible within the user's viewport).
 <Example value="default" />
 
+### Lazy Image
+
+This is also used for lazy loading.
 <Example value="lazy-image" />
 
 <Checklist 

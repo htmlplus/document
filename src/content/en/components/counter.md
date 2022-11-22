@@ -10,6 +10,8 @@ Can be used to quickly create animations that display numerical data in a more i
 
 <Examples />
 
+### Default
+
 <Example value="default" />
 
 <Checklist 

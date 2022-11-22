@@ -10,6 +10,8 @@ Scroll Indicator is a responsive reading progress bar that increases with the sc
 
 <Examples />
 
+### Default
+
 <Example value="default" />
 
 <Checklist 

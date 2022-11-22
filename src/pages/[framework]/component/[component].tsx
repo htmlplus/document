@@ -63,18 +63,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
         const componentName = `${pascalCase(example.component)}${pascalCase(example.key)}`;
 
-        // TODO
-        const description =
-          examples?.find((x) => {
-            return x.category == 'description' && x.component == component && x.key == example.key;
-          })?.detail || null;
-
         result[example.key] = {
           componentName,
           links,
           tabs,
-          title,
-          description
+          title
         };
 
         for (const key of ['template', 'script', 'style']) {
