@@ -32,3 +32,5 @@ they're placed in the DOM tree.
     skeleton={false}
     slots={false}
 />
+
+<LastModified />

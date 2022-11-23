@@ -63,3 +63,5 @@ To see all easings click [here](https://github.com/htmlplus/core/blob/main/src/c
     skeleton={false}
     slots={true}
 />
+
+<LastModified />

@@ -37,3 +37,5 @@ This component helps to specify a fixed ratio for the width and height sizes of 
     skeleton={false}
     slots={true}
 />
+
+<LastModified />

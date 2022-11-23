@@ -66,3 +66,5 @@ an area of images before they're uploaded to the server.
     skeleton={false}
     slots={false}
 />
+
+<LastModified />

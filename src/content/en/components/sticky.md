@@ -41,3 +41,5 @@ Component content is positioned based on the user's scroll position.
     skeleton={false}
     slots={false}
 />
+
+<LastModified />

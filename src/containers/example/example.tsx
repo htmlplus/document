@@ -10,6 +10,8 @@ export const Example = ({ value }: ExampleProps) => {
 
   const language = (tab: any) => {
     switch (tab.key) {
+      case 'config':
+        return 'js';
       case 'script':
         return 'jsx';
       case 'style':

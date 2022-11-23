@@ -36,3 +36,5 @@ This is also used for lazy loading.
     skeleton={false}
     slots={false}
 />
+
+<LastModified />

@@ -29,3 +29,5 @@ The component calls a function when something outside of the target element is c
     skeleton={false}
     slots={false}
 />
+
+<LastModified />

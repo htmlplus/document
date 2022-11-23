@@ -3,7 +3,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { capitalCase, headerCase, pascalCase } from 'change-case';
 import fs from 'fs';
 
-import { LastModified, Markup } from '@app/containers';
+import { Markup } from '@app/containers';
 import { components, examples, frameworks } from '@app/data';
 import { LayoutDefault } from '@app/layouts';
 import { ROUTES, getPath } from '@app/utils';
@@ -12,7 +12,6 @@ const ComponentDetails = ({ component, example }: any) => {
   return (
     <LayoutDefault>
       <Markup value={component?.readmeContent} scope={{ example }} />
-      <LastModified value={component.lastModified} />
     </LayoutDefault>
   );
 };
@@ -27,14 +26,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
   // TODO
   if (current) {
     try {
-      current.readmeContent =
-        fs
-          .readFileSync(`src/content/en/components/${component}.md`, 'utf8')
-          .replace(/<Example value=(".*") /g, `<Example value={example[$1]} `) || null;
-    }
-    catch {
-      current.readmeContent = null;
-    }
+      current.readmeContent = fs
+        .readFileSync(`src/content/en/components/${component}.md`, 'utf8')
+        .replace(/<Example value=(".*") /g, `<Example value={example[$1]} `)
+        .replace(/<LastModified/g, `<LastModified value="${current.lastModified}"`);
+    } catch {}
+    current.readmeContent ||= null;
   }
 
   // TODO

@@ -29,3 +29,5 @@ Can be used to quickly create animations that display numerical data in a more i
     skeleton={false}
     slots={false}
 />
+
+<LastModified />

@@ -29,3 +29,5 @@ This component lets you add collapsible side contents like navigation alongside 
     skeleton={false}
     slots={false}
 />
+
+<LastModified />

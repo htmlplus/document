@@ -52,3 +52,5 @@ Examples of Spinners with different types.
     skeleton={false}
     slots={false}
 />
+
+<LastModified />

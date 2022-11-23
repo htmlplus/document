@@ -29,3 +29,5 @@ Allows you to select file or files by using click or drag & drop functionality.
     skeleton={false}
     slots={false}
 />
+
+<LastModified />
