@@ -24,11 +24,17 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const current = components.find((x) => x.key == component);
 
+  // TODO
   if (current) {
-    current.readmeContent =
-      fs
-        .readFileSync(`src/content/en/components/${component}.md`, 'utf8')
-        .replace(/<Example value=(".*") /g, `<Example value={example[$1]} `) || null;
+    try {
+      current.readmeContent =
+        fs
+          .readFileSync(`src/content/en/components/${component}.md`, 'utf8')
+          .replace(/<Example value=(".*") /g, `<Example value={example[$1]} `) || null;
+    }
+    catch {
+      current.readmeContent = null;
+    }
   }
 
   // TODO
