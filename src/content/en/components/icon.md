@@ -72,6 +72,8 @@ To use an icon simply wrap the icon name (font ligature) with the `plus-icon` co
 
 <Api />
 
+<GlobalConfig />
+
 <Examples />
 ### Default
 <Example value="default" />

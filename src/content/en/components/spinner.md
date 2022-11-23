@@ -8,6 +8,8 @@ It's an indicator of progress and activity in order to show the loading state of
 
 <Api />
 
+<GlobalConfig />
+
 <Examples />
 
 ### Default

@@ -8,6 +8,8 @@ A dialog is a `conversation` between the system and the user. It is prompted whe
 
 <Api />
 
+<GlobalConfig />
+
 <Examples />
 
 ### Default

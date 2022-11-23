@@ -8,6 +8,8 @@ Creates an animation and applies it to the content. Powered by the [Web Animatio
 
 <Api />
 
+<GlobalConfig />
+
 <Examples />
 
 ### Default

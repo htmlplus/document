@@ -8,6 +8,8 @@ The component calls a function when something outside of the target element is c
 
 <Api />
 
+<GlobalConfig />
+
 <Examples />
 
 ### Default

@@ -11,6 +11,8 @@ they're placed in the DOM tree.
 
 <Api />
 
+<GlobalConfig />
+
 <Examples />
 
 ### Default

@@ -8,6 +8,8 @@ Allows you to select file or files by using click or drag & drop functionality.
 
 <Api />
 
+<GlobalConfig />
+
 <Examples />
 
 ### Default

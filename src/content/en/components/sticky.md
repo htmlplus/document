@@ -8,6 +8,8 @@ Component content is positioned based on the user's scroll position.
 
 <Api />
 
+<GlobalConfig />
+
 <Examples />
 
 ### Default

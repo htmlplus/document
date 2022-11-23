@@ -8,6 +8,8 @@ It's the most flexible and powerful grid system which you need to build simple t
 
 <Api />
 
+<GlobalConfig />
+
 <Examples />
 ### Default
 <Example value="default" />

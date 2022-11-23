@@ -8,6 +8,8 @@ TODO
 
 <Api />
 
+<GlobalConfig />
+
 <Examples />
 
 ### Default

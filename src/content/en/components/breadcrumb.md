@@ -10,6 +10,8 @@ the hierarchy.
 
 <Api />
 
+<GlobalConfig />
+
 <Examples />
 
 ### Default

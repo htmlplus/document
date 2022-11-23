@@ -8,6 +8,8 @@ Organizes content across different screens.
 
 <Api />
 
+<GlobalConfig />
+
 <Examples />
 
 ### Default

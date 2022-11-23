@@ -8,6 +8,8 @@ This component provides a way to asynchronously observe changes in the intersect
 
 <Api />
 
+<GlobalConfig />
+
 <Examples />
 
 ### Default

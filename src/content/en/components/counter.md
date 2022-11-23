@@ -8,6 +8,8 @@ Can be used to quickly create animations that display numerical data in a more i
 
 <Api />
 
+<GlobalConfig />
+
 <Examples />
 
 ### Default

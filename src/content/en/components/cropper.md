@@ -9,6 +9,8 @@ an area of images before they're uploaded to the server.
 
 <Api />
 
+<GlobalConfig />
+
 <Examples />
 
 ### Default

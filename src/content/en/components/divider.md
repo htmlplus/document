@@ -8,6 +8,8 @@ It's a thin line that can divide the content vertically or horizontally.
 
 <Api />
 
+<GlobalConfig />
+
 <Examples />
 
 ### Width

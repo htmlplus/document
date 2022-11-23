@@ -8,6 +8,8 @@ This component lets you add collapsible side contents like navigation alongside 
 
 <Api />
 
+<GlobalConfig />
+
 <Examples />
 
 ### Default

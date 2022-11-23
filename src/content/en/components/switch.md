@@ -8,6 +8,8 @@ Toggles the state of a single item on or off.
 
 <Api />
 
+<GlobalConfig />
+
 <Examples />
 
 ### Default

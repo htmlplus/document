@@ -8,6 +8,8 @@ This component helps to specify a fixed ratio for the width and height sizes of 
 
 <Api />
 
+<GlobalConfig />
+
 <Examples />
 
 ### Default
