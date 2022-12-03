@@ -16,6 +16,10 @@ The component calls a function when something outside of the target element is c
 
 <Example value="default" />
 
+### Menu
+
+<Example value="menu" />
+
 <Checklist 
     accessibility={false}
     bidirectionality={false}
