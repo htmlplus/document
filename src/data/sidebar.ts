@@ -38,8 +38,12 @@ export const sidebar = (framework: string) => [
   {
     title: 'UI Components',
     items: components
-      // TODO: detect sub components
-      .filter((component) => !!component.readmeContent)
+      .filter((component) => {
+        if (component.key == component.key.split('-')[0]) return true;
+        return !components.some((x) => {
+          return x.key == component.key.split('-')[0];
+        });
+      })
       .map((component) => ({
         title: component.title,
         url: getPath(ROUTES.COMPONENT_DETAILS, { framework, component: component.key })
