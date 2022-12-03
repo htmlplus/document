@@ -43,6 +43,7 @@ export const CardElevation = dynamic(() => import('./CardElevation').then((compo
 export const CardOutlined = dynamic(() => import('./CardOutlined').then((component) => component), { ssr: false });
 export const CardTile = dynamic(() => import('./CardTile').then((component) => component), { ssr: false });
 export const ClickOutsideDefault = dynamic(() => import('./ClickOutsideDefault').then((component) => component), { ssr: false });
+export const ClickOutsideMenu = dynamic(() => import('./ClickOutsideMenu').then((component) => component), { ssr: false });
 export const CounterDefault = dynamic(() => import('./CounterDefault').then((component) => component), { ssr: false });
 export const CropperArea = dynamic(() => import('./CropperArea').then((component) => component), { ssr: false });
 export const CropperAspectRatio = dynamic(() => import('./CropperAspectRatio').then((component) => component), { ssr: false });
@@ -127,7 +128,3 @@ export const TabsJustify = dynamic(() => import('./TabsJustify').then((component
 export const TabsReverse = dynamic(() => import('./TabsReverse').then((component) => component), { ssr: false });
 export const TabsSeparate = dynamic(() => import('./TabsSeparate').then((component) => component), { ssr: false });
 export const TabsVertical = dynamic(() => import('./TabsVertical').then((component) => component), { ssr: false });
-export const TooltipArrows = dynamic(() => import('./TooltipArrows').then((component) => component), { ssr: false });
-export const TooltipDefault = dynamic(() => import('./TooltipDefault').then((component) => component), { ssr: false });
-export const TooltipPlacement = dynamic(() => import('./TooltipPlacement').then((component) => component), { ssr: false });
-export const TooltipTrigger = dynamic(() => import('./TooltipTrigger').then((component) => component), { ssr: false });
