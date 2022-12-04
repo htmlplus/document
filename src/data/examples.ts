@@ -8,9 +8,9 @@ export const examples: any[] = [
     "category": "angular",
     "component": "animation",
     "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-animation {\n  display: inline-block;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-animation id=\"animation1\" name=\"tada\">\n    <button (click)=\"window.animation1.run = true\">Click Me</button>\n  </plus-animation>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-animation {\n  display: inline-block;\n}\n",
+      "template": "<plus-center>\n  <plus-animation id=\"animation1\" name=\"tada\">\n    <button (click)=\"window.animation1.run = true\">Click Me</button>\n  </plus-animation>\n</plus-center>\n"
     }
   },
   {
@@ -18,9 +18,9 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "animation",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\n\nimport 'https://unpkg.com/@htmlplus/core/animation/names/attention-seekers/tada.js';\r\n\r\nbutton1.addEventListener('click', () => {\r\n  animation1.run = true;\r\n});",
-      "style": ".center {\n  text-align: center;\n}\nplus-animation {\n  display: inline-block;\n}\n",
-      "template": "<div class=\"center\">\r\n  <plus-animation id=\"animation1\" name=\"tada\">\r\n    <button id=\"button1\">Click Me</button>\r\n  </plus-animation>\r\n</div>"
+      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\nimport 'https://unpkg.com/@htmlplus/core/center.js';\n\nimport 'https://unpkg.com/@htmlplus/core/animation/names/attention-seekers/tada.js';\r\n\r\nbutton1.addEventListener('click', () => {\r\n  animation1.run = true;\r\n});",
+      "style": "plus-animation {\n  display: inline-block;\n}\n",
+      "template": "<plus-center>\r\n  <plus-animation id=\"animation1\" name=\"tada\">\r\n    <button id=\"button1\">Click Me</button>\r\n  </plus-animation>\r\n</plus-center>"
     }
   },
   {
@@ -28,8 +28,8 @@ export const examples: any[] = [
     "category": "react",
     "component": "animation",
     "detail": {
-      "script": "import { Animation } from '@htmlplus/react';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\nconst AnimationButton = () => {\n  return (\n    <div className=\"center\">\n      <Animation id=\"animation1\" name=\"tada\">\n        <button onClick={() => (window.animation1.run = true)}>Click Me</button>\n      </Animation>\n    </div>\n  );\n};\nexport default AnimationButton;\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-animation {\n  display: inline-block;\n}\n"
+      "script": "import { Animation, Center } from '@htmlplus/react';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\nconst AnimationButton = () => {\n  return (\n    <Center>\n      <Animation id=\"animation1\" name=\"tada\">\n        <button onClick={() => (window.animation1.run = true)}>Click Me</button>\n      </Animation>\n    </Center>\n  );\n};\nexport default AnimationButton;\n",
+      "style": "plus-animation {\n  display: inline-block;\n}\n"
     }
   },
   {
@@ -37,8 +37,8 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\nconst AnimationButton = () => {\n  return (\n    <div className=\"center\">\n      <plus-animation id=\"animation1\" name=\"tada\">\n        <button onClick={() => (window.animation1.run = true)}>Click Me</button>\n      </plus-animation>\n    </div>\n  );\n};\nexport default AnimationButton;\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-animation {\n  display: inline-block;\n}\n"
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\nconst AnimationButton = () => {\n  return (\n    <plus-center>\n      <plus-animation id=\"animation1\" name=\"tada\">\n        <button onClick={() => (window.animation1.run = true)}>Click Me</button>\n      </plus-animation>\n    </plus-center>\n  );\n};\nexport default AnimationButton;\n",
+      "style": "plus-animation {\n  display: inline-block;\n}\n"
     }
   },
   {
@@ -46,9 +46,9 @@ export const examples: any[] = [
     "category": "svelte",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-animation {\n  display: inline-block;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-animation id=\"animation1\" name=\"tada\">\n    <button on:click=\"{() => window.animation1.run = true}\">Click Me</button>\n  </plus-animation>\n</div>\n"
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\n",
+      "style": "plus-animation {\n  display: inline-block;\n}\n",
+      "template": "<plus-center>\n  <plus-animation id=\"animation1\" name=\"tada\">\n    <button on:click=\"{() => window.animation1.run = true}\">Click Me</button>\n  </plus-animation>\n</plus-center>\n"
     }
   },
   {
@@ -56,9 +56,9 @@ export const examples: any[] = [
     "category": "vue",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-animation {\n  display: inline-block;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-animation id=\"animation1\" name=\"tada\">\n    <button @click=\"window.animation1.run = true\">Click Me</button>\n  </plus-animation>\n</div>\n"
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\n",
+      "style": "plus-animation {\n  display: inline-block;\n}\n",
+      "template": "<plus-center>\n  <plus-animation id=\"animation1\" name=\"tada\">\n    <button @click=\"window.animation1.run = true\">Click Me</button>\n  </plus-animation>\n</plus-center>\n"
     }
   },
   {
@@ -66,7 +66,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "animation",
     "detail": {
-      "script": "import { Animation } from '@htmlplus/react';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\nconst AnimationButton = () => {\n  return (\n    <div className=\"center\">\n      <Animation id=\"animation1\" name=\"tada\">\n        <button onClick={() => (window.animation1.run = true)}>Click Me</button>\n      </Animation>\n    </div>\n  );\n};\n\nconst AnimationButtonExample = () => {\n  return (\n    <div className=\"ex-animation-button\">\n      <AnimationButton />\n      <style>{`.ex-animation-button .center {  text-align: center;}.ex-animation-button plus-animation {  display: inline-block;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationButtonExample;"
+      "script": "import { Animation, Center } from '@htmlplus/react';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\nconst AnimationButton = () => {\n  return (\n    <Center>\n      <Animation id=\"animation1\" name=\"tada\">\n        <button onClick={() => (window.animation1.run = true)}>Click Me</button>\n      </Animation>\n    </Center>\n  );\n};\n\nconst AnimationButtonExample = () => {\n  return (\n    <div className=\"ex-animation-button\">\n      <AnimationButton />\n      <style>{`.ex-animation-button plus-animation {  display: inline-block;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationButtonExample;"
     }
   },
   {
@@ -74,9 +74,9 @@ export const examples: any[] = [
     "category": "angular",
     "component": "animation",
     "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
-      "template": "<plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
+      "template": "<plus-center>\n  <plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n</plus-center>\n"
     }
   },
   {
@@ -84,9 +84,9 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "animation",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\n",
-      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
-      "template": "<plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n"
+      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\nimport 'https://unpkg.com/@htmlplus/core/center.js';\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
+      "template": "<plus-center>\n  <plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n</plus-center>\n"
     }
   },
   {
@@ -94,8 +94,8 @@ export const examples: any[] = [
     "category": "react",
     "component": "animation",
     "detail": {
-      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationDefault = () => {\n  return <Animation iterations=\"Infinity\" name=\"fade-in\" run></Animation>;\n};\nexport default AnimationDefault;\n",
-      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n"
+      "script": "import { Animation, Center } from '@htmlplus/react';\nconst AnimationDefault = () => {\n  return (\n    <Center>\n      <Animation iterations=\"Infinity\" name=\"fade-in\" run></Animation>\n    </Center>\n  );\n};\nexport default AnimationDefault;\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n"
     }
   },
   {
@@ -103,8 +103,8 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\nconst AnimationDefault = () => {\n  return (\n    <plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n  );\n};\nexport default AnimationDefault;\n",
-      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n"
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\nconst AnimationDefault = () => {\n  return (\n    <plus-center>\n      <plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n    </plus-center>\n  );\n};\nexport default AnimationDefault;\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n"
     }
   },
   {
@@ -112,9 +112,9 @@ export const examples: any[] = [
     "category": "svelte",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\n",
-      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
-      "template": "<plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n"
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
+      "template": "<plus-center>\n  <plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n</plus-center>\n"
     }
   },
   {
@@ -122,9 +122,9 @@ export const examples: any[] = [
     "category": "vue",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\n",
-      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
-      "template": "<plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n"
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
+      "template": "<plus-center>\n  <plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n</plus-center>\n"
     }
   },
   {
@@ -132,7 +132,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "animation",
     "detail": {
-      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationDefault = () => {\n  return <Animation iterations=\"Infinity\" name=\"fade-in\" run></Animation>;\n};\n\nconst AnimationDefaultExample = () => {\n  return (\n    <div className=\"ex-animation-default\">\n      <AnimationDefault />\n      <style>{`.ex-animation-default plus-animation {  background: lightgray;  width: 100px;  height: 100px;  margin: auto;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationDefaultExample;"
+      "script": "import { Animation, Center } from '@htmlplus/react';\nconst AnimationDefault = () => {\n  return (\n    <Center>\n      <Animation iterations=\"Infinity\" name=\"fade-in\" run></Animation>\n    </Center>\n  );\n};\n\nconst AnimationDefaultExample = () => {\n  return (\n    <div className=\"ex-animation-default\">\n      <AnimationDefault />\n      <style>{`.ex-animation-default plus-animation {  background: lightgray;  width: 100px;  height: 100px;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationDefaultExample;"
     }
   },
   {
@@ -140,9 +140,9 @@ export const examples: any[] = [
     "category": "angular",
     "component": "animation",
     "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
-      "template": "<plus-animation\n  duration=\"2500\"\n  iterations=\"Infinity\"\n  name=\"fade-in\"\n  run\n></plus-animation>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
+      "template": "<plus-center>\n  <plus-animation\n    duration=\"2500\"\n    iterations=\"Infinity\"\n    name=\"fade-in\"\n    run\n  ></plus-animation>\n</plus-center>\n"
     }
   },
   {
@@ -150,9 +150,9 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "animation",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\n",
-      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
-      "template": "<plus-animation\n  duration=\"2500\"\n  iterations=\"Infinity\"\n  name=\"fade-in\"\n  run\n></plus-animation>\n"
+      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\nimport 'https://unpkg.com/@htmlplus/core/center.js';\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
+      "template": "<plus-center>\n  <plus-animation\n    duration=\"2500\"\n    iterations=\"Infinity\"\n    name=\"fade-in\"\n    run\n  ></plus-animation>\n</plus-center>\n"
     }
   },
   {
@@ -160,8 +160,8 @@ export const examples: any[] = [
     "category": "react",
     "component": "animation",
     "detail": {
-      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationDuration = () => {\n  return (\n    <Animation\n      duration=\"2500\"\n      iterations=\"Infinity\"\n      name=\"fade-in\"\n      run\n    ></Animation>\n  );\n};\nexport default AnimationDuration;\n",
-      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n"
+      "script": "import { Animation, Center } from '@htmlplus/react';\nconst AnimationDuration = () => {\n  return (\n    <Center>\n      <Animation\n        duration=\"2500\"\n        iterations=\"Infinity\"\n        name=\"fade-in\"\n        run\n      ></Animation>\n    </Center>\n  );\n};\nexport default AnimationDuration;\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n"
     }
   },
   {
@@ -169,8 +169,8 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\nconst AnimationDuration = () => {\n  return (\n    <plus-animation\n      duration=\"2500\"\n      iterations=\"Infinity\"\n      name=\"fade-in\"\n      run\n    ></plus-animation>\n  );\n};\nexport default AnimationDuration;\n",
-      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n"
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\nconst AnimationDuration = () => {\n  return (\n    <plus-center>\n      <plus-animation\n        duration=\"2500\"\n        iterations=\"Infinity\"\n        name=\"fade-in\"\n        run\n      ></plus-animation>\n    </plus-center>\n  );\n};\nexport default AnimationDuration;\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n"
     }
   },
   {
@@ -178,9 +178,9 @@ export const examples: any[] = [
     "category": "svelte",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\n",
-      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
-      "template": "<plus-animation\n  duration=\"2500\"\n  iterations=\"Infinity\"\n  name=\"fade-in\"\n  run\n></plus-animation>\n"
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
+      "template": "<plus-center>\n  <plus-animation\n    duration=\"2500\"\n    iterations=\"Infinity\"\n    name=\"fade-in\"\n    run\n  ></plus-animation>\n</plus-center>\n"
     }
   },
   {
@@ -188,9 +188,9 @@ export const examples: any[] = [
     "category": "vue",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\n",
-      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n",
-      "template": "<plus-animation\n  duration=\"2500\"\n  iterations=\"Infinity\"\n  name=\"fade-in\"\n  run\n></plus-animation>\n"
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\n",
+      "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
+      "template": "<plus-center>\n  <plus-animation\n    duration=\"2500\"\n    iterations=\"Infinity\"\n    name=\"fade-in\"\n    run\n  ></plus-animation>\n</plus-center>\n"
     }
   },
   {
@@ -198,7 +198,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "animation",
     "detail": {
-      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationDuration = () => {\n  return (\n    <Animation\n      duration=\"2500\"\n      iterations=\"Infinity\"\n      name=\"fade-in\"\n      run\n    ></Animation>\n  );\n};\n\nconst AnimationDurationExample = () => {\n  return (\n    <div className=\"ex-animation-duration\">\n      <AnimationDuration />\n      <style>{`.ex-animation-duration plus-animation {  background: lightgray;  width: 100px;  height: 100px;  margin: auto;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationDurationExample;"
+      "script": "import { Animation, Center } from '@htmlplus/react';\nconst AnimationDuration = () => {\n  return (\n    <Center>\n      <Animation\n        duration=\"2500\"\n        iterations=\"Infinity\"\n        name=\"fade-in\"\n        run\n      ></Animation>\n    </Center>\n  );\n};\n\nconst AnimationDurationExample = () => {\n  return (\n    <div className=\"ex-animation-duration\">\n      <AnimationDuration />\n      <style>{`.ex-animation-duration plus-animation {  background: lightgray;  width: 100px;  height: 100px;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationDurationExample;"
     }
   },
   {
@@ -404,9 +404,9 @@ export const examples: any[] = [
     "category": "angular",
     "component": "animation",
     "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n.center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></plus-animation>\n  <br />\n  <button (click)=\"window.element2.cancel()\">Cancel</button>\n  <button (click)=\"window.element2.finish()\">Finish</button>\n  <button (click)=\"window.element2.pause()\">Pause</button>\n  <button (click)=\"window.element2.play()\">Play</button>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
+      "template": "<plus-center>\n  <plus-animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></plus-animation>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"window.element2.cancel()\">Cancel</button>\n  <button (click)=\"window.element2.finish()\">Finish</button>\n  <button (click)=\"window.element2.pause()\">Pause</button>\n  <button (click)=\"window.element2.play()\">Play</button>\n</plus-center>\n"
     }
   },
   {
@@ -414,9 +414,9 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "animation",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\n",
-      "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n.center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\r\n  <plus-animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></plus-animation>\r\n  <br />\r\n  <button onclick=\"element2.cancel()\">Cancel</button>\r\n  <button onclick=\"element2.finish()\">Finish</button>\r\n  <button onclick=\"element2.pause()\">Pause</button>\r\n  <button onclick=\"element2.play()\">Play</button>\r\n</div>"
+      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\nimport 'https://unpkg.com/@htmlplus/core/center.js';\n",
+      "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
+      "template": "<plus-center>\r\n  <plus-animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></plus-animation>\r\n</plus-center>\r\n<br />\r\n<plus-center>\r\n  <button onclick=\"element2.cancel()\">Cancel</button>\r\n  <button onclick=\"element2.finish()\">Finish</button>\r\n  <button onclick=\"element2.pause()\">Pause</button>\r\n  <button onclick=\"element2.play()\">Play</button>\r\n</plus-center>"
     }
   },
   {
@@ -424,8 +424,8 @@ export const examples: any[] = [
     "category": "react",
     "component": "animation",
     "detail": {
-      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationMethods = () => {\n  return (\n    <div className=\"center\">\n      <Animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></Animation>\n      <br />\n      <button onClick={() => window.element2.cancel()}>Cancel</button>\n      <button onClick={() => window.element2.finish()}>Finish</button>\n      <button onClick={() => window.element2.pause()}>Pause</button>\n      <button onClick={() => window.element2.play()}>Play</button>\n    </div>\n  );\n};\nexport default AnimationMethods;\n",
-      "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n.center {\n  text-align: center;\n}\n"
+      "script": "import { Animation, Center } from '@htmlplus/react';\nconst AnimationMethods = () => {\n  return (\n    <>\n      <Center>\n        <Animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></Animation>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => window.element2.cancel()}>Cancel</button>\n        <button onClick={() => window.element2.finish()}>Finish</button>\n        <button onClick={() => window.element2.pause()}>Pause</button>\n        <button onClick={() => window.element2.play()}>Play</button>\n      </Center>\n    </>\n  );\n};\nexport default AnimationMethods;\n",
+      "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n"
     }
   },
   {
@@ -433,8 +433,8 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\nconst AnimationMethods = () => {\n  return (\n    <div className=\"center\">\n      <plus-animation\n        id=\"element2\"\n        iterations=\"3\"\n        name=\"fade-out\"\n      ></plus-animation>\n      <br />\n      <button onClick={() => window.element2.cancel()}>Cancel</button>\n      <button onClick={() => window.element2.finish()}>Finish</button>\n      <button onClick={() => window.element2.pause()}>Pause</button>\n      <button onClick={() => window.element2.play()}>Play</button>\n    </div>\n  );\n};\nexport default AnimationMethods;\n",
-      "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n.center {\n  text-align: center;\n}\n"
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\nconst AnimationMethods = () => {\n  return (\n    <>\n      <plus-center>\n        <plus-animation\n          id=\"element2\"\n          iterations=\"3\"\n          name=\"fade-out\"\n        ></plus-animation>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => window.element2.cancel()}>Cancel</button>\n        <button onClick={() => window.element2.finish()}>Finish</button>\n        <button onClick={() => window.element2.pause()}>Pause</button>\n        <button onClick={() => window.element2.play()}>Play</button>\n      </plus-center>\n    </>\n  );\n};\nexport default AnimationMethods;\n",
+      "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n"
     }
   },
   {
@@ -442,9 +442,9 @@ export const examples: any[] = [
     "category": "svelte",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\n",
-      "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n.center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></plus-animation>\n  <br />\n  <button on:click=\"{() => window.element2.cancel()}\">Cancel</button>\n  <button on:click=\"{() => window.element2.finish()}\">Finish</button>\n  <button on:click=\"{() => window.element2.pause()}\">Pause</button>\n  <button on:click=\"{() => window.element2.play()}\">Play</button>\n</div>\n"
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\n",
+      "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
+      "template": "<plus-center>\n  <plus-animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></plus-animation>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click=\"{() => window.element2.cancel()}\">Cancel</button>\n  <button on:click=\"{() => window.element2.finish()}\">Finish</button>\n  <button on:click=\"{() => window.element2.pause()}\">Pause</button>\n  <button on:click=\"{() => window.element2.play()}\">Play</button>\n</plus-center>\n"
     }
   },
   {
@@ -452,9 +452,9 @@ export const examples: any[] = [
     "category": "vue",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\n",
-      "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n  margin: auto;\n}\n.center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></plus-animation>\n  <br />\n  <button @click=\"window.element2.cancel()\">Cancel</button>\n  <button @click=\"window.element2.finish()\">Finish</button>\n  <button @click=\"window.element2.pause()\">Pause</button>\n  <button @click=\"window.element2.play()\">Play</button>\n</div>\n"
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\n",
+      "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
+      "template": "<plus-center>\n  <plus-animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></plus-animation>\n</plus-center>\n<br />\n<plus-center>\n  <button @click=\"window.element2.cancel()\">Cancel</button>\n  <button @click=\"window.element2.finish()\">Finish</button>\n  <button @click=\"window.element2.pause()\">Pause</button>\n  <button @click=\"window.element2.play()\">Play</button>\n</plus-center>\n"
     }
   },
   {
@@ -462,7 +462,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "animation",
     "detail": {
-      "script": "import { Animation } from '@htmlplus/react';\nconst AnimationMethods = () => {\n  return (\n    <div className=\"center\">\n      <Animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></Animation>\n      <br />\n      <button onClick={() => window.element2.cancel()}>Cancel</button>\n      <button onClick={() => window.element2.finish()}>Finish</button>\n      <button onClick={() => window.element2.pause()}>Pause</button>\n      <button onClick={() => window.element2.play()}>Play</button>\n    </div>\n  );\n};\n\nconst AnimationMethodsExample = () => {\n  return (\n    <div className=\"ex-animation-methods\">\n      <AnimationMethods />\n      <style>{`.ex-animation-methods button {  margin: 0 0.5rem;}.ex-animation-methods plus-animation {  background: lightgray;  width: 100px;  height: 100px;  margin: auto;}.ex-animation-methods .center {  text-align: center;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationMethodsExample;"
+      "script": "import { Animation, Center } from '@htmlplus/react';\nconst AnimationMethods = () => {\n  return (\n    <>\n      <Center>\n        <Animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></Animation>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => window.element2.cancel()}>Cancel</button>\n        <button onClick={() => window.element2.finish()}>Finish</button>\n        <button onClick={() => window.element2.pause()}>Pause</button>\n        <button onClick={() => window.element2.play()}>Play</button>\n      </Center>\n    </>\n  );\n};\n\nconst AnimationMethodsExample = () => {\n  return (\n    <div className=\"ex-animation-methods\">\n      <AnimationMethods />\n      <style>{`.ex-animation-methods button {  margin: 0 0.5rem;}.ex-animation-methods plus-animation {  background: lightgray;  width: 100px;  height: 100px;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationMethodsExample;"
     }
   },
   {
@@ -537,9 +537,9 @@ export const examples: any[] = [
     "component": "animation",
     "detail": {
       "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".root {\n  text-align: center;\n  padding: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
-      "template": "<div class=\"root\">\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"http://placeimg.com/94/94/people\" />\n  </plus-avatar>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
+      "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"http://placeimg.com/94/94/people\" />\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -548,9 +548,9 @@ export const examples: any[] = [
     "component": "animation",
     "detail": {
       "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
-      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\nimport 'https://unpkg.com/@htmlplus/core/avatar.js';\n",
-      "style": ".root {\n  text-align: center;\n  padding: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
-      "template": "<div class=\"root\">\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"http://placeimg.com/94/94/people\" />\n  </plus-avatar>\n</div>\n"
+      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\nimport 'https://unpkg.com/@htmlplus/core/avatar.js';\nimport 'https://unpkg.com/@htmlplus/core/center.js';\n",
+      "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
+      "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"http://placeimg.com/94/94/people\" />\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -559,8 +559,8 @@ export const examples: any[] = [
     "component": "animation",
     "detail": {
       "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
-      "script": "import { Animation, Avatar } from '@htmlplus/react';\nconst AnimationRegisterACustomName = () => {\n  return (\n    <div className=\"root\">\n      <Avatar shape=\"circle\">\n        <Animation\n          delay=\"0000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></Animation>\n        <Animation\n          delay=\"1000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></Animation>\n        <img src=\"http://placeimg.com/94/94/people\" />\n      </Avatar>\n    </div>\n  );\n};\nexport default AnimationRegisterACustomName;\n",
-      "style": ".root {\n  text-align: center;\n  padding: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n"
+      "script": "import { Animation, Avatar, Center } from '@htmlplus/react';\nconst AnimationRegisterACustomName = () => {\n  return (\n    <Center>\n      <Avatar shape=\"circle\">\n        <Animation\n          delay=\"0000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></Animation>\n        <Animation\n          delay=\"1000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></Animation>\n        <img src=\"http://placeimg.com/94/94/people\" />\n      </Avatar>\n    </Center>\n  );\n};\nexport default AnimationRegisterACustomName;\n",
+      "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n"
     }
   },
   {
@@ -569,8 +569,8 @@ export const examples: any[] = [
     "component": "animation",
     "detail": {
       "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
-      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\nconst AnimationRegisterACustomName = () => {\n  return (\n    <div className=\"root\">\n      <plus-avatar shape=\"circle\">\n        <plus-animation\n          delay=\"0000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></plus-animation>\n        <plus-animation\n          delay=\"1000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></plus-animation>\n        <img src=\"http://placeimg.com/94/94/people\" />\n      </plus-avatar>\n    </div>\n  );\n};\nexport default AnimationRegisterACustomName;\n",
-      "style": ".root {\n  text-align: center;\n  padding: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n"
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nconst AnimationRegisterACustomName = () => {\n  return (\n    <plus-center>\n      <plus-avatar shape=\"circle\">\n        <plus-animation\n          delay=\"0000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></plus-animation>\n        <plus-animation\n          delay=\"1000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></plus-animation>\n        <img src=\"http://placeimg.com/94/94/people\" />\n      </plus-avatar>\n    </plus-center>\n  );\n};\nexport default AnimationRegisterACustomName;\n",
+      "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n"
     }
   },
   {
@@ -579,9 +579,9 @@ export const examples: any[] = [
     "component": "animation",
     "detail": {
       "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
-      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\n",
-      "style": ".root {\n  text-align: center;\n  padding: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
-      "template": "<div class=\"root\">\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"http://placeimg.com/94/94/people\" />\n  </plus-avatar>\n</div>\n"
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
+      "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
+      "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"http://placeimg.com/94/94/people\" />\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -590,9 +590,9 @@ export const examples: any[] = [
     "component": "animation",
     "detail": {
       "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
-      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\n",
-      "style": ".root {\n  text-align: center;\n  padding: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
-      "template": "<div class=\"root\">\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"http://placeimg.com/94/94/people\" />\n  </plus-avatar>\n</div>\n"
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
+      "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
+      "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"http://placeimg.com/94/94/people\" />\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -600,7 +600,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "animation",
     "detail": {
-      "script": "import { Animation, Avatar } from '@htmlplus/react';\nimport { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});\n\nconst AnimationRegisterACustomName = () => {\n  return (\n    <div className=\"root\">\n      <Avatar shape=\"circle\">\n        <Animation\n          delay=\"0000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></Animation>\n        <Animation\n          delay=\"1000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></Animation>\n        <img src=\"http://placeimg.com/94/94/people\" />\n      </Avatar>\n    </div>\n  );\n};\n\nconst AnimationRegisterACustomNameExample = () => {\n  return (\n    <div className=\"ex-animation-register-a-custom-name\">\n      <AnimationRegisterACustomName />\n      <style>{`.ex-animation-register-a-custom-name .root {  text-align: center;  padding: 1.5rem;}.ex-animation-register-a-custom-name plus-animation {  border: solid 3px black;  display: inline-block;  position: absolute;  inset: 0;  border-radius: 50%;  z-index: -1;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationRegisterACustomNameExample;"
+      "script": "import { Animation, Avatar, Center } from '@htmlplus/react';\nimport { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});\n\nconst AnimationRegisterACustomName = () => {\n  return (\n    <Center>\n      <Avatar shape=\"circle\">\n        <Animation\n          delay=\"0000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></Animation>\n        <Animation\n          delay=\"1000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></Animation>\n        <img src=\"http://placeimg.com/94/94/people\" />\n      </Avatar>\n    </Center>\n  );\n};\n\nconst AnimationRegisterACustomNameExample = () => {\n  return (\n    <div className=\"ex-animation-register-a-custom-name\">\n      <AnimationRegisterACustomName />\n      <style>{`.ex-animation-register-a-custom-name plus-avatar {  margin: 1.5rem;}.ex-animation-register-a-custom-name plus-animation {  border: solid 3px black;  display: inline-block;  position: absolute;  inset: 0;  border-radius: 50%;  z-index: -1;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationRegisterACustomNameExample;"
     }
   },
   {

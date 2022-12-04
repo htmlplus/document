@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Animation, Avatar } from '@htmlplus/react';
+import { Animation, Avatar, Center } from '@htmlplus/react';
 import { setConfig } from '@htmlplus/core/config.js';
 
 setConfig({
@@ -22,7 +22,7 @@ setConfig({
 
 const AnimationRegisterACustomName = () => {
   return (
-    <div className="root">
+    <Center>
       <Avatar shape="circle">
         <Animation
           delay="0000"
@@ -40,7 +40,7 @@ const AnimationRegisterACustomName = () => {
         ></Animation>
         <img src="http://placeimg.com/94/94/people" />
       </Avatar>
-    </div>
+    </Center>
   );
 };
 
@@ -48,7 +48,7 @@ const AnimationRegisterACustomNameExample = () => {
   return (
     <div className="ex-animation-register-a-custom-name">
       <AnimationRegisterACustomName />
-      <style>{`.ex-animation-register-a-custom-name .root {  text-align: center;  padding: 1.5rem;}.ex-animation-register-a-custom-name plus-animation {  border: solid 3px black;  display: inline-block;  position: absolute;  inset: 0;  border-radius: 50%;  z-index: -1;}`}</style>
+      <style>{`.ex-animation-register-a-custom-name plus-avatar {  margin: 1.5rem;}.ex-animation-register-a-custom-name plus-animation {  border: solid 3px black;  display: inline-block;  position: absolute;  inset: 0;  border-radius: 50%;  z-index: -1;}`}</style>
     </div>
   )
 };
