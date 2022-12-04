@@ -3,7 +3,7 @@
  **************************************************/
 
 import { useState } from 'react';
-import { ClickOutside } from '@htmlplus/react';
+import { Card, Center, ClickOutside } from '@htmlplus/react';
 const ClickOutsideDefault = () => {
   const [open, setOpen] = useState(false);
   const onClick = () => {
@@ -13,12 +13,18 @@ const ClickOutsideDefault = () => {
     setOpen(false);
   };
   return (
-    <ClickOutside onClickOutside={() => onClickOutside()}>
-      <button onClick={() => onClick()}>Open Menu Dropdown</button>
-      {open && (
-        <div>Click me, I will stay visible until you click outside.</div>
-      )}
-    </ClickOutside>
+    <Center>
+      <ClickOutside onClickOutside={() => onClickOutside()}>
+        <button onClick={() => onClick()}>Open Menu Dropdown</button>
+        {open && (
+          <Card elevation="10" id="menu" outlined>
+            <Card.Body>
+              Click me, I will stay visible until you click outside.
+            </Card.Body>
+          </Card>
+        )}
+      </ClickOutside>
+    </Center>
   );
 };
 
@@ -26,7 +32,7 @@ const ClickOutsideDefaultExample = () => {
   return (
     <div className="ex-click-outside-menu">
       <ClickOutsideDefault />
-      <style>{`.ex-click-outside-menu plus-click-outside {  display: inline-block;  position: relative;}.ex-click-outside-menu #menu {  border: solid 1px gray;  position: absolute;  top: calc(100% + 0.25rem);  padding: 10px;}`}</style>
+      <style>{`.ex-click-outside-menu plus-card {  position: absolute;  top: calc(100% + 0.25rem);}.ex-click-outside-menu plus-click-outside {  display: inline-block;  position: relative;}`}</style>
     </div>
   )
 };
