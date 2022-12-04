@@ -42,6 +42,8 @@ export const CardDefault = dynamic(() => import('./CardDefault').then((component
 export const CardElevation = dynamic(() => import('./CardElevation').then((component) => component), { ssr: false });
 export const CardOutlined = dynamic(() => import('./CardOutlined').then((component) => component), { ssr: false });
 export const CardTile = dynamic(() => import('./CardTile').then((component) => component), { ssr: false });
+export const CenterDefault = dynamic(() => import('./CenterDefault').then((component) => component), { ssr: false });
+export const CenterInline = dynamic(() => import('./CenterInline').then((component) => component), { ssr: false });
 export const ClickOutsideDefault = dynamic(() => import('./ClickOutsideDefault').then((component) => component), { ssr: false });
 export const ClickOutsideMenu = dynamic(() => import('./ClickOutsideMenu').then((component) => component), { ssr: false });
 export const CounterDefault = dynamic(() => import('./CounterDefault').then((component) => component), { ssr: false });
