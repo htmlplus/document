@@ -45,6 +45,7 @@ export const sidebar = (framework: string) => [
         });
       })
       .map((component) => ({
+        stable: component.tags.some((tag: any) => tag.key == 'stable'),
         title: component.title,
         url: getPath(ROUTES.COMPONENT_DETAILS, { framework, component: component.key })
       }))

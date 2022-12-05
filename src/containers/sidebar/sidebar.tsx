@@ -7,9 +7,9 @@ import { sidebar as sidebarData } from '@app/data';
 import { useSidebar, useStore } from '@app/hooks';
 import * as Utils from '@app/utils';
 
-import { SidebarItem, SidebarProps } from './sidebar.types';
+import { SidebarItem } from './sidebar.types';
 
-export const Sidebar = ({ }: SidebarProps) => {
+export const Sidebar = () => {
   const router = useRouter();
 
   const sidebar = useSidebar();
@@ -62,6 +62,11 @@ export const Sidebar = ({ }: SidebarProps) => {
               )} */}
               {key(item)}
               {!!item.items?.length && <span className="nav-link-toggle" />}
+              {item.stable && (
+                <code>
+                  <small>Stable</small>
+                </code>
+              )}
             </Button>
             {!!item.items?.length && menu(item.items, [item, ...parents])}
           </li>
