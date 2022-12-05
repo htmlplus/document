@@ -131,6 +131,9 @@ plus-avatar img {
         &:hover {
           color: $color-primary;
         }
+        code {
+          background: rgb(253 238 238);
+        }
       }
 
       .nav-link-toggle {
