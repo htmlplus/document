@@ -1,6 +1,6 @@
 # Click Outside
 
-The component calls a function when something outside of the target element is clicked on.
+Detects when a click event happens outside of itself.
 
 <Playground />
 
@@ -22,18 +22,18 @@ The component calls a function when something outside of the target element is c
 
 <Checklist 
     accessibility={false}
-    bidirectionality={false}
-    cssParts={false}
-    cssVariables={false}
-    documentation={false}
-    examples={false}
-    events={false}
+    bidirectionality="N/A"
+    cssParts="N/A"
+    cssVariables="N/A"
+    documentation={true}
+    examples={true}
+    events={true}
     keyboard={false}
     methods={false}
     playground={false}
-    properties={false}
+    properties={true}
     skeleton={false}
-    slots={false}
+    slots={true}
 />
 
 <LastModified />
