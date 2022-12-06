@@ -20,8 +20,8 @@ const StickySlots = () => {
         mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.
       </p>
       <Sticky watcher>
-        <p slot="normal">The NORMAL slot</p>
-        <p slot="stick">The STICK slot</p>
+        <header slot="normal">Normal Header</header>
+        <header slot="stick">Stick Header</header>
       </Sticky>
       <p>
         Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.
@@ -129,7 +129,7 @@ const StickySlotsExample = () => {
   return (
     <div className="ex-sticky-slots dock">
       <StickySlots />
-      <style>{`.ex-sticky-slots .container {  height: 20rem;  overflow: auto;}.ex-sticky-slots .container p {  margin: 0;  padding: 1rem;  text-align: justify;}.ex-sticky-slots plus-sticky[state='normal'] {  background-color: gold;}.ex-sticky-slots plus-sticky[state='stick'] {  background-color: greenyellow;}`}</style>
+      <style>{`.ex-sticky-slots .container {  height: 20rem;  overflow: auto;}.ex-sticky-slots .container p {  margin: 0;  padding: 1rem;  text-align: justify;}.ex-sticky-slots header {  background: lightgray;  text-align: center;  padding: 1rem;}.ex-sticky-slots plus-sticky[state='normal'] header {  border-radius: 4px;  margin: 1rem;}`}</style>
     </div>
   )
 };
