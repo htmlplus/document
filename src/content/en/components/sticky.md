@@ -28,20 +28,24 @@ Component content is positioned based on the user's scroll position.
 
 <Example value="state-attribute" />
 
+### Slots
+
+<Example value="slots" />
+
 <Checklist 
     accessibility={false}
-    bidirectionality={false}
-    cssParts={false}
-    cssVariables={false}
-    documentation={false}
-    examples={false}
-    events={false}
-    keyboard={false}
-    methods={false}
+    bidirectionality="N/A"
+    cssParts="N/A"
+    cssVariables="N/A"
+    documentation={true}
+    examples={true}
+    events={true}
+    keyboard="N/A"
+    methods="N/A"
     playground={false}
-    properties={false}
+    properties={true}
     skeleton={false}
-    slots={false}
+    slots={true}
 />
 
 <LastModified />

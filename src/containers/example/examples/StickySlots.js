@@ -3,7 +3,7 @@
  **************************************************/
 
 import { Sticky } from '@htmlplus/react';
-const StickyStateAttribute = () => {
+const StickySlots = () => {
   return (
     <div className="container">
       <p>
@@ -20,13 +20,8 @@ const StickyStateAttribute = () => {
         mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.
       </p>
       <Sticky watcher>
-        <p>
-          Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.
-          Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla
-          dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac
-          ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus
-          rhoncus tincidunt.
-        </p>
+        <p slot="normal">The NORMAL slot</p>
+        <p slot="stick">The STICK slot</p>
       </Sticky>
       <p>
         Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.
@@ -130,13 +125,13 @@ const StickyStateAttribute = () => {
   );
 };
 
-const StickyStateAttributeExample = () => {
+const StickySlotsExample = () => {
   return (
-    <div className="ex-sticky-state-attribute dock">
-      <StickyStateAttribute />
-      <style>{`.ex-sticky-state-attribute .container {  height: 20rem;  overflow: auto;}.ex-sticky-state-attribute .container p {  margin: 0;  padding: 1rem;  text-align: justify;}.ex-sticky-state-attribute plus-sticky[state='normal'] {  background-color: gold;}.ex-sticky-state-attribute plus-sticky[state='stick'] {  background-color: greenyellow;}`}</style>
+    <div className="ex-sticky-slots dock">
+      <StickySlots />
+      <style>{`.ex-sticky-slots .container {  height: 20rem;  overflow: auto;}.ex-sticky-slots .container p {  margin: 0;  padding: 1rem;  text-align: justify;}.ex-sticky-slots plus-sticky[state='normal'] {  background-color: gold;}.ex-sticky-slots plus-sticky[state='stick'] {  background-color: greenyellow;}`}</style>
     </div>
   )
 };
 
-export default StickyStateAttributeExample;
+export default StickySlotsExample;
