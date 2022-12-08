@@ -115,6 +115,7 @@ export const SpinnerSize = dynamic(() => import('./SpinnerSize').then((component
 export const SpinnerType = dynamic(() => import('./SpinnerType').then((component) => component), { ssr: false });
 export const StickyContacts = dynamic(() => import('./StickyContacts').then((component) => component), { ssr: false });
 export const StickyDefault = dynamic(() => import('./StickyDefault').then((component) => component), { ssr: false });
+export const StickySidebar = dynamic(() => import('./StickySidebar').then((component) => component), { ssr: false });
 export const StickySlots = dynamic(() => import('./StickySlots').then((component) => component), { ssr: false });
 export const StickyStateAttribute = dynamic(() => import('./StickyStateAttribute').then((component) => component), { ssr: false });
 export const StickyTop = dynamic(() => import('./StickyTop').then((component) => component), { ssr: false });
