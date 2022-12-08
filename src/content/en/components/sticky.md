@@ -32,6 +32,10 @@ Component content is positioned based on the user's scroll position.
 
 <Example value="slots" />
 
+### Sidebar
+
+<Example value="sidebar" />
+
 <Checklist 
     accessibility={false}
     bidirectionality="N/A"
