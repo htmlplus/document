@@ -1,6 +1,6 @@
 # Spinner
 
-It's an indicator of progress and activity in order to show the loading state of a component or page when the user needs to wait on.
+An indicator of progress and activity.
 
 <Playground />
 
@@ -18,7 +18,6 @@ It's an indicator of progress and activity in order to show the loading state of
 
 ### Size
 
-Examples of Spinners with different sizes.
 <Example value="size" />
 
 ### Custom Size
@@ -27,12 +26,10 @@ Examples of Spinners with different sizes.
 
 ### Color
 
-Examples of Spinners with different colors.
 <Example value="color" />
 
 ### Type
 
-Examples of Spinners with different types.
 <Example value="type" />
 
 ### Customize
@@ -40,19 +37,19 @@ Examples of Spinners with different types.
 <Example value="customize" />
 
 <Checklist 
-    accessibility={false}
-    bidirectionality={false}
+    accessibility={true}
+    bidirectionality="N/A"
     cssParts={false}
-    cssVariables={false}
-    documentation={false}
-    examples={false}
-    events={false}
-    keyboard={false}
-    methods={false}
+    cssVariables={true}
+    documentation={true}
+    examples={true}
+    events="N/A"
+    keyboard="N/A"
+    methods="N/A"
     playground={false}
-    properties={false}
+    properties={true}
     skeleton={false}
-    slots={false}
+    slots="N/A"
 />
 
 <LastModified />
