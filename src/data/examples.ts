@@ -6921,7 +6921,7 @@ export const examples: any[] = [
     "component": "spinner",
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n}\n",
+      "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n  font-size: 0.8rem;\n}\n",
       "template": "<plus-center>\n  <plus-spinner type=\"dual-ring\"></plus-spinner>\n</plus-center>\n"
     }
   },
@@ -6931,7 +6931,7 @@ export const examples: any[] = [
     "component": "spinner",
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/spinner.js';\n",
-      "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n}\n",
+      "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n  font-size: 0.8rem;\n}\n",
       "template": "<plus-center>\n  <plus-spinner type=\"dual-ring\"></plus-spinner>\n</plus-center>\n"
     }
   },
@@ -6941,7 +6941,7 @@ export const examples: any[] = [
     "component": "spinner",
     "detail": {
       "script": "import { Center, Spinner } from '@htmlplus/react';\nconst SpinnerCustomize = () => {\n  return (\n    <Center>\n      <Spinner type=\"dual-ring\"></Spinner>\n    </Center>\n  );\n};\nexport default SpinnerCustomize;\n",
-      "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n}\n"
+      "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n  font-size: 0.8rem;\n}\n"
     }
   },
   {
@@ -6950,7 +6950,7 @@ export const examples: any[] = [
     "component": "spinner",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\nconst SpinnerCustomize = () => {\n  return (\n    <plus-center>\n      <plus-spinner type=\"dual-ring\"></plus-spinner>\n    </plus-center>\n  );\n};\nexport default SpinnerCustomize;\n",
-      "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n}\n"
+      "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n  font-size: 0.8rem;\n}\n"
     }
   },
   {
@@ -6959,7 +6959,7 @@ export const examples: any[] = [
     "component": "spinner",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\n",
-      "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n}\n",
+      "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n  font-size: 0.8rem;\n}\n",
       "template": "<plus-center>\n  <plus-spinner type=\"dual-ring\"></plus-spinner>\n</plus-center>\n"
     }
   },
@@ -6969,7 +6969,7 @@ export const examples: any[] = [
     "component": "spinner",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\n",
-      "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n}\n",
+      "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n  font-size: 0.8rem;\n}\n",
       "template": "<plus-center>\n  <plus-spinner type=\"dual-ring\"></plus-spinner>\n</plus-center>\n"
     }
   },
@@ -6978,7 +6978,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "spinner",
     "detail": {
-      "script": "import { Center, Spinner } from '@htmlplus/react';\nconst SpinnerCustomize = () => {\n  return (\n    <Center>\n      <Spinner type=\"dual-ring\"></Spinner>\n    </Center>\n  );\n};\n\nconst SpinnerCustomizeExample = () => {\n  return (\n    <div className=\"ex-spinner-customize\">\n      <SpinnerCustomize />\n      <style>{`.ex-spinner-customize plus-spinner {  color: purple;  width: 5rem;  height: 5rem;}`}</style>\n    </div>\n  )\n};\n\nexport default SpinnerCustomizeExample;"
+      "script": "import { Center, Spinner } from '@htmlplus/react';\nconst SpinnerCustomize = () => {\n  return (\n    <Center>\n      <Spinner type=\"dual-ring\"></Spinner>\n    </Center>\n  );\n};\n\nconst SpinnerCustomizeExample = () => {\n  return (\n    <div className=\"ex-spinner-customize\">\n      <SpinnerCustomize />\n      <style>{`.ex-spinner-customize plus-spinner {  color: purple;  width: 5rem;  height: 5rem;  font-size: 0.8rem;}`}</style>\n    </div>\n  )\n};\n\nexport default SpinnerCustomizeExample;"
     }
   },
   {
