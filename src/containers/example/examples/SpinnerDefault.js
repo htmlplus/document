@@ -2,12 +2,12 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Spinner } from '@htmlplus/react';
+import { Center, Spinner } from '@htmlplus/react';
 const SpinnerDefault = () => {
   return (
-    <div className="center">
+    <Center>
       <Spinner></Spinner>
-    </div>
+    </Center>
   );
 };
 
@@ -15,7 +15,7 @@ const SpinnerDefaultExample = () => {
   return (
     <div className="ex-spinner-default">
       <SpinnerDefault />
-      <style>{`.ex-spinner-default .center {  text-align: center;}`}</style>
+      <style>{`undefined`}</style>
     </div>
   )
 };

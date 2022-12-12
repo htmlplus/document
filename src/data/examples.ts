@@ -6789,7 +6789,7 @@ export const examples: any[] = [
     "component": "spinner",
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".spinner-1 {\n  --plus-spinner-color: #08dfc8;\n}\n.spinner-2 {\n  --plus-spinner-color: #ff5449;\n}\n.spinner-3 {\n  --plus-spinner-color: #5f9ee9;\n}\n.spinner-4 {\n  --plus-spinner-color: #ffc903;\n}\n.spinner-5 {\n  --plus-spinner-color: #9073c1;\n}\n",
+      "style": ".spinner-1 {\n  color: #08dfc8;\n}\n.spinner-2 {\n  color: #ff5449;\n}\n.spinner-3 {\n  color: #5f9ee9;\n}\n.spinner-4 {\n  color: #ffc903;\n}\n.spinner-5 {\n  color: #9073c1;\n}\n",
       "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-1\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-2\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-3\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-4\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-5\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
@@ -6799,7 +6799,7 @@ export const examples: any[] = [
     "component": "spinner",
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/grid.js';\nimport 'https://unpkg.com/@htmlplus/core/grid-item.js';\nimport 'https://unpkg.com/@htmlplus/core/spinner.js';\n",
-      "style": ".spinner-1 {\n  --plus-spinner-color: #08dfc8;\n}\n.spinner-2 {\n  --plus-spinner-color: #ff5449;\n}\n.spinner-3 {\n  --plus-spinner-color: #5f9ee9;\n}\n.spinner-4 {\n  --plus-spinner-color: #ffc903;\n}\n.spinner-5 {\n  --plus-spinner-color: #9073c1;\n}\n",
+      "style": ".spinner-1 {\n  color: #08dfc8;\n}\n.spinner-2 {\n  color: #ff5449;\n}\n.spinner-3 {\n  color: #5f9ee9;\n}\n.spinner-4 {\n  color: #ffc903;\n}\n.spinner-5 {\n  color: #9073c1;\n}\n",
       "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-1\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-2\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-3\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-4\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-5\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
@@ -6809,7 +6809,7 @@ export const examples: any[] = [
     "component": "spinner",
     "detail": {
       "script": "import { Grid, Spinner } from '@htmlplus/react';\nconst SpinnerColor = () => {\n  return (\n    <Grid justifyContent=\"evenly\">\n      <Grid.Item>\n        <Spinner className=\"spinner-1\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner className=\"spinner-2\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner className=\"spinner-3\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner className=\"spinner-4\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner className=\"spinner-5\"></Spinner>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default SpinnerColor;\n",
-      "style": ".spinner-1 {\n  --plus-spinner-color: #08dfc8;\n}\n.spinner-2 {\n  --plus-spinner-color: #ff5449;\n}\n.spinner-3 {\n  --plus-spinner-color: #5f9ee9;\n}\n.spinner-4 {\n  --plus-spinner-color: #ffc903;\n}\n.spinner-5 {\n  --plus-spinner-color: #9073c1;\n}\n"
+      "style": ".spinner-1 {\n  color: #08dfc8;\n}\n.spinner-2 {\n  color: #ff5449;\n}\n.spinner-3 {\n  color: #5f9ee9;\n}\n.spinner-4 {\n  color: #ffc903;\n}\n.spinner-5 {\n  color: #9073c1;\n}\n"
     }
   },
   {
@@ -6818,7 +6818,7 @@ export const examples: any[] = [
     "component": "spinner",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\nconst SpinnerColor = () => {\n  return (\n    <plus-grid justify-content=\"evenly\">\n      <plus-grid-item>\n        <plus-spinner className=\"spinner-1\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner className=\"spinner-2\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner className=\"spinner-3\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner className=\"spinner-4\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner className=\"spinner-5\"></plus-spinner>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default SpinnerColor;\n",
-      "style": ".spinner-1 {\n  --plus-spinner-color: #08dfc8;\n}\n.spinner-2 {\n  --plus-spinner-color: #ff5449;\n}\n.spinner-3 {\n  --plus-spinner-color: #5f9ee9;\n}\n.spinner-4 {\n  --plus-spinner-color: #ffc903;\n}\n.spinner-5 {\n  --plus-spinner-color: #9073c1;\n}\n"
+      "style": ".spinner-1 {\n  color: #08dfc8;\n}\n.spinner-2 {\n  color: #ff5449;\n}\n.spinner-3 {\n  color: #5f9ee9;\n}\n.spinner-4 {\n  color: #ffc903;\n}\n.spinner-5 {\n  color: #9073c1;\n}\n"
     }
   },
   {
@@ -6827,7 +6827,7 @@ export const examples: any[] = [
     "component": "spinner",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\n",
-      "style": ".spinner-1 {\n  --plus-spinner-color: #08dfc8;\n}\n.spinner-2 {\n  --plus-spinner-color: #ff5449;\n}\n.spinner-3 {\n  --plus-spinner-color: #5f9ee9;\n}\n.spinner-4 {\n  --plus-spinner-color: #ffc903;\n}\n.spinner-5 {\n  --plus-spinner-color: #9073c1;\n}\n",
+      "style": ".spinner-1 {\n  color: #08dfc8;\n}\n.spinner-2 {\n  color: #ff5449;\n}\n.spinner-3 {\n  color: #5f9ee9;\n}\n.spinner-4 {\n  color: #ffc903;\n}\n.spinner-5 {\n  color: #9073c1;\n}\n",
       "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-1\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-2\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-3\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-4\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-5\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
@@ -6837,7 +6837,7 @@ export const examples: any[] = [
     "component": "spinner",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\n",
-      "style": ".spinner-1 {\n  --plus-spinner-color: #08dfc8;\n}\n.spinner-2 {\n  --plus-spinner-color: #ff5449;\n}\n.spinner-3 {\n  --plus-spinner-color: #5f9ee9;\n}\n.spinner-4 {\n  --plus-spinner-color: #ffc903;\n}\n.spinner-5 {\n  --plus-spinner-color: #9073c1;\n}\n",
+      "style": ".spinner-1 {\n  color: #08dfc8;\n}\n.spinner-2 {\n  color: #ff5449;\n}\n.spinner-3 {\n  color: #5f9ee9;\n}\n.spinner-4 {\n  color: #ffc903;\n}\n.spinner-5 {\n  color: #9073c1;\n}\n",
       "template": "<plus-grid justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-1\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-2\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-3\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-4\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner class=\"spinner-5\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
@@ -6846,7 +6846,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "spinner",
     "detail": {
-      "script": "import { Grid, Spinner } from '@htmlplus/react';\nconst SpinnerColor = () => {\n  return (\n    <Grid justifyContent=\"evenly\">\n      <Grid.Item>\n        <Spinner className=\"spinner-1\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner className=\"spinner-2\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner className=\"spinner-3\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner className=\"spinner-4\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner className=\"spinner-5\"></Spinner>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst SpinnerColorExample = () => {\n  return (\n    <div className=\"ex-spinner-color\">\n      <SpinnerColor />\n      <style>{`.ex-spinner-color .spinner-1 {  --plus-spinner-color: #08dfc8;}.ex-spinner-color .spinner-2 {  --plus-spinner-color: #ff5449;}.ex-spinner-color .spinner-3 {  --plus-spinner-color: #5f9ee9;}.ex-spinner-color .spinner-4 {  --plus-spinner-color: #ffc903;}.ex-spinner-color .spinner-5 {  --plus-spinner-color: #9073c1;}`}</style>\n    </div>\n  )\n};\n\nexport default SpinnerColorExample;"
+      "script": "import { Grid, Spinner } from '@htmlplus/react';\nconst SpinnerColor = () => {\n  return (\n    <Grid justifyContent=\"evenly\">\n      <Grid.Item>\n        <Spinner className=\"spinner-1\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner className=\"spinner-2\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner className=\"spinner-3\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner className=\"spinner-4\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner className=\"spinner-5\"></Spinner>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst SpinnerColorExample = () => {\n  return (\n    <div className=\"ex-spinner-color\">\n      <SpinnerColor />\n      <style>{`.ex-spinner-color .spinner-1 {  color: #08dfc8;}.ex-spinner-color .spinner-2 {  color: #ff5449;}.ex-spinner-color .spinner-3 {  color: #5f9ee9;}.ex-spinner-color .spinner-4 {  color: #ffc903;}.ex-spinner-color .spinner-5 {  color: #9073c1;}`}</style>\n    </div>\n  )\n};\n\nexport default SpinnerColorExample;"
     }
   },
   {
@@ -6855,7 +6855,7 @@ export const examples: any[] = [
     "component": "spinner",
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": "plus-spinner[size='sm'] {\n  --plus-spinner-size: 24px;\n}\nplus-spinner[size='md'] {\n  --plus-spinner-size: 48px;\n}\nplus-spinner[size='lg'] {\n  --plus-spinner-size: 72px;\n}\n",
+      "style": "plus-spinner[size='sm'] {\n  width: 24px;\n  height: 24px;\n}\nplus-spinner[size='md'] {\n  width: 48px;\n  height: 48px;\n}\nplus-spinner[size='lg'] {\n  width: 72px;\n  height: 72px;\n}\n",
       "template": "<plus-grid align-items=\"center\" justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner size=\"sm\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"lg\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
@@ -6865,7 +6865,7 @@ export const examples: any[] = [
     "component": "spinner",
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/grid.js';\nimport 'https://unpkg.com/@htmlplus/core/grid-item.js';\nimport 'https://unpkg.com/@htmlplus/core/spinner.js';\n",
-      "style": "plus-spinner[size='sm'] {\n  --plus-spinner-size: 24px;\n}\nplus-spinner[size='md'] {\n  --plus-spinner-size: 48px;\n}\nplus-spinner[size='lg'] {\n  --plus-spinner-size: 72px;\n}\n",
+      "style": "plus-spinner[size='sm'] {\n  width: 24px;\n  height: 24px;\n}\nplus-spinner[size='md'] {\n  width: 48px;\n  height: 48px;\n}\nplus-spinner[size='lg'] {\n  width: 72px;\n  height: 72px;\n}\n",
       "template": "<plus-grid align-items=\"center\" justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner size=\"sm\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"lg\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
@@ -6875,7 +6875,7 @@ export const examples: any[] = [
     "component": "spinner",
     "detail": {
       "script": "import { Grid, Spinner } from '@htmlplus/react';\nconst SpinnerCustomSize = () => {\n  return (\n    <Grid alignItems=\"center\" justifyContent=\"evenly\">\n      <Grid.Item>\n        <Spinner size=\"sm\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"lg\"></Spinner>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default SpinnerCustomSize;\n",
-      "style": "plus-spinner[size='sm'] {\n  --plus-spinner-size: 24px;\n}\nplus-spinner[size='md'] {\n  --plus-spinner-size: 48px;\n}\nplus-spinner[size='lg'] {\n  --plus-spinner-size: 72px;\n}\n"
+      "style": "plus-spinner[size='sm'] {\n  width: 24px;\n  height: 24px;\n}\nplus-spinner[size='md'] {\n  width: 48px;\n  height: 48px;\n}\nplus-spinner[size='lg'] {\n  width: 72px;\n  height: 72px;\n}\n"
     }
   },
   {
@@ -6884,7 +6884,7 @@ export const examples: any[] = [
     "component": "spinner",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\nconst SpinnerCustomSize = () => {\n  return (\n    <plus-grid align-items=\"center\" justify-content=\"evenly\">\n      <plus-grid-item>\n        <plus-spinner size=\"sm\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"lg\"></plus-spinner>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default SpinnerCustomSize;\n",
-      "style": "plus-spinner[size='sm'] {\n  --plus-spinner-size: 24px;\n}\nplus-spinner[size='md'] {\n  --plus-spinner-size: 48px;\n}\nplus-spinner[size='lg'] {\n  --plus-spinner-size: 72px;\n}\n"
+      "style": "plus-spinner[size='sm'] {\n  width: 24px;\n  height: 24px;\n}\nplus-spinner[size='md'] {\n  width: 48px;\n  height: 48px;\n}\nplus-spinner[size='lg'] {\n  width: 72px;\n  height: 72px;\n}\n"
     }
   },
   {
@@ -6893,7 +6893,7 @@ export const examples: any[] = [
     "component": "spinner",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\n",
-      "style": "plus-spinner[size='sm'] {\n  --plus-spinner-size: 24px;\n}\nplus-spinner[size='md'] {\n  --plus-spinner-size: 48px;\n}\nplus-spinner[size='lg'] {\n  --plus-spinner-size: 72px;\n}\n",
+      "style": "plus-spinner[size='sm'] {\n  width: 24px;\n  height: 24px;\n}\nplus-spinner[size='md'] {\n  width: 48px;\n  height: 48px;\n}\nplus-spinner[size='lg'] {\n  width: 72px;\n  height: 72px;\n}\n",
       "template": "<plus-grid align-items=\"center\" justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner size=\"sm\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"lg\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
@@ -6903,7 +6903,7 @@ export const examples: any[] = [
     "component": "spinner",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\n",
-      "style": "plus-spinner[size='sm'] {\n  --plus-spinner-size: 24px;\n}\nplus-spinner[size='md'] {\n  --plus-spinner-size: 48px;\n}\nplus-spinner[size='lg'] {\n  --plus-spinner-size: 72px;\n}\n",
+      "style": "plus-spinner[size='sm'] {\n  width: 24px;\n  height: 24px;\n}\nplus-spinner[size='md'] {\n  width: 48px;\n  height: 48px;\n}\nplus-spinner[size='lg'] {\n  width: 72px;\n  height: 72px;\n}\n",
       "template": "<plus-grid align-items=\"center\" justify-content=\"evenly\">\n  <plus-grid-item>\n    <plus-spinner size=\"sm\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"md\"></plus-spinner>\n  </plus-grid-item>\n  <plus-grid-item>\n    <plus-spinner size=\"lg\"></plus-spinner>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
@@ -6912,7 +6912,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "spinner",
     "detail": {
-      "script": "import { Grid, Spinner } from '@htmlplus/react';\nconst SpinnerCustomSize = () => {\n  return (\n    <Grid alignItems=\"center\" justifyContent=\"evenly\">\n      <Grid.Item>\n        <Spinner size=\"sm\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"lg\"></Spinner>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst SpinnerCustomSizeExample = () => {\n  return (\n    <div className=\"ex-spinner-custom-size\">\n      <SpinnerCustomSize />\n      <style>{`.ex-spinner-custom-size plus-spinner[size='sm'] {  --plus-spinner-size: 24px;}.ex-spinner-custom-size plus-spinner[size='md'] {  --plus-spinner-size: 48px;}.ex-spinner-custom-size plus-spinner[size='lg'] {  --plus-spinner-size: 72px;}`}</style>\n    </div>\n  )\n};\n\nexport default SpinnerCustomSizeExample;"
+      "script": "import { Grid, Spinner } from '@htmlplus/react';\nconst SpinnerCustomSize = () => {\n  return (\n    <Grid alignItems=\"center\" justifyContent=\"evenly\">\n      <Grid.Item>\n        <Spinner size=\"sm\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"lg\"></Spinner>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst SpinnerCustomSizeExample = () => {\n  return (\n    <div className=\"ex-spinner-custom-size\">\n      <SpinnerCustomSize />\n      <style>{`.ex-spinner-custom-size plus-spinner[size='sm'] {  width: 24px;  height: 24px;}.ex-spinner-custom-size plus-spinner[size='md'] {  width: 48px;  height: 48px;}.ex-spinner-custom-size plus-spinner[size='lg'] {  width: 72px;  height: 72px;}`}</style>\n    </div>\n  )\n};\n\nexport default SpinnerCustomSizeExample;"
     }
   },
   {
@@ -6920,9 +6920,9 @@ export const examples: any[] = [
     "category": "angular",
     "component": "spinner",
     "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/spinner.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-spinner {\n  --plus-spinner-size: 5rem;\n  --plus-spinner-weight: 0.5;\n  --plus-spinner-color: purple;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-spinner type=\"dual-ring\"></plus-spinner>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n}\n",
+      "template": "<plus-center>\n  <plus-spinner type=\"dual-ring\"></plus-spinner>\n</plus-center>\n"
     }
   },
   {
@@ -6930,9 +6930,9 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "spinner",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/spinner.js';\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-spinner {\n  --plus-spinner-size: 5rem;\n  --plus-spinner-weight: 0.5;\n  --plus-spinner-color: purple;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-spinner type=\"dual-ring\"></plus-spinner>\n</div>\n"
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/spinner.js';\n",
+      "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n}\n",
+      "template": "<plus-center>\n  <plus-spinner type=\"dual-ring\"></plus-spinner>\n</plus-center>\n"
     }
   },
   {
@@ -6940,8 +6940,8 @@ export const examples: any[] = [
     "category": "react",
     "component": "spinner",
     "detail": {
-      "script": "import { Spinner } from '@htmlplus/react';\nconst SpinnerCustomize = () => {\n  return (\n    <div className=\"center\">\n      <Spinner type=\"dual-ring\"></Spinner>\n    </div>\n  );\n};\nexport default SpinnerCustomize;\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-spinner {\n  --plus-spinner-size: 5rem;\n  --plus-spinner-weight: 0.5;\n  --plus-spinner-color: purple;\n}\n"
+      "script": "import { Center, Spinner } from '@htmlplus/react';\nconst SpinnerCustomize = () => {\n  return (\n    <Center>\n      <Spinner type=\"dual-ring\"></Spinner>\n    </Center>\n  );\n};\nexport default SpinnerCustomize;\n",
+      "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n}\n"
     }
   },
   {
@@ -6949,8 +6949,8 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "spinner",
     "detail": {
-      "script": "import '@htmlplus/core/spinner.js';\nconst SpinnerCustomize = () => {\n  return (\n    <div className=\"center\">\n      <plus-spinner type=\"dual-ring\"></plus-spinner>\n    </div>\n  );\n};\nexport default SpinnerCustomize;\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-spinner {\n  --plus-spinner-size: 5rem;\n  --plus-spinner-weight: 0.5;\n  --plus-spinner-color: purple;\n}\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\nconst SpinnerCustomize = () => {\n  return (\n    <plus-center>\n      <plus-spinner type=\"dual-ring\"></plus-spinner>\n    </plus-center>\n  );\n};\nexport default SpinnerCustomize;\n",
+      "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n}\n"
     }
   },
   {
@@ -6958,9 +6958,9 @@ export const examples: any[] = [
     "category": "svelte",
     "component": "spinner",
     "detail": {
-      "script": "import '@htmlplus/core/spinner.js';\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-spinner {\n  --plus-spinner-size: 5rem;\n  --plus-spinner-weight: 0.5;\n  --plus-spinner-color: purple;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-spinner type=\"dual-ring\"></plus-spinner>\n</div>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\n",
+      "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n}\n",
+      "template": "<plus-center>\n  <plus-spinner type=\"dual-ring\"></plus-spinner>\n</plus-center>\n"
     }
   },
   {
@@ -6968,9 +6968,9 @@ export const examples: any[] = [
     "category": "vue",
     "component": "spinner",
     "detail": {
-      "script": "import '@htmlplus/core/spinner.js';\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-spinner {\n  --plus-spinner-size: 5rem;\n  --plus-spinner-weight: 0.5;\n  --plus-spinner-color: purple;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-spinner type=\"dual-ring\"></plus-spinner>\n</div>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\n",
+      "style": "plus-spinner {\n  color: purple;\n  width: 5rem;\n  height: 5rem;\n}\n",
+      "template": "<plus-center>\n  <plus-spinner type=\"dual-ring\"></plus-spinner>\n</plus-center>\n"
     }
   },
   {
@@ -6978,7 +6978,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "spinner",
     "detail": {
-      "script": "import { Spinner } from '@htmlplus/react';\nconst SpinnerCustomize = () => {\n  return (\n    <div className=\"center\">\n      <Spinner type=\"dual-ring\"></Spinner>\n    </div>\n  );\n};\n\nconst SpinnerCustomizeExample = () => {\n  return (\n    <div className=\"ex-spinner-customize\">\n      <SpinnerCustomize />\n      <style>{`.ex-spinner-customize .center {  text-align: center;}.ex-spinner-customize plus-spinner {  --plus-spinner-size: 5rem;  --plus-spinner-weight: 0.5;  --plus-spinner-color: purple;}`}</style>\n    </div>\n  )\n};\n\nexport default SpinnerCustomizeExample;"
+      "script": "import { Center, Spinner } from '@htmlplus/react';\nconst SpinnerCustomize = () => {\n  return (\n    <Center>\n      <Spinner type=\"dual-ring\"></Spinner>\n    </Center>\n  );\n};\n\nconst SpinnerCustomizeExample = () => {\n  return (\n    <div className=\"ex-spinner-customize\">\n      <SpinnerCustomize />\n      <style>{`.ex-spinner-customize plus-spinner {  color: purple;  width: 5rem;  height: 5rem;}`}</style>\n    </div>\n  )\n};\n\nexport default SpinnerCustomizeExample;"
     }
   },
   {
@@ -6986,9 +6986,8 @@ export const examples: any[] = [
     "category": "angular",
     "component": "spinner",
     "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/spinner.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-spinner></plus-spinner>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-spinner></plus-spinner>\n</plus-center>\n"
     }
   },
   {
@@ -6996,9 +6995,8 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "spinner",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/spinner.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-spinner></plus-spinner>\n</div>\n"
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/spinner.js';\n",
+      "template": "<plus-center>\n  <plus-spinner></plus-spinner>\n</plus-center>\n"
     }
   },
   {
@@ -7006,8 +7004,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "spinner",
     "detail": {
-      "script": "import { Spinner } from '@htmlplus/react';\nconst SpinnerDefault = () => {\n  return (\n    <div className=\"center\">\n      <Spinner></Spinner>\n    </div>\n  );\n};\nexport default SpinnerDefault;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import { Center, Spinner } from '@htmlplus/react';\nconst SpinnerDefault = () => {\n  return (\n    <Center>\n      <Spinner></Spinner>\n    </Center>\n  );\n};\nexport default SpinnerDefault;\n"
     }
   },
   {
@@ -7015,8 +7012,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "spinner",
     "detail": {
-      "script": "import '@htmlplus/core/spinner.js';\nconst SpinnerDefault = () => {\n  return (\n    <div className=\"center\">\n      <plus-spinner></plus-spinner>\n    </div>\n  );\n};\nexport default SpinnerDefault;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\nconst SpinnerDefault = () => {\n  return (\n    <plus-center>\n      <plus-spinner></plus-spinner>\n    </plus-center>\n  );\n};\nexport default SpinnerDefault;\n"
     }
   },
   {
@@ -7024,9 +7020,8 @@ export const examples: any[] = [
     "category": "svelte",
     "component": "spinner",
     "detail": {
-      "script": "import '@htmlplus/core/spinner.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-spinner></plus-spinner>\n</div>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\n",
+      "template": "<plus-center>\n  <plus-spinner></plus-spinner>\n</plus-center>\n"
     }
   },
   {
@@ -7034,9 +7029,8 @@ export const examples: any[] = [
     "category": "vue",
     "component": "spinner",
     "detail": {
-      "script": "import '@htmlplus/core/spinner.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-spinner></plus-spinner>\n</div>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\n",
+      "template": "<plus-center>\n  <plus-spinner></plus-spinner>\n</plus-center>\n"
     }
   },
   {
@@ -7044,7 +7038,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "spinner",
     "detail": {
-      "script": "import { Spinner } from '@htmlplus/react';\nconst SpinnerDefault = () => {\n  return (\n    <div className=\"center\">\n      <Spinner></Spinner>\n    </div>\n  );\n};\n\nconst SpinnerDefaultExample = () => {\n  return (\n    <div className=\"ex-spinner-default\">\n      <SpinnerDefault />\n      <style>{`.ex-spinner-default .center {  text-align: center;}`}</style>\n    </div>\n  )\n};\n\nexport default SpinnerDefaultExample;"
+      "script": "import { Center, Spinner } from '@htmlplus/react';\nconst SpinnerDefault = () => {\n  return (\n    <Center>\n      <Spinner></Spinner>\n    </Center>\n  );\n};\n\nconst SpinnerDefaultExample = () => {\n  return (\n    <div className=\"ex-spinner-default\">\n      <SpinnerDefault />\n      <style>{`undefined`}</style>\n    </div>\n  )\n};\n\nexport default SpinnerDefaultExample;"
     }
   },
   {

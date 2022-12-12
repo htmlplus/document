@@ -2,12 +2,12 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Spinner } from '@htmlplus/react';
+import { Center, Spinner } from '@htmlplus/react';
 const SpinnerCustomize = () => {
   return (
-    <div className="center">
+    <Center>
       <Spinner type="dual-ring"></Spinner>
-    </div>
+    </Center>
   );
 };
 
@@ -15,7 +15,7 @@ const SpinnerCustomizeExample = () => {
   return (
     <div className="ex-spinner-customize">
       <SpinnerCustomize />
-      <style>{`.ex-spinner-customize .center {  text-align: center;}.ex-spinner-customize plus-spinner {  --plus-spinner-size: 5rem;  --plus-spinner-weight: 0.5;  --plus-spinner-color: purple;}`}</style>
+      <style>{`.ex-spinner-customize plus-spinner {  color: purple;  width: 5rem;  height: 5rem;}`}</style>
     </div>
   )
 };
