@@ -47,6 +47,7 @@ export const CenterInline = dynamic(() => import('./CenterInline').then((compone
 export const ClickOutsideDefault = dynamic(() => import('./ClickOutsideDefault').then((component) => component), { ssr: false });
 export const ClickOutsideMenu = dynamic(() => import('./ClickOutsideMenu').then((component) => component), { ssr: false });
 export const CounterDefault = dynamic(() => import('./CounterDefault').then((component) => component), { ssr: false });
+export const CounterIntersection = dynamic(() => import('./CounterIntersection').then((component) => component), { ssr: false });
 export const CropperArea = dynamic(() => import('./CropperArea').then((component) => component), { ssr: false });
 export const CropperAspectRatio = dynamic(() => import('./CropperAspectRatio').then((component) => component), { ssr: false });
 export const CropperBackdrop = dynamic(() => import('./CropperBackdrop').then((component) => component), { ssr: false });

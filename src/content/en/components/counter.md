@@ -16,20 +16,24 @@ Can be used to quickly create animations that display numerical data in a more i
 
 <Example value="default" />
 
+### Intersection
+
+<Example value="intersection" />
+
 <Checklist 
     accessibility={false}
-    bidirectionality={false}
-    cssParts={false}
-    cssVariables={false}
-    documentation={false}
-    examples={false}
-    events={false}
-    keyboard={false}
-    methods={false}
+    bidirectionality="N/A"
+    cssParts="N/A"
+    cssVariables="N/A"
+    documentation={true}
+    examples={true}
+    events={true}
+    keyboard="N/A"
+    methods={true}
     playground={false}
-    properties={false}
+    properties={true}
     skeleton={false}
-    slots={false}
+    slots="N/A"
 />
 
 <LastModified />
