@@ -31,13 +31,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
         .replace(/<Example value=(".*") /g, `<Example value={example[$1]} `)
         .replace(/<LastModified/g, `<LastModified value="${current.lastModified}"`);
     } catch {}
-    current.readmeContent ||= null;
+    current.readmeContent ??= null;
   }
 
   // TODO
   const example = (() => {
     return examples
-      ?.filter((example) => example.category.startsWith(framework) && example.component == component)
+      ?.filter((example) => example.category == framework && example.component == component)
       ?.reduce((result, example) => {
         const links = [
           {
@@ -74,7 +74,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
         };
 
         for (const key of ['template', 'script', 'style', 'config']) {
-          if (framework == 'react' && key == 'template') continue;
+          if (key == 'template' && ['react', 'react@experimental'].includes(framework)) continue;
 
           const content = example.detail?.[key] ?? null;
 
