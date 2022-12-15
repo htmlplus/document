@@ -1,6 +1,6 @@
 # Intersection
 
-This component provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's [viewport](https://developer.mozilla.org/en-US/docs/Glossary/Viewport). Its basic behavior is totally similar to [standard intersection observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API). Its callback is executed whenever intersects with the viewport, or when the amount by which the two intersect changes by a requested amount.
+The [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's [viewport](https://developer.mozilla.org/en-US/docs/Glossary/Viewport).
 
 <Playground />
 
@@ -14,29 +14,28 @@ This component provides a way to asynchronously observe changes in the intersect
 
 ### Default
 
-The intersection component observes the viewport and updates the status when the card component
-enters or exits the viewport. (Its a component for detecting when elements are visible within the user's viewport).
+Observes the user's viewport to detect the visibility of the Card.
 <Example value="default" />
 
 ### Lazy Image
 
-This is also used for lazy loading.
+Loads the image after appearing in the user's viewport.
 <Example value="lazy-image" />
 
 <Checklist 
     accessibility={false}
-    bidirectionality={false}
-    cssParts={false}
-    cssVariables={false}
-    documentation={false}
-    examples={false}
-    events={false}
-    keyboard={false}
-    methods={false}
+    bidirectionality="N/A"
+    cssParts="N/A"
+    cssVariables="N/A"
+    documentation={true}
+    examples={true}
+    events={true}
+    keyboard="N/A"
+    methods="N/A"
     playground={false}
-    properties={false}
+    properties={true}
     skeleton={false}
-    slots={false}
+    slots={true}
 />
 
 <LastModified />
