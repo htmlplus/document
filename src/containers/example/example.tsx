@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { Button, Code, Grid, Icon, Tabs } from '@app/components';
 
 import { ExampleProps } from './example.types';
@@ -7,6 +9,8 @@ export const Example = ({ value }: ExampleProps) => {
   if (!value) return <div>TODO</div>;
 
   const { componentName, links, tabs, title } = value;
+
+  const [visible, setVisible] = useState(true);
 
   const language = (tab: any) => {
     switch (tab.key) {
@@ -19,6 +23,11 @@ export const Example = ({ value }: ExampleProps) => {
       case 'template':
         return 'html';
     }
+  };
+
+  const reload = () => {
+    setVisible(false);
+    requestAnimationFrame(() => setVisible(true));
   };
 
   // TODO
@@ -38,6 +47,11 @@ export const Example = ({ value }: ExampleProps) => {
             ))}
           </Tabs.Bar>
         </Grid.Item>
+        <Grid.Item xs="auto">
+          <Button icon text onClick={reload}>
+            Reset
+          </Button>
+        </Grid.Item>
         {links?.map((link) => (
           <Grid.Item key={link.key} xs="auto">
             <Button icon text to={link.url} target="_blank">
@@ -47,9 +61,7 @@ export const Example = ({ value }: ExampleProps) => {
         ))}
       </Grid>
       <Tabs.Panels>
-        <Tabs.Panel value="preview">
-          <Preview />
-        </Tabs.Panel>
+        <Tabs.Panel value="preview">{visible && <Preview />}</Tabs.Panel>
         {tabs
           ?.filter((tab) => tab.key != 'preview')
           ?.map((tab) => (
