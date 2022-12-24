@@ -27,6 +27,7 @@ export const Contributors = () => {
   }, [router.asPath, router.route]);
 
   useEffect(() => {
+    if (process && process.env.NODE_ENV === 'development') return;
     if (!url) return;
     axios
       .get(getPath(ROUTES.GITHUB_COMMITS, { path: url }))
