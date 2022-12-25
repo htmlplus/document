@@ -19,7 +19,6 @@ const DividerVariantExample = () => {
   return (
     <div className="ex-divider-variant">
       <DividerVariant />
-      <style>{`undefined`}</style>
     </div>
   )
 };

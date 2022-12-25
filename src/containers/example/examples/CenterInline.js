@@ -20,7 +20,6 @@ const CenterInlineExample = () => {
   return (
     <div className="ex-center-inline">
       <CenterInline />
-      <style>{`undefined`}</style>
     </div>
   )
 };

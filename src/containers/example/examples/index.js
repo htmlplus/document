@@ -108,6 +108,14 @@ export const IntersectionLazyImage = dynamic(() => import('./IntersectionLazyIma
 export const PortalDefault = dynamic(() => import('./PortalDefault').then((component) => component), { ssr: false });
 export const PortalStrategy = dynamic(() => import('./PortalStrategy').then((component) => component), { ssr: false });
 export const ScrollIndicatorDefault = dynamic(() => import('./ScrollIndicatorDefault').then((component) => component), { ssr: false });
+export const SignatureClear = dynamic(() => import('./SignatureClear').then((component) => component), { ssr: false });
+export const SignatureColor = dynamic(() => import('./SignatureColor').then((component) => component), { ssr: false });
+export const SignatureDefault = dynamic(() => import('./SignatureDefault').then((component) => component), { ssr: false });
+export const SignatureDimensions = dynamic(() => import('./SignatureDimensions').then((component) => component), { ssr: false });
+export const SignatureDisabled = dynamic(() => import('./SignatureDisabled').then((component) => component), { ssr: false });
+export const SignatureDistance = dynamic(() => import('./SignatureDistance').then((component) => component), { ssr: false });
+export const SignatureHistory = dynamic(() => import('./SignatureHistory').then((component) => component), { ssr: false });
+export const SignatureWidth = dynamic(() => import('./SignatureWidth').then((component) => component), { ssr: false });
 export const SpinnerColor = dynamic(() => import('./SpinnerColor').then((component) => component), { ssr: false });
 export const SpinnerCustomSize = dynamic(() => import('./SpinnerCustomSize').then((component) => component), { ssr: false });
 export const SpinnerCustomize = dynamic(() => import('./SpinnerCustomize').then((component) => component), { ssr: false });

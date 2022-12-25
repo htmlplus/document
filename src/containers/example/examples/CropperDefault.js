@@ -11,7 +11,6 @@ const CropperDefaultExample = () => {
   return (
     <div className="ex-cropper-default dock">
       <CropperDefault />
-      <style>{`undefined`}</style>
     </div>
   )
 };

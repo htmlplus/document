@@ -52,7 +52,6 @@ const TabsSeparateExample = () => {
   return (
     <div className="ex-tabs-separate">
       <TabsSeparate />
-      <style>{`undefined`}</style>
     </div>
   )
 };

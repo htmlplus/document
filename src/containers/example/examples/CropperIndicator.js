@@ -11,7 +11,6 @@ const CropperIndicatorExample = () => {
   return (
     <div className="ex-cropper-indicator dock">
       <CropperIndicator />
-      <style>{`undefined`}</style>
     </div>
   )
 };

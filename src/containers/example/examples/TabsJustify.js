@@ -37,7 +37,6 @@ const TabsJustifyExample = () => {
   return (
     <div className="ex-tabs-justify">
       <TabsJustify />
-      <style>{`undefined`}</style>
     </div>
   )
 };

@@ -46,7 +46,6 @@ const TabsDefaultExample = () => {
   return (
     <div className="ex-tabs-default">
       <TabsDefault />
-      <style>{`undefined`}</style>
     </div>
   )
 };

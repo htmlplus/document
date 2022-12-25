@@ -19,7 +19,6 @@ const TabsGrowExample = () => {
   return (
     <div className="ex-tabs-grow">
       <TabsGrow />
-      <style>{`undefined`}</style>
     </div>
   )
 };

@@ -11,7 +11,6 @@ const CropperAreaExample = () => {
   return (
     <div className="ex-cropper-area dock">
       <CropperArea />
-      <style>{`undefined`}</style>
     </div>
   )
 };

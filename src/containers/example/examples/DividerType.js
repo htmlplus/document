@@ -19,7 +19,6 @@ const DividerTypeExample = () => {
   return (
     <div className="ex-divider-type">
       <DividerType />
-      <style>{`undefined`}</style>
     </div>
   )
 };

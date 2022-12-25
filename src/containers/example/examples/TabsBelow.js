@@ -46,7 +46,6 @@ const TabsBelowExample = () => {
   return (
     <div className="ex-tabs-below">
       <TabsBelow />
-      <style>{`undefined`}</style>
     </div>
   )
 };

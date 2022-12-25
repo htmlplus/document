@@ -32,7 +32,6 @@ const SpinnerTypeExample = () => {
   return (
     <div className="ex-spinner-type">
       <SpinnerType />
-      <style>{`undefined`}</style>
     </div>
   )
 };

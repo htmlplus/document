@@ -13,7 +13,6 @@ const CropperBackgroundExample = () => {
   return (
     <div className="ex-cropper-background dock">
       <CropperBackground />
-      <style>{`undefined`}</style>
     </div>
   )
 };

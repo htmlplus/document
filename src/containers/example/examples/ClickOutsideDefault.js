@@ -35,7 +35,6 @@ const ClickOutsideDefaultExample = () => {
   return (
     <div className="ex-click-outside-default">
       <ClickOutsideDefault />
-      <style>{`undefined`}</style>
     </div>
   )
 };

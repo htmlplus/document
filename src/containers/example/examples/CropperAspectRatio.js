@@ -11,7 +11,6 @@ const CropperAspectRatioExample = () => {
   return (
     <div className="ex-cropper-aspect-ratio dock">
       <CropperAspectRatio />
-      <style>{`undefined`}</style>
     </div>
   )
 };

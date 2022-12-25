@@ -15,7 +15,6 @@ const SpinnerDefaultExample = () => {
   return (
     <div className="ex-spinner-default">
       <SpinnerDefault />
-      <style>{`undefined`}</style>
     </div>
   )
 };

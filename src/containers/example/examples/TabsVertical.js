@@ -46,7 +46,6 @@ const TabsVerticalExample = () => {
   return (
     <div className="ex-tabs-vertical">
       <TabsVertical />
-      <style>{`undefined`}</style>
     </div>
   )
 };

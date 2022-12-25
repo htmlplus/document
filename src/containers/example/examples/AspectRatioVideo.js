@@ -15,7 +15,6 @@ const AspectRatioVideoExample = () => {
   return (
     <div className="ex-aspect-ratio-video">
       <AspectRatioVideo />
-      <style>{`undefined`}</style>
     </div>
   )
 };

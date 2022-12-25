@@ -23,7 +23,6 @@ const SpinnerSizeExample = () => {
   return (
     <div className="ex-spinner-size">
       <SpinnerSize />
-      <style>{`undefined`}</style>
     </div>
   )
 };

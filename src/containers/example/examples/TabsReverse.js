@@ -19,7 +19,6 @@ const TabsReverseExample = () => {
   return (
     <div className="ex-tabs-reverse">
       <TabsReverse />
-      <style>{`undefined`}</style>
     </div>
   )
 };

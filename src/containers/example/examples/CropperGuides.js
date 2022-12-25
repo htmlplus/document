@@ -11,7 +11,6 @@ const CropperGuidesExample = () => {
   return (
     <div className="ex-cropper-guides dock">
       <CropperGuides />
-      <style>{`undefined`}</style>
     </div>
   )
 };

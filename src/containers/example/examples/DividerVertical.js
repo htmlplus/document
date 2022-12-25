@@ -31,7 +31,6 @@ const DividerVerticalExample = () => {
   return (
     <div className="ex-divider-vertical">
       <DividerVertical />
-      <style>{`undefined`}</style>
     </div>
   )
 };

@@ -11,7 +11,6 @@ const CropperBackdropExample = () => {
   return (
     <div className="ex-cropper-backdrop dock">
       <CropperBackdrop />
-      <style>{`undefined`}</style>
     </div>
   )
 };

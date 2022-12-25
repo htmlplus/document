@@ -19,7 +19,6 @@ const DividerWidthExample = () => {
   return (
     <div className="ex-divider-width">
       <DividerWidth />
-      <style>{`undefined`}</style>
     </div>
   )
 };
