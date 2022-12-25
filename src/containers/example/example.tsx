@@ -61,7 +61,7 @@ export const Example = ({ value }: ExampleProps) => {
         ))}
       </Grid>
       <Tabs.Panels>
-        <Tabs.Panel value="preview">{visible && <Preview />}</Tabs.Panel>
+        <Tabs.Panel value="preview">{visible ? <Preview key="main" /> : <Preview key="alternative" />}</Tabs.Panel>
         {tabs
           ?.filter((tab) => tab.key != 'preview')
           ?.map((tab) => (

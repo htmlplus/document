@@ -12,8 +12,8 @@
     "sync:statistics": "node ./scripts/statistics.js"
   },
   "devDependencies": {
-    "@htmlplus/core": "^0.7.4-next-12151531",
-    "@htmlplus/react": "^0.6.5-next-12151535",
+    "@htmlplus/core": "^0.7.4-next-12251543",
+    "@htmlplus/react": "^0.6.5-next-12251550",
     "@trivago/prettier-plugin-sort-imports": "^4.0.0",
     "@types/node": "^18.11.9",
     "@types/prismjs": "^1.26.0",
