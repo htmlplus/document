@@ -58,9 +58,7 @@ load()
 
         const name = `${pascalCase(example.component)}${pascalCase(example.key)}`;
 
-        lines.push(
-          `export const ${name} = dynamic(() => import('./${name}').then((component) => component), { ssr: false });`
-        );
+        lines.push(`export const ${name} = dynamic(() => import('./${name}'));`);
 
         const script = [...HEADER, example.detail.script].join('\n');
 
