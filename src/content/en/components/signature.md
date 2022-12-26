@@ -44,6 +44,14 @@ Allows user to draw smooth signatures.
 
 <Example value="history" />
 
+### Resizable
+
+<Example value="resizable" />
+
+### Clear On Resize
+
+<Example value="clear-on-resize" />
+
 <Checklist 
     accessibility={false}
     bidirectionality={false}
