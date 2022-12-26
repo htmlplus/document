@@ -25,7 +25,8 @@ export const Example = ({ value }: ExampleProps) => {
     }
   };
 
-  const reload = () => {
+  const reload = (event: any) => {
+    event.preventDefault();
     setVisible(false);
     requestAnimationFrame(() => setVisible(true));
   };
@@ -48,8 +49,8 @@ export const Example = ({ value }: ExampleProps) => {
           </Tabs.Bar>
         </Grid.Item>
         <Grid.Item xs="auto">
-          <Button icon text onClick={reload}>
-            Reset
+          <Button icon text to="#" onClick={reload}>
+            <Icon size="lg" name="reset" />
           </Button>
         </Grid.Item>
         {links?.map((link) => (
