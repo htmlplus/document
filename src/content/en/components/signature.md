@@ -54,18 +54,18 @@ Allows user to draw smooth signatures.
 
 <Checklist 
     accessibility={false}
-    bidirectionality={false}
-    cssParts={false}
-    cssVariables={false}
-    documentation={false}
-    examples={false}
-    events={false}
+    bidirectionality="N/A"
+    cssParts={true}
+    cssVariables="N/A"
+    documentation={true}
+    examples={true}
+    events={true}
     keyboard={false}
-    methods={false}
+    methods={true}
     playground={false}
     properties={false}
     skeleton={false}
-    slots={false}
+    slots="N/A"
 />
 
 <LastModified />
