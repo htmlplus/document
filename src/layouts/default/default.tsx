@@ -19,7 +19,7 @@ export const LayoutDefault = ({ children }: LayoutDefaultProps) => {
       </Drawer>
       <Grid>
         <Grid.Item xs="auto" hideLgDown>
-          <Sticky class="menu" top="12">
+          <Sticky class="menu" top="0" watcher>
             {/* TODO */}
             <div style={{ width: '300px' }} />
             <Sidebar />

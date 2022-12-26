@@ -79,8 +79,17 @@ plus-avatar img {
   }
 }
 
+.menu[state='normal'] .sidebar {
+  max-height: calc(100vh - 62px);
+}
+
+.menu[state='stick'] .sidebar {
+  max-height: calc(100vh - 0px);
+}
+
 .sidebar {
   padding: 20px;
+  overflow: auto;
   .nav {
     flex-direction: column;
     flex-wrap: nowrap;

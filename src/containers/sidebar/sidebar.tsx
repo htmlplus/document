@@ -94,5 +94,5 @@ export const Sidebar = () => {
     [actives]
   );
 
-  return <div className="sidebar">{menu(items)}</div>;
+  return <div className="sidebar scrollbar">{menu(items)}</div>;
 };
