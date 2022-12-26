@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 
 import { Button, Code, Grid, Icon, Tabs } from '@app/components';
+import { useStore } from '@app/hooks';
 
 import { ExampleProps } from './example.types';
 import * as examples from './examples/index';
@@ -11,6 +12,8 @@ export const Example = ({ value }: ExampleProps) => {
   const { componentName, links, tabs, title } = value;
 
   const [visible, setVisible] = useState(true);
+
+  const store = useStore();
 
   const language = (tab: any) => {
     switch (tab.key) {
@@ -25,11 +28,13 @@ export const Example = ({ value }: ExampleProps) => {
     }
   };
 
-  const reload = (event: any) => {
-    event.preventDefault();
+  const reload = (event?: MouseEvent) => {
+    event?.preventDefault();
     setVisible(false);
     requestAnimationFrame(() => setVisible(true));
   };
+
+  useLayoutEffect(reload, [store.framework]);
 
   // TODO
   const Preview = (examples as any)[componentName!] as any;

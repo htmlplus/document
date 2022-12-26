@@ -52,6 +52,10 @@ Allows user to draw smooth signatures.
 
 <Example value="clear-on-resize" />
 
+### Save
+
+<Example value="save" />
+
 <Checklist 
     accessibility={false}
     bidirectionality="N/A"

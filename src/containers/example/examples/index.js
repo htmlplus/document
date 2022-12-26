@@ -117,6 +117,7 @@ export const SignatureDisabled = dynamic(() => import('./SignatureDisabled'));
 export const SignatureDistance = dynamic(() => import('./SignatureDistance'));
 export const SignatureHistory = dynamic(() => import('./SignatureHistory'));
 export const SignatureResizable = dynamic(() => import('./SignatureResizable'));
+export const SignatureSave = dynamic(() => import('./SignatureSave'));
 export const SignatureWidth = dynamic(() => import('./SignatureWidth'));
 export const SpinnerColor = dynamic(() => import('./SpinnerColor'));
 export const SpinnerCustomSize = dynamic(() => import('./SpinnerCustomSize'));
