@@ -1,6 +1,6 @@
 # Aspect Ratio
 
-This component helps to specify a fixed ratio for the width and height sizes of a visual object (e.g. Image).
+Sets a preferred aspect ratio only for the first child inside the component.
 
 <Playground />
 
