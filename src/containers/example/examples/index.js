@@ -14,6 +14,8 @@ export const AnimationMethods = dynamic(() => import('./AnimationMethods'));
 export const AnimationName = dynamic(() => import('./AnimationName'));
 export const AnimationRegisterACustomName = dynamic(() => import('./AnimationRegisterACustomName'));
 export const AspectRatioDefault = dynamic(() => import('./AspectRatioDefault'));
+export const AspectRatioImage = dynamic(() => import('./AspectRatioImage'));
+export const AspectRatioMap = dynamic(() => import('./AspectRatioMap'));
 export const AspectRatioMore = dynamic(() => import('./AspectRatioMore'));
 export const AspectRatioVideo = dynamic(() => import('./AspectRatioVideo'));
 export const AvatarDefault = dynamic(() => import('./AvatarDefault'));

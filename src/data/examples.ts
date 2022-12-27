@@ -608,9 +608,9 @@ export const examples: any[] = [
     "category": "angular",
     "component": "aspect-ratio",
     "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/aspect-ratio.js';\nimport '@htmlplus/core/card.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": "plus-card {\n  --plus-card-background-color: #c5cae9;\n  padding: 1rem;\n}\n",
-      "template": "<plus-aspect-ratio value=\"16/9\">\n  <plus-card tile>\n    This box will always be 16/9 (unless you put more stuff in it)\n  </plus-card>\n</plus-aspect-ratio>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/aspect-ratio.js';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-card {\n  --plus-card-background-color: #c5cae9;\n}\n",
+      "template": "<plus-aspect-ratio value=\"16/9\">\n  <plus-card tile>\n    <plus-card-body>\n      This box will always be 16/9 (unless you put more stuff in it)\n    </plus-card-body>\n  </plus-card>\n</plus-aspect-ratio>\n"
     }
   },
   {
@@ -618,9 +618,9 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "aspect-ratio",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/aspect-ratio.js';\nimport 'https://unpkg.com/@htmlplus/core/card.js';\n",
-      "style": "plus-card {\n  --plus-card-background-color: #c5cae9;\n  padding: 1rem;\n}\n",
-      "template": "<plus-aspect-ratio value=\"16/9\">\n  <plus-card tile>\n    This box will always be 16/9 (unless you put more stuff in it)\n  </plus-card>\n</plus-aspect-ratio>\n"
+      "script": "import 'https://unpkg.com/@htmlplus/core/aspect-ratio.js';\nimport 'https://unpkg.com/@htmlplus/core/card.js';\nimport 'https://unpkg.com/@htmlplus/core/card-body.js';\n",
+      "style": "plus-card {\n  --plus-card-background-color: #c5cae9;\n}\n",
+      "template": "<plus-aspect-ratio value=\"16/9\">\n  <plus-card tile>\n    <plus-card-body>\n      This box will always be 16/9 (unless you put more stuff in it)\n    </plus-card-body>\n  </plus-card>\n</plus-aspect-ratio>\n"
     }
   },
   {
@@ -628,8 +628,8 @@ export const examples: any[] = [
     "category": "react",
     "component": "aspect-ratio",
     "detail": {
-      "script": "import { AspectRatio, Card } from '@htmlplus/react';\nconst AspectRatioDefault = () => {\n  return (\n    <AspectRatio value=\"16/9\">\n      <Card tile>\n        This box will always be 16/9 (unless you put more stuff in it)\n      </Card>\n    </AspectRatio>\n  );\n};\nexport default AspectRatioDefault;\n",
-      "style": "plus-card {\n  --plus-card-background-color: #c5cae9;\n  padding: 1rem;\n}\n"
+      "script": "import { AspectRatio, Card } from '@htmlplus/react';\nconst AspectRatioDefault = () => {\n  return (\n    <AspectRatio value=\"16/9\">\n      <Card tile>\n        <Card.Body>\n          This box will always be 16/9 (unless you put more stuff in it)\n        </Card.Body>\n      </Card>\n    </AspectRatio>\n  );\n};\nexport default AspectRatioDefault;\n",
+      "style": "plus-card {\n  --plus-card-background-color: #c5cae9;\n}\n"
     }
   },
   {
@@ -637,8 +637,8 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "aspect-ratio",
     "detail": {
-      "script": "import '@htmlplus/core/aspect-ratio.js';\nimport '@htmlplus/core/card.js';\nconst AspectRatioDefault = () => {\n  return (\n    <plus-aspect-ratio value=\"16/9\">\n      <plus-card tile>\n        This box will always be 16/9 (unless you put more stuff in it)\n      </plus-card>\n    </plus-aspect-ratio>\n  );\n};\nexport default AspectRatioDefault;\n",
-      "style": "plus-card {\n  --plus-card-background-color: #c5cae9;\n  padding: 1rem;\n}\n"
+      "script": "import '@htmlplus/core/aspect-ratio.js';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\nconst AspectRatioDefault = () => {\n  return (\n    <plus-aspect-ratio value=\"16/9\">\n      <plus-card tile>\n        <plus-card-body>\n          This box will always be 16/9 (unless you put more stuff in it)\n        </plus-card-body>\n      </plus-card>\n    </plus-aspect-ratio>\n  );\n};\nexport default AspectRatioDefault;\n",
+      "style": "plus-card {\n  --plus-card-background-color: #c5cae9;\n}\n"
     }
   },
   {
@@ -646,9 +646,9 @@ export const examples: any[] = [
     "category": "svelte",
     "component": "aspect-ratio",
     "detail": {
-      "script": "import '@htmlplus/core/aspect-ratio.js';\nimport '@htmlplus/core/card.js';\n",
-      "style": "plus-card {\n  --plus-card-background-color: #c5cae9;\n  padding: 1rem;\n}\n",
-      "template": "<plus-aspect-ratio value=\"16/9\">\n  <plus-card tile>\n    This box will always be 16/9 (unless you put more stuff in it)\n  </plus-card>\n</plus-aspect-ratio>\n"
+      "script": "import '@htmlplus/core/aspect-ratio.js';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\n",
+      "style": "plus-card {\n  --plus-card-background-color: #c5cae9;\n}\n",
+      "template": "<plus-aspect-ratio value=\"16/9\">\n  <plus-card tile>\n    <plus-card-body>\n      This box will always be 16/9 (unless you put more stuff in it)\n    </plus-card-body>\n  </plus-card>\n</plus-aspect-ratio>\n"
     }
   },
   {
@@ -656,9 +656,9 @@ export const examples: any[] = [
     "category": "vue",
     "component": "aspect-ratio",
     "detail": {
-      "script": "import '@htmlplus/core/aspect-ratio.js';\nimport '@htmlplus/core/card.js';\n",
-      "style": "plus-card {\n  --plus-card-background-color: #c5cae9;\n  padding: 1rem;\n}\n",
-      "template": "<plus-aspect-ratio value=\"16/9\">\n  <plus-card tile>\n    This box will always be 16/9 (unless you put more stuff in it)\n  </plus-card>\n</plus-aspect-ratio>\n"
+      "script": "import '@htmlplus/core/aspect-ratio.js';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\n",
+      "style": "plus-card {\n  --plus-card-background-color: #c5cae9;\n}\n",
+      "template": "<plus-aspect-ratio value=\"16/9\">\n  <plus-card tile>\n    <plus-card-body>\n      This box will always be 16/9 (unless you put more stuff in it)\n    </plus-card-body>\n  </plus-card>\n</plus-aspect-ratio>\n"
     }
   },
   {
@@ -666,7 +666,127 @@ export const examples: any[] = [
     "category": "preview",
     "component": "aspect-ratio",
     "detail": {
-      "script": "import { AspectRatio, Card } from '@htmlplus/react';\nconst AspectRatioDefault = () => {\n  return (\n    <AspectRatio value=\"16/9\">\n      <Card tile>\n        This box will always be 16/9 (unless you put more stuff in it)\n      </Card>\n    </AspectRatio>\n  );\n};\n\nconst AspectRatioDefaultExample = () => {\n  return (\n    <div className=\"ex-aspect-ratio-default\">\n      <AspectRatioDefault />\n      <style>{`.ex-aspect-ratio-default plus-card {  --plus-card-background-color: #c5cae9;  padding: 1rem;}`}</style>\n    </div>\n  )\n};\n\nexport default AspectRatioDefaultExample;\n"
+      "script": "import { AspectRatio, Card } from '@htmlplus/react';\nconst AspectRatioDefault = () => {\n  return (\n    <AspectRatio value=\"16/9\">\n      <Card tile>\n        <Card.Body>\n          This box will always be 16/9 (unless you put more stuff in it)\n        </Card.Body>\n      </Card>\n    </AspectRatio>\n  );\n};\n\nconst AspectRatioDefaultExample = () => {\n  return (\n    <div className=\"ex-aspect-ratio-default\">\n      <AspectRatioDefault />\n      <style>{`.ex-aspect-ratio-default plus-card {  --plus-card-background-color: #c5cae9;}`}</style>\n    </div>\n  )\n};\n\nexport default AspectRatioDefaultExample;\n"
+    }
+  },
+  {
+    "key": "image",
+    "category": "angular",
+    "component": "aspect-ratio",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/aspect-ratio.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"http://placeimg.com/640/640/nature\" style=\"object-fit: cover;\" />\n</plus-aspect-ratio>\n"
+    }
+  },
+  {
+    "key": "image",
+    "category": "javascript",
+    "component": "aspect-ratio",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/aspect-ratio.js';\n",
+      "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"http://placeimg.com/640/640/nature\" style=\"object-fit: cover;\" />\n</plus-aspect-ratio>\n"
+    }
+  },
+  {
+    "key": "image",
+    "category": "react",
+    "component": "aspect-ratio",
+    "detail": {
+      "script": "import { AspectRatio } from '@htmlplus/react';\nconst AspectRatioImage = () => {\n  return (\n    <AspectRatio value=\"18/6\">\n      <img\n        src=\"http://placeimg.com/640/640/nature\"\n        style={{\n          'object-fit': 'cover'\n        }}\n      />\n    </AspectRatio>\n  );\n};\nexport default AspectRatioImage;\n"
+    }
+  },
+  {
+    "key": "image",
+    "category": "react@experimental",
+    "component": "aspect-ratio",
+    "detail": {
+      "script": "import '@htmlplus/core/aspect-ratio.js';\nconst AspectRatioImage = () => {\n  return (\n    <plus-aspect-ratio value=\"18/6\">\n      <img\n        src=\"http://placeimg.com/640/640/nature\"\n        style={{\n          'object-fit': 'cover'\n        }}\n      />\n    </plus-aspect-ratio>\n  );\n};\nexport default AspectRatioImage;\n"
+    }
+  },
+  {
+    "key": "image",
+    "category": "svelte",
+    "component": "aspect-ratio",
+    "detail": {
+      "script": "import '@htmlplus/core/aspect-ratio.js';\n",
+      "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"http://placeimg.com/640/640/nature\" style=\"object-fit: cover;\" />\n</plus-aspect-ratio>\n"
+    }
+  },
+  {
+    "key": "image",
+    "category": "vue",
+    "component": "aspect-ratio",
+    "detail": {
+      "script": "import '@htmlplus/core/aspect-ratio.js';\n",
+      "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"http://placeimg.com/640/640/nature\" style=\"object-fit: cover;\" />\n</plus-aspect-ratio>\n"
+    }
+  },
+  {
+    "key": "image",
+    "category": "preview",
+    "component": "aspect-ratio",
+    "detail": {
+      "script": "import { AspectRatio } from '@htmlplus/react';\nconst AspectRatioImage = () => {\n  return (\n    <AspectRatio value=\"18/6\">\n      <img\n        src=\"http://placeimg.com/640/640/nature\"\n        style={{\n          'object-fit': 'cover'\n        }}\n      />\n    </AspectRatio>\n  );\n};\n\nconst AspectRatioImageExample = () => {\n  return (\n    <div className=\"ex-aspect-ratio-image\">\n      <AspectRatioImage />\n    </div>\n  )\n};\n\nexport default AspectRatioImageExample;\n"
+    }
+  },
+  {
+    "key": "map",
+    "category": "angular",
+    "component": "aspect-ratio",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/aspect-ratio.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-aspect-ratio value=\"4/3\">\n  <iframe src=\"https://www.google.com/maps/embed\"></iframe>\n</plus-aspect-ratio>\n"
+    }
+  },
+  {
+    "key": "map",
+    "category": "javascript",
+    "component": "aspect-ratio",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/aspect-ratio.js';\n",
+      "template": "<plus-aspect-ratio value=\"4/3\">\n  <iframe src=\"https://www.google.com/maps/embed\"></iframe>\n</plus-aspect-ratio>\n"
+    }
+  },
+  {
+    "key": "map",
+    "category": "react",
+    "component": "aspect-ratio",
+    "detail": {
+      "script": "import { AspectRatio } from '@htmlplus/react';\nconst AspectRatioMap = () => {\n  return (\n    <AspectRatio value=\"4/3\">\n      <iframe src=\"https://www.google.com/maps/embed\"></iframe>\n    </AspectRatio>\n  );\n};\nexport default AspectRatioMap;\n"
+    }
+  },
+  {
+    "key": "map",
+    "category": "react@experimental",
+    "component": "aspect-ratio",
+    "detail": {
+      "script": "import '@htmlplus/core/aspect-ratio.js';\nconst AspectRatioMap = () => {\n  return (\n    <plus-aspect-ratio value=\"4/3\">\n      <iframe src=\"https://www.google.com/maps/embed\"></iframe>\n    </plus-aspect-ratio>\n  );\n};\nexport default AspectRatioMap;\n"
+    }
+  },
+  {
+    "key": "map",
+    "category": "svelte",
+    "component": "aspect-ratio",
+    "detail": {
+      "script": "import '@htmlplus/core/aspect-ratio.js';\n",
+      "template": "<plus-aspect-ratio value=\"4/3\">\n  <iframe src=\"https://www.google.com/maps/embed\"></iframe>\n</plus-aspect-ratio>\n"
+    }
+  },
+  {
+    "key": "map",
+    "category": "vue",
+    "component": "aspect-ratio",
+    "detail": {
+      "script": "import '@htmlplus/core/aspect-ratio.js';\n",
+      "template": "<plus-aspect-ratio value=\"4/3\">\n  <iframe src=\"https://www.google.com/maps/embed\"></iframe>\n</plus-aspect-ratio>\n"
+    }
+  },
+  {
+    "key": "map",
+    "category": "preview",
+    "component": "aspect-ratio",
+    "detail": {
+      "script": "import { AspectRatio } from '@htmlplus/react';\nconst AspectRatioMap = () => {\n  return (\n    <AspectRatio value=\"4/3\">\n      <iframe src=\"https://www.google.com/maps/embed\"></iframe>\n    </AspectRatio>\n  );\n};\n\nconst AspectRatioMapExample = () => {\n  return (\n    <div className=\"ex-aspect-ratio-map\">\n      <AspectRatioMap />\n    </div>\n  )\n};\n\nexport default AspectRatioMapExample;\n"
     }
   },
   {
