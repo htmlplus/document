@@ -23,7 +23,7 @@ const AspectRatioCardExample = () => {
   return (
     <div className="ex-aspect-ratio-card">
       <AspectRatioCard />
-      <style>{`.ex-aspect-ratio-card plus-card {  width: 300px;}.ex-aspect-ratio-card .placeholder {  background-color: lightgray;}`}</style>
+      <style>{`.ex-aspect-ratio-card plus-card {  width: 300px;}.ex-aspect-ratio-card .placeholder {  background-color: lightgray;  border-radius: 4px;}`}</style>
     </div>
   )
 };
