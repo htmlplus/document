@@ -13,6 +13,7 @@ export const AnimationKeyframes = dynamic(() => import('./AnimationKeyframes'));
 export const AnimationMethods = dynamic(() => import('./AnimationMethods'));
 export const AnimationName = dynamic(() => import('./AnimationName'));
 export const AnimationRegisterACustomName = dynamic(() => import('./AnimationRegisterACustomName'));
+export const AspectRatioCard = dynamic(() => import('./AspectRatioCard'));
 export const AspectRatioDefault = dynamic(() => import('./AspectRatioDefault'));
 export const AspectRatioImage = dynamic(() => import('./AspectRatioImage'));
 export const AspectRatioMap = dynamic(() => import('./AspectRatioMap'));

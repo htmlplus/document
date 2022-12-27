@@ -24,6 +24,10 @@ Sets a preferred aspect ratio only for the first child inside the component.
 
 <Example value="video" />
 
+### Card
+
+<Example value="card" />
+
 ### Map
 
 <Example value="map" />
