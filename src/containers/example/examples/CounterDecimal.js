@@ -3,20 +3,20 @@
  **************************************************/
 
 import { Center, Counter } from '@htmlplus/react';
-const CounterDefault = () => {
+const CounterDecimal = () => {
   return (
     <Center>
-      <Counter to="1000" play></Counter>
+      <Counter decimal="/" decimals="3" to="1000000" play></Counter>
     </Center>
   );
 };
 
-const CounterDefaultExample = () => {
+const CounterDecimalExample = () => {
   return (
-    <div className="ex-counter-default">
-      <CounterDefault />
+    <div className="ex-counter-decimal">
+      <CounterDecimal />
     </div>
   )
 };
 
-export default CounterDefaultExample;
+export default CounterDecimalExample;

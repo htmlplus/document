@@ -3,20 +3,20 @@
  **************************************************/
 
 import { Center, Counter } from '@htmlplus/react';
-const CounterDefault = () => {
+const CounterSeparator = () => {
   return (
     <Center>
-      <Counter to="1000" play></Counter>
+      <Counter separator="," to="10000000" play></Counter>
     </Center>
   );
 };
 
-const CounterDefaultExample = () => {
+const CounterSeparatorExample = () => {
   return (
-    <div className="ex-counter-default">
-      <CounterDefault />
+    <div className="ex-counter-separator">
+      <CounterSeparator />
     </div>
   )
 };
 
-export default CounterDefaultExample;
+export default CounterSeparatorExample;

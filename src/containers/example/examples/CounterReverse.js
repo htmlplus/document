@@ -3,20 +3,20 @@
  **************************************************/
 
 import { Center, Counter } from '@htmlplus/react';
-const CounterDefault = () => {
+const CounterReverse = () => {
   return (
     <Center>
-      <Counter to="1000" play></Counter>
+      <Counter from="10000" to="1000" play></Counter>
     </Center>
   );
 };
 
-const CounterDefaultExample = () => {
+const CounterReverseExample = () => {
   return (
-    <div className="ex-counter-default">
-      <CounterDefault />
+    <div className="ex-counter-reverse">
+      <CounterReverse />
     </div>
   )
 };
 
-export default CounterDefaultExample;
+export default CounterReverseExample;

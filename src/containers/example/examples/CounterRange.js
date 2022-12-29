@@ -3,20 +3,20 @@
  **************************************************/
 
 import { Center, Counter } from '@htmlplus/react';
-const CounterDefault = () => {
+const CounterRange = () => {
   return (
     <Center>
-      <Counter to="1000" play></Counter>
+      <Counter from="1000" to="10000" play></Counter>
     </Center>
   );
 };
 
-const CounterDefaultExample = () => {
+const CounterRangeExample = () => {
   return (
-    <div className="ex-counter-default">
-      <CounterDefault />
+    <div className="ex-counter-range">
+      <CounterRange />
     </div>
   )
 };
 
-export default CounterDefaultExample;
+export default CounterRangeExample;

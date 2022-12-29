@@ -3,20 +3,20 @@
  **************************************************/
 
 import { Center, Counter } from '@htmlplus/react';
-const CounterDefault = () => {
+const CounterDelay = () => {
   return (
     <Center>
-      <Counter to="1000" play></Counter>
+      <Counter delay="1500" to="1000000" play></Counter>
     </Center>
   );
 };
 
-const CounterDefaultExample = () => {
+const CounterDelayExample = () => {
   return (
-    <div className="ex-counter-default">
-      <CounterDefault />
+    <div className="ex-counter-delay">
+      <CounterDelay />
     </div>
   )
 };
 
-export default CounterDefaultExample;
+export default CounterDelayExample;
