@@ -2955,7 +2955,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-center>\n  <plus-counter decimal=\"/\" decimals=\"3\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter decimal=\"/\" decimals=\"3\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -2964,7 +2964,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/counter.js';\n",
-      "template": "<plus-center>\n  <plus-counter decimal=\"/\" decimals=\"3\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter decimal=\"/\" decimals=\"3\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -2972,7 +2972,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "counter",
     "detail": {
-      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDecimal = () => {\n  return (\n    <Center>\n      <Counter decimal=\"/\" decimals=\"3\" to=\"1000000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterDecimal;\n"
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDecimal = () => {\n  return (\n    <Center>\n      <Counter decimal=\"/\" decimals=\"3\" to=\"1000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterDecimal;\n"
     }
   },
   {
@@ -2980,7 +2980,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "counter",
     "detail": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterDecimal = () => {\n  return (\n    <plus-center>\n      <plus-counter decimal=\"/\" decimals=\"3\" to=\"1000000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterDecimal;\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterDecimal = () => {\n  return (\n    <plus-center>\n      <plus-counter decimal=\"/\" decimals=\"3\" to=\"1000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterDecimal;\n"
     }
   },
   {
@@ -2989,7 +2989,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
-      "template": "<plus-center>\n  <plus-counter decimal=\"/\" decimals=\"3\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter decimal=\"/\" decimals=\"3\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -2998,7 +2998,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
-      "template": "<plus-center>\n  <plus-counter decimal=\"/\" decimals=\"3\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter decimal=\"/\" decimals=\"3\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3006,7 +3006,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "counter",
     "detail": {
-      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDecimal = () => {\n  return (\n    <Center>\n      <Counter decimal=\"/\" decimals=\"3\" to=\"1000000\" play></Counter>\n    </Center>\n  );\n};\n\nconst CounterDecimalExample = () => {\n  return (\n    <div className=\"ex-counter-decimal\">\n      <CounterDecimal />\n    </div>\n  )\n};\n\nexport default CounterDecimalExample;\n"
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDecimal = () => {\n  return (\n    <Center>\n      <Counter decimal=\"/\" decimals=\"3\" to=\"1000\" play></Counter>\n    </Center>\n  );\n};\n\nconst CounterDecimalExample = () => {\n  return (\n    <div className=\"ex-counter-decimal\">\n      <CounterDecimal />\n    </div>\n  )\n};\n\nexport default CounterDecimalExample;\n"
     }
   },
   {
@@ -3075,7 +3075,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-center>\n  <plus-counter delay=\"1500\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter delay=\"1500\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3084,7 +3084,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/counter.js';\n",
-      "template": "<plus-center>\n  <plus-counter delay=\"1500\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter delay=\"1500\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3092,7 +3092,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "counter",
     "detail": {
-      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDelay = () => {\n  return (\n    <Center>\n      <Counter delay=\"1500\" to=\"1000000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterDelay;\n"
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDelay = () => {\n  return (\n    <Center>\n      <Counter delay=\"1500\" to=\"1000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterDelay;\n"
     }
   },
   {
@@ -3100,7 +3100,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "counter",
     "detail": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterDelay = () => {\n  return (\n    <plus-center>\n      <plus-counter delay=\"1500\" to=\"1000000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterDelay;\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterDelay = () => {\n  return (\n    <plus-center>\n      <plus-counter delay=\"1500\" to=\"1000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterDelay;\n"
     }
   },
   {
@@ -3109,7 +3109,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
-      "template": "<plus-center>\n  <plus-counter delay=\"1500\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter delay=\"1500\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3118,7 +3118,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
-      "template": "<plus-center>\n  <plus-counter delay=\"1500\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter delay=\"1500\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3126,7 +3126,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "counter",
     "detail": {
-      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDelay = () => {\n  return (\n    <Center>\n      <Counter delay=\"1500\" to=\"1000000\" play></Counter>\n    </Center>\n  );\n};\n\nconst CounterDelayExample = () => {\n  return (\n    <div className=\"ex-counter-delay\">\n      <CounterDelay />\n    </div>\n  )\n};\n\nexport default CounterDelayExample;\n"
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDelay = () => {\n  return (\n    <Center>\n      <Counter delay=\"1500\" to=\"1000\" play></Counter>\n    </Center>\n  );\n};\n\nconst CounterDelayExample = () => {\n  return (\n    <div className=\"ex-counter-delay\">\n      <CounterDelay />\n    </div>\n  )\n};\n\nexport default CounterDelayExample;\n"
     }
   },
   {
@@ -3135,7 +3135,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-center>\n  <plus-counter duration=\"5000\" to=\"100000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter duration=\"5000\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3144,7 +3144,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/counter.js';\n",
-      "template": "<plus-center>\n  <plus-counter duration=\"5000\" to=\"100000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter duration=\"5000\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3152,7 +3152,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "counter",
     "detail": {
-      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDuration = () => {\n  return (\n    <Center>\n      <Counter duration=\"5000\" to=\"100000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterDuration;\n"
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDuration = () => {\n  return (\n    <Center>\n      <Counter duration=\"5000\" to=\"1000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterDuration;\n"
     }
   },
   {
@@ -3160,7 +3160,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "counter",
     "detail": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterDuration = () => {\n  return (\n    <plus-center>\n      <plus-counter duration=\"5000\" to=\"100000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterDuration;\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterDuration = () => {\n  return (\n    <plus-center>\n      <plus-counter duration=\"5000\" to=\"1000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterDuration;\n"
     }
   },
   {
@@ -3169,7 +3169,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
-      "template": "<plus-center>\n  <plus-counter duration=\"5000\" to=\"100000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter duration=\"5000\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3178,7 +3178,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
-      "template": "<plus-center>\n  <plus-counter duration=\"5000\" to=\"100000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter duration=\"5000\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3186,7 +3186,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "counter",
     "detail": {
-      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDuration = () => {\n  return (\n    <Center>\n      <Counter duration=\"5000\" to=\"100000\" play></Counter>\n    </Center>\n  );\n};\n\nconst CounterDurationExample = () => {\n  return (\n    <div className=\"ex-counter-duration\">\n      <CounterDuration />\n    </div>\n  )\n};\n\nexport default CounterDurationExample;\n"
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDuration = () => {\n  return (\n    <Center>\n      <Counter duration=\"5000\" to=\"1000\" play></Counter>\n    </Center>\n  );\n};\n\nconst CounterDurationExample = () => {\n  return (\n    <div className=\"ex-counter-duration\">\n      <CounterDuration />\n    </div>\n  )\n};\n\nexport default CounterDurationExample;\n"
     }
   },
   {
@@ -3196,7 +3196,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/counter.js';\nimport '@htmlplus/core/intersection.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  play = false;\n  onChange(event) {\n    this.play = event.detail.isIntersecting;\n  }\n}\n",
       "style": "plus-intersection {\n  display: block;\n  text-align: center;\n  margin: 25rem auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-intersection (plus-change)=\"onChange($event)\">\n    <plus-counter to=\"50000\" [play]=\"play\"></plus-counter>\n  </plus-intersection>\n</div>\n"
+      "template": "<div class=\"container\">\n  <plus-intersection (plus-change)=\"onChange($event)\">\n    <plus-counter to=\"1000\" [play]=\"play\"></plus-counter>\n  </plus-intersection>\n</div>\n"
     }
   },
   {
@@ -3206,7 +3206,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/counter.js';\nimport 'https://unpkg.com/@htmlplus/core/intersection.js';\n\nintersection1.addEventListener('plus-change', (event) => {\r\n  counter1.play = event.detail.isIntersecting;\r\n});",
       "style": "plus-intersection {\n  display: block;\n  text-align: center;\n  margin: 25rem auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n",
-      "template": "<div class=\"container\">\r\n  <plus-intersection id=\"intersection1\">\r\n    <plus-counter id=\"counter1\" to=\"50000\"></plus-counter>\r\n  </plus-intersection>\r\n</div>"
+      "template": "<div class=\"container\">\r\n  <plus-intersection id=\"intersection1\">\r\n    <plus-counter id=\"counter1\" to=\"1000\"></plus-counter>\r\n  </plus-intersection>\r\n</div>"
     }
   },
   {
@@ -3214,7 +3214,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "counter",
     "detail": {
-      "script": "import { useState } from 'react';\nimport { Counter, Intersection } from '@htmlplus/react';\nconst CounterIntersection = () => {\n  const [play, setPlay] = useState(false);\n  const onChange = (event) => {\n    setPlay(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <Intersection onChange={(event) => onChange(event)}>\n        <Counter to=\"50000\" play={play}></Counter>\n      </Intersection>\n    </div>\n  );\n};\nexport default CounterIntersection;\n",
+      "script": "import { useState } from 'react';\nimport { Counter, Intersection } from '@htmlplus/react';\nconst CounterIntersection = () => {\n  const [play, setPlay] = useState(false);\n  const onChange = (event) => {\n    setPlay(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <Intersection onChange={(event) => onChange(event)}>\n        <Counter to=\"1000\" play={play}></Counter>\n      </Intersection>\n    </div>\n  );\n};\nexport default CounterIntersection;\n",
       "style": "plus-intersection {\n  display: block;\n  text-align: center;\n  margin: 25rem auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n"
     }
   },
@@ -3223,7 +3223,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "counter",
     "detail": {
-      "script": "import { useState } from 'react';\nimport '@htmlplus/core/counter.js';\nimport '@htmlplus/core/intersection.js';\nconst CounterIntersection = () => {\n  const [play, setPlay] = useState(false);\n  const onChange = (event) => {\n    setPlay(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <plus-intersection onplus-change={(event) => onChange(event)}>\n        <plus-counter to=\"50000\" play={play}></plus-counter>\n      </plus-intersection>\n    </div>\n  );\n};\nexport default CounterIntersection;\n",
+      "script": "import { useState } from 'react';\nimport '@htmlplus/core/counter.js';\nimport '@htmlplus/core/intersection.js';\nconst CounterIntersection = () => {\n  const [play, setPlay] = useState(false);\n  const onChange = (event) => {\n    setPlay(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <plus-intersection onplus-change={(event) => onChange(event)}>\n        <plus-counter to=\"1000\" play={play}></plus-counter>\n      </plus-intersection>\n    </div>\n  );\n};\nexport default CounterIntersection;\n",
       "style": "plus-intersection {\n  display: block;\n  text-align: center;\n  margin: 25rem auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n"
     }
   },
@@ -3234,7 +3234,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import '@htmlplus/core/counter.js';\nimport '@htmlplus/core/intersection.js';\nlet play = false;\nfunction onChange(event) {\n  play = event.detail.isIntersecting;\n}\n",
       "style": "plus-intersection {\n  display: block;\n  text-align: center;\n  margin: 25rem auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-intersection on:plus-change=\"{event => onChange(event)}\">\n    <plus-counter to=\"50000\" play=\"{play}\"></plus-counter>\n  </plus-intersection>\n</div>\n"
+      "template": "<div class=\"container\">\n  <plus-intersection on:plus-change=\"{event => onChange(event)}\">\n    <plus-counter to=\"1000\" play=\"{play}\"></plus-counter>\n  </plus-intersection>\n</div>\n"
     }
   },
   {
@@ -3244,7 +3244,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import { ref } from 'vue';\nimport '@htmlplus/core/counter.js';\nimport '@htmlplus/core/intersection.js';\nconst play = ref(false);\nfunction onChange(event) {\n  play.value = event.detail.isIntersecting;\n}\n",
       "style": "plus-intersection {\n  display: block;\n  text-align: center;\n  margin: 25rem auto;\n}\n.container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-intersection @plus-change=\"onChange($event)\">\n    <plus-counter to=\"50000\" :play=\"play\"></plus-counter>\n  </plus-intersection>\n</div>\n"
+      "template": "<div class=\"container\">\n  <plus-intersection @plus-change=\"onChange($event)\">\n    <plus-counter to=\"1000\" :play=\"play\"></plus-counter>\n  </plus-intersection>\n</div>\n"
     }
   },
   {
@@ -3252,7 +3252,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "counter",
     "detail": {
-      "script": "import { useState } from 'react';\nimport { Counter, Intersection } from '@htmlplus/react';\nconst CounterIntersection = () => {\n  const [play, setPlay] = useState(false);\n  const onChange = (event) => {\n    setPlay(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <Intersection onChange={(event) => onChange(event)}>\n        <Counter to=\"50000\" play={play}></Counter>\n      </Intersection>\n    </div>\n  );\n};\n\nconst CounterIntersectionExample = () => {\n  return (\n    <div className=\"ex-counter-intersection dock\">\n      <CounterIntersection />\n      <style>{`.ex-counter-intersection plus-intersection {  display: block;  text-align: center;  margin: 25rem auto;}.ex-counter-intersection .container {  position: relative;  height: 20rem;  overflow: auto;  background-color: #eeeeee;}`}</style>\n    </div>\n  )\n};\n\nexport default CounterIntersectionExample;\n"
+      "script": "import { useState } from 'react';\nimport { Counter, Intersection } from '@htmlplus/react';\nconst CounterIntersection = () => {\n  const [play, setPlay] = useState(false);\n  const onChange = (event) => {\n    setPlay(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <Intersection onChange={(event) => onChange(event)}>\n        <Counter to=\"1000\" play={play}></Counter>\n      </Intersection>\n    </div>\n  );\n};\n\nconst CounterIntersectionExample = () => {\n  return (\n    <div className=\"ex-counter-intersection dock\">\n      <CounterIntersection />\n      <style>{`.ex-counter-intersection plus-intersection {  display: block;  text-align: center;  margin: 25rem auto;}.ex-counter-intersection .container {  position: relative;  height: 20rem;  overflow: auto;  background-color: #eeeeee;}`}</style>\n    </div>\n  )\n};\n\nexport default CounterIntersectionExample;\n"
     }
   },
   {
@@ -3261,7 +3261,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-center>\n  <plus-counter [numerals]=\"numerals\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter [numerals]=\"numerals\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3270,7 +3270,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/counter.js';\n\ncounter2.numerals = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];",
-      "template": "<plus-center>\r\n  <plus-counter id=\"counter2\" to=\"1000000\" play></plus-counter>\r\n</plus-center>"
+      "template": "<plus-center>\r\n  <plus-counter id=\"counter2\" to=\"1000\" play></plus-counter>\r\n</plus-center>"
     }
   },
   {
@@ -3278,7 +3278,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "counter",
     "detail": {
-      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterNumerals = () => {\n  return (\n    <Center>\n      <Counter\n        numerals={['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']}\n        to=\"1000000\"\n        play\n      ></Counter>\n    </Center>\n  );\n};\nexport default CounterNumerals;\n"
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterNumerals = () => {\n  return (\n    <Center>\n      <Counter\n        numerals={['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']}\n        to=\"1000\"\n        play\n      ></Counter>\n    </Center>\n  );\n};\nexport default CounterNumerals;\n"
     }
   },
   {
@@ -3286,7 +3286,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "counter",
     "detail": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterNumerals = () => {\n  return (\n    <plus-center>\n      <plus-counter\n        numerals={['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']}\n        to=\"1000000\"\n        play\n      ></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterNumerals;\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterNumerals = () => {\n  return (\n    <plus-center>\n      <plus-counter\n        numerals={['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']}\n        to=\"1000\"\n        play\n      ></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterNumerals;\n"
     }
   },
   {
@@ -3295,7 +3295,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nlet numerals = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];\n",
-      "template": "<plus-center>\n  <plus-counter numerals=\"{numerals}\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter numerals=\"{numerals}\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3304,7 +3304,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nnumerals = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];\n",
-      "template": "<plus-center>\n  <plus-counter :numerals=\"numerals\" to=\"1000000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter :numerals=\"numerals\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3312,7 +3312,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "counter",
     "detail": {
-      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterNumerals = () => {\n  return (\n    <Center>\n      <Counter\n        numerals={['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']}\n        to=\"1000000\"\n        play\n      ></Counter>\n    </Center>\n  );\n};\n\nconst CounterNumeralsExample = () => {\n  return (\n    <div className=\"ex-counter-numerals\">\n      <CounterNumerals />\n    </div>\n  )\n};\n\nexport default CounterNumeralsExample;\n"
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterNumerals = () => {\n  return (\n    <Center>\n      <Counter\n        numerals={['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']}\n        to=\"1000\"\n        play\n      ></Counter>\n    </Center>\n  );\n};\n\nconst CounterNumeralsExample = () => {\n  return (\n    <div className=\"ex-counter-numerals\">\n      <CounterNumerals />\n    </div>\n  )\n};\n\nexport default CounterNumeralsExample;\n"
     }
   },
   {
@@ -3321,7 +3321,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-center>\n  <plus-counter from=\"1000\" to=\"10000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter from=\"10\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3330,7 +3330,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/counter.js';\n",
-      "template": "<plus-center>\n  <plus-counter from=\"1000\" to=\"10000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter from=\"10\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3338,7 +3338,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "counter",
     "detail": {
-      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterRange = () => {\n  return (\n    <Center>\n      <Counter from=\"1000\" to=\"10000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterRange;\n"
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterRange = () => {\n  return (\n    <Center>\n      <Counter from=\"10\" to=\"1000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterRange;\n"
     }
   },
   {
@@ -3346,7 +3346,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "counter",
     "detail": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterRange = () => {\n  return (\n    <plus-center>\n      <plus-counter from=\"1000\" to=\"10000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterRange;\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterRange = () => {\n  return (\n    <plus-center>\n      <plus-counter from=\"10\" to=\"1000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterRange;\n"
     }
   },
   {
@@ -3355,7 +3355,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
-      "template": "<plus-center>\n  <plus-counter from=\"1000\" to=\"10000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter from=\"10\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3364,7 +3364,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
-      "template": "<plus-center>\n  <plus-counter from=\"1000\" to=\"10000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter from=\"10\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3372,7 +3372,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "counter",
     "detail": {
-      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterRange = () => {\n  return (\n    <Center>\n      <Counter from=\"1000\" to=\"10000\" play></Counter>\n    </Center>\n  );\n};\n\nconst CounterRangeExample = () => {\n  return (\n    <div className=\"ex-counter-range\">\n      <CounterRange />\n    </div>\n  )\n};\n\nexport default CounterRangeExample;\n"
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterRange = () => {\n  return (\n    <Center>\n      <Counter from=\"10\" to=\"1000\" play></Counter>\n    </Center>\n  );\n};\n\nconst CounterRangeExample = () => {\n  return (\n    <div className=\"ex-counter-range\">\n      <CounterRange />\n    </div>\n  )\n};\n\nexport default CounterRangeExample;\n"
     }
   },
   {
@@ -3381,7 +3381,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-center>\n  <plus-counter from=\"10000\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter from=\"1000\" to=\"10\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3390,7 +3390,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/counter.js';\n",
-      "template": "<plus-center>\n  <plus-counter from=\"10000\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter from=\"1000\" to=\"10\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3398,7 +3398,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "counter",
     "detail": {
-      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterReverse = () => {\n  return (\n    <Center>\n      <Counter from=\"10000\" to=\"1000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterReverse;\n"
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterReverse = () => {\n  return (\n    <Center>\n      <Counter from=\"1000\" to=\"10\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterReverse;\n"
     }
   },
   {
@@ -3406,7 +3406,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "counter",
     "detail": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterReverse = () => {\n  return (\n    <plus-center>\n      <plus-counter from=\"10000\" to=\"1000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterReverse;\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterReverse = () => {\n  return (\n    <plus-center>\n      <plus-counter from=\"1000\" to=\"10\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterReverse;\n"
     }
   },
   {
@@ -3415,7 +3415,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
-      "template": "<plus-center>\n  <plus-counter from=\"10000\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter from=\"1000\" to=\"10\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3424,7 +3424,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
-      "template": "<plus-center>\n  <plus-counter from=\"10000\" to=\"1000\" play></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter from=\"1000\" to=\"10\" play></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3432,7 +3432,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "counter",
     "detail": {
-      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterReverse = () => {\n  return (\n    <Center>\n      <Counter from=\"10000\" to=\"1000\" play></Counter>\n    </Center>\n  );\n};\n\nconst CounterReverseExample = () => {\n  return (\n    <div className=\"ex-counter-reverse\">\n      <CounterReverse />\n    </div>\n  )\n};\n\nexport default CounterReverseExample;\n"
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterReverse = () => {\n  return (\n    <Center>\n      <Counter from=\"1000\" to=\"10\" play></Counter>\n    </Center>\n  );\n};\n\nconst CounterReverseExample = () => {\n  return (\n    <div className=\"ex-counter-reverse\">\n      <CounterReverse />\n    </div>\n  )\n};\n\nexport default CounterReverseExample;\n"
     }
   },
   {
@@ -3501,7 +3501,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-center>\n  <plus-counter\n    decimal=\".\"\n    decimals=\"3\"\n    separator=\",\"\n    to=\"10000000\"\n    play\n  ></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter\n    decimal=\".\"\n    decimals=\"2\"\n    separator=\",\"\n    to=\"1000\"\n    play\n  ></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3510,7 +3510,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/counter.js';\n",
-      "template": "<plus-center>\n  <plus-counter\n    decimal=\".\"\n    decimals=\"3\"\n    separator=\",\"\n    to=\"10000000\"\n    play\n  ></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter\n    decimal=\".\"\n    decimals=\"2\"\n    separator=\",\"\n    to=\"1000\"\n    play\n  ></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3518,7 +3518,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "counter",
     "detail": {
-      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterSeparatorDecimal = () => {\n  return (\n    <Center>\n      <Counter\n        decimal=\".\"\n        decimals=\"3\"\n        separator=\",\"\n        to=\"10000000\"\n        play\n      ></Counter>\n    </Center>\n  );\n};\nexport default CounterSeparatorDecimal;\n"
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterSeparatorDecimal = () => {\n  return (\n    <Center>\n      <Counter decimal=\".\" decimals=\"2\" separator=\",\" to=\"1000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterSeparatorDecimal;\n"
     }
   },
   {
@@ -3526,7 +3526,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "counter",
     "detail": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterSeparatorDecimal = () => {\n  return (\n    <plus-center>\n      <plus-counter\n        decimal=\".\"\n        decimals=\"3\"\n        separator=\",\"\n        to=\"10000000\"\n        play\n      ></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterSeparatorDecimal;\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterSeparatorDecimal = () => {\n  return (\n    <plus-center>\n      <plus-counter\n        decimal=\".\"\n        decimals=\"2\"\n        separator=\",\"\n        to=\"1000\"\n        play\n      ></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterSeparatorDecimal;\n"
     }
   },
   {
@@ -3535,7 +3535,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
-      "template": "<plus-center>\n  <plus-counter\n    decimal=\".\"\n    decimals=\"3\"\n    separator=\",\"\n    to=\"10000000\"\n    play\n  ></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter\n    decimal=\".\"\n    decimals=\"2\"\n    separator=\",\"\n    to=\"1000\"\n    play\n  ></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3544,7 +3544,7 @@ export const examples: any[] = [
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\n",
-      "template": "<plus-center>\n  <plus-counter\n    decimal=\".\"\n    decimals=\"3\"\n    separator=\",\"\n    to=\"10000000\"\n    play\n  ></plus-counter>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-counter\n    decimal=\".\"\n    decimals=\"2\"\n    separator=\",\"\n    to=\"1000\"\n    play\n  ></plus-counter>\n</plus-center>\n"
     }
   },
   {
@@ -3552,7 +3552,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "counter",
     "detail": {
-      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterSeparatorDecimal = () => {\n  return (\n    <Center>\n      <Counter\n        decimal=\".\"\n        decimals=\"3\"\n        separator=\",\"\n        to=\"10000000\"\n        play\n      ></Counter>\n    </Center>\n  );\n};\n\nconst CounterSeparatorDecimalExample = () => {\n  return (\n    <div className=\"ex-counter-separator-&-decimal\">\n      <CounterSeparatorDecimal />\n    </div>\n  )\n};\n\nexport default CounterSeparatorDecimalExample;\n"
+      "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterSeparatorDecimal = () => {\n  return (\n    <Center>\n      <Counter decimal=\".\" decimals=\"2\" separator=\",\" to=\"1000\" play></Counter>\n    </Center>\n  );\n};\n\nconst CounterSeparatorDecimalExample = () => {\n  return (\n    <div className=\"ex-counter-separator-&-decimal\">\n      <CounterSeparatorDecimal />\n    </div>\n  )\n};\n\nexport default CounterSeparatorDecimalExample;\n"
     }
   },
   {

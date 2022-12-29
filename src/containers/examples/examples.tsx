@@ -1,3 +1,4 @@
+import { Alert } from '@app/components';
 import { Toc } from '@app/containers';
 
 export const Examples = () => {
@@ -7,6 +8,7 @@ export const Examples = () => {
         <Toc.Item level={2}>Examples</Toc.Item>
       </h2>
       <p>Below is a collection of simple to complex examples.</p>
+      <Alert type="info">ddd</Alert>
     </>
   );
 };
