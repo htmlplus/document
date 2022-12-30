@@ -71,6 +71,8 @@ export const CropperIndicator = dynamic(() => import('./CropperIndicator'));
 export const CropperMode = dynamic(() => import('./CropperMode'));
 export const CropperShape = dynamic(() => import('./CropperShape'));
 export const CropperStyles = dynamic(() => import('./CropperStyles'));
+export const CropperZoomRatio = dynamic(() => import('./CropperZoomRatio'));
+export const CropperZoomable = dynamic(() => import('./CropperZoomable'));
 export const DialogAnimation = dynamic(() => import('./DialogAnimation'));
 export const DialogBackdrop = dynamic(() => import('./DialogBackdrop'));
 export const DialogDefault = dynamic(() => import('./DialogDefault'));

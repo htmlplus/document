@@ -53,6 +53,14 @@ an area of images before they're uploaded to the server.
 
 <Example value="mode" />
 
+### Zoomable
+
+<Example value="zoomable" />
+
+### Zoom Ratio
+
+<Example value="zoom-ratio" />
+
 ### Styles
 
 <Example value="styles" />
@@ -62,8 +70,6 @@ resizerShape
 responsive
 value
 view
-zoomable
-zoomRatio
 
 <Checklist 
     accessibility={false}
