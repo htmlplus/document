@@ -17,13 +17,21 @@ an area of images before they're uploaded to the server.
 
 <Example value="default" />
 
-### Area
+### Disabled
 
-<Example value="area" />
+<Example value="disabled" />
 
-### Aspect Ratio
+### Shape
 
-<Example value="aspect-ratio" />
+<Example value="shape" />
+
+### Indicator
+
+<Example value="indicator" />
+
+### Guides
+
+<Example value="guides" />
 
 ### Backdrop
 
@@ -33,25 +41,29 @@ an area of images before they're uploaded to the server.
 
 <Example value="background" />
 
-### Guides
+### Area
 
-<Example value="guides" />
+<Example value="area" />
 
-### Indicator
+### Aspect Ratio
 
-<Example value="indicator" />
+<Example value="aspect-ratio" />
 
 ### Mode
 
 <Example value="mode" />
 
-### Shape
-
-<Example value="shape" />
-
 ### Styles
 
 <Example value="styles" />
+
+resizer
+resizerShape
+responsive
+value
+view
+zoomable
+zoomRatio
 
 <Checklist 
     accessibility={false}

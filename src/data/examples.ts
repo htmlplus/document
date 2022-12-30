@@ -3680,8 +3680,8 @@ export const examples: any[] = [
     "category": "angular",
     "component": "cropper",
     "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/cropper.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-cropper [backdrop]=\"false\" src=\"/assets/images/panda.jpg\"></plus-cropper>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      [backdrop]=\"false\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      [backdrop]=\"true\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -3689,8 +3689,8 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "cropper",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/cropper.js';\n",
-      "template": "<plus-cropper backdrop=\"false\" src=\"/assets/images/panda.jpg\"></plus-cropper>\n"
+      "script": "import 'https://unpkg.com/@htmlplus/core/cropper.js';\nimport 'https://unpkg.com/@htmlplus/core/grid.js';\nimport 'https://unpkg.com/@htmlplus/core/grid-item.js';\n",
+      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      backdrop=\"false\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper backdrop=\"true\" src=\"/assets/images/panda.jpg\"></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -3698,7 +3698,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "cropper",
     "detail": {
-      "script": "import { Cropper } from '@htmlplus/react';\nconst CropperBackdrop = () => {\n  return <Cropper backdrop={false} src=\"/assets/images/panda.jpg\"></Cropper>;\n};\nexport default CropperBackdrop;\n"
+      "script": "import { Cropper, Grid } from '@htmlplus/react';\nconst CropperBackdrop = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper backdrop={false} src=\"/assets/images/panda.jpg\"></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper backdrop={true} src=\"/assets/images/panda.jpg\"></Cropper>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default CropperBackdrop;\n"
     }
   },
   {
@@ -3706,7 +3706,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "cropper",
     "detail": {
-      "script": "import '@htmlplus/core/cropper.js';\nconst CropperBackdrop = () => {\n  return (\n    <plus-cropper\n      backdrop={false}\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  );\n};\nexport default CropperBackdrop;\n"
+      "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst CropperBackdrop = () => {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          backdrop={false}\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          backdrop={true}\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default CropperBackdrop;\n"
     }
   },
   {
@@ -3714,8 +3714,8 @@ export const examples: any[] = [
     "category": "svelte",
     "component": "cropper",
     "detail": {
-      "script": "import '@htmlplus/core/cropper.js';\n",
-      "template": "<plus-cropper backdrop=\"{false}\" src=\"/assets/images/panda.jpg\"></plus-cropper>\n"
+      "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n",
+      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      backdrop=\"{false}\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      backdrop=\"{true}\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -3723,8 +3723,8 @@ export const examples: any[] = [
     "category": "vue",
     "component": "cropper",
     "detail": {
-      "script": "import '@htmlplus/core/cropper.js';\n",
-      "template": "<plus-cropper :backdrop=\"false\" src=\"/assets/images/panda.jpg\"></plus-cropper>\n"
+      "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n",
+      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      :backdrop=\"false\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      :backdrop=\"true\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -3732,7 +3732,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "cropper",
     "detail": {
-      "script": "import { Cropper } from '@htmlplus/react';\nconst CropperBackdrop = () => {\n  return <Cropper backdrop={false} src=\"/assets/images/panda.jpg\"></Cropper>;\n};\n\nconst CropperBackdropExample = () => {\n  return (\n    <div className=\"ex-cropper-backdrop dock\">\n      <CropperBackdrop />\n    </div>\n  )\n};\n\nexport default CropperBackdropExample;\n"
+      "script": "import { Cropper, Grid } from '@htmlplus/react';\nconst CropperBackdrop = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper backdrop={false} src=\"/assets/images/panda.jpg\"></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper backdrop={true} src=\"/assets/images/panda.jpg\"></Cropper>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst CropperBackdropExample = () => {\n  return (\n    <div className=\"ex-cropper-backdrop\">\n      <CropperBackdrop />\n    </div>\n  )\n};\n\nexport default CropperBackdropExample;\n"
     }
   },
   {
@@ -3740,8 +3740,8 @@ export const examples: any[] = [
     "category": "angular",
     "component": "cropper",
     "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/cropper.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-cropper\n  background\n  view=\"none\"\n  src=\"/assets/images/panda.jpg\"\n></plus-cropper>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      [background]=\"false\"\n      view=\"none\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      [background]=\"true\"\n      view=\"none\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -3749,8 +3749,8 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "cropper",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/cropper.js';\n",
-      "template": "<plus-cropper\n  background\n  view=\"none\"\n  src=\"/assets/images/panda.jpg\"\n></plus-cropper>\n"
+      "script": "import 'https://unpkg.com/@htmlplus/core/cropper.js';\nimport 'https://unpkg.com/@htmlplus/core/grid.js';\nimport 'https://unpkg.com/@htmlplus/core/grid-item.js';\n",
+      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      background=\"false\"\n      view=\"none\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      background=\"true\"\n      view=\"none\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -3758,7 +3758,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "cropper",
     "detail": {
-      "script": "import { Cropper } from '@htmlplus/react';\nconst CropperBackground = () => {\n  return (\n    <Cropper background view=\"none\" src=\"/assets/images/panda.jpg\"></Cropper>\n  );\n};\nexport default CropperBackground;\n"
+      "script": "import { Cropper, Grid } from '@htmlplus/react';\nconst CropperBackground = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          background={false}\n          view=\"none\"\n          src=\"/assets/images/panda.jpg\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          background={true}\n          view=\"none\"\n          src=\"/assets/images/panda.jpg\"\n        ></Cropper>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default CropperBackground;\n"
     }
   },
   {
@@ -3766,7 +3766,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "cropper",
     "detail": {
-      "script": "import '@htmlplus/core/cropper.js';\nconst CropperBackground = () => {\n  return (\n    <plus-cropper\n      background\n      view=\"none\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  );\n};\nexport default CropperBackground;\n"
+      "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst CropperBackground = () => {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          background={false}\n          view=\"none\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          background={true}\n          view=\"none\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default CropperBackground;\n"
     }
   },
   {
@@ -3774,8 +3774,8 @@ export const examples: any[] = [
     "category": "svelte",
     "component": "cropper",
     "detail": {
-      "script": "import '@htmlplus/core/cropper.js';\n",
-      "template": "<plus-cropper\n  background\n  view=\"none\"\n  src=\"/assets/images/panda.jpg\"\n></plus-cropper>\n"
+      "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n",
+      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      background=\"{false}\"\n      view=\"none\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      background=\"{true}\"\n      view=\"none\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -3783,8 +3783,8 @@ export const examples: any[] = [
     "category": "vue",
     "component": "cropper",
     "detail": {
-      "script": "import '@htmlplus/core/cropper.js';\n",
-      "template": "<plus-cropper\n  background\n  view=\"none\"\n  src=\"/assets/images/panda.jpg\"\n></plus-cropper>\n"
+      "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n",
+      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      :background=\"false\"\n      view=\"none\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      :background=\"true\"\n      view=\"none\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -3792,7 +3792,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "cropper",
     "detail": {
-      "script": "import { Cropper } from '@htmlplus/react';\nconst CropperBackground = () => {\n  return (\n    <Cropper background view=\"none\" src=\"/assets/images/panda.jpg\"></Cropper>\n  );\n};\n\nconst CropperBackgroundExample = () => {\n  return (\n    <div className=\"ex-cropper-background dock\">\n      <CropperBackground />\n    </div>\n  )\n};\n\nexport default CropperBackgroundExample;\n"
+      "script": "import { Cropper, Grid } from '@htmlplus/react';\nconst CropperBackground = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          background={false}\n          view=\"none\"\n          src=\"/assets/images/panda.jpg\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          background={true}\n          view=\"none\"\n          src=\"/assets/images/panda.jpg\"\n        ></Cropper>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst CropperBackgroundExample = () => {\n  return (\n    <div className=\"ex-cropper-background\">\n      <CropperBackground />\n    </div>\n  )\n};\n\nexport default CropperBackgroundExample;\n"
     }
   },
   {
@@ -3919,6 +3919,66 @@ export const examples: any[] = [
     "component": "cropper",
     "detail": {
       "script": "import { useState } from 'react';\nimport { Cropper, Dialog } from '@htmlplus/react';\nconst CropperDialog = () => {\n  const [disabled, setDisabled] = useState(true);\n  const change = (disabled) => {\n    setDisabled(disabled);\n  };\n  return (\n    <>\n      <div className=\"center\">\n        <Dialog.Toggler connector=\"dialog-cropper\">Open</Dialog.Toggler>\n      </div>\n      <Dialog\n        animation=\"fade\"\n        connector=\"dialog-cropper\"\n        onOpened={() => change(false)}\n        onClosed={() => change(true)}\n      >\n        <Dialog.Content>\n          <Dialog.Header>Cropper</Dialog.Header>\n          <Dialog.Body>\n            <Cropper\n              disabled={disabled}\n              src=\"/assets/images/panda.jpg\"\n            ></Cropper>\n          </Dialog.Body>\n          <Dialog.Footer>\n            <Dialog.Toggler>Close</Dialog.Toggler>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n};\n\nconst CropperDialogExample = () => {\n  return (\n    <div className=\"ex-cropper-dialog dock\">\n      <CropperDialog />\n      <style>{`.ex-cropper-dialog .center {  text-align: center;}`}</style>\n    </div>\n  )\n};\n\nexport default CropperDialogExample;\n"
+    }
+  },
+  {
+    "key": "disabled",
+    "category": "angular",
+    "component": "cropper",
+    "detail": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/cropper.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-cropper src=\"/assets/images/panda.jpg\" disabled></plus-cropper>\n"
+    }
+  },
+  {
+    "key": "disabled",
+    "category": "javascript",
+    "component": "cropper",
+    "detail": {
+      "script": "import 'https://unpkg.com/@htmlplus/core/cropper.js';\n",
+      "template": "<plus-cropper src=\"/assets/images/panda.jpg\" disabled></plus-cropper>\n"
+    }
+  },
+  {
+    "key": "disabled",
+    "category": "react",
+    "component": "cropper",
+    "detail": {
+      "script": "import { Cropper } from '@htmlplus/react';\nconst CropperDisabled = () => {\n  return <Cropper src=\"/assets/images/panda.jpg\" disabled></Cropper>;\n};\nexport default CropperDisabled;\n"
+    }
+  },
+  {
+    "key": "disabled",
+    "category": "react@experimental",
+    "component": "cropper",
+    "detail": {
+      "script": "import '@htmlplus/core/cropper.js';\nconst CropperDisabled = () => {\n  return <plus-cropper src=\"/assets/images/panda.jpg\" disabled></plus-cropper>;\n};\nexport default CropperDisabled;\n"
+    }
+  },
+  {
+    "key": "disabled",
+    "category": "svelte",
+    "component": "cropper",
+    "detail": {
+      "script": "import '@htmlplus/core/cropper.js';\n",
+      "template": "<plus-cropper src=\"/assets/images/panda.jpg\" disabled></plus-cropper>\n"
+    }
+  },
+  {
+    "key": "disabled",
+    "category": "vue",
+    "component": "cropper",
+    "detail": {
+      "script": "import '@htmlplus/core/cropper.js';\n",
+      "template": "<plus-cropper src=\"/assets/images/panda.jpg\" disabled></plus-cropper>\n"
+    }
+  },
+  {
+    "key": "disabled",
+    "category": "preview",
+    "component": "cropper",
+    "detail": {
+      "script": "import { Cropper } from '@htmlplus/react';\nconst CropperDisabled = () => {\n  return <Cropper src=\"/assets/images/panda.jpg\" disabled></Cropper>;\n};\n\nconst CropperDisabledExample = () => {\n  return (\n    <div className=\"ex-cropper-disabled dock\">\n      <CropperDisabled />\n    </div>\n  )\n};\n\nexport default CropperDisabledExample;\n"
     }
   },
   {
@@ -4114,7 +4174,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
       "style": "plus-cropper[shape='rectangle'] {\n  height: 100%;\n}\n",
-      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"6\">\n    <plus-cropper\n      shape=\"rectangle\"\n      aspect-ratio=\"2\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"6\">\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"square\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"circle\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  </plus-grid-item>\n</plus-grid>\n"
+      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      shape=\"rectangle\"\n      aspect-ratio=\"2\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"square\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"circle\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -4124,7 +4184,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/cropper.js';\nimport 'https://unpkg.com/@htmlplus/core/grid.js';\nimport 'https://unpkg.com/@htmlplus/core/grid-item.js';\n",
       "style": "plus-cropper[shape='rectangle'] {\n  height: 100%;\n}\n",
-      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"6\">\n    <plus-cropper\n      shape=\"rectangle\"\n      aspect-ratio=\"2\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"6\">\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"square\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"circle\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  </plus-grid-item>\n</plus-grid>\n"
+      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      shape=\"rectangle\"\n      aspect-ratio=\"2\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"square\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"circle\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -4132,7 +4192,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "cropper",
     "detail": {
-      "script": "import { Cropper, Grid } from '@htmlplus/react';\nconst CropperShape = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"6\">\n        <Cropper\n          shape=\"rectangle\"\n          aspectRatio=\"2\"\n          src=\"/assets/images/panda.jpg\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"6\">\n        <Grid gutter=\"md\">\n          <Grid.Item xs=\"12\">\n            <Cropper shape=\"square\" src=\"/assets/images/panda.jpg\"></Cropper>\n          </Grid.Item>\n          <Grid.Item xs=\"12\">\n            <Cropper shape=\"circle\" src=\"/assets/images/panda.jpg\"></Cropper>\n          </Grid.Item>\n        </Grid>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default CropperShape;\n",
+      "script": "import { Cropper, Grid } from '@htmlplus/react';\nconst CropperShape = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          shape=\"rectangle\"\n          aspectRatio=\"2\"\n          src=\"/assets/images/panda.jpg\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Grid gutter=\"md\">\n          <Grid.Item xs=\"12\">\n            <Cropper shape=\"square\" src=\"/assets/images/panda.jpg\"></Cropper>\n          </Grid.Item>\n          <Grid.Item xs=\"12\">\n            <Cropper shape=\"circle\" src=\"/assets/images/panda.jpg\"></Cropper>\n          </Grid.Item>\n        </Grid>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default CropperShape;\n",
       "style": "plus-cropper[shape='rectangle'] {\n  height: 100%;\n}\n"
     }
   },
@@ -4141,7 +4201,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "cropper",
     "detail": {
-      "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst CropperShape = () => {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"6\">\n        <plus-cropper\n          shape=\"rectangle\"\n          aspect-ratio=\"2\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"6\">\n        <plus-grid gutter=\"md\">\n          <plus-grid-item xs=\"12\">\n            <plus-cropper\n              shape=\"square\"\n              src=\"/assets/images/panda.jpg\"\n            ></plus-cropper>\n          </plus-grid-item>\n          <plus-grid-item xs=\"12\">\n            <plus-cropper\n              shape=\"circle\"\n              src=\"/assets/images/panda.jpg\"\n            ></plus-cropper>\n          </plus-grid-item>\n        </plus-grid>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default CropperShape;\n",
+      "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst CropperShape = () => {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          shape=\"rectangle\"\n          aspect-ratio=\"2\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-grid gutter=\"md\">\n          <plus-grid-item xs=\"12\">\n            <plus-cropper\n              shape=\"square\"\n              src=\"/assets/images/panda.jpg\"\n            ></plus-cropper>\n          </plus-grid-item>\n          <plus-grid-item xs=\"12\">\n            <plus-cropper\n              shape=\"circle\"\n              src=\"/assets/images/panda.jpg\"\n            ></plus-cropper>\n          </plus-grid-item>\n        </plus-grid>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default CropperShape;\n",
       "style": "plus-cropper[shape='rectangle'] {\n  height: 100%;\n}\n"
     }
   },
@@ -4152,7 +4212,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n",
       "style": "plus-cropper[shape='rectangle'] {\n  height: 100%;\n}\n",
-      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"6\">\n    <plus-cropper\n      shape=\"rectangle\"\n      aspect-ratio=\"2\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"6\">\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"square\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"circle\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  </plus-grid-item>\n</plus-grid>\n"
+      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      shape=\"rectangle\"\n      aspect-ratio=\"2\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"square\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"circle\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -4162,7 +4222,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n",
       "style": "plus-cropper[shape='rectangle'] {\n  height: 100%;\n}\n",
-      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"6\">\n    <plus-cropper\n      shape=\"rectangle\"\n      aspect-ratio=\"2\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"6\">\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"square\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"circle\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  </plus-grid-item>\n</plus-grid>\n"
+      "template": "<plus-grid gutter=\"md\">\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-cropper\n      shape=\"rectangle\"\n      aspect-ratio=\"2\"\n      src=\"/assets/images/panda.jpg\"\n    ></plus-cropper>\n  </plus-grid-item>\n  <plus-grid-item xs=\"12\" sm=\"6\">\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"square\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\">\n        <plus-cropper\n          shape=\"circle\"\n          src=\"/assets/images/panda.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
   {
@@ -4170,7 +4230,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "cropper",
     "detail": {
-      "script": "import { Cropper, Grid } from '@htmlplus/react';\nconst CropperShape = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"6\">\n        <Cropper\n          shape=\"rectangle\"\n          aspectRatio=\"2\"\n          src=\"/assets/images/panda.jpg\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"6\">\n        <Grid gutter=\"md\">\n          <Grid.Item xs=\"12\">\n            <Cropper shape=\"square\" src=\"/assets/images/panda.jpg\"></Cropper>\n          </Grid.Item>\n          <Grid.Item xs=\"12\">\n            <Cropper shape=\"circle\" src=\"/assets/images/panda.jpg\"></Cropper>\n          </Grid.Item>\n        </Grid>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst CropperShapeExample = () => {\n  return (\n    <div className=\"ex-cropper-shape\">\n      <CropperShape />\n      <style>{`.ex-cropper-shape plus-cropper[shape='rectangle'] {  height: 100%;}`}</style>\n    </div>\n  )\n};\n\nexport default CropperShapeExample;\n"
+      "script": "import { Cropper, Grid } from '@htmlplus/react';\nconst CropperShape = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          shape=\"rectangle\"\n          aspectRatio=\"2\"\n          src=\"/assets/images/panda.jpg\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Grid gutter=\"md\">\n          <Grid.Item xs=\"12\">\n            <Cropper shape=\"square\" src=\"/assets/images/panda.jpg\"></Cropper>\n          </Grid.Item>\n          <Grid.Item xs=\"12\">\n            <Cropper shape=\"circle\" src=\"/assets/images/panda.jpg\"></Cropper>\n          </Grid.Item>\n        </Grid>\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst CropperShapeExample = () => {\n  return (\n    <div className=\"ex-cropper-shape\">\n      <CropperShape />\n      <style>{`.ex-cropper-shape plus-cropper[shape='rectangle'] {  height: 100%;}`}</style>\n    </div>\n  )\n};\n\nexport default CropperShapeExample;\n"
     }
   },
   {

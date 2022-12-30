@@ -65,6 +65,7 @@ export const CropperBackdrop = dynamic(() => import('./CropperBackdrop'));
 export const CropperBackground = dynamic(() => import('./CropperBackground'));
 export const CropperDefault = dynamic(() => import('./CropperDefault'));
 export const CropperDialog = dynamic(() => import('./CropperDialog'));
+export const CropperDisabled = dynamic(() => import('./CropperDisabled'));
 export const CropperGuides = dynamic(() => import('./CropperGuides'));
 export const CropperIndicator = dynamic(() => import('./CropperIndicator'));
 export const CropperMode = dynamic(() => import('./CropperMode'));
