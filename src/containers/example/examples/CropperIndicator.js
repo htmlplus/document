@@ -4,7 +4,12 @@
 
 import { Cropper } from '@htmlplus/react';
 const CropperIndicator = () => {
-  return <Cropper indicator src="/assets/images/panda.jpg"></Cropper>;
+  return (
+    <Cropper
+      indicator
+      src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+    ></Cropper>
+  );
 };
 
 const CropperIndicatorExample = () => {

@@ -3,18 +3,18 @@
  **************************************************/
 
 import { Cropper } from '@htmlplus/react';
-const CropperDefault = () => {
+const CropperToBlob = () => {
   return (
     <Cropper src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"></Cropper>
   );
 };
 
-const CropperDefaultExample = () => {
+const CropperToBlobExample = () => {
   return (
-    <div className="ex-cropper-default dock">
-      <CropperDefault />
+    <div className="ex-cropper-to-blob">
+      <CropperToBlob />
     </div>
   )
 };
 
-export default CropperDefaultExample;
+export default CropperToBlobExample;

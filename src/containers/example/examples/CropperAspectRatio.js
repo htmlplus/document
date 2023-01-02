@@ -4,7 +4,12 @@
 
 import { Cropper } from '@htmlplus/react';
 const CropperAspectRatio = () => {
-  return <Cropper aspectRatio="3/4" src="/assets/images/panda.jpg"></Cropper>;
+  return (
+    <Cropper
+      aspectRatio="3/4"
+      src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+    ></Cropper>
+  );
 };
 
 const CropperAspectRatioExample = () => {

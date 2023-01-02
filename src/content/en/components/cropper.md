@@ -65,19 +65,16 @@ an area of images before they're uploaded to the server.
 
 <Example value="styles" />
 
-### To Blob
-
-Gets `blob` value from the cropped image.
-<Example value="to-blob" />
-
 ### To Base64
 
-Gets `base64` from the cropped image.
 <Example value="to-base64" />
+
+### To Blob
+
+<Example value="to-blob" />
 
 ### To Url
 
-Gets `blob url` from the cropped image.
 <Example value="to-url" />
 
 <Checklist 
