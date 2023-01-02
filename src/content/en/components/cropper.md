@@ -1,7 +1,6 @@
 # Cropper
 
-An image cropper is a web & mobile component which enable the user to resize, move, crop
-an area of images before they're uploaded to the server.
+Used for cropping large images to fit a container before uploading them to the server.
 
 <Playground />
 
@@ -61,10 +60,6 @@ an area of images before they're uploaded to the server.
 
 <Example value="zoom-ratio" />
 
-### Styles
-
-<Example value="styles" />
-
 ### To Base64
 
 <Example value="to-base64" />
@@ -76,6 +71,10 @@ an area of images before they're uploaded to the server.
 ### To Url
 
 <Example value="to-url" />
+
+### Styles
+
+<Example value="styles" />
 
 <Checklist 
     accessibility={false}
