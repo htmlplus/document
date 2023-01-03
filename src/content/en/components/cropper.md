@@ -66,6 +66,8 @@ Used for cropping large images to fit a container before uploading them to the s
 
 ### To Blob
 
+Open the developer console.
+
 <Example value="to-blob" />
 
 ### To Url
@@ -78,18 +80,18 @@ Used for cropping large images to fit a container before uploading them to the s
 
 <Checklist 
     accessibility={false}
-    bidirectionality={false}
-    cssParts={false}
-    cssVariables={false}
-    documentation={false}
-    examples={false}
-    events={false}
+    bidirectionality="N/A"
+    cssParts="N/A"
+    cssVariables={true}
+    documentation={true}
+    examples={true}
+    events={true}
     keyboard={false}
-    methods={false}
+    methods={true}
     playground={false}
-    properties={false}
+    properties={true}
     skeleton={false}
-    slots={false}
+    slots="N/A"
 />
 
 <LastModified />
