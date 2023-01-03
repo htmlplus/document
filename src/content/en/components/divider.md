@@ -1,6 +1,6 @@
 # Divider
 
-It's a thin line that can divide the content vertically or horizontally.
+A thin line that divides the content vertically or horizontally.
 
 <Playground />
 
@@ -46,18 +46,18 @@ It's a thin line that can divide the content vertically or horizontally.
 
 <Checklist 
     accessibility={false}
-    bidirectionality={false}
-    cssParts={false}
-    cssVariables={false}
-    documentation={false}
-    examples={false}
-    events={false}
-    keyboard={false}
-    methods={false}
+    bidirectionality={true}
+    cssParts="N/A"
+    cssVariables={true}
+    documentation={true}
+    examples={true}
+    events="N/A"
+    keyboard="N/A"
+    methods="N/A"
     playground={false}
-    properties={false}
+    properties={true}
     skeleton={false}
-    slots={false}
+    slots={true}
 />
 
 <LastModified />
