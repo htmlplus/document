@@ -18,9 +18,9 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "animation",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\nimport 'https://unpkg.com/@htmlplus/core/center.js';\n\nimport 'https://unpkg.com/@htmlplus/core/animation/names/attention-seekers/tada.js';\r\n\r\nbutton1.addEventListener('click', () => {\r\n  animation1.run = true;\r\n});",
+      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\nimport 'https://unpkg.com/@htmlplus/core/center.js';\n\nimport 'https://unpkg.com/@htmlplus/core/animation/names/attention-seekers/tada.js';",
       "style": "plus-animation {\n  display: inline-block;\n}\n",
-      "template": "<plus-center>\r\n  <plus-animation id=\"animation1\" name=\"tada\">\r\n    <button id=\"button1\">Click Me</button>\r\n  </plus-animation>\r\n</plus-center>"
+      "template": "<plus-center>\r\n  <plus-animation id=\"animation1\" name=\"tada\">\r\n    <button onclick=\"animation1.run = true\">Click Me</button>\r\n  </plus-animation>\r\n</plus-center>"
     }
   },
   {
@@ -348,9 +348,9 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "animation",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\n\nsetTimeout(() => {\r\n  element1.keyframes = [\r\n    {\r\n      transform: \"scale(0) rotate(0deg) translate(-50%, -50%)\",\r\n      opacity: \"1\",\r\n    },\r\n    {\r\n      transform: \"scale(7) rotate(960deg) translate(-50%, -50%)\",\r\n      opacity: \"0\",\r\n    },\r\n  ];\r\n  element1.run = true;\r\n}, 1000);",
+      "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\n\nsetTimeout(() => {\r\n  animation3.keyframes = [\r\n    {\r\n      transform: \"scale(0) rotate(0deg) translate(-50%, -50%)\",\r\n      opacity: \"1\",\r\n    },\r\n    {\r\n      transform: \"scale(7) rotate(960deg) translate(-50%, -50%)\",\r\n      opacity: \"0\",\r\n    },\r\n  ];\r\n  animation3.run = true;\r\n}, 1000);",
       "style": ".root {\n  padding: 5rem 0;\n  position: relative;\n}\nplus-animation {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 1rem;\n  height: 1rem;\n  border: solid 1px red;\n  transform-origin: top left;\n}\n",
-      "template": "<div class=\"root\">\r\n  <plus-animation\r\n    duration=\"5000\"\r\n    id=\"element1\"\r\n    iterations=\"Infinity\"\r\n    run\r\n  ></plus-animation>\r\n</div>"
+      "template": "<div class=\"root\">\r\n  <plus-animation\r\n    duration=\"5000\"\r\n    id=\"animation3\"\r\n    iterations=\"Infinity\"\r\n    run\r\n  ></plus-animation>\r\n</div>"
     }
   },
   {
@@ -406,7 +406,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
       "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-      "template": "<plus-center>\n  <plus-animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></plus-animation>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"window.element2.cancel()\">Cancel</button>\n  <button (click)=\"window.element2.finish()\">Finish</button>\n  <button (click)=\"window.element2.pause()\">Pause</button>\n  <button (click)=\"window.element2.play()\">Play</button>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-animation\n    id=\"animation4\"\n    iterations=\"3\"\n    name=\"fade-out\"\n  ></plus-animation>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"window.animation4.cancel()\">Cancel</button>\n  <button (click)=\"window.animation4.finish()\">Finish</button>\n  <button (click)=\"window.animation4.pause()\">Pause</button>\n  <button (click)=\"window.animation4.play()\">Play</button>\n</plus-center>\n"
     }
   },
   {
@@ -416,7 +416,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/animation.js';\nimport 'https://unpkg.com/@htmlplus/core/center.js';\n",
       "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-      "template": "<plus-center>\r\n  <plus-animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></plus-animation>\r\n</plus-center>\r\n<br />\r\n<plus-center>\r\n  <button onclick=\"element2.cancel()\">Cancel</button>\r\n  <button onclick=\"element2.finish()\">Finish</button>\r\n  <button onclick=\"element2.pause()\">Pause</button>\r\n  <button onclick=\"element2.play()\">Play</button>\r\n</plus-center>"
+      "template": "<plus-center>\r\n  <plus-animation id=\"animation4\" iterations=\"3\" name=\"fade-out\"></plus-animation>\r\n</plus-center>\r\n<br />\r\n<plus-center>\r\n  <button onclick=\"animation4.cancel()\">Cancel</button>\r\n  <button onclick=\"animation4.finish()\">Finish</button>\r\n  <button onclick=\"animation4.pause()\">Pause</button>\r\n  <button onclick=\"animation4.play()\">Play</button>\r\n</plus-center>"
     }
   },
   {
@@ -424,7 +424,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "animation",
     "detail": {
-      "script": "import { Animation, Center } from '@htmlplus/react';\nconst AnimationMethods = () => {\n  return (\n    <>\n      <Center>\n        <Animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></Animation>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => window.element2.cancel()}>Cancel</button>\n        <button onClick={() => window.element2.finish()}>Finish</button>\n        <button onClick={() => window.element2.pause()}>Pause</button>\n        <button onClick={() => window.element2.play()}>Play</button>\n      </Center>\n    </>\n  );\n};\nexport default AnimationMethods;\n",
+      "script": "import { Animation, Center } from '@htmlplus/react';\nconst AnimationMethods = () => {\n  return (\n    <>\n      <Center>\n        <Animation id=\"animation4\" iterations=\"3\" name=\"fade-out\"></Animation>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => window.animation4.cancel()}>Cancel</button>\n        <button onClick={() => window.animation4.finish()}>Finish</button>\n        <button onClick={() => window.animation4.pause()}>Pause</button>\n        <button onClick={() => window.animation4.play()}>Play</button>\n      </Center>\n    </>\n  );\n};\nexport default AnimationMethods;\n",
       "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n"
     }
   },
@@ -433,7 +433,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "animation",
     "detail": {
-      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\nconst AnimationMethods = () => {\n  return (\n    <>\n      <plus-center>\n        <plus-animation\n          id=\"element2\"\n          iterations=\"3\"\n          name=\"fade-out\"\n        ></plus-animation>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => window.element2.cancel()}>Cancel</button>\n        <button onClick={() => window.element2.finish()}>Finish</button>\n        <button onClick={() => window.element2.pause()}>Pause</button>\n        <button onClick={() => window.element2.play()}>Play</button>\n      </plus-center>\n    </>\n  );\n};\nexport default AnimationMethods;\n",
+      "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\nconst AnimationMethods = () => {\n  return (\n    <>\n      <plus-center>\n        <plus-animation\n          id=\"animation4\"\n          iterations=\"3\"\n          name=\"fade-out\"\n        ></plus-animation>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => window.animation4.cancel()}>Cancel</button>\n        <button onClick={() => window.animation4.finish()}>Finish</button>\n        <button onClick={() => window.animation4.pause()}>Pause</button>\n        <button onClick={() => window.animation4.play()}>Play</button>\n      </plus-center>\n    </>\n  );\n};\nexport default AnimationMethods;\n",
       "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n"
     }
   },
@@ -444,7 +444,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\n",
       "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-      "template": "<plus-center>\n  <plus-animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></plus-animation>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click=\"{() => window.element2.cancel()}\">Cancel</button>\n  <button on:click=\"{() => window.element2.finish()}\">Finish</button>\n  <button on:click=\"{() => window.element2.pause()}\">Pause</button>\n  <button on:click=\"{() => window.element2.play()}\">Play</button>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-animation\n    id=\"animation4\"\n    iterations=\"3\"\n    name=\"fade-out\"\n  ></plus-animation>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click=\"{() => window.animation4.cancel()}\">Cancel</button>\n  <button on:click=\"{() => window.animation4.finish()}\">Finish</button>\n  <button on:click=\"{() => window.animation4.pause()}\">Pause</button>\n  <button on:click=\"{() => window.animation4.play()}\">Play</button>\n</plus-center>\n"
     }
   },
   {
@@ -454,7 +454,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\n",
       "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-      "template": "<plus-center>\n  <plus-animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></plus-animation>\n</plus-center>\n<br />\n<plus-center>\n  <button @click=\"window.element2.cancel()\">Cancel</button>\n  <button @click=\"window.element2.finish()\">Finish</button>\n  <button @click=\"window.element2.pause()\">Pause</button>\n  <button @click=\"window.element2.play()\">Play</button>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-animation\n    id=\"animation4\"\n    iterations=\"3\"\n    name=\"fade-out\"\n  ></plus-animation>\n</plus-center>\n<br />\n<plus-center>\n  <button @click=\"window.animation4.cancel()\">Cancel</button>\n  <button @click=\"window.animation4.finish()\">Finish</button>\n  <button @click=\"window.animation4.pause()\">Pause</button>\n  <button @click=\"window.animation4.play()\">Play</button>\n</plus-center>\n"
     }
   },
   {
@@ -462,7 +462,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "animation",
     "detail": {
-      "script": "import { Animation, Center } from '@htmlplus/react';\nconst AnimationMethods = () => {\n  return (\n    <>\n      <Center>\n        <Animation id=\"element2\" iterations=\"3\" name=\"fade-out\"></Animation>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => window.element2.cancel()}>Cancel</button>\n        <button onClick={() => window.element2.finish()}>Finish</button>\n        <button onClick={() => window.element2.pause()}>Pause</button>\n        <button onClick={() => window.element2.play()}>Play</button>\n      </Center>\n    </>\n  );\n};\n\nconst AnimationMethodsExample = () => {\n  return (\n    <div className=\"ex-animation-methods\">\n      <AnimationMethods />\n      <style>{`.ex-animation-methods button {  margin: 0 0.5rem;}.ex-animation-methods plus-animation {  background: lightgray;  width: 100px;  height: 100px;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationMethodsExample;\n"
+      "script": "import { Animation, Center } from '@htmlplus/react';\nconst AnimationMethods = () => {\n  return (\n    <>\n      <Center>\n        <Animation id=\"animation4\" iterations=\"3\" name=\"fade-out\"></Animation>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => window.animation4.cancel()}>Cancel</button>\n        <button onClick={() => window.animation4.finish()}>Finish</button>\n        <button onClick={() => window.animation4.pause()}>Pause</button>\n        <button onClick={() => window.animation4.play()}>Play</button>\n      </Center>\n    </>\n  );\n};\n\nconst AnimationMethodsExample = () => {\n  return (\n    <div className=\"ex-animation-methods\">\n      <AnimationMethods />\n      <style>{`.ex-animation-methods button {  margin: 0 0.5rem;}.ex-animation-methods plus-animation {  background: lightgray;  width: 100px;  height: 100px;}`}</style>\n    </div>\n  )\n};\n\nexport default AnimationMethodsExample;\n"
     }
   },
   {
@@ -2837,8 +2837,8 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "click-outside",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/card.js';\nimport 'https://unpkg.com/@htmlplus/core/card-body.js';\nimport 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/click-outside.js';\n\nlet inside = 0;\r\nlet outside = 0;\r\nelement1.addEventListener('click', (event) => {\r\n  inside = inside + 1;\r\n  element2.innerHTML = inside;\r\n});\r\nelement1.addEventListener('plus-click-outside', (event) => {\r\n  outside = outside + 1;\r\n  element3.innerHTML = outside;\r\n});",
-      "template": "<plus-click-outside id=\"element1\">\r\n  <plus-card elevation=\"10\">\r\n    <plus-card-body>\r\n      <b id=\"element2\">0</b> time(s) inside clicked\r\n      <br />\r\n      <b id=\"element3\">0</b> time(s) outside clicked\r\n    </plus-card-body>\r\n  </plus-card>\r\n</plus-click-outside>"
+      "script": "import 'https://unpkg.com/@htmlplus/core/card.js';\nimport 'https://unpkg.com/@htmlplus/core/card-body.js';\nimport 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/click-outside.js';\n\nlet inside = 0;\r\nlet outside = 0;\r\nclickOutside1.addEventListener('click', (event) => {\r\n  inside = inside + 1;\r\n  element2.innerHTML = inside;\r\n});\r\nclickOutside1.addEventListener('plus-click-outside', (event) => {\r\n  outside = outside + 1;\r\n  element3.innerHTML = outside;\r\n});",
+      "template": "<plus-click-outside id=\"clickOutside1\">\r\n  <plus-card elevation=\"10\">\r\n    <plus-card-body>\r\n      <b id=\"element2\">0</b> time(s) inside clicked\r\n      <br />\r\n      <b id=\"element3\">0</b> time(s) outside clicked\r\n    </plus-card-body>\r\n  </plus-card>\r\n</plus-click-outside>"
     }
   },
   {
@@ -2890,7 +2890,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/click-outside.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  open = false;\n  onClick() {\n    this.open = !this.open;\n  }\n  onClickOutside() {\n    this.open = false;\n  }\n}\n",
       "style": "plus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\nplus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n",
-      "template": "<plus-center>\n  <plus-click-outside (plus-click-outside)=\"onClickOutside()\">\n    <button (click)=\"onClick()\">Open Menu Dropdown</button>\n    <plus-card elevation=\"10\" id=\"menu\" outlined *ngIf=\"open\">\n      <plus-card-body>\n        It will stay visible until you click outside.\n      </plus-card-body>\n    </plus-card>\n  </plus-click-outside>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-click-outside (plus-click-outside)=\"onClickOutside()\">\n    <button (click)=\"onClick()\">Open Menu Dropdown</button>\n    <plus-card elevation=\"10\" outlined *ngIf=\"open\">\n      <plus-card-body>\n        It will stay visible until you click outside.\n      </plus-card-body>\n    </plus-card>\n  </plus-click-outside>\n</plus-center>\n"
     }
   },
   {
@@ -2898,9 +2898,9 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "click-outside",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/card.js';\nimport 'https://unpkg.com/@htmlplus/core/card-body.js';\nimport 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/click-outside.js';\n\nbutton.addEventListener('click', () => {\r\n  menu.hidden = !menu.hidden;\r\n});\r\noutside.addEventListener('plus-click-outside', () => {\r\n  menu.hidden = true;\r\n});",
+      "script": "import 'https://unpkg.com/@htmlplus/core/card.js';\nimport 'https://unpkg.com/@htmlplus/core/card-body.js';\nimport 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/click-outside.js';\n\nbutton2.addEventListener('click', () => {\r\n  menu2.hidden = !menu2.hidden;\r\n});\r\nclickOutside2.addEventListener('plus-click-outside', () => {\r\n  menu2.hidden = true;\r\n});",
       "style": "plus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\nplus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n",
-      "template": "<plus-center>\r\n  <plus-click-outside id=\"outside\">\r\n    <button id=\"button\">Open Menu Dropdown</button>\r\n    <plus-card elevation=\"10\" id=\"menu\" outlined>\r\n      <plus-card-body>\r\n        It will stay visible until you click outside.\r\n      </plus-card-body>\r\n    </plus-card>\r\n  </plus-click-outside>\r\n</plus-center>"
+      "template": "<plus-center>\r\n  <plus-click-outside id=\"clickOutside2\">\r\n    <button id=\"button2\">Open Menu Dropdown</button>\r\n    <plus-card elevation=\"10\" id=\"menu2\" outlined>\r\n      <plus-card-body>\r\n        It will stay visible until you click outside.\r\n      </plus-card-body>\r\n    </plus-card>\r\n  </plus-click-outside>\r\n</plus-center>"
     }
   },
   {
@@ -2908,7 +2908,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "click-outside",
     "detail": {
-      "script": "import { useState } from 'react';\nimport { Card, Center, ClickOutside } from '@htmlplus/react';\nconst ClickOutsideDefault = () => {\n  const [open, setOpen] = useState(false);\n  const onClick = () => {\n    setOpen(!open);\n  };\n  const onClickOutside = () => {\n    setOpen(false);\n  };\n  return (\n    <Center>\n      <ClickOutside onClickOutside={() => onClickOutside()}>\n        <button onClick={() => onClick()}>Open Menu Dropdown</button>\n        {open && (\n          <Card elevation=\"10\" id=\"menu\" outlined>\n            <Card.Body>It will stay visible until you click outside.</Card.Body>\n          </Card>\n        )}\n      </ClickOutside>\n    </Center>\n  );\n};\nexport default ClickOutsideDefault;\n",
+      "script": "import { useState } from 'react';\nimport { Card, Center, ClickOutside } from '@htmlplus/react';\nconst ClickOutsideDefault = () => {\n  const [open, setOpen] = useState(false);\n  const onClick = () => {\n    setOpen(!open);\n  };\n  const onClickOutside = () => {\n    setOpen(false);\n  };\n  return (\n    <Center>\n      <ClickOutside onClickOutside={() => onClickOutside()}>\n        <button onClick={() => onClick()}>Open Menu Dropdown</button>\n        {open && (\n          <Card elevation=\"10\" outlined>\n            <Card.Body>It will stay visible until you click outside.</Card.Body>\n          </Card>\n        )}\n      </ClickOutside>\n    </Center>\n  );\n};\nexport default ClickOutsideDefault;\n",
       "style": "plus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\nplus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n"
     }
   },
@@ -2917,7 +2917,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "click-outside",
     "detail": {
-      "script": "import { useState } from 'react';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/click-outside.js';\nconst ClickOutsideDefault = () => {\n  const [open, setOpen] = useState(false);\n  const onClick = () => {\n    setOpen(!open);\n  };\n  const onClickOutside = () => {\n    setOpen(false);\n  };\n  return (\n    <plus-center>\n      <plus-click-outside onplus-click-outside={() => onClickOutside()}>\n        <button onClick={() => onClick()}>Open Menu Dropdown</button>\n        {open && (\n          <plus-card elevation=\"10\" id=\"menu\" outlined>\n            <plus-card-body>\n              It will stay visible until you click outside.\n            </plus-card-body>\n          </plus-card>\n        )}\n      </plus-click-outside>\n    </plus-center>\n  );\n};\nexport default ClickOutsideDefault;\n",
+      "script": "import { useState } from 'react';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/click-outside.js';\nconst ClickOutsideDefault = () => {\n  const [open, setOpen] = useState(false);\n  const onClick = () => {\n    setOpen(!open);\n  };\n  const onClickOutside = () => {\n    setOpen(false);\n  };\n  return (\n    <plus-center>\n      <plus-click-outside onplus-click-outside={() => onClickOutside()}>\n        <button onClick={() => onClick()}>Open Menu Dropdown</button>\n        {open && (\n          <plus-card elevation=\"10\" outlined>\n            <plus-card-body>\n              It will stay visible until you click outside.\n            </plus-card-body>\n          </plus-card>\n        )}\n      </plus-click-outside>\n    </plus-center>\n  );\n};\nexport default ClickOutsideDefault;\n",
       "style": "plus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\nplus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n"
     }
   },
@@ -2928,7 +2928,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/click-outside.js';\nlet open = false;\nfunction onClick() {\n  open = !open;\n}\nfunction onClickOutside() {\n  open = false;\n}\n",
       "style": "plus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\nplus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n",
-      "template": "<plus-center>\n  <plus-click-outside on:plus-click-outside=\"{() => onClickOutside()}\">\n    <button on:click=\"{() => onClick()}\">Open Menu Dropdown</button>\n    {#if open}<plus-card elevation=\"10\" id=\"menu\" outlined>\n      <plus-card-body>\n        It will stay visible until you click outside.\n      </plus-card-body>\n    </plus-card>\n    {/if}\n  </plus-click-outside>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-click-outside on:plus-click-outside=\"{() => onClickOutside()}\">\n    <button on:click=\"{() => onClick()}\">Open Menu Dropdown</button>\n    {#if open}<plus-card elevation=\"10\" outlined>\n      <plus-card-body>\n        It will stay visible until you click outside.\n      </plus-card-body>\n    </plus-card>\n    {/if}\n  </plus-click-outside>\n</plus-center>\n"
     }
   },
   {
@@ -2938,7 +2938,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import { ref } from 'vue';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/click-outside.js';\nconst open = ref(false);\nfunction onClick() {\n  open.value = !open.value;\n}\nfunction onClickOutside() {\n  open.value = false;\n}\n",
       "style": "plus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\nplus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n",
-      "template": "<plus-center>\n  <plus-click-outside @plus-click-outside=\"onClickOutside()\">\n    <button @click=\"onClick()\">Open Menu Dropdown</button>\n    <plus-card elevation=\"10\" id=\"menu\" outlined v-if=\"open\">\n      <plus-card-body>\n        It will stay visible until you click outside.\n      </plus-card-body>\n    </plus-card>\n  </plus-click-outside>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-click-outside @plus-click-outside=\"onClickOutside()\">\n    <button @click=\"onClick()\">Open Menu Dropdown</button>\n    <plus-card elevation=\"10\" outlined v-if=\"open\">\n      <plus-card-body>\n        It will stay visible until you click outside.\n      </plus-card-body>\n    </plus-card>\n  </plus-click-outside>\n</plus-center>\n"
     }
   },
   {
@@ -2946,7 +2946,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "click-outside",
     "detail": {
-      "script": "import { useState } from 'react';\nimport { Card, Center, ClickOutside } from '@htmlplus/react';\nconst ClickOutsideDefault = () => {\n  const [open, setOpen] = useState(false);\n  const onClick = () => {\n    setOpen(!open);\n  };\n  const onClickOutside = () => {\n    setOpen(false);\n  };\n  return (\n    <Center>\n      <ClickOutside onClickOutside={() => onClickOutside()}>\n        <button onClick={() => onClick()}>Open Menu Dropdown</button>\n        {open && (\n          <Card elevation=\"10\" id=\"menu\" outlined>\n            <Card.Body>It will stay visible until you click outside.</Card.Body>\n          </Card>\n        )}\n      </ClickOutside>\n    </Center>\n  );\n};\n\nconst ClickOutsideDefaultExample = () => {\n  return (\n    <div className=\"ex-click-outside-menu\">\n      <ClickOutsideDefault />\n      <style>{`.ex-click-outside-menu plus-card {  position: absolute;  top: calc(100% + 0.25rem);}.ex-click-outside-menu plus-click-outside {  display: inline-block;  position: relative;}`}</style>\n    </div>\n  )\n};\n\nexport default ClickOutsideDefaultExample;\n"
+      "script": "import { useState } from 'react';\nimport { Card, Center, ClickOutside } from '@htmlplus/react';\nconst ClickOutsideDefault = () => {\n  const [open, setOpen] = useState(false);\n  const onClick = () => {\n    setOpen(!open);\n  };\n  const onClickOutside = () => {\n    setOpen(false);\n  };\n  return (\n    <Center>\n      <ClickOutside onClickOutside={() => onClickOutside()}>\n        <button onClick={() => onClick()}>Open Menu Dropdown</button>\n        {open && (\n          <Card elevation=\"10\" outlined>\n            <Card.Body>It will stay visible until you click outside.</Card.Body>\n          </Card>\n        )}\n      </ClickOutside>\n    </Center>\n  );\n};\n\nconst ClickOutsideDefaultExample = () => {\n  return (\n    <div className=\"ex-click-outside-menu\">\n      <ClickOutsideDefault />\n      <style>{`.ex-click-outside-menu plus-card {  position: absolute;  top: calc(100% + 0.25rem);}.ex-click-outside-menu plus-click-outside {  display: inline-block;  position: relative;}`}</style>\n    </div>\n  )\n};\n\nexport default ClickOutsideDefaultExample;\n"
     }
   },
   {
@@ -3862,7 +3862,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  disabled: boolean = true;\n  change(disabled) {\n    this.disabled = disabled;\n  }\n}\n",
       "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n</div>\n<plus-dialog\n  animation=\"fade\"\n  connector=\"dialog-cropper\"\n  (plus-opened)=\"change(false)\"\n  (plus-closed)=\"change(true)\"\n>\n  <plus-dialog-content>\n    <plus-dialog-header>Cropper</plus-dialog-header>\n    <plus-dialog-body>\n      <plus-cropper\n        [disabled]=\"disabled\"\n        src=\"/assets/images/panda.jpg\"\n      ></plus-cropper>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler>Close</plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
+      "template": "<div class=\"center\">\n  <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n</div>\n<plus-dialog\n  animation=\"fade\"\n  connector=\"dialog-cropper\"\n  (plus-opened)=\"change(false)\"\n  (plus-closed)=\"change(true)\"\n>\n  <plus-dialog-content>\n    <plus-dialog-header>Cropper</plus-dialog-header>\n    <plus-dialog-body>\n      <plus-cropper\n        [disabled]=\"disabled\"\n        src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ></plus-cropper>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler>Close</plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
     }
   },
   {
@@ -3872,7 +3872,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/cropper.js';\nimport 'https://unpkg.com/@htmlplus/core/dialog.js';\nimport 'https://unpkg.com/@htmlplus/core/dialog-body.js';\nimport 'https://unpkg.com/@htmlplus/core/dialog-content.js';\nimport 'https://unpkg.com/@htmlplus/core/dialog-footer.js';\nimport 'https://unpkg.com/@htmlplus/core/dialog-header.js';\nimport 'https://unpkg.com/@htmlplus/core/dialog-toggler.js';\n\nconst change = (disabled) => {\r\n  element2.disabled = disabled;\r\n};\r\nelement1.addEventListener('plus-opened', () => change(false));\r\nelement1.addEventListener('plus-closed', () => change(true));",
       "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\r\n  <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\r\n</div>\r\n<plus-dialog id=\"element1\" animation=\"fade\" connector=\"dialog-cropper\">\r\n  <plus-dialog-content>\r\n    <plus-dialog-header> Cropper </plus-dialog-header>\r\n    <plus-dialog-body>\r\n      <plus-cropper\r\n        id=\"element2\"\r\n        disabled\r\n        src=\"/assets/images/panda.jpg\"\r\n      ></plus-cropper>\r\n    </plus-dialog-body>\r\n    <plus-dialog-footer>\r\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\r\n    </plus-dialog-footer>\r\n  </plus-dialog-content>\r\n</plus-dialog>"
+      "template": "<div class=\"center\">\r\n  <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\r\n</div>\r\n<plus-dialog id=\"element1\" animation=\"fade\" connector=\"dialog-cropper\">\r\n  <plus-dialog-content>\r\n    <plus-dialog-header> Cropper </plus-dialog-header>\r\n    <plus-dialog-body>\r\n      <plus-cropper\r\n        id=\"element2\"\r\n        disabled\r\n        src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\r\n      ></plus-cropper>\r\n    </plus-dialog-body>\r\n    <plus-dialog-footer>\r\n      <plus-dialog-toggler> Close </plus-dialog-toggler>\r\n    </plus-dialog-footer>\r\n  </plus-dialog-content>\r\n</plus-dialog>"
     }
   },
   {
@@ -3880,7 +3880,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "cropper",
     "detail": {
-      "script": "import { useState } from 'react';\nimport { Cropper, Dialog } from '@htmlplus/react';\nconst CropperDialog = () => {\n  const [disabled, setDisabled] = useState(true);\n  const change = (disabled) => {\n    setDisabled(disabled);\n  };\n  return (\n    <>\n      <div className=\"center\">\n        <Dialog.Toggler connector=\"dialog-cropper\">Open</Dialog.Toggler>\n      </div>\n      <Dialog\n        animation=\"fade\"\n        connector=\"dialog-cropper\"\n        onOpened={() => change(false)}\n        onClosed={() => change(true)}\n      >\n        <Dialog.Content>\n          <Dialog.Header>Cropper</Dialog.Header>\n          <Dialog.Body>\n            <Cropper\n              disabled={disabled}\n              src=\"/assets/images/panda.jpg\"\n            ></Cropper>\n          </Dialog.Body>\n          <Dialog.Footer>\n            <Dialog.Toggler>Close</Dialog.Toggler>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n};\nexport default CropperDialog;\n",
+      "script": "import { useState } from 'react';\nimport { Cropper, Dialog } from '@htmlplus/react';\nconst CropperDialog = () => {\n  const [disabled, setDisabled] = useState(true);\n  const change = (disabled) => {\n    setDisabled(disabled);\n  };\n  return (\n    <>\n      <div className=\"center\">\n        <Dialog.Toggler connector=\"dialog-cropper\">Open</Dialog.Toggler>\n      </div>\n      <Dialog\n        animation=\"fade\"\n        connector=\"dialog-cropper\"\n        onOpened={() => change(false)}\n        onClosed={() => change(true)}\n      >\n        <Dialog.Content>\n          <Dialog.Header>Cropper</Dialog.Header>\n          <Dialog.Body>\n            <Cropper\n              disabled={disabled}\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></Cropper>\n          </Dialog.Body>\n          <Dialog.Footer>\n            <Dialog.Toggler>Close</Dialog.Toggler>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n};\nexport default CropperDialog;\n",
       "style": ".center {\n  text-align: center;\n}\n"
     }
   },
@@ -3889,7 +3889,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "cropper",
     "detail": {
-      "script": "import { useState } from 'react';\nimport '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nconst CropperDialog = () => {\n  const [disabled, setDisabled] = useState(true);\n  const change = (disabled) => {\n    setDisabled(disabled);\n  };\n  return (\n    <>\n      <div className=\"center\">\n        <plus-dialog-toggler connector=\"dialog-cropper\">\n          Open\n        </plus-dialog-toggler>\n      </div>\n      <plus-dialog\n        animation=\"fade\"\n        connector=\"dialog-cropper\"\n        onplus-opened={() => change(false)}\n        onplus-closed={() => change(true)}\n      >\n        <plus-dialog-content>\n          <plus-dialog-header>Cropper</plus-dialog-header>\n          <plus-dialog-body>\n            <plus-cropper\n              disabled={disabled}\n              src=\"/assets/images/panda.jpg\"\n            ></plus-cropper>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n};\nexport default CropperDialog;\n",
+      "script": "import { useState } from 'react';\nimport '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nconst CropperDialog = () => {\n  const [disabled, setDisabled] = useState(true);\n  const change = (disabled) => {\n    setDisabled(disabled);\n  };\n  return (\n    <>\n      <div className=\"center\">\n        <plus-dialog-toggler connector=\"dialog-cropper\">\n          Open\n        </plus-dialog-toggler>\n      </div>\n      <plus-dialog\n        animation=\"fade\"\n        connector=\"dialog-cropper\"\n        onplus-opened={() => change(false)}\n        onplus-closed={() => change(true)}\n      >\n        <plus-dialog-content>\n          <plus-dialog-header>Cropper</plus-dialog-header>\n          <plus-dialog-body>\n            <plus-cropper\n              disabled={disabled}\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></plus-cropper>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n};\nexport default CropperDialog;\n",
       "style": ".center {\n  text-align: center;\n}\n"
     }
   },
@@ -3900,7 +3900,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nlet disabled = true;\nfunction change(disabled) {\n  disabled = disabled;\n}\n",
       "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n</div>\n<plus-dialog\n  animation=\"fade\"\n  connector=\"dialog-cropper\"\n  on:plus-opened=\"{() => change(false)}\"\n  on:plus-closed=\"{() => change(true)}\"\n>\n  <plus-dialog-content>\n    <plus-dialog-header>Cropper</plus-dialog-header>\n    <plus-dialog-body>\n      <plus-cropper\n        disabled=\"{disabled}\"\n        src=\"/assets/images/panda.jpg\"\n      ></plus-cropper>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler>Close</plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
+      "template": "<div class=\"center\">\n  <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n</div>\n<plus-dialog\n  animation=\"fade\"\n  connector=\"dialog-cropper\"\n  on:plus-opened=\"{() => change(false)}\"\n  on:plus-closed=\"{() => change(true)}\"\n>\n  <plus-dialog-content>\n    <plus-dialog-header>Cropper</plus-dialog-header>\n    <plus-dialog-body>\n      <plus-cropper\n        disabled=\"{disabled}\"\n        src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ></plus-cropper>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler>Close</plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
     }
   },
   {
@@ -3910,7 +3910,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import { ref } from 'vue';\nimport '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nconst disabled = ref(true);\nfunction change(disabled) {\n  disabled.value = disabled;\n}\n",
       "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n</div>\n<plus-dialog\n  animation=\"fade\"\n  connector=\"dialog-cropper\"\n  @plus-opened=\"change(false)\"\n  @plus-closed=\"change(true)\"\n>\n  <plus-dialog-content>\n    <plus-dialog-header>Cropper</plus-dialog-header>\n    <plus-dialog-body>\n      <plus-cropper\n        :disabled=\"disabled\"\n        src=\"/assets/images/panda.jpg\"\n      ></plus-cropper>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler>Close</plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
+      "template": "<div class=\"center\">\n  <plus-dialog-toggler connector=\"dialog-cropper\"> Open </plus-dialog-toggler>\n</div>\n<plus-dialog\n  animation=\"fade\"\n  connector=\"dialog-cropper\"\n  @plus-opened=\"change(false)\"\n  @plus-closed=\"change(true)\"\n>\n  <plus-dialog-content>\n    <plus-dialog-header>Cropper</plus-dialog-header>\n    <plus-dialog-body>\n      <plus-cropper\n        :disabled=\"disabled\"\n        src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ></plus-cropper>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler>Close</plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
     }
   },
   {
@@ -3918,7 +3918,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "cropper",
     "detail": {
-      "script": "import { useState } from 'react';\nimport { Cropper, Dialog } from '@htmlplus/react';\nconst CropperDialog = () => {\n  const [disabled, setDisabled] = useState(true);\n  const change = (disabled) => {\n    setDisabled(disabled);\n  };\n  return (\n    <>\n      <div className=\"center\">\n        <Dialog.Toggler connector=\"dialog-cropper\">Open</Dialog.Toggler>\n      </div>\n      <Dialog\n        animation=\"fade\"\n        connector=\"dialog-cropper\"\n        onOpened={() => change(false)}\n        onClosed={() => change(true)}\n      >\n        <Dialog.Content>\n          <Dialog.Header>Cropper</Dialog.Header>\n          <Dialog.Body>\n            <Cropper\n              disabled={disabled}\n              src=\"/assets/images/panda.jpg\"\n            ></Cropper>\n          </Dialog.Body>\n          <Dialog.Footer>\n            <Dialog.Toggler>Close</Dialog.Toggler>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n};\n\nconst CropperDialogExample = () => {\n  return (\n    <div className=\"ex-cropper-dialog dock\">\n      <CropperDialog />\n      <style>{`.ex-cropper-dialog .center {  text-align: center;}`}</style>\n    </div>\n  )\n};\n\nexport default CropperDialogExample;\n"
+      "script": "import { useState } from 'react';\nimport { Cropper, Dialog } from '@htmlplus/react';\nconst CropperDialog = () => {\n  const [disabled, setDisabled] = useState(true);\n  const change = (disabled) => {\n    setDisabled(disabled);\n  };\n  return (\n    <>\n      <div className=\"center\">\n        <Dialog.Toggler connector=\"dialog-cropper\">Open</Dialog.Toggler>\n      </div>\n      <Dialog\n        animation=\"fade\"\n        connector=\"dialog-cropper\"\n        onOpened={() => change(false)}\n        onClosed={() => change(true)}\n      >\n        <Dialog.Content>\n          <Dialog.Header>Cropper</Dialog.Header>\n          <Dialog.Body>\n            <Cropper\n              disabled={disabled}\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></Cropper>\n          </Dialog.Body>\n          <Dialog.Footer>\n            <Dialog.Toggler>Close</Dialog.Toggler>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n};\n\nconst CropperDialogExample = () => {\n  return (\n    <div className=\"ex-cropper-dialog dock\">\n      <CropperDialog />\n      <style>{`.ex-cropper-dialog .center {  text-align: center;}`}</style>\n    </div>\n  )\n};\n\nexport default CropperDialogExample;\n"
     }
   },
   {
@@ -4304,8 +4304,8 @@ export const examples: any[] = [
     "category": "angular",
     "component": "cropper",
     "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  toBase64() {\n    const image = new Image();\n    image.src = window.cropper1.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  }\n}\n",
-      "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper1\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"toBase64()\">Get Base64</button>\n</plus-center>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  toBase64() {\n    const image = new Image();\n    image.src = window.cropper2.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  }\n}\n",
+      "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper2\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"toBase64()\">Get Base64</button>\n</plus-center>\n"
     }
   },
   {
@@ -4313,8 +4313,8 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "cropper",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/cropper.js';\n\nconst toBase64 = () => {\r\n  const image = new Image();\r\n\r\n  image.src = window.cropper1.toCanvas().toDataURL();\r\n\r\n  const tab = window.open('', '_blank');\r\n\r\n  tab.onload = () => {\r\n    tab.document.write(image.outerHTML);\r\n  }\r\n}",
-      "template": "<plus-center>\r\n  <plus-cropper src=\"/assets/images/panda.jpg\" id=\"cropper1\"></plus-cropper>\r\n</plus-center>\r\n<br />\r\n<plus-center>\r\n  <button onclick=\"toBase64()\">\r\n    To Base64\r\n  </button>\r\n</plus-center>"
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/cropper.js';\n\nbutton2.addEventListener('click', () => {\r\n  const image = new Image();\r\n\r\n  image.src = cropper2.toCanvas().toDataURL();\r\n\r\n  const tab = open('', '_blank');\r\n\r\n  tab.onload = () => {\r\n    tab.document.write(image.outerHTML);\r\n  }\r\n});",
+      "template": "<plus-center>\r\n  <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\" id=\"cropper2\"></plus-cropper>\r\n</plus-center>\r\n<br />\r\n<plus-center>\r\n  <button id=\"button2\">\r\n    To Base64\r\n  </button>\r\n</plus-center>"
     }
   },
   {
@@ -4322,7 +4322,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "cropper",
     "detail": {
-      "script": "import { Center, Cropper } from '@htmlplus/react';\nconst CropperToBase64 = () => {\n  const toBase64 = () => {\n    const image = new Image();\n    image.src = window.cropper1.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper1\"\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => toBase64()}>Get Base64</button>\n      </Center>\n    </>\n  );\n};\nexport default CropperToBase64;\n"
+      "script": "import { Center, Cropper } from '@htmlplus/react';\nconst CropperToBase64 = () => {\n  const toBase64 = () => {\n    const image = new Image();\n    image.src = window.cropper2.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper2\"\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => toBase64()}>Get Base64</button>\n      </Center>\n    </>\n  );\n};\nexport default CropperToBase64;\n"
     }
   },
   {
@@ -4330,7 +4330,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "cropper",
     "detail": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nconst CropperToBase64 = () => {\n  const toBase64 = () => {\n    const image = new Image();\n    image.src = window.cropper1.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper1\"\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => toBase64()}>Get Base64</button>\n      </plus-center>\n    </>\n  );\n};\nexport default CropperToBase64;\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nconst CropperToBase64 = () => {\n  const toBase64 = () => {\n    const image = new Image();\n    image.src = window.cropper2.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper2\"\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => toBase64()}>Get Base64</button>\n      </plus-center>\n    </>\n  );\n};\nexport default CropperToBase64;\n"
     }
   },
   {
@@ -4338,8 +4338,8 @@ export const examples: any[] = [
     "category": "svelte",
     "component": "cropper",
     "detail": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nfunction toBase64() {\n  const image = new Image();\n  image.src = window.cropper1.toCanvas().toDataURL();\n  const tab = window.open('', '_blank');\n  tab.onload = () => {\n    tab.document.write(image.outerHTML);\n  };\n}\n",
-      "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper1\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click=\"{() => toBase64()}\">Get Base64</button>\n</plus-center>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nfunction toBase64() {\n  const image = new Image();\n  image.src = window.cropper2.toCanvas().toDataURL();\n  const tab = window.open('', '_blank');\n  tab.onload = () => {\n    tab.document.write(image.outerHTML);\n  };\n}\n",
+      "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper2\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click=\"{() => toBase64()}\">Get Base64</button>\n</plus-center>\n"
     }
   },
   {
@@ -4347,8 +4347,8 @@ export const examples: any[] = [
     "category": "vue",
     "component": "cropper",
     "detail": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nfunction toBase64() {\n  const image = new Image();\n  image.src = window.cropper1.toCanvas().toDataURL();\n  const tab = window.open('', '_blank');\n  tab.onload = () => {\n    tab.document.write(image.outerHTML);\n  };\n}\n",
-      "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper1\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button @click=\"toBase64()\">Get Base64</button>\n</plus-center>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nfunction toBase64() {\n  const image = new Image();\n  image.src = window.cropper2.toCanvas().toDataURL();\n  const tab = window.open('', '_blank');\n  tab.onload = () => {\n    tab.document.write(image.outerHTML);\n  };\n}\n",
+      "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper2\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button @click=\"toBase64()\">Get Base64</button>\n</plus-center>\n"
     }
   },
   {
@@ -4356,7 +4356,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "cropper",
     "detail": {
-      "script": "import { Center, Cropper } from '@htmlplus/react';\nconst CropperToBase64 = () => {\n  const toBase64 = () => {\n    const image = new Image();\n    image.src = window.cropper1.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper1\"\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => toBase64()}>Get Base64</button>\n      </Center>\n    </>\n  );\n};\n\nconst CropperToBase64Example = () => {\n  return (\n    <div className=\"ex-cropper-to-base64\">\n      <CropperToBase64 />\n    </div>\n  )\n};\n\nexport default CropperToBase64Example;\n"
+      "script": "import { Center, Cropper } from '@htmlplus/react';\nconst CropperToBase64 = () => {\n  const toBase64 = () => {\n    const image = new Image();\n    image.src = window.cropper2.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper2\"\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => toBase64()}>Get Base64</button>\n      </Center>\n    </>\n  );\n};\n\nconst CropperToBase64Example = () => {\n  return (\n    <div className=\"ex-cropper-to-base64\">\n      <CropperToBase64 />\n    </div>\n  )\n};\n\nexport default CropperToBase64Example;\n"
     }
   },
   {
@@ -4364,8 +4364,8 @@ export const examples: any[] = [
     "category": "angular",
     "component": "cropper",
     "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/cropper.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-cropper\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  toBlob() {\n    window.cropper3.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  }\n}\n",
+      "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper3\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"toBlob()\">To Blob</button>\n</plus-center>\n"
     }
   },
   {
@@ -4373,8 +4373,8 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "cropper",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/cropper.js';\n",
-      "template": "<plus-cropper\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/cropper.js';\n\nbutton3.addEventListener('click', () => {\r\n    cropper3.toCanvas().toBlob((blob) => {\r\n        console.log(blob);\r\n    });\r\n});",
+      "template": "<plus-center>\r\n  <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\" id=\"cropper3\"></plus-cropper>\r\n</plus-center>\r\n<br />\r\n<plus-center>\r\n  <button id=\"button3\">\r\n    To URL\r\n  </button>\r\n</plus-center>"
     }
   },
   {
@@ -4382,7 +4382,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "cropper",
     "detail": {
-      "script": "import { Cropper } from '@htmlplus/react';\nconst CropperToBlob = () => {\n  return (\n    <Cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></Cropper>\n  );\n};\nexport default CropperToBlob;\n"
+      "script": "import { Center, Cropper } from '@htmlplus/react';\nconst CropperToBlob = () => {\n  const toBlob = () => {\n    window.cropper3.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  };\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper3\"\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => toBlob()}>To Blob</button>\n      </Center>\n    </>\n  );\n};\nexport default CropperToBlob;\n"
     }
   },
   {
@@ -4390,7 +4390,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "cropper",
     "detail": {
-      "script": "import '@htmlplus/core/cropper.js';\nconst CropperToBlob = () => {\n  return (\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n  );\n};\nexport default CropperToBlob;\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nconst CropperToBlob = () => {\n  const toBlob = () => {\n    window.cropper3.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper3\"\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => toBlob()}>To Blob</button>\n      </plus-center>\n    </>\n  );\n};\nexport default CropperToBlob;\n"
     }
   },
   {
@@ -4398,8 +4398,8 @@ export const examples: any[] = [
     "category": "svelte",
     "component": "cropper",
     "detail": {
-      "script": "import '@htmlplus/core/cropper.js';\n",
-      "template": "<plus-cropper\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nfunction toBlob() {\n  window.cropper3.toCanvas().toBlob((blob) => {\n    console.log(blob);\n  });\n}\n",
+      "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper3\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click=\"{() => toBlob()}\">To Blob</button>\n</plus-center>\n"
     }
   },
   {
@@ -4407,8 +4407,8 @@ export const examples: any[] = [
     "category": "vue",
     "component": "cropper",
     "detail": {
-      "script": "import '@htmlplus/core/cropper.js';\n",
-      "template": "<plus-cropper\n  src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n></plus-cropper>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nfunction toBlob() {\n  window.cropper3.toCanvas().toBlob((blob) => {\n    console.log(blob);\n  });\n}\n",
+      "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper3\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button @click=\"toBlob()\">To Blob</button>\n</plus-center>\n"
     }
   },
   {
@@ -4416,7 +4416,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "cropper",
     "detail": {
-      "script": "import { Cropper } from '@htmlplus/react';\nconst CropperToBlob = () => {\n  return (\n    <Cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></Cropper>\n  );\n};\n\nconst CropperToBlobExample = () => {\n  return (\n    <div className=\"ex-cropper-to-blob\">\n      <CropperToBlob />\n    </div>\n  )\n};\n\nexport default CropperToBlobExample;\n"
+      "script": "import { Center, Cropper } from '@htmlplus/react';\nconst CropperToBlob = () => {\n  const toBlob = () => {\n    window.cropper3.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  };\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper3\"\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => toBlob()}>To Blob</button>\n      </Center>\n    </>\n  );\n};\n\nconst CropperToBlobExample = () => {\n  return (\n    <div className=\"ex-cropper-to-blob\">\n      <CropperToBlob />\n    </div>\n  )\n};\n\nexport default CropperToBlobExample;\n"
     }
   },
   {
@@ -4424,8 +4424,8 @@ export const examples: any[] = [
     "category": "angular",
     "component": "cropper",
     "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  toURL() {\n    window.cropper3.toCanvas().toBlob((blob) => {\n      window.open(URL.createObjectURL(blob), '_blank');\n    });\n  }\n}\n",
-      "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper3\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"toURL()\">To URL</button>\n</plus-center>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  toURL() {\n    window.cropper4.toCanvas().toBlob((blob) => {\n      window.open(URL.createObjectURL(blob), '_blank');\n    });\n  }\n}\n",
+      "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper4\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"toURL()\">To URL</button>\n</plus-center>\n"
     }
   },
   {
@@ -4433,8 +4433,8 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "cropper",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/cropper.js';\n\nconst toURL = () => {\r\n    window.cropper3.toCanvas().toBlob((blob) => {\r\n        window.open(URL.createObjectURL(blob), '_blank');\r\n    });\r\n}",
-      "template": "<plus-center>\r\n  <plus-cropper src=\"/assets/images/panda.jpg\" id=\"cropper3\"></plus-cropper>\r\n</plus-center>\r\n<br />\r\n<plus-center>\r\n  <button onclick=\"toURL()\">\r\n    To URL\r\n  </button>\r\n</plus-center>"
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/cropper.js';\n\nbutton4.addEventListener('click', () => {\r\n    cropper4.toCanvas().toBlob((blob) => {\r\n        open(URL.createObjectURL(blob), '_blank');\r\n    });\r\n});",
+      "template": "<plus-center>\r\n  <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\" id=\"cropper4\"></plus-cropper>\r\n</plus-center>\r\n<br />\r\n<plus-center>\r\n  <button id=\"button4\">\r\n    To URL\r\n  </button>\r\n</plus-center>"
     }
   },
   {
@@ -4442,7 +4442,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "cropper",
     "detail": {
-      "script": "import { Center, Cropper } from '@htmlplus/react';\nconst CropperToURL = () => {\n  const toURL = () => {\n    window.cropper3.toCanvas().toBlob((blob) => {\n      window.open(URL.createObjectURL(blob), '_blank');\n    });\n  };\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper3\"\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => toURL()}>To URL</button>\n      </Center>\n    </>\n  );\n};\nexport default CropperToURL;\n"
+      "script": "import { Center, Cropper } from '@htmlplus/react';\nconst CropperToURL = () => {\n  const toURL = () => {\n    window.cropper4.toCanvas().toBlob((blob) => {\n      window.open(URL.createObjectURL(blob), '_blank');\n    });\n  };\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper4\"\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => toURL()}>To URL</button>\n      </Center>\n    </>\n  );\n};\nexport default CropperToURL;\n"
     }
   },
   {
@@ -4450,7 +4450,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "cropper",
     "detail": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nconst CropperToURL = () => {\n  const toURL = () => {\n    window.cropper3.toCanvas().toBlob((blob) => {\n      window.open(URL.createObjectURL(blob), '_blank');\n    });\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper3\"\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => toURL()}>To URL</button>\n      </plus-center>\n    </>\n  );\n};\nexport default CropperToURL;\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nconst CropperToURL = () => {\n  const toURL = () => {\n    window.cropper4.toCanvas().toBlob((blob) => {\n      window.open(URL.createObjectURL(blob), '_blank');\n    });\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper4\"\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => toURL()}>To URL</button>\n      </plus-center>\n    </>\n  );\n};\nexport default CropperToURL;\n"
     }
   },
   {
@@ -4458,8 +4458,8 @@ export const examples: any[] = [
     "category": "svelte",
     "component": "cropper",
     "detail": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nfunction toURL() {\n  window.cropper3.toCanvas().toBlob((blob) => {\n    window.open(URL.createObjectURL(blob), '_blank');\n  });\n}\n",
-      "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper3\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click=\"{() => toURL()}\">To URL</button>\n</plus-center>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nfunction toURL() {\n  window.cropper4.toCanvas().toBlob((blob) => {\n    window.open(URL.createObjectURL(blob), '_blank');\n  });\n}\n",
+      "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper4\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click=\"{() => toURL()}\">To URL</button>\n</plus-center>\n"
     }
   },
   {
@@ -4467,8 +4467,8 @@ export const examples: any[] = [
     "category": "vue",
     "component": "cropper",
     "detail": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nfunction toURL() {\n  window.cropper3.toCanvas().toBlob((blob) => {\n    window.open(URL.createObjectURL(blob), '_blank');\n  });\n}\n",
-      "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper3\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button @click=\"toURL()\">To URL</button>\n</plus-center>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nfunction toURL() {\n  window.cropper4.toCanvas().toBlob((blob) => {\n    window.open(URL.createObjectURL(blob), '_blank');\n  });\n}\n",
+      "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper4\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button @click=\"toURL()\">To URL</button>\n</plus-center>\n"
     }
   },
   {
@@ -4476,7 +4476,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "cropper",
     "detail": {
-      "script": "import { Center, Cropper } from '@htmlplus/react';\nconst CropperToURL = () => {\n  const toURL = () => {\n    window.cropper3.toCanvas().toBlob((blob) => {\n      window.open(URL.createObjectURL(blob), '_blank');\n    });\n  };\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper3\"\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => toURL()}>To URL</button>\n      </Center>\n    </>\n  );\n};\n\nconst CropperToURLExample = () => {\n  return (\n    <div className=\"ex-cropper-to-url\">\n      <CropperToURL />\n    </div>\n  )\n};\n\nexport default CropperToURLExample;\n"
+      "script": "import { Center, Cropper } from '@htmlplus/react';\nconst CropperToURL = () => {\n  const toURL = () => {\n    window.cropper4.toCanvas().toBlob((blob) => {\n      window.open(URL.createObjectURL(blob), '_blank');\n    });\n  };\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper4\"\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => toURL()}>To URL</button>\n      </Center>\n    </>\n  );\n};\n\nconst CropperToURLExample = () => {\n  return (\n    <div className=\"ex-cropper-to-url\">\n      <CropperToURL />\n    </div>\n  )\n};\n\nexport default CropperToURLExample;\n"
     }
   },
   {
@@ -7488,9 +7488,9 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "intersection",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/card.js';\nimport 'https://unpkg.com/@htmlplus/core/card-body.js';\nimport 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/intersection.js';\nimport 'https://unpkg.com/@htmlplus/core/sticky.js';\n\nelement2.addEventListener('plus-change', (event) => {\r\n  element1.innerHTML = event.detail.isIntersecting\r\n    ? 'In Viewport'\r\n    : 'Out of Viewport';\r\n});",
+      "script": "import 'https://unpkg.com/@htmlplus/core/card.js';\nimport 'https://unpkg.com/@htmlplus/core/card-body.js';\nimport 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/intersection.js';\nimport 'https://unpkg.com/@htmlplus/core/sticky.js';\n\nintersection1.addEventListener('plus-change', (event) => {\r\n  status.innerHTML = event.detail.isIntersecting\r\n    ? 'In Viewport'\r\n    : 'Out of Viewport';\r\n});",
       "style": ".container {\n  background-color: #eeeeee;\n  height: 20rem;\n  overflow: auto;\n}\n\n.status {\n  color: #fafafa;\n  background-color: black;\n  padding: 0.5rem 1rem;\n  border-radius: 2rem;\n}\n\nplus-card {\n  width: 15rem;\n  margin: auto;\n}\n\nplus-intersection {\n  display: block;\n  margin: 40rem auto;\n}\n",
-      "template": "<div class=\"container\">\r\n  <plus-sticky top=\"1rem\" z-index=\"1\">\r\n    <plus-center>\r\n      <div id=\"element1\" class=\"status\"></div>\r\n    </plus-center>\r\n  </plus-sticky>\r\n  <plus-intersection id=\"element2\">\r\n    <plus-card elevation=\"10\">\r\n      <plus-card-body>\r\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et\r\n        dolore magna aliqua.\r\n      </plus-card-body>\r\n    </plus-card>\r\n  </plus-intersection>\r\n</div>"
+      "template": "<div class=\"container\">\r\n  <plus-sticky top=\"1rem\" z-index=\"1\">\r\n    <plus-center>\r\n      <div id=\"status\" class=\"status\"></div>\r\n    </plus-center>\r\n  </plus-sticky>\r\n  <plus-intersection id=\"intersection1\">\r\n    <plus-card elevation=\"10\">\r\n      <plus-card-body>\r\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et\r\n        dolore magna aliqua.\r\n      </plus-card-body>\r\n    </plus-card>\r\n  </plus-intersection>\r\n</div>"
     }
   },
   {
@@ -7544,9 +7544,9 @@ export const examples: any[] = [
     "category": "angular",
     "component": "intersection",
     "detail": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/spinner.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onChange(event) {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.removeAttribute('data-hidden');\n      spinner.setAttribute('data-hidden', 'true');\n    }, 1000);\n  }\n}\n",
-      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n\n[data-hidden] {\n  display: none;\n}\n\nimg {\n  display: block;\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-intersection once (plus-change)=\"onChange($event)\">\n    <plus-card elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img\n        alt=\"Lazy Image\"\n        data-hidden=\"true\"\n        data-src=\"https://placekitten.com/200/200\"\n      />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/spinner.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onChange(event) {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  }\n}\n",
+      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n\nimg {\n  display: block;\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-intersection once (plus-change)=\"onChange($event)\">\n    <plus-card elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://placekitten.com/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
     }
   },
   {
@@ -7554,9 +7554,9 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "intersection",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/card.js';\nimport 'https://unpkg.com/@htmlplus/core/intersection.js';\nimport 'https://unpkg.com/@htmlplus/core/spinner.js';\n\nelement3.addEventListener('plus-change', (event) => {\r\n  if (!event.detail.isIntersecting) return;\r\n\r\n  setTimeout(() => {\r\n    const image = event.target.querySelector('img');\r\n\r\n    const spinner = event.target.querySelector('plus-spinner');\r\n\r\n    const src = image.getAttribute('data-src');\r\n\r\n    image.setAttribute('src', src);\r\n\r\n    image.removeAttribute('data-hidden');\r\n\r\n    spinner.setAttribute('data-hidden', 'true');\r\n  }, 1000);\r\n});",
-      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n\n[data-hidden] {\n  display: none;\n}\n\nimg {\n  display: block;\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
-      "template": "<div class=\"container\">\r\n  <plus-intersection id=\"element3\" once>\r\n    <plus-card elevation=\"10\">\r\n      <plus-spinner></plus-spinner>\r\n      <img\r\n        alt=\"Lazy Image\"\r\n        data-hidden=\"true\"\r\n        data-src=\"https://placekitten.com/200/200\"\r\n      />\r\n    </plus-card>\r\n  </plus-intersection>\r\n</div>"
+      "script": "import 'https://unpkg.com/@htmlplus/core/card.js';\nimport 'https://unpkg.com/@htmlplus/core/intersection.js';\nimport 'https://unpkg.com/@htmlplus/core/spinner.js';\n\nintersection2.addEventListener('plus-change', (event) => {\r\n  if (!event.detail.isIntersecting) return;\r\n\r\n  setTimeout(() => {\r\n    const image = event.target.querySelector('img');\r\n\r\n    const spinner = event.target.querySelector('plus-spinner');\r\n\r\n    const src = image.getAttribute('data-src');\r\n\r\n    image.setAttribute('src', src);\r\n\r\n    image.hidden = false;\r\n\r\n    spinner.hidden = true;\r\n  }, 1000);\r\n});",
+      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n\nimg {\n  display: block;\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
+      "template": "<div class=\"container\">\r\n  <plus-intersection id=\"intersection2\" once>\r\n    <plus-card elevation=\"10\">\r\n      <plus-spinner></plus-spinner>\r\n      <img\r\n        alt=\"Lazy Image\"\r\n        hidden\r\n        data-src=\"https://placekitten.com/200/200\"\r\n      />\r\n    </plus-card>\r\n  </plus-intersection>\r\n</div>"
     }
   },
   {
@@ -7564,8 +7564,8 @@ export const examples: any[] = [
     "category": "react",
     "component": "intersection",
     "detail": {
-      "script": "import { Card, Intersection, Spinner } from '@htmlplus/react';\nconst IntersectionLazyImage = () => {\n  const onChange = (event) => {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.removeAttribute('data-hidden');\n      spinner.setAttribute('data-hidden', 'true');\n    }, 1000);\n  };\n  return (\n    <div className=\"container\">\n      <Intersection once onChange={(event) => onChange(event)}>\n        <Card elevation=\"10\">\n          <Spinner></Spinner>\n          <img\n            alt=\"Lazy Image\"\n            data-hidden=\"true\"\n            data-src=\"https://placekitten.com/200/200\"\n          />\n        </Card>\n      </Intersection>\n    </div>\n  );\n};\nexport default IntersectionLazyImage;\n",
-      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n\n[data-hidden] {\n  display: none;\n}\n\nimg {\n  display: block;\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n"
+      "script": "import { Card, Intersection, Spinner } from '@htmlplus/react';\nconst IntersectionLazyImage = () => {\n  const onChange = (event) => {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  };\n  return (\n    <div className=\"container\">\n      <Intersection once onChange={(event) => onChange(event)}>\n        <Card elevation=\"10\">\n          <Spinner></Spinner>\n          <img\n            alt=\"Lazy Image\"\n            hidden\n            data-src=\"https://placekitten.com/200/200\"\n          />\n        </Card>\n      </Intersection>\n    </div>\n  );\n};\nexport default IntersectionLazyImage;\n",
+      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n\nimg {\n  display: block;\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n"
     }
   },
   {
@@ -7573,8 +7573,8 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "intersection",
     "detail": {
-      "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/spinner.js';\nconst IntersectionLazyImage = () => {\n  const onChange = (event) => {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.removeAttribute('data-hidden');\n      spinner.setAttribute('data-hidden', 'true');\n    }, 1000);\n  };\n  return (\n    <div className=\"container\">\n      <plus-intersection once onplus-change={(event) => onChange(event)}>\n        <plus-card elevation=\"10\">\n          <plus-spinner></plus-spinner>\n          <img\n            alt=\"Lazy Image\"\n            data-hidden=\"true\"\n            data-src=\"https://placekitten.com/200/200\"\n          />\n        </plus-card>\n      </plus-intersection>\n    </div>\n  );\n};\nexport default IntersectionLazyImage;\n",
-      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n\n[data-hidden] {\n  display: none;\n}\n\nimg {\n  display: block;\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n"
+      "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/spinner.js';\nconst IntersectionLazyImage = () => {\n  const onChange = (event) => {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  };\n  return (\n    <div className=\"container\">\n      <plus-intersection once onplus-change={(event) => onChange(event)}>\n        <plus-card elevation=\"10\">\n          <plus-spinner></plus-spinner>\n          <img\n            alt=\"Lazy Image\"\n            hidden\n            data-src=\"https://placekitten.com/200/200\"\n          />\n        </plus-card>\n      </plus-intersection>\n    </div>\n  );\n};\nexport default IntersectionLazyImage;\n",
+      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n\nimg {\n  display: block;\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n"
     }
   },
   {
@@ -7582,9 +7582,9 @@ export const examples: any[] = [
     "category": "svelte",
     "component": "intersection",
     "detail": {
-      "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/spinner.js';\nfunction onChange(event) {\n  if (!event.detail.isIntersecting) return;\n  setTimeout(() => {\n    const image = event.target.querySelector('img');\n    const spinner = event.target.querySelector('plus-spinner');\n    const src = image.getAttribute('data-src');\n    image.setAttribute('src', src);\n    image.removeAttribute('data-hidden');\n    spinner.setAttribute('data-hidden', 'true');\n  }, 1000);\n}\n",
-      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n\n[data-hidden] {\n  display: none;\n}\n\nimg {\n  display: block;\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-intersection once on:plus-change=\"{event => onChange(event)}\">\n    <plus-card elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img\n        alt=\"Lazy Image\"\n        data-hidden=\"true\"\n        data-src=\"https://placekitten.com/200/200\"\n      />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
+      "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/spinner.js';\nfunction onChange(event) {\n  if (!event.detail.isIntersecting) return;\n  setTimeout(() => {\n    const image = event.target.querySelector('img');\n    const spinner = event.target.querySelector('plus-spinner');\n    const src = image.getAttribute('data-src');\n    image.setAttribute('src', src);\n    image.hidden = false;\n    spinner.hidden = true;\n  }, 1000);\n}\n",
+      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n\nimg {\n  display: block;\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-intersection once on:plus-change=\"{event => onChange(event)}\">\n    <plus-card elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://placekitten.com/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
     }
   },
   {
@@ -7592,9 +7592,9 @@ export const examples: any[] = [
     "category": "vue",
     "component": "intersection",
     "detail": {
-      "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/spinner.js';\nfunction onChange(event) {\n  if (!event.detail.isIntersecting) return;\n  setTimeout(() => {\n    const image = event.target.querySelector('img');\n    const spinner = event.target.querySelector('plus-spinner');\n    const src = image.getAttribute('data-src');\n    image.setAttribute('src', src);\n    image.removeAttribute('data-hidden');\n    spinner.setAttribute('data-hidden', 'true');\n  }, 1000);\n}\n",
-      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n\n[data-hidden] {\n  display: none;\n}\n\nimg {\n  display: block;\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-intersection once @plus-change=\"onChange($event)\">\n    <plus-card elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img\n        alt=\"Lazy Image\"\n        data-hidden=\"true\"\n        data-src=\"https://placekitten.com/200/200\"\n      />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
+      "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/spinner.js';\nfunction onChange(event) {\n  if (!event.detail.isIntersecting) return;\n  setTimeout(() => {\n    const image = event.target.querySelector('img');\n    const spinner = event.target.querySelector('plus-spinner');\n    const src = image.getAttribute('data-src');\n    image.setAttribute('src', src);\n    image.hidden = false;\n    spinner.hidden = true;\n  }, 1000);\n}\n",
+      "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: #eeeeee;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 1000px auto;\n}\n\nimg {\n  display: block;\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-intersection once @plus-change=\"onChange($event)\">\n    <plus-card elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://placekitten.com/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
     }
   },
   {
@@ -7602,7 +7602,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "intersection",
     "detail": {
-      "script": "import { Card, Intersection, Spinner } from '@htmlplus/react';\nconst IntersectionLazyImage = () => {\n  const onChange = (event) => {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.removeAttribute('data-hidden');\n      spinner.setAttribute('data-hidden', 'true');\n    }, 1000);\n  };\n  return (\n    <div className=\"container\">\n      <Intersection once onChange={(event) => onChange(event)}>\n        <Card elevation=\"10\">\n          <Spinner></Spinner>\n          <img\n            alt=\"Lazy Image\"\n            data-hidden=\"true\"\n            data-src=\"https://placekitten.com/200/200\"\n          />\n        </Card>\n      </Intersection>\n    </div>\n  );\n};\n\nconst IntersectionLazyImageExample = () => {\n  return (\n    <div className=\"ex-intersection-lazy-image dock\">\n      <IntersectionLazyImage />\n      <style>{`.ex-intersection-lazy-image .container {  position: relative;  height: 20rem;  overflow: auto;  background-color: #eeeeee;}.ex-intersection-lazy-image plus-intersection {  display: block;  text-align: center;  margin: 1000px auto;}.ex-intersection-lazy-image [data-hidden] {  display: none;}.ex-intersection-lazy-image img {  display: block;  width: 12rem;  height: 12rem;  object-fit: cover;  margin: 0;}.ex-intersection-lazy-image plus-card {  display: inline-block;}.ex-intersection-lazy-image plus-spinner {  margin: 1rem;}`}</style>\n    </div>\n  )\n};\n\nexport default IntersectionLazyImageExample;\n"
+      "script": "import { Card, Intersection, Spinner } from '@htmlplus/react';\nconst IntersectionLazyImage = () => {\n  const onChange = (event) => {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  };\n  return (\n    <div className=\"container\">\n      <Intersection once onChange={(event) => onChange(event)}>\n        <Card elevation=\"10\">\n          <Spinner></Spinner>\n          <img\n            alt=\"Lazy Image\"\n            hidden\n            data-src=\"https://placekitten.com/200/200\"\n          />\n        </Card>\n      </Intersection>\n    </div>\n  );\n};\n\nconst IntersectionLazyImageExample = () => {\n  return (\n    <div className=\"ex-intersection-lazy-image dock\">\n      <IntersectionLazyImage />\n      <style>{`.ex-intersection-lazy-image .container {  position: relative;  height: 20rem;  overflow: auto;  background-color: #eeeeee;}.ex-intersection-lazy-image plus-intersection {  display: block;  text-align: center;  margin: 1000px auto;}.ex-intersection-lazy-image img {  display: block;  width: 12rem;  height: 12rem;  object-fit: cover;  margin: 0;}.ex-intersection-lazy-image plus-card {  display: inline-block;}.ex-intersection-lazy-image plus-spinner {  margin: 1rem;}`}</style>\n    </div>\n  )\n};\n\nexport default IntersectionLazyImageExample;\n"
     }
   },
   {
@@ -8243,8 +8243,8 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "signature",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/signature.js';\n\nconst sync = () => {\r\n  button1.disabled = !signature2.canUndo();\r\n  button2.disabled = !signature2.canRedo();\r\n}\r\nbutton1.addEventListener('click', () => {\r\n  signature2.undo();\r\n  sync();\r\n});\r\nbutton2.addEventListener('click', () => {\r\n  signature2.redo();\r\n  sync();\r\n});\r\nsignature2.addEventListener('plus-end', () => {\r\n  sync();\r\n});",
-      "template": "<plus-center>\r\n  <plus-signature id=\"signature2\" background-color=\"lightgray\"></plus-signature>\r\n</plus-center>\r\n<br />\r\n<plus-center>\r\n  <button id=\"button1\" disabled>Undo</button>\r\n  &nbsp; &nbsp;\r\n  <button id=\"button2\" disabled>Redo</button>\r\n</plus-center>"
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/signature.js';\n\nconst sync = () => {\r\n  undo.disabled = !signature2.canUndo();\r\n  redo.disabled = !signature2.canRedo();\r\n}\r\nundo.addEventListener('click', () => {\r\n  signature2.undo();\r\n  sync();\r\n});\r\nredo.addEventListener('click', () => {\r\n  signature2.redo();\r\n  sync();\r\n});\r\nsignature2.addEventListener('plus-end', () => {\r\n  sync();\r\n});",
+      "template": "<plus-center>\r\n  <plus-signature id=\"signature2\" background-color=\"lightgray\"></plus-signature>\r\n</plus-center>\r\n<br />\r\n<plus-center>\r\n  <button id=\"undo\" disabled>Undo</button>\r\n  &nbsp; &nbsp;\r\n  <button id=\"redo\" disabled>Redo</button>\r\n</plus-center>"
     }
   },
   {
@@ -8369,8 +8369,8 @@ export const examples: any[] = [
     "category": "javascript",
     "component": "signature",
     "detail": {
-      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/signature.js';\n\nconst save = (background) => {\r\n  const image = new Image();\r\n\r\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\r\n\r\n  const tab = window.open('', '_blank');\r\n\r\n  tab.onload = () => {\r\n    tab.document.write(image.outerHTML);\r\n  }\r\n}\r\nbutton3.addEventListener('click', () => save(true));\r\nbutton4.addEventListener('click', () => save(false));",
-      "template": "<plus-center>\r\n  <plus-signature id=\"signature3\" background-color=\"lightgray\"></plus-signature>\r\n</plus-center>\r\n<br />\r\n<plus-center>\r\n  <button id=\"button3\">\r\n    Save With Background\r\n  </button>\r\n  &nbsp; &nbsp;\r\n  <button id=\"button4\">\r\n    Save Without Background\r\n  </button>\r\n</plus-center>"
+      "script": "import 'https://unpkg.com/@htmlplus/core/center.js';\nimport 'https://unpkg.com/@htmlplus/core/signature.js';\n\nconst save = (background) => {\r\n  const image = new Image();\r\n\r\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\r\n\r\n  const tab = window.open('', '_blank');\r\n\r\n  tab.onload = () => {\r\n    tab.document.write(image.outerHTML);\r\n  }\r\n}\r\nsave1.addEventListener('click', () => save(true));\r\nsave2.addEventListener('click', () => save(false));",
+      "template": "<plus-center>\r\n  <plus-signature id=\"signature3\" background-color=\"lightgray\"></plus-signature>\r\n</plus-center>\r\n<br />\r\n<plus-center>\r\n  <button id=\"save1\">\r\n    Save With Background\r\n  </button>\r\n  &nbsp; &nbsp;\r\n  <button id=\"save2\">\r\n    Save Without Background\r\n  </button>\r\n</plus-center>"
     }
   },
   {

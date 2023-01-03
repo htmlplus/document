@@ -5,7 +5,7 @@
 import { Center, Cropper } from '@htmlplus/react';
 const CropperToURL = () => {
   const toURL = () => {
-    window.cropper3.toCanvas().toBlob((blob) => {
+    window.cropper4.toCanvas().toBlob((blob) => {
       window.open(URL.createObjectURL(blob), '_blank');
     });
   };
@@ -14,7 +14,7 @@ const CropperToURL = () => {
       <Center>
         <Cropper
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-          id="cropper3"
+          id="cropper4"
         ></Cropper>
       </Center>
       <br />
