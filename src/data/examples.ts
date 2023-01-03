@@ -5595,7 +5595,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/divider.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": "plus-divider {\n  --plus-divider-color: #5f9ee9;\n  --plus-divider-width: 3px;\n  margin: 2rem 0;\n}\n",
+      "style": "plus-divider {\n  --plus-divider-color: #5f9ee9;\n  --plus-divider-width: 0.5rem;\n  margin: 2rem 0;\n}\n",
       "template": "<plus-grid align-items=\"center\" justify-content=\"evenly\">\n  <plus-grid-item xs=\"5\">\n    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n    eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam et\n    erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere lacus,\n    gravida semper libero. Praesent sed nisi sed lorem posuere consequat. Nunc\n    vehicula fermentum hendrerit. Mauris aliquam ornare laoreet. Maecenas cursus\n    nec ipsum et tempus.\n  </plus-grid-item>\n  <plus-divider vertical></plus-divider>\n  <plus-grid-item xs=\"5\">\n    Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam egestas\n    interdum risus et gravida. Suspendisse aliquam leo ac leo fermentum, ac\n    accumsan purus vestibulum. Integer facilisis tincidunt urna vel accumsan.\n    Orci varius natoque penatibus et magnis dis parturient montes, nascetur\n    ridiculus mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla\n    nisl.\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
@@ -5605,7 +5605,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/divider.js';\nimport 'https://unpkg.com/@htmlplus/core/grid.js';\nimport 'https://unpkg.com/@htmlplus/core/grid-item.js';\n",
-      "style": "plus-divider {\n  --plus-divider-color: #5f9ee9;\n  --plus-divider-width: 3px;\n  margin: 2rem 0;\n}\n",
+      "style": "plus-divider {\n  --plus-divider-color: #5f9ee9;\n  --plus-divider-width: 0.5rem;\n  margin: 2rem 0;\n}\n",
       "template": "<plus-grid align-items=\"center\" justify-content=\"evenly\">\n  <plus-grid-item xs=\"5\">\n    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n    eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam et\n    erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere lacus,\n    gravida semper libero. Praesent sed nisi sed lorem posuere consequat. Nunc\n    vehicula fermentum hendrerit. Mauris aliquam ornare laoreet. Maecenas cursus\n    nec ipsum et tempus.\n  </plus-grid-item>\n  <plus-divider vertical></plus-divider>\n  <plus-grid-item xs=\"5\">\n    Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam egestas\n    interdum risus et gravida. Suspendisse aliquam leo ac leo fermentum, ac\n    accumsan purus vestibulum. Integer facilisis tincidunt urna vel accumsan.\n    Orci varius natoque penatibus et magnis dis parturient montes, nascetur\n    ridiculus mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla\n    nisl.\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
@@ -5615,7 +5615,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import { Divider, Grid } from '@htmlplus/react';\nconst DividerCustomize = () => {\n  return (\n    <Grid alignItems=\"center\" justifyContent=\"evenly\">\n      <Grid.Item xs=\"5\">\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus.\n      </Grid.Item>\n      <Divider vertical></Divider>\n      <Grid.Item xs=\"5\">\n        Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam\n        egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n        fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt\n        urna vel accumsan. Orci varius natoque penatibus et magnis dis\n        parturient montes, nascetur ridiculus mus. Maecenas et elit imperdiet,\n        gravida urna tempus, fringilla nisl.\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default DividerCustomize;\n",
-      "style": "plus-divider {\n  --plus-divider-color: #5f9ee9;\n  --plus-divider-width: 3px;\n  margin: 2rem 0;\n}\n"
+      "style": "plus-divider {\n  --plus-divider-color: #5f9ee9;\n  --plus-divider-width: 0.5rem;\n  margin: 2rem 0;\n}\n"
     }
   },
   {
@@ -5624,7 +5624,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst DividerCustomize = () => {\n  return (\n    <plus-grid align-items=\"center\" justify-content=\"evenly\">\n      <plus-grid-item xs=\"5\">\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus.\n      </plus-grid-item>\n      <plus-divider vertical></plus-divider>\n      <plus-grid-item xs=\"5\">\n        Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam\n        egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n        fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt\n        urna vel accumsan. Orci varius natoque penatibus et magnis dis\n        parturient montes, nascetur ridiculus mus. Maecenas et elit imperdiet,\n        gravida urna tempus, fringilla nisl.\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default DividerCustomize;\n",
-      "style": "plus-divider {\n  --plus-divider-color: #5f9ee9;\n  --plus-divider-width: 3px;\n  margin: 2rem 0;\n}\n"
+      "style": "plus-divider {\n  --plus-divider-color: #5f9ee9;\n  --plus-divider-width: 0.5rem;\n  margin: 2rem 0;\n}\n"
     }
   },
   {
@@ -5633,7 +5633,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n",
-      "style": "plus-divider {\n  --plus-divider-color: #5f9ee9;\n  --plus-divider-width: 3px;\n  margin: 2rem 0;\n}\n",
+      "style": "plus-divider {\n  --plus-divider-color: #5f9ee9;\n  --plus-divider-width: 0.5rem;\n  margin: 2rem 0;\n}\n",
       "template": "<plus-grid align-items=\"center\" justify-content=\"evenly\">\n  <plus-grid-item xs=\"5\">\n    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n    eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam et\n    erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere lacus,\n    gravida semper libero. Praesent sed nisi sed lorem posuere consequat. Nunc\n    vehicula fermentum hendrerit. Mauris aliquam ornare laoreet. Maecenas cursus\n    nec ipsum et tempus.\n  </plus-grid-item>\n  <plus-divider vertical></plus-divider>\n  <plus-grid-item xs=\"5\">\n    Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam egestas\n    interdum risus et gravida. Suspendisse aliquam leo ac leo fermentum, ac\n    accumsan purus vestibulum. Integer facilisis tincidunt urna vel accumsan.\n    Orci varius natoque penatibus et magnis dis parturient montes, nascetur\n    ridiculus mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla\n    nisl.\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
@@ -5643,7 +5643,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\n",
-      "style": "plus-divider {\n  --plus-divider-color: #5f9ee9;\n  --plus-divider-width: 3px;\n  margin: 2rem 0;\n}\n",
+      "style": "plus-divider {\n  --plus-divider-color: #5f9ee9;\n  --plus-divider-width: 0.5rem;\n  margin: 2rem 0;\n}\n",
       "template": "<plus-grid align-items=\"center\" justify-content=\"evenly\">\n  <plus-grid-item xs=\"5\">\n    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n    eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam et\n    erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere lacus,\n    gravida semper libero. Praesent sed nisi sed lorem posuere consequat. Nunc\n    vehicula fermentum hendrerit. Mauris aliquam ornare laoreet. Maecenas cursus\n    nec ipsum et tempus.\n  </plus-grid-item>\n  <plus-divider vertical></plus-divider>\n  <plus-grid-item xs=\"5\">\n    Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam egestas\n    interdum risus et gravida. Suspendisse aliquam leo ac leo fermentum, ac\n    accumsan purus vestibulum. Integer facilisis tincidunt urna vel accumsan.\n    Orci varius natoque penatibus et magnis dis parturient montes, nascetur\n    ridiculus mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla\n    nisl.\n  </plus-grid-item>\n</plus-grid>\n"
     }
   },
@@ -5652,7 +5652,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "divider",
     "detail": {
-      "script": "import { Divider, Grid } from '@htmlplus/react';\nconst DividerCustomize = () => {\n  return (\n    <Grid alignItems=\"center\" justifyContent=\"evenly\">\n      <Grid.Item xs=\"5\">\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus.\n      </Grid.Item>\n      <Divider vertical></Divider>\n      <Grid.Item xs=\"5\">\n        Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam\n        egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n        fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt\n        urna vel accumsan. Orci varius natoque penatibus et magnis dis\n        parturient montes, nascetur ridiculus mus. Maecenas et elit imperdiet,\n        gravida urna tempus, fringilla nisl.\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst DividerCustomizeExample = () => {\n  return (\n    <div className=\"ex-divider-customize\">\n      <DividerCustomize />\n      <style>{`.ex-divider-customize plus-divider {  --plus-divider-color: #5f9ee9;  --plus-divider-width: 3px;  margin: 2rem 0;}`}</style>\n    </div>\n  )\n};\n\nexport default DividerCustomizeExample;\n"
+      "script": "import { Divider, Grid } from '@htmlplus/react';\nconst DividerCustomize = () => {\n  return (\n    <Grid alignItems=\"center\" justifyContent=\"evenly\">\n      <Grid.Item xs=\"5\">\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus.\n      </Grid.Item>\n      <Divider vertical></Divider>\n      <Grid.Item xs=\"5\">\n        Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam\n        egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n        fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt\n        urna vel accumsan. Orci varius natoque penatibus et magnis dis\n        parturient montes, nascetur ridiculus mus. Maecenas et elit imperdiet,\n        gravida urna tempus, fringilla nisl.\n      </Grid.Item>\n    </Grid>\n  );\n};\n\nconst DividerCustomizeExample = () => {\n  return (\n    <div className=\"ex-divider-customize\">\n      <DividerCustomize />\n      <style>{`.ex-divider-customize plus-divider {  --plus-divider-color: #5f9ee9;  --plus-divider-width: 0.5rem;  margin: 2rem 0;}`}</style>\n    </div>\n  )\n};\n\nexport default DividerCustomizeExample;\n"
     }
   },
   {
@@ -5662,7 +5662,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/divider.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
       "style": "plus-divider {\n  margin: 1rem 0;\n}\n",
-      "template": "<plus-divider></plus-divider> <plus-divider></plus-divider>\n"
+      "template": "<div>\n  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh eros,\n  luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam et erat\n  pulvinar ultricies in vel erat. Vestibulum sit amet posuere lacus, gravida\n  semper libero.\n  <plus-divider></plus-divider>\n  Praesent sed nisi sed lorem posuere consequat. Nunc vehicula fermentum\n  hendrerit. Mauris aliquam ornare laoreet. Maecenas cursus nec ipsum et tempus.\n  Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum.\n  <plus-divider></plus-divider>\n  Nam egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n  fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt urna vel\n  accumsan. Orci varius natoque penatibus et magnis dis parturient montes,\n  nascetur ridiculus mus. Maecenas et elit imperdiet, gravida urna tempus,\n  fringilla nisl.\n</div>\n"
     }
   },
   {
@@ -5672,7 +5672,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/divider.js';\n",
       "style": "plus-divider {\n  margin: 1rem 0;\n}\n",
-      "template": "<plus-divider></plus-divider> <plus-divider></plus-divider>\n"
+      "template": "<div>\n  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh eros,\n  luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam et erat\n  pulvinar ultricies in vel erat. Vestibulum sit amet posuere lacus, gravida\n  semper libero.\n  <plus-divider></plus-divider>\n  Praesent sed nisi sed lorem posuere consequat. Nunc vehicula fermentum\n  hendrerit. Mauris aliquam ornare laoreet. Maecenas cursus nec ipsum et tempus.\n  Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum.\n  <plus-divider></plus-divider>\n  Nam egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n  fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt urna vel\n  accumsan. Orci varius natoque penatibus et magnis dis parturient montes,\n  nascetur ridiculus mus. Maecenas et elit imperdiet, gravida urna tempus,\n  fringilla nisl.\n</div>\n"
     }
   },
   {
@@ -5680,7 +5680,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "divider",
     "detail": {
-      "script": "import { Divider } from '@htmlplus/react';\nconst DividerHorizontal = () => {\n  return (\n    <>\n      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n      eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam et\n      erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere lacus,\n      gravida semper libero.\n      <Divider></Divider>\n      Praesent sed nisi sed lorem posuere consequat. Nunc vehicula fermentum\n      hendrerit. Mauris aliquam ornare laoreet. Maecenas cursus nec ipsum et\n      tempus. Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum.\n      <Divider></Divider>\n      Nam egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n      fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt urna\n      vel accumsan. Orci varius natoque penatibus et magnis dis parturient\n      montes, nascetur ridiculus mus. Maecenas et elit imperdiet, gravida urna\n      tempus, fringilla nisl.\n    </>\n  );\n};\nexport default DividerHorizontal;\n",
+      "script": "import { Divider } from '@htmlplus/react';\nconst DividerHorizontal = () => {\n  return (\n    <div>\n      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n      eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam et\n      erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere lacus,\n      gravida semper libero.\n      <Divider></Divider>\n      Praesent sed nisi sed lorem posuere consequat. Nunc vehicula fermentum\n      hendrerit. Mauris aliquam ornare laoreet. Maecenas cursus nec ipsum et\n      tempus. Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum.\n      <Divider></Divider>\n      Nam egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n      fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt urna\n      vel accumsan. Orci varius natoque penatibus et magnis dis parturient\n      montes, nascetur ridiculus mus. Maecenas et elit imperdiet, gravida urna\n      tempus, fringilla nisl.\n    </div>\n  );\n};\nexport default DividerHorizontal;\n",
       "style": "plus-divider {\n  margin: 1rem 0;\n}\n"
     }
   },
@@ -5689,7 +5689,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "divider",
     "detail": {
-      "script": "import '@htmlplus/core/divider.js';\nconst DividerHorizontal = () => {\n  return (\n    <>\n      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n      eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam et\n      erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere lacus,\n      gravida semper libero.\n      <plus-divider></plus-divider>\n      Praesent sed nisi sed lorem posuere consequat. Nunc vehicula fermentum\n      hendrerit. Mauris aliquam ornare laoreet. Maecenas cursus nec ipsum et\n      tempus. Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum.\n      <plus-divider></plus-divider>\n      Nam egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n      fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt urna\n      vel accumsan. Orci varius natoque penatibus et magnis dis parturient\n      montes, nascetur ridiculus mus. Maecenas et elit imperdiet, gravida urna\n      tempus, fringilla nisl.\n    </>\n  );\n};\nexport default DividerHorizontal;\n",
+      "script": "import '@htmlplus/core/divider.js';\nconst DividerHorizontal = () => {\n  return (\n    <div>\n      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n      eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam et\n      erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere lacus,\n      gravida semper libero.\n      <plus-divider></plus-divider>\n      Praesent sed nisi sed lorem posuere consequat. Nunc vehicula fermentum\n      hendrerit. Mauris aliquam ornare laoreet. Maecenas cursus nec ipsum et\n      tempus. Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum.\n      <plus-divider></plus-divider>\n      Nam egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n      fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt urna\n      vel accumsan. Orci varius natoque penatibus et magnis dis parturient\n      montes, nascetur ridiculus mus. Maecenas et elit imperdiet, gravida urna\n      tempus, fringilla nisl.\n    </div>\n  );\n};\nexport default DividerHorizontal;\n",
       "style": "plus-divider {\n  margin: 1rem 0;\n}\n"
     }
   },
@@ -5700,7 +5700,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\n",
       "style": "plus-divider {\n  margin: 1rem 0;\n}\n",
-      "template": "<plus-divider></plus-divider> <plus-divider></plus-divider>\n"
+      "template": "<div>\n  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh eros,\n  luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam et erat\n  pulvinar ultricies in vel erat. Vestibulum sit amet posuere lacus, gravida\n  semper libero.\n  <plus-divider></plus-divider>\n  Praesent sed nisi sed lorem posuere consequat. Nunc vehicula fermentum\n  hendrerit. Mauris aliquam ornare laoreet. Maecenas cursus nec ipsum et tempus.\n  Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum.\n  <plus-divider></plus-divider>\n  Nam egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n  fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt urna vel\n  accumsan. Orci varius natoque penatibus et magnis dis parturient montes,\n  nascetur ridiculus mus. Maecenas et elit imperdiet, gravida urna tempus,\n  fringilla nisl.\n</div>\n"
     }
   },
   {
@@ -5710,7 +5710,7 @@ export const examples: any[] = [
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\n",
       "style": "plus-divider {\n  margin: 1rem 0;\n}\n",
-      "template": "<plus-divider></plus-divider> <plus-divider></plus-divider>\n"
+      "template": "<div>\n  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh eros,\n  luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam et erat\n  pulvinar ultricies in vel erat. Vestibulum sit amet posuere lacus, gravida\n  semper libero.\n  <plus-divider></plus-divider>\n  Praesent sed nisi sed lorem posuere consequat. Nunc vehicula fermentum\n  hendrerit. Mauris aliquam ornare laoreet. Maecenas cursus nec ipsum et tempus.\n  Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum.\n  <plus-divider></plus-divider>\n  Nam egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n  fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt urna vel\n  accumsan. Orci varius natoque penatibus et magnis dis parturient montes,\n  nascetur ridiculus mus. Maecenas et elit imperdiet, gravida urna tempus,\n  fringilla nisl.\n</div>\n"
     }
   },
   {
@@ -5718,7 +5718,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "divider",
     "detail": {
-      "script": "import { Divider } from '@htmlplus/react';\nconst DividerHorizontal = () => {\n  return (\n    <>\n      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n      eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam et\n      erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere lacus,\n      gravida semper libero.\n      <Divider></Divider>\n      Praesent sed nisi sed lorem posuere consequat. Nunc vehicula fermentum\n      hendrerit. Mauris aliquam ornare laoreet. Maecenas cursus nec ipsum et\n      tempus. Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum.\n      <Divider></Divider>\n      Nam egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n      fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt urna\n      vel accumsan. Orci varius natoque penatibus et magnis dis parturient\n      montes, nascetur ridiculus mus. Maecenas et elit imperdiet, gravida urna\n      tempus, fringilla nisl.\n    </>\n  );\n};\n\nconst DividerHorizontalExample = () => {\n  return (\n    <div className=\"ex-divider-horizontal\">\n      <DividerHorizontal />\n      <style>{`.ex-divider-horizontal plus-divider {  margin: 1rem 0;}`}</style>\n    </div>\n  )\n};\n\nexport default DividerHorizontalExample;\n"
+      "script": "import { Divider } from '@htmlplus/react';\nconst DividerHorizontal = () => {\n  return (\n    <div>\n      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n      eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam et\n      erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere lacus,\n      gravida semper libero.\n      <Divider></Divider>\n      Praesent sed nisi sed lorem posuere consequat. Nunc vehicula fermentum\n      hendrerit. Mauris aliquam ornare laoreet. Maecenas cursus nec ipsum et\n      tempus. Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum.\n      <Divider></Divider>\n      Nam egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n      fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt urna\n      vel accumsan. Orci varius natoque penatibus et magnis dis parturient\n      montes, nascetur ridiculus mus. Maecenas et elit imperdiet, gravida urna\n      tempus, fringilla nisl.\n    </div>\n  );\n};\n\nconst DividerHorizontalExample = () => {\n  return (\n    <div className=\"ex-divider-horizontal\">\n      <DividerHorizontal />\n      <style>{`.ex-divider-horizontal plus-divider {  margin: 1rem 0;}`}</style>\n    </div>\n  )\n};\n\nexport default DividerHorizontalExample;\n"
     }
   },
   {
@@ -5727,7 +5727,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/divider.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-divider placement=\"center\">Center</plus-divider>\n<br />\n<plus-divider placement=\"start\">Start</plus-divider>\n<br />\n<plus-divider placement=\"end\">End</plus-divider>\n"
+      "template": "<div>\n  <plus-divider placement=\"center\">Center</plus-divider>\n  <br />\n  <plus-divider placement=\"start\">Start</plus-divider>\n  <br />\n  <plus-divider placement=\"end\">End</plus-divider>\n</div>\n"
     }
   },
   {
@@ -5736,7 +5736,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/divider.js';\n",
-      "template": "<plus-divider placement=\"center\">Center</plus-divider>\n<br />\n<plus-divider placement=\"start\">Start</plus-divider>\n<br />\n<plus-divider placement=\"end\">End</plus-divider>\n"
+      "template": "<div>\n  <plus-divider placement=\"center\">Center</plus-divider>\n  <br />\n  <plus-divider placement=\"start\">Start</plus-divider>\n  <br />\n  <plus-divider placement=\"end\">End</plus-divider>\n</div>\n"
     }
   },
   {
@@ -5744,7 +5744,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "divider",
     "detail": {
-      "script": "import { Divider } from '@htmlplus/react';\nconst DividerPlacement = () => {\n  return (\n    <>\n      <Divider placement=\"center\">Center</Divider>\n      <br />\n      <Divider placement=\"start\">Start</Divider>\n      <br />\n      <Divider placement=\"end\">End</Divider>\n    </>\n  );\n};\nexport default DividerPlacement;\n"
+      "script": "import { Divider } from '@htmlplus/react';\nconst DividerPlacement = () => {\n  return (\n    <div>\n      <Divider placement=\"center\">Center</Divider>\n      <br />\n      <Divider placement=\"start\">Start</Divider>\n      <br />\n      <Divider placement=\"end\">End</Divider>\n    </div>\n  );\n};\nexport default DividerPlacement;\n"
     }
   },
   {
@@ -5752,7 +5752,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "divider",
     "detail": {
-      "script": "import '@htmlplus/core/divider.js';\nconst DividerPlacement = () => {\n  return (\n    <>\n      <plus-divider placement=\"center\">Center</plus-divider>\n      <br />\n      <plus-divider placement=\"start\">Start</plus-divider>\n      <br />\n      <plus-divider placement=\"end\">End</plus-divider>\n    </>\n  );\n};\nexport default DividerPlacement;\n"
+      "script": "import '@htmlplus/core/divider.js';\nconst DividerPlacement = () => {\n  return (\n    <div>\n      <plus-divider placement=\"center\">Center</plus-divider>\n      <br />\n      <plus-divider placement=\"start\">Start</plus-divider>\n      <br />\n      <plus-divider placement=\"end\">End</plus-divider>\n    </div>\n  );\n};\nexport default DividerPlacement;\n"
     }
   },
   {
@@ -5761,7 +5761,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\n",
-      "template": "<plus-divider placement=\"center\">Center</plus-divider>\n<br />\n<plus-divider placement=\"start\">Start</plus-divider>\n<br />\n<plus-divider placement=\"end\">End</plus-divider>\n"
+      "template": "<div>\n  <plus-divider placement=\"center\">Center</plus-divider>\n  <br />\n  <plus-divider placement=\"start\">Start</plus-divider>\n  <br />\n  <plus-divider placement=\"end\">End</plus-divider>\n</div>\n"
     }
   },
   {
@@ -5770,7 +5770,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\n",
-      "template": "<plus-divider placement=\"center\">Center</plus-divider>\n<br />\n<plus-divider placement=\"start\">Start</plus-divider>\n<br />\n<plus-divider placement=\"end\">End</plus-divider>\n"
+      "template": "<div>\n  <plus-divider placement=\"center\">Center</plus-divider>\n  <br />\n  <plus-divider placement=\"start\">Start</plus-divider>\n  <br />\n  <plus-divider placement=\"end\">End</plus-divider>\n</div>\n"
     }
   },
   {
@@ -5778,7 +5778,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "divider",
     "detail": {
-      "script": "import { Divider } from '@htmlplus/react';\nconst DividerPlacement = () => {\n  return (\n    <>\n      <Divider placement=\"center\">Center</Divider>\n      <br />\n      <Divider placement=\"start\">Start</Divider>\n      <br />\n      <Divider placement=\"end\">End</Divider>\n    </>\n  );\n};\n\nconst DividerPlacementExample = () => {\n  return (\n    <div className=\"ex-divider-placement\">\n      <DividerPlacement />\n    </div>\n  )\n};\n\nexport default DividerPlacementExample;\n"
+      "script": "import { Divider } from '@htmlplus/react';\nconst DividerPlacement = () => {\n  return (\n    <div>\n      <Divider placement=\"center\">Center</Divider>\n      <br />\n      <Divider placement=\"start\">Start</Divider>\n      <br />\n      <Divider placement=\"end\">End</Divider>\n    </div>\n  );\n};\n\nconst DividerPlacementExample = () => {\n  return (\n    <div className=\"ex-divider-placement\">\n      <DividerPlacement />\n    </div>\n  )\n};\n\nexport default DividerPlacementExample;\n"
     }
   },
   {
@@ -5787,7 +5787,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/divider.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-divider type=\"solid\"></plus-divider>\n<br />\n<plus-divider type=\"dashed\"></plus-divider>\n<br />\n<plus-divider type=\"dotted\"></plus-divider>\n"
+      "template": "<div>\n  <plus-divider type=\"dashed\"></plus-divider>\n  <br />\n  <plus-divider type=\"dotted\"></plus-divider>\n  <br />\n  <plus-divider type=\"double\"></plus-divider>\n  <br />\n  <plus-divider type=\"groove\"></plus-divider>\n  <br />\n  <plus-divider type=\"inset\"></plus-divider>\n  <br />\n  <plus-divider type=\"outset\"></plus-divider>\n  <br />\n  <plus-divider type=\"ridge\"></plus-divider>\n  <br />\n  <plus-divider type=\"solid\"></plus-divider>\n</div>\n"
     }
   },
   {
@@ -5796,7 +5796,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/divider.js';\n",
-      "template": "<plus-divider type=\"solid\"></plus-divider>\n<br />\n<plus-divider type=\"dashed\"></plus-divider>\n<br />\n<plus-divider type=\"dotted\"></plus-divider>\n"
+      "template": "<div>\n  <plus-divider type=\"dashed\"></plus-divider>\n  <br />\n  <plus-divider type=\"dotted\"></plus-divider>\n  <br />\n  <plus-divider type=\"double\"></plus-divider>\n  <br />\n  <plus-divider type=\"groove\"></plus-divider>\n  <br />\n  <plus-divider type=\"inset\"></plus-divider>\n  <br />\n  <plus-divider type=\"outset\"></plus-divider>\n  <br />\n  <plus-divider type=\"ridge\"></plus-divider>\n  <br />\n  <plus-divider type=\"solid\"></plus-divider>\n</div>\n"
     }
   },
   {
@@ -5804,7 +5804,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "divider",
     "detail": {
-      "script": "import { Divider } from '@htmlplus/react';\nconst DividerType = () => {\n  return (\n    <>\n      <Divider type=\"solid\"></Divider>\n      <br />\n      <Divider type=\"dashed\"></Divider>\n      <br />\n      <Divider type=\"dotted\"></Divider>\n    </>\n  );\n};\nexport default DividerType;\n"
+      "script": "import { Divider } from '@htmlplus/react';\nconst DividerType = () => {\n  return (\n    <div>\n      <Divider type=\"dashed\"></Divider>\n      <br />\n      <Divider type=\"dotted\"></Divider>\n      <br />\n      <Divider type=\"double\"></Divider>\n      <br />\n      <Divider type=\"groove\"></Divider>\n      <br />\n      <Divider type=\"inset\"></Divider>\n      <br />\n      <Divider type=\"outset\"></Divider>\n      <br />\n      <Divider type=\"ridge\"></Divider>\n      <br />\n      <Divider type=\"solid\"></Divider>\n    </div>\n  );\n};\nexport default DividerType;\n"
     }
   },
   {
@@ -5812,7 +5812,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "divider",
     "detail": {
-      "script": "import '@htmlplus/core/divider.js';\nconst DividerType = () => {\n  return (\n    <>\n      <plus-divider type=\"solid\"></plus-divider>\n      <br />\n      <plus-divider type=\"dashed\"></plus-divider>\n      <br />\n      <plus-divider type=\"dotted\"></plus-divider>\n    </>\n  );\n};\nexport default DividerType;\n"
+      "script": "import '@htmlplus/core/divider.js';\nconst DividerType = () => {\n  return (\n    <div>\n      <plus-divider type=\"dashed\"></plus-divider>\n      <br />\n      <plus-divider type=\"dotted\"></plus-divider>\n      <br />\n      <plus-divider type=\"double\"></plus-divider>\n      <br />\n      <plus-divider type=\"groove\"></plus-divider>\n      <br />\n      <plus-divider type=\"inset\"></plus-divider>\n      <br />\n      <plus-divider type=\"outset\"></plus-divider>\n      <br />\n      <plus-divider type=\"ridge\"></plus-divider>\n      <br />\n      <plus-divider type=\"solid\"></plus-divider>\n    </div>\n  );\n};\nexport default DividerType;\n"
     }
   },
   {
@@ -5821,7 +5821,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\n",
-      "template": "<plus-divider type=\"solid\"></plus-divider>\n<br />\n<plus-divider type=\"dashed\"></plus-divider>\n<br />\n<plus-divider type=\"dotted\"></plus-divider>\n"
+      "template": "<div>\n  <plus-divider type=\"dashed\"></plus-divider>\n  <br />\n  <plus-divider type=\"dotted\"></plus-divider>\n  <br />\n  <plus-divider type=\"double\"></plus-divider>\n  <br />\n  <plus-divider type=\"groove\"></plus-divider>\n  <br />\n  <plus-divider type=\"inset\"></plus-divider>\n  <br />\n  <plus-divider type=\"outset\"></plus-divider>\n  <br />\n  <plus-divider type=\"ridge\"></plus-divider>\n  <br />\n  <plus-divider type=\"solid\"></plus-divider>\n</div>\n"
     }
   },
   {
@@ -5830,7 +5830,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\n",
-      "template": "<plus-divider type=\"solid\"></plus-divider>\n<br />\n<plus-divider type=\"dashed\"></plus-divider>\n<br />\n<plus-divider type=\"dotted\"></plus-divider>\n"
+      "template": "<div>\n  <plus-divider type=\"dashed\"></plus-divider>\n  <br />\n  <plus-divider type=\"dotted\"></plus-divider>\n  <br />\n  <plus-divider type=\"double\"></plus-divider>\n  <br />\n  <plus-divider type=\"groove\"></plus-divider>\n  <br />\n  <plus-divider type=\"inset\"></plus-divider>\n  <br />\n  <plus-divider type=\"outset\"></plus-divider>\n  <br />\n  <plus-divider type=\"ridge\"></plus-divider>\n  <br />\n  <plus-divider type=\"solid\"></plus-divider>\n</div>\n"
     }
   },
   {
@@ -5838,7 +5838,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "divider",
     "detail": {
-      "script": "import { Divider } from '@htmlplus/react';\nconst DividerType = () => {\n  return (\n    <>\n      <Divider type=\"solid\"></Divider>\n      <br />\n      <Divider type=\"dashed\"></Divider>\n      <br />\n      <Divider type=\"dotted\"></Divider>\n    </>\n  );\n};\n\nconst DividerTypeExample = () => {\n  return (\n    <div className=\"ex-divider-type\">\n      <DividerType />\n    </div>\n  )\n};\n\nexport default DividerTypeExample;\n"
+      "script": "import { Divider } from '@htmlplus/react';\nconst DividerType = () => {\n  return (\n    <div>\n      <Divider type=\"dashed\"></Divider>\n      <br />\n      <Divider type=\"dotted\"></Divider>\n      <br />\n      <Divider type=\"double\"></Divider>\n      <br />\n      <Divider type=\"groove\"></Divider>\n      <br />\n      <Divider type=\"inset\"></Divider>\n      <br />\n      <Divider type=\"outset\"></Divider>\n      <br />\n      <Divider type=\"ridge\"></Divider>\n      <br />\n      <Divider type=\"solid\"></Divider>\n    </div>\n  );\n};\n\nconst DividerTypeExample = () => {\n  return (\n    <div className=\"ex-divider-type\">\n      <DividerType />\n    </div>\n  )\n};\n\nexport default DividerTypeExample;\n"
     }
   },
   {
@@ -5847,7 +5847,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/divider.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-divider variant=\"middle\"></plus-divider>\n<br />\n<plus-divider variant=\"inset\"></plus-divider>\n<br />\n<plus-divider variant=\"full\"></plus-divider>\n"
+      "template": "<div>\n  <plus-divider variant=\"middle\"></plus-divider>\n  <br />\n  <plus-divider variant=\"inset\"></plus-divider>\n  <br />\n  <plus-divider variant=\"full\"></plus-divider>\n</div>\n"
     }
   },
   {
@@ -5856,7 +5856,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/divider.js';\n",
-      "template": "<plus-divider variant=\"middle\"></plus-divider>\n<br />\n<plus-divider variant=\"inset\"></plus-divider>\n<br />\n<plus-divider variant=\"full\"></plus-divider>\n"
+      "template": "<div>\n  <plus-divider variant=\"middle\"></plus-divider>\n  <br />\n  <plus-divider variant=\"inset\"></plus-divider>\n  <br />\n  <plus-divider variant=\"full\"></plus-divider>\n</div>\n"
     }
   },
   {
@@ -5864,7 +5864,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "divider",
     "detail": {
-      "script": "import { Divider } from '@htmlplus/react';\nconst DividerVariant = () => {\n  return (\n    <>\n      <Divider variant=\"middle\"></Divider>\n      <br />\n      <Divider variant=\"inset\"></Divider>\n      <br />\n      <Divider variant=\"full\"></Divider>\n    </>\n  );\n};\nexport default DividerVariant;\n"
+      "script": "import { Divider } from '@htmlplus/react';\nconst DividerVariant = () => {\n  return (\n    <div>\n      <Divider variant=\"middle\"></Divider>\n      <br />\n      <Divider variant=\"inset\"></Divider>\n      <br />\n      <Divider variant=\"full\"></Divider>\n    </div>\n  );\n};\nexport default DividerVariant;\n"
     }
   },
   {
@@ -5872,7 +5872,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "divider",
     "detail": {
-      "script": "import '@htmlplus/core/divider.js';\nconst DividerVariant = () => {\n  return (\n    <>\n      <plus-divider variant=\"middle\"></plus-divider>\n      <br />\n      <plus-divider variant=\"inset\"></plus-divider>\n      <br />\n      <plus-divider variant=\"full\"></plus-divider>\n    </>\n  );\n};\nexport default DividerVariant;\n"
+      "script": "import '@htmlplus/core/divider.js';\nconst DividerVariant = () => {\n  return (\n    <div>\n      <plus-divider variant=\"middle\"></plus-divider>\n      <br />\n      <plus-divider variant=\"inset\"></plus-divider>\n      <br />\n      <plus-divider variant=\"full\"></plus-divider>\n    </div>\n  );\n};\nexport default DividerVariant;\n"
     }
   },
   {
@@ -5881,7 +5881,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\n",
-      "template": "<plus-divider variant=\"middle\"></plus-divider>\n<br />\n<plus-divider variant=\"inset\"></plus-divider>\n<br />\n<plus-divider variant=\"full\"></plus-divider>\n"
+      "template": "<div>\n  <plus-divider variant=\"middle\"></plus-divider>\n  <br />\n  <plus-divider variant=\"inset\"></plus-divider>\n  <br />\n  <plus-divider variant=\"full\"></plus-divider>\n</div>\n"
     }
   },
   {
@@ -5890,7 +5890,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\n",
-      "template": "<plus-divider variant=\"middle\"></plus-divider>\n<br />\n<plus-divider variant=\"inset\"></plus-divider>\n<br />\n<plus-divider variant=\"full\"></plus-divider>\n"
+      "template": "<div>\n  <plus-divider variant=\"middle\"></plus-divider>\n  <br />\n  <plus-divider variant=\"inset\"></plus-divider>\n  <br />\n  <plus-divider variant=\"full\"></plus-divider>\n</div>\n"
     }
   },
   {
@@ -5898,7 +5898,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "divider",
     "detail": {
-      "script": "import { Divider } from '@htmlplus/react';\nconst DividerVariant = () => {\n  return (\n    <>\n      <Divider variant=\"middle\"></Divider>\n      <br />\n      <Divider variant=\"inset\"></Divider>\n      <br />\n      <Divider variant=\"full\"></Divider>\n    </>\n  );\n};\n\nconst DividerVariantExample = () => {\n  return (\n    <div className=\"ex-divider-variant\">\n      <DividerVariant />\n    </div>\n  )\n};\n\nexport default DividerVariantExample;\n"
+      "script": "import { Divider } from '@htmlplus/react';\nconst DividerVariant = () => {\n  return (\n    <div>\n      <Divider variant=\"middle\"></Divider>\n      <br />\n      <Divider variant=\"inset\"></Divider>\n      <br />\n      <Divider variant=\"full\"></Divider>\n    </div>\n  );\n};\n\nconst DividerVariantExample = () => {\n  return (\n    <div className=\"ex-divider-variant\">\n      <DividerVariant />\n    </div>\n  )\n};\n\nexport default DividerVariantExample;\n"
     }
   },
   {
@@ -5967,7 +5967,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/divider.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-divider Width=\"thin\"></plus-divider>\n<br />\n<plus-divider Width=\"medium\"></plus-divider>\n<br />\n<plus-divider Width=\"thick\"></plus-divider>\n"
+      "template": "<div>\n  <plus-divider width=\"xs\"></plus-divider>\n  <br />\n  <plus-divider width=\"sm\"></plus-divider>\n  <br />\n  <plus-divider width=\"md\"></plus-divider>\n  <br />\n  <plus-divider width=\"lg\"></plus-divider>\n  <br />\n  <plus-divider width=\"xl\"></plus-divider>\n</div>\n"
     }
   },
   {
@@ -5976,7 +5976,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import 'https://unpkg.com/@htmlplus/core/divider.js';\n",
-      "template": "<plus-divider Width=\"thin\"></plus-divider>\n<br />\n<plus-divider Width=\"medium\"></plus-divider>\n<br />\n<plus-divider Width=\"thick\"></plus-divider>\n"
+      "template": "<div>\n  <plus-divider width=\"xs\"></plus-divider>\n  <br />\n  <plus-divider width=\"sm\"></plus-divider>\n  <br />\n  <plus-divider width=\"md\"></plus-divider>\n  <br />\n  <plus-divider width=\"lg\"></plus-divider>\n  <br />\n  <plus-divider width=\"xl\"></plus-divider>\n</div>\n"
     }
   },
   {
@@ -5984,7 +5984,7 @@ export const examples: any[] = [
     "category": "react",
     "component": "divider",
     "detail": {
-      "script": "import { Divider } from '@htmlplus/react';\nconst DividerWidth = () => {\n  return (\n    <>\n      <Divider width=\"thin\"></Divider>\n      <br />\n      <Divider width=\"medium\"></Divider>\n      <br />\n      <Divider width=\"thick\"></Divider>\n    </>\n  );\n};\nexport default DividerWidth;\n"
+      "script": "import { Divider } from '@htmlplus/react';\nconst DividerWidth = () => {\n  return (\n    <div>\n      <Divider width=\"xs\"></Divider>\n      <br />\n      <Divider width=\"sm\"></Divider>\n      <br />\n      <Divider width=\"md\"></Divider>\n      <br />\n      <Divider width=\"lg\"></Divider>\n      <br />\n      <Divider width=\"xl\"></Divider>\n    </div>\n  );\n};\nexport default DividerWidth;\n"
     }
   },
   {
@@ -5992,7 +5992,7 @@ export const examples: any[] = [
     "category": "react@experimental",
     "component": "divider",
     "detail": {
-      "script": "import '@htmlplus/core/divider.js';\nconst DividerWidth = () => {\n  return (\n    <>\n      <plus-divider Width=\"thin\"></plus-divider>\n      <br />\n      <plus-divider Width=\"medium\"></plus-divider>\n      <br />\n      <plus-divider Width=\"thick\"></plus-divider>\n    </>\n  );\n};\nexport default DividerWidth;\n"
+      "script": "import '@htmlplus/core/divider.js';\nconst DividerWidth = () => {\n  return (\n    <div>\n      <plus-divider width=\"xs\"></plus-divider>\n      <br />\n      <plus-divider width=\"sm\"></plus-divider>\n      <br />\n      <plus-divider width=\"md\"></plus-divider>\n      <br />\n      <plus-divider width=\"lg\"></plus-divider>\n      <br />\n      <plus-divider width=\"xl\"></plus-divider>\n    </div>\n  );\n};\nexport default DividerWidth;\n"
     }
   },
   {
@@ -6001,7 +6001,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\n",
-      "template": "<plus-divider Width=\"thin\"></plus-divider>\n<br />\n<plus-divider Width=\"medium\"></plus-divider>\n<br />\n<plus-divider Width=\"thick\"></plus-divider>\n"
+      "template": "<div>\n  <plus-divider width=\"xs\"></plus-divider>\n  <br />\n  <plus-divider width=\"sm\"></plus-divider>\n  <br />\n  <plus-divider width=\"md\"></plus-divider>\n  <br />\n  <plus-divider width=\"lg\"></plus-divider>\n  <br />\n  <plus-divider width=\"xl\"></plus-divider>\n</div>\n"
     }
   },
   {
@@ -6010,7 +6010,7 @@ export const examples: any[] = [
     "component": "divider",
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\n",
-      "template": "<plus-divider Width=\"thin\"></plus-divider>\n<br />\n<plus-divider Width=\"medium\"></plus-divider>\n<br />\n<plus-divider Width=\"thick\"></plus-divider>\n"
+      "template": "<div>\n  <plus-divider width=\"xs\"></plus-divider>\n  <br />\n  <plus-divider width=\"sm\"></plus-divider>\n  <br />\n  <plus-divider width=\"md\"></plus-divider>\n  <br />\n  <plus-divider width=\"lg\"></plus-divider>\n  <br />\n  <plus-divider width=\"xl\"></plus-divider>\n</div>\n"
     }
   },
   {
@@ -6018,7 +6018,7 @@ export const examples: any[] = [
     "category": "preview",
     "component": "divider",
     "detail": {
-      "script": "import { Divider } from '@htmlplus/react';\nconst DividerWidth = () => {\n  return (\n    <>\n      <Divider width=\"thin\"></Divider>\n      <br />\n      <Divider width=\"medium\"></Divider>\n      <br />\n      <Divider width=\"thick\"></Divider>\n    </>\n  );\n};\n\nconst DividerWidthExample = () => {\n  return (\n    <div className=\"ex-divider-width\">\n      <DividerWidth />\n    </div>\n  )\n};\n\nexport default DividerWidthExample;\n"
+      "script": "import { Divider } from '@htmlplus/react';\nconst DividerWidth = () => {\n  return (\n    <div>\n      <Divider width=\"xs\"></Divider>\n      <br />\n      <Divider width=\"sm\"></Divider>\n      <br />\n      <Divider width=\"md\"></Divider>\n      <br />\n      <Divider width=\"lg\"></Divider>\n      <br />\n      <Divider width=\"xl\"></Divider>\n    </div>\n  );\n};\n\nconst DividerWidthExample = () => {\n  return (\n    <div className=\"ex-divider-width\">\n      <DividerWidth />\n    </div>\n  )\n};\n\nexport default DividerWidthExample;\n"
     }
   },
   {
