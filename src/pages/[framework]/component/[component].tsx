@@ -66,9 +66,19 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
         const componentName = `${pascalCase(example.component)}${pascalCase(example.key)}`;
 
+        const rtl = examples?.some((item) => {
+          return (
+            item.category == 'preview' &&
+            item.component == example.component &&
+            item.key == example.key &&
+            item.detail.rtl
+          );
+        });
+
         result[example.key] = {
           componentName,
           links,
+          rtl,
           tabs,
           title
         };

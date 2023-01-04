@@ -8,6 +8,7 @@ export interface ExampleProps {
       title?: string;
       url?: string;
     }>;
+    rtl?: boolean;
     tabs?: Array<{
       content?: string;
       disabled?: boolean;

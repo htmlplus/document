@@ -9,11 +9,18 @@ import * as examples from './examples/index';
 export const Example = ({ value }: ExampleProps) => {
   if (!value) return <div>TODO</div>;
 
-  const { componentName, links, tabs, title } = value;
+  const { componentName, links, rtl, tabs, title } = value;
+
+  const [isRTL, setIsRTL] = useState(false);
 
   const [visible, setVisible] = useState(true);
 
   const store = useStore();
+
+  const direction = (event: MouseEvent) => {
+    event.preventDefault();
+    setIsRTL(!isRTL);
+  };
 
   const language = (tab: any) => {
     switch (tab.key) {
@@ -53,6 +60,13 @@ export const Example = ({ value }: ExampleProps) => {
             ))}
           </Tabs.Bar>
         </Grid.Item>
+        {rtl && (
+          <Grid.Item xs="auto">
+            <Button icon text to="#" onClick={direction}>
+              <Icon size="lg" name="directions" />
+            </Button>
+          </Grid.Item>
+        )}
         <Grid.Item xs="auto">
           <Button icon text to="#" onClick={reload}>
             <Icon size="lg" name="reset" />
@@ -67,7 +81,9 @@ export const Example = ({ value }: ExampleProps) => {
         ))}
       </Grid>
       <Tabs.Panels>
-        <Tabs.Panel value="preview">{visible ? <Preview key="main" /> : <Preview key="alternative" />}</Tabs.Panel>
+        <Tabs.Panel value="preview" dir={isRTL ? 'rtl' : 'ltr'}>
+          {visible ? <Preview key="main" /> : <Preview key="alternative" />}
+        </Tabs.Panel>
         {tabs
           ?.filter((tab) => tab.key != 'preview')
           ?.map((tab) => (
