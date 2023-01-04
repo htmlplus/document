@@ -1,12 +1,12 @@
 import { useLayoutEffect, useState } from 'react';
 
-import { Button, Code, Grid, Icon, Tabs } from '@app/components';
+import { Button, Code, Dialog, Grid, Icon, Tabs } from '@app/components';
 import { useStore } from '@app/hooks';
 
 import { ExampleProps } from './example.types';
 import * as examples from './examples/index';
 
-export const Example = ({ value }: ExampleProps) => {
+const Internal = ({ open, value, setOpen }: ExampleProps) => {
   if (!value) return <div>TODO</div>;
 
   const { componentName, links, rtl, tabs, title } = value;
@@ -37,8 +37,14 @@ export const Example = ({ value }: ExampleProps) => {
 
   const reload = (event?: MouseEvent) => {
     event?.preventDefault();
+    setIsRTL(false);
     setVisible(false);
     requestAnimationFrame(() => setVisible(true));
+  };
+
+  const toggle = (event: MouseEvent) => {
+    event.preventDefault();
+    setOpen(!open);
   };
 
   useLayoutEffect(reload, [store.framework]);
@@ -68,6 +74,11 @@ export const Example = ({ value }: ExampleProps) => {
           </Grid.Item>
         )}
         <Grid.Item xs="auto">
+          <Button icon text to="#" onClick={toggle}>
+            <Icon size="lg" name={open ? 'resize-collapse' : 'resize-expand'} />
+          </Button>
+        </Grid.Item>
+        <Grid.Item xs="auto">
           <Button icon text to="#" onClick={reload}>
             <Icon size="lg" name="reset" />
           </Button>
@@ -93,5 +104,27 @@ export const Example = ({ value }: ExampleProps) => {
           ))}
       </Tabs.Panels>
     </Tabs>
+  );
+};
+
+export const Example = ({ value }: ExampleProps) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      {!open && (
+        <>
+          <Internal value={value} open={open} setOpen={setOpen} />
+        </>
+      )}
+      <Dialog fullscreen open={open} onClose={() => setOpen(false)}>
+        <Dialog.Content>
+          {open && (
+            <>
+              <Internal value={value} open={open} setOpen={setOpen} />
+            </>
+          )}
+        </Dialog.Content>
+      </Dialog>
+    </>
   );
 };

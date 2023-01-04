@@ -1,4 +1,6 @@
 export interface ExampleProps {
+  open: boolean;
+  setOpen: Function;
   value?: {
     componentName?: string;
     description?: string;
