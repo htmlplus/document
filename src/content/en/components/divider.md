@@ -44,6 +44,10 @@ A thin line that divides the content vertically or horizontally.
 
 <Example value="customize" />
 
+### Sticky
+
+<Example value="sticky" />
+
 <Checklist 
     accessibility={false}
     bidirectionality={true}

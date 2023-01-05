@@ -94,6 +94,7 @@ export const DividerCard = dynamic(() => import('./DividerCard'));
 export const DividerCustomize = dynamic(() => import('./DividerCustomize'));
 export const DividerHorizontal = dynamic(() => import('./DividerHorizontal'));
 export const DividerPlacement = dynamic(() => import('./DividerPlacement'));
+export const DividerSticky = dynamic(() => import('./DividerSticky'));
 export const DividerType = dynamic(() => import('./DividerType'));
 export const DividerVariant = dynamic(() => import('./DividerVariant'));
 export const DividerVertical = dynamic(() => import('./DividerVertical'));
