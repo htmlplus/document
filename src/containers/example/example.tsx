@@ -1,26 +1,21 @@
 import { useLayoutEffect, useState } from 'react';
 
-import { Button, Code, Dialog, Grid, Icon, Tabs } from '@app/components';
+import { Button, Code, Grid, Icon, Tabs } from '@app/components';
 import { useStore } from '@app/hooks';
 
 import { ExampleProps } from './example.types';
 import * as examples from './examples/index';
 
-const Internal = ({ open, value, setOpen }: ExampleProps) => {
+export const Example = ({ value }: ExampleProps) => {
   if (!value) return <div>TODO</div>;
 
   const { componentName, links, rtl, tabs, title } = value;
 
-  const [isRTL, setIsRTL] = useState(false);
+  const [direction, setDirection] = useState('ltr');
 
   const [visible, setVisible] = useState(true);
 
   const store = useStore();
-
-  const direction = (event: MouseEvent) => {
-    event.preventDefault();
-    setIsRTL(!isRTL);
-  };
 
   const language = (tab: any) => {
     switch (tab.key) {
@@ -35,19 +30,19 @@ const Internal = ({ open, value, setOpen }: ExampleProps) => {
     }
   };
 
-  const reload = (event?: MouseEvent) => {
+  const onDirection = (event: MouseEvent) => {
+    event.preventDefault();
+    setDirection(direction == 'ltr' ? 'rtl' : 'ltr');
+  };
+
+  const onReload = (event?: MouseEvent) => {
     event?.preventDefault();
-    setIsRTL(false);
+    setDirection('ltr');
     setVisible(false);
     requestAnimationFrame(() => setVisible(true));
   };
 
-  const toggle = (event: MouseEvent) => {
-    event.preventDefault();
-    setOpen(!open);
-  };
-
-  useLayoutEffect(reload, [store.framework]);
+  useLayoutEffect(onReload, [store.framework]);
 
   // TODO
   const Preview = (examples as any)[componentName!] as any;
@@ -68,18 +63,13 @@ const Internal = ({ open, value, setOpen }: ExampleProps) => {
         </Grid.Item>
         {rtl && (
           <Grid.Item xs="auto">
-            <Button icon text to="#" onClick={direction}>
+            <Button icon text to="#" onClick={onDirection}>
               <Icon size="lg" name="directions" />
             </Button>
           </Grid.Item>
         )}
         <Grid.Item xs="auto">
-          <Button icon text to="#" onClick={toggle}>
-            <Icon size="lg" name={open ? 'resize-collapse' : 'resize-expand'} />
-          </Button>
-        </Grid.Item>
-        <Grid.Item xs="auto">
-          <Button icon text to="#" onClick={reload}>
+          <Button icon text to="#" onClick={onReload}>
             <Icon size="lg" name="reset" />
           </Button>
         </Grid.Item>
@@ -92,7 +82,7 @@ const Internal = ({ open, value, setOpen }: ExampleProps) => {
         ))}
       </Grid>
       <Tabs.Panels>
-        <Tabs.Panel value="preview" dir={isRTL ? 'rtl' : 'ltr'}>
+        <Tabs.Panel value="preview" dir={direction}>
           {visible ? <Preview key="main" /> : <Preview key="alternative" />}
         </Tabs.Panel>
         {tabs
@@ -104,27 +94,5 @@ const Internal = ({ open, value, setOpen }: ExampleProps) => {
           ))}
       </Tabs.Panels>
     </Tabs>
-  );
-};
-
-export const Example = ({ value }: ExampleProps) => {
-  const [open, setOpen] = useState(false);
-  return (
-    <>
-      {!open && (
-        <>
-          <Internal value={value} open={open} setOpen={setOpen} />
-        </>
-      )}
-      <Dialog fullscreen open={open} onClose={() => setOpen(false)}>
-        <Dialog.Content>
-          {open && (
-            <>
-              <Internal value={value} open={open} setOpen={setOpen} />
-            </>
-          )}
-        </Dialog.Content>
-      </Dialog>
-    </>
   );
 };
