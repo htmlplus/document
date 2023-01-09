@@ -125,6 +125,7 @@ export const IntersectionDefault = dynamic(() => import('./IntersectionDefault')
 export const IntersectionLazyImage = dynamic(() => import('./IntersectionLazyImage'));
 export const PortalDefault = dynamic(() => import('./PortalDefault'));
 export const PortalStrategy = dynamic(() => import('./PortalStrategy'));
+export const ScrollDetectorDefault = dynamic(() => import('./ScrollDetectorDefault'));
 export const ScrollIndicatorDefault = dynamic(() => import('./ScrollIndicatorDefault'));
 export const SignatureClear = dynamic(() => import('./SignatureClear'));
 export const SignatureClearOnResize = dynamic(() => import('./SignatureClearOnResize'));
