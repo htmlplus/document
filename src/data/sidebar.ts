@@ -87,5 +87,9 @@ export const sidebar = (framework: string) => [
         url: getPath(ROUTES.ANIMATIONS, {})
       }
     ]
+  },
+  {
+    title: 'Code Completion',
+    url: getPath(ROUTES.CODE_COMPLETION, {})
   }
 ];

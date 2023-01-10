@@ -56,6 +56,7 @@ const getPathCore =
 
 export const ROUTES = {
   HOME: '/',
+  CODE_COMPLETION: '/code-completion',
   ANIMATIONS: '/component/animation/names',
   BIDIRECTIONALITY: '/bidirectionality',
   GLOBAL_CONFIG: '/global-config',
