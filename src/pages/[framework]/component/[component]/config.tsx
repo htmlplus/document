@@ -1,21 +1,37 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 
-import { headerCase } from 'change-case';
+import { capitalCase } from 'change-case';
 
+import { Code } from '@app/components';
 import { components, frameworks } from '@app/data';
 import { LayoutDefault } from '@app/layouts';
 import { ROUTES, getPath } from '@app/utils';
 
-const ComponentConfig = ({}: any) => {
+const ComponentConfig = ({ component }: any) => {
   const router = useRouter();
-  const { component, framework } = router.query as any;
   return (
     <LayoutDefault>
       <h1>
-        Config the {headerCase(component)} in the {headerCase(framework)}
+        {capitalCase(component.key)} config in the {capitalCase(router.query!.framework as any)}
       </h1>
       <p>TODO</p>
+      <Code language="js">
+        {[
+          `import { setConfig } from '@htmlplus/core/config.js';`,
+          ``,
+          `setConfig({`,
+          `  component: {`,
+          // TODO: remove plus
+          `    'plus-${component.key}': {`,
+          `      property: {`,
+          ...component.properties.map((property: any) => `        ${property.name}: ${property.initializer},`),
+          `      }`,
+          `    }`,
+          `  }`,
+          `});`
+        ].join('\n')}
+      </Code>
     </LayoutDefault>
   );
 };
@@ -23,10 +39,11 @@ const ComponentConfig = ({}: any) => {
 export default ComponentConfig;
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const { component, framework } = context.params! as any;
-
+  const component = components.find((component) => {
+    return component.key == context.params!.component;
+  });
   return {
-    props: {}
+    props: { component }
   };
 };
 
