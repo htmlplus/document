@@ -15,15 +15,15 @@ export const GlobalConfig = () => {
         <Toc.Item level={2}>Global Config</Toc.Item>
       </h2>
       <p>
-        See the animation's
+        See the animation's&nbsp;
         <Button link="underline" to={getPath(ROUTES.COMPONENT_CONFIG, { component, framework })}>
-          &nbsp;config
+          config
         </Button>
-        . Full
+        . Full&nbsp;
         <Button link="underline" to={getPath(ROUTES.GLOBAL_CONFIG, {})}>
-          &nbsp;documentation&nbsp;
+          documentation
         </Button>
-        is available.
+        &nbsp;is available.
       </p>
     </>
   );
