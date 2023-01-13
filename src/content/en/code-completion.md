@@ -20,7 +20,7 @@ VS Code doesn't have the ability to identify custom elements by default. To enab
 <br />
 
 <Alert type="warning">
-    Note that you may need to restart VS Code for the changes to take effect.
+    VS Code may need to be restarted for changes to take effect.
 </Alert>
 
 ## Other Editors
