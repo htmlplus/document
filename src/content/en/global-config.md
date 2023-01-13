@@ -43,15 +43,3 @@ setConfig({
   }
 });
 ```
-
-## Frameworks
-
-Definition in each framework.
-
-- [Angular](/angular/global-config)
-- [Javascript](/javascript/global-config)
-- [React Dedicated](/react-dedicated/global-config)
-- [React (Not Recommended)](/react/global-config)
-- [React (experimental)](/react@experimental/global-config)
-- [Svelte](/svelte/global-config)
-- [Vue](/vue/global-config)

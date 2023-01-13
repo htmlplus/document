@@ -58,25 +58,16 @@ export const sidebar = (framework: string) => [
     }))
   },
   {
-    title: 'About',
+    title: 'Global Config',
     items: [
       {
-        title: 'Code Of Conduct',
-        url: getPath(ROUTES.CODEOFCONDUCT, {})
-      }
-    ]
-  },
-  {
-    title: 'Features',
-    items: [
-      {
-        title: 'Bidirectionality',
-        url: getPath(ROUTES.BIDIRECTIONALITY, {})
-      },
-      {
-        title: 'Global Config',
+        title: 'Overview',
         url: getPath(ROUTES.GLOBAL_CONFIG, {})
-      }
+      },
+      ...frameworks.map((framework) => ({
+        title: framework.title,
+        url: `/${framework.key}/` + getPath(ROUTES.GLOBAL_CONFIG, {})
+      }))
     ]
   },
   {
