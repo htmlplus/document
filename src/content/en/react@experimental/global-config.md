@@ -2,7 +2,7 @@
 
 Sets a config for the `size` property of the `spinner` component.
 
-```js
+```jsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.js';

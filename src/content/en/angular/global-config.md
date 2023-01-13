@@ -2,7 +2,7 @@
 
 Sets a config for the `size` property of the `spinner` component.
 
-```ts
+```js
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
