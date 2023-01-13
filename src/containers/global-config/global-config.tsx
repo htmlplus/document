@@ -17,7 +17,7 @@ export const GlobalConfig = () => {
       <p>
         See the animation's
         <Button link="underline" to={getPath(ROUTES.COMPONENT_CONFIG, { component, framework })}>
-          &nbsp;config&nbsp;
+          &nbsp;config
         </Button>
         . Full
         <Button link="underline" to={getPath(ROUTES.GLOBAL_CONFIG, {})}>

@@ -13,12 +13,12 @@ export const Api = () => {
         <Toc.Item level={2}>Api</Toc.Item>
       </h2>
       <p>
-        Click &nbsp;
+        Click
         <Button link="underline" to={getPath(ROUTES.API_DETAILS, { component, framework })}>
-          here
+          &nbsp;here&nbsp;
         </Button>
-        &nbsp; to learn more about <b>Properties</b>, <b>Slots</b>, <b>Events</b>, <b>CSS Variables</b>,{' '}
-        <b>CSS Parts</b>, and <b>Methods</b>.
+        to learn more about <b>Properties</b>, <b>Slots</b>, <b>Events</b>, <b>CSS Variables</b>, <b>CSS Parts</b>, and{' '}
+        <b>Methods</b>.
       </p>
     </>
   );
