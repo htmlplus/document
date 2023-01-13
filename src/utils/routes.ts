@@ -68,6 +68,7 @@ export const ROUTES = {
   INSTALLATION_FRAMEWORK: '/[framework]/installation',
   BROWSERS: '/browsers',
   COMPONENT_DETAILS: '/[framework]/component/[component]',
+  COMPONENT_CONFIG: '/[framework]/component/[component]/config',
   API_DETAILS: '/[framework]/api/[component]',
   CODEOFCONDUCT: '/code-of-conduct',
   GITHUB_URL: 'https://github.com/htmlplus/htmlplus',

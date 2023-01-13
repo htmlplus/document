@@ -20,8 +20,11 @@ const Animations = ({ categories }: any) => {
       <h2>
         <Toc.Item level={2}>Usage</Toc.Item>
       </h2>
-      <p>Three ways to import a transition</p>
-      <p>1) Imports a transition from a category</p>
+      <p>Three ways to import a transition.</p>
+      <h3>
+        <Toc.Item level={3}>Specific</Toc.Item>
+      </h3>
+      <p>Imports a transition from a category.</p>
       <Code language="js">
         {[
           '/* Template */',
@@ -31,8 +34,10 @@ const Animations = ({ categories }: any) => {
           "import '@htmlplus/core/animation/names/flippers/flip.js';"
         ].join('\n')}
       </Code>
-      <br />
-      <p>2) Imports a category</p>
+      <h3>
+        <Toc.Item level={3}>Category</Toc.Item>
+      </h3>
+      <p>Imports a category.</p>
       <Code language="js">
         {[
           '/* Template */',
@@ -42,17 +47,19 @@ const Animations = ({ categories }: any) => {
           "import '@htmlplus/core/animation/names/fading-entrance/all.js';"
         ].join('\n')}
       </Code>
-      <br />
-      <p>3) Imports all categories</p>
+      <h3>
+        <Toc.Item level={3}>All</Toc.Item>
+      </h3>
+      <p>Imports all categories.</p>
       <Code language="js">{["import '@htmlplus/core/animation/names/transition/all.js';"].join('\n')}</Code>
       <h2>
         <Toc.Item level={2}>Categories</Toc.Item>
       </h2>
       <p>
-        All animations are based on the popular{' '}
+        All animations are based on the popular
         <a href="https://animate.style" target="_blank">
-          Animate.css
-        </a>{' '}
+          &nbsp;Animate.css&nbsp;
+        </a>
         library.
       </p>
       {categories.map((category: any) => (

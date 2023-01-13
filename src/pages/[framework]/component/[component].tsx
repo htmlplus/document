@@ -114,8 +114,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
       components.map(
         (component) =>
           getPath(ROUTES.COMPONENT_DETAILS, {
-            framework: framework.key,
-            component: component.key
+            component: component.key,
+            framework: framework.key
           })!
       )
     )
