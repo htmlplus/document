@@ -8,8 +8,7 @@
     "format": "prettier --write .",
     "start": "next dev",
     "start:prod": "next start",
-    "sync:examples": "node ./scripts/examples.js",
-    "sync:statistics": "node ./scripts/statistics.js"
+    "sync": "node ./scripts/sync.js"
   },
   "devDependencies": {
     "@htmlplus/core": "^0.8.1",

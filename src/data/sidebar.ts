@@ -86,5 +86,9 @@ export const sidebar = (framework: string) => [
   {
     title: 'Code Of Conduct',
     url: getPath(ROUTES.CODE_OF_CONDUCT, {})
+  },
+  {
+    title: 'Changelog',
+    url: getPath(ROUTES.CHANGELOG, {})
   }
 ];

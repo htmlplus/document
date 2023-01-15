@@ -8,11 +8,11 @@ export const statistics = {
   platforms: 'TODO',
   themes: 'TODO',
   forks: 2,
-  stars: 22,
-  watchers: 22,
-  dowanloads: 6772,
-  downloadsLastWeek: 941,
-  downloadsLastMonth: 1517,
+  stars: 25,
+  watchers: 5,
+  dowanloads: undefined,
+  downloadsLastWeek: undefined,
+  downloadsLastMonth: undefined,
   get components(): number {
     return this.componentsPerFramework * this.frameworks;
   },

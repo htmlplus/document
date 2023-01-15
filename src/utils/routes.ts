@@ -58,6 +58,7 @@ export const ROUTES = {
   HOME: '/',
   CONTRIBUTING: '/contributing',
   CODE_OF_CONDUCT: '/code-of-conduct',
+  CHANGELOG: '/changelog',
   VISION: '/vision',
   CODE_COMPLETION: '/code-completion',
   ANIMATIONS: '/component/animation/names',
