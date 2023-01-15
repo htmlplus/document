@@ -1,10 +1,10 @@
 import { useLayoutEffect, useState } from 'react';
 
 import { Button, Code, Grid, Icon, Tabs } from '@app/components';
+import * as examples from '@app/examples';
 import { useStore } from '@app/hooks';
 
 import { ExampleProps } from './example.types';
-import * as examples from './examples/index';
 
 export const Example = ({ value }: ExampleProps) => {
   if (!value) return <div>TODO</div>;

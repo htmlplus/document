@@ -43,7 +43,7 @@ const load = (local, remote) => {
 
 // examples
 (async () => {
-  const DIRECTORY = './src/containers/example/examples';
+  const DIRECTORY = './src/examples';
   const FILE = './src/data/examples.ts';
   const LOCAL = path.join(__dirname, '../../examples/dist/db.json');
   const REMOTE = 'https://github.com/htmlplus/examples/raw/main/dist/db.json';

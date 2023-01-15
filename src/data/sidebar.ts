@@ -66,7 +66,7 @@ export const sidebar = (framework: string) => [
       },
       ...frameworks.map((framework) => ({
         title: framework.title,
-        url: `/${framework.key}/` + getPath(ROUTES.GLOBAL_CONFIG, {})
+        url: `/${framework.key}` + getPath(ROUTES.GLOBAL_CONFIG, {})
       }))
     ]
   },
