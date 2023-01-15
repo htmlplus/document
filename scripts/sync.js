@@ -30,6 +30,17 @@ const load = (local, remote) => {
   fs.writeFileSync(DESTINATION, content, 'utf8');
 })();
 
+// code of conduct
+(async () => {
+  const DESTINATION = './src/content/en/code-of-conduct.md';
+  const LOCAL = path.join(__dirname, '../../core/CODE_OF_CONDUCT.md');
+  const REMOTE = 'https://github.com/htmlplus/core/raw/main/CODE_OF_CONDUCT.md';
+
+  const content = await load(LOCAL, REMOTE);
+
+  fs.writeFileSync(DESTINATION, content, 'utf8');
+})();
+
 // examples
 (async () => {
   const DIRECTORY = './src/containers/example/examples';
