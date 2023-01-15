@@ -144,3 +144,14 @@ const load = (local, remote) => {
 
   fs.writeFileSync(DESTINATION, content, 'utf8');
 })();
+
+// vision
+(async () => {
+  const DESTINATION = './src/content/en/vision.md';
+  const LOCAL = path.join(__dirname, '../../core/VISION.md');
+  const REMOTE = 'https://github.com/htmlplus/core/raw/main/VISION.md';
+
+  const content = await load(LOCAL, REMOTE);
+
+  fs.writeFileSync(DESTINATION, content, 'utf8');
+})();
