@@ -57,6 +57,7 @@ const getPathCore =
 export const ROUTES = {
   HOME: '/',
   CONTRIBUTING: '/contributing',
+  CODE_OF_CONDUCT: '/code-of-conduct',
   VISION: '/vision',
   CODE_COMPLETION: '/code-completion',
   ANIMATIONS: '/component/animation/names',
