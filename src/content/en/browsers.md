@@ -1,6 +1,6 @@
 # Browser Support
 
-`HTMLPLUS` supports all modern browsers and platforms, including Chrome, Safari, Firefox, and Edge. Consider `HTMLPLUS` supports only [JavaScript Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules).
+`HTMLPLUS` supports all modern browsers and platforms, including Chrome, Safari, Firefox, and Edge. Consider `HTMLPLUS` supports only [JavaScript Modules](https://mdn.io/modules).
 
 <br/>
 

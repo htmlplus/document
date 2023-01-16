@@ -1,11 +1,11 @@
 # React
 
-To use UI components based on [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) in React applications, follow the below steps.
+To use UI components based on [Web Components](https://mdn.io/using-custom-elements) in React applications, follow the below steps.
 
 <br/>
 
 <Alert type="warning">
-  React is not fully compatible with [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements), check the compatibility [here](https://custom-elements-everywhere.com).
+  React is not fully compatible with [Web Components](https://mdn.io/using-custom-elements), check the compatibility [here](https://custom-elements-everywhere.com).
 </Alert>
 
 ## Install
@@ -99,7 +99,7 @@ export default App;
 
 ## Pros
 
-- Is used [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) directly.
+- Is used [Web Components](https://mdn.io/using-custom-elements) directly.
 
 ## Cons
 

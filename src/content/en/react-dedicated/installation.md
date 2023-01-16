@@ -1,6 +1,6 @@
 # React
 
-To avoid [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) problems in React is recommended to use the dedicated package.
+To avoid [Web Components](https://mdn.io/using-custom-elements) problems in React is recommended to use the dedicated package.
 
 ## Install
 
