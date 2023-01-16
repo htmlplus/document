@@ -14,33 +14,40 @@ export const Contributors = () => {
   const [contributors, setContributors] = useState<string[]>([]);
 
   // TODO
-  const url = useMemo(() => {
+  const paths = useMemo(() => {
     switch (router.route) {
       case '/[...content]':
-        return `packages/document/src/content/en/${(router.query?.content as string[])?.join('/')}.md`;
+        return [`packages/document/src/content/en/${(router.query?.content as string[])?.join('/')}.md`];
       case '/component/animation/names':
-        return `packages/document/src/pages/component/animation/names.tsx`;
+        return [`packages/document/src/pages/component/animation/names.tsx`];
       case '/[framework]/api/[component]':
       case '/[framework]/component/[component]':
       case '/[framework]/component/[component]/config':
-        return `packages/core/src/components/${router.query?.component}`;
+        return [
+          `packages/core/src/components/${router.query?.component}`,
+          `packages/examples/src/${router.query?.component}`
+        ];
     }
   }, [router.asPath, router.route]);
 
   useEffect(() => {
     if (process && process.env.NODE_ENV === 'development') return;
-    if (!url) return;
-    axios
-      .get(getPath(ROUTES.GITHUB_COMMITS, { path: url }))
-      .then((response) => {
-        return response.data
-          .map((commit: any) => commit.author?.login)
+
+    if (!paths) return;
+
+    const promises = paths.map((path) => axios.get(getPath(ROUTES.GITHUB_COMMITS, { path })));
+
+    Promise.all(promises)
+      .then((responses) => {
+        return responses
+          .map((response) => response.data.map((commit: any) => commit.author?.login))
+          .flat()
           .filter((contributor: string, index: number, contributors: string[]) => {
             return contributor && contributors.indexOf(contributor) === index;
           });
       })
       .then(setContributors);
-  }, [url]);
+  }, [paths]);
 
   if (!contributors?.length) return null;
 
