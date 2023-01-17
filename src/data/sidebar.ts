@@ -90,5 +90,9 @@ export const sidebar = (framework: string) => [
   {
     title: 'Changelog',
     url: getPath(ROUTES.CHANGELOG, {})
+  },
+  {
+    title: 'Vision',
+    url: getPath(ROUTES.VISION, {})
   }
 ];

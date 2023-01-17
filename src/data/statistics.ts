@@ -8,7 +8,7 @@ export const statistics = {
   platforms: 'TODO',
   themes: 'TODO',
   forks: 2,
-  stars: 25,
+  stars: 26,
   watchers: 5,
   dowanloads: undefined,
   downloadsLastWeek: undefined,
