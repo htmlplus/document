@@ -3,21 +3,12 @@ import { ROUTES, getPath } from '@app/utils';
 
 export const sidebar = (framework: string) => [
   {
-    title: 'Introduction',
-    items: [
-      {
-        title: `What's HTMLPLUS?`,
-        url: getPath(ROUTES.INTRODUCTION_WHAT, {})
-      },
-      {
-        title: `Why HTMLPLUS?`,
-        url: getPath(ROUTES.INTRODUCTION_WHY, {})
-      }
-    ]
-  },
-  {
     title: 'Getting started',
     items: [
+      {
+        title: 'Overview',
+        url: getPath(ROUTES.OVERVIEW, {})
+      },
       {
         title: 'Installation',
         url: getPath(ROUTES.INSTALLATION, {})
@@ -25,6 +16,14 @@ export const sidebar = (framework: string) => [
       {
         title: 'Browser support',
         url: getPath(ROUTES.BROWSERS, {})
+      },
+      {
+        title: 'Code Completion',
+        url: getPath(ROUTES.CODE_COMPLETION, {})
+      },
+      {
+        title: 'Vision',
+        url: getPath(ROUTES.VISION, {})
       }
     ]
   },
@@ -80,19 +79,7 @@ export const sidebar = (framework: string) => [
     ]
   },
   {
-    title: 'Code Completion',
-    url: getPath(ROUTES.CODE_COMPLETION, {})
-  },
-  {
-    title: 'Code Of Conduct',
-    url: getPath(ROUTES.CODE_OF_CONDUCT, {})
-  },
-  {
     title: 'Changelog',
     url: getPath(ROUTES.CHANGELOG, {})
-  },
-  {
-    title: 'Vision',
-    url: getPath(ROUTES.VISION, {})
   }
 ];

@@ -26,20 +26,6 @@ const Home: NextPage = () => {
           justifyContent: 'center'
         }}
       >
-        <div style={{ width: '100%' }}>
-          <Grid justifyContent="center" justifyContentMd="end" gutterX="md">
-            <Grid.Item>
-              <Button size="sm" link to={getPath(ROUTES.INTRODUCTION_WHAT, {})}>
-                <b>{`What\'s HTMLPLUS?`}</b>
-              </Button>
-            </Grid.Item>
-            <Grid.Item>
-              <Button size="sm" link to={getPath(ROUTES.INTRODUCTION_WHY, {})}>
-                <b>{`Why HTMLPLUS?`}</b>
-              </Button>
-            </Grid.Item>
-          </Grid>
-        </div>
         <div style={{ flexGrow: '1' }} />
         <div>
           <div>

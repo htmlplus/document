@@ -8,12 +8,8 @@ import { HeaderProps } from './header.types';
 export const Header = ({ menu }: HeaderProps) => {
   const links = [
     {
-      title: `What\'s HTMLPLUS?`,
-      url: getPath(ROUTES.INTRODUCTION_WHAT, {})
-    },
-    {
-      title: `Why HTMLPLUS?`,
-      url: getPath(ROUTES.INTRODUCTION_WHY, {})
+      title: `Overview`,
+      url: getPath(ROUTES.OVERVIEW, {})
     },
     {
       title: 'UI Components',
