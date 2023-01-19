@@ -7,7 +7,6 @@ import { sidebar } from '@app/data';
 import { useStore } from '@app/hooks';
 
 export const Navigation = () => {
-
   const router = useRouter();
 
   const store = useStore();
@@ -22,39 +21,47 @@ export const Navigation = () => {
   }, [router.asPath, store.framework]);
 
   return (
-    <Grid justifyContent="between" alignItems="center">
-      <Grid.Item xs="auto">
-        {!!prev && (
-          <Button link to={prev.url}>
-            <Grid alignItems="center" gutterX="md" wrap="off">
-              <Grid.Item>
-                <Icon name="prev" />
-              </Grid.Item>
-              <Grid.Item>
-                <b>Prev</b>
-                <br />
-                {prev.title}
-              </Grid.Item>
-            </Grid>
-          </Button>
-        )}
-      </Grid.Item>
-      <Grid.Item xs="auto">
-        {!!next && (
-          <Button link to={next.url}>
-            <Grid alignItems="center" gutterX="md" wrap="off">
-              <Grid.Item>
-                <b>Next</b>
-                <br />
-                {next.title}
-              </Grid.Item>
-              <Grid.Item>
-                <Icon name="next" />
-              </Grid.Item>
-            </Grid>
-          </Button>
-        )}
-      </Grid.Item>
-    </Grid>
+    <p>
+      <Grid justifyContent="between" alignItems="center">
+        <Grid.Item xs="auto">
+          {!!prev && (
+            <Button link to={prev.url}>
+              <Grid alignItems="center" gutterX="md" wrap="off">
+                <Grid.Item>
+                  <Icon name="prev" size="lg" />
+                </Grid.Item>
+                <Grid.Item>
+                  <Grid alignItems="start" vertical>
+                    <Grid.Item>
+                      <b>Prev</b>
+                    </Grid.Item>
+                    <Grid.Item>{prev.title}</Grid.Item>
+                  </Grid>
+                </Grid.Item>
+              </Grid>
+            </Button>
+          )}
+        </Grid.Item>
+        <Grid.Item xs="auto">
+          {!!next && (
+            <Button link to={next.url}>
+              <Grid alignItems="center" gutterX="md" wrap="off">
+                <Grid.Item>
+                  <Grid alignItems="end" vertical>
+                    <Grid.Item>
+                      <b>Next</b>
+                    </Grid.Item>
+                    <Grid.Item>{next.title}</Grid.Item>
+                  </Grid>
+                </Grid.Item>
+                <Grid.Item>
+                  <Icon name="next" size="lg" />
+                </Grid.Item>
+              </Grid>
+            </Button>
+          )}
+        </Grid.Item>
+      </Grid>
+    </p>
   );
 };

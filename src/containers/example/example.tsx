@@ -50,7 +50,7 @@ export const Example = ({ value }: ExampleProps) => {
   return (
     <Tabs className="example" connector={`example:${title}`} value="preview">
       {/* TODO: remove connector and example */}
-      <Grid className="toolbar" alignItems="center" gutterX="sm">
+      <Grid alignItems="center" gutterX="sm">
         <Grid.Item xs="grow">
           <Tabs.Bar>
             <Tabs.Tab value="preview">Preview</Tabs.Tab>

@@ -56,14 +56,16 @@ export const Contributors = () => {
       <h2>
         <Toc.Item level={2}>Contributors</Toc.Item>
       </h2>
-      <Avatar.Group hoverable stacked>
-        {contributors.reverse().map((contributor) => (
-          <Avatar key={contributor} shape="circle" size="sm">
-            <img src={getPath(ROUTES.CONTRIBUTOR, { contributor })} alt={`Contributor ${contributor}`} />
-            <a rel="noopener" href={getPath(ROUTES.CONTRIBUTOR_GITHUB, { contributor })} target="_blank"></a>
-          </Avatar>
-        ))}
-      </Avatar.Group>
+      <p>
+        <Avatar.Group hoverable stacked>
+          {contributors.reverse().map((contributor) => (
+            <Avatar key={contributor} shape="circle" size="sm">
+              <img src={getPath(ROUTES.CONTRIBUTOR, { contributor })} alt={`Contributor ${contributor}`} />
+              <a rel="noopener" href={getPath(ROUTES.CONTRIBUTOR_GITHUB, { contributor })} target="_blank"></a>
+            </Avatar>
+          ))}
+        </Avatar.Group>
+      </p>
     </>
   );
 };
