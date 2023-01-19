@@ -36,7 +36,6 @@ export const LayoutDefault = ({ children }: LayoutDefaultProps) => {
               <div className="content">
                 {children}
                 <Contributors />
-                <br />
                 <Navigation />
               </div>
             </Grid.Item>
