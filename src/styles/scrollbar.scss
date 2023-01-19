@@ -5,7 +5,7 @@
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
-  background-color: lightgray;
+  background-color: $color-main-lighten-3;
   border-radius: 4px;
 }
 

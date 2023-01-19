@@ -6,7 +6,7 @@ import NextLink from 'next/link';
 import '@htmlplus/core/animation/names/attention-seekers/pulse.js';
 
 import { Animation, Button, Grid, Icon, Intersection } from '@app/components';
-import { Browsers, Header } from '@app/containers';
+import { Browsers } from '@app/containers';
 import { features, frameworks, statistics } from '@app/data';
 import { ROUTES, getPath } from '@app/utils';
 

@@ -6,7 +6,12 @@ import { Toc } from '@app/containers';
 import { ChecklistProps } from './checklist.types';
 
 export const Checklist = (properties: ChecklistProps) => {
-  const className = (property: any) => (property == 'N/A' ? `line-through` : property ? '' : 'muted');
+  const style = (property: any) => {
+    return {
+      'opacity': property && property != 'N/A' ? 0.4 : null,
+      'text-decoration': property == 'N/A' ? 'line-through' : null
+    };
+  };
   return (
     <>
       <h2>
@@ -15,7 +20,7 @@ export const Checklist = (properties: ChecklistProps) => {
       <p>List of done</p>
       <Grid gutterX="sm">
         {Object.keys(properties).map((property) => (
-          <Grid.Item key={property} xs="12" md="6" className={className(properties[property as keyof ChecklistProps])}>
+          <Grid.Item key={property} xs="12" md="6" style={style(properties[property as keyof ChecklistProps])}>
             <small>{capitalCase(property)}</small>
           </Grid.Item>
         ))}

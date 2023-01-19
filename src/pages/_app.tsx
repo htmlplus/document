@@ -3,7 +3,20 @@ import React from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
+// @ts-ignore
+import { setConfig } from '@htmlplus/core/config.js';
+
 import '../styles/index.scss';
+
+setConfig({
+  component: {
+    'plus-divider': {
+      property: {
+        width: 'xs'
+      }
+    }
+  }
+});
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (

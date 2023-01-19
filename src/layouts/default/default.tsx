@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
-import { Card, Drawer, Grid, Sticky } from '@app/components';
-import { Contributors, Frameworks, Header, Navigation, Sidebar, Toc } from '@app/containers';
+import { Card, Center, Drawer, Grid, Icon, Sticky } from '@app/components';
+import { Contributors, Frameworks, Navigation, Sidebar, Toc } from '@app/containers';
 
 interface LayoutDefaultProps {
   children: ReactNode;
@@ -9,48 +9,49 @@ interface LayoutDefaultProps {
 
 export const LayoutDefault = ({ children }: LayoutDefaultProps) => {
   return (
-    <>
-      <Header menu />
-      <Drawer open={false} animation="fade" connector="main" temporary>
-        <Card tile elevation="10" style={{ height: '100%', overflowY: 'auto' }}>
-          HTMLPLUS
+    <div className="layout-default">
+      <Drawer open={false} animation="fade" connector="main" temporary size="300px">
+        <Card class="drawer" tile elevation="10">
           <Sidebar />
         </Card>
       </Drawer>
       <Grid>
+        <Grid.Item hideXlUp>
+          <Drawer.Toggler connector="main">
+            <Center>
+              <Icon name="menu" size="2x" />
+            </Center>
+          </Drawer.Toggler>
+        </Grid.Item>
+      </Grid>
+      <Grid>
         <Grid.Item xs="auto" hideLgDown>
-          <Sticky class="menu" top="0" watcher>
-            {/* TODO */}
-            <div style={{ width: '300px' }} />
+          <Sticky class="sidebar-start">
             <Sidebar />
           </Sticky>
         </Grid.Item>
         <Grid.Item xs="grow">
           <Grid>
             <Grid.Item xs="12" md="grow">
-              {/* TODO */}
-              <div style={{ padding: '16px', maxWidth: '768px', margin: 'auto', minHeight: 'calc(100vh - 154px)' }}>
+              <div className="content">
                 {children}
                 <Contributors />
                 <br />
-                <br />
-                <br />
                 <Navigation />
+                <br />
               </div>
             </Grid.Item>
             <Grid.Item xs="12" md="auto" hideMdDown>
-              <Sticky top="12">
+              <Sticky className="sidebar-end">
+                <br />
                 <Frameworks />
+                <br />
                 <Toc />
               </Sticky>
             </Grid.Item>
-            {/* TODO */}
-            {/* <Grid.Item xs="12">
-              <Footer />
-            </Grid.Item> */}
           </Grid>
         </Grid.Item>
       </Grid>
-    </>
+    </div>
   );
 };
