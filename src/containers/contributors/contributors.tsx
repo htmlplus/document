@@ -17,15 +17,29 @@ export const Contributors = () => {
   const paths = useMemo(() => {
     switch (router.route) {
       case '/[...content]':
-        return [`packages/document/src/content/en/${(router.query?.content as string[])?.join('/')}.md`];
+        return getPath(ROUTES.GITHUB_COMMITS, {
+          repository: 'document',
+          path: `src/content/en/${(router.query?.content as string[])?.join('/')}.md`
+        });
+
       case '/component/animation/names':
-        return [`packages/document/src/pages/component/animation/names.tsx`];
+        return getPath(ROUTES.GITHUB_COMMITS, {
+          repository: 'document',
+          path: 'src/pages/component/animation/names.tsx'
+        });
+
       case '/[framework]/api/[component]':
       case '/[framework]/component/[component]':
       case '/[framework]/component/[component]/config':
         return [
-          `packages/core/src/components/${router.query?.component}`,
-          `packages/examples/src/${router.query?.component}`
+          getPath(ROUTES.GITHUB_COMMITS, {
+            repository: 'core',
+            path: `src/components/${router.query?.component}`
+          }),
+          getPath(ROUTES.GITHUB_COMMITS, {
+            repository: 'examples',
+            path: `src/${router.query?.component}`
+          })
         ];
     }
   }, [router.asPath, router.route]);
@@ -35,7 +49,7 @@ export const Contributors = () => {
 
     if (!paths) return;
 
-    const promises = paths.map((path) => axios.get(getPath(ROUTES.GITHUB_COMMITS, { path })));
+    const promises = [paths].flat().map((path) => axios.get(path));
 
     Promise.all(promises)
       .then((responses) => {

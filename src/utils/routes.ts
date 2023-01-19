@@ -80,7 +80,7 @@ export const ROUTES = {
   SOCIAL_INSTAGRAM: 'https://www.instagram.com/htmlplus.io',
   SOCIAL_GITHUB: 'https://github.com/htmlplus/htmlplus',
   SOCIAL_YOUTUBE: 'https://www.youtube.com/channel/UCsNkxDmLU7vK_L1jgSVWWCA',
-  GITHUB_COMMITS: 'https://api.github.com/repos/htmlplus/htmlplus/commits?path=[path]',
+  GITHUB_COMMITS: 'https://api.github.com/repos/htmlplus/[repository]/commits?path=[path]',
   EXAMPLE_CODE_SANDBOX_LINK:
     'https://codesandbox.io/s/github/htmlplus/examples/tree/main/dist/[framework]/[component]/[example]',
   EXAMPLE_GITHUB_LINK: 'https://github.com/htmlplus/examples/tree/main/dist/[framework]/[component]/[example]',
