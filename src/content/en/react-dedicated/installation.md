@@ -1,4 +1,4 @@
-# React
+# React (dedicated)
 
 To avoid [Web Components](https://mdn.io/using-custom-elements) problems in React is recommended to use the dedicated package.
 

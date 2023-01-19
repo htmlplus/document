@@ -53,7 +53,7 @@ const Home: NextPage = () => {
           </p>
           <div>
             <NextLink
-              href={getPath(ROUTES.COMPONENT_DETAILS, { framework: 'react', component: 'animation' })!}
+              href={getPath(ROUTES.COMPONENT_DETAILS, { framework: 'react-dedicated', component: 'animation' })!}
               passHref
               style={{
                 padding: '0.75rem 2rem',

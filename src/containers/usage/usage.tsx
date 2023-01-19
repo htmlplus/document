@@ -25,20 +25,10 @@ export const Usage = () => {
       </p>
       <Code language="shell">
         {(() => {
-          switch (framework) {
-            case 'angular':
-              return 'npm install @htmlplus/core';
-            case 'javascript':
-              return 'npm install @htmlplus/core';
-            case 'react':
-              return 'npm install @htmlplus/react';
-            case 'react@experimental':
-              return 'npm install @htmlplus/core';
-            case 'svelte':
-              return 'npm install @htmlplus/core';
-            case 'vue':
-              return 'npm install @htmlplus/core';
+          if (framework == 'react-dedicated') {
+            return 'npm install @htmlplus/react';
           }
+          return 'npm install @htmlplus/core';
         })()}
       </Code>
     </>

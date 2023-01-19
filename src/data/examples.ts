@@ -25,7 +25,7 @@ export const examples: any[] = [
   },
   {
     "key": "button",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "animation",
     "detail": {
       "script": "import { Animation, Center } from '@htmlplus/react';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\nconst AnimationButton = () => {\n  return (\n    <Center>\n      <Animation id=\"animation1\" name=\"tada\">\n        <button onClick={() => (window.animation1.run = true)}>Click Me</button>\n      </Animation>\n    </Center>\n  );\n};\nexport default AnimationButton;\n",
@@ -34,7 +34,7 @@ export const examples: any[] = [
   },
   {
     "key": "button",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "animation",
     "detail": {
       "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/animation/names/attention-seekers/tada.js';\nconst AnimationButton = () => {\n  return (\n    <plus-center>\n      <plus-animation id=\"animation1\" name=\"tada\">\n        <button onClick={() => (window.animation1.run = true)}>Click Me</button>\n      </plus-animation>\n    </plus-center>\n  );\n};\nexport default AnimationButton;\n",
@@ -92,7 +92,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "animation",
     "detail": {
       "script": "import { Animation, Center } from '@htmlplus/react';\nconst AnimationDefault = () => {\n  return (\n    <Center>\n      <Animation iterations=\"Infinity\" name=\"fade-in\" run></Animation>\n    </Center>\n  );\n};\nexport default AnimationDefault;\n",
@@ -101,7 +101,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "animation",
     "detail": {
       "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\nconst AnimationDefault = () => {\n  return (\n    <plus-center>\n      <plus-animation iterations=\"Infinity\" name=\"fade-in\" run></plus-animation>\n    </plus-center>\n  );\n};\nexport default AnimationDefault;\n",
@@ -159,7 +159,7 @@ export const examples: any[] = [
   },
   {
     "key": "duration",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "animation",
     "detail": {
       "script": "import { Animation, Center } from '@htmlplus/react';\nconst AnimationDuration = () => {\n  return (\n    <Center>\n      <Animation\n        duration=\"2500\"\n        iterations=\"Infinity\"\n        name=\"fade-in\"\n        run\n      ></Animation>\n    </Center>\n  );\n};\nexport default AnimationDuration;\n",
@@ -168,7 +168,7 @@ export const examples: any[] = [
   },
   {
     "key": "duration",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "animation",
     "detail": {
       "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\nconst AnimationDuration = () => {\n  return (\n    <plus-center>\n      <plus-animation\n        duration=\"2500\"\n        iterations=\"Infinity\"\n        name=\"fade-in\"\n        run\n      ></plus-animation>\n    </plus-center>\n  );\n};\nexport default AnimationDuration;\n",
@@ -226,7 +226,7 @@ export const examples: any[] = [
   },
   {
     "key": "easing",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "animation",
     "detail": {
       "script": "import { Animation, Grid } from '@htmlplus/react';\nimport '@htmlplus/core/animation/names/fading-exits/fade-out-down.js';\nconst AnimationEasing = () => {\n  return (\n    <>\n      <Grid justifyContent=\"evenly\" gutter=\"md\">\n        <Grid.Item xs=\"12\" sm=\"auto\">\n          <Animation\n            easing=\"linear\"\n            iterations=\"Infinity\"\n            name=\"fade-out-down\"\n            run\n          ></Animation>\n        </Grid.Item>\n        <Grid.Item xs=\"12\" sm=\"auto\">\n          <Animation\n            easing=\"ease-in\"\n            iterations=\"Infinity\"\n            name=\"fade-out-down\"\n            run\n          ></Animation>\n        </Grid.Item>\n        <Grid.Item xs=\"12\" sm=\"auto\">\n          <Animation\n            easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n            iterations=\"Infinity\"\n            name=\"fade-out-down\"\n            run\n          ></Animation>\n        </Grid.Item>\n      </Grid>\n      <br />\n      <br />\n      <br />\n    </>\n  );\n};\nexport default AnimationEasing;\n",
@@ -235,7 +235,7 @@ export const examples: any[] = [
   },
   {
     "key": "easing",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "animation",
     "detail": {
       "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/animation/names/fading-exits/fade-out-down.js';\nconst AnimationEasing = () => {\n  return (\n    <>\n      <plus-grid justify-content=\"evenly\" gutter=\"md\">\n        <plus-grid-item xs=\"12\" sm=\"auto\">\n          <plus-animation\n            easing=\"linear\"\n            iterations=\"Infinity\"\n            name=\"fade-out-down\"\n            run\n          ></plus-animation>\n        </plus-grid-item>\n        <plus-grid-item xs=\"12\" sm=\"auto\">\n          <plus-animation\n            easing=\"ease-in\"\n            iterations=\"Infinity\"\n            name=\"fade-out-down\"\n            run\n          ></plus-animation>\n        </plus-grid-item>\n        <plus-grid-item xs=\"12\" sm=\"auto\">\n          <plus-animation\n            easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n            iterations=\"Infinity\"\n            name=\"fade-out-down\"\n            run\n          ></plus-animation>\n        </plus-grid-item>\n      </plus-grid>\n      <br />\n      <br />\n      <br />\n    </>\n  );\n};\nexport default AnimationEasing;\n",
@@ -293,7 +293,7 @@ export const examples: any[] = [
   },
   {
     "key": "intersection",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "animation",
     "detail": {
       "script": "import { useState } from 'react';\nimport { Animation, Intersection } from '@htmlplus/react';\nimport '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';\nconst AnimationIntersection = () => {\n  const [run, setRun] = useState(false);\n  const onChange = (event) => {\n    setRun(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <Intersection onChange={(event) => onChange(event)}>\n        <Animation name=\"heart-beat\" run={run}></Animation>\n      </Intersection>\n    </div>\n  );\n};\nexport default AnimationIntersection;\n",
@@ -302,7 +302,7 @@ export const examples: any[] = [
   },
   {
     "key": "intersection",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "animation",
     "detail": {
       "script": "import { useState } from 'react';\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/animation/names/attention-seekers/heart-beat.js';\nconst AnimationIntersection = () => {\n  const [run, setRun] = useState(false);\n  const onChange = (event) => {\n    setRun(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <plus-intersection onplus-change={(event) => onChange(event)}>\n        <plus-animation name=\"heart-beat\" run={run}></plus-animation>\n      </plus-intersection>\n    </div>\n  );\n};\nexport default AnimationIntersection;\n",
@@ -360,7 +360,7 @@ export const examples: any[] = [
   },
   {
     "key": "keyframes",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "animation",
     "detail": {
       "script": "import { Animation } from '@htmlplus/react';\nconst AnimationKeyframes = () => {\n  let keyframes = [\n    {\n      transform: 'scale(0) rotate(0deg) translate(-50%, -50%)',\n      opacity: '1'\n    },\n    {\n      transform: 'scale(7) rotate(960deg) translate(-50%, -50%)',\n      opacity: '0'\n    }\n  ];\n  return (\n    <div className=\"root\">\n      <Animation\n        duration=\"5000\"\n        iterations=\"Infinity\"\n        keyframes={keyframes}\n        run\n      ></Animation>\n    </div>\n  );\n};\nexport default AnimationKeyframes;\n",
@@ -369,7 +369,7 @@ export const examples: any[] = [
   },
   {
     "key": "keyframes",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "animation",
     "detail": {
       "script": "import '@htmlplus/core/animation.js';\nconst AnimationKeyframes = () => {\n  let keyframes = [\n    {\n      transform: 'scale(0) rotate(0deg) translate(-50%, -50%)',\n      opacity: '1'\n    },\n    {\n      transform: 'scale(7) rotate(960deg) translate(-50%, -50%)',\n      opacity: '0'\n    }\n  ];\n  return (\n    <div className=\"root\">\n      <plus-animation\n        duration=\"5000\"\n        iterations=\"Infinity\"\n        keyframes={keyframes}\n        run\n      ></plus-animation>\n    </div>\n  );\n};\nexport default AnimationKeyframes;\n",
@@ -427,7 +427,7 @@ export const examples: any[] = [
   },
   {
     "key": "methods",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "animation",
     "detail": {
       "script": "import { Animation, Center } from '@htmlplus/react';\nconst AnimationMethods = () => {\n  return (\n    <>\n      <Center>\n        <Animation id=\"animation4\" iterations=\"3\" name=\"fade-out\"></Animation>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => window.animation4.cancel()}>Cancel</button>\n        <button onClick={() => window.animation4.finish()}>Finish</button>\n        <button onClick={() => window.animation4.pause()}>Pause</button>\n        <button onClick={() => window.animation4.play()}>Play</button>\n      </Center>\n    </>\n  );\n};\nexport default AnimationMethods;\n",
@@ -436,7 +436,7 @@ export const examples: any[] = [
   },
   {
     "key": "methods",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "animation",
     "detail": {
       "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/center.js';\nconst AnimationMethods = () => {\n  return (\n    <>\n      <plus-center>\n        <plus-animation\n          id=\"animation4\"\n          iterations=\"3\"\n          name=\"fade-out\"\n        ></plus-animation>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => window.animation4.cancel()}>Cancel</button>\n        <button onClick={() => window.animation4.finish()}>Finish</button>\n        <button onClick={() => window.animation4.pause()}>Pause</button>\n        <button onClick={() => window.animation4.play()}>Play</button>\n      </plus-center>\n    </>\n  );\n};\nexport default AnimationMethods;\n",
@@ -494,7 +494,7 @@ export const examples: any[] = [
   },
   {
     "key": "name",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "animation",
     "detail": {
       "script": "import { Animation, Grid } from '@htmlplus/react';\nimport '@htmlplus/core/animation/names/flippers/flip-in-x.js';\nimport '@htmlplus/core/animation/names/flippers/flip-in-y.js';\nconst AnimationName = () => {\n  return (\n    <Grid justifyContent=\"evenly\" gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Animation iterations=\"Infinity\" name=\"flip-in-x\" run></Animation>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Animation iterations=\"Infinity\" name=\"flip-in-y\" run></Animation>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default AnimationName;\n",
@@ -503,7 +503,7 @@ export const examples: any[] = [
   },
   {
     "key": "name",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "animation",
     "detail": {
       "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/animation/names/flippers/flip-in-x.js';\nimport '@htmlplus/core/animation/names/flippers/flip-in-y.js';\nconst AnimationName = () => {\n  return (\n    <plus-grid justify-content=\"evenly\" gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"auto\">\n        <plus-animation\n          iterations=\"Infinity\"\n          name=\"flip-in-x\"\n          run\n        ></plus-animation>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"auto\">\n        <plus-animation\n          iterations=\"Infinity\"\n          name=\"flip-in-y\"\n          run\n        ></plus-animation>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default AnimationName;\n",
@@ -563,7 +563,7 @@ export const examples: any[] = [
   },
   {
     "key": "register-a-custom-name",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "animation",
     "detail": {
       "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
@@ -573,7 +573,7 @@ export const examples: any[] = [
   },
   {
     "key": "register-a-custom-name",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "animation",
     "detail": {
       "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
@@ -634,7 +634,7 @@ export const examples: any[] = [
   },
   {
     "key": "card",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "aspect-ratio",
     "detail": {
       "script": "import { AspectRatio, Card, Center } from '@htmlplus/react';\nconst AspectRatioCard = () => {\n  return (\n    <Center>\n      <Card outlined>\n        <Card.Body>\n          <AspectRatio value=\"16/9\">\n            <div className=\"placeholder\"></div>\n          </AspectRatio>\n          <h3>Title</h3>\n          <p>Description of the card.</p>\n        </Card.Body>\n      </Card>\n    </Center>\n  );\n};\nexport default AspectRatioCard;\n",
@@ -643,7 +643,7 @@ export const examples: any[] = [
   },
   {
     "key": "card",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "aspect-ratio",
     "detail": {
       "script": "import '@htmlplus/core/aspect-ratio.js';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/center.js';\nconst AspectRatioCard = () => {\n  return (\n    <plus-center>\n      <plus-card outlined>\n        <plus-card-body>\n          <plus-aspect-ratio value=\"16/9\">\n            <div className=\"placeholder\"></div>\n          </plus-aspect-ratio>\n          <h3>Title</h3>\n          <p>Description of the card.</p>\n        </plus-card-body>\n      </plus-card>\n    </plus-center>\n  );\n};\nexport default AspectRatioCard;\n",
@@ -701,7 +701,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "aspect-ratio",
     "detail": {
       "script": "import { AspectRatio, Card } from '@htmlplus/react';\nconst AspectRatioDefault = () => {\n  return (\n    <AspectRatio value=\"16/9\">\n      <Card tile>\n        <Card.Body>\n          This box will always be 16/9 (unless you put more stuff in it)\n        </Card.Body>\n      </Card>\n    </AspectRatio>\n  );\n};\nexport default AspectRatioDefault;\n",
@@ -710,7 +710,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "aspect-ratio",
     "detail": {
       "script": "import '@htmlplus/core/aspect-ratio.js';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\nconst AspectRatioDefault = () => {\n  return (\n    <plus-aspect-ratio value=\"16/9\">\n      <plus-card tile>\n        <plus-card-body>\n          This box will always be 16/9 (unless you put more stuff in it)\n        </plus-card-body>\n      </plus-card>\n    </plus-aspect-ratio>\n  );\n};\nexport default AspectRatioDefault;\n",
@@ -766,7 +766,7 @@ export const examples: any[] = [
   },
   {
     "key": "image",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "aspect-ratio",
     "detail": {
       "script": "import { AspectRatio } from '@htmlplus/react';\nconst AspectRatioImage = () => {\n  return (\n    <AspectRatio value=\"18/6\">\n      <img\n        src=\"http://placeimg.com/640/640/nature\"\n        style={{\n          'object-fit': 'cover'\n        }}\n      />\n    </AspectRatio>\n  );\n};\nexport default AspectRatioImage;\n"
@@ -774,7 +774,7 @@ export const examples: any[] = [
   },
   {
     "key": "image",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "aspect-ratio",
     "detail": {
       "script": "import '@htmlplus/core/aspect-ratio.js';\nconst AspectRatioImage = () => {\n  return (\n    <plus-aspect-ratio value=\"18/6\">\n      <img\n        src=\"http://placeimg.com/640/640/nature\"\n        style={{\n          'object-fit': 'cover'\n        }}\n      />\n    </plus-aspect-ratio>\n  );\n};\nexport default AspectRatioImage;\n"
@@ -827,7 +827,7 @@ export const examples: any[] = [
   },
   {
     "key": "map",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "aspect-ratio",
     "detail": {
       "script": "import { AspectRatio } from '@htmlplus/react';\nconst AspectRatioMap = () => {\n  return (\n    <AspectRatio value=\"4/3\">\n      <iframe src=\"https://www.google.com/maps/embed\"></iframe>\n    </AspectRatio>\n  );\n};\nexport default AspectRatioMap;\n"
@@ -835,7 +835,7 @@ export const examples: any[] = [
   },
   {
     "key": "map",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "aspect-ratio",
     "detail": {
       "script": "import '@htmlplus/core/aspect-ratio.js';\nconst AspectRatioMap = () => {\n  return (\n    <plus-aspect-ratio value=\"4/3\">\n      <iframe src=\"https://www.google.com/maps/embed\"></iframe>\n    </plus-aspect-ratio>\n  );\n};\nexport default AspectRatioMap;\n"
@@ -890,7 +890,7 @@ export const examples: any[] = [
   },
   {
     "key": "more",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "aspect-ratio",
     "detail": {
       "script": "import { AspectRatio, Grid } from '@htmlplus/react';\nconst AspectRatioMore = () => {\n  return (\n    <Grid>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Grid>\n          <Grid.Item xs=\"12\">\n            <AspectRatio value=\"3/2\" className=\"ratio-one\">\n              <div className=\"box one\">3/2</div>\n            </AspectRatio>\n          </Grid.Item>\n          <Grid.Item xs=\"12\">\n            <AspectRatio value=\"16/9\">\n              <div className=\"box two\">16/9</div>\n            </AspectRatio>\n          </Grid.Item>\n        </Grid>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Grid>\n          <Grid.Item xs=\"6\">\n            <AspectRatio value=\"1\">\n              <div className=\"box three\">1/1</div>\n            </AspectRatio>\n          </Grid.Item>\n          <Grid.Item xs=\"6\" alignSelf=\"end\">\n            <AspectRatio value=\"4/3\">\n              <div className=\"box four\">4/3</div>\n            </AspectRatio>\n          </Grid.Item>\n          <Grid.Item xs=\"12\">\n            <AspectRatio value=\"18/6\">\n              <div className=\"box five\">18/6</div>\n            </AspectRatio>\n          </Grid.Item>\n        </Grid>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default AspectRatioMore;\n",
@@ -899,7 +899,7 @@ export const examples: any[] = [
   },
   {
     "key": "more",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "aspect-ratio",
     "detail": {
       "script": "import '@htmlplus/core/aspect-ratio.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst AspectRatioMore = () => {\n  return (\n    <plus-grid>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-grid>\n          <plus-grid-item xs=\"12\">\n            <plus-aspect-ratio value=\"3/2\" className=\"ratio-one\">\n              <div className=\"box one\">3/2</div>\n            </plus-aspect-ratio>\n          </plus-grid-item>\n          <plus-grid-item xs=\"12\">\n            <plus-aspect-ratio value=\"16/9\">\n              <div className=\"box two\">16/9</div>\n            </plus-aspect-ratio>\n          </plus-grid-item>\n        </plus-grid>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-grid>\n          <plus-grid-item xs=\"6\">\n            <plus-aspect-ratio value=\"1\">\n              <div className=\"box three\">1/1</div>\n            </plus-aspect-ratio>\n          </plus-grid-item>\n          <plus-grid-item xs=\"6\" align-self=\"end\">\n            <plus-aspect-ratio value=\"4/3\">\n              <div className=\"box four\">4/3</div>\n            </plus-aspect-ratio>\n          </plus-grid-item>\n          <plus-grid-item xs=\"12\">\n            <plus-aspect-ratio value=\"18/6\">\n              <div className=\"box five\">18/6</div>\n            </plus-aspect-ratio>\n          </plus-grid-item>\n        </plus-grid>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default AspectRatioMore;\n",
@@ -955,7 +955,7 @@ export const examples: any[] = [
   },
   {
     "key": "video",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "aspect-ratio",
     "detail": {
       "script": "import { AspectRatio } from '@htmlplus/react';\nconst AspectRatioVideo = () => {\n  return (\n    <AspectRatio value=\"16/9\">\n      <iframe src=\"https://www.youtube.com/embed/tgbNymZ7vqY\"></iframe>\n    </AspectRatio>\n  );\n};\nexport default AspectRatioVideo;\n"
@@ -963,7 +963,7 @@ export const examples: any[] = [
   },
   {
     "key": "video",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "aspect-ratio",
     "detail": {
       "script": "import '@htmlplus/core/aspect-ratio.js';\nconst AspectRatioVideo = () => {\n  return (\n    <plus-aspect-ratio value=\"16/9\">\n      <iframe src=\"https://www.youtube.com/embed/tgbNymZ7vqY\"></iframe>\n    </plus-aspect-ratio>\n  );\n};\nexport default AspectRatioVideo;\n"
@@ -1018,7 +1018,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "avatar",
     "detail": {
       "script": "import { Avatar } from '@htmlplus/react';\nconst AvatarDefault = () => {\n  return (\n    <div className=\"center\">\n      <Avatar></Avatar>\n    </div>\n  );\n};\nexport default AvatarDefault;\n",
@@ -1027,7 +1027,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "avatar",
     "detail": {
       "script": "import '@htmlplus/core/avatar.js';\nconst AvatarDefault = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar></plus-avatar>\n    </div>\n  );\n};\nexport default AvatarDefault;\n",
@@ -1085,7 +1085,7 @@ export const examples: any[] = [
   },
   {
     "key": "group",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "avatar",
     "detail": {
       "script": "import { Avatar } from '@htmlplus/react';\nconst AvatarGroup = () => {\n  return (\n    <div className=\"center\">\n      <Avatar.Group>\n        <Avatar>\n          <img src=\"http://placeimg.com/91/91/people\" />\n        </Avatar>\n        <Avatar>\n          <img src=\"http://placeimg.com/92/92/people\" />\n        </Avatar>\n        <Avatar>\n          <img src=\"http://placeimg.com/93/93/people\" />\n        </Avatar>\n      </Avatar.Group>\n    </div>\n  );\n};\nexport default AvatarGroup;\n",
@@ -1094,7 +1094,7 @@ export const examples: any[] = [
   },
   {
     "key": "group",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "avatar",
     "detail": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nconst AvatarGroup = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar-group>\n        <plus-avatar>\n          <img src=\"http://placeimg.com/91/91/people\" />\n        </plus-avatar>\n        <plus-avatar>\n          <img src=\"http://placeimg.com/92/92/people\" />\n        </plus-avatar>\n        <plus-avatar>\n          <img src=\"http://placeimg.com/93/93/people\" />\n        </plus-avatar>\n      </plus-avatar-group>\n    </div>\n  );\n};\nexport default AvatarGroup;\n",
@@ -1152,7 +1152,7 @@ export const examples: any[] = [
   },
   {
     "key": "hoverable",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "avatar",
     "detail": {
       "script": "import { Avatar } from '@htmlplus/react';\nconst AvatarHoverable = () => {\n  return (\n    <div className=\"center\">\n      <Avatar.Group stacked hoverable>\n        <Avatar shape=\"circle\">\n          <img src=\"http://placeimg.com/97/97/people\" />\n        </Avatar>\n        <Avatar shape=\"circle\">\n          <img src=\"http://placeimg.com/98/98/people\" />\n        </Avatar>\n        <Avatar shape=\"circle\">\n          <img src=\"http://placeimg.com/99/99/people\" />\n        </Avatar>\n        <Avatar shape=\"circle\">\n          <img src=\"http://placeimg.com/99/99/people\" />\n        </Avatar>\n        <Avatar shape=\"circle\">+2</Avatar>\n      </Avatar.Group>\n    </div>\n  );\n};\nexport default AvatarHoverable;\n",
@@ -1161,7 +1161,7 @@ export const examples: any[] = [
   },
   {
     "key": "hoverable",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "avatar",
     "detail": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nconst AvatarHoverable = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar-group stacked hoverable>\n        <plus-avatar shape=\"circle\">\n          <img src=\"http://placeimg.com/97/97/people\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"http://placeimg.com/98/98/people\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"http://placeimg.com/99/99/people\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"http://placeimg.com/99/99/people\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">+2</plus-avatar>\n      </plus-avatar-group>\n    </div>\n  );\n};\nexport default AvatarHoverable;\n",
@@ -1219,7 +1219,7 @@ export const examples: any[] = [
   },
   {
     "key": "icon",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "avatar",
     "detail": {
       "script": "import { Avatar, Icon } from '@htmlplus/react';\nconst AvatarIcon = () => {\n  return (\n    <div className=\"center\">\n      <Avatar>\n        <Icon>user</Icon>\n      </Avatar>\n    </div>\n  );\n};\nexport default AvatarIcon;\n",
@@ -1228,7 +1228,7 @@ export const examples: any[] = [
   },
   {
     "key": "icon",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "avatar",
     "detail": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/icon.js';\nconst AvatarIcon = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar>\n        <plus-icon>user</plus-icon>\n      </plus-avatar>\n    </div>\n  );\n};\nexport default AvatarIcon;\n",
@@ -1286,7 +1286,7 @@ export const examples: any[] = [
   },
   {
     "key": "image",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "avatar",
     "detail": {
       "script": "import { Avatar } from '@htmlplus/react';\nconst AvatarImage = () => {\n  return (\n    <div className=\"center\">\n      <Avatar>\n        <img src=\"http://placeimg.com/90/90/people\" />\n      </Avatar>\n    </div>\n  );\n};\nexport default AvatarImage;\n",
@@ -1295,7 +1295,7 @@ export const examples: any[] = [
   },
   {
     "key": "image",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "avatar",
     "detail": {
       "script": "import '@htmlplus/core/avatar.js';\nconst AvatarImage = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar>\n        <img src=\"http://placeimg.com/90/90/people\" />\n      </plus-avatar>\n    </div>\n  );\n};\nexport default AvatarImage;\n",
@@ -1353,7 +1353,7 @@ export const examples: any[] = [
   },
   {
     "key": "link",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "avatar",
     "detail": {
       "script": "import { Avatar } from '@htmlplus/react';\nconst AvatarLink = () => {\n  return (\n    <div className=\"center\">\n      <Avatar>\n        <img src=\"http://placeimg.com/97/97/people\" />\n        <a href=\"http://placeimg.com/97/97/people\" target=\"_blank\"></a>\n      </Avatar>\n    </div>\n  );\n};\nexport default AvatarLink;\n",
@@ -1362,7 +1362,7 @@ export const examples: any[] = [
   },
   {
     "key": "link",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "avatar",
     "detail": {
       "script": "import '@htmlplus/core/avatar.js';\nconst AvatarLink = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar>\n        <img src=\"http://placeimg.com/97/97/people\" />\n        <a href=\"http://placeimg.com/97/97/people\" target=\"_blank\"></a>\n      </plus-avatar>\n    </div>\n  );\n};\nexport default AvatarLink;\n",
@@ -1420,7 +1420,7 @@ export const examples: any[] = [
   },
   {
     "key": "shape",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "avatar",
     "detail": {
       "script": "import { Avatar } from '@htmlplus/react';\nconst AvatarShape = () => {\n  return (\n    <div className=\"center\">\n      <Avatar.Group>\n        <Avatar shape=\"circle\">C</Avatar>\n        <Avatar shape=\"round\">R</Avatar>\n        <Avatar shape=\"tile\">T</Avatar>\n      </Avatar.Group>\n    </div>\n  );\n};\nexport default AvatarShape;\n",
@@ -1429,7 +1429,7 @@ export const examples: any[] = [
   },
   {
     "key": "shape",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "avatar",
     "detail": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nconst AvatarShape = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar-group>\n        <plus-avatar shape=\"circle\">C</plus-avatar>\n        <plus-avatar shape=\"round\">R</plus-avatar>\n        <plus-avatar shape=\"tile\">T</plus-avatar>\n      </plus-avatar-group>\n    </div>\n  );\n};\nexport default AvatarShape;\n",
@@ -1487,7 +1487,7 @@ export const examples: any[] = [
   },
   {
     "key": "size",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "avatar",
     "detail": {
       "script": "import { Avatar } from '@htmlplus/react';\nconst AvatarSize = () => {\n  return (\n    <div className=\"center\">\n      <Avatar.Group>\n        <Avatar size=\"xs\">xs</Avatar>\n        <Avatar size=\"sm\">sm</Avatar>\n        <Avatar size=\"md\">md</Avatar>\n        <Avatar size=\"lg\">lg</Avatar>\n        <Avatar size=\"xl\">xl</Avatar>\n      </Avatar.Group>\n    </div>\n  );\n};\nexport default AvatarSize;\n",
@@ -1496,7 +1496,7 @@ export const examples: any[] = [
   },
   {
     "key": "size",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "avatar",
     "detail": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nconst AvatarSize = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar-group>\n        <plus-avatar size=\"xs\">xs</plus-avatar>\n        <plus-avatar size=\"sm\">sm</plus-avatar>\n        <plus-avatar size=\"md\">md</plus-avatar>\n        <plus-avatar size=\"lg\">lg</plus-avatar>\n        <plus-avatar size=\"xl\">xl</plus-avatar>\n      </plus-avatar-group>\n    </div>\n  );\n};\nexport default AvatarSize;\n",
@@ -1554,7 +1554,7 @@ export const examples: any[] = [
   },
   {
     "key": "stacked",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "avatar",
     "detail": {
       "script": "import { Avatar } from '@htmlplus/react';\nconst AvatarStacked = () => {\n  return (\n    <div className=\"center\">\n      <Avatar.Group stacked>\n        <Avatar shape=\"circle\">\n          <img src=\"http://placeimg.com/94/94/people\" />\n        </Avatar>\n        <Avatar shape=\"circle\">\n          <img src=\"http://placeimg.com/95/95/people\" />\n        </Avatar>\n        <Avatar shape=\"circle\">\n          <img src=\"http://placeimg.com/96/96/people\" />\n        </Avatar>\n      </Avatar.Group>\n    </div>\n  );\n};\nexport default AvatarStacked;\n",
@@ -1563,7 +1563,7 @@ export const examples: any[] = [
   },
   {
     "key": "stacked",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "avatar",
     "detail": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nconst AvatarStacked = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar-group stacked>\n        <plus-avatar shape=\"circle\">\n          <img src=\"http://placeimg.com/94/94/people\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"http://placeimg.com/95/95/people\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"http://placeimg.com/96/96/people\" />\n        </plus-avatar>\n      </plus-avatar-group>\n    </div>\n  );\n};\nexport default AvatarStacked;\n",
@@ -1621,7 +1621,7 @@ export const examples: any[] = [
   },
   {
     "key": "svg",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "avatar",
     "detail": {
       "script": "import { Avatar } from '@htmlplus/react';\nconst AvatarSvg = () => {\n  return (\n    <div className=\"center\">\n      <Avatar>\n        <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n          <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n          <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n          <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n        </svg>\n      </Avatar>\n    </div>\n  );\n};\nexport default AvatarSvg;\n",
@@ -1630,7 +1630,7 @@ export const examples: any[] = [
   },
   {
     "key": "svg",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "avatar",
     "detail": {
       "script": "import '@htmlplus/core/avatar.js';\nconst AvatarSvg = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar>\n        <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n          <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n          <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n          <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n        </svg>\n      </plus-avatar>\n    </div>\n  );\n};\nexport default AvatarSvg;\n",
@@ -1688,7 +1688,7 @@ export const examples: any[] = [
   },
   {
     "key": "text",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "avatar",
     "detail": {
       "script": "import { Avatar } from '@htmlplus/react';\nconst AvatarText = () => {\n  return (\n    <div className=\"center\">\n      <Avatar>MA</Avatar>\n    </div>\n  );\n};\nexport default AvatarText;\n",
@@ -1697,7 +1697,7 @@ export const examples: any[] = [
   },
   {
     "key": "text",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "avatar",
     "detail": {
       "script": "import '@htmlplus/core/avatar.js';\nconst AvatarText = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar>MA</plus-avatar>\n    </div>\n  );\n};\nexport default AvatarText;\n",
@@ -1755,7 +1755,7 @@ export const examples: any[] = [
   },
   {
     "key": "custom-expander",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "breadcrumb",
     "detail": {
       "script": "import { Breadcrumb } from '@htmlplus/react';\nconst BreadcrumbCustomExpander = () => {\n  return (\n    <div className=\"center\">\n      <Breadcrumb separator=\"-\" max={2} expanderText=\"Show more\">\n        <svg slot=\"expander\" viewBox=\"0 0 16 16\">\n          <path d=\"M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z\" />\n        </svg>\n        <a href=\"#\">HTMLPLUS</a>\n        <a href=\"#\">Core</a>\n        <a href=\"#\">UI Components</a>\n        <a href=\"#\">Breadcrumb</a>\n      </Breadcrumb>\n    </div>\n  );\n};\nexport default BreadcrumbCustomExpander;\n",
@@ -1764,7 +1764,7 @@ export const examples: any[] = [
   },
   {
     "key": "custom-expander",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "breadcrumb",
     "detail": {
       "script": "import '@htmlplus/core/breadcrumb.js';\nconst BreadcrumbCustomExpander = () => {\n  return (\n    <div className=\"center\">\n      <plus-breadcrumb separator=\"-\" max={2} expander-text=\"Show more\">\n        <svg slot=\"expander\" viewBox=\"0 0 16 16\">\n          <path d=\"M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z\" />\n        </svg>\n        <a href=\"#\">HTMLPLUS</a>\n        <a href=\"#\">Core</a>\n        <a href=\"#\">UI Components</a>\n        <a href=\"#\">Breadcrumb</a>\n      </plus-breadcrumb>\n    </div>\n  );\n};\nexport default BreadcrumbCustomExpander;\n",
@@ -1822,7 +1822,7 @@ export const examples: any[] = [
   },
   {
     "key": "custom-separator",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "breadcrumb",
     "detail": {
       "script": "import { Breadcrumb } from '@htmlplus/react';\nconst BreadcrumbCustomSeparator = () => {\n  return (\n    <div className=\"center\">\n      <Breadcrumb>\n        <svg slot=\"separator\" viewBox=\"0 0 16 16\">\n          <path d=\"m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z\" />\n        </svg>\n        <a href=\"#\">First</a>\n        <a href=\"#\">Second</a>\n        <a href=\"#\">Third</a>\n        <a href=\"#\">Fourth</a>\n        <a href=\"#\">Fifth</a>\n      </Breadcrumb>\n    </div>\n  );\n};\nexport default BreadcrumbCustomSeparator;\n",
@@ -1831,7 +1831,7 @@ export const examples: any[] = [
   },
   {
     "key": "custom-separator",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "breadcrumb",
     "detail": {
       "script": "import '@htmlplus/core/breadcrumb.js';\nconst BreadcrumbCustomSeparator = () => {\n  return (\n    <div className=\"center\">\n      <plus-breadcrumb>\n        <svg slot=\"separator\" viewBox=\"0 0 16 16\">\n          <path d=\"m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z\" />\n        </svg>\n        <a href=\"#\">First</a>\n        <a href=\"#\">Second</a>\n        <a href=\"#\">Third</a>\n        <a href=\"#\">Fourth</a>\n        <a href=\"#\">Fifth</a>\n      </plus-breadcrumb>\n    </div>\n  );\n};\nexport default BreadcrumbCustomSeparator;\n",
@@ -1889,7 +1889,7 @@ export const examples: any[] = [
   },
   {
     "key": "customized",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "breadcrumb",
     "detail": {
       "script": "import { Breadcrumb } from '@htmlplus/react';\nconst BreadcrumbCustomized = () => {\n  return (\n    <Breadcrumb max={2}>\n      <svg slot=\"separator\" viewBox=\"0 0 16 16\">\n        <path d=\"M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z\" />\n      </svg>\n      <a href=\"#\">HTMLPLUS</a>\n      <a href=\"#\">Core</a>\n      <a href=\"#\">UI Components</a>\n      <a href=\"#\">Breadcrumb</a>\n    </Breadcrumb>\n  );\n};\nexport default BreadcrumbCustomized;\n",
@@ -1898,7 +1898,7 @@ export const examples: any[] = [
   },
   {
     "key": "customized",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "breadcrumb",
     "detail": {
       "script": "import '@htmlplus/core/breadcrumb.js';\nconst BreadcrumbCustomized = () => {\n  return (\n    <plus-breadcrumb max={2}>\n      <svg slot=\"separator\" viewBox=\"0 0 16 16\">\n        <path d=\"M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z\" />\n      </svg>\n      <a href=\"#\">HTMLPLUS</a>\n      <a href=\"#\">Core</a>\n      <a href=\"#\">UI Components</a>\n      <a href=\"#\">Breadcrumb</a>\n    </plus-breadcrumb>\n  );\n};\nexport default BreadcrumbCustomized;\n",
@@ -1956,7 +1956,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "breadcrumb",
     "detail": {
       "script": "import { Breadcrumb } from '@htmlplus/react';\nconst BreadcrumbDefault = () => {\n  return (\n    <div className=\"center\">\n      <Breadcrumb separator=\"/\">\n        <a href=\"#\">HTMLPLUS</a>\n        <a href=\"#\">Core</a>\n        <a href=\"#\">UI Components</a>\n        <span>Breadcrumb</span>\n      </Breadcrumb>\n    </div>\n  );\n};\nexport default BreadcrumbDefault;\n",
@@ -1965,7 +1965,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "breadcrumb",
     "detail": {
       "script": "import '@htmlplus/core/breadcrumb.js';\nconst BreadcrumbDefault = () => {\n  return (\n    <div className=\"center\">\n      <plus-breadcrumb separator=\"/\">\n        <a href=\"#\">HTMLPLUS</a>\n        <a href=\"#\">Core</a>\n        <a href=\"#\">UI Components</a>\n        <span>Breadcrumb</span>\n      </plus-breadcrumb>\n    </div>\n  );\n};\nexport default BreadcrumbDefault;\n",
@@ -2023,7 +2023,7 @@ export const examples: any[] = [
   },
   {
     "key": "limitation",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "breadcrumb",
     "detail": {
       "script": "import { Breadcrumb } from '@htmlplus/react';\nconst BreadcrumbLimitation = () => {\n  return (\n    <>\n      <div className=\"container\">\n        <Breadcrumb separator=\"/\" max={4} offset={0}>\n          <a href=\"#\">Item 1</a>\n          <a href=\"#\">Item 2</a>\n          <a href=\"#\">Item 3</a>\n          <a href=\"#\">Item 4</a>\n          <a href=\"#\">Item 5</a>\n          <a href=\"#\">Item 6</a>\n          <a href=\"#\">Item 7</a>\n          <a href=\"#\">Item 8</a>\n        </Breadcrumb>\n      </div>\n      <div className=\"container\">\n        <Breadcrumb separator=\"/\" max={4} offset={2}>\n          <a href=\"#\">Item 1</a>\n          <a href=\"#\">Item 2</a>\n          <a href=\"#\">Item 3</a>\n          <a href=\"#\">Item 4</a>\n          <a href=\"#\">Item 5</a>\n          <a href=\"#\">Item 6</a>\n          <a href=\"#\">Item 7</a>\n          <a href=\"#\">Item 8</a>\n        </Breadcrumb>\n      </div>\n      <div className=\"container\">\n        <Breadcrumb separator=\"/\" max={4} offset={-1}>\n          <a href=\"#\">Item 1</a>\n          <a href=\"#\">Item 2</a>\n          <a href=\"#\">Item 3</a>\n          <a href=\"#\">Item 4</a>\n          <a href=\"#\">Item 5</a>\n          <a href=\"#\">Item 6</a>\n          <a href=\"#\">Item 7</a>\n          <a href=\"#\">Item 8</a>\n        </Breadcrumb>\n      </div>\n    </>\n  );\n};\nexport default BreadcrumbLimitation;\n",
@@ -2032,7 +2032,7 @@ export const examples: any[] = [
   },
   {
     "key": "limitation",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "breadcrumb",
     "detail": {
       "script": "import '@htmlplus/core/breadcrumb.js';\nconst BreadcrumbLimitation = () => {\n  return (\n    <>\n      <div className=\"container\">\n        <plus-breadcrumb separator=\"/\" max={4} offset={0}>\n          <a href=\"#\">Item 1</a>\n          <a href=\"#\">Item 2</a>\n          <a href=\"#\">Item 3</a>\n          <a href=\"#\">Item 4</a>\n          <a href=\"#\">Item 5</a>\n          <a href=\"#\">Item 6</a>\n          <a href=\"#\">Item 7</a>\n          <a href=\"#\">Item 8</a>\n        </plus-breadcrumb>\n      </div>\n      <div className=\"container\">\n        <plus-breadcrumb separator=\"/\" max={4} offset={2}>\n          <a href=\"#\">Item 1</a>\n          <a href=\"#\">Item 2</a>\n          <a href=\"#\">Item 3</a>\n          <a href=\"#\">Item 4</a>\n          <a href=\"#\">Item 5</a>\n          <a href=\"#\">Item 6</a>\n          <a href=\"#\">Item 7</a>\n          <a href=\"#\">Item 8</a>\n        </plus-breadcrumb>\n      </div>\n      <div className=\"container\">\n        <plus-breadcrumb separator=\"/\" max={4} offset={-1}>\n          <a href=\"#\">Item 1</a>\n          <a href=\"#\">Item 2</a>\n          <a href=\"#\">Item 3</a>\n          <a href=\"#\">Item 4</a>\n          <a href=\"#\">Item 5</a>\n          <a href=\"#\">Item 6</a>\n          <a href=\"#\">Item 7</a>\n          <a href=\"#\">Item 8</a>\n        </plus-breadcrumb>\n      </div>\n    </>\n  );\n};\nexport default BreadcrumbLimitation;\n",
@@ -2090,7 +2090,7 @@ export const examples: any[] = [
   },
   {
     "key": "separator",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "breadcrumb",
     "detail": {
       "script": "import { Breadcrumb } from '@htmlplus/react';\nconst BreadcrumbSeparator = () => {\n  return (\n    <div className=\"center\">\n      <Breadcrumb separator=\"-\">\n        <a href=\"#\">First</a>\n        <a href=\"#\">Second</a>\n        <a href=\"#\">Third</a>\n        <a href=\"#\">Fourth</a>\n        <a href=\"#\">Fifth</a>\n      </Breadcrumb>\n    </div>\n  );\n};\nexport default BreadcrumbSeparator;\n",
@@ -2099,7 +2099,7 @@ export const examples: any[] = [
   },
   {
     "key": "separator",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "breadcrumb",
     "detail": {
       "script": "import '@htmlplus/core/breadcrumb.js';\nconst BreadcrumbSeparator = () => {\n  return (\n    <div className=\"center\">\n      <plus-breadcrumb separator=\"-\">\n        <a href=\"#\">First</a>\n        <a href=\"#\">Second</a>\n        <a href=\"#\">Third</a>\n        <a href=\"#\">Fourth</a>\n        <a href=\"#\">Fifth</a>\n      </plus-breadcrumb>\n    </div>\n  );\n};\nexport default BreadcrumbSeparator;\n",
@@ -2157,7 +2157,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "browse",
     "detail": {
       "script": "import { Browse } from '@htmlplus/react';\nconst BrowseDefault = () => {\n  const onChange = (event) => {\n    const name = event.detail.files[0].file.name;\n    alert(`File '${name}' selected.`);\n  };\n  return <Browse droppable onChange={(event) => onChange(event)}></Browse>;\n};\nexport default BrowseDefault;\n",
@@ -2166,7 +2166,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "browse",
     "detail": {
       "script": "import '@htmlplus/core/browse.js';\nconst BrowseDefault = () => {\n  const onChange = (event) => {\n    const name = event.detail.files[0].file.name;\n    alert(`File '${name}' selected.`);\n  };\n  return (\n    <plus-browse\n      droppable\n      onplus-change={(event) => onChange(event)}\n    ></plus-browse>\n  );\n};\nexport default BrowseDefault;\n",
@@ -2224,7 +2224,7 @@ export const examples: any[] = [
   },
   {
     "key": "background-color",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "card",
     "detail": {
       "script": "import { Card, Grid } from '@htmlplus/react';\nconst CardBackgroundColor = () => {\n  return (\n    <Grid justifyContent=\"evenly\" gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Card className=\"pink\"></Card>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Card className=\"yellow\"></Card>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Card className=\"blue\"></Card>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default CardBackgroundColor;\n",
@@ -2233,7 +2233,7 @@ export const examples: any[] = [
   },
   {
     "key": "background-color",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "card",
     "detail": {
       "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst CardBackgroundColor = () => {\n  return (\n    <plus-grid justify-content=\"evenly\" gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"auto\">\n        <plus-card className=\"pink\"></plus-card>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"auto\">\n        <plus-card className=\"yellow\"></plus-card>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"auto\">\n        <plus-card className=\"blue\"></plus-card>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default CardBackgroundColor;\n",
@@ -2291,7 +2291,7 @@ export const examples: any[] = [
   },
   {
     "key": "border-color",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "card",
     "detail": {
       "script": "import { Card, Grid } from '@htmlplus/react';\nconst CardBorderColor = () => {\n  return (\n    <Grid justifyContent=\"evenly\" gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Card className=\"pink\" outlined></Card>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Card className=\"yellow\" outlined></Card>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Card className=\"blue\" outlined></Card>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default CardBorderColor;\n",
@@ -2300,7 +2300,7 @@ export const examples: any[] = [
   },
   {
     "key": "border-color",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "card",
     "detail": {
       "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst CardBorderColor = () => {\n  return (\n    <plus-grid justify-content=\"evenly\" gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"auto\">\n        <plus-card className=\"pink\" outlined></plus-card>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"auto\">\n        <plus-card className=\"yellow\" outlined></plus-card>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"auto\">\n        <plus-card className=\"blue\" outlined></plus-card>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default CardBorderColor;\n",
@@ -2358,7 +2358,7 @@ export const examples: any[] = [
   },
   {
     "key": "border-width",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "card",
     "detail": {
       "script": "import { Card, Grid } from '@htmlplus/react';\nconst CardBorderWidth = () => {\n  return (\n    <Grid justifyContent=\"evenly\" gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Card className=\"size-1\" outlined></Card>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Card className=\"size-2\" outlined></Card>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"auto\">\n        <Card className=\"size-3\" outlined></Card>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default CardBorderWidth;\n",
@@ -2367,7 +2367,7 @@ export const examples: any[] = [
   },
   {
     "key": "border-width",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "card",
     "detail": {
       "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst CardBorderWidth = () => {\n  return (\n    <plus-grid justify-content=\"evenly\" gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"auto\">\n        <plus-card className=\"size-1\" outlined></plus-card>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"auto\">\n        <plus-card className=\"size-2\" outlined></plus-card>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"auto\">\n        <plus-card className=\"size-3\" outlined></plus-card>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default CardBorderWidth;\n",
@@ -2425,7 +2425,7 @@ export const examples: any[] = [
   },
   {
     "key": "customize",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "card",
     "detail": {
       "script": "import { Card } from '@htmlplus/react';\nconst CardCustomize = () => {\n  return <Card elevation=\"12\" outlined></Card>;\n};\nexport default CardCustomize;\n",
@@ -2434,7 +2434,7 @@ export const examples: any[] = [
   },
   {
     "key": "customize",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "card",
     "detail": {
       "script": "import '@htmlplus/core/card.js';\nconst CardCustomize = () => {\n  return <plus-card elevation=\"12\" outlined></plus-card>;\n};\nexport default CardCustomize;\n",
@@ -2492,7 +2492,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "card",
     "detail": {
       "script": "import { Card } from '@htmlplus/react';\nconst CardDefault = () => {\n  return (\n    <div className=\"container\">\n      <Card></Card>\n    </div>\n  );\n};\nexport default CardDefault;\n",
@@ -2501,7 +2501,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "card",
     "detail": {
       "script": "import '@htmlplus/core/card.js';\nconst CardDefault = () => {\n  return (\n    <div className=\"container\">\n      <plus-card></plus-card>\n    </div>\n  );\n};\nexport default CardDefault;\n",
@@ -2559,7 +2559,7 @@ export const examples: any[] = [
   },
   {
     "key": "elevation",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "card",
     "detail": {
       "script": "import { useState } from 'react';\nimport { Card } from '@htmlplus/react';\nconst CardElevation = () => {\n  const [elevation, setElevation] = useState('12');\n  const onChange = (event) => {\n    setElevation(event.target.value);\n  };\n  return (\n    <>\n      <Card elevation={elevation}></Card>\n      <br />\n      <input\n        type=\"range\"\n        value={elevation}\n        min=\"1\"\n        max=\"24\"\n        onChange={(event) => onChange(event)}\n      />\n    </>\n  );\n};\nexport default CardElevation;\n",
@@ -2568,7 +2568,7 @@ export const examples: any[] = [
   },
   {
     "key": "elevation",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "card",
     "detail": {
       "script": "import { useState } from 'react';\nimport '@htmlplus/core/card.js';\nconst CardElevation = () => {\n  const [elevation, setElevation] = useState('12');\n  const onChange = (event) => {\n    setElevation(event.target.value);\n  };\n  return (\n    <>\n      <plus-card elevation={elevation}></plus-card>\n      <br />\n      <input\n        type=\"range\"\n        value={elevation}\n        min=\"1\"\n        max=\"24\"\n        onChange={(event) => onChange(event)}\n      />\n    </>\n  );\n};\nexport default CardElevation;\n",
@@ -2626,7 +2626,7 @@ export const examples: any[] = [
   },
   {
     "key": "outlined",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "card",
     "detail": {
       "script": "import { Card } from '@htmlplus/react';\nconst CardOutlined = () => {\n  return <Card outlined></Card>;\n};\nexport default CardOutlined;\n",
@@ -2635,7 +2635,7 @@ export const examples: any[] = [
   },
   {
     "key": "outlined",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "card",
     "detail": {
       "script": "import '@htmlplus/core/card.js';\nconst CardOutlined = () => {\n  return <plus-card outlined></plus-card>;\n};\nexport default CardOutlined;\n",
@@ -2693,7 +2693,7 @@ export const examples: any[] = [
   },
   {
     "key": "tile",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "card",
     "detail": {
       "script": "import { Card, Grid } from '@htmlplus/react';\nconst CardTile = () => {\n  return (\n    <div className=\"container\">\n      <Grid justifyContent=\"evenly\" gutter=\"md\">\n        <Grid.Item xs=\"12\" sm=\"auto\">\n          <Card tile></Card>\n        </Grid.Item>\n        <Grid.Item xs=\"12\" sm=\"auto\">\n          <Card tile outlined></Card>\n        </Grid.Item>\n        <Grid.Item xs=\"12\" sm=\"auto\">\n          <Card tile elevation=\"5\"></Card>\n        </Grid.Item>\n      </Grid>\n    </div>\n  );\n};\nexport default CardTile;\n",
@@ -2702,7 +2702,7 @@ export const examples: any[] = [
   },
   {
     "key": "tile",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "card",
     "detail": {
       "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst CardTile = () => {\n  return (\n    <div className=\"container\">\n      <plus-grid justify-content=\"evenly\" gutter=\"md\">\n        <plus-grid-item xs=\"12\" sm=\"auto\">\n          <plus-card tile></plus-card>\n        </plus-grid-item>\n        <plus-grid-item xs=\"12\" sm=\"auto\">\n          <plus-card tile outlined></plus-card>\n        </plus-grid-item>\n        <plus-grid-item xs=\"12\" sm=\"auto\">\n          <plus-card tile elevation=\"5\"></plus-card>\n        </plus-grid-item>\n      </plus-grid>\n    </div>\n  );\n};\nexport default CardTile;\n",
@@ -2760,7 +2760,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "center",
     "detail": {
       "script": "import { Center } from '@htmlplus/react';\nconst CenterDefault = () => {\n  return <Center>All elements are centered</Center>;\n};\nexport default CenterDefault;\n",
@@ -2769,7 +2769,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "center",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nconst CenterDefault = () => {\n  return <plus-center>All elements are centered</plus-center>;\n};\nexport default CenterDefault;\n",
@@ -2825,7 +2825,7 @@ export const examples: any[] = [
   },
   {
     "key": "inline",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "center",
     "detail": {
       "script": "import { Center, Icon } from '@htmlplus/react';\nconst CenterInline = () => {\n  return (\n    <Center>\n      <button>\n        <Center inline>\n          <Icon size=\"2x\">menu</Icon>\n          &nbsp; Menu\n        </Center>\n      </button>\n    </Center>\n  );\n};\nexport default CenterInline;\n"
@@ -2833,7 +2833,7 @@ export const examples: any[] = [
   },
   {
     "key": "inline",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "center",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst CenterInline = () => {\n  return (\n    <plus-center>\n      <button>\n        <plus-center inline>\n          <plus-icon size=\"2x\">menu</plus-icon>\n          &nbsp; Menu\n        </plus-center>\n      </button>\n    </plus-center>\n  );\n};\nexport default CenterInline;\n"
@@ -2886,7 +2886,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "click-outside",
     "detail": {
       "script": "import { useState } from 'react';\nimport { Card, Center, ClickOutside } from '@htmlplus/react';\nconst ClickOutsideDefault = () => {\n  const [inside, setInside] = useState(0);\n  const [outside, setOutside] = useState(0);\n  const onClick = () => {\n    setInside(inside + 1);\n  };\n  const onClickOutside = () => {\n    setOutside(outside + 1);\n  };\n  return (\n    <Center>\n      <ClickOutside\n        onClick={() => onClick()}\n        onClickOutside={() => onClickOutside()}\n      >\n        <Card elevation=\"10\">\n          <Card.Body>\n            <b>{inside}</b> time(s) inside clicked\n            <br />\n            <b>{outside}</b> time(s) outside clicked\n          </Card.Body>\n        </Card>\n      </ClickOutside>\n    </Center>\n  );\n};\nexport default ClickOutsideDefault;\n"
@@ -2894,7 +2894,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "click-outside",
     "detail": {
       "script": "import { useState } from 'react';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/click-outside.js';\nconst ClickOutsideDefault = () => {\n  const [inside, setInside] = useState(0);\n  const [outside, setOutside] = useState(0);\n  const onClick = () => {\n    setInside(inside + 1);\n  };\n  const onClickOutside = () => {\n    setOutside(outside + 1);\n  };\n  return (\n    <plus-center>\n      <plus-click-outside\n        onClick={() => onClick()}\n        onplus-click-outside={() => onClickOutside()}\n      >\n        <plus-card elevation=\"10\">\n          <plus-card-body>\n            <b>{inside}</b> time(s) inside clicked\n            <br />\n            <b>{outside}</b> time(s) outside clicked\n          </plus-card-body>\n        </plus-card>\n      </plus-click-outside>\n    </plus-center>\n  );\n};\nexport default ClickOutsideDefault;\n"
@@ -2949,7 +2949,7 @@ export const examples: any[] = [
   },
   {
     "key": "menu",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "click-outside",
     "detail": {
       "script": "import { useState } from 'react';\nimport { Card, Center, ClickOutside } from '@htmlplus/react';\nconst ClickOutsideDefault = () => {\n  const [open, setOpen] = useState(false);\n  const onClick = () => {\n    setOpen(!open);\n  };\n  const onClickOutside = () => {\n    setOpen(false);\n  };\n  return (\n    <Center>\n      <ClickOutside onClickOutside={() => onClickOutside()}>\n        <button onClick={() => onClick()}>Open Menu Dropdown</button>\n        {open && (\n          <Card elevation=\"10\" outlined>\n            <Card.Body>It will stay visible until you click outside.</Card.Body>\n          </Card>\n        )}\n      </ClickOutside>\n    </Center>\n  );\n};\nexport default ClickOutsideDefault;\n",
@@ -2958,7 +2958,7 @@ export const examples: any[] = [
   },
   {
     "key": "menu",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "click-outside",
     "detail": {
       "script": "import { useState } from 'react';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/click-outside.js';\nconst ClickOutsideDefault = () => {\n  const [open, setOpen] = useState(false);\n  const onClick = () => {\n    setOpen(!open);\n  };\n  const onClickOutside = () => {\n    setOpen(false);\n  };\n  return (\n    <plus-center>\n      <plus-click-outside onplus-click-outside={() => onClickOutside()}>\n        <button onClick={() => onClick()}>Open Menu Dropdown</button>\n        {open && (\n          <plus-card elevation=\"10\" outlined>\n            <plus-card-body>\n              It will stay visible until you click outside.\n            </plus-card-body>\n          </plus-card>\n        )}\n      </plus-click-outside>\n    </plus-center>\n  );\n};\nexport default ClickOutsideDefault;\n",
@@ -3014,7 +3014,7 @@ export const examples: any[] = [
   },
   {
     "key": "decimal",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "counter",
     "detail": {
       "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDecimal = () => {\n  return (\n    <Center>\n      <Counter decimal=\"/\" decimals=\"3\" to=\"1000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterDecimal;\n"
@@ -3022,7 +3022,7 @@ export const examples: any[] = [
   },
   {
     "key": "decimal",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterDecimal = () => {\n  return (\n    <plus-center>\n      <plus-counter decimal=\"/\" decimals=\"3\" to=\"1000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterDecimal;\n"
@@ -3075,7 +3075,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "counter",
     "detail": {
       "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDefault = () => {\n  return (\n    <Center>\n      <Counter to=\"1000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterDefault;\n"
@@ -3083,7 +3083,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterDefault = () => {\n  return (\n    <plus-center>\n      <plus-counter to=\"1000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterDefault;\n"
@@ -3136,7 +3136,7 @@ export const examples: any[] = [
   },
   {
     "key": "delay",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "counter",
     "detail": {
       "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDelay = () => {\n  return (\n    <Center>\n      <Counter delay=\"1500\" to=\"1000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterDelay;\n"
@@ -3144,7 +3144,7 @@ export const examples: any[] = [
   },
   {
     "key": "delay",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterDelay = () => {\n  return (\n    <plus-center>\n      <plus-counter delay=\"1500\" to=\"1000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterDelay;\n"
@@ -3197,7 +3197,7 @@ export const examples: any[] = [
   },
   {
     "key": "duration",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "counter",
     "detail": {
       "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterDuration = () => {\n  return (\n    <Center>\n      <Counter duration=\"5000\" to=\"1000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterDuration;\n"
@@ -3205,7 +3205,7 @@ export const examples: any[] = [
   },
   {
     "key": "duration",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterDuration = () => {\n  return (\n    <plus-center>\n      <plus-counter duration=\"5000\" to=\"1000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterDuration;\n"
@@ -3260,7 +3260,7 @@ export const examples: any[] = [
   },
   {
     "key": "intersection",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "counter",
     "detail": {
       "script": "import { useState } from 'react';\nimport { Counter, Intersection } from '@htmlplus/react';\nconst CounterIntersection = () => {\n  const [play, setPlay] = useState(false);\n  const onChange = (event) => {\n    setPlay(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <Intersection onChange={(event) => onChange(event)}>\n        <Counter to=\"1000\" play={play}></Counter>\n      </Intersection>\n    </div>\n  );\n};\nexport default CounterIntersection;\n",
@@ -3269,7 +3269,7 @@ export const examples: any[] = [
   },
   {
     "key": "intersection",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "counter",
     "detail": {
       "script": "import { useState } from 'react';\nimport '@htmlplus/core/counter.js';\nimport '@htmlplus/core/intersection.js';\nconst CounterIntersection = () => {\n  const [play, setPlay] = useState(false);\n  const onChange = (event) => {\n    setPlay(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <plus-intersection onplus-change={(event) => onChange(event)}>\n        <plus-counter to=\"1000\" play={play}></plus-counter>\n      </plus-intersection>\n    </div>\n  );\n};\nexport default CounterIntersection;\n",
@@ -3325,7 +3325,7 @@ export const examples: any[] = [
   },
   {
     "key": "numerals",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "counter",
     "detail": {
       "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterNumerals = () => {\n  return (\n    <Center>\n      <Counter\n        numerals={['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']}\n        to=\"1000\"\n        play\n      ></Counter>\n    </Center>\n  );\n};\nexport default CounterNumerals;\n"
@@ -3333,7 +3333,7 @@ export const examples: any[] = [
   },
   {
     "key": "numerals",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterNumerals = () => {\n  return (\n    <plus-center>\n      <plus-counter\n        numerals={['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']}\n        to=\"1000\"\n        play\n      ></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterNumerals;\n"
@@ -3386,7 +3386,7 @@ export const examples: any[] = [
   },
   {
     "key": "range",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "counter",
     "detail": {
       "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterRange = () => {\n  return (\n    <Center>\n      <Counter from=\"10\" to=\"1000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterRange;\n"
@@ -3394,7 +3394,7 @@ export const examples: any[] = [
   },
   {
     "key": "range",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterRange = () => {\n  return (\n    <plus-center>\n      <plus-counter from=\"10\" to=\"1000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterRange;\n"
@@ -3447,7 +3447,7 @@ export const examples: any[] = [
   },
   {
     "key": "reverse",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "counter",
     "detail": {
       "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterReverse = () => {\n  return (\n    <Center>\n      <Counter from=\"1000\" to=\"10\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterReverse;\n"
@@ -3455,7 +3455,7 @@ export const examples: any[] = [
   },
   {
     "key": "reverse",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterReverse = () => {\n  return (\n    <plus-center>\n      <plus-counter from=\"1000\" to=\"10\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterReverse;\n"
@@ -3508,7 +3508,7 @@ export const examples: any[] = [
   },
   {
     "key": "separator",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "counter",
     "detail": {
       "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterSeparator = () => {\n  return (\n    <Center>\n      <Counter separator=\",\" to=\"10000000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterSeparator;\n"
@@ -3516,7 +3516,7 @@ export const examples: any[] = [
   },
   {
     "key": "separator",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterSeparator = () => {\n  return (\n    <plus-center>\n      <plus-counter separator=\",\" to=\"10000000\" play></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterSeparator;\n"
@@ -3569,7 +3569,7 @@ export const examples: any[] = [
   },
   {
     "key": "separator-&-decimal",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "counter",
     "detail": {
       "script": "import { Center, Counter } from '@htmlplus/react';\nconst CounterSeparatorDecimal = () => {\n  return (\n    <Center>\n      <Counter decimal=\".\" decimals=\"2\" separator=\",\" to=\"1000\" play></Counter>\n    </Center>\n  );\n};\nexport default CounterSeparatorDecimal;\n"
@@ -3577,7 +3577,7 @@ export const examples: any[] = [
   },
   {
     "key": "separator-&-decimal",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "counter",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/counter.js';\nconst CounterSeparatorDecimal = () => {\n  return (\n    <plus-center>\n      <plus-counter\n        decimal=\".\"\n        decimals=\"2\"\n        separator=\",\"\n        to=\"1000\"\n        play\n      ></plus-counter>\n    </plus-center>\n  );\n};\nexport default CounterSeparatorDecimal;\n"
@@ -3630,7 +3630,7 @@ export const examples: any[] = [
   },
   {
     "key": "area",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "cropper",
     "detail": {
       "script": "import { Cropper } from '@htmlplus/react';\nconst CropperArea = () => {\n  return (\n    <Cropper\n      area={1}\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></Cropper>\n  );\n};\nexport default CropperArea;\n"
@@ -3638,7 +3638,7 @@ export const examples: any[] = [
   },
   {
     "key": "area",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "cropper",
     "detail": {
       "script": "import '@htmlplus/core/cropper.js';\nconst CropperArea = () => {\n  return (\n    <plus-cropper\n      area={1}\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  );\n};\nexport default CropperArea;\n"
@@ -3691,7 +3691,7 @@ export const examples: any[] = [
   },
   {
     "key": "aspect-ratio",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "cropper",
     "detail": {
       "script": "import { Cropper } from '@htmlplus/react';\nconst CropperAspectRatio = () => {\n  return (\n    <Cropper\n      aspectRatio=\"3/4\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></Cropper>\n  );\n};\nexport default CropperAspectRatio;\n"
@@ -3699,7 +3699,7 @@ export const examples: any[] = [
   },
   {
     "key": "aspect-ratio",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "cropper",
     "detail": {
       "script": "import '@htmlplus/core/cropper.js';\nconst CropperAspectRatio = () => {\n  return (\n    <plus-cropper\n      aspect-ratio=\"3/4\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  );\n};\nexport default CropperAspectRatio;\n"
@@ -3752,7 +3752,7 @@ export const examples: any[] = [
   },
   {
     "key": "backdrop",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "cropper",
     "detail": {
       "script": "import { Cropper, Grid } from '@htmlplus/react';\nconst CropperBackdrop = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          backdrop={false}\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          backdrop={true}\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></Cropper>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default CropperBackdrop;\n"
@@ -3760,7 +3760,7 @@ export const examples: any[] = [
   },
   {
     "key": "backdrop",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "cropper",
     "detail": {
       "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst CropperBackdrop = () => {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          backdrop={false}\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          backdrop={true}\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default CropperBackdrop;\n"
@@ -3813,7 +3813,7 @@ export const examples: any[] = [
   },
   {
     "key": "background",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "cropper",
     "detail": {
       "script": "import { Cropper, Grid } from '@htmlplus/react';\nconst CropperBackground = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          background={false}\n          view=\"none\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          background={true}\n          view=\"none\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></Cropper>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default CropperBackground;\n"
@@ -3821,7 +3821,7 @@ export const examples: any[] = [
   },
   {
     "key": "background",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "cropper",
     "detail": {
       "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst CropperBackground = () => {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          background={false}\n          view=\"none\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          background={true}\n          view=\"none\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default CropperBackground;\n"
@@ -3874,7 +3874,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "cropper",
     "detail": {
       "script": "import { Cropper } from '@htmlplus/react';\nconst CropperDefault = () => {\n  return (\n    <Cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></Cropper>\n  );\n};\nexport default CropperDefault;\n"
@@ -3882,7 +3882,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "cropper",
     "detail": {
       "script": "import '@htmlplus/core/cropper.js';\nconst CropperDefault = () => {\n  return (\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n  );\n};\nexport default CropperDefault;\n"
@@ -3937,7 +3937,7 @@ export const examples: any[] = [
   },
   {
     "key": "dialog",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "cropper",
     "detail": {
       "script": "import { useState } from 'react';\nimport { Cropper, Dialog } from '@htmlplus/react';\nconst CropperDialog = () => {\n  const [disabled, setDisabled] = useState(true);\n  const change = (disabled) => {\n    setDisabled(disabled);\n  };\n  return (\n    <>\n      <div className=\"center\">\n        <Dialog.Toggler connector=\"dialog-cropper\">Open</Dialog.Toggler>\n      </div>\n      <Dialog\n        animation=\"fade\"\n        connector=\"dialog-cropper\"\n        onOpened={() => change(false)}\n        onClosed={() => change(true)}\n      >\n        <Dialog.Content>\n          <Dialog.Header>Cropper</Dialog.Header>\n          <Dialog.Body>\n            <Cropper\n              disabled={disabled}\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></Cropper>\n          </Dialog.Body>\n          <Dialog.Footer>\n            <Dialog.Toggler>Close</Dialog.Toggler>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n};\nexport default CropperDialog;\n",
@@ -3946,7 +3946,7 @@ export const examples: any[] = [
   },
   {
     "key": "dialog",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "cropper",
     "detail": {
       "script": "import { useState } from 'react';\nimport '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nconst CropperDialog = () => {\n  const [disabled, setDisabled] = useState(true);\n  const change = (disabled) => {\n    setDisabled(disabled);\n  };\n  return (\n    <>\n      <div className=\"center\">\n        <plus-dialog-toggler connector=\"dialog-cropper\">\n          Open\n        </plus-dialog-toggler>\n      </div>\n      <plus-dialog\n        animation=\"fade\"\n        connector=\"dialog-cropper\"\n        onplus-opened={() => change(false)}\n        onplus-closed={() => change(true)}\n      >\n        <plus-dialog-content>\n          <plus-dialog-header>Cropper</plus-dialog-header>\n          <plus-dialog-body>\n            <plus-cropper\n              disabled={disabled}\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></plus-cropper>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n};\nexport default CropperDialog;\n",
@@ -4002,7 +4002,7 @@ export const examples: any[] = [
   },
   {
     "key": "disabled",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "cropper",
     "detail": {
       "script": "import { Cropper } from '@htmlplus/react';\nconst CropperDisabled = () => {\n  return (\n    <Cropper\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      disabled\n    ></Cropper>\n  );\n};\nexport default CropperDisabled;\n"
@@ -4010,7 +4010,7 @@ export const examples: any[] = [
   },
   {
     "key": "disabled",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "cropper",
     "detail": {
       "script": "import '@htmlplus/core/cropper.js';\nconst CropperDisabled = () => {\n  return (\n    <plus-cropper\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      disabled\n    ></plus-cropper>\n  );\n};\nexport default CropperDisabled;\n"
@@ -4063,7 +4063,7 @@ export const examples: any[] = [
   },
   {
     "key": "guides",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "cropper",
     "detail": {
       "script": "import { Cropper } from '@htmlplus/react';\nconst CropperGuides = () => {\n  return (\n    <Cropper\n      guides\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></Cropper>\n  );\n};\nexport default CropperGuides;\n"
@@ -4071,7 +4071,7 @@ export const examples: any[] = [
   },
   {
     "key": "guides",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "cropper",
     "detail": {
       "script": "import '@htmlplus/core/cropper.js';\nconst CropperGuides = () => {\n  return (\n    <plus-cropper\n      guides\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  );\n};\nexport default CropperGuides;\n"
@@ -4124,7 +4124,7 @@ export const examples: any[] = [
   },
   {
     "key": "indicator",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "cropper",
     "detail": {
       "script": "import { Cropper } from '@htmlplus/react';\nconst CropperIndicator = () => {\n  return (\n    <Cropper\n      indicator\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></Cropper>\n  );\n};\nexport default CropperIndicator;\n"
@@ -4132,7 +4132,7 @@ export const examples: any[] = [
   },
   {
     "key": "indicator",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "cropper",
     "detail": {
       "script": "import '@htmlplus/core/cropper.js';\nconst CropperIndicator = () => {\n  return (\n    <plus-cropper\n      indicator\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  );\n};\nexport default CropperIndicator;\n"
@@ -4187,7 +4187,7 @@ export const examples: any[] = [
   },
   {
     "key": "mode",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "cropper",
     "detail": {
       "script": "import { Cropper, Grid } from '@htmlplus/react';\nconst CropperMode = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          mode=\"move\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          view=\"none\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          mode=\"crop\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></Cropper>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default CropperMode;\n",
@@ -4196,7 +4196,7 @@ export const examples: any[] = [
   },
   {
     "key": "mode",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "cropper",
     "detail": {
       "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst CropperMode = () => {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          mode=\"move\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          view=\"none\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          mode=\"crop\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default CropperMode;\n",
@@ -4254,7 +4254,7 @@ export const examples: any[] = [
   },
   {
     "key": "shape",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "cropper",
     "detail": {
       "script": "import { Cropper, Grid } from '@htmlplus/react';\nconst CropperShape = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          shape=\"rectangle\"\n          aspectRatio=\"2\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Grid gutter=\"md\">\n          <Grid.Item xs=\"12\">\n            <Cropper\n              shape=\"square\"\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></Cropper>\n          </Grid.Item>\n          <Grid.Item xs=\"12\">\n            <Cropper\n              shape=\"circle\"\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></Cropper>\n          </Grid.Item>\n        </Grid>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default CropperShape;\n",
@@ -4263,7 +4263,7 @@ export const examples: any[] = [
   },
   {
     "key": "shape",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "cropper",
     "detail": {
       "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst CropperShape = () => {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          shape=\"rectangle\"\n          aspect-ratio=\"2\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-grid gutter=\"md\">\n          <plus-grid-item xs=\"12\">\n            <plus-cropper\n              shape=\"square\"\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></plus-cropper>\n          </plus-grid-item>\n          <plus-grid-item xs=\"12\">\n            <plus-cropper\n              shape=\"circle\"\n              src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n            ></plus-cropper>\n          </plus-grid-item>\n        </plus-grid>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default CropperShape;\n",
@@ -4321,7 +4321,7 @@ export const examples: any[] = [
   },
   {
     "key": "styles",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "cropper",
     "detail": {
       "script": "import { Cropper, Grid } from '@htmlplus/react';\nconst CropperStyles = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"5\">\n        <Cropper\n          className=\"style-1\"\n          indicator\n          mode=\"crop\"\n          shape=\"circle\"\n          resizer=\"main\"\n          resizerShape=\"line\"\n          src=\"/assets/images/penguin.jpg\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"7\">\n        <Cropper\n          className=\"style-2\"\n          indicator\n          mode=\"crop\"\n          resizer=\"both\"\n          resizerShape=\"line\"\n          src=\"/assets/images/penguin.jpg\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          className=\"style-3\"\n          guides\n          indicator\n          mode=\"crop\"\n          resizer=\"main\"\n          resizerShape=\"circle\"\n          shape=\"circle\"\n          src=\"/assets/images/cat.jpg\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          className=\"style-4\"\n          guides\n          mode=\"crop\"\n          resizer=\"edge\"\n          resizerShape=\"line\"\n          src=\"/assets/images/cat.jpg\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"7\">\n        <Cropper\n          className=\"style-5\"\n          backdrop\n          background\n          mode=\"crop\"\n          resizer=\"edge\"\n          resizerShape=\"line\"\n          src=\"/assets/images/ladybug.jpg\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"5\">\n        <Cropper className=\"style-6\" src=\"/assets/images/bear.jpg\"></Cropper>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default CropperStyles;\n",
@@ -4330,7 +4330,7 @@ export const examples: any[] = [
   },
   {
     "key": "styles",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "cropper",
     "detail": {
       "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst CropperStyles = () => {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"5\">\n        <plus-cropper\n          className=\"style-1\"\n          indicator\n          mode=\"crop\"\n          shape=\"circle\"\n          resizer=\"main\"\n          resizer-shape=\"line\"\n          src=\"/assets/images/penguin.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"7\">\n        <plus-cropper\n          className=\"style-2\"\n          indicator\n          mode=\"crop\"\n          resizer=\"both\"\n          resizer-shape=\"line\"\n          src=\"/assets/images/penguin.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          className=\"style-3\"\n          guides\n          indicator\n          mode=\"crop\"\n          resizer=\"main\"\n          resizer-shape=\"circle\"\n          shape=\"circle\"\n          src=\"/assets/images/cat.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          className=\"style-4\"\n          guides\n          mode=\"crop\"\n          resizer=\"edge\"\n          resizer-shape=\"line\"\n          src=\"/assets/images/cat.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"7\">\n        <plus-cropper\n          className=\"style-5\"\n          backdrop\n          background\n          mode=\"crop\"\n          resizer=\"edge\"\n          resizer-shape=\"line\"\n          src=\"/assets/images/ladybug.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"5\">\n        <plus-cropper\n          className=\"style-6\"\n          src=\"/assets/images/bear.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default CropperStyles;\n",
@@ -4386,7 +4386,7 @@ export const examples: any[] = [
   },
   {
     "key": "to-base64",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "cropper",
     "detail": {
       "script": "import { Center, Cropper } from '@htmlplus/react';\nconst CropperToBase64 = () => {\n  const toBase64 = () => {\n    const image = new Image();\n    image.src = window.cropper2.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper2\"\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => toBase64()}>Get Base64</button>\n      </Center>\n    </>\n  );\n};\nexport default CropperToBase64;\n"
@@ -4394,7 +4394,7 @@ export const examples: any[] = [
   },
   {
     "key": "to-base64",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "cropper",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nconst CropperToBase64 = () => {\n  const toBase64 = () => {\n    const image = new Image();\n    image.src = window.cropper2.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper2\"\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => toBase64()}>Get Base64</button>\n      </plus-center>\n    </>\n  );\n};\nexport default CropperToBase64;\n"
@@ -4447,7 +4447,7 @@ export const examples: any[] = [
   },
   {
     "key": "to-blob",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "cropper",
     "detail": {
       "script": "import { Center, Cropper } from '@htmlplus/react';\nconst CropperToBlob = () => {\n  const toBlob = () => {\n    window.cropper3.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  };\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper3\"\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => toBlob()}>To Blob</button>\n      </Center>\n    </>\n  );\n};\nexport default CropperToBlob;\n"
@@ -4455,7 +4455,7 @@ export const examples: any[] = [
   },
   {
     "key": "to-blob",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "cropper",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nconst CropperToBlob = () => {\n  const toBlob = () => {\n    window.cropper3.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper3\"\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => toBlob()}>To Blob</button>\n      </plus-center>\n    </>\n  );\n};\nexport default CropperToBlob;\n"
@@ -4508,7 +4508,7 @@ export const examples: any[] = [
   },
   {
     "key": "to-url",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "cropper",
     "detail": {
       "script": "import { Center, Cropper } from '@htmlplus/react';\nconst CropperToURL = () => {\n  const toURL = () => {\n    window.cropper4.toCanvas().toBlob((blob) => {\n      window.open(URL.createObjectURL(blob), '_blank');\n    });\n  };\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper4\"\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => toURL()}>To URL</button>\n      </Center>\n    </>\n  );\n};\nexport default CropperToURL;\n"
@@ -4516,7 +4516,7 @@ export const examples: any[] = [
   },
   {
     "key": "to-url",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "cropper",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nconst CropperToURL = () => {\n  const toURL = () => {\n    window.cropper4.toCanvas().toBlob((blob) => {\n      window.open(URL.createObjectURL(blob), '_blank');\n    });\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper4\"\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => toURL()}>To URL</button>\n      </plus-center>\n    </>\n  );\n};\nexport default CropperToURL;\n"
@@ -4569,7 +4569,7 @@ export const examples: any[] = [
   },
   {
     "key": "zoom-ratio",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "cropper",
     "detail": {
       "script": "import { Cropper, Grid } from '@htmlplus/react';\nconst CropperZoomRatio = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          zoomable\n          zoomRatio=\"0.1\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          zoomable\n          zoomRatio=\"1.0\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></Cropper>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default CropperZoomRatio;\n"
@@ -4577,7 +4577,7 @@ export const examples: any[] = [
   },
   {
     "key": "zoom-ratio",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "cropper",
     "detail": {
       "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst CropperZoomRatio = () => {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable\n          zoom-ratio=\"0.1\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable\n          zoom-ratio=\"1.0\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default CropperZoomRatio;\n"
@@ -4630,7 +4630,7 @@ export const examples: any[] = [
   },
   {
     "key": "zoomable",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "cropper",
     "detail": {
       "script": "import { Cropper, Grid } from '@htmlplus/react';\nconst CropperZoomable = () => {\n  return (\n    <Grid gutter=\"md\">\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          zoomable=\"false\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          zoomable=\"true\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          zoomable=\"touch\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></Cropper>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\">\n        <Cropper\n          zoomable=\"wheel\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></Cropper>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default CropperZoomable;\n"
@@ -4638,7 +4638,7 @@ export const examples: any[] = [
   },
   {
     "key": "zoomable",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "cropper",
     "detail": {
       "script": "import '@htmlplus/core/cropper.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst CropperZoomable = () => {\n  return (\n    <plus-grid gutter=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable=\"false\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable=\"true\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable=\"touch\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\">\n        <plus-cropper\n          zoomable=\"wheel\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default CropperZoomable;\n"
@@ -4693,7 +4693,7 @@ export const examples: any[] = [
   },
   {
     "key": "animation",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "dialog",
     "detail": {
       "script": "import { Dialog } from '@htmlplus/react';\nconst DialogAnimation = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <Dialog.Toggler connector=\"dialog-animation\">Open</Dialog.Toggler>\n      </div>\n      <Dialog animation=\"fade\" connector=\"dialog-animation\">\n        <Dialog.Content>\n          <Dialog.Header>Dialog Title</Dialog.Header>\n          <Dialog.Body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </Dialog.Body>\n          <Dialog.Footer>\n            <Dialog.Toggler>Close</Dialog.Toggler>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n};\nexport default DialogAnimation;\n",
@@ -4702,7 +4702,7 @@ export const examples: any[] = [
   },
   {
     "key": "animation",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "dialog",
     "detail": {
       "script": "import '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nconst DialogAnimation = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <plus-dialog-toggler connector=\"dialog-animation\">\n          Open\n        </plus-dialog-toggler>\n      </div>\n      <plus-dialog animation=\"fade\" connector=\"dialog-animation\">\n        <plus-dialog-content>\n          <plus-dialog-header>Dialog Title</plus-dialog-header>\n          <plus-dialog-body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n};\nexport default DialogAnimation;\n",
@@ -4760,7 +4760,7 @@ export const examples: any[] = [
   },
   {
     "key": "backdrop",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "dialog",
     "detail": {
       "script": "import { Dialog } from '@htmlplus/react';\nconst DialogBackdrop = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <Dialog.Toggler connector=\"dialog-backdrop\">Open</Dialog.Toggler>\n      </div>\n      <Dialog animation=\"fade\" connector=\"dialog-backdrop\" backdrop={false}>\n        <Dialog.Content>\n          <Dialog.Header>Dialog Title</Dialog.Header>\n          <Dialog.Body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </Dialog.Body>\n          <Dialog.Footer>\n            <Dialog.Toggler>Close</Dialog.Toggler>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n};\nexport default DialogBackdrop;\n",
@@ -4769,7 +4769,7 @@ export const examples: any[] = [
   },
   {
     "key": "backdrop",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "dialog",
     "detail": {
       "script": "import '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nconst DialogBackdrop = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <plus-dialog-toggler connector=\"dialog-backdrop\">\n          Open\n        </plus-dialog-toggler>\n      </div>\n      <plus-dialog\n        animation=\"fade\"\n        connector=\"dialog-backdrop\"\n        backdrop={false}\n      >\n        <plus-dialog-content>\n          <plus-dialog-header>Dialog Title</plus-dialog-header>\n          <plus-dialog-body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n};\nexport default DialogBackdrop;\n",
@@ -4827,7 +4827,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "dialog",
     "detail": {
       "script": "import { Dialog } from '@htmlplus/react';\nconst DialogDefault = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <Dialog.Toggler connector=\"dialog-default\">Open</Dialog.Toggler>\n      </div>\n      <Dialog connector=\"dialog-default\">\n        <Dialog.Content>\n          <Dialog.Header>Dialog Title</Dialog.Header>\n          <Dialog.Body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </Dialog.Body>\n          <Dialog.Footer>\n            <Dialog.Toggler>Close</Dialog.Toggler>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n};\nexport default DialogDefault;\n",
@@ -4836,7 +4836,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "dialog",
     "detail": {
       "script": "import '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nconst DialogDefault = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <plus-dialog-toggler connector=\"dialog-default\">\n          Open\n        </plus-dialog-toggler>\n      </div>\n      <plus-dialog connector=\"dialog-default\">\n        <plus-dialog-content>\n          <plus-dialog-header>Dialog Title</plus-dialog-header>\n          <plus-dialog-body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n};\nexport default DialogDefault;\n",
@@ -4894,7 +4894,7 @@ export const examples: any[] = [
   },
   {
     "key": "full-height",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "dialog",
     "detail": {
       "script": "import { Dialog } from '@htmlplus/react';\nconst DialogFullHeight = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <Dialog.Toggler connector=\"dialog-full-height\">Open</Dialog.Toggler>\n      </div>\n      <Dialog\n        animation=\"fade\"\n        connector=\"dialog-full-height\"\n        placement=\"center\"\n        fullHeight\n      >\n        <Dialog.Content>\n          <Dialog.Header>Dialog Title</Dialog.Header>\n          <Dialog.Body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </Dialog.Body>\n          <Dialog.Footer>\n            <Dialog.Toggler>Close</Dialog.Toggler>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n};\nexport default DialogFullHeight;\n",
@@ -4903,7 +4903,7 @@ export const examples: any[] = [
   },
   {
     "key": "full-height",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "dialog",
     "detail": {
       "script": "import '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nconst DialogFullHeight = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <plus-dialog-toggler connector=\"dialog-full-height\">\n          Open\n        </plus-dialog-toggler>\n      </div>\n      <plus-dialog\n        animation=\"fade\"\n        connector=\"dialog-full-height\"\n        placement=\"center\"\n        full-height\n      >\n        <plus-dialog-content>\n          <plus-dialog-header>Dialog Title</plus-dialog-header>\n          <plus-dialog-body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n};\nexport default DialogFullHeight;\n",
@@ -4961,7 +4961,7 @@ export const examples: any[] = [
   },
   {
     "key": "full-width",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "dialog",
     "detail": {
       "script": "import { Dialog } from '@htmlplus/react';\nconst DialogFullWidth = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <Dialog.Toggler connector=\"dialog-full-width\">Open</Dialog.Toggler>\n      </div>\n      <Dialog animation=\"fade\" connector=\"dialog-full-width\" fullWidth>\n        <Dialog.Content>\n          <Dialog.Body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </Dialog.Body>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n};\nexport default DialogFullWidth;\n",
@@ -4970,7 +4970,7 @@ export const examples: any[] = [
   },
   {
     "key": "full-width",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "dialog",
     "detail": {
       "script": "import '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-toggler.js';\nconst DialogFullWidth = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <plus-dialog-toggler connector=\"dialog-full-width\">\n          Open\n        </plus-dialog-toggler>\n      </div>\n      <plus-dialog animation=\"fade\" connector=\"dialog-full-width\" full-width>\n        <plus-dialog-content>\n          <plus-dialog-body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </plus-dialog-body>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n};\nexport default DialogFullWidth;\n",
@@ -5028,7 +5028,7 @@ export const examples: any[] = [
   },
   {
     "key": "fullscreen",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "dialog",
     "detail": {
       "script": "import { Dialog } from '@htmlplus/react';\nconst DialogFullscreen = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <Dialog.Toggler connector=\"dialog-fullscreen\">Open</Dialog.Toggler>\n      </div>\n      <Dialog\n        animation=\"fade\"\n        connector=\"dialog-fullscreen\"\n        placement=\"bottom\"\n        fullscreen\n      >\n        <Dialog.Content>\n          <Dialog.Header>Dialog Title</Dialog.Header>\n          <Dialog.Body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </Dialog.Body>\n          <Dialog.Footer>\n            <Dialog.Toggler>Close</Dialog.Toggler>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n};\nexport default DialogFullscreen;\n",
@@ -5037,7 +5037,7 @@ export const examples: any[] = [
   },
   {
     "key": "fullscreen",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "dialog",
     "detail": {
       "script": "import '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nconst DialogFullscreen = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <plus-dialog-toggler connector=\"dialog-fullscreen\">\n          Open\n        </plus-dialog-toggler>\n      </div>\n      <plus-dialog\n        animation=\"fade\"\n        connector=\"dialog-fullscreen\"\n        placement=\"bottom\"\n        fullscreen\n      >\n        <plus-dialog-content>\n          <plus-dialog-header>Dialog Title</plus-dialog-header>\n          <plus-dialog-body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n};\nexport default DialogFullscreen;\n",
@@ -5095,7 +5095,7 @@ export const examples: any[] = [
   },
   {
     "key": "nesting",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "dialog",
     "detail": {
       "script": "import { Dialog, Grid } from '@htmlplus/react';\nconst DialogNesting = () => {\n  return (\n    <>\n      <Grid justifyContent=\"center\" gutter=\"md\">\n        <Grid.Item xs=\"12\" sm=\"auto\">\n          <Dialog.Toggler connector=\"dialog-nesting-1\">\n            Open Dialog 1\n          </Dialog.Toggler>\n        </Grid.Item>\n        <Grid.Item xs=\"12\" sm=\"auto\">\n          <Dialog.Toggler connector=\"dialog-nesting-2\">\n            Open Dialog 2\n          </Dialog.Toggler>\n        </Grid.Item>\n        <Grid.Item xs=\"12\" sm=\"auto\">\n          <Dialog.Toggler connector=\"dialog-nesting-3\">\n            Open Dialog 3\n          </Dialog.Toggler>\n        </Grid.Item>\n      </Grid>\n      <Dialog animation=\"fade\" connector=\"dialog-nesting-1\" size=\"xl\">\n        <Dialog.Content>\n          <Dialog.Header>Dialog 1</Dialog.Header>\n          <Dialog.Body>\n            <p>\n              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n              nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n              amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit\n              amet posuere lacus, gravida semper libero. Praesent sed nisi sed\n              lorem posuere consequat. Nunc vehicula fermentum hendrerit. Mauris\n              aliquam ornare laoreet. Maecenas cursus nec ipsum et tempus. Sed\n              pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam\n              egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n              fermentum, ac accumsan purus vestibulum. Integer facilisis\n              tincidunt urna vel accumsan. Orci varius natoque penatibus et\n              magnis dis parturient montes, nascetur ridiculus mus. Maecenas et\n              elit imperdiet, gravida urna tempus, fringilla nisl.\n            </p>\n          </Dialog.Body>\n          <Dialog.Footer>\n            <Dialog.Toggler connector=\"dialog-nesting-2\">\n              Open Dialog 2\n            </Dialog.Toggler>\n            <Dialog.Toggler>Close</Dialog.Toggler>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n      <Dialog animation=\"fade\" connector=\"dialog-nesting-2\" size=\"lg\">\n        <Dialog.Content>\n          <Dialog.Header>Dialog 2</Dialog.Header>\n          <Dialog.Body>\n            <p>\n              Nam a gravida lorem. Curabitur sagittis vitae quam vitae\n              dignissim. Curabitur eget sollicitudin urna, vitae venenatis\n              massa. Aliquam nulla dolor, lobortis at mauris non, gravida\n              dignissim nulla. Integer ac ultricies nisl. Duis aliquam sem eu\n              dui porttitor lobortis. Ut luctus rhoncus tincidunt. Vestibulum\n              consequat risus non diam consectetur, bibendum molestie enim\n              placerat. Morbi pretium sem sit amet dictum feugiat. Fusce\n              gravida, eros ac bibendum ullamcorper, sapien nunc vulputate elit,\n              quis iaculis sapien ligula eget nisi. Duis erat urna, porttitor\n              non massa at, porttitor varius mauris. In lobortis massa dui, et\n              consectetur mauris iaculis vitae. Vivamus suscipit, risus vitae\n              viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at\n              felis. In hac habitasse platea dictumst. Donec ac urna ac sapien\n              euismod vulputate.\n            </p>\n          </Dialog.Body>\n          <Dialog.Footer>\n            <Dialog.Toggler connector=\"dialog-nesting-3\">\n              Open Dialog 3\n            </Dialog.Toggler>\n            <Dialog.Toggler>Close</Dialog.Toggler>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n      <Dialog animation=\"fade\" connector=\"dialog-nesting-3\" size=\"sm\">\n        <Dialog.Content>\n          <Dialog.Header>Dialog 3</Dialog.Header>\n          <Dialog.Body>\n            <p>\n              Proin sapien enim, pellentesque eget urna ut, mollis tincidunt\n              quam. Pellentesque eu orci et leo dapibus sagittis in nec tellus.\n              Vivamus porta felis turpis, ac vehicula felis tristique at.\n              Integer at lacus odio. Donec ornare turpis eu cursus finibus.\n              Suspendisse cursus vestibulum lacus vel porta. Nam eget nibh eu\n              ante ultrices aliquet. Nullam quis ligula faucibus, aliquam tellus\n              quis, accumsan tortor. Integer at leo dictum, luctus dui ac,\n              suscipit turpis. Sed pharetra finibus sapien sed fermentum. In\n              viverra est sagittis sagittis maximus.\n            </p>\n          </Dialog.Body>\n          <Dialog.Footer>\n            <Dialog.Toggler>Close</Dialog.Toggler>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n};\nexport default DialogNesting;\n",
@@ -5104,7 +5104,7 @@ export const examples: any[] = [
   },
   {
     "key": "nesting",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "dialog",
     "detail": {
       "script": "import '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst DialogNesting = () => {\n  return (\n    <>\n      <plus-grid justify-content=\"center\" gutter=\"md\">\n        <plus-grid-item xs=\"12\" sm=\"auto\">\n          <plus-dialog-toggler connector=\"dialog-nesting-1\">\n            Open Dialog 1\n          </plus-dialog-toggler>\n        </plus-grid-item>\n        <plus-grid-item xs=\"12\" sm=\"auto\">\n          <plus-dialog-toggler connector=\"dialog-nesting-2\">\n            Open Dialog 2\n          </plus-dialog-toggler>\n        </plus-grid-item>\n        <plus-grid-item xs=\"12\" sm=\"auto\">\n          <plus-dialog-toggler connector=\"dialog-nesting-3\">\n            Open Dialog 3\n          </plus-dialog-toggler>\n        </plus-grid-item>\n      </plus-grid>\n      <plus-dialog animation=\"fade\" connector=\"dialog-nesting-1\" size=\"xl\">\n        <plus-dialog-content>\n          <plus-dialog-header>Dialog 1</plus-dialog-header>\n          <plus-dialog-body>\n            <p>\n              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n              nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n              amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit\n              amet posuere lacus, gravida semper libero. Praesent sed nisi sed\n              lorem posuere consequat. Nunc vehicula fermentum hendrerit. Mauris\n              aliquam ornare laoreet. Maecenas cursus nec ipsum et tempus. Sed\n              pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam\n              egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n              fermentum, ac accumsan purus vestibulum. Integer facilisis\n              tincidunt urna vel accumsan. Orci varius natoque penatibus et\n              magnis dis parturient montes, nascetur ridiculus mus. Maecenas et\n              elit imperdiet, gravida urna tempus, fringilla nisl.\n            </p>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler connector=\"dialog-nesting-2\">\n              Open Dialog 2\n            </plus-dialog-toggler>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n      <plus-dialog animation=\"fade\" connector=\"dialog-nesting-2\" size=\"lg\">\n        <plus-dialog-content>\n          <plus-dialog-header>Dialog 2</plus-dialog-header>\n          <plus-dialog-body>\n            <p>\n              Nam a gravida lorem. Curabitur sagittis vitae quam vitae\n              dignissim. Curabitur eget sollicitudin urna, vitae venenatis\n              massa. Aliquam nulla dolor, lobortis at mauris non, gravida\n              dignissim nulla. Integer ac ultricies nisl. Duis aliquam sem eu\n              dui porttitor lobortis. Ut luctus rhoncus tincidunt. Vestibulum\n              consequat risus non diam consectetur, bibendum molestie enim\n              placerat. Morbi pretium sem sit amet dictum feugiat. Fusce\n              gravida, eros ac bibendum ullamcorper, sapien nunc vulputate elit,\n              quis iaculis sapien ligula eget nisi. Duis erat urna, porttitor\n              non massa at, porttitor varius mauris. In lobortis massa dui, et\n              consectetur mauris iaculis vitae. Vivamus suscipit, risus vitae\n              viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at\n              felis. In hac habitasse platea dictumst. Donec ac urna ac sapien\n              euismod vulputate.\n            </p>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler connector=\"dialog-nesting-3\">\n              Open Dialog 3\n            </plus-dialog-toggler>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n      <plus-dialog animation=\"fade\" connector=\"dialog-nesting-3\" size=\"sm\">\n        <plus-dialog-content>\n          <plus-dialog-header>Dialog 3</plus-dialog-header>\n          <plus-dialog-body>\n            <p>\n              Proin sapien enim, pellentesque eget urna ut, mollis tincidunt\n              quam. Pellentesque eu orci et leo dapibus sagittis in nec tellus.\n              Vivamus porta felis turpis, ac vehicula felis tristique at.\n              Integer at lacus odio. Donec ornare turpis eu cursus finibus.\n              Suspendisse cursus vestibulum lacus vel porta. Nam eget nibh eu\n              ante ultrices aliquet. Nullam quis ligula faucibus, aliquam tellus\n              quis, accumsan tortor. Integer at leo dictum, luctus dui ac,\n              suscipit turpis. Sed pharetra finibus sapien sed fermentum. In\n              viverra est sagittis sagittis maximus.\n            </p>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n};\nexport default DialogNesting;\n",
@@ -5162,7 +5162,7 @@ export const examples: any[] = [
   },
   {
     "key": "persistent",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "dialog",
     "detail": {
       "script": "import { Dialog } from '@htmlplus/react';\nconst DialogPersistent = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <Dialog.Toggler connector=\"dialog-persistent\">Open</Dialog.Toggler>\n      </div>\n      <Dialog animation=\"fade\" connector=\"dialog-persistent\" persistent>\n        <Dialog.Content>\n          <Dialog.Header>Dialog Title</Dialog.Header>\n          <Dialog.Body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </Dialog.Body>\n          <Dialog.Footer>\n            <Dialog.Toggler>Close</Dialog.Toggler>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n};\nexport default DialogPersistent;\n",
@@ -5171,7 +5171,7 @@ export const examples: any[] = [
   },
   {
     "key": "persistent",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "dialog",
     "detail": {
       "script": "import '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nconst DialogPersistent = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <plus-dialog-toggler connector=\"dialog-persistent\">\n          Open\n        </plus-dialog-toggler>\n      </div>\n      <plus-dialog animation=\"fade\" connector=\"dialog-persistent\" persistent>\n        <plus-dialog-content>\n          <plus-dialog-header>Dialog Title</plus-dialog-header>\n          <plus-dialog-body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n};\nexport default DialogPersistent;\n",
@@ -5229,7 +5229,7 @@ export const examples: any[] = [
   },
   {
     "key": "placement",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "dialog",
     "detail": {
       "script": "import { Dialog } from '@htmlplus/react';\nconst DialogPlacement = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <Dialog.Toggler connector=\"dialog-placement\">Open</Dialog.Toggler>\n      </div>\n      <Dialog\n        animation=\"fade\"\n        connector=\"dialog-placement\"\n        placement=\"center-bottom\"\n      >\n        <Dialog.Content>\n          <Dialog.Header>Dialog Title</Dialog.Header>\n          <Dialog.Body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </Dialog.Body>\n          <Dialog.Footer>\n            <Dialog.Toggler>Close</Dialog.Toggler>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n};\nexport default DialogPlacement;\n",
@@ -5238,7 +5238,7 @@ export const examples: any[] = [
   },
   {
     "key": "placement",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "dialog",
     "detail": {
       "script": "import '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nconst DialogPlacement = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <plus-dialog-toggler connector=\"dialog-placement\">\n          Open\n        </plus-dialog-toggler>\n      </div>\n      <plus-dialog\n        animation=\"fade\"\n        connector=\"dialog-placement\"\n        placement=\"center-bottom\"\n      >\n        <plus-dialog-content>\n          <plus-dialog-header>Dialog Title</plus-dialog-header>\n          <plus-dialog-body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n};\nexport default DialogPlacement;\n",
@@ -5296,7 +5296,7 @@ export const examples: any[] = [
   },
   {
     "key": "prevent",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "dialog",
     "detail": {
       "script": "import { Dialog } from '@htmlplus/react';\nconst DialogPrevent = () => {\n  const ensure = (type, event) => {\n    if (window.confirm(`Are you sure you want to ${type} it?`)) return;\n    event.preventDefault();\n  };\n  return (\n    <>\n      <div className=\"center\">\n        <Dialog.Toggler connector=\"dialog-prevent\">Open</Dialog.Toggler>\n      </div>\n      <Dialog\n        animation=\"fade\"\n        connector=\"dialog-prevent\"\n        onOpen={(event) => ensure('open', event)}\n        onClose={(event) => ensure('close', event)}\n      >\n        <Dialog.Content>\n          <Dialog.Header>Dialog Title</Dialog.Header>\n          <Dialog.Body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </Dialog.Body>\n          <Dialog.Footer>\n            <Dialog.Toggler>Close</Dialog.Toggler>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n};\nexport default DialogPrevent;\n",
@@ -5305,7 +5305,7 @@ export const examples: any[] = [
   },
   {
     "key": "prevent",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "dialog",
     "detail": {
       "script": "import '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nconst DialogPrevent = () => {\n  const ensure = (type, event) => {\n    if (window.confirm(`Are you sure you want to ${type} it?`)) return;\n    event.preventDefault();\n  };\n  return (\n    <>\n      <div className=\"center\">\n        <plus-dialog-toggler connector=\"dialog-prevent\">\n          Open\n        </plus-dialog-toggler>\n      </div>\n      <plus-dialog\n        animation=\"fade\"\n        connector=\"dialog-prevent\"\n        onplus-open={(event) => ensure('open', event)}\n        onplus-close={(event) => ensure('close', event)}\n      >\n        <plus-dialog-content>\n          <plus-dialog-header>Dialog Title</plus-dialog-header>\n          <plus-dialog-body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n};\nexport default DialogPrevent;\n",
@@ -5363,7 +5363,7 @@ export const examples: any[] = [
   },
   {
     "key": "scrollable",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "dialog",
     "detail": {
       "script": "import { Dialog } from '@htmlplus/react';\nconst DialogScrollable = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <Dialog.Toggler connector=\"dialog-scrollable\">Open</Dialog.Toggler>\n      </div>\n      <Dialog animation=\"fade\" connector=\"dialog-scrollable\" scrollable>\n        <Dialog.Content>\n          <Dialog.Header>Dialog Title</Dialog.Header>\n          <Dialog.Body>\n            <p>\n              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n              nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n              amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit\n              amet posuere lacus, gravida semper libero. Praesent sed nisi sed\n              lorem posuere consequat. Nunc vehicula fermentum hendrerit. Mauris\n              aliquam ornare laoreet. Maecenas cursus nec ipsum et tempus. Sed\n              pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam\n              egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n              fermentum, ac accumsan purus vestibulum. Integer facilisis\n              tincidunt urna vel accumsan. Orci varius natoque penatibus et\n              magnis dis parturient montes, nascetur ridiculus mus. Maecenas et\n              elit imperdiet, gravida urna tempus, fringilla nisl.\n            </p>\n            <p>\n              Nam a gravida lorem. Curabitur sagittis vitae quam vitae\n              dignissim. Curabitur eget sollicitudin urna, vitae venenatis\n              massa. Aliquam nulla dolor, lobortis at mauris non, gravida\n              dignissim nulla. Integer ac ultricies nisl. Duis aliquam sem eu\n              dui porttitor lobortis. Ut luctus rhoncus tincidunt. Vestibulum\n              consequat risus non diam consectetur, bibendum molestie enim\n              placerat. Morbi pretium sem sit amet dictum feugiat. Fusce\n              gravida, eros ac bibendum ullamcorper, sapien nunc vulputate elit,\n              quis iaculis sapien ligula eget nisi. Duis erat urna, porttitor\n              non massa at, porttitor varius mauris. In lobortis massa dui, et\n              consectetur mauris iaculis vitae. Vivamus suscipit, risus vitae\n              viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at\n              felis. In hac habitasse platea dictumst. Donec ac urna ac sapien\n              euismod vulputate.\n            </p>\n            <p>\n              Proin sapien enim, pellentesque eget urna ut, mollis tincidunt\n              quam. Pellentesque eu orci et leo dapibus sagittis in nec tellus.\n              Vivamus porta felis turpis, ac vehicula felis tristique at.\n              Integer at lacus odio. Donec ornare turpis eu cursus finibus.\n              Suspendisse cursus vestibulum lacus vel porta. Nam eget nibh eu\n              ante ultrices aliquet. Nullam quis ligula faucibus, aliquam tellus\n              quis, accumsan tortor. Integer at leo dictum, luctus dui ac,\n              suscipit turpis. Sed pharetra finibus sapien sed fermentum. In\n              viverra est sagittis sagittis maximus.\n            </p>\n            <p>\n              Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui.\n              Etiam consectetur molestie eros sed lacinia. Maecenas ipsum est,\n              consectetur et rutrum et, convallis quis metus. Praesent est eros,\n              semper sed velit sit amet, gravida vestibulum justo. Class aptent\n              taciti sociosqu ad litora torquent per conubia nostra, per\n              inceptos himenaeos. Aenean varius, erat vel ullamcorper consequat,\n              tellus massa gravida arcu, et blandit nisl justo vitae tellus.\n              Suspendisse id metus aliquam, dignissim massa et, facilisis ex.\n              Sed suscipit nunc elit, id dictum velit ultrices hendrerit. Nunc\n              sit amet dui ultrices, sollicitudin justo quis, lacinia tortor.\n              Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n              bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n              Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n            </p>\n            <p>\n              Maecenas vulputate finibus odio, vitae dignissim nibh ultricies\n              rhoncus. Aenean in dictum justo. Vestibulum pellentesque lorem\n              aliquam lectus finibus, id sagittis ex molestie. Duis rhoncus\n              risus molestie ligula consequat efficitur. Aenean vel nisl vel sem\n              pretium ultrices nec quis mi. Donec enim elit, tristique non\n              sodales quis, iaculis ut justo. In laoreet sodales leo, vel\n              maximus purus volutpat quis. Maecenas ac tincidunt nisl, vitae\n              sodales nibh. Morbi tellus libero, feugiat vitae convallis\n              pretium, fermentum in mi. Etiam dignissim vitae massa nec semper.\n            </p>\n            <p>\n              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n              nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n              amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit\n              amet posuere lacus, gravida semper libero. Praesent sed nisi sed\n              lorem posuere consequat. Nunc vehicula fermentum hendrerit. Mauris\n              aliquam ornare laoreet. Maecenas cursus nec ipsum et tempus. Sed\n              pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam\n              egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n              fermentum, ac accumsan purus vestibulum. Integer facilisis\n              tincidunt urna vel accumsan. Orci varius natoque penatibus et\n              magnis dis parturient montes, nascetur ridiculus mus. Maecenas et\n              elit imperdiet, gravida urna tempus, fringilla nisl.\n            </p>\n            <p>\n              Nam a gravida lorem. Curabitur sagittis vitae quam vitae\n              dignissim. Curabitur eget sollicitudin urna, vitae venenatis\n              massa. Aliquam nulla dolor, lobortis at mauris non, gravida\n              dignissim nulla. Integer ac ultricies nisl. Duis aliquam sem eu\n              dui porttitor lobortis. Ut luctus rhoncus tincidunt. Vestibulum\n              consequat risus non diam consectetur, bibendum molestie enim\n              placerat. Morbi pretium sem sit amet dictum feugiat. Fusce\n              gravida, eros ac bibendum ullamcorper, sapien nunc vulputate elit,\n              quis iaculis sapien ligula eget nisi. Duis erat urna, porttitor\n              non massa at, porttitor varius mauris. In lobortis massa dui, et\n              consectetur mauris iaculis vitae. Vivamus suscipit, risus vitae\n              viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at\n              felis. In hac habitasse platea dictumst. Donec ac urna ac sapien\n              euismod vulputate.\n            </p>\n            <p>\n              Proin sapien enim, pellentesque eget urna ut, mollis tincidunt\n              quam. Pellentesque eu orci et leo dapibus sagittis in nec tellus.\n              Vivamus porta felis turpis, ac vehicula felis tristique at.\n              Integer at lacus odio. Donec ornare turpis eu cursus finibus.\n              Suspendisse cursus vestibulum lacus vel porta. Nam eget nibh eu\n              ante ultrices aliquet. Nullam quis ligula faucibus, aliquam tellus\n              quis, accumsan tortor. Integer at leo dictum, luctus dui ac,\n              suscipit turpis. Sed pharetra finibus sapien sed fermentum. In\n              viverra est sagittis sagittis maximus.\n            </p>\n            <p>\n              Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui.\n              Etiam consectetur molestie eros sed lacinia. Maecenas ipsum est,\n              consectetur et rutrum et, convallis quis metus. Praesent est eros,\n              semper sed velit sit amet, gravida vestibulum justo. Class aptent\n              taciti sociosqu ad litora torquent per conubia nostra, per\n              inceptos himenaeos. Aenean varius, erat vel ullamcorper consequat,\n              tellus massa gravida arcu, et blandit nisl justo vitae tellus.\n              Suspendisse id metus aliquam, dignissim massa et, facilisis ex.\n              Sed suscipit nunc elit, id dictum velit ultrices hendrerit. Nunc\n              sit amet dui ultrices, sollicitudin justo quis, lacinia tortor.\n              Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n              bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n              Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n            </p>\n            <p>\n              Maecenas vulputate finibus odio, vitae dignissim nibh ultricies\n              rhoncus. Aenean in dictum justo. Vestibulum pellentesque lorem\n              aliquam lectus finibus, id sagittis ex molestie. Duis rhoncus\n              risus molestie ligula consequat efficitur. Aenean vel nisl vel sem\n              pretium ultrices nec quis mi. Donec enim elit, tristique non\n              sodales quis, iaculis ut justo. In laoreet sodales leo, vel\n              maximus purus volutpat quis. Maecenas ac tincidunt nisl, vitae\n              sodales nibh. Morbi tellus libero, feugiat vitae convallis\n              pretium, fermentum in mi. Etiam dignissim vitae massa nec semper.\n            </p>\n          </Dialog.Body>\n          <Dialog.Footer>\n            <Dialog.Toggler>Close</Dialog.Toggler>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n};\nexport default DialogScrollable;\n",
@@ -5372,7 +5372,7 @@ export const examples: any[] = [
   },
   {
     "key": "scrollable",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "dialog",
     "detail": {
       "script": "import '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nconst DialogScrollable = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <plus-dialog-toggler connector=\"dialog-scrollable\">\n          Open\n        </plus-dialog-toggler>\n      </div>\n      <plus-dialog animation=\"fade\" connector=\"dialog-scrollable\" scrollable>\n        <plus-dialog-content>\n          <plus-dialog-header>Dialog Title</plus-dialog-header>\n          <plus-dialog-body>\n            <p>\n              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n              nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n              amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit\n              amet posuere lacus, gravida semper libero. Praesent sed nisi sed\n              lorem posuere consequat. Nunc vehicula fermentum hendrerit. Mauris\n              aliquam ornare laoreet. Maecenas cursus nec ipsum et tempus. Sed\n              pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam\n              egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n              fermentum, ac accumsan purus vestibulum. Integer facilisis\n              tincidunt urna vel accumsan. Orci varius natoque penatibus et\n              magnis dis parturient montes, nascetur ridiculus mus. Maecenas et\n              elit imperdiet, gravida urna tempus, fringilla nisl.\n            </p>\n            <p>\n              Nam a gravida lorem. Curabitur sagittis vitae quam vitae\n              dignissim. Curabitur eget sollicitudin urna, vitae venenatis\n              massa. Aliquam nulla dolor, lobortis at mauris non, gravida\n              dignissim nulla. Integer ac ultricies nisl. Duis aliquam sem eu\n              dui porttitor lobortis. Ut luctus rhoncus tincidunt. Vestibulum\n              consequat risus non diam consectetur, bibendum molestie enim\n              placerat. Morbi pretium sem sit amet dictum feugiat. Fusce\n              gravida, eros ac bibendum ullamcorper, sapien nunc vulputate elit,\n              quis iaculis sapien ligula eget nisi. Duis erat urna, porttitor\n              non massa at, porttitor varius mauris. In lobortis massa dui, et\n              consectetur mauris iaculis vitae. Vivamus suscipit, risus vitae\n              viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at\n              felis. In hac habitasse platea dictumst. Donec ac urna ac sapien\n              euismod vulputate.\n            </p>\n            <p>\n              Proin sapien enim, pellentesque eget urna ut, mollis tincidunt\n              quam. Pellentesque eu orci et leo dapibus sagittis in nec tellus.\n              Vivamus porta felis turpis, ac vehicula felis tristique at.\n              Integer at lacus odio. Donec ornare turpis eu cursus finibus.\n              Suspendisse cursus vestibulum lacus vel porta. Nam eget nibh eu\n              ante ultrices aliquet. Nullam quis ligula faucibus, aliquam tellus\n              quis, accumsan tortor. Integer at leo dictum, luctus dui ac,\n              suscipit turpis. Sed pharetra finibus sapien sed fermentum. In\n              viverra est sagittis sagittis maximus.\n            </p>\n            <p>\n              Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui.\n              Etiam consectetur molestie eros sed lacinia. Maecenas ipsum est,\n              consectetur et rutrum et, convallis quis metus. Praesent est eros,\n              semper sed velit sit amet, gravida vestibulum justo. Class aptent\n              taciti sociosqu ad litora torquent per conubia nostra, per\n              inceptos himenaeos. Aenean varius, erat vel ullamcorper consequat,\n              tellus massa gravida arcu, et blandit nisl justo vitae tellus.\n              Suspendisse id metus aliquam, dignissim massa et, facilisis ex.\n              Sed suscipit nunc elit, id dictum velit ultrices hendrerit. Nunc\n              sit amet dui ultrices, sollicitudin justo quis, lacinia tortor.\n              Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n              bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n              Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n            </p>\n            <p>\n              Maecenas vulputate finibus odio, vitae dignissim nibh ultricies\n              rhoncus. Aenean in dictum justo. Vestibulum pellentesque lorem\n              aliquam lectus finibus, id sagittis ex molestie. Duis rhoncus\n              risus molestie ligula consequat efficitur. Aenean vel nisl vel sem\n              pretium ultrices nec quis mi. Donec enim elit, tristique non\n              sodales quis, iaculis ut justo. In laoreet sodales leo, vel\n              maximus purus volutpat quis. Maecenas ac tincidunt nisl, vitae\n              sodales nibh. Morbi tellus libero, feugiat vitae convallis\n              pretium, fermentum in mi. Etiam dignissim vitae massa nec semper.\n            </p>\n            <p>\n              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n              nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n              amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit\n              amet posuere lacus, gravida semper libero. Praesent sed nisi sed\n              lorem posuere consequat. Nunc vehicula fermentum hendrerit. Mauris\n              aliquam ornare laoreet. Maecenas cursus nec ipsum et tempus. Sed\n              pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam\n              egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n              fermentum, ac accumsan purus vestibulum. Integer facilisis\n              tincidunt urna vel accumsan. Orci varius natoque penatibus et\n              magnis dis parturient montes, nascetur ridiculus mus. Maecenas et\n              elit imperdiet, gravida urna tempus, fringilla nisl.\n            </p>\n            <p>\n              Nam a gravida lorem. Curabitur sagittis vitae quam vitae\n              dignissim. Curabitur eget sollicitudin urna, vitae venenatis\n              massa. Aliquam nulla dolor, lobortis at mauris non, gravida\n              dignissim nulla. Integer ac ultricies nisl. Duis aliquam sem eu\n              dui porttitor lobortis. Ut luctus rhoncus tincidunt. Vestibulum\n              consequat risus non diam consectetur, bibendum molestie enim\n              placerat. Morbi pretium sem sit amet dictum feugiat. Fusce\n              gravida, eros ac bibendum ullamcorper, sapien nunc vulputate elit,\n              quis iaculis sapien ligula eget nisi. Duis erat urna, porttitor\n              non massa at, porttitor varius mauris. In lobortis massa dui, et\n              consectetur mauris iaculis vitae. Vivamus suscipit, risus vitae\n              viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at\n              felis. In hac habitasse platea dictumst. Donec ac urna ac sapien\n              euismod vulputate.\n            </p>\n            <p>\n              Proin sapien enim, pellentesque eget urna ut, mollis tincidunt\n              quam. Pellentesque eu orci et leo dapibus sagittis in nec tellus.\n              Vivamus porta felis turpis, ac vehicula felis tristique at.\n              Integer at lacus odio. Donec ornare turpis eu cursus finibus.\n              Suspendisse cursus vestibulum lacus vel porta. Nam eget nibh eu\n              ante ultrices aliquet. Nullam quis ligula faucibus, aliquam tellus\n              quis, accumsan tortor. Integer at leo dictum, luctus dui ac,\n              suscipit turpis. Sed pharetra finibus sapien sed fermentum. In\n              viverra est sagittis sagittis maximus.\n            </p>\n            <p>\n              Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui.\n              Etiam consectetur molestie eros sed lacinia. Maecenas ipsum est,\n              consectetur et rutrum et, convallis quis metus. Praesent est eros,\n              semper sed velit sit amet, gravida vestibulum justo. Class aptent\n              taciti sociosqu ad litora torquent per conubia nostra, per\n              inceptos himenaeos. Aenean varius, erat vel ullamcorper consequat,\n              tellus massa gravida arcu, et blandit nisl justo vitae tellus.\n              Suspendisse id metus aliquam, dignissim massa et, facilisis ex.\n              Sed suscipit nunc elit, id dictum velit ultrices hendrerit. Nunc\n              sit amet dui ultrices, sollicitudin justo quis, lacinia tortor.\n              Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n              bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n              Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n            </p>\n            <p>\n              Maecenas vulputate finibus odio, vitae dignissim nibh ultricies\n              rhoncus. Aenean in dictum justo. Vestibulum pellentesque lorem\n              aliquam lectus finibus, id sagittis ex molestie. Duis rhoncus\n              risus molestie ligula consequat efficitur. Aenean vel nisl vel sem\n              pretium ultrices nec quis mi. Donec enim elit, tristique non\n              sodales quis, iaculis ut justo. In laoreet sodales leo, vel\n              maximus purus volutpat quis. Maecenas ac tincidunt nisl, vitae\n              sodales nibh. Morbi tellus libero, feugiat vitae convallis\n              pretium, fermentum in mi. Etiam dignissim vitae massa nec semper.\n            </p>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n};\nexport default DialogScrollable;\n",
@@ -5430,7 +5430,7 @@ export const examples: any[] = [
   },
   {
     "key": "size",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "dialog",
     "detail": {
       "script": "import { useState } from 'react';\nimport { Dialog, Grid } from '@htmlplus/react';\nconst DialogSize = () => {\n  const [open, setOpen] = useState(false);\n  const [size, setSize] = useState('md');\n  const hide = () => {\n    setOpen(false);\n  };\n  const show = (size) => {\n    setSize(size);\n    setOpen(true);\n  };\n  return (\n    <>\n      <Grid justifyContent=\"center\" gutter=\"md\">\n        <Grid.Item xs=\"12\" sm=\"auto\">\n          <button onClick={() => show('sm')}>Small dialog</button>\n        </Grid.Item>\n        <Grid.Item xs=\"12\" sm=\"auto\">\n          <button onClick={() => show('lg')}>Large dialog</button>\n        </Grid.Item>\n        <Grid.Item xs=\"12\" sm=\"auto\">\n          <button onClick={() => show('xl')}>Extra large dialog</button>\n        </Grid.Item>\n      </Grid>\n      <Dialog animation=\"fade\" open={open} size={size} onClose={() => hide()}>\n        <Dialog.Content>\n          <Dialog.Header>Dialog Title</Dialog.Header>\n          <Dialog.Body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </Dialog.Body>\n          <Dialog.Footer>\n            <button onClick={() => hide()}>Close</button>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n};\nexport default DialogSize;\n",
@@ -5439,7 +5439,7 @@ export const examples: any[] = [
   },
   {
     "key": "size",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "dialog",
     "detail": {
       "script": "import { useState } from 'react';\nimport '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst DialogSize = () => {\n  const [open, setOpen] = useState(false);\n  const [size, setSize] = useState('md');\n  const hide = () => {\n    setOpen(false);\n  };\n  const show = (size) => {\n    setSize(size);\n    setOpen(true);\n  };\n  return (\n    <>\n      <plus-grid justify-content=\"center\" gutter=\"md\">\n        <plus-grid-item xs=\"12\" sm=\"auto\">\n          <button onClick={() => show('sm')}>Small dialog</button>\n        </plus-grid-item>\n        <plus-grid-item xs=\"12\" sm=\"auto\">\n          <button onClick={() => show('lg')}>Large dialog</button>\n        </plus-grid-item>\n        <plus-grid-item xs=\"12\" sm=\"auto\">\n          <button onClick={() => show('xl')}>Extra large dialog</button>\n        </plus-grid-item>\n      </plus-grid>\n      <plus-dialog\n        animation=\"fade\"\n        open={open}\n        size={size}\n        onplus-close={() => hide()}\n      >\n        <plus-dialog-content>\n          <plus-dialog-header>Dialog Title</plus-dialog-header>\n          <plus-dialog-body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <button onClick={() => hide()}>Close</button>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n};\nexport default DialogSize;\n",
@@ -5497,7 +5497,7 @@ export const examples: any[] = [
   },
   {
     "key": "specific-scrollable",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "dialog",
     "detail": {
       "script": "import { Dialog } from '@htmlplus/react';\nconst DialogSpecificScrollable = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <Dialog.Toggler connector=\"dialog-specific-scrollable\">\n          Open\n        </Dialog.Toggler>\n      </div>\n      <Dialog\n        animation=\"fade\"\n        connector=\"dialog-specific-scrollable\"\n        scrollable\n      >\n        <Dialog.Content>\n          <Dialog.Header>Dialog Title</Dialog.Header>\n          <Dialog.Body scrollable>\n            <p>\n              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n              nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n              amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit\n              amet posuere lacus, gravida semper libero. Praesent sed nisi sed\n              lorem posuere consequat. Nunc vehicula fermentum hendrerit. Mauris\n              aliquam ornare laoreet. Maecenas cursus nec ipsum et tempus. Sed\n              pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam\n              egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n              fermentum, ac accumsan purus vestibulum. Integer facilisis\n              tincidunt urna vel accumsan. Orci varius natoque penatibus et\n              magnis dis parturient montes, nascetur ridiculus mus. Maecenas et\n              elit imperdiet, gravida urna tempus, fringilla nisl.\n            </p>\n            <p>\n              Nam a gravida lorem. Curabitur sagittis vitae quam vitae\n              dignissim. Curabitur eget sollicitudin urna, vitae venenatis\n              massa. Aliquam nulla dolor, lobortis at mauris non, gravida\n              dignissim nulla. Integer ac ultricies nisl. Duis aliquam sem eu\n              dui porttitor lobortis. Ut luctus rhoncus tincidunt. Vestibulum\n              consequat risus non diam consectetur, bibendum molestie enim\n              placerat. Morbi pretium sem sit amet dictum feugiat. Fusce\n              gravida, eros ac bibendum ullamcorper, sapien nunc vulputate elit,\n              quis iaculis sapien ligula eget nisi. Duis erat urna, porttitor\n              non massa at, porttitor varius mauris. In lobortis massa dui, et\n              consectetur mauris iaculis vitae. Vivamus suscipit, risus vitae\n              viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at\n              felis. In hac habitasse platea dictumst. Donec ac urna ac sapien\n              euismod vulputate.\n            </p>\n            <p>\n              Proin sapien enim, pellentesque eget urna ut, mollis tincidunt\n              quam. Pellentesque eu orci et leo dapibus sagittis in nec tellus.\n              Vivamus porta felis turpis, ac vehicula felis tristique at.\n              Integer at lacus odio. Donec ornare turpis eu cursus finibus.\n              Suspendisse cursus vestibulum lacus vel porta. Nam eget nibh eu\n              ante ultrices aliquet. Nullam quis ligula faucibus, aliquam tellus\n              quis, accumsan tortor. Integer at leo dictum, luctus dui ac,\n              suscipit turpis. Sed pharetra finibus sapien sed fermentum. In\n              viverra est sagittis sagittis maximus.\n            </p>\n            <p>\n              Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui.\n              Etiam consectetur molestie eros sed lacinia. Maecenas ipsum est,\n              consectetur et rutrum et, convallis quis metus. Praesent est eros,\n              semper sed velit sit amet, gravida vestibulum justo. Class aptent\n              taciti sociosqu ad litora torquent per conubia nostra, per\n              inceptos himenaeos. Aenean varius, erat vel ullamcorper consequat,\n              tellus massa gravida arcu, et blandit nisl justo vitae tellus.\n              Suspendisse id metus aliquam, dignissim massa et, facilisis ex.\n              Sed suscipit nunc elit, id dictum velit ultrices hendrerit. Nunc\n              sit amet dui ultrices, sollicitudin justo quis, lacinia tortor.\n              Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n              bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n              Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n            </p>\n            <p>\n              Maecenas vulputate finibus odio, vitae dignissim nibh ultricies\n              rhoncus. Aenean in dictum justo. Vestibulum pellentesque lorem\n              aliquam lectus finibus, id sagittis ex molestie. Duis rhoncus\n              risus molestie ligula consequat efficitur. Aenean vel nisl vel sem\n              pretium ultrices nec quis mi. Donec enim elit, tristique non\n              sodales quis, iaculis ut justo. In laoreet sodales leo, vel\n              maximus purus volutpat quis. Maecenas ac tincidunt nisl, vitae\n              sodales nibh. Morbi tellus libero, feugiat vitae convallis\n              pretium, fermentum in mi. Etiam dignissim vitae massa nec semper.\n            </p>\n            <p>\n              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n              nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n              amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit\n              amet posuere lacus, gravida semper libero. Praesent sed nisi sed\n              lorem posuere consequat. Nunc vehicula fermentum hendrerit. Mauris\n              aliquam ornare laoreet. Maecenas cursus nec ipsum et tempus. Sed\n              pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam\n              egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n              fermentum, ac accumsan purus vestibulum. Integer facilisis\n              tincidunt urna vel accumsan. Orci varius natoque penatibus et\n              magnis dis parturient montes, nascetur ridiculus mus. Maecenas et\n              elit imperdiet, gravida urna tempus, fringilla nisl.\n            </p>\n            <p>\n              Nam a gravida lorem. Curabitur sagittis vitae quam vitae\n              dignissim. Curabitur eget sollicitudin urna, vitae venenatis\n              massa. Aliquam nulla dolor, lobortis at mauris non, gravida\n              dignissim nulla. Integer ac ultricies nisl. Duis aliquam sem eu\n              dui porttitor lobortis. Ut luctus rhoncus tincidunt. Vestibulum\n              consequat risus non diam consectetur, bibendum molestie enim\n              placerat. Morbi pretium sem sit amet dictum feugiat. Fusce\n              gravida, eros ac bibendum ullamcorper, sapien nunc vulputate elit,\n              quis iaculis sapien ligula eget nisi. Duis erat urna, porttitor\n              non massa at, porttitor varius mauris. In lobortis massa dui, et\n              consectetur mauris iaculis vitae. Vivamus suscipit, risus vitae\n              viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at\n              felis. In hac habitasse platea dictumst. Donec ac urna ac sapien\n              euismod vulputate.\n            </p>\n            <p>\n              Proin sapien enim, pellentesque eget urna ut, mollis tincidunt\n              quam. Pellentesque eu orci et leo dapibus sagittis in nec tellus.\n              Vivamus porta felis turpis, ac vehicula felis tristique at.\n              Integer at lacus odio. Donec ornare turpis eu cursus finibus.\n              Suspendisse cursus vestibulum lacus vel porta. Nam eget nibh eu\n              ante ultrices aliquet. Nullam quis ligula faucibus, aliquam tellus\n              quis, accumsan tortor. Integer at leo dictum, luctus dui ac,\n              suscipit turpis. Sed pharetra finibus sapien sed fermentum. In\n              viverra est sagittis sagittis maximus.\n            </p>\n            <p>\n              Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui.\n              Etiam consectetur molestie eros sed lacinia. Maecenas ipsum est,\n              consectetur et rutrum et, convallis quis metus. Praesent est eros,\n              semper sed velit sit amet, gravida vestibulum justo. Class aptent\n              taciti sociosqu ad litora torquent per conubia nostra, per\n              inceptos himenaeos. Aenean varius, erat vel ullamcorper consequat,\n              tellus massa gravida arcu, et blandit nisl justo vitae tellus.\n              Suspendisse id metus aliquam, dignissim massa et, facilisis ex.\n              Sed suscipit nunc elit, id dictum velit ultrices hendrerit. Nunc\n              sit amet dui ultrices, sollicitudin justo quis, lacinia tortor.\n              Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n              bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n              Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n            </p>\n            <p>\n              Maecenas vulputate finibus odio, vitae dignissim nibh ultricies\n              rhoncus. Aenean in dictum justo. Vestibulum pellentesque lorem\n              aliquam lectus finibus, id sagittis ex molestie. Duis rhoncus\n              risus molestie ligula consequat efficitur. Aenean vel nisl vel sem\n              pretium ultrices nec quis mi. Donec enim elit, tristique non\n              sodales quis, iaculis ut justo. In laoreet sodales leo, vel\n              maximus purus volutpat quis. Maecenas ac tincidunt nisl, vitae\n              sodales nibh. Morbi tellus libero, feugiat vitae convallis\n              pretium, fermentum in mi. Etiam dignissim vitae massa nec semper.\n            </p>\n          </Dialog.Body>\n          <Dialog.Footer>\n            <Dialog.Toggler>Close</Dialog.Toggler>\n          </Dialog.Footer>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n};\nexport default DialogSpecificScrollable;\n",
@@ -5506,7 +5506,7 @@ export const examples: any[] = [
   },
   {
     "key": "specific-scrollable",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "dialog",
     "detail": {
       "script": "import '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-footer.js';\nimport '@htmlplus/core/dialog-header.js';\nimport '@htmlplus/core/dialog-toggler.js';\nconst DialogSpecificScrollable = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <plus-dialog-toggler connector=\"dialog-specific-scrollable\">\n          Open\n        </plus-dialog-toggler>\n      </div>\n      <plus-dialog\n        animation=\"fade\"\n        connector=\"dialog-specific-scrollable\"\n        scrollable\n      >\n        <plus-dialog-content>\n          <plus-dialog-header>Dialog Title</plus-dialog-header>\n          <plus-dialog-body scrollable>\n            <p>\n              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n              nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n              amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit\n              amet posuere lacus, gravida semper libero. Praesent sed nisi sed\n              lorem posuere consequat. Nunc vehicula fermentum hendrerit. Mauris\n              aliquam ornare laoreet. Maecenas cursus nec ipsum et tempus. Sed\n              pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam\n              egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n              fermentum, ac accumsan purus vestibulum. Integer facilisis\n              tincidunt urna vel accumsan. Orci varius natoque penatibus et\n              magnis dis parturient montes, nascetur ridiculus mus. Maecenas et\n              elit imperdiet, gravida urna tempus, fringilla nisl.\n            </p>\n            <p>\n              Nam a gravida lorem. Curabitur sagittis vitae quam vitae\n              dignissim. Curabitur eget sollicitudin urna, vitae venenatis\n              massa. Aliquam nulla dolor, lobortis at mauris non, gravida\n              dignissim nulla. Integer ac ultricies nisl. Duis aliquam sem eu\n              dui porttitor lobortis. Ut luctus rhoncus tincidunt. Vestibulum\n              consequat risus non diam consectetur, bibendum molestie enim\n              placerat. Morbi pretium sem sit amet dictum feugiat. Fusce\n              gravida, eros ac bibendum ullamcorper, sapien nunc vulputate elit,\n              quis iaculis sapien ligula eget nisi. Duis erat urna, porttitor\n              non massa at, porttitor varius mauris. In lobortis massa dui, et\n              consectetur mauris iaculis vitae. Vivamus suscipit, risus vitae\n              viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at\n              felis. In hac habitasse platea dictumst. Donec ac urna ac sapien\n              euismod vulputate.\n            </p>\n            <p>\n              Proin sapien enim, pellentesque eget urna ut, mollis tincidunt\n              quam. Pellentesque eu orci et leo dapibus sagittis in nec tellus.\n              Vivamus porta felis turpis, ac vehicula felis tristique at.\n              Integer at lacus odio. Donec ornare turpis eu cursus finibus.\n              Suspendisse cursus vestibulum lacus vel porta. Nam eget nibh eu\n              ante ultrices aliquet. Nullam quis ligula faucibus, aliquam tellus\n              quis, accumsan tortor. Integer at leo dictum, luctus dui ac,\n              suscipit turpis. Sed pharetra finibus sapien sed fermentum. In\n              viverra est sagittis sagittis maximus.\n            </p>\n            <p>\n              Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui.\n              Etiam consectetur molestie eros sed lacinia. Maecenas ipsum est,\n              consectetur et rutrum et, convallis quis metus. Praesent est eros,\n              semper sed velit sit amet, gravida vestibulum justo. Class aptent\n              taciti sociosqu ad litora torquent per conubia nostra, per\n              inceptos himenaeos. Aenean varius, erat vel ullamcorper consequat,\n              tellus massa gravida arcu, et blandit nisl justo vitae tellus.\n              Suspendisse id metus aliquam, dignissim massa et, facilisis ex.\n              Sed suscipit nunc elit, id dictum velit ultrices hendrerit. Nunc\n              sit amet dui ultrices, sollicitudin justo quis, lacinia tortor.\n              Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n              bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n              Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n            </p>\n            <p>\n              Maecenas vulputate finibus odio, vitae dignissim nibh ultricies\n              rhoncus. Aenean in dictum justo. Vestibulum pellentesque lorem\n              aliquam lectus finibus, id sagittis ex molestie. Duis rhoncus\n              risus molestie ligula consequat efficitur. Aenean vel nisl vel sem\n              pretium ultrices nec quis mi. Donec enim elit, tristique non\n              sodales quis, iaculis ut justo. In laoreet sodales leo, vel\n              maximus purus volutpat quis. Maecenas ac tincidunt nisl, vitae\n              sodales nibh. Morbi tellus libero, feugiat vitae convallis\n              pretium, fermentum in mi. Etiam dignissim vitae massa nec semper.\n            </p>\n            <p>\n              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n              nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n              amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit\n              amet posuere lacus, gravida semper libero. Praesent sed nisi sed\n              lorem posuere consequat. Nunc vehicula fermentum hendrerit. Mauris\n              aliquam ornare laoreet. Maecenas cursus nec ipsum et tempus. Sed\n              pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam\n              egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n              fermentum, ac accumsan purus vestibulum. Integer facilisis\n              tincidunt urna vel accumsan. Orci varius natoque penatibus et\n              magnis dis parturient montes, nascetur ridiculus mus. Maecenas et\n              elit imperdiet, gravida urna tempus, fringilla nisl.\n            </p>\n            <p>\n              Nam a gravida lorem. Curabitur sagittis vitae quam vitae\n              dignissim. Curabitur eget sollicitudin urna, vitae venenatis\n              massa. Aliquam nulla dolor, lobortis at mauris non, gravida\n              dignissim nulla. Integer ac ultricies nisl. Duis aliquam sem eu\n              dui porttitor lobortis. Ut luctus rhoncus tincidunt. Vestibulum\n              consequat risus non diam consectetur, bibendum molestie enim\n              placerat. Morbi pretium sem sit amet dictum feugiat. Fusce\n              gravida, eros ac bibendum ullamcorper, sapien nunc vulputate elit,\n              quis iaculis sapien ligula eget nisi. Duis erat urna, porttitor\n              non massa at, porttitor varius mauris. In lobortis massa dui, et\n              consectetur mauris iaculis vitae. Vivamus suscipit, risus vitae\n              viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at\n              felis. In hac habitasse platea dictumst. Donec ac urna ac sapien\n              euismod vulputate.\n            </p>\n            <p>\n              Proin sapien enim, pellentesque eget urna ut, mollis tincidunt\n              quam. Pellentesque eu orci et leo dapibus sagittis in nec tellus.\n              Vivamus porta felis turpis, ac vehicula felis tristique at.\n              Integer at lacus odio. Donec ornare turpis eu cursus finibus.\n              Suspendisse cursus vestibulum lacus vel porta. Nam eget nibh eu\n              ante ultrices aliquet. Nullam quis ligula faucibus, aliquam tellus\n              quis, accumsan tortor. Integer at leo dictum, luctus dui ac,\n              suscipit turpis. Sed pharetra finibus sapien sed fermentum. In\n              viverra est sagittis sagittis maximus.\n            </p>\n            <p>\n              Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui.\n              Etiam consectetur molestie eros sed lacinia. Maecenas ipsum est,\n              consectetur et rutrum et, convallis quis metus. Praesent est eros,\n              semper sed velit sit amet, gravida vestibulum justo. Class aptent\n              taciti sociosqu ad litora torquent per conubia nostra, per\n              inceptos himenaeos. Aenean varius, erat vel ullamcorper consequat,\n              tellus massa gravida arcu, et blandit nisl justo vitae tellus.\n              Suspendisse id metus aliquam, dignissim massa et, facilisis ex.\n              Sed suscipit nunc elit, id dictum velit ultrices hendrerit. Nunc\n              sit amet dui ultrices, sollicitudin justo quis, lacinia tortor.\n              Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n              bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n              Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n            </p>\n            <p>\n              Maecenas vulputate finibus odio, vitae dignissim nibh ultricies\n              rhoncus. Aenean in dictum justo. Vestibulum pellentesque lorem\n              aliquam lectus finibus, id sagittis ex molestie. Duis rhoncus\n              risus molestie ligula consequat efficitur. Aenean vel nisl vel sem\n              pretium ultrices nec quis mi. Donec enim elit, tristique non\n              sodales quis, iaculis ut justo. In laoreet sodales leo, vel\n              maximus purus volutpat quis. Maecenas ac tincidunt nisl, vitae\n              sodales nibh. Morbi tellus libero, feugiat vitae convallis\n              pretium, fermentum in mi. Etiam dignissim vitae massa nec semper.\n            </p>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n};\nexport default DialogSpecificScrollable;\n",
@@ -5564,7 +5564,7 @@ export const examples: any[] = [
   },
   {
     "key": "sticky",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "dialog",
     "detail": {
       "script": "import { Dialog } from '@htmlplus/react';\nconst DialogSticky = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <Dialog.Toggler connector=\"dialog-sticky\">Open</Dialog.Toggler>\n      </div>\n      <Dialog animation=\"fade\" connector=\"dialog-sticky\" fullWidth sticky>\n        <Dialog.Content>\n          <Dialog.Body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </Dialog.Body>\n        </Dialog.Content>\n      </Dialog>\n    </>\n  );\n};\nexport default DialogSticky;\n",
@@ -5573,7 +5573,7 @@ export const examples: any[] = [
   },
   {
     "key": "sticky",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "dialog",
     "detail": {
       "script": "import '@htmlplus/core/dialog.js';\nimport '@htmlplus/core/dialog-body.js';\nimport '@htmlplus/core/dialog-content.js';\nimport '@htmlplus/core/dialog-toggler.js';\nconst DialogSticky = () => {\n  return (\n    <>\n      <div className=\"center\">\n        <plus-dialog-toggler connector=\"dialog-sticky\">\n          Open\n        </plus-dialog-toggler>\n      </div>\n      <plus-dialog animation=\"fade\" connector=\"dialog-sticky\" full-width sticky>\n        <plus-dialog-content>\n          <plus-dialog-body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </plus-dialog-body>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n};\nexport default DialogSticky;\n",
@@ -5631,7 +5631,7 @@ export const examples: any[] = [
   },
   {
     "key": "card",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "divider",
     "detail": {
       "script": "import { Card, Divider } from '@htmlplus/react';\nconst DividerCard = () => {\n  return (\n    <Card elevation=\"10\">\n      Item 1<Divider></Divider>\n      Item 2<Divider></Divider>\n      Item 3<Divider></Divider>\n      Item 4<Divider></Divider>\n      Item 5\n    </Card>\n  );\n};\nexport default DividerCard;\n",
@@ -5640,7 +5640,7 @@ export const examples: any[] = [
   },
   {
     "key": "card",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "divider",
     "detail": {
       "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/divider.js';\nconst DividerCard = () => {\n  return (\n    <plus-card elevation=\"10\">\n      Item 1<plus-divider></plus-divider>\n      Item 2<plus-divider></plus-divider>\n      Item 3<plus-divider></plus-divider>\n      Item 4<plus-divider></plus-divider>\n      Item 5\n    </plus-card>\n  );\n};\nexport default DividerCard;\n",
@@ -5698,7 +5698,7 @@ export const examples: any[] = [
   },
   {
     "key": "customize",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "divider",
     "detail": {
       "script": "import { Divider, Grid } from '@htmlplus/react';\nconst DividerCustomize = () => {\n  return (\n    <Grid alignItems=\"center\" justifyContent=\"evenly\">\n      <Grid.Item xs=\"5\">\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus.\n      </Grid.Item>\n      <Divider vertical></Divider>\n      <Grid.Item xs=\"5\">\n        Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam\n        egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n        fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt\n        urna vel accumsan. Orci varius natoque penatibus et magnis dis\n        parturient montes, nascetur ridiculus mus. Maecenas et elit imperdiet,\n        gravida urna tempus, fringilla nisl.\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default DividerCustomize;\n",
@@ -5707,7 +5707,7 @@ export const examples: any[] = [
   },
   {
     "key": "customize",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "divider",
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst DividerCustomize = () => {\n  return (\n    <plus-grid align-items=\"center\" justify-content=\"evenly\">\n      <plus-grid-item xs=\"5\">\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus.\n      </plus-grid-item>\n      <plus-divider vertical></plus-divider>\n      <plus-grid-item xs=\"5\">\n        Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam\n        egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n        fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt\n        urna vel accumsan. Orci varius natoque penatibus et magnis dis\n        parturient montes, nascetur ridiculus mus. Maecenas et elit imperdiet,\n        gravida urna tempus, fringilla nisl.\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default DividerCustomize;\n",
@@ -5765,7 +5765,7 @@ export const examples: any[] = [
   },
   {
     "key": "horizontal",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "divider",
     "detail": {
       "script": "import { Divider } from '@htmlplus/react';\nconst DividerHorizontal = () => {\n  return (\n    <div>\n      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n      eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam et\n      erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere lacus,\n      gravida semper libero.\n      <Divider></Divider>\n      Praesent sed nisi sed lorem posuere consequat. Nunc vehicula fermentum\n      hendrerit. Mauris aliquam ornare laoreet. Maecenas cursus nec ipsum et\n      tempus. Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum.\n      <Divider></Divider>\n      Nam egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n      fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt urna\n      vel accumsan. Orci varius natoque penatibus et magnis dis parturient\n      montes, nascetur ridiculus mus. Maecenas et elit imperdiet, gravida urna\n      tempus, fringilla nisl.\n    </div>\n  );\n};\nexport default DividerHorizontal;\n",
@@ -5774,7 +5774,7 @@ export const examples: any[] = [
   },
   {
     "key": "horizontal",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "divider",
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\nconst DividerHorizontal = () => {\n  return (\n    <div>\n      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n      eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam et\n      erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere lacus,\n      gravida semper libero.\n      <plus-divider></plus-divider>\n      Praesent sed nisi sed lorem posuere consequat. Nunc vehicula fermentum\n      hendrerit. Mauris aliquam ornare laoreet. Maecenas cursus nec ipsum et\n      tempus. Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum.\n      <plus-divider></plus-divider>\n      Nam egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n      fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt urna\n      vel accumsan. Orci varius natoque penatibus et magnis dis parturient\n      montes, nascetur ridiculus mus. Maecenas et elit imperdiet, gravida urna\n      tempus, fringilla nisl.\n    </div>\n  );\n};\nexport default DividerHorizontal;\n",
@@ -5830,7 +5830,7 @@ export const examples: any[] = [
   },
   {
     "key": "placement",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "divider",
     "detail": {
       "script": "import { Divider } from '@htmlplus/react';\nconst DividerPlacement = () => {\n  return (\n    <div>\n      <Divider placement=\"center\">Center</Divider>\n      <br />\n      <Divider placement=\"start\">Start</Divider>\n      <br />\n      <Divider placement=\"end\">End</Divider>\n    </div>\n  );\n};\nexport default DividerPlacement;\n"
@@ -5838,7 +5838,7 @@ export const examples: any[] = [
   },
   {
     "key": "placement",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "divider",
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\nconst DividerPlacement = () => {\n  return (\n    <div>\n      <plus-divider placement=\"center\">Center</plus-divider>\n      <br />\n      <plus-divider placement=\"start\">Start</plus-divider>\n      <br />\n      <plus-divider placement=\"end\">End</plus-divider>\n    </div>\n  );\n};\nexport default DividerPlacement;\n"
@@ -5893,7 +5893,7 @@ export const examples: any[] = [
   },
   {
     "key": "sticky",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "divider",
     "detail": {
       "script": "import { Divider, Sticky } from '@htmlplus/react';\nconst DividerSticky = () => {\n  return (\n    <div className=\"container\">\n      <Sticky>\n        <Divider>\n          <span>Today</span>\n        </Divider>\n      </Sticky>\n      <Sticky>\n        <Divider>\n          <span>Yesterday</span>\n        </Divider>\n      </Sticky>\n      <Sticky>\n        <Divider>\n          <span>5 Days Ago</span>\n        </Divider>\n      </Sticky>\n      <Sticky>\n        <Divider>\n          <span>2 Weeks Ago</span>\n        </Divider>\n      </Sticky>\n      <Sticky>\n        <Divider>\n          <span>1 Month Ago</span>\n        </Divider>\n      </Sticky>\n    </div>\n  );\n};\nexport default DividerSticky;\n",
@@ -5902,7 +5902,7 @@ export const examples: any[] = [
   },
   {
     "key": "sticky",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "divider",
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/sticky.js';\nconst DividerSticky = () => {\n  return (\n    <div className=\"container\">\n      <plus-sticky>\n        <plus-divider>\n          <span>Today</span>\n        </plus-divider>\n      </plus-sticky>\n      <plus-sticky>\n        <plus-divider>\n          <span>Yesterday</span>\n        </plus-divider>\n      </plus-sticky>\n      <plus-sticky>\n        <plus-divider>\n          <span>5 Days Ago</span>\n        </plus-divider>\n      </plus-sticky>\n      <plus-sticky>\n        <plus-divider>\n          <span>2 Weeks Ago</span>\n        </plus-divider>\n      </plus-sticky>\n      <plus-sticky>\n        <plus-divider>\n          <span>1 Month Ago</span>\n        </plus-divider>\n      </plus-sticky>\n    </div>\n  );\n};\nexport default DividerSticky;\n",
@@ -5958,7 +5958,7 @@ export const examples: any[] = [
   },
   {
     "key": "type",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "divider",
     "detail": {
       "script": "import { Divider } from '@htmlplus/react';\nconst DividerType = () => {\n  return (\n    <div>\n      <Divider type=\"dashed\"></Divider>\n      <br />\n      <Divider type=\"dotted\"></Divider>\n      <br />\n      <Divider type=\"double\"></Divider>\n      <br />\n      <Divider type=\"groove\"></Divider>\n      <br />\n      <Divider type=\"inset\"></Divider>\n      <br />\n      <Divider type=\"outset\"></Divider>\n      <br />\n      <Divider type=\"ridge\"></Divider>\n      <br />\n      <Divider type=\"solid\"></Divider>\n    </div>\n  );\n};\nexport default DividerType;\n"
@@ -5966,7 +5966,7 @@ export const examples: any[] = [
   },
   {
     "key": "type",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "divider",
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\nconst DividerType = () => {\n  return (\n    <div>\n      <plus-divider type=\"dashed\"></plus-divider>\n      <br />\n      <plus-divider type=\"dotted\"></plus-divider>\n      <br />\n      <plus-divider type=\"double\"></plus-divider>\n      <br />\n      <plus-divider type=\"groove\"></plus-divider>\n      <br />\n      <plus-divider type=\"inset\"></plus-divider>\n      <br />\n      <plus-divider type=\"outset\"></plus-divider>\n      <br />\n      <plus-divider type=\"ridge\"></plus-divider>\n      <br />\n      <plus-divider type=\"solid\"></plus-divider>\n    </div>\n  );\n};\nexport default DividerType;\n"
@@ -6019,7 +6019,7 @@ export const examples: any[] = [
   },
   {
     "key": "variant",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "divider",
     "detail": {
       "script": "import { Divider } from '@htmlplus/react';\nconst DividerVariant = () => {\n  return (\n    <div>\n      <Divider variant=\"middle\"></Divider>\n      <br />\n      <Divider variant=\"inset\"></Divider>\n      <br />\n      <Divider variant=\"full\"></Divider>\n    </div>\n  );\n};\nexport default DividerVariant;\n"
@@ -6027,7 +6027,7 @@ export const examples: any[] = [
   },
   {
     "key": "variant",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "divider",
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\nconst DividerVariant = () => {\n  return (\n    <div>\n      <plus-divider variant=\"middle\"></plus-divider>\n      <br />\n      <plus-divider variant=\"inset\"></plus-divider>\n      <br />\n      <plus-divider variant=\"full\"></plus-divider>\n    </div>\n  );\n};\nexport default DividerVariant;\n"
@@ -6080,7 +6080,7 @@ export const examples: any[] = [
   },
   {
     "key": "vertical",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "divider",
     "detail": {
       "script": "import { Divider, Grid } from '@htmlplus/react';\nconst DividerVertical = () => {\n  return (\n    <Grid alignItems=\"center\" justifyContent=\"evenly\">\n      <Grid.Item xs=\"5\">\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus.\n      </Grid.Item>\n      <Divider vertical></Divider>\n      <Grid.Item xs=\"5\">\n        Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam\n        egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n        fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt\n        urna vel accumsan. Orci varius natoque penatibus et magnis dis\n        parturient montes, nascetur ridiculus mus. Maecenas et elit imperdiet,\n        gravida urna tempus, fringilla nisl.\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default DividerVertical;\n"
@@ -6088,7 +6088,7 @@ export const examples: any[] = [
   },
   {
     "key": "vertical",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "divider",
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst DividerVertical = () => {\n  return (\n    <plus-grid align-items=\"center\" justify-content=\"evenly\">\n      <plus-grid-item xs=\"5\">\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus.\n      </plus-grid-item>\n      <plus-divider vertical></plus-divider>\n      <plus-grid-item xs=\"5\">\n        Sed pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam\n        egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n        fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt\n        urna vel accumsan. Orci varius natoque penatibus et magnis dis\n        parturient montes, nascetur ridiculus mus. Maecenas et elit imperdiet,\n        gravida urna tempus, fringilla nisl.\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default DividerVertical;\n"
@@ -6141,7 +6141,7 @@ export const examples: any[] = [
   },
   {
     "key": "width",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "divider",
     "detail": {
       "script": "import { Divider } from '@htmlplus/react';\nconst DividerWidth = () => {\n  return (\n    <div>\n      <Divider width=\"xs\"></Divider>\n      <br />\n      <Divider width=\"sm\"></Divider>\n      <br />\n      <Divider width=\"md\"></Divider>\n      <br />\n      <Divider width=\"lg\"></Divider>\n      <br />\n      <Divider width=\"xl\"></Divider>\n    </div>\n  );\n};\nexport default DividerWidth;\n"
@@ -6149,7 +6149,7 @@ export const examples: any[] = [
   },
   {
     "key": "width",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "divider",
     "detail": {
       "script": "import '@htmlplus/core/divider.js';\nconst DividerWidth = () => {\n  return (\n    <div>\n      <plus-divider width=\"xs\"></plus-divider>\n      <br />\n      <plus-divider width=\"sm\"></plus-divider>\n      <br />\n      <plus-divider width=\"md\"></plus-divider>\n      <br />\n      <plus-divider width=\"lg\"></plus-divider>\n      <br />\n      <plus-divider width=\"xl\"></plus-divider>\n    </div>\n  );\n};\nexport default DividerWidth;\n"
@@ -6204,7 +6204,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "drawer",
     "detail": {
       "script": "import { Card, Drawer, Grid } from '@htmlplus/react';\nconst DrawerDefault = () => {\n  return (\n    <Grid>\n      <Grid.Item xs=\"auto\">\n        <Drawer animation=\"fade\" size=\"200px\" connector=\"drawer-default\">\n          <Card>Drawer Content</Card>\n        </Drawer>\n      </Grid.Item>\n      <Grid.Item xs=\"grow\">\n        <Card>\n          <Drawer.Toggler connector=\"drawer-default\">Toggle</Drawer.Toggler>\n        </Card>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default DrawerDefault;\n",
@@ -6213,7 +6213,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "drawer",
     "detail": {
       "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/drawer.js';\nimport '@htmlplus/core/drawer-toggler.js';\nimport '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst DrawerDefault = () => {\n  return (\n    <plus-grid>\n      <plus-grid-item xs=\"auto\">\n        <plus-drawer animation=\"fade\" size=\"200px\" connector=\"drawer-default\">\n          <plus-card>Drawer Content</plus-card>\n        </plus-drawer>\n      </plus-grid-item>\n      <plus-grid-item xs=\"grow\">\n        <plus-card>\n          <plus-drawer-toggler connector=\"drawer-default\">\n            Toggle\n          </plus-drawer-toggler>\n        </plus-card>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default DrawerDefault;\n",
@@ -6271,7 +6271,7 @@ export const examples: any[] = [
   },
   {
     "key": "decimals",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "format-bytes",
     "detail": {
       "script": "import { Center, FormatBytes } from '@htmlplus/react';\nconst FormatBytesDecimals = () => {\n  return (\n    <Center>\n      <FormatBytes value=\"1200\" decimals=\"0\"></FormatBytes>\n      <FormatBytes value=\"1200\" decimals=\"3\"></FormatBytes>\n      <FormatBytes value=\"1200\" decimals=\"[3, 3]\"></FormatBytes>\n      <FormatBytes value=\"1000\" decimals=\"[0, 3]\"></FormatBytes>\n      <FormatBytes value=\"1000\" decimals=\"[1, 3]\"></FormatBytes>\n      <FormatBytes value=\"1001\" decimals=\"[0, 3]\"></FormatBytes>\n    </Center>\n  );\n};\nexport default FormatBytesDecimals;\n",
@@ -6280,7 +6280,7 @@ export const examples: any[] = [
   },
   {
     "key": "decimals",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "format-bytes",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\nconst FormatBytesDecimals = () => {\n  return (\n    <plus-center>\n      <plus-format-bytes value=\"1200\" decimals=\"0\"></plus-format-bytes>\n      <plus-format-bytes value=\"1200\" decimals=\"3\"></plus-format-bytes>\n      <plus-format-bytes value=\"1200\" decimals=\"[3, 3]\"></plus-format-bytes>\n      <plus-format-bytes value=\"1000\" decimals=\"[0, 3]\"></plus-format-bytes>\n      <plus-format-bytes value=\"1000\" decimals=\"[1, 3]\"></plus-format-bytes>\n      <plus-format-bytes value=\"1001\" decimals=\"[0, 3]\"></plus-format-bytes>\n    </plus-center>\n  );\n};\nexport default FormatBytesDecimals;\n",
@@ -6336,7 +6336,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "format-bytes",
     "detail": {
       "script": "import { Center, FormatBytes } from '@htmlplus/react';\nconst FormatBytesDefault = () => {\n  return (\n    <Center>\n      <FormatBytes value=\"1000\"></FormatBytes>\n    </Center>\n  );\n};\nexport default FormatBytesDefault;\n"
@@ -6344,7 +6344,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "format-bytes",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\nconst FormatBytesDefault = () => {\n  return (\n    <plus-center>\n      <plus-format-bytes value=\"1000\"></plus-format-bytes>\n    </plus-center>\n  );\n};\nexport default FormatBytesDefault;\n"
@@ -6399,7 +6399,7 @@ export const examples: any[] = [
   },
   {
     "key": "display",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "format-bytes",
     "detail": {
       "script": "import { Center, FormatBytes } from '@htmlplus/react';\nconst FormatBytesDisplay = () => {\n  return (\n    <Center>\n      <FormatBytes value=\"1000\" display=\"short\"></FormatBytes>\n      <FormatBytes value=\"1000\" display=\"long\"></FormatBytes>\n    </Center>\n  );\n};\nexport default FormatBytesDisplay;\n",
@@ -6408,7 +6408,7 @@ export const examples: any[] = [
   },
   {
     "key": "display",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "format-bytes",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\nconst FormatBytesDisplay = () => {\n  return (\n    <plus-center>\n      <plus-format-bytes value=\"1000\" display=\"short\"></plus-format-bytes>\n      <plus-format-bytes value=\"1000\" display=\"long\"></plus-format-bytes>\n    </plus-center>\n  );\n};\nexport default FormatBytesDisplay;\n",
@@ -6466,7 +6466,7 @@ export const examples: any[] = [
   },
   {
     "key": "formatting",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "format-bytes",
     "detail": {
       "script": "import { Center, FormatBytes } from '@htmlplus/react';\nconst FormatBytesFormatting = () => {\n  return (\n    <Center>\n      <FormatBytes value=\"1500\"></FormatBytes>\n      <FormatBytes value=\"800000000\"></FormatBytes>\n      <FormatBytes value=\"6900000000\"></FormatBytes>\n      <FormatBytes value=\"222000000000000\"></FormatBytes>\n    </Center>\n  );\n};\nexport default FormatBytesFormatting;\n",
@@ -6475,7 +6475,7 @@ export const examples: any[] = [
   },
   {
     "key": "formatting",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "format-bytes",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\nconst FormatBytesFormatting = () => {\n  return (\n    <plus-center>\n      <plus-format-bytes value=\"1500\"></plus-format-bytes>\n      <plus-format-bytes value=\"800000000\"></plus-format-bytes>\n      <plus-format-bytes value=\"6900000000\"></plus-format-bytes>\n      <plus-format-bytes value=\"222000000000000\"></plus-format-bytes>\n    </plus-center>\n  );\n};\nexport default FormatBytesFormatting;\n",
@@ -6533,7 +6533,7 @@ export const examples: any[] = [
   },
   {
     "key": "locale",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "format-bytes",
     "detail": {
       "script": "import { Center, FormatBytes } from '@htmlplus/react';\nconst FormatBytesLocale = () => {\n  return (\n    <Center>\n      <FormatBytes value=\"10000100\" locale=\"en\" unit=\"kilo\"></FormatBytes>\n      <FormatBytes value=\"10000100\" locale=\"de\" unit=\"kilo\"></FormatBytes>\n    </Center>\n  );\n};\nexport default FormatBytesLocale;\n",
@@ -6542,7 +6542,7 @@ export const examples: any[] = [
   },
   {
     "key": "locale",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "format-bytes",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\nconst FormatBytesLocale = () => {\n  return (\n    <plus-center>\n      <plus-format-bytes\n        value=\"10000100\"\n        locale=\"en\"\n        unit=\"kilo\"\n      ></plus-format-bytes>\n      <plus-format-bytes\n        value=\"10000100\"\n        locale=\"de\"\n        unit=\"kilo\"\n      ></plus-format-bytes>\n    </plus-center>\n  );\n};\nexport default FormatBytesLocale;\n",
@@ -6600,7 +6600,7 @@ export const examples: any[] = [
   },
   {
     "key": "separator",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "format-bytes",
     "detail": {
       "script": "import { Center, FormatBytes } from '@htmlplus/react';\nconst FormatBytesSeparator = () => {\n  return (\n    <Center>\n      <FormatBytes value=\"1000\" separator=\"\"></FormatBytes>\n      <FormatBytes value=\"1000\" separator=\" \"></FormatBytes>\n    </Center>\n  );\n};\nexport default FormatBytesSeparator;\n",
@@ -6609,7 +6609,7 @@ export const examples: any[] = [
   },
   {
     "key": "separator",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "format-bytes",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\nconst FormatBytesSeparator = () => {\n  return (\n    <plus-center>\n      <plus-format-bytes value=\"1000\" separator=\"\"></plus-format-bytes>\n      <plus-format-bytes value=\"1000\" separator=\" \"></plus-format-bytes>\n    </plus-center>\n  );\n};\nexport default FormatBytesSeparator;\n",
@@ -6667,7 +6667,7 @@ export const examples: any[] = [
   },
   {
     "key": "signed",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "format-bytes",
     "detail": {
       "script": "import { Center, FormatBytes } from '@htmlplus/react';\nconst FormatBytesSigned = () => {\n  return (\n    <Center>\n      <FormatBytes value=\"-1000\"></FormatBytes>\n      <FormatBytes value=\"-1000\" signed></FormatBytes>\n      <FormatBytes value=\"0\"></FormatBytes>\n      <FormatBytes value=\"0\" signed></FormatBytes>\n      <FormatBytes value=\"1000\"></FormatBytes>\n      <FormatBytes value=\"1000\" signed></FormatBytes>\n    </Center>\n  );\n};\nexport default FormatBytesSigned;\n",
@@ -6676,7 +6676,7 @@ export const examples: any[] = [
   },
   {
     "key": "signed",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "format-bytes",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\nconst FormatBytesSigned = () => {\n  return (\n    <plus-center>\n      <plus-format-bytes value=\"-1000\"></plus-format-bytes>\n      <plus-format-bytes value=\"-1000\" signed></plus-format-bytes>\n      <plus-format-bytes value=\"0\"></plus-format-bytes>\n      <plus-format-bytes value=\"0\" signed></plus-format-bytes>\n      <plus-format-bytes value=\"1000\"></plus-format-bytes>\n      <plus-format-bytes value=\"1000\" signed></plus-format-bytes>\n    </plus-center>\n  );\n};\nexport default FormatBytesSigned;\n",
@@ -6734,7 +6734,7 @@ export const examples: any[] = [
   },
   {
     "key": "standard",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "format-bytes",
     "detail": {
       "script": "import { Center, FormatBytes } from '@htmlplus/react';\nconst FormatBytesStandard = () => {\n  return (\n    <Center>\n      <FormatBytes value=\"1000\" standard=\"METRIC\"></FormatBytes>\n      <FormatBytes value=\"1024\" standard=\"IEC\"></FormatBytes>\n    </Center>\n  );\n};\nexport default FormatBytesStandard;\n",
@@ -6743,7 +6743,7 @@ export const examples: any[] = [
   },
   {
     "key": "standard",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "format-bytes",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\nconst FormatBytesStandard = () => {\n  return (\n    <plus-center>\n      <plus-format-bytes value=\"1000\" standard=\"METRIC\"></plus-format-bytes>\n      <plus-format-bytes value=\"1024\" standard=\"IEC\"></plus-format-bytes>\n    </plus-center>\n  );\n};\nexport default FormatBytesStandard;\n",
@@ -6801,7 +6801,7 @@ export const examples: any[] = [
   },
   {
     "key": "unit",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "format-bytes",
     "detail": {
       "script": "import { Center, FormatBytes } from '@htmlplus/react';\nconst FormatBytesUnit = () => {\n  return (\n    <Center>\n      <FormatBytes unit=\"auto\" value=\"1000\"></FormatBytes>\n      <FormatBytes unit=\"base\" value=\"10000\"></FormatBytes>\n      <FormatBytes unit=\"kilo\" value=\"100000\"></FormatBytes>\n      <FormatBytes unit=\"kilo\" value=\"1000000\"></FormatBytes>\n      <FormatBytes unit=\"kilo\" value=\"10000000\"></FormatBytes>\n      <FormatBytes unit=\"kilo\" value=\"100000000\"></FormatBytes>\n      <FormatBytes unit=\"kilo\" value=\"1000000000\"></FormatBytes>\n    </Center>\n  );\n};\nexport default FormatBytesUnit;\n",
@@ -6810,7 +6810,7 @@ export const examples: any[] = [
   },
   {
     "key": "unit",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "format-bytes",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/format-bytes.js';\nconst FormatBytesUnit = () => {\n  return (\n    <plus-center>\n      <plus-format-bytes unit=\"auto\" value=\"1000\"></plus-format-bytes>\n      <plus-format-bytes unit=\"base\" value=\"10000\"></plus-format-bytes>\n      <plus-format-bytes unit=\"kilo\" value=\"100000\"></plus-format-bytes>\n      <plus-format-bytes unit=\"kilo\" value=\"1000000\"></plus-format-bytes>\n      <plus-format-bytes unit=\"kilo\" value=\"10000000\"></plus-format-bytes>\n      <plus-format-bytes unit=\"kilo\" value=\"100000000\"></plus-format-bytes>\n      <plus-format-bytes unit=\"kilo\" value=\"1000000000\"></plus-format-bytes>\n    </plus-center>\n  );\n};\nexport default FormatBytesUnit;\n",
@@ -6868,7 +6868,7 @@ export const examples: any[] = [
   },
   {
     "key": "align-content",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "grid",
     "detail": {
       "script": "import { Grid } from '@htmlplus/react';\nconst GridAlignContent = () => {\n  return (\n    <Grid alignContent=\"center\">\n      <Grid.Item xs=\"6\">\n        <div>Item</div>\n      </Grid.Item>\n      <Grid.Item xs=\"3\">\n        <div>Item</div>\n      </Grid.Item>\n      <Grid.Item xs=\"3\">\n        <div>Item</div>\n      </Grid.Item>\n      <Grid.Item xs=\"3\">\n        <div>Item</div>\n      </Grid.Item>\n      <Grid.Item xs=\"3\">\n        <div>Item</div>\n      </Grid.Item>\n      <Grid.Item xs=\"grow\">\n        <div>Item</div>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default GridAlignContent;\n",
@@ -6877,7 +6877,7 @@ export const examples: any[] = [
   },
   {
     "key": "align-content",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "grid",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst GridAlignContent = () => {\n  return (\n    <plus-grid align-content=\"center\">\n      <plus-grid-item xs=\"6\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"3\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"3\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"3\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"3\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"grow\">\n        <div>Item</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default GridAlignContent;\n",
@@ -6935,7 +6935,7 @@ export const examples: any[] = [
   },
   {
     "key": "align-items",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "grid",
     "detail": {
       "script": "import { Grid } from '@htmlplus/react';\nconst GridAlignItems = () => {\n  return (\n    <Grid alignItems=\"center\">\n      <Grid.Item xs=\"6\">\n        <div>Item</div>\n      </Grid.Item>\n      <Grid.Item xs=\"3\">\n        <div>Item</div>\n      </Grid.Item>\n      <Grid.Item xs=\"3\">\n        <div>Item</div>\n      </Grid.Item>\n      <Grid.Item xs=\"3\">\n        <div>Item</div>\n      </Grid.Item>\n      <Grid.Item xs=\"3\">\n        <div>Item</div>\n      </Grid.Item>\n      <Grid.Item xs=\"grow\">\n        <div>Item</div>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default GridAlignItems;\n",
@@ -6944,7 +6944,7 @@ export const examples: any[] = [
   },
   {
     "key": "align-items",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "grid",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst GridAlignItems = () => {\n  return (\n    <plus-grid align-items=\"center\">\n      <plus-grid-item xs=\"6\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"3\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"3\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"3\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"3\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"grow\">\n        <div>Item</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default GridAlignItems;\n",
@@ -7002,7 +7002,7 @@ export const examples: any[] = [
   },
   {
     "key": "align-self",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "grid",
     "detail": {
       "script": "import { Grid } from '@htmlplus/react';\nconst GridAlignSelf = () => {\n  return (\n    <Grid alignItems=\"center\">\n      <Grid.Item xs=\"grow\" alignSelf=\"start\">\n        <div>Item</div>\n      </Grid.Item>\n      <Grid.Item xs=\"grow\">\n        <div>Item</div>\n      </Grid.Item>\n      <Grid.Item xs=\"grow\" alignSelf=\"end\">\n        <div>Item</div>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default GridAlignSelf;\n",
@@ -7011,7 +7011,7 @@ export const examples: any[] = [
   },
   {
     "key": "align-self",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "grid",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst GridAlignSelf = () => {\n  return (\n    <plus-grid align-items=\"center\">\n      <plus-grid-item xs=\"grow\" align-self=\"start\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"grow\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"grow\" align-self=\"end\">\n        <div>Item</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default GridAlignSelf;\n",
@@ -7069,7 +7069,7 @@ export const examples: any[] = [
   },
   {
     "key": "auto-sizing",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "grid",
     "detail": {
       "script": "import { Grid } from '@htmlplus/react';\nconst GridAutoSizing = () => {\n  return (\n    <>\n      <Grid>\n        <Grid.Item xs=\"grow\">\n          <div>xs=grow</div>\n        </Grid.Item>\n        <Grid.Item xs=\"grow\">\n          <div>xs=grow</div>\n        </Grid.Item>\n        <Grid.Item xs=\"grow\">\n          <div>xs=grow</div>\n        </Grid.Item>\n      </Grid>\n      <Grid>\n        <Grid.Item xs=\"12\" md=\"2\">\n          <div>xs=12, md=2</div>\n        </Grid.Item>\n        <Grid.Item xs=\"grow\">\n          <div>xs=grow</div>\n        </Grid.Item>\n        <Grid.Item xs=\"12\" md=\"2\">\n          <div>xs=12, md=2</div>\n        </Grid.Item>\n      </Grid>\n    </>\n  );\n};\nexport default GridAutoSizing;\n",
@@ -7078,7 +7078,7 @@ export const examples: any[] = [
   },
   {
     "key": "auto-sizing",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "grid",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst GridAutoSizing = () => {\n  return (\n    <>\n      <plus-grid>\n        <plus-grid-item xs=\"grow\">\n          <div>xs=grow</div>\n        </plus-grid-item>\n        <plus-grid-item xs=\"grow\">\n          <div>xs=grow</div>\n        </plus-grid-item>\n        <plus-grid-item xs=\"grow\">\n          <div>xs=grow</div>\n        </plus-grid-item>\n      </plus-grid>\n      <plus-grid>\n        <plus-grid-item xs=\"12\" md=\"2\">\n          <div>xs=12, md=2</div>\n        </plus-grid-item>\n        <plus-grid-item xs=\"grow\">\n          <div>xs=grow</div>\n        </plus-grid-item>\n        <plus-grid-item xs=\"12\" md=\"2\">\n          <div>xs=12, md=2</div>\n        </plus-grid-item>\n      </plus-grid>\n    </>\n  );\n};\nexport default GridAutoSizing;\n",
@@ -7136,7 +7136,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "grid",
     "detail": {
       "script": "import { Grid } from '@htmlplus/react';\nconst GridDefault = () => {\n  return (\n    <Grid>\n      <Grid.Item xs=\"12\" md=\"4\">\n        <div>xs=12, md=4</div>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" md=\"4\">\n        <div>xs=12, md=4</div>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" md=\"4\">\n        <div>xs=12, md=4</div>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default GridDefault;\n",
@@ -7145,7 +7145,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "grid",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst GridDefault = () => {\n  return (\n    <plus-grid>\n      <plus-grid-item xs=\"12\" md=\"4\">\n        <div>xs=12, md=4</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" md=\"4\">\n        <div>xs=12, md=4</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" md=\"4\">\n        <div>xs=12, md=4</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default GridDefault;\n",
@@ -7203,7 +7203,7 @@ export const examples: any[] = [
   },
   {
     "key": "gutter",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "grid",
     "detail": {
       "script": "import { Grid } from '@htmlplus/react';\nconst GridGutter = () => {\n  return (\n    <Grid gutter=\"lg\">\n      <Grid.Item xs=\"12\" sm=\"6\" lg=\"5\">\n        <div>xs=12, sm=6, lg=5</div>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\" lg=\"4\">\n        <div>xs=12, sm=6, lg=4</div>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"7\" lg=\"3\">\n        <div>xs=12, sm=7, lg=3</div>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"5\" lg=\"3\">\n        <div>xs=12, sm=5, lg=3</div>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"5\" lg=\"4\">\n        <div>xs=12, sm=5, lg=4</div>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"7\" lg=\"5\">\n        <div>xs=12, sm=7, lg=5</div>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default GridGutter;\n",
@@ -7212,7 +7212,7 @@ export const examples: any[] = [
   },
   {
     "key": "gutter",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "grid",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst GridGutter = () => {\n  return (\n    <plus-grid gutter=\"lg\">\n      <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n        <div>xs=12, sm=6, lg=5</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n        <div>xs=12, sm=6, lg=4</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n        <div>xs=12, sm=7, lg=3</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n        <div>xs=12, sm=5, lg=3</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n        <div>xs=12, sm=5, lg=4</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n        <div>xs=12, sm=7, lg=5</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default GridGutter;\n",
@@ -7270,7 +7270,7 @@ export const examples: any[] = [
   },
   {
     "key": "gutter-x",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "grid",
     "detail": {
       "script": "import { Grid } from '@htmlplus/react';\nconst GridGutterX = () => {\n  return (\n    <Grid gutterX=\"md\">\n      <Grid.Item xs=\"12\" sm=\"6\" lg=\"5\">\n        <div>xs=12, sm=6, lg=5</div>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\" lg=\"4\">\n        <div>xs=12, sm=6, lg=4</div>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"7\" lg=\"3\">\n        <div>xs=12, sm=7, lg=3</div>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"5\" lg=\"3\">\n        <div>xs=12, sm=5, lg=3</div>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"5\" lg=\"4\">\n        <div>xs=12, sm=5, lg=4</div>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"7\" lg=\"5\">\n        <div>xs=12, sm=7, lg=5</div>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default GridGutterX;\n",
@@ -7279,7 +7279,7 @@ export const examples: any[] = [
   },
   {
     "key": "gutter-x",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "grid",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst GridGutterX = () => {\n  return (\n    <plus-grid gutter-x=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n        <div>xs=12, sm=6, lg=5</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n        <div>xs=12, sm=6, lg=4</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n        <div>xs=12, sm=7, lg=3</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n        <div>xs=12, sm=5, lg=3</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n        <div>xs=12, sm=5, lg=4</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n        <div>xs=12, sm=7, lg=5</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default GridGutterX;\n",
@@ -7337,7 +7337,7 @@ export const examples: any[] = [
   },
   {
     "key": "gutter-y",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "grid",
     "detail": {
       "script": "import { Grid } from '@htmlplus/react';\nconst GridGutterY = () => {\n  return (\n    <Grid gutterY=\"md\">\n      <Grid.Item xs=\"12\" sm=\"6\" lg=\"5\">\n        <div>xs=12, sm=6, lg=5</div>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"6\" lg=\"4\">\n        <div>xs=12, sm=6, lg=4</div>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"7\" lg=\"3\">\n        <div>xs=12, sm=7, lg=3</div>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"5\" lg=\"3\">\n        <div>xs=12, sm=5, lg=3</div>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"5\" lg=\"4\">\n        <div>xs=12, sm=5, lg=4</div>\n      </Grid.Item>\n      <Grid.Item xs=\"12\" sm=\"7\" lg=\"5\">\n        <div>xs=12, sm=7, lg=5</div>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default GridGutterY;\n",
@@ -7346,7 +7346,7 @@ export const examples: any[] = [
   },
   {
     "key": "gutter-y",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "grid",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst GridGutterY = () => {\n  return (\n    <plus-grid gutter-y=\"md\">\n      <plus-grid-item xs=\"12\" sm=\"6\" lg=\"5\">\n        <div>xs=12, sm=6, lg=5</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"6\" lg=\"4\">\n        <div>xs=12, sm=6, lg=4</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"7\" lg=\"3\">\n        <div>xs=12, sm=7, lg=3</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"5\" lg=\"3\">\n        <div>xs=12, sm=5, lg=3</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"5\" lg=\"4\">\n        <div>xs=12, sm=5, lg=4</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"12\" sm=\"7\" lg=\"5\">\n        <div>xs=12, sm=7, lg=5</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default GridGutterY;\n",
@@ -7404,7 +7404,7 @@ export const examples: any[] = [
   },
   {
     "key": "hide",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "grid",
     "detail": {
       "script": "import { Grid } from '@htmlplus/react';\nconst GridHide = () => {\n  return (\n    <Grid>\n      <Grid.Item hideSm xs=\"3\">\n        <div>xs=3, hide-sm</div>\n      </Grid.Item>\n      <Grid.Item hideMd xs=\"4\">\n        <div>xs=4, hide-md</div>\n      </Grid.Item>\n      <Grid.Item hideLg xs=\"5\">\n        <div>xs=5, hide-lg</div>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default GridHide;\n",
@@ -7413,7 +7413,7 @@ export const examples: any[] = [
   },
   {
     "key": "hide",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "grid",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst GridHide = () => {\n  return (\n    <plus-grid>\n      <plus-grid-item hide-sm xs=\"3\">\n        <div>xs=3, hide-sm</div>\n      </plus-grid-item>\n      <plus-grid-item hide-md xs=\"4\">\n        <div>xs=4, hide-md</div>\n      </plus-grid-item>\n      <plus-grid-item hide-lg xs=\"5\">\n        <div>xs=5, hide-lg</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default GridHide;\n",
@@ -7471,7 +7471,7 @@ export const examples: any[] = [
   },
   {
     "key": "justify-content",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "grid",
     "detail": {
       "script": "import { Grid } from '@htmlplus/react';\nconst GridJustifyContent = () => {\n  return (\n    <Grid justifyContent=\"center\">\n      <Grid.Item xs=\"2\">\n        <div>Item</div>\n      </Grid.Item>\n      <Grid.Item xs=\"2\">\n        <div>Item</div>\n      </Grid.Item>\n      <Grid.Item xs=\"2\">\n        <div>Item</div>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default GridJustifyContent;\n",
@@ -7480,7 +7480,7 @@ export const examples: any[] = [
   },
   {
     "key": "justify-content",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "grid",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst GridJustifyContent = () => {\n  return (\n    <plus-grid justify-content=\"center\">\n      <plus-grid-item xs=\"2\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"2\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"2\">\n        <div>Item</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default GridJustifyContent;\n",
@@ -7538,7 +7538,7 @@ export const examples: any[] = [
   },
   {
     "key": "offset",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "grid",
     "detail": {
       "script": "import { Grid } from '@htmlplus/react';\nconst GridOffset = () => {\n  return (\n    <Grid>\n      <Grid.Item xs=\"3\">\n        <div>xs=3</div>\n      </Grid.Item>\n      <Grid.Item offsetXs=\"3\" xs=\"3\">\n        <div>offset-xs=\"3\", xs=3</div>\n      </Grid.Item>\n      <Grid.Item xs=\"3\">\n        <div>xs=3</div>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default GridOffset;\n",
@@ -7547,7 +7547,7 @@ export const examples: any[] = [
   },
   {
     "key": "offset",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "grid",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst GridOffset = () => {\n  return (\n    <plus-grid>\n      <plus-grid-item xs=\"3\">\n        <div>xs=3</div>\n      </plus-grid-item>\n      <plus-grid-item offset-xs=\"3\" xs=\"3\">\n        <div>offset-xs=\"3\", xs=3</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"3\">\n        <div>xs=3</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default GridOffset;\n",
@@ -7605,7 +7605,7 @@ export const examples: any[] = [
   },
   {
     "key": "order",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "grid",
     "detail": {
       "script": "import { Grid } from '@htmlplus/react';\nconst GridOrder = () => {\n  return (\n    <Grid>\n      <Grid.Item orderXs=\"3\" xs=\"grow\">\n        <div>order=3</div>\n      </Grid.Item>\n      <Grid.Item orderXs=\"2\" xs=\"grow\">\n        <div>order=2</div>\n      </Grid.Item>\n      <Grid.Item orderXs=\"1\" xs=\"grow\">\n        <div>order=1</div>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default GridOrder;\n",
@@ -7614,7 +7614,7 @@ export const examples: any[] = [
   },
   {
     "key": "order",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "grid",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst GridOrder = () => {\n  return (\n    <plus-grid>\n      <plus-grid-item order-xs=\"3\" xs=\"grow\">\n        <div>order=3</div>\n      </plus-grid-item>\n      <plus-grid-item order-xs=\"2\" xs=\"grow\">\n        <div>order=2</div>\n      </plus-grid-item>\n      <plus-grid-item order-xs=\"1\" xs=\"grow\">\n        <div>order=1</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default GridOrder;\n",
@@ -7672,7 +7672,7 @@ export const examples: any[] = [
   },
   {
     "key": "reverse",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "grid",
     "detail": {
       "script": "import { Grid } from '@htmlplus/react';\nconst GridReverse = () => {\n  return (\n    <Grid reverse>\n      <Grid.Item xs=\"2\">\n        <div>Item 1</div>\n      </Grid.Item>\n      <Grid.Item xs=\"2\">\n        <div>Item 2</div>\n      </Grid.Item>\n      <Grid.Item xs=\"2\">\n        <div>Item 3</div>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default GridReverse;\n",
@@ -7681,7 +7681,7 @@ export const examples: any[] = [
   },
   {
     "key": "reverse",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "grid",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst GridReverse = () => {\n  return (\n    <plus-grid reverse>\n      <plus-grid-item xs=\"2\">\n        <div>Item 1</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"2\">\n        <div>Item 2</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"2\">\n        <div>Item 3</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default GridReverse;\n",
@@ -7739,7 +7739,7 @@ export const examples: any[] = [
   },
   {
     "key": "vertical",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "grid",
     "detail": {
       "script": "import { Grid } from '@htmlplus/react';\nconst GridVertical = () => {\n  return (\n    <Grid alignItems=\"center\" vertical>\n      <Grid.Item xs=\"3\">\n        <div>Item</div>\n      </Grid.Item>\n      <Grid.Item xs=\"grow\">\n        <div>Item</div>\n      </Grid.Item>\n      <Grid.Item xs=\"3\">\n        <div>Item</div>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default GridVertical;\n",
@@ -7748,7 +7748,7 @@ export const examples: any[] = [
   },
   {
     "key": "vertical",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "grid",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst GridVertical = () => {\n  return (\n    <plus-grid align-items=\"center\" vertical>\n      <plus-grid-item xs=\"3\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"grow\">\n        <div>Item</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"3\">\n        <div>Item</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default GridVertical;\n",
@@ -7806,7 +7806,7 @@ export const examples: any[] = [
   },
   {
     "key": "wrap",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "grid",
     "detail": {
       "script": "import { Grid } from '@htmlplus/react';\nconst GridWrap = () => {\n  return (\n    <Grid wrap=\"off\">\n      <Grid.Item xs=\"6\">\n        <div>xs=6</div>\n      </Grid.Item>\n      <Grid.Item xs=\"2\">\n        <div>xs=2</div>\n      </Grid.Item>\n      <Grid.Item xs=\"6\">\n        <div>xs=6</div>\n      </Grid.Item>\n      <Grid.Item xs=\"2\">\n        <div>xs=2</div>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default GridWrap;\n",
@@ -7815,7 +7815,7 @@ export const examples: any[] = [
   },
   {
     "key": "wrap",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "grid",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nconst GridWrap = () => {\n  return (\n    <plus-grid wrap=\"off\">\n      <plus-grid-item xs=\"6\">\n        <div>xs=6</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"2\">\n        <div>xs=2</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"6\">\n        <div>xs=6</div>\n      </plus-grid-item>\n      <plus-grid-item xs=\"2\">\n        <div>xs=2</div>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default GridWrap;\n",
@@ -7873,7 +7873,7 @@ export const examples: any[] = [
   },
   {
     "key": "color",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "icon",
     "detail": {
       "script": "import { Icon } from '@htmlplus/react';\nconst IconColor = () => {\n  return (\n    <div className=\"center\">\n      <Icon color=\"#08DFC8\">home</Icon>\n      <Icon color=\"#FF5449\">home</Icon>\n      <Icon color=\"#5F9EE9\">home</Icon>\n      <Icon color=\"#FFC903\">home</Icon>\n      <Icon color=\"#9073C1\">home</Icon>\n    </div>\n  );\n};\nexport default IconColor;\n",
@@ -7882,7 +7882,7 @@ export const examples: any[] = [
   },
   {
     "key": "color",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "icon",
     "detail": {
       "script": "import '@htmlplus/core/icon.js';\nconst IconColor = () => {\n  return (\n    <div className=\"center\">\n      <plus-icon color=\"#08DFC8\">home</plus-icon>\n      <plus-icon color=\"#FF5449\">home</plus-icon>\n      <plus-icon color=\"#5F9EE9\">home</plus-icon>\n      <plus-icon color=\"#FFC903\">home</plus-icon>\n      <plus-icon color=\"#9073C1\">home</plus-icon>\n    </div>\n  );\n};\nexport default IconColor;\n",
@@ -7940,7 +7940,7 @@ export const examples: any[] = [
   },
   {
     "key": "custom-color",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "icon",
     "detail": {
       "script": "import { Icon } from '@htmlplus/react';\nconst IconCustomColor = () => {\n  return (\n    <div className=\"center\">\n      <Icon color=\"primary\">home</Icon>\n      <Icon color=\"secondary\">home</Icon>\n      <Icon color=\"tertiary\">home</Icon>\n    </div>\n  );\n};\nexport default IconCustomColor;\n",
@@ -7949,7 +7949,7 @@ export const examples: any[] = [
   },
   {
     "key": "custom-color",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "icon",
     "detail": {
       "script": "import '@htmlplus/core/icon.js';\nconst IconCustomColor = () => {\n  return (\n    <div className=\"center\">\n      <plus-icon color=\"primary\">home</plus-icon>\n      <plus-icon color=\"secondary\">home</plus-icon>\n      <plus-icon color=\"tertiary\">home</plus-icon>\n    </div>\n  );\n};\nexport default IconCustomColor;\n",
@@ -8007,7 +8007,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "icon",
     "detail": {
       "script": "import { Icon } from '@htmlplus/react';\nconst IconDefault = () => {\n  return (\n    <div className=\"center\">\n      <Icon>home</Icon>\n    </div>\n  );\n};\nexport default IconDefault;\n",
@@ -8016,7 +8016,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "icon",
     "detail": {
       "script": "import '@htmlplus/core/icon.js';\nconst IconDefault = () => {\n  return (\n    <div className=\"center\">\n      <plus-icon>home</plus-icon>\n    </div>\n  );\n};\nexport default IconDefault;\n",
@@ -8074,7 +8074,7 @@ export const examples: any[] = [
   },
   {
     "key": "flip",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "icon",
     "detail": {
       "script": "import { Icon } from '@htmlplus/react';\nconst IconFlip = () => {\n  return (\n    <div className=\"center\">\n      <Icon>home</Icon>\n      <Icon flip=\"horizontal\">home</Icon>\n      <Icon flip=\"vertical\">home</Icon>\n      <Icon flip=\"both\">home</Icon>\n    </div>\n  );\n};\nexport default IconFlip;\n",
@@ -8083,7 +8083,7 @@ export const examples: any[] = [
   },
   {
     "key": "flip",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "icon",
     "detail": {
       "script": "import '@htmlplus/core/icon.js';\nconst IconFlip = () => {\n  return (\n    <div className=\"center\">\n      <plus-icon>home</plus-icon>\n      <plus-icon flip=\"horizontal\">home</plus-icon>\n      <plus-icon flip=\"vertical\">home</plus-icon>\n      <plus-icon flip=\"both\">home</plus-icon>\n    </div>\n  );\n};\nexport default IconFlip;\n",
@@ -8141,7 +8141,7 @@ export const examples: any[] = [
   },
   {
     "key": "rotate",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "icon",
     "detail": {
       "script": "import { Icon } from '@htmlplus/react';\nconst IconRotate = () => {\n  return (\n    <div className=\"center\">\n      <Icon rotate=\"0\">home</Icon>\n      <Icon rotate=\"90\">home</Icon>\n      <Icon rotate=\"180\">home</Icon>\n      <Icon rotate=\"270\">home</Icon>\n    </div>\n  );\n};\nexport default IconRotate;\n",
@@ -8150,7 +8150,7 @@ export const examples: any[] = [
   },
   {
     "key": "rotate",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "icon",
     "detail": {
       "script": "import '@htmlplus/core/icon.js';\nconst IconRotate = () => {\n  return (\n    <div className=\"center\">\n      <plus-icon rotate=\"0\">home</plus-icon>\n      <plus-icon rotate=\"90\">home</plus-icon>\n      <plus-icon rotate=\"180\">home</plus-icon>\n      <plus-icon rotate=\"270\">home</plus-icon>\n    </div>\n  );\n};\nexport default IconRotate;\n",
@@ -8208,7 +8208,7 @@ export const examples: any[] = [
   },
   {
     "key": "size",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "icon",
     "detail": {
       "script": "import { Icon } from '@htmlplus/react';\nconst IconSize = () => {\n  return (\n    <div className=\"center\">\n      <Icon size=\"1x\">home</Icon>\n      <Icon size=\"2x\">home</Icon>\n      <Icon size=\"3x\">home</Icon>\n    </div>\n  );\n};\nexport default IconSize;\n",
@@ -8217,7 +8217,7 @@ export const examples: any[] = [
   },
   {
     "key": "size",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "icon",
     "detail": {
       "script": "import '@htmlplus/core/icon.js';\nconst IconSize = () => {\n  return (\n    <div className=\"center\">\n      <plus-icon size=\"1x\">home</plus-icon>\n      <plus-icon size=\"2x\">home</plus-icon>\n      <plus-icon size=\"3x\">home</plus-icon>\n    </div>\n  );\n};\nexport default IconSize;\n",
@@ -8275,7 +8275,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "intersection",
     "detail": {
       "script": "import { useState } from 'react';\nimport { Card, Center, Intersection, Sticky } from '@htmlplus/react';\nconst IntersectionDefault = () => {\n  const [intersecting, setIntersecting] = useState(false);\n  const onChange = (event) => {\n    setIntersecting(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <Sticky top=\"1rem\" zIndex=\"1\">\n        <Center>\n          <div className=\"status\">\n            {intersecting ? 'In Viewport' : 'Out of Viewport'}\n          </div>\n        </Center>\n      </Sticky>\n      <Intersection onChange={(event) => onChange(event)}>\n        <Card elevation=\"10\">\n          <Card.Body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua.\n          </Card.Body>\n        </Card>\n      </Intersection>\n    </div>\n  );\n};\nexport default IntersectionDefault;\n",
@@ -8284,7 +8284,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "intersection",
     "detail": {
       "script": "import { useState } from 'react';\nimport '@htmlplus/core/card.js';\nimport '@htmlplus/core/card-body.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/sticky.js';\nconst IntersectionDefault = () => {\n  const [intersecting, setIntersecting] = useState(false);\n  const onChange = (event) => {\n    setIntersecting(event.detail.isIntersecting);\n  };\n  return (\n    <div className=\"container\">\n      <plus-sticky top=\"1rem\" z-index=\"1\">\n        <plus-center>\n          <div className=\"status\">\n            {intersecting ? 'In Viewport' : 'Out of Viewport'}\n          </div>\n        </plus-center>\n      </plus-sticky>\n      <plus-intersection onplus-change={(event) => onChange(event)}>\n        <plus-card elevation=\"10\">\n          <plus-card-body>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua.\n          </plus-card-body>\n        </plus-card>\n      </plus-intersection>\n    </div>\n  );\n};\nexport default IntersectionDefault;\n",
@@ -8342,7 +8342,7 @@ export const examples: any[] = [
   },
   {
     "key": "lazy-image",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "intersection",
     "detail": {
       "script": "import { Card, Intersection, Spinner } from '@htmlplus/react';\nconst IntersectionLazyImage = () => {\n  const onChange = (event) => {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  };\n  return (\n    <div className=\"container\">\n      <Intersection once onChange={(event) => onChange(event)}>\n        <Card elevation=\"10\">\n          <Spinner></Spinner>\n          <img\n            alt=\"Lazy Image\"\n            hidden\n            data-src=\"https://placekitten.com/200/200\"\n          />\n        </Card>\n      </Intersection>\n    </div>\n  );\n};\nexport default IntersectionLazyImage;\n",
@@ -8351,7 +8351,7 @@ export const examples: any[] = [
   },
   {
     "key": "lazy-image",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "intersection",
     "detail": {
       "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/intersection.js';\nimport '@htmlplus/core/spinner.js';\nconst IntersectionLazyImage = () => {\n  const onChange = (event) => {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  };\n  return (\n    <div className=\"container\">\n      <plus-intersection once onplus-change={(event) => onChange(event)}>\n        <plus-card elevation=\"10\">\n          <plus-spinner></plus-spinner>\n          <img\n            alt=\"Lazy Image\"\n            hidden\n            data-src=\"https://placekitten.com/200/200\"\n          />\n        </plus-card>\n      </plus-intersection>\n    </div>\n  );\n};\nexport default IntersectionLazyImage;\n",
@@ -8409,7 +8409,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "portal",
     "detail": {
       "script": "import { Portal } from '@htmlplus/react';\nconst PortalDefault = () => {\n  return (\n    <>\n      <div id=\"target\"></div>\n      <div id=\"source\">\n        <Portal target=\"#target\">\n          <p>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </p>\n        </Portal>\n      </div>\n    </>\n  );\n};\nexport default PortalDefault;\n",
@@ -8418,7 +8418,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "portal",
     "detail": {
       "script": "import '@htmlplus/core/portal.js';\nconst PortalDefault = () => {\n  return (\n    <>\n      <div id=\"target\"></div>\n      <div id=\"source\">\n        <plus-portal target=\"#target\">\n          <p>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim\n            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut\n            aliquip ex ea commodo consequat.\n          </p>\n        </plus-portal>\n      </div>\n    </>\n  );\n};\nexport default PortalDefault;\n",
@@ -8476,7 +8476,7 @@ export const examples: any[] = [
   },
   {
     "key": "strategy",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "portal",
     "detail": {
       "script": "import { Card, Portal } from '@htmlplus/react';\nconst PortalStrategy = () => {\n  return (\n    <>\n      <Portal target=\"#before\" strategy=\"before\">\n        <h1 className=\"title\">Before the card</h1>\n      </Portal>\n      <Card outlined id=\"before\">\n        <p>\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n          eiusmod tempor incididunt ut labore et dolore magna aliqua.\n        </p>\n      </Card>\n      <br />\n      <Portal target=\"#prepend\" strategy=\"prepend\">\n        <h1 className=\"title\">Prepend the card</h1>\n      </Portal>\n      <Card outlined id=\"prepend\">\n        <p>\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n          eiusmod tempor incididunt ut labore et dolore magna aliqua.\n        </p>\n      </Card>\n      <br />\n      <Portal target=\"#append\" strategy=\"append\">\n        <h1 className=\"title\">Append the card</h1>\n      </Portal>\n      <Card outlined id=\"append\">\n        <p>\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n          eiusmod tempor incididunt ut labore et dolore magna aliqua.\n        </p>\n      </Card>\n      <br />\n      <Portal target=\"#after\" strategy=\"after\">\n        <h1 className=\"title\">After the card</h1>\n      </Portal>\n      <Card outlined id=\"after\">\n        <p>\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n          eiusmod tempor incididunt ut labore et dolore magna aliqua.\n        </p>\n      </Card>\n    </>\n  );\n};\nexport default PortalStrategy;\n",
@@ -8485,7 +8485,7 @@ export const examples: any[] = [
   },
   {
     "key": "strategy",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "portal",
     "detail": {
       "script": "import '@htmlplus/core/card.js';\nimport '@htmlplus/core/portal.js';\nconst PortalStrategy = () => {\n  return (\n    <>\n      <plus-portal target=\"#before\" strategy=\"before\">\n        <h1 className=\"title\">Before the card</h1>\n      </plus-portal>\n      <plus-card outlined id=\"before\">\n        <p>\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n          eiusmod tempor incididunt ut labore et dolore magna aliqua.\n        </p>\n      </plus-card>\n      <br />\n      <plus-portal target=\"#prepend\" strategy=\"prepend\">\n        <h1 className=\"title\">Prepend the card</h1>\n      </plus-portal>\n      <plus-card outlined id=\"prepend\">\n        <p>\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n          eiusmod tempor incididunt ut labore et dolore magna aliqua.\n        </p>\n      </plus-card>\n      <br />\n      <plus-portal target=\"#append\" strategy=\"append\">\n        <h1 className=\"title\">Append the card</h1>\n      </plus-portal>\n      <plus-card outlined id=\"append\">\n        <p>\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n          eiusmod tempor incididunt ut labore et dolore magna aliqua.\n        </p>\n      </plus-card>\n      <br />\n      <plus-portal target=\"#after\" strategy=\"after\">\n        <h1 className=\"title\">After the card</h1>\n      </plus-portal>\n      <plus-card outlined id=\"after\">\n        <p>\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n          eiusmod tempor incididunt ut labore et dolore magna aliqua.\n        </p>\n      </plus-card>\n    </>\n  );\n};\nexport default PortalStrategy;\n",
@@ -8543,7 +8543,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "scroll-detector",
     "detail": {
       "script": "import { ScrollDetector } from '@htmlplus/react';\nconst ScrollDetectorDefault = () => {\n  const onChange = (event) => {\n    console.log(event.detail);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable\">\n        <p>\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n          nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n          amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit amet\n          posuere lacus, gravida semper libero. Praesent sed nisi sed lorem\n          posuere consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam\n          ornare laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio\n          bibendum, pharetra nisl sed, scelerisque ipsum. Nam egestas interdum\n          risus et gravida. Suspendisse aliquam leo ac leo fermentum, ac\n          accumsan purus vestibulum. Integer facilisis tincidunt urna vel\n          accumsan. Orci varius natoque penatibus et magnis dis parturient\n          montes, nascetur ridiculus mus. Maecenas et elit imperdiet, gravida\n          urna tempus, fringilla nisl.\n        </p>\n        <p>\n          Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n          Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n          dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n          ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n          rhoncus tincidunt. Vestibulum consequat risus non diam consectetur,\n          bibendum molestie enim placerat. Morbi pretium sem sit amet dictum\n          feugiat. Fusce gravida, eros ac bibendum ullamcorper, sapien nunc\n          vulputate elit, quis iaculis sapien ligula eget nisi. Duis erat urna,\n          porttitor non massa at, porttitor varius mauris. In lobortis massa\n          dui, et consectetur mauris iaculis vitae. Vivamus suscipit, risus\n          vitae viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at\n          felis. In hac habitasse platea dictumst. Donec ac urna ac sapien\n          euismod vulputate.\n        </p>\n        <p>\n          Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n          Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n          porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n          odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n          vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n          Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n          Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n          finibus sapien sed fermentum. In viverra est sagittis sagittis\n          maximus.\n        </p>\n        <p>\n          Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n          consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n          et rutrum et, convallis quis metus. Praesent est eros, semper sed\n          velit sit amet, gravida vestibulum justo. Class aptent taciti sociosqu\n          ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n          varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n          blandit nisl justo vitae tellus. Suspendisse id metus aliquam,\n          dignissim massa et, facilisis ex. Sed suscipit nunc elit, id dictum\n          velit ultrices hendrerit. Nunc sit amet dui ultrices, sollicitudin\n          justo quis, lacinia tortor. Sed viverra libero facilisis lectus\n          pharetra, vel porttitor sem bibendum. Praesent non nibh quis ante\n          viverra aliquet eu nec nisl. Mauris ante mauris, molestie eget feugiat\n          in, semper quis massa.\n        </p>\n        <p>\n          Maecenas vulputate finibus odio, vitae dignissim nibh ultricies\n          rhoncus. Aenean in dictum justo. Vestibulum pellentesque lorem aliquam\n          lectus finibus, id sagittis ex molestie. Duis rhoncus risus molestie\n          ligula consequat efficitur. Aenean vel nisl vel sem pretium ultrices\n          nec quis mi. Donec enim elit, tristique non sodales quis, iaculis ut\n          justo. In laoreet sodales leo, vel maximus purus volutpat quis.\n          Maecenas ac tincidunt nisl, vitae sodales nibh. Morbi tellus libero,\n          feugiat vitae convallis pretium, fermentum in mi. Etiam dignissim\n          vitae massa nec semper.\n        </p>\n        <p>\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n          nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n          amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit amet\n          posuere lacus, gravida semper libero. Praesent sed nisi sed lorem\n          posuere consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam\n          ornare laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio\n          bibendum, pharetra nisl sed, scelerisque ipsum. Nam egestas interdum\n          risus et gravida. Suspendisse aliquam leo ac leo fermentum, ac\n          accumsan purus vestibulum. Integer facilisis tincidunt urna vel\n          accumsan. Orci varius natoque penatibus et magnis dis parturient\n          montes, nascetur ridiculus mus. Maecenas et elit imperdiet, gravida\n          urna tempus, fringilla nisl.\n        </p>\n        <p>\n          Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n          Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n          dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n          ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n          rhoncus tincidunt. Vestibulum consequat risus non diam consectetur,\n          bibendum molestie enim placerat. Morbi pretium sem sit amet dictum\n          feugiat. Fusce gravida, eros ac bibendum ullamcorper, sapien nunc\n          vulputate elit, quis iaculis sapien ligula eget nisi. Duis erat urna,\n          porttitor non massa at, porttitor varius mauris. In lobortis massa\n          dui, et consectetur mauris iaculis vitae. Vivamus suscipit, risus\n          vitae viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at\n          felis. In hac habitasse platea dictumst. Donec ac urna ac sapien\n          euismod vulputate.\n        </p>\n        <p>\n          Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n          Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n          porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n          odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n          vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n          Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n          Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n          finibus sapien sed fermentum. In viverra est sagittis sagittis\n          maximus.\n        </p>\n        <p>\n          Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n          consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n          et rutrum et, convallis quis metus. Praesent est eros, semper sed\n          velit sit amet, gravida vestibulum justo. Class aptent taciti sociosqu\n          ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n          varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n          blandit nisl justo vitae tellus. Suspendisse id metus aliquam,\n          dignissim massa et, facilisis ex. Sed suscipit nunc elit, id dictum\n          velit ultrices hendrerit. Nunc sit amet dui ultrices, sollicitudin\n          justo quis, lacinia tortor. Sed viverra libero facilisis lectus\n          pharetra, vel porttitor sem bibendum. Praesent non nibh quis ante\n          viverra aliquet eu nec nisl. Mauris ante mauris, molestie eget feugiat\n          in, semper quis massa.\n        </p>\n        <p>\n          Maecenas vulputate finibus odio, vitae dignissim nibh ultricies\n          rhoncus. Aenean in dictum justo. Vestibulum pellentesque lorem aliquam\n          lectus finibus, id sagittis ex molestie. Duis rhoncus risus molestie\n          ligula consequat efficitur. Aenean vel nisl vel sem pretium ultrices\n          nec quis mi. Donec enim elit, tristique non sodales quis, iaculis ut\n          justo. In laoreet sodales leo, vel maximus purus volutpat quis.\n          Maecenas ac tincidunt nisl, vitae sodales nibh. Morbi tellus libero,\n          feugiat vitae convallis pretium, fermentum in mi. Etiam dignissim\n          vitae massa nec semper.\n        </p>\n      </div>\n      <ScrollDetector\n        source=\".scrollable\"\n        vertical\n        onChange={(event) => onChange(event)}\n      ></ScrollDetector>\n    </div>\n  );\n};\nexport default ScrollDetectorDefault;\n",
@@ -8552,7 +8552,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "scroll-detector",
     "detail": {
       "script": "import '@htmlplus/core/scroll-detector.js';\nconst ScrollDetectorDefault = () => {\n  const onChange = (event) => {\n    console.log(event.detail);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable\">\n        <p>\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n          nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n          amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit amet\n          posuere lacus, gravida semper libero. Praesent sed nisi sed lorem\n          posuere consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam\n          ornare laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio\n          bibendum, pharetra nisl sed, scelerisque ipsum. Nam egestas interdum\n          risus et gravida. Suspendisse aliquam leo ac leo fermentum, ac\n          accumsan purus vestibulum. Integer facilisis tincidunt urna vel\n          accumsan. Orci varius natoque penatibus et magnis dis parturient\n          montes, nascetur ridiculus mus. Maecenas et elit imperdiet, gravida\n          urna tempus, fringilla nisl.\n        </p>\n        <p>\n          Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n          Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n          dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n          ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n          rhoncus tincidunt. Vestibulum consequat risus non diam consectetur,\n          bibendum molestie enim placerat. Morbi pretium sem sit amet dictum\n          feugiat. Fusce gravida, eros ac bibendum ullamcorper, sapien nunc\n          vulputate elit, quis iaculis sapien ligula eget nisi. Duis erat urna,\n          porttitor non massa at, porttitor varius mauris. In lobortis massa\n          dui, et consectetur mauris iaculis vitae. Vivamus suscipit, risus\n          vitae viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at\n          felis. In hac habitasse platea dictumst. Donec ac urna ac sapien\n          euismod vulputate.\n        </p>\n        <p>\n          Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n          Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n          porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n          odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n          vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n          Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n          Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n          finibus sapien sed fermentum. In viverra est sagittis sagittis\n          maximus.\n        </p>\n        <p>\n          Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n          consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n          et rutrum et, convallis quis metus. Praesent est eros, semper sed\n          velit sit amet, gravida vestibulum justo. Class aptent taciti sociosqu\n          ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n          varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n          blandit nisl justo vitae tellus. Suspendisse id metus aliquam,\n          dignissim massa et, facilisis ex. Sed suscipit nunc elit, id dictum\n          velit ultrices hendrerit. Nunc sit amet dui ultrices, sollicitudin\n          justo quis, lacinia tortor. Sed viverra libero facilisis lectus\n          pharetra, vel porttitor sem bibendum. Praesent non nibh quis ante\n          viverra aliquet eu nec nisl. Mauris ante mauris, molestie eget feugiat\n          in, semper quis massa.\n        </p>\n        <p>\n          Maecenas vulputate finibus odio, vitae dignissim nibh ultricies\n          rhoncus. Aenean in dictum justo. Vestibulum pellentesque lorem aliquam\n          lectus finibus, id sagittis ex molestie. Duis rhoncus risus molestie\n          ligula consequat efficitur. Aenean vel nisl vel sem pretium ultrices\n          nec quis mi. Donec enim elit, tristique non sodales quis, iaculis ut\n          justo. In laoreet sodales leo, vel maximus purus volutpat quis.\n          Maecenas ac tincidunt nisl, vitae sodales nibh. Morbi tellus libero,\n          feugiat vitae convallis pretium, fermentum in mi. Etiam dignissim\n          vitae massa nec semper.\n        </p>\n        <p>\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n          nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n          amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit amet\n          posuere lacus, gravida semper libero. Praesent sed nisi sed lorem\n          posuere consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam\n          ornare laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio\n          bibendum, pharetra nisl sed, scelerisque ipsum. Nam egestas interdum\n          risus et gravida. Suspendisse aliquam leo ac leo fermentum, ac\n          accumsan purus vestibulum. Integer facilisis tincidunt urna vel\n          accumsan. Orci varius natoque penatibus et magnis dis parturient\n          montes, nascetur ridiculus mus. Maecenas et elit imperdiet, gravida\n          urna tempus, fringilla nisl.\n        </p>\n        <p>\n          Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n          Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n          dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n          ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n          rhoncus tincidunt. Vestibulum consequat risus non diam consectetur,\n          bibendum molestie enim placerat. Morbi pretium sem sit amet dictum\n          feugiat. Fusce gravida, eros ac bibendum ullamcorper, sapien nunc\n          vulputate elit, quis iaculis sapien ligula eget nisi. Duis erat urna,\n          porttitor non massa at, porttitor varius mauris. In lobortis massa\n          dui, et consectetur mauris iaculis vitae. Vivamus suscipit, risus\n          vitae viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at\n          felis. In hac habitasse platea dictumst. Donec ac urna ac sapien\n          euismod vulputate.\n        </p>\n        <p>\n          Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n          Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n          porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n          odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n          vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n          Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n          Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n          finibus sapien sed fermentum. In viverra est sagittis sagittis\n          maximus.\n        </p>\n        <p>\n          Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n          consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n          et rutrum et, convallis quis metus. Praesent est eros, semper sed\n          velit sit amet, gravida vestibulum justo. Class aptent taciti sociosqu\n          ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n          varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n          blandit nisl justo vitae tellus. Suspendisse id metus aliquam,\n          dignissim massa et, facilisis ex. Sed suscipit nunc elit, id dictum\n          velit ultrices hendrerit. Nunc sit amet dui ultrices, sollicitudin\n          justo quis, lacinia tortor. Sed viverra libero facilisis lectus\n          pharetra, vel porttitor sem bibendum. Praesent non nibh quis ante\n          viverra aliquet eu nec nisl. Mauris ante mauris, molestie eget feugiat\n          in, semper quis massa.\n        </p>\n        <p>\n          Maecenas vulputate finibus odio, vitae dignissim nibh ultricies\n          rhoncus. Aenean in dictum justo. Vestibulum pellentesque lorem aliquam\n          lectus finibus, id sagittis ex molestie. Duis rhoncus risus molestie\n          ligula consequat efficitur. Aenean vel nisl vel sem pretium ultrices\n          nec quis mi. Donec enim elit, tristique non sodales quis, iaculis ut\n          justo. In laoreet sodales leo, vel maximus purus volutpat quis.\n          Maecenas ac tincidunt nisl, vitae sodales nibh. Morbi tellus libero,\n          feugiat vitae convallis pretium, fermentum in mi. Etiam dignissim\n          vitae massa nec semper.\n        </p>\n      </div>\n      <plus-scroll-detector\n        source=\".scrollable\"\n        vertical\n        onplus-change={(event) => onChange(event)}\n      ></plus-scroll-detector>\n    </div>\n  );\n};\nexport default ScrollDetectorDefault;\n",
@@ -8610,7 +8610,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "scroll-indicator",
     "detail": {
       "script": "import { ScrollIndicator } from '@htmlplus/react';\nconst ScrollIndicatorDefault = () => {\n  return (\n    <div className=\"container\">\n      <ScrollIndicator source=\".scrollable\"></ScrollIndicator>\n      <div className=\"scrollable\">\n        <p>\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n          nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n          amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit amet\n          posuere lacus, gravida semper libero. Praesent sed nisi sed lorem\n          posuere consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam\n          ornare laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio\n          bibendum, pharetra nisl sed, scelerisque ipsum. Nam egestas interdum\n          risus et gravida. Suspendisse aliquam leo ac leo fermentum, ac\n          accumsan purus vestibulum. Integer facilisis tincidunt urna vel\n          accumsan. Orci varius natoque penatibus et magnis dis parturient\n          montes, nascetur ridiculus mus. Maecenas et elit imperdiet, gravida\n          urna tempus, fringilla nisl.\n        </p>\n        <p>\n          Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n          Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n          dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n          ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n          rhoncus tincidunt. Vestibulum consequat risus non diam consectetur,\n          bibendum molestie enim placerat. Morbi pretium sem sit amet dictum\n          feugiat. Fusce gravida, eros ac bibendum ullamcorper, sapien nunc\n          vulputate elit, quis iaculis sapien ligula eget nisi. Duis erat urna,\n          porttitor non massa at, porttitor varius mauris. In lobortis massa\n          dui, et consectetur mauris iaculis vitae. Vivamus suscipit, risus\n          vitae viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at\n          felis. In hac habitasse platea dictumst. Donec ac urna ac sapien\n          euismod vulputate.\n        </p>\n        <p>\n          Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n          Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n          porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n          odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n          vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n          Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n          Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n          finibus sapien sed fermentum. In viverra est sagittis sagittis\n          maximus.\n        </p>\n        <p>\n          Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n          consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n          et rutrum et, convallis quis metus. Praesent est eros, semper sed\n          velit sit amet, gravida vestibulum justo. Class aptent taciti sociosqu\n          ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n          varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n          blandit nisl justo vitae tellus. Suspendisse id metus aliquam,\n          dignissim massa et, facilisis ex. Sed suscipit nunc elit, id dictum\n          velit ultrices hendrerit. Nunc sit amet dui ultrices, sollicitudin\n          justo quis, lacinia tortor. Sed viverra libero facilisis lectus\n          pharetra, vel porttitor sem bibendum. Praesent non nibh quis ante\n          viverra aliquet eu nec nisl. Mauris ante mauris, molestie eget feugiat\n          in, semper quis massa.\n        </p>\n        <p>\n          Maecenas vulputate finibus odio, vitae dignissim nibh ultricies\n          rhoncus. Aenean in dictum justo. Vestibulum pellentesque lorem aliquam\n          lectus finibus, id sagittis ex molestie. Duis rhoncus risus molestie\n          ligula consequat efficitur. Aenean vel nisl vel sem pretium ultrices\n          nec quis mi. Donec enim elit, tristique non sodales quis, iaculis ut\n          justo. In laoreet sodales leo, vel maximus purus volutpat quis.\n          Maecenas ac tincidunt nisl, vitae sodales nibh. Morbi tellus libero,\n          feugiat vitae convallis pretium, fermentum in mi. Etiam dignissim\n          vitae massa nec semper.\n        </p>\n        <p>\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n          nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n          amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit amet\n          posuere lacus, gravida semper libero. Praesent sed nisi sed lorem\n          posuere consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam\n          ornare laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio\n          bibendum, pharetra nisl sed, scelerisque ipsum. Nam egestas interdum\n          risus et gravida. Suspendisse aliquam leo ac leo fermentum, ac\n          accumsan purus vestibulum. Integer facilisis tincidunt urna vel\n          accumsan. Orci varius natoque penatibus et magnis dis parturient\n          montes, nascetur ridiculus mus. Maecenas et elit imperdiet, gravida\n          urna tempus, fringilla nisl.\n        </p>\n        <p>\n          Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n          Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n          dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n          ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n          rhoncus tincidunt. Vestibulum consequat risus non diam consectetur,\n          bibendum molestie enim placerat. Morbi pretium sem sit amet dictum\n          feugiat. Fusce gravida, eros ac bibendum ullamcorper, sapien nunc\n          vulputate elit, quis iaculis sapien ligula eget nisi. Duis erat urna,\n          porttitor non massa at, porttitor varius mauris. In lobortis massa\n          dui, et consectetur mauris iaculis vitae. Vivamus suscipit, risus\n          vitae viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at\n          felis. In hac habitasse platea dictumst. Donec ac urna ac sapien\n          euismod vulputate.\n        </p>\n        <p>\n          Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n          Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n          porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n          odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n          vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n          Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n          Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n          finibus sapien sed fermentum. In viverra est sagittis sagittis\n          maximus.\n        </p>\n        <p>\n          Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n          consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n          et rutrum et, convallis quis metus. Praesent est eros, semper sed\n          velit sit amet, gravida vestibulum justo. Class aptent taciti sociosqu\n          ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n          varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n          blandit nisl justo vitae tellus. Suspendisse id metus aliquam,\n          dignissim massa et, facilisis ex. Sed suscipit nunc elit, id dictum\n          velit ultrices hendrerit. Nunc sit amet dui ultrices, sollicitudin\n          justo quis, lacinia tortor. Sed viverra libero facilisis lectus\n          pharetra, vel porttitor sem bibendum. Praesent non nibh quis ante\n          viverra aliquet eu nec nisl. Mauris ante mauris, molestie eget feugiat\n          in, semper quis massa.\n        </p>\n        <p>\n          Maecenas vulputate finibus odio, vitae dignissim nibh ultricies\n          rhoncus. Aenean in dictum justo. Vestibulum pellentesque lorem aliquam\n          lectus finibus, id sagittis ex molestie. Duis rhoncus risus molestie\n          ligula consequat efficitur. Aenean vel nisl vel sem pretium ultrices\n          nec quis mi. Donec enim elit, tristique non sodales quis, iaculis ut\n          justo. In laoreet sodales leo, vel maximus purus volutpat quis.\n          Maecenas ac tincidunt nisl, vitae sodales nibh. Morbi tellus libero,\n          feugiat vitae convallis pretium, fermentum in mi. Etiam dignissim\n          vitae massa nec semper.\n        </p>\n      </div>\n    </div>\n  );\n};\nexport default ScrollIndicatorDefault;\n",
@@ -8619,7 +8619,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "scroll-indicator",
     "detail": {
       "script": "import '@htmlplus/core/scroll-indicator.js';\nconst ScrollIndicatorDefault = () => {\n  return (\n    <div className=\"container\">\n      <plus-scroll-indicator source=\".scrollable\"></plus-scroll-indicator>\n      <div className=\"scrollable\">\n        <p>\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n          nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n          amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit amet\n          posuere lacus, gravida semper libero. Praesent sed nisi sed lorem\n          posuere consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam\n          ornare laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio\n          bibendum, pharetra nisl sed, scelerisque ipsum. Nam egestas interdum\n          risus et gravida. Suspendisse aliquam leo ac leo fermentum, ac\n          accumsan purus vestibulum. Integer facilisis tincidunt urna vel\n          accumsan. Orci varius natoque penatibus et magnis dis parturient\n          montes, nascetur ridiculus mus. Maecenas et elit imperdiet, gravida\n          urna tempus, fringilla nisl.\n        </p>\n        <p>\n          Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n          Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n          dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n          ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n          rhoncus tincidunt. Vestibulum consequat risus non diam consectetur,\n          bibendum molestie enim placerat. Morbi pretium sem sit amet dictum\n          feugiat. Fusce gravida, eros ac bibendum ullamcorper, sapien nunc\n          vulputate elit, quis iaculis sapien ligula eget nisi. Duis erat urna,\n          porttitor non massa at, porttitor varius mauris. In lobortis massa\n          dui, et consectetur mauris iaculis vitae. Vivamus suscipit, risus\n          vitae viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at\n          felis. In hac habitasse platea dictumst. Donec ac urna ac sapien\n          euismod vulputate.\n        </p>\n        <p>\n          Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n          Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n          porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n          odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n          vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n          Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n          Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n          finibus sapien sed fermentum. In viverra est sagittis sagittis\n          maximus.\n        </p>\n        <p>\n          Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n          consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n          et rutrum et, convallis quis metus. Praesent est eros, semper sed\n          velit sit amet, gravida vestibulum justo. Class aptent taciti sociosqu\n          ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n          varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n          blandit nisl justo vitae tellus. Suspendisse id metus aliquam,\n          dignissim massa et, facilisis ex. Sed suscipit nunc elit, id dictum\n          velit ultrices hendrerit. Nunc sit amet dui ultrices, sollicitudin\n          justo quis, lacinia tortor. Sed viverra libero facilisis lectus\n          pharetra, vel porttitor sem bibendum. Praesent non nibh quis ante\n          viverra aliquet eu nec nisl. Mauris ante mauris, molestie eget feugiat\n          in, semper quis massa.\n        </p>\n        <p>\n          Maecenas vulputate finibus odio, vitae dignissim nibh ultricies\n          rhoncus. Aenean in dictum justo. Vestibulum pellentesque lorem aliquam\n          lectus finibus, id sagittis ex molestie. Duis rhoncus risus molestie\n          ligula consequat efficitur. Aenean vel nisl vel sem pretium ultrices\n          nec quis mi. Donec enim elit, tristique non sodales quis, iaculis ut\n          justo. In laoreet sodales leo, vel maximus purus volutpat quis.\n          Maecenas ac tincidunt nisl, vitae sodales nibh. Morbi tellus libero,\n          feugiat vitae convallis pretium, fermentum in mi. Etiam dignissim\n          vitae massa nec semper.\n        </p>\n        <p>\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n          nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n          amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit amet\n          posuere lacus, gravida semper libero. Praesent sed nisi sed lorem\n          posuere consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam\n          ornare laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio\n          bibendum, pharetra nisl sed, scelerisque ipsum. Nam egestas interdum\n          risus et gravida. Suspendisse aliquam leo ac leo fermentum, ac\n          accumsan purus vestibulum. Integer facilisis tincidunt urna vel\n          accumsan. Orci varius natoque penatibus et magnis dis parturient\n          montes, nascetur ridiculus mus. Maecenas et elit imperdiet, gravida\n          urna tempus, fringilla nisl.\n        </p>\n        <p>\n          Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n          Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n          dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n          ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n          rhoncus tincidunt. Vestibulum consequat risus non diam consectetur,\n          bibendum molestie enim placerat. Morbi pretium sem sit amet dictum\n          feugiat. Fusce gravida, eros ac bibendum ullamcorper, sapien nunc\n          vulputate elit, quis iaculis sapien ligula eget nisi. Duis erat urna,\n          porttitor non massa at, porttitor varius mauris. In lobortis massa\n          dui, et consectetur mauris iaculis vitae. Vivamus suscipit, risus\n          vitae viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at\n          felis. In hac habitasse platea dictumst. Donec ac urna ac sapien\n          euismod vulputate.\n        </p>\n        <p>\n          Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n          Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n          porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n          odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n          vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n          Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n          Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n          finibus sapien sed fermentum. In viverra est sagittis sagittis\n          maximus.\n        </p>\n        <p>\n          Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n          consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n          et rutrum et, convallis quis metus. Praesent est eros, semper sed\n          velit sit amet, gravida vestibulum justo. Class aptent taciti sociosqu\n          ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n          varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n          blandit nisl justo vitae tellus. Suspendisse id metus aliquam,\n          dignissim massa et, facilisis ex. Sed suscipit nunc elit, id dictum\n          velit ultrices hendrerit. Nunc sit amet dui ultrices, sollicitudin\n          justo quis, lacinia tortor. Sed viverra libero facilisis lectus\n          pharetra, vel porttitor sem bibendum. Praesent non nibh quis ante\n          viverra aliquet eu nec nisl. Mauris ante mauris, molestie eget feugiat\n          in, semper quis massa.\n        </p>\n        <p>\n          Maecenas vulputate finibus odio, vitae dignissim nibh ultricies\n          rhoncus. Aenean in dictum justo. Vestibulum pellentesque lorem aliquam\n          lectus finibus, id sagittis ex molestie. Duis rhoncus risus molestie\n          ligula consequat efficitur. Aenean vel nisl vel sem pretium ultrices\n          nec quis mi. Donec enim elit, tristique non sodales quis, iaculis ut\n          justo. In laoreet sodales leo, vel maximus purus volutpat quis.\n          Maecenas ac tincidunt nisl, vitae sodales nibh. Morbi tellus libero,\n          feugiat vitae convallis pretium, fermentum in mi. Etiam dignissim\n          vitae massa nec semper.\n        </p>\n      </div>\n    </div>\n  );\n};\nexport default ScrollIndicatorDefault;\n",
@@ -8675,7 +8675,7 @@ export const examples: any[] = [
   },
   {
     "key": "clear",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "signature",
     "detail": {
       "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureClear = () => {\n  return (\n    <>\n      <Center>\n        <Signature id=\"signature1\" backgroundColor=\"lightgray\"></Signature>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => window.signature1.clear()}>Clear</button>\n      </Center>\n    </>\n  );\n};\nexport default SignatureClear;\n"
@@ -8683,7 +8683,7 @@ export const examples: any[] = [
   },
   {
     "key": "clear",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "signature",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureClear = () => {\n  return (\n    <>\n      <plus-center>\n        <plus-signature\n          id=\"signature1\"\n          background-color=\"lightgray\"\n        ></plus-signature>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => window.signature1.clear()}>Clear</button>\n      </plus-center>\n    </>\n  );\n};\nexport default SignatureClear;\n"
@@ -8738,7 +8738,7 @@ export const examples: any[] = [
   },
   {
     "key": "clear-on-resize",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "signature",
     "detail": {
       "script": "import { Signature } from '@htmlplus/react';\nconst SignatureClearOnResize = () => {\n  return (\n    <Signature backgroundColor=\"lightgray\" clearOnResize resizable></Signature>\n  );\n};\nexport default SignatureClearOnResize;\n",
@@ -8747,7 +8747,7 @@ export const examples: any[] = [
   },
   {
     "key": "clear-on-resize",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "signature",
     "detail": {
       "script": "import '@htmlplus/core/signature.js';\nconst SignatureClearOnResize = () => {\n  return (\n    <plus-signature\n      background-color=\"lightgray\"\n      clear-on-resize\n      resizable\n    ></plus-signature>\n  );\n};\nexport default SignatureClearOnResize;\n",
@@ -8803,7 +8803,7 @@ export const examples: any[] = [
   },
   {
     "key": "color",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "signature",
     "detail": {
       "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureColor = () => {\n  return (\n    <Center>\n      <Signature backgroundColor=\"lightgray\" color=\"blue\"></Signature>\n    </Center>\n  );\n};\nexport default SignatureColor;\n"
@@ -8811,7 +8811,7 @@ export const examples: any[] = [
   },
   {
     "key": "color",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "signature",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureColor = () => {\n  return (\n    <plus-center>\n      <plus-signature\n        background-color=\"lightgray\"\n        color=\"blue\"\n      ></plus-signature>\n    </plus-center>\n  );\n};\nexport default SignatureColor;\n"
@@ -8864,7 +8864,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "signature",
     "detail": {
       "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureDefault = () => {\n  return (\n    <Center>\n      <Signature backgroundColor=\"lightgray\"></Signature>\n    </Center>\n  );\n};\nexport default SignatureDefault;\n"
@@ -8872,7 +8872,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "signature",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureDefault = () => {\n  return (\n    <plus-center>\n      <plus-signature background-color=\"lightgray\"></plus-signature>\n    </plus-center>\n  );\n};\nexport default SignatureDefault;\n"
@@ -8925,7 +8925,7 @@ export const examples: any[] = [
   },
   {
     "key": "dimensions",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "signature",
     "detail": {
       "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureDimensions = () => {\n  return (\n    <Center>\n      <Signature\n        backgroundColor=\"lightgray\"\n        style={{\n          width: '480px',\n          height: '320px'\n        }}\n      ></Signature>\n    </Center>\n  );\n};\nexport default SignatureDimensions;\n"
@@ -8933,7 +8933,7 @@ export const examples: any[] = [
   },
   {
     "key": "dimensions",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "signature",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureDimensions = () => {\n  return (\n    <plus-center>\n      <plus-signature\n        background-color=\"lightgray\"\n        style={{\n          width: '480px',\n          height: '320px'\n        }}\n      ></plus-signature>\n    </plus-center>\n  );\n};\nexport default SignatureDimensions;\n"
@@ -8986,7 +8986,7 @@ export const examples: any[] = [
   },
   {
     "key": "disabled",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "signature",
     "detail": {
       "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureDisabled = () => {\n  return (\n    <Center>\n      <Signature backgroundColor=\"lightgray\" disabled></Signature>\n    </Center>\n  );\n};\nexport default SignatureDisabled;\n"
@@ -8994,7 +8994,7 @@ export const examples: any[] = [
   },
   {
     "key": "disabled",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "signature",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureDisabled = () => {\n  return (\n    <plus-center>\n      <plus-signature background-color=\"lightgray\" disabled></plus-signature>\n    </plus-center>\n  );\n};\nexport default SignatureDisabled;\n"
@@ -9047,7 +9047,7 @@ export const examples: any[] = [
   },
   {
     "key": "distance",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "signature",
     "detail": {
       "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureDistance = () => {\n  return (\n    <Center>\n      <Signature backgroundColor=\"lightgray\" distance=\"10\"></Signature>\n    </Center>\n  );\n};\nexport default SignatureDistance;\n"
@@ -9055,7 +9055,7 @@ export const examples: any[] = [
   },
   {
     "key": "distance",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "signature",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureDistance = () => {\n  return (\n    <plus-center>\n      <plus-signature\n        background-color=\"lightgray\"\n        distance=\"10\"\n      ></plus-signature>\n    </plus-center>\n  );\n};\nexport default SignatureDistance;\n"
@@ -9108,7 +9108,7 @@ export const examples: any[] = [
   },
   {
     "key": "history",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "signature",
     "detail": {
       "script": "import { useState } from 'react';\nimport { Center, Signature } from '@htmlplus/react';\nconst SignatureHistory = () => {\n  const [canUndo, setCanUndo] = useState(false);\n  const [canRedo, setCanRedo] = useState(false);\n  const sync = () => {\n    setCanUndo(window.signature2.canUndo());\n    setCanRedo(window.signature2.canRedo());\n  };\n  const onUndo = () => {\n    window.signature2.undo();\n    sync();\n  };\n  const onRedo = () => {\n    window.signature2.redo();\n    sync();\n  };\n  const onPlusEnd = () => {\n    sync();\n  };\n  return (\n    <>\n      <Center>\n        <Signature\n          id=\"signature2\"\n          backgroundColor=\"lightgray\"\n          onEnd={() => onPlusEnd()}\n        ></Signature>\n      </Center>\n      <br />\n      <Center>\n        <button disabled={!canUndo} onClick={() => onUndo()}>\n          Undo\n        </button>\n        &nbsp; &nbsp;\n        <button disabled={!canRedo} onClick={() => onRedo()}>\n          Redo\n        </button>\n      </Center>\n    </>\n  );\n};\nexport default SignatureHistory;\n"
@@ -9116,7 +9116,7 @@ export const examples: any[] = [
   },
   {
     "key": "history",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "signature",
     "detail": {
       "script": "import { useState } from 'react';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureHistory = () => {\n  const [canUndo, setCanUndo] = useState(false);\n  const [canRedo, setCanRedo] = useState(false);\n  const sync = () => {\n    setCanUndo(window.signature2.canUndo());\n    setCanRedo(window.signature2.canRedo());\n  };\n  const onUndo = () => {\n    window.signature2.undo();\n    sync();\n  };\n  const onRedo = () => {\n    window.signature2.redo();\n    sync();\n  };\n  const onPlusEnd = () => {\n    sync();\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-signature\n          id=\"signature2\"\n          background-color=\"lightgray\"\n          onplus-end={() => onPlusEnd()}\n        ></plus-signature>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button disabled={!canUndo} onClick={() => onUndo()}>\n          Undo\n        </button>\n        &nbsp; &nbsp;\n        <button disabled={!canRedo} onClick={() => onRedo()}>\n          Redo\n        </button>\n      </plus-center>\n    </>\n  );\n};\nexport default SignatureHistory;\n"
@@ -9171,7 +9171,7 @@ export const examples: any[] = [
   },
   {
     "key": "resizable",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "signature",
     "detail": {
       "script": "import { Signature } from '@htmlplus/react';\nconst SignatureResizable = () => {\n  return <Signature backgroundColor=\"lightgray\" resizable></Signature>;\n};\nexport default SignatureResizable;\n",
@@ -9180,7 +9180,7 @@ export const examples: any[] = [
   },
   {
     "key": "resizable",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "signature",
     "detail": {
       "script": "import '@htmlplus/core/signature.js';\nconst SignatureResizable = () => {\n  return (\n    <plus-signature background-color=\"lightgray\" resizable></plus-signature>\n  );\n};\nexport default SignatureResizable;\n",
@@ -9236,7 +9236,7 @@ export const examples: any[] = [
   },
   {
     "key": "save",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "signature",
     "detail": {
       "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureSave = () => {\n  const save = (background) => {\n    const image = new Image();\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <Center>\n        <Signature id=\"signature3\" backgroundColor=\"lightgray\"></Signature>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => save(true)}>Save With Background</button>\n        &nbsp; &nbsp;\n        <button onClick={() => save(false)}>Save Without Background</button>\n      </Center>\n    </>\n  );\n};\nexport default SignatureSave;\n"
@@ -9244,7 +9244,7 @@ export const examples: any[] = [
   },
   {
     "key": "save",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "signature",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureSave = () => {\n  const save = (background) => {\n    const image = new Image();\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-signature\n          id=\"signature3\"\n          background-color=\"lightgray\"\n        ></plus-signature>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => save(true)}>Save With Background</button>\n        &nbsp; &nbsp;\n        <button onClick={() => save(false)}>Save Without Background</button>\n      </plus-center>\n    </>\n  );\n};\nexport default SignatureSave;\n"
@@ -9297,7 +9297,7 @@ export const examples: any[] = [
   },
   {
     "key": "width",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "signature",
     "detail": {
       "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureWidth = () => {\n  return (\n    <Center>\n      <Signature\n        backgroundColor=\"lightgray\"\n        minWidth=\"1.5\"\n        maxWidth=\"4.5\"\n      ></Signature>\n    </Center>\n  );\n};\nexport default SignatureWidth;\n"
@@ -9305,7 +9305,7 @@ export const examples: any[] = [
   },
   {
     "key": "width",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "signature",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureWidth = () => {\n  return (\n    <plus-center>\n      <plus-signature\n        background-color=\"lightgray\"\n        min-width=\"1.5\"\n        max-width=\"4.5\"\n      ></plus-signature>\n    </plus-center>\n  );\n};\nexport default SignatureWidth;\n"
@@ -9360,7 +9360,7 @@ export const examples: any[] = [
   },
   {
     "key": "color",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "spinner",
     "detail": {
       "script": "import { Grid, Spinner } from '@htmlplus/react';\nconst SpinnerColor = () => {\n  return (\n    <Grid justifyContent=\"evenly\">\n      <Grid.Item>\n        <Spinner size=\"md\" className=\"spinner-1\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" className=\"spinner-2\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" className=\"spinner-3\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" className=\"spinner-4\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" className=\"spinner-5\"></Spinner>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default SpinnerColor;\n",
@@ -9369,7 +9369,7 @@ export const examples: any[] = [
   },
   {
     "key": "color",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "spinner",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\nconst SpinnerColor = () => {\n  return (\n    <plus-grid justify-content=\"evenly\">\n      <plus-grid-item>\n        <plus-spinner size=\"md\" className=\"spinner-1\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\" className=\"spinner-2\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\" className=\"spinner-3\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\" className=\"spinner-4\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\" className=\"spinner-5\"></plus-spinner>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default SpinnerColor;\n",
@@ -9427,7 +9427,7 @@ export const examples: any[] = [
   },
   {
     "key": "custom-size",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "spinner",
     "detail": {
       "script": "import { Grid, Spinner } from '@htmlplus/react';\nconst SpinnerCustomSize = () => {\n  return (\n    <Grid alignItems=\"center\" justifyContent=\"evenly\">\n      <Grid.Item>\n        <Spinner size=\"sm\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"lg\"></Spinner>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default SpinnerCustomSize;\n",
@@ -9436,7 +9436,7 @@ export const examples: any[] = [
   },
   {
     "key": "custom-size",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "spinner",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\nconst SpinnerCustomSize = () => {\n  return (\n    <plus-grid align-items=\"center\" justify-content=\"evenly\">\n      <plus-grid-item>\n        <plus-spinner size=\"sm\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"lg\"></plus-spinner>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default SpinnerCustomSize;\n",
@@ -9494,7 +9494,7 @@ export const examples: any[] = [
   },
   {
     "key": "customize",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "spinner",
     "detail": {
       "script": "import { Center, Spinner } from '@htmlplus/react';\nconst SpinnerCustomize = () => {\n  return (\n    <Center>\n      <Spinner type=\"dual-ring\"></Spinner>\n    </Center>\n  );\n};\nexport default SpinnerCustomize;\n",
@@ -9503,7 +9503,7 @@ export const examples: any[] = [
   },
   {
     "key": "customize",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "spinner",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\nconst SpinnerCustomize = () => {\n  return (\n    <plus-center>\n      <plus-spinner type=\"dual-ring\"></plus-spinner>\n    </plus-center>\n  );\n};\nexport default SpinnerCustomize;\n",
@@ -9559,7 +9559,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "spinner",
     "detail": {
       "script": "import { Center, Spinner } from '@htmlplus/react';\nconst SpinnerDefault = () => {\n  return (\n    <Center>\n      <Spinner></Spinner>\n    </Center>\n  );\n};\nexport default SpinnerDefault;\n"
@@ -9567,7 +9567,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "spinner",
     "detail": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/spinner.js';\nconst SpinnerDefault = () => {\n  return (\n    <plus-center>\n      <plus-spinner></plus-spinner>\n    </plus-center>\n  );\n};\nexport default SpinnerDefault;\n"
@@ -9620,7 +9620,7 @@ export const examples: any[] = [
   },
   {
     "key": "size",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "spinner",
     "detail": {
       "script": "import { Grid, Spinner } from '@htmlplus/react';\nconst SpinnerSize = () => {\n  return (\n    <Grid alignItems=\"center\" justifyContent=\"evenly\">\n      <Grid.Item>\n        <Spinner size=\"sm\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"lg\"></Spinner>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default SpinnerSize;\n"
@@ -9628,7 +9628,7 @@ export const examples: any[] = [
   },
   {
     "key": "size",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "spinner",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\nconst SpinnerSize = () => {\n  return (\n    <plus-grid align-items=\"center\" justify-content=\"evenly\">\n      <plus-grid-item>\n        <plus-spinner size=\"sm\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"lg\"></plus-spinner>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default SpinnerSize;\n"
@@ -9681,7 +9681,7 @@ export const examples: any[] = [
   },
   {
     "key": "type",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "spinner",
     "detail": {
       "script": "import { Grid, Spinner } from '@htmlplus/react';\nconst SpinnerType = () => {\n  return (\n    <Grid justifyContent=\"evenly\">\n      <Grid.Item>\n        <Spinner size=\"md\" type=\"default\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" type=\"double-bounce\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" type=\"ring\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" type=\"ripple\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" type=\"dual-ring\"></Spinner>\n      </Grid.Item>\n      <Grid.Item>\n        <Spinner size=\"md\" type=\"square\"></Spinner>\n      </Grid.Item>\n    </Grid>\n  );\n};\nexport default SpinnerType;\n"
@@ -9689,7 +9689,7 @@ export const examples: any[] = [
   },
   {
     "key": "type",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "spinner",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/spinner.js';\nconst SpinnerType = () => {\n  return (\n    <plus-grid justify-content=\"evenly\">\n      <plus-grid-item>\n        <plus-spinner size=\"md\" type=\"default\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\" type=\"double-bounce\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\" type=\"ring\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\" type=\"ripple\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\" type=\"dual-ring\"></plus-spinner>\n      </plus-grid-item>\n      <plus-grid-item>\n        <plus-spinner size=\"md\" type=\"square\"></plus-spinner>\n      </plus-grid-item>\n    </plus-grid>\n  );\n};\nexport default SpinnerType;\n"
@@ -9744,7 +9744,7 @@ export const examples: any[] = [
   },
   {
     "key": "contacts",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "sticky",
     "detail": {
       "script": "import { Sticky } from '@htmlplus/react';\nconst StickyContacts = () => {\n  return (\n    <div className=\"container\">\n      <Sticky>A</Sticky>\n      <p>A</p>\n      <Sticky>B</Sticky>\n      <p>B</p>\n      <Sticky>C</Sticky>\n      <p>C</p>\n      <Sticky>D</Sticky>\n      <p>D</p>\n      <Sticky>E</Sticky>\n      <p>E</p>\n      <Sticky>F</Sticky>\n      <p>F</p>\n    </div>\n  );\n};\nexport default StickyContacts;\n",
@@ -9753,7 +9753,7 @@ export const examples: any[] = [
   },
   {
     "key": "contacts",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "sticky",
     "detail": {
       "script": "import '@htmlplus/core/sticky.js';\nconst StickyContacts = () => {\n  return (\n    <div className=\"container\">\n      <plus-sticky>A</plus-sticky>\n      <p>A</p>\n      <plus-sticky>B</plus-sticky>\n      <p>B</p>\n      <plus-sticky>C</plus-sticky>\n      <p>C</p>\n      <plus-sticky>D</plus-sticky>\n      <p>D</p>\n      <plus-sticky>E</plus-sticky>\n      <p>E</p>\n      <plus-sticky>F</plus-sticky>\n      <p>F</p>\n    </div>\n  );\n};\nexport default StickyContacts;\n",
@@ -9811,7 +9811,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "sticky",
     "detail": {
       "script": "import { Sticky } from '@htmlplus/react';\nconst StickyDefault = () => {\n  return (\n    <div className=\"container\">\n      <p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n        pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n        gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n        vestibulum. Integer facilisis tincidunt urna vel accumsan. Orci varius\n        natoque penatibus et magnis dis parturient montes, nascetur ridiculus\n        mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n      </p>\n      <Sticky>\n        <p>\n          Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n          Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n          dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n          ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n          rhoncus tincidunt.\n        </p>\n      </Sticky>\n      <p>\n        Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n        Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n        porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n        odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n        vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n        Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n        Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n        finibus sapien sed fermentum. In viverra est sagittis sagittis maximus.\n      </p>\n      <p>\n        Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n        consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n        et rutrum et, convallis quis metus. Praesent est eros, semper sed velit\n        sit amet, gravida vestibulum justo. Class aptent taciti sociosqu ad\n        litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n        varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n        blandit nisl justo vitae tellus. Suspendisse id metus aliquam, dignissim\n        massa et, facilisis ex. Sed suscipit nunc elit, id dictum velit ultrices\n        hendrerit. Nunc sit amet dui ultrices, sollicitudin justo quis, lacinia\n        tortor. Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n        bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n        Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n      </p>\n      <p>\n        Maecenas vulputate finibus odio, vitae dignissim nibh ultricies rhoncus.\n        Aenean in dictum justo. Vestibulum pellentesque lorem aliquam lectus\n        finibus, id sagittis ex molestie. Duis rhoncus risus molestie ligula\n        consequat efficitur. Aenean vel nisl vel sem pretium ultrices nec quis\n        mi. Donec enim elit, tristique non sodales quis, iaculis ut justo. In\n        laoreet sodales leo, vel maximus purus volutpat quis. Maecenas ac\n        tincidunt nisl, vitae sodales nibh. Morbi tellus libero, feugiat vitae\n        convallis pretium, fermentum in mi. Etiam dignissim vitae massa nec\n        semper.\n      </p>\n      <p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n        pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n        gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n        vestibulum. Integer facilisis tincidunt urna vel accumsan. Orci varius\n        natoque penatibus et magnis dis parturient montes, nascetur ridiculus\n        mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n      </p>\n      <p>\n        Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n        Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n        dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n        ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n        rhoncus tincidunt. Vestibulum consequat risus non diam consectetur,\n        bibendum molestie enim placerat. Morbi pretium sem sit amet dictum\n        feugiat. Fusce gravida, eros ac bibendum ullamcorper, sapien nunc\n        vulputate elit, quis iaculis sapien ligula eget nisi. Duis erat urna,\n        porttitor non massa at, porttitor varius mauris. In lobortis massa dui,\n        et consectetur mauris iaculis vitae. Vivamus suscipit, risus vitae\n        viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at felis.\n        In hac habitasse platea dictumst. Donec ac urna ac sapien euismod\n        vulputate.\n      </p>\n      <p>\n        Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n        Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n        porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n        odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n        vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n        Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n        Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n        finibus sapien sed fermentum. In viverra est sagittis sagittis maximus.\n      </p>\n      <p>\n        Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n        consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n        et rutrum et, convallis quis metus. Praesent est eros, semper sed velit\n        sit amet, gravida vestibulum justo. Class aptent taciti sociosqu ad\n        litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n        varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n        blandit nisl justo vitae tellus. Suspendisse id metus aliquam, dignissim\n        massa et, facilisis ex. Sed suscipit nunc elit, id dictum velit ultrices\n        hendrerit. Nunc sit amet dui ultrices, sollicitudin justo quis, lacinia\n        tortor. Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n        bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n        Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n      </p>\n      <p>\n        Maecenas vulputate finibus odio, vitae dignissim nibh ultricies rhoncus.\n        Aenean in dictum justo. Vestibulum pellentesque lorem aliquam lectus\n        finibus, id sagittis ex molestie. Duis rhoncus risus molestie ligula\n        consequat efficitur. Aenean vel nisl vel sem pretium ultrices nec quis\n        mi. Donec enim elit, tristique non sodales quis, iaculis ut justo. In\n        laoreet sodales leo, vel maximus purus volutpat quis. Maecenas ac\n        tincidunt nisl, vitae sodales nibh. Morbi tellus libero, feugiat vitae\n        convallis pretium, fermentum in mi. Etiam dignissim vitae massa nec\n        semper.\n      </p>\n    </div>\n  );\n};\nexport default StickyDefault;\n",
@@ -9820,7 +9820,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "sticky",
     "detail": {
       "script": "import '@htmlplus/core/sticky.js';\nconst StickyDefault = () => {\n  return (\n    <div className=\"container\">\n      <p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n        pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n        gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n        vestibulum. Integer facilisis tincidunt urna vel accumsan. Orci varius\n        natoque penatibus et magnis dis parturient montes, nascetur ridiculus\n        mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n      </p>\n      <plus-sticky>\n        <p>\n          Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n          Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n          dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n          ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n          rhoncus tincidunt.\n        </p>\n      </plus-sticky>\n      <p>\n        Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n        Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n        porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n        odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n        vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n        Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n        Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n        finibus sapien sed fermentum. In viverra est sagittis sagittis maximus.\n      </p>\n      <p>\n        Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n        consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n        et rutrum et, convallis quis metus. Praesent est eros, semper sed velit\n        sit amet, gravida vestibulum justo. Class aptent taciti sociosqu ad\n        litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n        varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n        blandit nisl justo vitae tellus. Suspendisse id metus aliquam, dignissim\n        massa et, facilisis ex. Sed suscipit nunc elit, id dictum velit ultrices\n        hendrerit. Nunc sit amet dui ultrices, sollicitudin justo quis, lacinia\n        tortor. Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n        bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n        Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n      </p>\n      <p>\n        Maecenas vulputate finibus odio, vitae dignissim nibh ultricies rhoncus.\n        Aenean in dictum justo. Vestibulum pellentesque lorem aliquam lectus\n        finibus, id sagittis ex molestie. Duis rhoncus risus molestie ligula\n        consequat efficitur. Aenean vel nisl vel sem pretium ultrices nec quis\n        mi. Donec enim elit, tristique non sodales quis, iaculis ut justo. In\n        laoreet sodales leo, vel maximus purus volutpat quis. Maecenas ac\n        tincidunt nisl, vitae sodales nibh. Morbi tellus libero, feugiat vitae\n        convallis pretium, fermentum in mi. Etiam dignissim vitae massa nec\n        semper.\n      </p>\n      <p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n        pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n        gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n        vestibulum. Integer facilisis tincidunt urna vel accumsan. Orci varius\n        natoque penatibus et magnis dis parturient montes, nascetur ridiculus\n        mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n      </p>\n      <p>\n        Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n        Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n        dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n        ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n        rhoncus tincidunt. Vestibulum consequat risus non diam consectetur,\n        bibendum molestie enim placerat. Morbi pretium sem sit amet dictum\n        feugiat. Fusce gravida, eros ac bibendum ullamcorper, sapien nunc\n        vulputate elit, quis iaculis sapien ligula eget nisi. Duis erat urna,\n        porttitor non massa at, porttitor varius mauris. In lobortis massa dui,\n        et consectetur mauris iaculis vitae. Vivamus suscipit, risus vitae\n        viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at felis.\n        In hac habitasse platea dictumst. Donec ac urna ac sapien euismod\n        vulputate.\n      </p>\n      <p>\n        Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n        Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n        porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n        odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n        vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n        Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n        Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n        finibus sapien sed fermentum. In viverra est sagittis sagittis maximus.\n      </p>\n      <p>\n        Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n        consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n        et rutrum et, convallis quis metus. Praesent est eros, semper sed velit\n        sit amet, gravida vestibulum justo. Class aptent taciti sociosqu ad\n        litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n        varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n        blandit nisl justo vitae tellus. Suspendisse id metus aliquam, dignissim\n        massa et, facilisis ex. Sed suscipit nunc elit, id dictum velit ultrices\n        hendrerit. Nunc sit amet dui ultrices, sollicitudin justo quis, lacinia\n        tortor. Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n        bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n        Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n      </p>\n      <p>\n        Maecenas vulputate finibus odio, vitae dignissim nibh ultricies rhoncus.\n        Aenean in dictum justo. Vestibulum pellentesque lorem aliquam lectus\n        finibus, id sagittis ex molestie. Duis rhoncus risus molestie ligula\n        consequat efficitur. Aenean vel nisl vel sem pretium ultrices nec quis\n        mi. Donec enim elit, tristique non sodales quis, iaculis ut justo. In\n        laoreet sodales leo, vel maximus purus volutpat quis. Maecenas ac\n        tincidunt nisl, vitae sodales nibh. Morbi tellus libero, feugiat vitae\n        convallis pretium, fermentum in mi. Etiam dignissim vitae massa nec\n        semper.\n      </p>\n    </div>\n  );\n};\nexport default StickyDefault;\n",
@@ -9878,7 +9878,7 @@ export const examples: any[] = [
   },
   {
     "key": "sidebar",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "sticky",
     "detail": {
       "script": "import { Grid, Sticky } from '@htmlplus/react';\nconst StickySidebar = () => {\n  return (\n    <div className=\"container\">\n      <header>Header</header>\n      <Grid>\n        <Grid.Item xs=\"7\">\n          <p>\n            Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n            Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n            porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n            odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n            vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n            Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n            Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n            finibus sapien sed fermentum. In viverra est sagittis sagittis\n            maximus.\n          </p>\n          <p>\n            Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n            consectetur molestie eros sed lacinia. Maecenas ipsum est,\n            consectetur et rutrum et, convallis quis metus. Praesent est eros,\n            semper sed velit sit amet, gravida vestibulum justo. Class aptent\n            taciti sociosqu ad litora torquent per conubia nostra, per inceptos\n            himenaeos. Aenean varius, erat vel ullamcorper consequat, tellus\n            massa gravida arcu, et blandit nisl justo vitae tellus. Suspendisse\n            id metus aliquam, dignissim massa et, facilisis ex. Sed suscipit\n            nunc elit, id dictum velit ultrices hendrerit. Nunc sit amet dui\n            ultrices, sollicitudin justo quis, lacinia tortor. Sed viverra\n            libero facilisis lectus pharetra, vel porttitor sem bibendum.\n            Praesent non nibh quis ante viverra aliquet eu nec nisl. Mauris ante\n            mauris, molestie eget feugiat in, semper quis massa.\n          </p>\n          <p>\n            Maecenas vulputate finibus odio, vitae dignissim nibh ultricies\n            rhoncus. Aenean in dictum justo. Vestibulum pellentesque lorem\n            aliquam lectus finibus, id sagittis ex molestie. Duis rhoncus risus\n            molestie ligula consequat efficitur. Aenean vel nisl vel sem pretium\n            ultrices nec quis mi. Donec enim elit, tristique non sodales quis,\n            iaculis ut justo. In laoreet sodales leo, vel maximus purus volutpat\n            quis. Maecenas ac tincidunt nisl, vitae sodales nibh. Morbi tellus\n            libero, feugiat vitae convallis pretium, fermentum in mi. Etiam\n            dignissim vitae massa nec semper.\n          </p>\n          <p>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n            nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n            amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit\n            amet posuere lacus, gravida semper libero. Praesent sed nisi sed\n            lorem posuere consequat. Nunc vehicula fermentum hendrerit. Mauris\n            aliquam ornare laoreet. Maecenas cursus nec ipsum et tempus. Sed\n            pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam\n            egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n            fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt\n            urna vel accumsan. Orci varius natoque penatibus et magnis dis\n            parturient montes, nascetur ridiculus mus. Maecenas et elit\n            imperdiet, gravida urna tempus, fringilla nisl.\n          </p>\n          <p>\n            Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n            Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam\n            nulla dolor, lobortis at mauris non, gravida dignissim nulla.\n            Integer ac ultricies nisl. Duis aliquam sem eu dui porttitor\n            lobortis. Ut luctus rhoncus tincidunt. Vestibulum consequat risus\n            non diam consectetur, bibendum molestie enim placerat. Morbi pretium\n            sem sit amet dictum feugiat. Fusce gravida, eros ac bibendum\n            ullamcorper, sapien nunc vulputate elit, quis iaculis sapien ligula\n            eget nisi. Duis erat urna, porttitor non massa at, porttitor varius\n            mauris. In lobortis massa dui, et consectetur mauris iaculis vitae.\n            Vivamus suscipit, risus vitae viverra auctor, enim sem lacinia nisl,\n            vel dictum risus dolor at felis. In hac habitasse platea dictumst.\n            Donec ac urna ac sapien euismod vulputate.\n          </p>\n          <p>\n            Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n            Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n            porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n            odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n            vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n            Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n            Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n            finibus sapien sed fermentum. In viverra est sagittis sagittis\n            maximus.\n          </p>\n          <p>\n            Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n            consectetur molestie eros sed lacinia. Maecenas ipsum est,\n            consectetur et rutrum et, convallis quis metus. Praesent est eros,\n            semper sed velit sit amet, gravida vestibulum justo. Class aptent\n            taciti sociosqu ad litora torquent per conubia nostra, per inceptos\n            himenaeos. Aenean varius, erat vel ullamcorper consequat, tellus\n            massa gravida arcu, et blandit nisl justo vitae tellus. Suspendisse\n            id metus aliquam, dignissim massa et, facilisis ex. Sed suscipit\n            nunc elit, id dictum velit ultrices hendrerit. Nunc sit amet dui\n            ultrices, sollicitudin justo quis, lacinia tortor. Sed viverra\n            libero facilisis lectus pharetra, vel porttitor sem bibendum.\n            Praesent non nibh quis ante viverra aliquet eu nec nisl. Mauris ante\n            mauris, molestie eget feugiat in, semper quis massa.\n          </p>\n          <p>\n            Maecenas vulputate finibus odio, vitae dignissim nibh ultricies\n            rhoncus. Aenean in dictum justo. Vestibulum pellentesque lorem\n            aliquam lectus finibus, id sagittis ex molestie. Duis rhoncus risus\n            molestie ligula consequat efficitur. Aenean vel nisl vel sem pretium\n            ultrices nec quis mi. Donec enim elit, tristique non sodales quis,\n            iaculis ut justo. In laoreet sodales leo, vel maximus purus volutpat\n            quis. Maecenas ac tincidunt nisl, vitae sodales nibh. Morbi tellus\n            libero, feugiat vitae convallis pretium, fermentum in mi. Etiam\n            dignissim vitae massa nec semper.\n          </p>\n        </Grid.Item>\n        <Grid.Item xs=\"5\">\n          <br />\n          <Sticky>\n            <aside>A Sticky Sidebar</aside>\n          </Sticky>\n        </Grid.Item>\n      </Grid>\n    </div>\n  );\n};\nexport default StickySidebar;\n",
@@ -9887,7 +9887,7 @@ export const examples: any[] = [
   },
   {
     "key": "sidebar",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "sticky",
     "detail": {
       "script": "import '@htmlplus/core/grid.js';\nimport '@htmlplus/core/grid-item.js';\nimport '@htmlplus/core/sticky.js';\nconst StickySidebar = () => {\n  return (\n    <div className=\"container\">\n      <header>Header</header>\n      <plus-grid>\n        <plus-grid-item xs=\"7\">\n          <p>\n            Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n            Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n            porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n            odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n            vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n            Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n            Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n            finibus sapien sed fermentum. In viverra est sagittis sagittis\n            maximus.\n          </p>\n          <p>\n            Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n            consectetur molestie eros sed lacinia. Maecenas ipsum est,\n            consectetur et rutrum et, convallis quis metus. Praesent est eros,\n            semper sed velit sit amet, gravida vestibulum justo. Class aptent\n            taciti sociosqu ad litora torquent per conubia nostra, per inceptos\n            himenaeos. Aenean varius, erat vel ullamcorper consequat, tellus\n            massa gravida arcu, et blandit nisl justo vitae tellus. Suspendisse\n            id metus aliquam, dignissim massa et, facilisis ex. Sed suscipit\n            nunc elit, id dictum velit ultrices hendrerit. Nunc sit amet dui\n            ultrices, sollicitudin justo quis, lacinia tortor. Sed viverra\n            libero facilisis lectus pharetra, vel porttitor sem bibendum.\n            Praesent non nibh quis ante viverra aliquet eu nec nisl. Mauris ante\n            mauris, molestie eget feugiat in, semper quis massa.\n          </p>\n          <p>\n            Maecenas vulputate finibus odio, vitae dignissim nibh ultricies\n            rhoncus. Aenean in dictum justo. Vestibulum pellentesque lorem\n            aliquam lectus finibus, id sagittis ex molestie. Duis rhoncus risus\n            molestie ligula consequat efficitur. Aenean vel nisl vel sem pretium\n            ultrices nec quis mi. Donec enim elit, tristique non sodales quis,\n            iaculis ut justo. In laoreet sodales leo, vel maximus purus volutpat\n            quis. Maecenas ac tincidunt nisl, vitae sodales nibh. Morbi tellus\n            libero, feugiat vitae convallis pretium, fermentum in mi. Etiam\n            dignissim vitae massa nec semper.\n          </p>\n          <p>\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n            nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n            amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit\n            amet posuere lacus, gravida semper libero. Praesent sed nisi sed\n            lorem posuere consequat. Nunc vehicula fermentum hendrerit. Mauris\n            aliquam ornare laoreet. Maecenas cursus nec ipsum et tempus. Sed\n            pretium odio bibendum, pharetra nisl sed, scelerisque ipsum. Nam\n            egestas interdum risus et gravida. Suspendisse aliquam leo ac leo\n            fermentum, ac accumsan purus vestibulum. Integer facilisis tincidunt\n            urna vel accumsan. Orci varius natoque penatibus et magnis dis\n            parturient montes, nascetur ridiculus mus. Maecenas et elit\n            imperdiet, gravida urna tempus, fringilla nisl.\n          </p>\n          <p>\n            Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n            Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam\n            nulla dolor, lobortis at mauris non, gravida dignissim nulla.\n            Integer ac ultricies nisl. Duis aliquam sem eu dui porttitor\n            lobortis. Ut luctus rhoncus tincidunt. Vestibulum consequat risus\n            non diam consectetur, bibendum molestie enim placerat. Morbi pretium\n            sem sit amet dictum feugiat. Fusce gravida, eros ac bibendum\n            ullamcorper, sapien nunc vulputate elit, quis iaculis sapien ligula\n            eget nisi. Duis erat urna, porttitor non massa at, porttitor varius\n            mauris. In lobortis massa dui, et consectetur mauris iaculis vitae.\n            Vivamus suscipit, risus vitae viverra auctor, enim sem lacinia nisl,\n            vel dictum risus dolor at felis. In hac habitasse platea dictumst.\n            Donec ac urna ac sapien euismod vulputate.\n          </p>\n          <p>\n            Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n            Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n            porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n            odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n            vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n            Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n            Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n            finibus sapien sed fermentum. In viverra est sagittis sagittis\n            maximus.\n          </p>\n          <p>\n            Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n            consectetur molestie eros sed lacinia. Maecenas ipsum est,\n            consectetur et rutrum et, convallis quis metus. Praesent est eros,\n            semper sed velit sit amet, gravida vestibulum justo. Class aptent\n            taciti sociosqu ad litora torquent per conubia nostra, per inceptos\n            himenaeos. Aenean varius, erat vel ullamcorper consequat, tellus\n            massa gravida arcu, et blandit nisl justo vitae tellus. Suspendisse\n            id metus aliquam, dignissim massa et, facilisis ex. Sed suscipit\n            nunc elit, id dictum velit ultrices hendrerit. Nunc sit amet dui\n            ultrices, sollicitudin justo quis, lacinia tortor. Sed viverra\n            libero facilisis lectus pharetra, vel porttitor sem bibendum.\n            Praesent non nibh quis ante viverra aliquet eu nec nisl. Mauris ante\n            mauris, molestie eget feugiat in, semper quis massa.\n          </p>\n          <p>\n            Maecenas vulputate finibus odio, vitae dignissim nibh ultricies\n            rhoncus. Aenean in dictum justo. Vestibulum pellentesque lorem\n            aliquam lectus finibus, id sagittis ex molestie. Duis rhoncus risus\n            molestie ligula consequat efficitur. Aenean vel nisl vel sem pretium\n            ultrices nec quis mi. Donec enim elit, tristique non sodales quis,\n            iaculis ut justo. In laoreet sodales leo, vel maximus purus volutpat\n            quis. Maecenas ac tincidunt nisl, vitae sodales nibh. Morbi tellus\n            libero, feugiat vitae convallis pretium, fermentum in mi. Etiam\n            dignissim vitae massa nec semper.\n          </p>\n        </plus-grid-item>\n        <plus-grid-item xs=\"5\">\n          <br />\n          <plus-sticky>\n            <aside>A Sticky Sidebar</aside>\n          </plus-sticky>\n        </plus-grid-item>\n      </plus-grid>\n    </div>\n  );\n};\nexport default StickySidebar;\n",
@@ -9945,7 +9945,7 @@ export const examples: any[] = [
   },
   {
     "key": "slots",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "sticky",
     "detail": {
       "script": "import { Sticky } from '@htmlplus/react';\nconst StickySlots = () => {\n  return (\n    <div className=\"container\">\n      <br />\n      <Sticky watcher>\n        <header slot=\"normal\">Normal Header</header>\n        <header slot=\"stick\">Stick Header</header>\n      </Sticky>\n      <p>\n        Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n        Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n        porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n        odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n        vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n        Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n        Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n        finibus sapien sed fermentum. In viverra est sagittis sagittis maximus.\n      </p>\n      <p>\n        Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n        consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n        et rutrum et, convallis quis metus. Praesent est eros, semper sed velit\n        sit amet, gravida vestibulum justo. Class aptent taciti sociosqu ad\n        litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n        varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n        blandit nisl justo vitae tellus. Suspendisse id metus aliquam, dignissim\n        massa et, facilisis ex. Sed suscipit nunc elit, id dictum velit ultrices\n        hendrerit. Nunc sit amet dui ultrices, sollicitudin justo quis, lacinia\n        tortor. Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n        bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n        Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n      </p>\n      <p>\n        Maecenas vulputate finibus odio, vitae dignissim nibh ultricies rhoncus.\n        Aenean in dictum justo. Vestibulum pellentesque lorem aliquam lectus\n        finibus, id sagittis ex molestie. Duis rhoncus risus molestie ligula\n        consequat efficitur. Aenean vel nisl vel sem pretium ultrices nec quis\n        mi. Donec enim elit, tristique non sodales quis, iaculis ut justo. In\n        laoreet sodales leo, vel maximus purus volutpat quis. Maecenas ac\n        tincidunt nisl, vitae sodales nibh. Morbi tellus libero, feugiat vitae\n        convallis pretium, fermentum in mi. Etiam dignissim vitae massa nec\n        semper.\n      </p>\n      <p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n        pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n        gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n        vestibulum. Integer facilisis tincidunt urna vel accumsan. Orci varius\n        natoque penatibus et magnis dis parturient montes, nascetur ridiculus\n        mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n      </p>\n      <p>\n        Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n        Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n        dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n        ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n        rhoncus tincidunt. Vestibulum consequat risus non diam consectetur,\n        bibendum molestie enim placerat. Morbi pretium sem sit amet dictum\n        feugiat. Fusce gravida, eros ac bibendum ullamcorper, sapien nunc\n        vulputate elit, quis iaculis sapien ligula eget nisi. Duis erat urna,\n        porttitor non massa at, porttitor varius mauris. In lobortis massa dui,\n        et consectetur mauris iaculis vitae. Vivamus suscipit, risus vitae\n        viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at felis.\n        In hac habitasse platea dictumst. Donec ac urna ac sapien euismod\n        vulputate.\n      </p>\n      <p>\n        Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n        Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n        porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n        odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n        vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n        Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n        Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n        finibus sapien sed fermentum. In viverra est sagittis sagittis maximus.\n      </p>\n      <p>\n        Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n        consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n        et rutrum et, convallis quis metus. Praesent est eros, semper sed velit\n        sit amet, gravida vestibulum justo. Class aptent taciti sociosqu ad\n        litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n        varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n        blandit nisl justo vitae tellus. Suspendisse id metus aliquam, dignissim\n        massa et, facilisis ex. Sed suscipit nunc elit, id dictum velit ultrices\n        hendrerit. Nunc sit amet dui ultrices, sollicitudin justo quis, lacinia\n        tortor. Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n        bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n        Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n      </p>\n      <p>\n        Maecenas vulputate finibus odio, vitae dignissim nibh ultricies rhoncus.\n        Aenean in dictum justo. Vestibulum pellentesque lorem aliquam lectus\n        finibus, id sagittis ex molestie. Duis rhoncus risus molestie ligula\n        consequat efficitur. Aenean vel nisl vel sem pretium ultrices nec quis\n        mi. Donec enim elit, tristique non sodales quis, iaculis ut justo. In\n        laoreet sodales leo, vel maximus purus volutpat quis. Maecenas ac\n        tincidunt nisl, vitae sodales nibh. Morbi tellus libero, feugiat vitae\n        convallis pretium, fermentum in mi. Etiam dignissim vitae massa nec\n        semper.\n      </p>\n    </div>\n  );\n};\nexport default StickySlots;\n",
@@ -9954,7 +9954,7 @@ export const examples: any[] = [
   },
   {
     "key": "slots",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "sticky",
     "detail": {
       "script": "import '@htmlplus/core/sticky.js';\nconst StickySlots = () => {\n  return (\n    <div className=\"container\">\n      <br />\n      <plus-sticky watcher>\n        <header slot=\"normal\">Normal Header</header>\n        <header slot=\"stick\">Stick Header</header>\n      </plus-sticky>\n      <p>\n        Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n        Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n        porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n        odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n        vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n        Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n        Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n        finibus sapien sed fermentum. In viverra est sagittis sagittis maximus.\n      </p>\n      <p>\n        Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n        consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n        et rutrum et, convallis quis metus. Praesent est eros, semper sed velit\n        sit amet, gravida vestibulum justo. Class aptent taciti sociosqu ad\n        litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n        varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n        blandit nisl justo vitae tellus. Suspendisse id metus aliquam, dignissim\n        massa et, facilisis ex. Sed suscipit nunc elit, id dictum velit ultrices\n        hendrerit. Nunc sit amet dui ultrices, sollicitudin justo quis, lacinia\n        tortor. Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n        bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n        Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n      </p>\n      <p>\n        Maecenas vulputate finibus odio, vitae dignissim nibh ultricies rhoncus.\n        Aenean in dictum justo. Vestibulum pellentesque lorem aliquam lectus\n        finibus, id sagittis ex molestie. Duis rhoncus risus molestie ligula\n        consequat efficitur. Aenean vel nisl vel sem pretium ultrices nec quis\n        mi. Donec enim elit, tristique non sodales quis, iaculis ut justo. In\n        laoreet sodales leo, vel maximus purus volutpat quis. Maecenas ac\n        tincidunt nisl, vitae sodales nibh. Morbi tellus libero, feugiat vitae\n        convallis pretium, fermentum in mi. Etiam dignissim vitae massa nec\n        semper.\n      </p>\n      <p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n        pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n        gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n        vestibulum. Integer facilisis tincidunt urna vel accumsan. Orci varius\n        natoque penatibus et magnis dis parturient montes, nascetur ridiculus\n        mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n      </p>\n      <p>\n        Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n        Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n        dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n        ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n        rhoncus tincidunt. Vestibulum consequat risus non diam consectetur,\n        bibendum molestie enim placerat. Morbi pretium sem sit amet dictum\n        feugiat. Fusce gravida, eros ac bibendum ullamcorper, sapien nunc\n        vulputate elit, quis iaculis sapien ligula eget nisi. Duis erat urna,\n        porttitor non massa at, porttitor varius mauris. In lobortis massa dui,\n        et consectetur mauris iaculis vitae. Vivamus suscipit, risus vitae\n        viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at felis.\n        In hac habitasse platea dictumst. Donec ac urna ac sapien euismod\n        vulputate.\n      </p>\n      <p>\n        Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n        Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n        porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n        odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n        vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n        Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n        Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n        finibus sapien sed fermentum. In viverra est sagittis sagittis maximus.\n      </p>\n      <p>\n        Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n        consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n        et rutrum et, convallis quis metus. Praesent est eros, semper sed velit\n        sit amet, gravida vestibulum justo. Class aptent taciti sociosqu ad\n        litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n        varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n        blandit nisl justo vitae tellus. Suspendisse id metus aliquam, dignissim\n        massa et, facilisis ex. Sed suscipit nunc elit, id dictum velit ultrices\n        hendrerit. Nunc sit amet dui ultrices, sollicitudin justo quis, lacinia\n        tortor. Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n        bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n        Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n      </p>\n      <p>\n        Maecenas vulputate finibus odio, vitae dignissim nibh ultricies rhoncus.\n        Aenean in dictum justo. Vestibulum pellentesque lorem aliquam lectus\n        finibus, id sagittis ex molestie. Duis rhoncus risus molestie ligula\n        consequat efficitur. Aenean vel nisl vel sem pretium ultrices nec quis\n        mi. Donec enim elit, tristique non sodales quis, iaculis ut justo. In\n        laoreet sodales leo, vel maximus purus volutpat quis. Maecenas ac\n        tincidunt nisl, vitae sodales nibh. Morbi tellus libero, feugiat vitae\n        convallis pretium, fermentum in mi. Etiam dignissim vitae massa nec\n        semper.\n      </p>\n    </div>\n  );\n};\nexport default StickySlots;\n",
@@ -10012,7 +10012,7 @@ export const examples: any[] = [
   },
   {
     "key": "state-attribute",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "sticky",
     "detail": {
       "script": "import { Sticky } from '@htmlplus/react';\nconst StickyStateAttribute = () => {\n  return (\n    <div className=\"container\">\n      <p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n        pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n        gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n        vestibulum. Integer facilisis tincidunt urna vel accumsan. Orci varius\n        natoque penatibus et magnis dis parturient montes, nascetur ridiculus\n        mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n      </p>\n      <Sticky watcher>\n        <p>\n          Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n          Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n          dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n          ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n          rhoncus tincidunt.\n        </p>\n      </Sticky>\n      <p>\n        Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n        Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n        porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n        odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n        vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n        Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n        Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n        finibus sapien sed fermentum. In viverra est sagittis sagittis maximus.\n      </p>\n      <p>\n        Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n        consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n        et rutrum et, convallis quis metus. Praesent est eros, semper sed velit\n        sit amet, gravida vestibulum justo. Class aptent taciti sociosqu ad\n        litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n        varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n        blandit nisl justo vitae tellus. Suspendisse id metus aliquam, dignissim\n        massa et, facilisis ex. Sed suscipit nunc elit, id dictum velit ultrices\n        hendrerit. Nunc sit amet dui ultrices, sollicitudin justo quis, lacinia\n        tortor. Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n        bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n        Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n      </p>\n      <p>\n        Maecenas vulputate finibus odio, vitae dignissim nibh ultricies rhoncus.\n        Aenean in dictum justo. Vestibulum pellentesque lorem aliquam lectus\n        finibus, id sagittis ex molestie. Duis rhoncus risus molestie ligula\n        consequat efficitur. Aenean vel nisl vel sem pretium ultrices nec quis\n        mi. Donec enim elit, tristique non sodales quis, iaculis ut justo. In\n        laoreet sodales leo, vel maximus purus volutpat quis. Maecenas ac\n        tincidunt nisl, vitae sodales nibh. Morbi tellus libero, feugiat vitae\n        convallis pretium, fermentum in mi. Etiam dignissim vitae massa nec\n        semper.\n      </p>\n      <p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n        pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n        gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n        vestibulum. Integer facilisis tincidunt urna vel accumsan. Orci varius\n        natoque penatibus et magnis dis parturient montes, nascetur ridiculus\n        mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n      </p>\n      <p>\n        Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n        Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n        dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n        ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n        rhoncus tincidunt. Vestibulum consequat risus non diam consectetur,\n        bibendum molestie enim placerat. Morbi pretium sem sit amet dictum\n        feugiat. Fusce gravida, eros ac bibendum ullamcorper, sapien nunc\n        vulputate elit, quis iaculis sapien ligula eget nisi. Duis erat urna,\n        porttitor non massa at, porttitor varius mauris. In lobortis massa dui,\n        et consectetur mauris iaculis vitae. Vivamus suscipit, risus vitae\n        viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at felis.\n        In hac habitasse platea dictumst. Donec ac urna ac sapien euismod\n        vulputate.\n      </p>\n      <p>\n        Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n        Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n        porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n        odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n        vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n        Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n        Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n        finibus sapien sed fermentum. In viverra est sagittis sagittis maximus.\n      </p>\n      <p>\n        Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n        consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n        et rutrum et, convallis quis metus. Praesent est eros, semper sed velit\n        sit amet, gravida vestibulum justo. Class aptent taciti sociosqu ad\n        litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n        varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n        blandit nisl justo vitae tellus. Suspendisse id metus aliquam, dignissim\n        massa et, facilisis ex. Sed suscipit nunc elit, id dictum velit ultrices\n        hendrerit. Nunc sit amet dui ultrices, sollicitudin justo quis, lacinia\n        tortor. Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n        bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n        Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n      </p>\n      <p>\n        Maecenas vulputate finibus odio, vitae dignissim nibh ultricies rhoncus.\n        Aenean in dictum justo. Vestibulum pellentesque lorem aliquam lectus\n        finibus, id sagittis ex molestie. Duis rhoncus risus molestie ligula\n        consequat efficitur. Aenean vel nisl vel sem pretium ultrices nec quis\n        mi. Donec enim elit, tristique non sodales quis, iaculis ut justo. In\n        laoreet sodales leo, vel maximus purus volutpat quis. Maecenas ac\n        tincidunt nisl, vitae sodales nibh. Morbi tellus libero, feugiat vitae\n        convallis pretium, fermentum in mi. Etiam dignissim vitae massa nec\n        semper.\n      </p>\n    </div>\n  );\n};\nexport default StickyStateAttribute;\n",
@@ -10021,7 +10021,7 @@ export const examples: any[] = [
   },
   {
     "key": "state-attribute",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "sticky",
     "detail": {
       "script": "import '@htmlplus/core/sticky.js';\nconst StickyStateAttribute = () => {\n  return (\n    <div className=\"container\">\n      <p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n        pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n        gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n        vestibulum. Integer facilisis tincidunt urna vel accumsan. Orci varius\n        natoque penatibus et magnis dis parturient montes, nascetur ridiculus\n        mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n      </p>\n      <plus-sticky watcher>\n        <p>\n          Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n          Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n          dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n          ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n          rhoncus tincidunt.\n        </p>\n      </plus-sticky>\n      <p>\n        Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n        Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n        porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n        odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n        vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n        Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n        Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n        finibus sapien sed fermentum. In viverra est sagittis sagittis maximus.\n      </p>\n      <p>\n        Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n        consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n        et rutrum et, convallis quis metus. Praesent est eros, semper sed velit\n        sit amet, gravida vestibulum justo. Class aptent taciti sociosqu ad\n        litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n        varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n        blandit nisl justo vitae tellus. Suspendisse id metus aliquam, dignissim\n        massa et, facilisis ex. Sed suscipit nunc elit, id dictum velit ultrices\n        hendrerit. Nunc sit amet dui ultrices, sollicitudin justo quis, lacinia\n        tortor. Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n        bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n        Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n      </p>\n      <p>\n        Maecenas vulputate finibus odio, vitae dignissim nibh ultricies rhoncus.\n        Aenean in dictum justo. Vestibulum pellentesque lorem aliquam lectus\n        finibus, id sagittis ex molestie. Duis rhoncus risus molestie ligula\n        consequat efficitur. Aenean vel nisl vel sem pretium ultrices nec quis\n        mi. Donec enim elit, tristique non sodales quis, iaculis ut justo. In\n        laoreet sodales leo, vel maximus purus volutpat quis. Maecenas ac\n        tincidunt nisl, vitae sodales nibh. Morbi tellus libero, feugiat vitae\n        convallis pretium, fermentum in mi. Etiam dignissim vitae massa nec\n        semper.\n      </p>\n      <p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n        pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n        gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n        vestibulum. Integer facilisis tincidunt urna vel accumsan. Orci varius\n        natoque penatibus et magnis dis parturient montes, nascetur ridiculus\n        mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n      </p>\n      <p>\n        Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n        Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n        dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n        ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n        rhoncus tincidunt. Vestibulum consequat risus non diam consectetur,\n        bibendum molestie enim placerat. Morbi pretium sem sit amet dictum\n        feugiat. Fusce gravida, eros ac bibendum ullamcorper, sapien nunc\n        vulputate elit, quis iaculis sapien ligula eget nisi. Duis erat urna,\n        porttitor non massa at, porttitor varius mauris. In lobortis massa dui,\n        et consectetur mauris iaculis vitae. Vivamus suscipit, risus vitae\n        viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at felis.\n        In hac habitasse platea dictumst. Donec ac urna ac sapien euismod\n        vulputate.\n      </p>\n      <p>\n        Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n        Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n        porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n        odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n        vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n        Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n        Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n        finibus sapien sed fermentum. In viverra est sagittis sagittis maximus.\n      </p>\n      <p>\n        Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n        consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n        et rutrum et, convallis quis metus. Praesent est eros, semper sed velit\n        sit amet, gravida vestibulum justo. Class aptent taciti sociosqu ad\n        litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n        varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n        blandit nisl justo vitae tellus. Suspendisse id metus aliquam, dignissim\n        massa et, facilisis ex. Sed suscipit nunc elit, id dictum velit ultrices\n        hendrerit. Nunc sit amet dui ultrices, sollicitudin justo quis, lacinia\n        tortor. Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n        bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n        Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n      </p>\n      <p>\n        Maecenas vulputate finibus odio, vitae dignissim nibh ultricies rhoncus.\n        Aenean in dictum justo. Vestibulum pellentesque lorem aliquam lectus\n        finibus, id sagittis ex molestie. Duis rhoncus risus molestie ligula\n        consequat efficitur. Aenean vel nisl vel sem pretium ultrices nec quis\n        mi. Donec enim elit, tristique non sodales quis, iaculis ut justo. In\n        laoreet sodales leo, vel maximus purus volutpat quis. Maecenas ac\n        tincidunt nisl, vitae sodales nibh. Morbi tellus libero, feugiat vitae\n        convallis pretium, fermentum in mi. Etiam dignissim vitae massa nec\n        semper.\n      </p>\n    </div>\n  );\n};\nexport default StickyStateAttribute;\n",
@@ -10079,7 +10079,7 @@ export const examples: any[] = [
   },
   {
     "key": "top",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "sticky",
     "detail": {
       "script": "import { Sticky } from '@htmlplus/react';\nconst StickyTop = () => {\n  return (\n    <div className=\"container\">\n      <p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n        pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n        gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n        vestibulum. Integer facilisis tincidunt urna vel accumsan. Orci varius\n        natoque penatibus et magnis dis parturient montes, nascetur ridiculus\n        mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n      </p>\n      <Sticky top=\"20px\">\n        <p>\n          Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n          Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n          dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n          ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n          rhoncus tincidunt.\n        </p>\n      </Sticky>\n      <p>\n        Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n        Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n        porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n        odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n        vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n        Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n        Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n        finibus sapien sed fermentum. In viverra est sagittis sagittis maximus.\n      </p>\n      <p>\n        Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n        consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n        et rutrum et, convallis quis metus. Praesent est eros, semper sed velit\n        sit amet, gravida vestibulum justo. Class aptent taciti sociosqu ad\n        litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n        varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n        blandit nisl justo vitae tellus. Suspendisse id metus aliquam, dignissim\n        massa et, facilisis ex. Sed suscipit nunc elit, id dictum velit ultrices\n        hendrerit. Nunc sit amet dui ultrices, sollicitudin justo quis, lacinia\n        tortor. Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n        bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n        Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n      </p>\n      <p>\n        Maecenas vulputate finibus odio, vitae dignissim nibh ultricies rhoncus.\n        Aenean in dictum justo. Vestibulum pellentesque lorem aliquam lectus\n        finibus, id sagittis ex molestie. Duis rhoncus risus molestie ligula\n        consequat efficitur. Aenean vel nisl vel sem pretium ultrices nec quis\n        mi. Donec enim elit, tristique non sodales quis, iaculis ut justo. In\n        laoreet sodales leo, vel maximus purus volutpat quis. Maecenas ac\n        tincidunt nisl, vitae sodales nibh. Morbi tellus libero, feugiat vitae\n        convallis pretium, fermentum in mi. Etiam dignissim vitae massa nec\n        semper.\n      </p>\n      <p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n        pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n        gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n        vestibulum. Integer facilisis tincidunt urna vel accumsan. Orci varius\n        natoque penatibus et magnis dis parturient montes, nascetur ridiculus\n        mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n      </p>\n      <p>\n        Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n        Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n        dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n        ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n        rhoncus tincidunt. Vestibulum consequat risus non diam consectetur,\n        bibendum molestie enim placerat. Morbi pretium sem sit amet dictum\n        feugiat. Fusce gravida, eros ac bibendum ullamcorper, sapien nunc\n        vulputate elit, quis iaculis sapien ligula eget nisi. Duis erat urna,\n        porttitor non massa at, porttitor varius mauris. In lobortis massa dui,\n        et consectetur mauris iaculis vitae. Vivamus suscipit, risus vitae\n        viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at felis.\n        In hac habitasse platea dictumst. Donec ac urna ac sapien euismod\n        vulputate.\n      </p>\n      <p>\n        Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n        Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n        porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n        odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n        vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n        Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n        Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n        finibus sapien sed fermentum. In viverra est sagittis sagittis maximus.\n      </p>\n      <p>\n        Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n        consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n        et rutrum et, convallis quis metus. Praesent est eros, semper sed velit\n        sit amet, gravida vestibulum justo. Class aptent taciti sociosqu ad\n        litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n        varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n        blandit nisl justo vitae tellus. Suspendisse id metus aliquam, dignissim\n        massa et, facilisis ex. Sed suscipit nunc elit, id dictum velit ultrices\n        hendrerit. Nunc sit amet dui ultrices, sollicitudin justo quis, lacinia\n        tortor. Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n        bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n        Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n      </p>\n      <p>\n        Maecenas vulputate finibus odio, vitae dignissim nibh ultricies rhoncus.\n        Aenean in dictum justo. Vestibulum pellentesque lorem aliquam lectus\n        finibus, id sagittis ex molestie. Duis rhoncus risus molestie ligula\n        consequat efficitur. Aenean vel nisl vel sem pretium ultrices nec quis\n        mi. Donec enim elit, tristique non sodales quis, iaculis ut justo. In\n        laoreet sodales leo, vel maximus purus volutpat quis. Maecenas ac\n        tincidunt nisl, vitae sodales nibh. Morbi tellus libero, feugiat vitae\n        convallis pretium, fermentum in mi. Etiam dignissim vitae massa nec\n        semper.\n      </p>\n    </div>\n  );\n};\nexport default StickyTop;\n",
@@ -10088,7 +10088,7 @@ export const examples: any[] = [
   },
   {
     "key": "top",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "sticky",
     "detail": {
       "script": "import '@htmlplus/core/sticky.js';\nconst StickyTop = () => {\n  return (\n    <div className=\"container\">\n      <p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n        pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n        gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n        vestibulum. Integer facilisis tincidunt urna vel accumsan. Orci varius\n        natoque penatibus et magnis dis parturient montes, nascetur ridiculus\n        mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n      </p>\n      <plus-sticky top=\"20px\">\n        <p>\n          Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n          Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n          dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n          ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n          rhoncus tincidunt.\n        </p>\n      </plus-sticky>\n      <p>\n        Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n        Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n        porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n        odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n        vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n        Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n        Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n        finibus sapien sed fermentum. In viverra est sagittis sagittis maximus.\n      </p>\n      <p>\n        Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n        consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n        et rutrum et, convallis quis metus. Praesent est eros, semper sed velit\n        sit amet, gravida vestibulum justo. Class aptent taciti sociosqu ad\n        litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n        varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n        blandit nisl justo vitae tellus. Suspendisse id metus aliquam, dignissim\n        massa et, facilisis ex. Sed suscipit nunc elit, id dictum velit ultrices\n        hendrerit. Nunc sit amet dui ultrices, sollicitudin justo quis, lacinia\n        tortor. Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n        bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n        Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n      </p>\n      <p>\n        Maecenas vulputate finibus odio, vitae dignissim nibh ultricies rhoncus.\n        Aenean in dictum justo. Vestibulum pellentesque lorem aliquam lectus\n        finibus, id sagittis ex molestie. Duis rhoncus risus molestie ligula\n        consequat efficitur. Aenean vel nisl vel sem pretium ultrices nec quis\n        mi. Donec enim elit, tristique non sodales quis, iaculis ut justo. In\n        laoreet sodales leo, vel maximus purus volutpat quis. Maecenas ac\n        tincidunt nisl, vitae sodales nibh. Morbi tellus libero, feugiat vitae\n        convallis pretium, fermentum in mi. Etiam dignissim vitae massa nec\n        semper.\n      </p>\n      <p>\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh\n        eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit amet diam\n        et erat pulvinar ultricies in vel erat. Vestibulum sit amet posuere\n        lacus, gravida semper libero. Praesent sed nisi sed lorem posuere\n        consequat. Nunc vehicula fermentum hendrerit. Mauris aliquam ornare\n        laoreet. Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n        pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n        gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n        vestibulum. Integer facilisis tincidunt urna vel accumsan. Orci varius\n        natoque penatibus et magnis dis parturient montes, nascetur ridiculus\n        mus. Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n      </p>\n      <p>\n        Nam a gravida lorem. Curabitur sagittis vitae quam vitae dignissim.\n        Curabitur eget sollicitudin urna, vitae venenatis massa. Aliquam nulla\n        dolor, lobortis at mauris non, gravida dignissim nulla. Integer ac\n        ultricies nisl. Duis aliquam sem eu dui porttitor lobortis. Ut luctus\n        rhoncus tincidunt. Vestibulum consequat risus non diam consectetur,\n        bibendum molestie enim placerat. Morbi pretium sem sit amet dictum\n        feugiat. Fusce gravida, eros ac bibendum ullamcorper, sapien nunc\n        vulputate elit, quis iaculis sapien ligula eget nisi. Duis erat urna,\n        porttitor non massa at, porttitor varius mauris. In lobortis massa dui,\n        et consectetur mauris iaculis vitae. Vivamus suscipit, risus vitae\n        viverra auctor, enim sem lacinia nisl, vel dictum risus dolor at felis.\n        In hac habitasse platea dictumst. Donec ac urna ac sapien euismod\n        vulputate.\n      </p>\n      <p>\n        Proin sapien enim, pellentesque eget urna ut, mollis tincidunt quam.\n        Pellentesque eu orci et leo dapibus sagittis in nec tellus. Vivamus\n        porta felis turpis, ac vehicula felis tristique at. Integer at lacus\n        odio. Donec ornare turpis eu cursus finibus. Suspendisse cursus\n        vestibulum lacus vel porta. Nam eget nibh eu ante ultrices aliquet.\n        Nullam quis ligula faucibus, aliquam tellus quis, accumsan tortor.\n        Integer at leo dictum, luctus dui ac, suscipit turpis. Sed pharetra\n        finibus sapien sed fermentum. In viverra est sagittis sagittis maximus.\n      </p>\n      <p>\n        Maecenas quis lorem rutrum, convallis purus ac, hendrerit dui. Etiam\n        consectetur molestie eros sed lacinia. Maecenas ipsum est, consectetur\n        et rutrum et, convallis quis metus. Praesent est eros, semper sed velit\n        sit amet, gravida vestibulum justo. Class aptent taciti sociosqu ad\n        litora torquent per conubia nostra, per inceptos himenaeos. Aenean\n        varius, erat vel ullamcorper consequat, tellus massa gravida arcu, et\n        blandit nisl justo vitae tellus. Suspendisse id metus aliquam, dignissim\n        massa et, facilisis ex. Sed suscipit nunc elit, id dictum velit ultrices\n        hendrerit. Nunc sit amet dui ultrices, sollicitudin justo quis, lacinia\n        tortor. Sed viverra libero facilisis lectus pharetra, vel porttitor sem\n        bibendum. Praesent non nibh quis ante viverra aliquet eu nec nisl.\n        Mauris ante mauris, molestie eget feugiat in, semper quis massa.\n      </p>\n      <p>\n        Maecenas vulputate finibus odio, vitae dignissim nibh ultricies rhoncus.\n        Aenean in dictum justo. Vestibulum pellentesque lorem aliquam lectus\n        finibus, id sagittis ex molestie. Duis rhoncus risus molestie ligula\n        consequat efficitur. Aenean vel nisl vel sem pretium ultrices nec quis\n        mi. Donec enim elit, tristique non sodales quis, iaculis ut justo. In\n        laoreet sodales leo, vel maximus purus volutpat quis. Maecenas ac\n        tincidunt nisl, vitae sodales nibh. Morbi tellus libero, feugiat vitae\n        convallis pretium, fermentum in mi. Etiam dignissim vitae massa nec\n        semper.\n      </p>\n    </div>\n  );\n};\nexport default StickyTop;\n",
@@ -10146,7 +10146,7 @@ export const examples: any[] = [
   },
   {
     "key": "3D",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "switch",
     "detail": {
       "script": "import { Switch } from '@htmlplus/react';\nconst Switch3D = () => {\n  return (\n    <div className=\"center\">\n      <Switch checked></Switch>\n    </div>\n  );\n};\nexport default Switch3D;\n",
@@ -10155,7 +10155,7 @@ export const examples: any[] = [
   },
   {
     "key": "3D",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "switch",
     "detail": {
       "script": "import '@htmlplus/core/switch.js';\nconst Switch3D = () => {\n  return (\n    <div className=\"center\">\n      <plus-switch checked></plus-switch>\n    </div>\n  );\n};\nexport default Switch3D;\n",
@@ -10213,7 +10213,7 @@ export const examples: any[] = [
   },
   {
     "key": "checked",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "switch",
     "detail": {
       "script": "import { Switch } from '@htmlplus/react';\nconst SwitchChecked = () => {\n  return (\n    <div className=\"center\">\n      <Switch checked></Switch>\n    </div>\n  );\n};\nexport default SwitchChecked;\n",
@@ -10222,7 +10222,7 @@ export const examples: any[] = [
   },
   {
     "key": "checked",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "switch",
     "detail": {
       "script": "import '@htmlplus/core/switch.js';\nconst SwitchChecked = () => {\n  return (\n    <div className=\"center\">\n      <plus-switch checked></plus-switch>\n    </div>\n  );\n};\nexport default SwitchChecked;\n",
@@ -10280,7 +10280,7 @@ export const examples: any[] = [
   },
   {
     "key": "customized",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "switch",
     "detail": {
       "script": "import { Switch } from '@htmlplus/react';\nconst SwitchCustomized = () => {\n  return (\n    <div className=\"container\">\n      <Switch className=\"switch-1\"></Switch>\n      <Switch className=\"switch-2\"></Switch>\n    </div>\n  );\n};\nexport default SwitchCustomized;\n",
@@ -10289,7 +10289,7 @@ export const examples: any[] = [
   },
   {
     "key": "customized",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "switch",
     "detail": {
       "script": "import '@htmlplus/core/switch.js';\nconst SwitchCustomized = () => {\n  return (\n    <div className=\"container\">\n      <plus-switch className=\"switch-1\"></plus-switch>\n      <plus-switch className=\"switch-2\"></plus-switch>\n    </div>\n  );\n};\nexport default SwitchCustomized;\n",
@@ -10347,7 +10347,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "switch",
     "detail": {
       "script": "import { Switch } from '@htmlplus/react';\nconst SwitchDefault = () => {\n  return (\n    <div className=\"center\">\n      <Switch></Switch>\n    </div>\n  );\n};\nexport default SwitchDefault;\n",
@@ -10356,7 +10356,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "switch",
     "detail": {
       "script": "import '@htmlplus/core/switch.js';\nconst SwitchDefault = () => {\n  return (\n    <div className=\"center\">\n      <plus-switch></plus-switch>\n    </div>\n  );\n};\nexport default SwitchDefault;\n",
@@ -10414,7 +10414,7 @@ export const examples: any[] = [
   },
   {
     "key": "disabled",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "switch",
     "detail": {
       "script": "import { Switch } from '@htmlplus/react';\nconst SwitchDisabled = () => {\n  return (\n    <div className=\"center\">\n      <Switch disabled></Switch>\n    </div>\n  );\n};\nexport default SwitchDisabled;\n",
@@ -10423,7 +10423,7 @@ export const examples: any[] = [
   },
   {
     "key": "disabled",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "switch",
     "detail": {
       "script": "import '@htmlplus/core/switch.js';\nconst SwitchDisabled = () => {\n  return (\n    <div className=\"center\">\n      <plus-switch disabled></plus-switch>\n    </div>\n  );\n};\nexport default SwitchDisabled;\n",
@@ -10481,7 +10481,7 @@ export const examples: any[] = [
   },
   {
     "key": "event",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "switch",
     "detail": {
       "script": "import { Switch } from '@htmlplus/react';\nconst SwitchEvent = () => {\n  const onChange = (event) => {\n    window.alert(`Will be changed to ${event.target.checked ? 'On' : 'Off'}`);\n  };\n  return (\n    <div className=\"center\">\n      <Switch onChange={(event) => onChange(event)}></Switch>\n    </div>\n  );\n};\nexport default SwitchEvent;\n",
@@ -10490,7 +10490,7 @@ export const examples: any[] = [
   },
   {
     "key": "event",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "switch",
     "detail": {
       "script": "import '@htmlplus/core/switch.js';\nconst SwitchEvent = () => {\n  const onChange = (event) => {\n    window.alert(`Will be changed to ${event.target.checked ? 'On' : 'Off'}`);\n  };\n  return (\n    <div className=\"center\">\n      <plus-switch onplus-change={(event) => onChange(event)}></plus-switch>\n    </div>\n  );\n};\nexport default SwitchEvent;\n",
@@ -10546,7 +10546,7 @@ export const examples: any[] = [
   },
   {
     "key": "below",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "tabs",
     "detail": {
       "script": "import { Tabs } from '@htmlplus/react';\nconst TabsBelow = () => {\n  return (\n    <Tabs value=\"1\">\n      <Tabs.Panels>\n        <Tabs.Panel value=\"1\">\n          <b>Tab One</b>\n          <br />\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n          nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n          amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit amet\n          posuere lacus, gravida semper libero. Praesent sed nisi sed lorem\n          posuere consequat.\n        </Tabs.Panel>\n        <Tabs.Panel value=\"2\">\n          <b>Tab Two</b>\n          <br />\n          Nunc vehicula fermentum hendrerit. Mauris aliquam ornare laoreet.\n          Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n          pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n          gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n          vestibulum.\n        </Tabs.Panel>\n        <Tabs.Panel value=\"3\">\n          <b>Tab Three</b>\n          <br />\n          Integer facilisis tincidunt urna vel accumsan. Orci varius natoque\n          penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n          Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n        </Tabs.Panel>\n      </Tabs.Panels>\n      <Tabs.Bar>\n        <Tabs.Tab value=\"1\">Tab 1</Tabs.Tab>\n        <Tabs.Tab value=\"2\">Tab 2</Tabs.Tab>\n        <Tabs.Tab value=\"3\">Tab 3</Tabs.Tab>\n      </Tabs.Bar>\n    </Tabs>\n  );\n};\nexport default TabsBelow;\n"
@@ -10554,7 +10554,7 @@ export const examples: any[] = [
   },
   {
     "key": "below",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "tabs",
     "detail": {
       "script": "import '@htmlplus/core/tabs.js';\nimport '@htmlplus/core/tabs-bar.js';\nimport '@htmlplus/core/tabs-panel.js';\nimport '@htmlplus/core/tabs-panels.js';\nimport '@htmlplus/core/tabs-tab.js';\nconst TabsBelow = () => {\n  return (\n    <plus-tabs value=\"1\">\n      <plus-tabs-panels>\n        <plus-tabs-panel value=\"1\">\n          <b>Tab One</b>\n          <br />\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n          nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n          amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit amet\n          posuere lacus, gravida semper libero. Praesent sed nisi sed lorem\n          posuere consequat.\n        </plus-tabs-panel>\n        <plus-tabs-panel value=\"2\">\n          <b>Tab Two</b>\n          <br />\n          Nunc vehicula fermentum hendrerit. Mauris aliquam ornare laoreet.\n          Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n          pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n          gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n          vestibulum.\n        </plus-tabs-panel>\n        <plus-tabs-panel value=\"3\">\n          <b>Tab Three</b>\n          <br />\n          Integer facilisis tincidunt urna vel accumsan. Orci varius natoque\n          penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n          Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n        </plus-tabs-panel>\n      </plus-tabs-panels>\n      <plus-tabs-bar>\n        <plus-tabs-tab value=\"1\">Tab 1</plus-tabs-tab>\n        <plus-tabs-tab value=\"2\">Tab 2</plus-tabs-tab>\n        <plus-tabs-tab value=\"3\">Tab 3</plus-tabs-tab>\n      </plus-tabs-bar>\n    </plus-tabs>\n  );\n};\nexport default TabsBelow;\n"
@@ -10607,7 +10607,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "tabs",
     "detail": {
       "script": "import { Tabs } from '@htmlplus/react';\nconst TabsDefault = () => {\n  return (\n    <Tabs value=\"1\">\n      <Tabs.Bar>\n        <Tabs.Tab value=\"1\">Tab 1</Tabs.Tab>\n        <Tabs.Tab value=\"2\">Tab 2</Tabs.Tab>\n        <Tabs.Tab value=\"3\">Tab 3</Tabs.Tab>\n      </Tabs.Bar>\n      <Tabs.Panels>\n        <Tabs.Panel value=\"1\">\n          <b>Tab One</b>\n          <br />\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n          nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n          amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit amet\n          posuere lacus, gravida semper libero. Praesent sed nisi sed lorem\n          posuere consequat.\n        </Tabs.Panel>\n        <Tabs.Panel value=\"2\">\n          <b>Tab Two</b>\n          <br />\n          Nunc vehicula fermentum hendrerit. Mauris aliquam ornare laoreet.\n          Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n          pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n          gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n          vestibulum.\n        </Tabs.Panel>\n        <Tabs.Panel value=\"3\">\n          <b>Tab Three</b>\n          <br />\n          Integer facilisis tincidunt urna vel accumsan. Orci varius natoque\n          penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n          Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n        </Tabs.Panel>\n      </Tabs.Panels>\n    </Tabs>\n  );\n};\nexport default TabsDefault;\n"
@@ -10615,7 +10615,7 @@ export const examples: any[] = [
   },
   {
     "key": "default",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "tabs",
     "detail": {
       "script": "import '@htmlplus/core/tabs.js';\nimport '@htmlplus/core/tabs-bar.js';\nimport '@htmlplus/core/tabs-panel.js';\nimport '@htmlplus/core/tabs-panels.js';\nimport '@htmlplus/core/tabs-tab.js';\nconst TabsDefault = () => {\n  return (\n    <plus-tabs value=\"1\">\n      <plus-tabs-bar>\n        <plus-tabs-tab value=\"1\">Tab 1</plus-tabs-tab>\n        <plus-tabs-tab value=\"2\">Tab 2</plus-tabs-tab>\n        <plus-tabs-tab value=\"3\">Tab 3</plus-tabs-tab>\n      </plus-tabs-bar>\n      <plus-tabs-panels>\n        <plus-tabs-panel value=\"1\">\n          <b>Tab One</b>\n          <br />\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n          nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n          amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit amet\n          posuere lacus, gravida semper libero. Praesent sed nisi sed lorem\n          posuere consequat.\n        </plus-tabs-panel>\n        <plus-tabs-panel value=\"2\">\n          <b>Tab Two</b>\n          <br />\n          Nunc vehicula fermentum hendrerit. Mauris aliquam ornare laoreet.\n          Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n          pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n          gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n          vestibulum.\n        </plus-tabs-panel>\n        <plus-tabs-panel value=\"3\">\n          <b>Tab Three</b>\n          <br />\n          Integer facilisis tincidunt urna vel accumsan. Orci varius natoque\n          penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n          Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n        </plus-tabs-panel>\n      </plus-tabs-panels>\n    </plus-tabs>\n  );\n};\nexport default TabsDefault;\n"
@@ -10668,7 +10668,7 @@ export const examples: any[] = [
   },
   {
     "key": "grow",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "tabs",
     "detail": {
       "script": "import { Tabs } from '@htmlplus/react';\nconst TabsGrow = () => {\n  return (\n    <Tabs>\n      <Tabs.Bar grow>\n        <Tabs.Tab>Tab 1</Tabs.Tab>\n        <Tabs.Tab>Tab 2</Tabs.Tab>\n        <Tabs.Tab>Tab 3</Tabs.Tab>\n      </Tabs.Bar>\n    </Tabs>\n  );\n};\nexport default TabsGrow;\n"
@@ -10676,7 +10676,7 @@ export const examples: any[] = [
   },
   {
     "key": "grow",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "tabs",
     "detail": {
       "script": "import '@htmlplus/core/tabs.js';\nimport '@htmlplus/core/tabs-bar.js';\nimport '@htmlplus/core/tabs-tab.js';\nconst TabsGrow = () => {\n  return (\n    <plus-tabs>\n      <plus-tabs-bar grow>\n        <plus-tabs-tab>Tab 1</plus-tabs-tab>\n        <plus-tabs-tab>Tab 2</plus-tabs-tab>\n        <plus-tabs-tab>Tab 3</plus-tabs-tab>\n      </plus-tabs-bar>\n    </plus-tabs>\n  );\n};\nexport default TabsGrow;\n"
@@ -10729,7 +10729,7 @@ export const examples: any[] = [
   },
   {
     "key": "justify",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "tabs",
     "detail": {
       "script": "import { Tabs } from '@htmlplus/react';\nconst TabsJustify = () => {\n  return (\n    <>\n      <Tabs>\n        <Tabs.Bar justify=\"start\">\n          <Tabs.Tab>Tab 1</Tabs.Tab>\n          <Tabs.Tab>Tab 2</Tabs.Tab>\n          <Tabs.Tab>Tab 3</Tabs.Tab>\n        </Tabs.Bar>\n      </Tabs>\n      <br />\n      <Tabs>\n        <Tabs.Bar justify=\"center\">\n          <Tabs.Tab>Tab 1</Tabs.Tab>\n          <Tabs.Tab>Tab 2</Tabs.Tab>\n          <Tabs.Tab>Tab 3</Tabs.Tab>\n        </Tabs.Bar>\n      </Tabs>\n      <br />\n      <Tabs>\n        <Tabs.Bar justify=\"end\">\n          <Tabs.Tab>Tab 1</Tabs.Tab>\n          <Tabs.Tab>Tab 2</Tabs.Tab>\n          <Tabs.Tab>Tab 3</Tabs.Tab>\n        </Tabs.Bar>\n      </Tabs>\n    </>\n  );\n};\nexport default TabsJustify;\n"
@@ -10737,7 +10737,7 @@ export const examples: any[] = [
   },
   {
     "key": "justify",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "tabs",
     "detail": {
       "script": "import '@htmlplus/core/tabs.js';\nimport '@htmlplus/core/tabs-bar.js';\nimport '@htmlplus/core/tabs-tab.js';\nconst TabsJustify = () => {\n  return (\n    <>\n      <plus-tabs>\n        <plus-tabs-bar justify=\"start\">\n          <plus-tabs-tab>Tab 1</plus-tabs-tab>\n          <plus-tabs-tab>Tab 2</plus-tabs-tab>\n          <plus-tabs-tab>Tab 3</plus-tabs-tab>\n        </plus-tabs-bar>\n      </plus-tabs>\n      <br />\n      <plus-tabs>\n        <plus-tabs-bar justify=\"center\">\n          <plus-tabs-tab>Tab 1</plus-tabs-tab>\n          <plus-tabs-tab>Tab 2</plus-tabs-tab>\n          <plus-tabs-tab>Tab 3</plus-tabs-tab>\n        </plus-tabs-bar>\n      </plus-tabs>\n      <br />\n      <plus-tabs>\n        <plus-tabs-bar justify=\"end\">\n          <plus-tabs-tab>Tab 1</plus-tabs-tab>\n          <plus-tabs-tab>Tab 2</plus-tabs-tab>\n          <plus-tabs-tab>Tab 3</plus-tabs-tab>\n        </plus-tabs-bar>\n      </plus-tabs>\n    </>\n  );\n};\nexport default TabsJustify;\n"
@@ -10790,7 +10790,7 @@ export const examples: any[] = [
   },
   {
     "key": "reverse",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "tabs",
     "detail": {
       "script": "import { Tabs } from '@htmlplus/react';\nconst TabsReverse = () => {\n  return (\n    <Tabs>\n      <Tabs.Bar reverse>\n        <Tabs.Tab>Tab 1</Tabs.Tab>\n        <Tabs.Tab>Tab 2</Tabs.Tab>\n        <Tabs.Tab>Tab 3</Tabs.Tab>\n      </Tabs.Bar>\n    </Tabs>\n  );\n};\nexport default TabsReverse;\n"
@@ -10798,7 +10798,7 @@ export const examples: any[] = [
   },
   {
     "key": "reverse",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "tabs",
     "detail": {
       "script": "import '@htmlplus/core/tabs.js';\nimport '@htmlplus/core/tabs-bar.js';\nimport '@htmlplus/core/tabs-tab.js';\nconst TabsReverse = () => {\n  return (\n    <plus-tabs>\n      <plus-tabs-bar reverse>\n        <plus-tabs-tab>Tab 1</plus-tabs-tab>\n        <plus-tabs-tab>Tab 2</plus-tabs-tab>\n        <plus-tabs-tab>Tab 3</plus-tabs-tab>\n      </plus-tabs-bar>\n    </plus-tabs>\n  );\n};\nexport default TabsReverse;\n"
@@ -10851,7 +10851,7 @@ export const examples: any[] = [
   },
   {
     "key": "separate",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "tabs",
     "detail": {
       "script": "import { Tabs } from '@htmlplus/react';\nconst TabsSeparate = () => {\n  return (\n    <>\n      <header>\n        <Tabs value=\"1\" connector=\"tabs-separate\">\n          <Tabs.Bar>\n            <Tabs.Tab value=\"1\">Tab 1</Tabs.Tab>\n            <Tabs.Tab value=\"2\">Tab 2</Tabs.Tab>\n            <Tabs.Tab value=\"3\">Tab 3</Tabs.Tab>\n          </Tabs.Bar>\n        </Tabs>\n      </header>\n      <section>\n        <Tabs.Panels connector=\"tabs-separate\">\n          <Tabs.Panel value=\"1\">\n            <b>Tab One</b>\n            <br />\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n            nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n            amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit\n            amet posuere lacus, gravida semper libero. Praesent sed nisi sed\n            lorem posuere consequat.\n          </Tabs.Panel>\n          <Tabs.Panel value=\"2\">\n            <b>Tab Two</b>\n            <br />\n            Nunc vehicula fermentum hendrerit. Mauris aliquam ornare laoreet.\n            Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n            pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n            gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n            vestibulum.\n          </Tabs.Panel>\n          <Tabs.Panel value=\"3\">\n            <b>Tab Three</b>\n            <br />\n            Integer facilisis tincidunt urna vel accumsan. Orci varius natoque\n            penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n            Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n          </Tabs.Panel>\n        </Tabs.Panels>\n      </section>\n    </>\n  );\n};\nexport default TabsSeparate;\n"
@@ -10859,7 +10859,7 @@ export const examples: any[] = [
   },
   {
     "key": "separate",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "tabs",
     "detail": {
       "script": "import '@htmlplus/core/tabs.js';\nimport '@htmlplus/core/tabs-bar.js';\nimport '@htmlplus/core/tabs-panel.js';\nimport '@htmlplus/core/tabs-panels.js';\nimport '@htmlplus/core/tabs-tab.js';\nconst TabsSeparate = () => {\n  return (\n    <>\n      <header>\n        <plus-tabs value=\"1\" connector=\"tabs-separate\">\n          <plus-tabs-bar>\n            <plus-tabs-tab value=\"1\">Tab 1</plus-tabs-tab>\n            <plus-tabs-tab value=\"2\">Tab 2</plus-tabs-tab>\n            <plus-tabs-tab value=\"3\">Tab 3</plus-tabs-tab>\n          </plus-tabs-bar>\n        </plus-tabs>\n      </header>\n      <section>\n        <plus-tabs-panels connector=\"tabs-separate\">\n          <plus-tabs-panel value=\"1\">\n            <b>Tab One</b>\n            <br />\n            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n            nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n            amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit\n            amet posuere lacus, gravida semper libero. Praesent sed nisi sed\n            lorem posuere consequat.\n          </plus-tabs-panel>\n          <plus-tabs-panel value=\"2\">\n            <b>Tab Two</b>\n            <br />\n            Nunc vehicula fermentum hendrerit. Mauris aliquam ornare laoreet.\n            Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n            pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n            gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n            vestibulum.\n          </plus-tabs-panel>\n          <plus-tabs-panel value=\"3\">\n            <b>Tab Three</b>\n            <br />\n            Integer facilisis tincidunt urna vel accumsan. Orci varius natoque\n            penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n            Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n          </plus-tabs-panel>\n        </plus-tabs-panels>\n      </section>\n    </>\n  );\n};\nexport default TabsSeparate;\n"
@@ -10912,7 +10912,7 @@ export const examples: any[] = [
   },
   {
     "key": "vertical",
-    "category": "react",
+    "category": "react-dedicated",
     "component": "tabs",
     "detail": {
       "script": "import { Tabs } from '@htmlplus/react';\nconst TabsVertical = () => {\n  return (\n    <Tabs value=\"1\" vertical>\n      <Tabs.Bar>\n        <Tabs.Tab value=\"1\">Tab 1</Tabs.Tab>\n        <Tabs.Tab value=\"2\">Tab 2</Tabs.Tab>\n        <Tabs.Tab value=\"3\">Tab 3</Tabs.Tab>\n      </Tabs.Bar>\n      <Tabs.Panels>\n        <Tabs.Panel value=\"1\">\n          <b>Tab One</b>\n          <br />\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n          nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n          amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit amet\n          posuere lacus, gravida semper libero. Praesent sed nisi sed lorem\n          posuere consequat.\n        </Tabs.Panel>\n        <Tabs.Panel value=\"2\">\n          <b>Tab Two</b>\n          <br />\n          Nunc vehicula fermentum hendrerit. Mauris aliquam ornare laoreet.\n          Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n          pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n          gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n          vestibulum.\n        </Tabs.Panel>\n        <Tabs.Panel value=\"3\">\n          <b>Tab Three</b>\n          <br />\n          Integer facilisis tincidunt urna vel accumsan. Orci varius natoque\n          penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n          Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n        </Tabs.Panel>\n      </Tabs.Panels>\n    </Tabs>\n  );\n};\nexport default TabsVertical;\n"
@@ -10920,7 +10920,7 @@ export const examples: any[] = [
   },
   {
     "key": "vertical",
-    "category": "react@experimental",
+    "category": "react-experimental",
     "component": "tabs",
     "detail": {
       "script": "import '@htmlplus/core/tabs.js';\nimport '@htmlplus/core/tabs-bar.js';\nimport '@htmlplus/core/tabs-panel.js';\nimport '@htmlplus/core/tabs-panels.js';\nimport '@htmlplus/core/tabs-tab.js';\nconst TabsVertical = () => {\n  return (\n    <plus-tabs value=\"1\" vertical>\n      <plus-tabs-bar>\n        <plus-tabs-tab value=\"1\">Tab 1</plus-tabs-tab>\n        <plus-tabs-tab value=\"2\">Tab 2</plus-tabs-tab>\n        <plus-tabs-tab value=\"3\">Tab 3</plus-tabs-tab>\n      </plus-tabs-bar>\n      <plus-tabs-panels>\n        <plus-tabs-panel value=\"1\">\n          <b>Tab One</b>\n          <br />\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur\n          nibh eros, luctus in lacus eu, eleifend ultricies ipsum. Morbi sit\n          amet diam et erat pulvinar ultricies in vel erat. Vestibulum sit amet\n          posuere lacus, gravida semper libero. Praesent sed nisi sed lorem\n          posuere consequat.\n        </plus-tabs-panel>\n        <plus-tabs-panel value=\"2\">\n          <b>Tab Two</b>\n          <br />\n          Nunc vehicula fermentum hendrerit. Mauris aliquam ornare laoreet.\n          Maecenas cursus nec ipsum et tempus. Sed pretium odio bibendum,\n          pharetra nisl sed, scelerisque ipsum. Nam egestas interdum risus et\n          gravida. Suspendisse aliquam leo ac leo fermentum, ac accumsan purus\n          vestibulum.\n        </plus-tabs-panel>\n        <plus-tabs-panel value=\"3\">\n          <b>Tab Three</b>\n          <br />\n          Integer facilisis tincidunt urna vel accumsan. Orci varius natoque\n          penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n          Maecenas et elit imperdiet, gravida urna tempus, fringilla nisl.\n        </plus-tabs-panel>\n      </plus-tabs-panels>\n    </plus-tabs>\n  );\n};\nexport default TabsVertical;\n"

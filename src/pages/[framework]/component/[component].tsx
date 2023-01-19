@@ -82,7 +82,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
         };
 
         for (const key of ['template', 'script', 'style', 'config']) {
-          if (key == 'template' && ['react', 'react@experimental'].includes(framework)) continue;
+          if (key == 'template' && framework.startsWith('react')) continue;
 
           const content = example.detail?.[key] ?? null;
 

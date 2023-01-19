@@ -44,7 +44,8 @@ a {
     text-decoration: none;
     color: #a7a7a7;
     border-left: solid 2px $color-main-lighten-3;
-    font-size: 95%;
+    font-size: 90%;
+    line-height: 1.75;
     &:hover {
       color: gray;
       border-color: gray;
