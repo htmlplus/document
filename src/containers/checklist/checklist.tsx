@@ -8,8 +8,8 @@ import { ChecklistProps } from './checklist.types';
 export const Checklist = (properties: ChecklistProps) => {
   const style = (property: any) => {
     return {
-      'opacity': property && property != 'N/A' ? 0.4 : null,
-      'text-decoration': property == 'N/A' ? 'line-through' : null
+      opacity: property && property != 'N/A' ? 0.4 : null,
+      textDecoration: property == 'N/A' ? 'line-through' : null
     };
   };
   return (

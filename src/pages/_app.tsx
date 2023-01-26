@@ -3,7 +3,6 @@ import React from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import { faker } from '@faker-js/faker/locale/en';
 // @ts-ignore
 import { setConfig } from '@htmlplus/core/config.js';
 
@@ -14,11 +13,6 @@ setConfig({
     'plus-divider': {
       property: {
         width: 'xs'
-      }
-    },
-    'plus-faker': {
-      property: {
-        instance: faker
       }
     }
   }
