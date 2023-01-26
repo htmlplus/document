@@ -103,7 +103,7 @@ export const DrawerDefault = dynamic(() => import('./DrawerDefault'));
 export const FakerApi = dynamic(() => import('./FakerApi'));
 export const FakerArguments = dynamic(() => import('./FakerArguments'));
 export const FakerDefault = dynamic(() => import('./FakerDefault'));
-export const FakerLocale = dynamic(() => import('./FakerLocale'));
+export const FakerLocalization = dynamic(() => import('./FakerLocalization'));
 export const FakerMore = dynamic(() => import('./FakerMore'));
 export const FakerSeed = dynamic(() => import('./FakerSeed'));
 export const FormatBytesDecimals = dynamic(() => import('./FormatBytesDecimals'));

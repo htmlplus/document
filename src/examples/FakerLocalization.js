@@ -4,28 +4,28 @@
 
 import { Faker } from '@htmlplus/react';
 import { setConfig } from '@htmlplus/core/config.js';
-import { faker } from '@faker-js/faker/locale/de';
+import { faker } from '@faker-js/faker/locale/ja';
 
 setConfig({
   component: {
     'plus-faker': {
       property: {
-        // instance: faker
+        instance: faker
       }
     }
   }
 });
 
-const FakerLocale = () => {
-  return <Faker></Faker>;
+const FakerLocalization = () => {
+  return <Faker locale="ja"></Faker>;
 };
 
-const FakerLocaleExample = () => {
+const FakerLocalizationExample = () => {
   return (
-    <div className="ex-faker-locale">
-      <FakerLocale />
+    <div className="ex-faker-localization">
+      <FakerLocalization />
     </div>
   )
 };
 
-export default FakerLocaleExample;
+export default FakerLocalizationExample;
