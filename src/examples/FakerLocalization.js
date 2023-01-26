@@ -17,7 +17,7 @@ setConfig({
 });
 
 const FakerLocalization = () => {
-  return <Faker locale="ja"></Faker>;
+  return <Faker></Faker>;
 };
 
 const FakerLocalizationExample = () => {
