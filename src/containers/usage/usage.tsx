@@ -2,11 +2,18 @@ import { useRouter } from 'next/router';
 
 import { Button, Code } from '@app/components';
 import { Toc } from '@app/containers';
+import { components } from '@app/data';
 import { ROUTES, getPath } from '@app/utils';
 
 export const Usage = () => {
   const router = useRouter();
-  const { framework } = router.query as any;
+
+  const { component: key, framework } = router.query as any;
+
+  const component = components.find((component) => component.key == key);
+
+  const dependencies = component?.tags?.find((tag: any) => tag.key == 'dependencies')?.value || '';
+
   return (
     <>
       <h2>
@@ -26,9 +33,9 @@ export const Usage = () => {
       <Code language="shell">
         {(() => {
           if (framework == 'react-dedicated') {
-            return 'npm install @htmlplus/react';
+            return 'npm install @htmlplus/react ' + dependencies;
           }
-          return 'npm install @htmlplus/core';
+          return 'npm install @htmlplus/core ' + dependencies;
         })()}
       </Code>
     </>
