@@ -3,7 +3,7 @@
  **************************************************/
 
 import { Center, Cropper } from '@htmlplus/react';
-const CropperToURL = () => {
+const CropperToUrl = () => {
   const toURL = () => {
     window.cropper4.toCanvas().toBlob((blob) => {
       window.open(URL.createObjectURL(blob), '_blank');
@@ -25,12 +25,12 @@ const CropperToURL = () => {
   );
 };
 
-const CropperToURLExample = () => {
+const CropperToUrlExample = () => {
   return (
     <div className="ex-cropper-to-url">
-      <CropperToURL />
+      <CropperToUrl />
     </div>
   )
 };
 
-export default CropperToURLExample;
+export default CropperToUrlExample;

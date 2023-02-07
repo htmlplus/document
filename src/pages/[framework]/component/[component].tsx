@@ -35,45 +35,39 @@ export const getStaticProps: GetStaticProps = async (context) => {
   // TODO
   const example = (() => {
     return examples
-      ?.filter((example) => example.category == framework && example.component == component)
+      ?.filter((example) => example.plugin == framework && example.component == component)
       ?.reduce((result, example) => {
         const links = [
           {
             key: 'download',
             title: 'Download',
             icon: 'download',
-            url: getPath(ROUTES.EXAMPLE_DOWNLOAD_LINK, { component, framework, example: example.key })
+            url: getPath(ROUTES.EXAMPLE_DOWNLOAD_LINK, { component, framework, example: example.example })
           },
           {
             key: 'github',
             title: 'Github',
             icon: 'github',
-            url: getPath(ROUTES.EXAMPLE_GITHUB_LINK, { component, framework, example: example.key })
+            url: getPath(ROUTES.EXAMPLE_GITHUB_LINK, { component, framework, example: example.example })
           },
           {
             key: 'codesandbox',
             title: 'CodeSandbox',
             icon: 'sandbox',
-            url: getPath(ROUTES.EXAMPLE_CODE_SANDBOX_LINK, { component, framework, example: example.key })
+            url: getPath(ROUTES.EXAMPLE_CODE_SANDBOX_LINK, { component, framework, example: example.example })
           }
         ];
 
         const tabs: any[] = [];
 
-        const title = capitalCase(example.key);
+        const title = capitalCase(example.example);
 
-        const componentName = `${pascalCase(example.component)}${pascalCase(example.key)}`;
+        const componentName = `${pascalCase(example.component)}${pascalCase(example.example)}`;
 
-        const rtl = examples?.some((item) => {
-          return (
-            item.category == 'preview' &&
-            item.component == example.component &&
-            item.key == example.key &&
-            item.detail.rtl
-          );
-        });
+        // TODO
+        const rtl = false;
 
-        result[example.key] = {
+        result[example.example] = {
           componentName,
           links,
           rtl,
@@ -84,7 +78,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
         for (const key of ['template', 'script', 'style', 'config']) {
           if (key == 'template' && framework.startsWith('react')) continue;
 
-          const content = example.detail?.[key] ?? null;
+          const content = example.output?.[key] ?? null;
 
           if (key == 'config' && !content) continue;
 

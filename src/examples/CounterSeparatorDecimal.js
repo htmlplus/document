@@ -13,7 +13,7 @@ const CounterSeparatorDecimal = () => {
 
 const CounterSeparatorDecimalExample = () => {
   return (
-    <div className="ex-counter-separator-&-decimal">
+    <div className="ex-counter-separator-decimal">
       <CounterSeparatorDecimal />
     </div>
   )

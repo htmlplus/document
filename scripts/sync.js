@@ -1,7 +1,7 @@
 // TODO
 
 const axios = require('axios');
-const { pascalCase } = require('change-case');
+const { paramCase, pascalCase } = require('change-case');
 const fs = require('fs');
 const path = require('path');
 
@@ -17,6 +17,39 @@ const load = (local, remote) => {
         .catch(reject);
     }
   });
+};
+
+const scoped = (styles, className) => {
+  try {
+    var classLen = className.length,
+      char,
+      nextChar,
+      isAt,
+      isIn;
+    className += ' ';
+    styles = styles.replace(/\/\*(?:(?!\*\/)[\s\S])*\*\/|[\r\n\t]+/g, '');
+    styles = styles.replace(/}(\s*)@/g, '}@');
+    styles = styles.replace(/}(\s*)}/g, '}}');
+    for (var i = 0; i < styles.length - 2; i++) {
+      char = styles[i];
+      nextChar = styles[i + 1];
+      if (char === '@') isAt = true;
+      if (!isAt && char === '{') isIn = true;
+      if (isIn && char === '}') isIn = false;
+      if (
+        !isIn &&
+        nextChar !== '@' &&
+        nextChar !== '}' &&
+        (char === '}' || char === ',' || ((char === '{' || char === ';') && isAt))
+      ) {
+        styles = styles.slice(0, i + 1) + className + styles.slice(i + 1);
+        i += classLen;
+        isAt = false;
+      }
+    }
+    if (styles.indexOf(className) !== 0 && styles.indexOf('@') !== 0) styles = className + styles;
+    return styles;
+  } catch {}
 };
 
 // changelog
@@ -64,16 +97,53 @@ const load = (local, remote) => {
 
     const lines = [...HEADER, `import dynamic from 'next/dynamic';`, ''];
 
-    for (const example of db) {
-      if (example.category != 'preview') continue;
+    for (const item of db) {
+      if (item.plugin != 'react-dedicated') continue;
 
-      const name = `${pascalCase(example.component)}${pascalCase(example.key)}`;
+      const name = `${pascalCase(item.component)}${pascalCase(item.example)}`;
+
+      const className = `ex-${paramCase(name)}`;
+
+      const outputs = db.find((X) => {
+        return X.plugin == 'prepare' && X.component == item.component && X.example == item.example;
+      })?.output;
+
+      const config = outputs?.find((output) => output.key == 'config')?.content;
+
+      const settings = outputs?.find((output) => output.key == 'settings')?.content;
+
+      let { script, style } = item.output;
+
+      if (style) {
+        style = scoped(style, `.${className}`);
+      }
+
+      script = script.split('export default ')[0].trim();
+      script += '\n\n';
+      script += `const ${name}Example = () => {\n`;
+      script += '  return (\n';
+      script += `    <div className="${className}${settings?.dock ? ' dock' : ''}">\n`;
+      script += `      <${name} />\n`;
+      script += style ? `      <style>{\`${style}\`}</style>\n` : '';
+      script += '    </div>\n';
+      script += '  )\n';
+      script += '};\n';
+      script += '\n';
+      script += `export default ${name}Example;\n`;
+
+      if (config) {
+        const i = script.lastIndexOf('import');
+
+        const j = script.indexOf('\n', i);
+
+        script = [script.slice(0, j), config, script.slice(j)].join('\n');
+      }
 
       lines.push(`export const ${name} = dynamic(() => import('./${name}'));`);
 
-      const script = [...HEADER, example.detail.script].join('\n');
+      const script1 = [...HEADER, script].join('\n');
 
-      fs.writeFileSync(`${DIRECTORY}/${name}.js`, script);
+      fs.writeFileSync(`${DIRECTORY}/${name}.js`, script1);
     }
 
     const content = lines.join('\n');

@@ -4,7 +4,7 @@
 
 import { useState } from 'react';
 import { Card, Center, ClickOutside } from '@htmlplus/react';
-const ClickOutsideDefault = () => {
+const ClickOutsideMenu = () => {
   const [open, setOpen] = useState(false);
   const onClick = () => {
     setOpen(!open);
@@ -26,13 +26,13 @@ const ClickOutsideDefault = () => {
   );
 };
 
-const ClickOutsideDefaultExample = () => {
+const ClickOutsideMenuExample = () => {
   return (
     <div className="ex-click-outside-menu">
-      <ClickOutsideDefault />
+      <ClickOutsideMenu />
       <style>{`.ex-click-outside-menu plus-card {  position: absolute;  top: calc(100% + 0.25rem);}.ex-click-outside-menu plus-click-outside {  display: inline-block;  position: relative;}`}</style>
     </div>
   )
 };
 
-export default ClickOutsideDefaultExample;
+export default ClickOutsideMenuExample;
