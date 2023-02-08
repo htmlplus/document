@@ -1,37 +1,37 @@
 import { useLayoutEffect, useState } from 'react';
 
-import { Button, Code, Grid, Icon, Tabs } from '@app/components';
-import * as examples from '@app/examples';
+import { pascalCase } from 'change-case';
+
+import { Alert, Button, Code, Grid, Icon, Tabs } from '@app/components';
+import * as Examples from '@app/examples';
 import { useStore } from '@app/hooks';
+import { getPath, ROUTES } from '@app/utils';
 
 import { ExampleProps } from './example.types';
 
-export const Example = ({ value }: ExampleProps) => {
-  if (!value) return <div>TODO</div>;
+export const Example = ({ component, example, isolate, links, rtl, tabs, title }: ExampleProps) => {
+  const store = useStore();
 
-  const { componentName, links, rtl, tabs, title } = value;
+  if (!component || !example) return <Alert type="error">NOT FOUND</Alert>;
+
+  const componentName = `${pascalCase(component)}${pascalCase(example)}`;
+
+  // TODO
+  const Preview = isolate
+    ? () => (
+        <iframe
+          src={getPath(ROUTES.COMPONENT_EXAMPLE, { component, example })}
+          style={{ border: 'none', display: 'block', margin: 0, width: '100%' }}
+        />
+      )
+    : ((Examples as any)[componentName!] as any);
 
   const [direction, setDirection] = useState('ltr');
 
   const [visible, setVisible] = useState(true);
 
-  const store = useStore();
-
-  const language = (tab: any) => {
-    switch (tab.key) {
-      case 'config':
-        return 'js';
-      case 'script':
-        return 'jsx';
-      case 'style':
-        return 'css';
-      case 'template':
-        return 'html';
-    }
-  };
-
-  const onDirection = (event: MouseEvent) => {
-    event.preventDefault();
+  const onDirection = (event?: MouseEvent) => {
+    event?.preventDefault();
     setDirection(direction == 'ltr' ? 'rtl' : 'ltr');
   };
 
@@ -43,9 +43,6 @@ export const Example = ({ value }: ExampleProps) => {
   };
 
   useLayoutEffect(onReload, [store.framework]);
-
-  // TODO
-  const Preview = (examples as any)[componentName!] as any;
 
   return (
     <Tabs className="example" connector={`example:${title}`} value="preview">
@@ -89,7 +86,7 @@ export const Example = ({ value }: ExampleProps) => {
           ?.filter((tab) => tab.key != 'preview')
           ?.map((tab) => (
             <Tabs.Panel key={tab.key} value={tab.key}>
-              <Code language={language(tab)!}>{tab.content}</Code>
+              <Code language={tab.language as any}>{tab.content}</Code>
             </Tabs.Panel>
           ))}
       </Tabs.Panels>
