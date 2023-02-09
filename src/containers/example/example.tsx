@@ -2,7 +2,7 @@ import { useLayoutEffect, useState } from 'react';
 
 import { pascalCase } from 'change-case';
 
-import { Alert, Button, Code, Grid, Icon, Tabs } from '@app/components';
+import { Alert, Button, Code, Grid, Icon, Tabs, Tooltip } from '@app/components';
 import * as Examples from '@app/examples';
 import { useStore } from '@app/hooks';
 import { getPath, ROUTES } from '@app/utils';
@@ -63,18 +63,21 @@ export const Example = ({ component, example, isolate, links, rtl, tabs, title }
             <Button icon text to="#" onClick={onDirection}>
               <Icon size="lg" name="directions" />
             </Button>
+            <Tooltip>Change Direction</Tooltip>
           </Grid.Item>
         )}
         <Grid.Item xs="auto">
           <Button icon text to="#" onClick={onReload}>
             <Icon size="lg" name="reset" />
           </Button>
+          <Tooltip>Reset</Tooltip>
         </Grid.Item>
         {links?.map((link) => (
           <Grid.Item key={link.key} xs="auto">
             <Button icon text to={link.url} target="_blank">
               <Icon size="lg" name={link.icon} />
             </Button>
+            <Tooltip>{link.title}</Tooltip>
           </Grid.Item>
         ))}
       </Grid>

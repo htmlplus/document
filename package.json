@@ -11,8 +11,10 @@
     "sync": "node ./scripts/sync.js"
   },
   "devDependencies": {
-    "@htmlplus/core": "^0.8.3-next-02012222",
-    "@htmlplus/react": "^0.7.3-next-02012227",
+    "@faker-js/faker": "^7.6.0",
+    "@floating-ui/dom": "^1.2.0",
+    "@htmlplus/core": "^0.8.3",
+    "@htmlplus/react": "^0.7.3",
     "@trivago/prettier-plugin-sort-imports": "^4.0.0",
     "@types/node": "^18.11.9",
     "@types/prismjs": "^1.26.0",

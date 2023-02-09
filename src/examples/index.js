@@ -1,6 +1,7 @@
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
+
 import dynamic from 'next/dynamic';
 
 export const AnimationButton = dynamic(() => import('./AnimationButton'));
@@ -164,7 +165,7 @@ export const StickySidebar = dynamic(() => import('./StickySidebar'));
 export const StickySlots = dynamic(() => import('./StickySlots'));
 export const StickyStateAttribute = dynamic(() => import('./StickyStateAttribute'));
 export const StickyTop = dynamic(() => import('./StickyTop'));
-export const Switch3D = dynamic(() => import('./Switch3D'));
+export const Switch3d = dynamic(() => import('./Switch3d'));
 export const SwitchChecked = dynamic(() => import('./SwitchChecked'));
 export const SwitchCustomized = dynamic(() => import('./SwitchCustomized'));
 export const SwitchDefault = dynamic(() => import('./SwitchDefault'));
