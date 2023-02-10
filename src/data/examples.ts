@@ -897,7 +897,8 @@ export const examples: any[] = [
     "example": "image",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/aspect-ratio.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"http://placeimg.com/640/640/nature\" style=\"object-fit: cover;\" />\n</plus-aspect-ratio>\n"
+      "style": "img {\n  object-fit: cover;\n}\n",
+      "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"http://placeimg.com/640/640/nature\" />\n</plus-aspect-ratio>\n"
     }
   },
   {
@@ -906,7 +907,8 @@ export const examples: any[] = [
     "example": "image",
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/aspect-ratio.js';\n",
-      "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"http://placeimg.com/640/640/nature\" style=\"object-fit: cover;\" />\n</plus-aspect-ratio>\n"
+      "style": "img {\n  object-fit: cover;\n}\n",
+      "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"http://placeimg.com/640/640/nature\" />\n</plus-aspect-ratio>\n"
     }
   },
   {
@@ -915,9 +917,14 @@ export const examples: any[] = [
     "example": "image",
     "output": [
       {
+        "key": "style",
+        "type": "css",
+        "content": "img {\r\n  object-fit: cover;\r\n}"
+      },
+      {
         "key": "template",
         "type": "html",
-        "content": "<plus-aspect-ratio value=\"18/6\">\r\n  <img src=\"http://placeimg.com/640/640/nature\" style=\"object-fit: cover;\" />\r\n</plus-aspect-ratio>"
+        "content": "<plus-aspect-ratio value=\"18/6\">\r\n  <img src=\"http://placeimg.com/640/640/nature\" />\r\n</plus-aspect-ratio>"
       }
     ]
   },
@@ -926,7 +933,8 @@ export const examples: any[] = [
     "component": "aspect-ratio",
     "example": "image",
     "output": {
-      "script": "import { AspectRatio } from '@htmlplus/react';\nconst AspectRatioImage = () => {\n  return (\n    <AspectRatio value=\"18/6\">\n      <img\n        src=\"http://placeimg.com/640/640/nature\"\n        style={{\n          'object-fit': 'cover'\n        }}\n      />\n    </AspectRatio>\n  );\n};\nexport default AspectRatioImage;\n"
+      "script": "import { AspectRatio } from '@htmlplus/react';\nconst AspectRatioImage = () => {\n  return (\n    <AspectRatio value=\"18/6\">\n      <img src=\"http://placeimg.com/640/640/nature\" />\n    </AspectRatio>\n  );\n};\nexport default AspectRatioImage;\n",
+      "style": "img {\n  object-fit: cover;\n}\n"
     }
   },
   {
@@ -934,7 +942,8 @@ export const examples: any[] = [
     "component": "aspect-ratio",
     "example": "image",
     "output": {
-      "script": "import '@htmlplus/core/aspect-ratio.js';\nconst AspectRatioImage = () => {\n  return (\n    <plus-aspect-ratio value=\"18/6\">\n      <img\n        src=\"http://placeimg.com/640/640/nature\"\n        style={{\n          'object-fit': 'cover'\n        }}\n      />\n    </plus-aspect-ratio>\n  );\n};\nexport default AspectRatioImage;\n"
+      "script": "import '@htmlplus/core/aspect-ratio.js';\nconst AspectRatioImage = () => {\n  return (\n    <plus-aspect-ratio value=\"18/6\">\n      <img src=\"http://placeimg.com/640/640/nature\" />\n    </plus-aspect-ratio>\n  );\n};\nexport default AspectRatioImage;\n",
+      "style": "img {\n  object-fit: cover;\n}\n"
     }
   },
   {
@@ -943,7 +952,8 @@ export const examples: any[] = [
     "example": "image",
     "output": {
       "script": "import '@htmlplus/core/aspect-ratio.js';\n",
-      "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"http://placeimg.com/640/640/nature\" style=\"object-fit: cover;\" />\n</plus-aspect-ratio>\n"
+      "style": "img {\n  object-fit: cover;\n}\n",
+      "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"http://placeimg.com/640/640/nature\" />\n</plus-aspect-ratio>\n"
     }
   },
   {
@@ -952,7 +962,8 @@ export const examples: any[] = [
     "example": "image",
     "output": {
       "script": "import '@htmlplus/core/aspect-ratio.js';\n",
-      "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"http://placeimg.com/640/640/nature\" style=\"object-fit: cover;\" />\n</plus-aspect-ratio>\n"
+      "style": "img {\n  object-fit: cover;\n}\n",
+      "template": "<plus-aspect-ratio value=\"18/6\">\n  <img src=\"http://placeimg.com/640/640/nature\" />\n</plus-aspect-ratio>\n"
     }
   },
   {
@@ -5001,7 +5012,7 @@ export const examples: any[] = [
     "component": "cropper",
     "example": "to-base64",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  toBase64() {\n    const image = new Image();\n    image.src = window.cropper2.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  }\n}\n",
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  toBase64() {\n    const image = new Image();\n    image.src = window.cropper2.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    setTimeout(() => {\n      tab.document.write(image.outerHTML);\n    }, 250);\n  }\n}\n",
       "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper2\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"toBase64()\">Get Base64</button>\n</plus-center>\n"
     }
   },
@@ -5010,7 +5021,7 @@ export const examples: any[] = [
     "component": "cropper",
     "example": "to-base64",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\n\nbutton2.addEventListener('click', () => {\r\n  const image = new Image();\r\n\r\n  image.src = cropper2.toCanvas().toDataURL();\r\n\r\n  const tab = open('', '_blank');\r\n\r\n  tab.onload = () => {\r\n    tab.document.write(image.outerHTML);\r\n  }\r\n});",
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\n\nbutton2.addEventListener('click', () => {\r\n  const image = new Image();\r\n\r\n  image.src = cropper2.toCanvas().toDataURL();\r\n\r\n  const tab = open('', '_blank');\r\n\r\n  setTimeout(() => {\r\n    tab.document.write(image.outerHTML);\r\n  }, 250);\r\n});",
       "template": "<plus-center>\r\n  <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\" id=\"cropper2\"></plus-cropper>\r\n</plus-center>\r\n<br />\r\n<plus-center>\r\n  <button id=\"button2\">\r\n    To Base64\r\n  </button>\r\n</plus-center>"
     }
   },
@@ -5022,7 +5033,7 @@ export const examples: any[] = [
       {
         "key": "script",
         "type": "tsx",
-        "content": "import { Element } from '@htmlplus/element';\r\n\r\n@Element()\r\nclass CropperToBase64 {\r\n  toBase64() {\r\n    const image = new Image();\r\n\r\n    image.src = window.cropper2.toCanvas().toDataURL();\r\n\r\n    const tab = window.open('', '_blank');\r\n\r\n    tab.onload = () => {\r\n      tab.document.write(image.outerHTML);\r\n    }\r\n  }\r\n\r\n  render() {\r\n    return (\r\n      <>\r\n        <plus-center>\r\n          <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\" id=\"cropper2\"></plus-cropper>\r\n        </plus-center>\r\n        <br />\r\n        <plus-center>\r\n          <button onClick={() => this.toBase64()}>\r\n            Get Base64\r\n          </button>\r\n        </plus-center>\r\n      </>\r\n    )\r\n  }\r\n}"
+        "content": "import { Element } from '@htmlplus/element';\r\n\r\n@Element()\r\nclass CropperToBase64 {\r\n  toBase64() {\r\n    const image = new Image();\r\n\r\n    image.src = window.cropper2.toCanvas().toDataURL();\r\n\r\n    const tab = window.open('', '_blank');\r\n\r\n    setTimeout(() => {\r\n      tab.document.write(image.outerHTML);\r\n    }, 250);\r\n  }\r\n\r\n  render() {\r\n    return (\r\n      <>\r\n        <plus-center>\r\n          <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\" id=\"cropper2\"></plus-cropper>\r\n        </plus-center>\r\n        <br />\r\n        <plus-center>\r\n          <button onClick={() => this.toBase64()}>\r\n            Get Base64\r\n          </button>\r\n        </plus-center>\r\n      </>\r\n    )\r\n  }\r\n}"
       },
       {
         "key": "javascript:template",
@@ -5032,7 +5043,7 @@ export const examples: any[] = [
       {
         "key": "javascript:script",
         "type": "js",
-        "content": "button2.addEventListener('click', () => {\r\n  const image = new Image();\r\n\r\n  image.src = cropper2.toCanvas().toDataURL();\r\n\r\n  const tab = open('', '_blank');\r\n\r\n  tab.onload = () => {\r\n    tab.document.write(image.outerHTML);\r\n  }\r\n});"
+        "content": "button2.addEventListener('click', () => {\r\n  const image = new Image();\r\n\r\n  image.src = cropper2.toCanvas().toDataURL();\r\n\r\n  const tab = open('', '_blank');\r\n\r\n  setTimeout(() => {\r\n    tab.document.write(image.outerHTML);\r\n  }, 250);\r\n});"
       }
     ]
   },
@@ -5041,7 +5052,7 @@ export const examples: any[] = [
     "component": "cropper",
     "example": "to-base64",
     "output": {
-      "script": "import { Center, Cropper } from '@htmlplus/react';\nconst CropperToBase64 = () => {\n  const toBase64 = () => {\n    const image = new Image();\n    image.src = window.cropper2.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper2\"\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => toBase64()}>Get Base64</button>\n      </Center>\n    </>\n  );\n};\nexport default CropperToBase64;\n"
+      "script": "import { Center, Cropper } from '@htmlplus/react';\nconst CropperToBase64 = () => {\n  const toBase64 = () => {\n    const image = new Image();\n    image.src = window.cropper2.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    setTimeout(() => {\n      tab.document.write(image.outerHTML);\n    }, 250);\n  };\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper2\"\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => toBase64()}>Get Base64</button>\n      </Center>\n    </>\n  );\n};\nexport default CropperToBase64;\n"
     }
   },
   {
@@ -5049,7 +5060,7 @@ export const examples: any[] = [
     "component": "cropper",
     "example": "to-base64",
     "output": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nconst CropperToBase64 = () => {\n  const toBase64 = () => {\n    const image = new Image();\n    image.src = window.cropper2.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper2\"\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => toBase64()}>Get Base64</button>\n      </plus-center>\n    </>\n  );\n};\nexport default CropperToBase64;\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nconst CropperToBase64 = () => {\n  const toBase64 = () => {\n    const image = new Image();\n    image.src = window.cropper2.toCanvas().toDataURL();\n    const tab = window.open('', '_blank');\n    setTimeout(() => {\n      tab.document.write(image.outerHTML);\n    }, 250);\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          id=\"cropper2\"\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => toBase64()}>Get Base64</button>\n      </plus-center>\n    </>\n  );\n};\nexport default CropperToBase64;\n"
     }
   },
   {
@@ -5057,7 +5068,7 @@ export const examples: any[] = [
     "component": "cropper",
     "example": "to-base64",
     "output": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nfunction toBase64() {\n  const image = new Image();\n  image.src = window.cropper2.toCanvas().toDataURL();\n  const tab = window.open('', '_blank');\n  tab.onload = () => {\n    tab.document.write(image.outerHTML);\n  };\n}\n",
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nfunction toBase64() {\n  const image = new Image();\n  image.src = window.cropper2.toCanvas().toDataURL();\n  const tab = window.open('', '_blank');\n  setTimeout(() => {\n    tab.document.write(image.outerHTML);\n  }, 250);\n}\n",
       "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper2\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click=\"{() => toBase64()}\">Get Base64</button>\n</plus-center>\n"
     }
   },
@@ -5066,7 +5077,7 @@ export const examples: any[] = [
     "component": "cropper",
     "example": "to-base64",
     "output": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nfunction toBase64() {\n  const image = new Image();\n  image.src = window.cropper2.toCanvas().toDataURL();\n  const tab = window.open('', '_blank');\n  tab.onload = () => {\n    tab.document.write(image.outerHTML);\n  };\n}\n",
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\nfunction toBase64() {\n  const image = new Image();\n  image.src = window.cropper2.toCanvas().toDataURL();\n  const tab = window.open('', '_blank');\n  setTimeout(() => {\n    tab.document.write(image.outerHTML);\n  }, 250);\n}\n",
       "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"cropper2\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button @click=\"toBase64()\">Get Base64</button>\n</plus-center>\n"
     }
   },
@@ -10972,7 +10983,7 @@ export const examples: any[] = [
     "component": "signature",
     "example": "save",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  save(background) {\n    const image = new Image();\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  }\n}\n",
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  save(background) {\n    const image = new Image();\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\n    const tab = window.open('', '_blank');\n    setTimeout(() => {\n      tab.document.write(image.outerHTML);\n    }, 250);\n  }\n}\n",
       "template": "<plus-center>\n  <plus-signature id=\"signature3\" background-color=\"lightgray\"></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"save(true)\">Save With Background</button>\n  &nbsp; &nbsp;\n  <button (click)=\"save(false)\">Save Without Background</button>\n</plus-center>\n"
     }
   },
@@ -10981,7 +10992,7 @@ export const examples: any[] = [
     "component": "signature",
     "example": "save",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/signature.js';\n\nconst save = (background) => {\r\n  const image = new Image();\r\n\r\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\r\n\r\n  const tab = window.open('', '_blank');\r\n\r\n  tab.onload = () => {\r\n    tab.document.write(image.outerHTML);\r\n  }\r\n}\r\nsave1.addEventListener('click', () => save(true));\r\nsave2.addEventListener('click', () => save(false));",
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/signature.js';\n\nconst save = (background) => {\r\n  const image = new Image();\r\n\r\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\r\n\r\n  const tab = window.open('', '_blank');\r\n\r\n  setTimeout(() => {\r\n    tab.document.write(image.outerHTML);\r\n  }, 250);\r\n}\r\nsave1.addEventListener('click', () => save(true));\r\nsave2.addEventListener('click', () => save(false));",
       "template": "<plus-center>\r\n  <plus-signature id=\"signature3\" background-color=\"lightgray\"></plus-signature>\r\n</plus-center>\r\n<br />\r\n<plus-center>\r\n  <button id=\"save1\">\r\n    Save With Background\r\n  </button>\r\n  &nbsp; &nbsp;\r\n  <button id=\"save2\">\r\n    Save Without Background\r\n  </button>\r\n</plus-center>"
     }
   },
@@ -10993,7 +11004,7 @@ export const examples: any[] = [
       {
         "key": "script",
         "type": "tsx",
-        "content": "import { Element } from '@htmlplus/element';\r\n\r\n@Element()\r\nclass SignatureSave {\r\n  save(background) {\r\n    const image = new Image();\r\n\r\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\r\n\r\n    const tab = window.open('', '_blank');\r\n\r\n    tab.onload = () => {\r\n      tab.document.write(image.outerHTML);\r\n    }\r\n  }\r\n\r\n  render() {\r\n    return (\r\n      <>\r\n        <plus-center>\r\n          <plus-signature id=\"signature3\" background-color=\"lightgray\"></plus-signature>\r\n        </plus-center>\r\n        <br />\r\n        <plus-center>\r\n          <button onClick={() => this.save(true)}>\r\n            Save With Background\r\n          </button>\r\n          &nbsp; &nbsp;\r\n          <button onClick={() => this.save(false)}>\r\n            Save Without Background\r\n          </button>\r\n        </plus-center>\r\n      </>\r\n    )\r\n  }\r\n}"
+        "content": "import { Element } from '@htmlplus/element';\r\n\r\n@Element()\r\nclass SignatureSave {\r\n  save(background) {\r\n    const image = new Image();\r\n\r\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\r\n\r\n    const tab = window.open('', '_blank');\r\n\r\n    setTimeout(() => {\r\n      tab.document.write(image.outerHTML);\r\n    }, 250);\r\n  }\r\n\r\n  render() {\r\n    return (\r\n      <>\r\n        <plus-center>\r\n          <plus-signature id=\"signature3\" background-color=\"lightgray\"></plus-signature>\r\n        </plus-center>\r\n        <br />\r\n        <plus-center>\r\n          <button onClick={() => this.save(true)}>\r\n            Save With Background\r\n          </button>\r\n          &nbsp; &nbsp;\r\n          <button onClick={() => this.save(false)}>\r\n            Save Without Background\r\n          </button>\r\n        </plus-center>\r\n      </>\r\n    )\r\n  }\r\n}"
       },
       {
         "key": "javascript:template",
@@ -11003,7 +11014,7 @@ export const examples: any[] = [
       {
         "key": "javascript:script",
         "type": "js",
-        "content": "const save = (background) => {\r\n  const image = new Image();\r\n\r\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\r\n\r\n  const tab = window.open('', '_blank');\r\n\r\n  tab.onload = () => {\r\n    tab.document.write(image.outerHTML);\r\n  }\r\n}\r\nsave1.addEventListener('click', () => save(true));\r\nsave2.addEventListener('click', () => save(false));"
+        "content": "const save = (background) => {\r\n  const image = new Image();\r\n\r\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\r\n\r\n  const tab = window.open('', '_blank');\r\n\r\n  setTimeout(() => {\r\n    tab.document.write(image.outerHTML);\r\n  }, 250);\r\n}\r\nsave1.addEventListener('click', () => save(true));\r\nsave2.addEventListener('click', () => save(false));"
       }
     ]
   },
@@ -11012,7 +11023,7 @@ export const examples: any[] = [
     "component": "signature",
     "example": "save",
     "output": {
-      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureSave = () => {\n  const save = (background) => {\n    const image = new Image();\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <Center>\n        <Signature id=\"signature3\" backgroundColor=\"lightgray\"></Signature>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => save(true)}>Save With Background</button>\n        &nbsp; &nbsp;\n        <button onClick={() => save(false)}>Save Without Background</button>\n      </Center>\n    </>\n  );\n};\nexport default SignatureSave;\n"
+      "script": "import { Center, Signature } from '@htmlplus/react';\nconst SignatureSave = () => {\n  const save = (background) => {\n    const image = new Image();\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\n    const tab = window.open('', '_blank');\n    setTimeout(() => {\n      tab.document.write(image.outerHTML);\n    }, 250);\n  };\n  return (\n    <>\n      <Center>\n        <Signature id=\"signature3\" backgroundColor=\"lightgray\"></Signature>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={() => save(true)}>Save With Background</button>\n        &nbsp; &nbsp;\n        <button onClick={() => save(false)}>Save Without Background</button>\n      </Center>\n    </>\n  );\n};\nexport default SignatureSave;\n"
     }
   },
   {
@@ -11020,7 +11031,7 @@ export const examples: any[] = [
     "component": "signature",
     "example": "save",
     "output": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureSave = () => {\n  const save = (background) => {\n    const image = new Image();\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\n    const tab = window.open('', '_blank');\n    tab.onload = () => {\n      tab.document.write(image.outerHTML);\n    };\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-signature\n          id=\"signature3\"\n          background-color=\"lightgray\"\n        ></plus-signature>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => save(true)}>Save With Background</button>\n        &nbsp; &nbsp;\n        <button onClick={() => save(false)}>Save Without Background</button>\n      </plus-center>\n    </>\n  );\n};\nexport default SignatureSave;\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nconst SignatureSave = () => {\n  const save = (background) => {\n    const image = new Image();\n    image.src = window.signature3.toDataURL('image/svg+xml', background);\n    const tab = window.open('', '_blank');\n    setTimeout(() => {\n      tab.document.write(image.outerHTML);\n    }, 250);\n  };\n  return (\n    <>\n      <plus-center>\n        <plus-signature\n          id=\"signature3\"\n          background-color=\"lightgray\"\n        ></plus-signature>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={() => save(true)}>Save With Background</button>\n        &nbsp; &nbsp;\n        <button onClick={() => save(false)}>Save Without Background</button>\n      </plus-center>\n    </>\n  );\n};\nexport default SignatureSave;\n"
     }
   },
   {
@@ -11028,7 +11039,7 @@ export const examples: any[] = [
     "component": "signature",
     "example": "save",
     "output": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nfunction save(background) {\n  const image = new Image();\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\n  const tab = window.open('', '_blank');\n  tab.onload = () => {\n    tab.document.write(image.outerHTML);\n  };\n}\n",
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nfunction save(background) {\n  const image = new Image();\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\n  const tab = window.open('', '_blank');\n  setTimeout(() => {\n    tab.document.write(image.outerHTML);\n  }, 250);\n}\n",
       "template": "<plus-center>\n  <plus-signature id=\"signature3\" background-color=\"lightgray\"></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click=\"{() => save(true)}\">Save With Background</button>\n  &nbsp; &nbsp;\n  <button on:click=\"{() => save(false)}\">Save Without Background</button>\n</plus-center>\n"
     }
   },
@@ -11037,7 +11048,7 @@ export const examples: any[] = [
     "component": "signature",
     "example": "save",
     "output": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nfunction save(background) {\n  const image = new Image();\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\n  const tab = window.open('', '_blank');\n  tab.onload = () => {\n    tab.document.write(image.outerHTML);\n  };\n}\n",
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/signature.js';\nfunction save(background) {\n  const image = new Image();\n  image.src = window.signature3.toDataURL('image/svg+xml', background);\n  const tab = window.open('', '_blank');\n  setTimeout(() => {\n    tab.document.write(image.outerHTML);\n  }, 250);\n}\n",
       "template": "<plus-center>\n  <plus-signature id=\"signature3\" background-color=\"lightgray\"></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button @click=\"save(true)\">Save With Background</button>\n  &nbsp; &nbsp;\n  <button @click=\"save(false)\">Save Without Background</button>\n</plus-center>\n"
     }
   },
@@ -12017,81 +12028,6 @@ export const examples: any[] = [
   {
     "plugin": "angular",
     "component": "switch",
-    "example": "3d",
-    "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/switch.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n",
-      "template": "<div class=\"center\">\n  <plus-switch checked></plus-switch>\n</div>\n"
-    }
-  },
-  {
-    "plugin": "javascript",
-    "component": "switch",
-    "example": "3d",
-    "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/switch.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n",
-      "template": "<div class=\"center\">\n  <plus-switch checked></plus-switch>\n</div>\n"
-    }
-  },
-  {
-    "plugin": "prepare",
-    "component": "switch",
-    "example": "3d",
-    "output": [
-      {
-        "key": "style",
-        "type": "css",
-        "content": ".center {\r\n  text-align: center;\r\n}\r\n\r\nplus-switch {\r\n  --width: 10rem;\r\n  --height: 5rem;\r\n  width: calc(var(--width) * 1.25);\r\n  height: calc(var(--height) * 1.25);\r\n  overflow: visible;\r\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\r\n  perspective: 32em;\r\n  border-radius: var(--height);\r\n}\r\n\r\nplus-switch::part(root) {\r\n  width: calc(var(--width) * 1.25);\r\n  height: calc(var(--height) * 1.25);\r\n  background: transparent;\r\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\r\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0, 0.625rem 0.625rem 0 -0.25rem #e0e0e0, 0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%), inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%), inset 0.75rem 0.75rem #dfdfdf, inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%), inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\r\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\r\n  transform-style: preserve-3d;\r\n}\r\n\r\nplus-switch::part(handle) {\r\n  width: var(--height);\r\n  height: var(--height);\r\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65% 50% no-repeat, radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%) 50%/200%;\r\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg) rotatex(-90deg) translatey(-75%) rotate(45deg);\r\n  filter: Grayscale(var(--grayscale));\r\n}\r\n\r\nplus-switch[aria-checked='false'] {\r\n  --grayscale: 1;\r\n  --translate: calc(100% + var(--width) * -0.75);\r\n}\r\n\r\nplus-switch[aria-checked='true'] {\r\n  --grayscale: 0;\r\n  --translate: calc(100% + var(--width) * -0.15);\r\n}"
-      },
-      {
-        "key": "template",
-        "type": "html",
-        "content": "<div class=\"center\">\r\n  <plus-switch checked></plus-switch>\r\n</div>"
-      }
-    ]
-  },
-  {
-    "plugin": "react-dedicated",
-    "component": "switch",
-    "example": "3d",
-    "output": {
-      "script": "import { Switch } from '@htmlplus/react';\nconst Switch3d = () => {\n  return (\n    <div className=\"center\">\n      <Switch checked></Switch>\n    </div>\n  );\n};\nexport default Switch3d;\n",
-      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n"
-    }
-  },
-  {
-    "plugin": "react-experimental",
-    "component": "switch",
-    "example": "3d",
-    "output": {
-      "script": "import '@htmlplus/core/switch.js';\nconst Switch3d = () => {\n  return (\n    <div className=\"center\">\n      <plus-switch checked></plus-switch>\n    </div>\n  );\n};\nexport default Switch3d;\n",
-      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n"
-    }
-  },
-  {
-    "plugin": "svelte",
-    "component": "switch",
-    "example": "3d",
-    "output": {
-      "script": "import '@htmlplus/core/switch.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n",
-      "template": "<div class=\"center\">\n  <plus-switch checked></plus-switch>\n</div>\n"
-    }
-  },
-  {
-    "plugin": "vue",
-    "component": "switch",
-    "example": "3d",
-    "output": {
-      "script": "import '@htmlplus/core/switch.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n",
-      "template": "<div class=\"center\">\n  <plus-switch checked></plus-switch>\n</div>\n"
-    }
-  },
-  {
-    "plugin": "angular",
-    "component": "switch",
     "example": "checked",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/switch.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
@@ -12472,6 +12408,81 @@ export const examples: any[] = [
       "script": "import '@htmlplus/core/switch.js';\nfunction onChange(event) {\n  window.alert(`Will be changed to ${event.target.checked ? 'On' : 'Off'}`);\n}\n",
       "style": ".center {\n  text-align: center;\n  padding: 2.5rem 0;\n}\n",
       "template": "<div class=\"center\">\n  <plus-switch @plus-change=\"onChange($event)\"></plus-switch>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "switch",
+    "example": "three-dimensional",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/switch.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n",
+      "template": "<div class=\"center\">\n  <plus-switch checked></plus-switch>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "switch",
+    "example": "three-dimensional",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/switch.js';\n",
+      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n",
+      "template": "<div class=\"center\">\n  <plus-switch checked></plus-switch>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "switch",
+    "example": "three-dimensional",
+    "output": [
+      {
+        "key": "style",
+        "type": "css",
+        "content": ".center {\r\n  text-align: center;\r\n}\r\n\r\nplus-switch {\r\n  --width: 10rem;\r\n  --height: 5rem;\r\n  width: calc(var(--width) * 1.25);\r\n  height: calc(var(--height) * 1.25);\r\n  overflow: visible;\r\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\r\n  perspective: 32em;\r\n  border-radius: var(--height);\r\n}\r\n\r\nplus-switch::part(root) {\r\n  width: calc(var(--width) * 1.25);\r\n  height: calc(var(--height) * 1.25);\r\n  background: transparent;\r\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\r\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0, 0.625rem 0.625rem 0 -0.25rem #e0e0e0, 0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%), inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%), inset 0.75rem 0.75rem #dfdfdf, inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%), inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\r\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\r\n  transform-style: preserve-3d;\r\n}\r\n\r\nplus-switch::part(handle) {\r\n  width: var(--height);\r\n  height: var(--height);\r\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65% 50% no-repeat, radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%) 50%/200%;\r\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg) rotatex(-90deg) translatey(-75%) rotate(45deg);\r\n  filter: Grayscale(var(--grayscale));\r\n}\r\n\r\nplus-switch[aria-checked='false'] {\r\n  --grayscale: 1;\r\n  --translate: calc(100% + var(--width) * -0.75);\r\n}\r\n\r\nplus-switch[aria-checked='true'] {\r\n  --grayscale: 0;\r\n  --translate: calc(100% + var(--width) * -0.15);\r\n}"
+      },
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<div class=\"center\">\r\n  <plus-switch checked></plus-switch>\r\n</div>"
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "switch",
+    "example": "three-dimensional",
+    "output": {
+      "script": "import { Switch } from '@htmlplus/react';\nconst SwitchThreeDimensional = () => {\n  return (\n    <div className=\"center\">\n      <Switch checked></Switch>\n    </div>\n  );\n};\nexport default SwitchThreeDimensional;\n",
+      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "switch",
+    "example": "three-dimensional",
+    "output": {
+      "script": "import '@htmlplus/core/switch.js';\nconst SwitchThreeDimensional = () => {\n  return (\n    <div className=\"center\">\n      <plus-switch checked></plus-switch>\n    </div>\n  );\n};\nexport default SwitchThreeDimensional;\n",
+      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "switch",
+    "example": "three-dimensional",
+    "output": {
+      "script": "import '@htmlplus/core/switch.js';\n",
+      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n",
+      "template": "<div class=\"center\">\n  <plus-switch checked></plus-switch>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "switch",
+    "example": "three-dimensional",
+    "output": {
+      "script": "import '@htmlplus/core/switch.js';\n",
+      "style": ".center {\n  text-align: center;\n}\n\nplus-switch {\n  --width: 10rem;\n  --height: 5rem;\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  overflow: visible;\n  perspective-origin: calc(50% + var(--width)) calc(50% - var(--width));\n  perspective: 32em;\n  border-radius: var(--height);\n}\n\nplus-switch::part(root) {\n  width: calc(var(--width) * 1.25);\n  height: calc(var(--height) * 1.25);\n  background: transparent;\n  border: solid calc(0.125 * var(--height)) #f0f0f0;\n  box-shadow: 0.5rem 0.875rem 0 -0.25rem #e0e0e0,\n    0.625rem 0.625rem 0 -0.25rem #e0e0e0,\n    0.5rem 0.875rem 0.625rem -0.125rem rgb(191 191 191 / 75%),\n    inset 0.125rem -0.125rem 0.5rem rgb(245 245 245 / 50%),\n    inset 0.75rem 0.75rem #dfdfdf,\n    inset 0.75rem 0.75rem 0.75rem rgb(191 191 191 / 85%),\n    inset 0 1rem 0.75rem rgb(191 191 191 / 65%);\n  transform: rotatex(90deg) rotate(22.5deg) rotatey(22.5deg);\n  transform-style: preserve-3d;\n}\n\nplus-switch::part(handle) {\n  width: var(--height);\n  height: var(--height);\n  background: radial-gradient(at 0 50%, #52a066, transparent 2.5rem) 0 50%/65%\n      50% no-repeat,\n    radial-gradient(at 50% 0%, #88d1a0 15%, #68b47d 35%, #66b47b, #77c28e 65%)\n      50%/200%;\n  transform: translate(var(--translate)) rotatey(-22.5deg) rotate(-22.5deg)\n    rotatex(-90deg) translatey(-75%) rotate(45deg);\n  filter: Grayscale(var(--grayscale));\n}\n\nplus-switch[aria-checked='false'] {\n  --grayscale: 1;\n  --translate: calc(100% + var(--width) * -0.75);\n}\n\nplus-switch[aria-checked='true'] {\n  --grayscale: 0;\n  --translate: calc(100% + var(--width) * -0.15);\n}\n",
+      "template": "<div class=\"center\">\n  <plus-switch checked></plus-switch>\n</div>\n"
     }
   },
   {

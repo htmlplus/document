@@ -12,7 +12,8 @@ setConfig({
   component: {
     'plus-divider': {
       property: {
-        width: 'xs'
+        // TODO: has conflict with examples
+        // width: 'xs'
       }
     }
   }
