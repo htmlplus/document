@@ -66,11 +66,11 @@ export const Sidebar = () => {
               )} */}
                 {key(item)}
                 {!!item.items?.length && <span className="nav-link-toggle" />}
-                {/* {item.stable && (
+                {item.stable && (
                   <code>
                     <small>Stable</small>
                   </code>
-                )} */}
+                )}
               </div>
             </Button>
             {!!item.items?.length && menu(item.items, [item, ...parents])}
