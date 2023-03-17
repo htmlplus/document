@@ -19,6 +19,7 @@ export const AspectRatioImage = dynamic(() => import('./AspectRatioImage'));
 export const AspectRatioMap = dynamic(() => import('./AspectRatioMap'));
 export const AspectRatioMore = dynamic(() => import('./AspectRatioMore'));
 export const AspectRatioVideo = dynamic(() => import('./AspectRatioVideo'));
+export const AvatarCustomSize = dynamic(() => import('./AvatarCustomSize'));
 export const AvatarDefault = dynamic(() => import('./AvatarDefault'));
 export const AvatarGroup = dynamic(() => import('./AvatarGroup'));
 export const AvatarGroupHoverable = dynamic(() => import('./AvatarGroupHoverable'));
