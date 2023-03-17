@@ -1174,9 +1174,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "default",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar></plus-avatar>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-avatar></plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1184,9 +1183,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "default",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar></plus-avatar>\n</div>\n"
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar></plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1195,14 +1193,9 @@ export const examples: any[] = [
     "example": "default",
     "output": [
       {
-        "key": "style",
-        "type": "css",
-        "content": ".center {\r\n  text-align: center;\r\n}"
-      },
-      {
         "key": "template",
         "type": "html",
-        "content": "<div class=\"center\">\r\n  <plus-avatar></plus-avatar>\r\n</div>"
+        "content": "<plus-center>\r\n  <plus-avatar></plus-avatar>\r\n</plus-center>"
       }
     ]
   },
@@ -1211,8 +1204,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "default",
     "output": {
-      "script": "import { Avatar } from '@htmlplus/react';\nconst AvatarDefault = () => {\n  return (\n    <div className=\"center\">\n      <Avatar></Avatar>\n    </div>\n  );\n};\nexport default AvatarDefault;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarDefault = () => {\n  return (\n    <Center>\n      <Avatar></Avatar>\n    </Center>\n  );\n};\nexport default AvatarDefault;\n"
     }
   },
   {
@@ -1220,8 +1212,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "default",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nconst AvatarDefault = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar></plus-avatar>\n    </div>\n  );\n};\nexport default AvatarDefault;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nconst AvatarDefault = () => {\n  return (\n    <plus-center>\n      <plus-avatar></plus-avatar>\n    </plus-center>\n  );\n};\nexport default AvatarDefault;\n"
     }
   },
   {
@@ -1229,9 +1220,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "default",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar></plus-avatar>\n</div>\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar></plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1239,9 +1229,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "default",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar></plus-avatar>\n</div>\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar></plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1249,9 +1238,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "group",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1259,9 +1247,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "group",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</div>\n"
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1270,14 +1257,9 @@ export const examples: any[] = [
     "example": "group",
     "output": [
       {
-        "key": "style",
-        "type": "css",
-        "content": ".center {\r\n  text-align: center;\r\n}"
-      },
-      {
         "key": "template",
         "type": "html",
-        "content": "<div class=\"center\">\r\n  <plus-avatar-group>\r\n    <plus-avatar>\r\n      <img src=\"https://picsum.photos/id/331/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar>\r\n      <img src=\"https://picsum.photos/id/334/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar>\r\n      <img src=\"https://picsum.photos/id/338/90/90\" />\r\n    </plus-avatar>\r\n  </plus-avatar-group>\r\n</div>"
+        "content": "<plus-center>\r\n  <plus-avatar-group>\r\n    <plus-avatar>\r\n      <img src=\"https://picsum.photos/id/331/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar>\r\n      <img src=\"https://picsum.photos/id/334/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar>\r\n      <img src=\"https://picsum.photos/id/338/90/90\" />\r\n    </plus-avatar>\r\n  </plus-avatar-group>\r\n</plus-center>"
       }
     ]
   },
@@ -1286,8 +1268,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "group",
     "output": {
-      "script": "import { Avatar } from '@htmlplus/react';\nconst AvatarGroup = () => {\n  return (\n    <div className=\"center\">\n      <Avatar.Group>\n        <Avatar>\n          <img src=\"https://picsum.photos/id/331/90/90\" />\n        </Avatar>\n        <Avatar>\n          <img src=\"https://picsum.photos/id/334/90/90\" />\n        </Avatar>\n        <Avatar>\n          <img src=\"https://picsum.photos/id/338/90/90\" />\n        </Avatar>\n      </Avatar.Group>\n    </div>\n  );\n};\nexport default AvatarGroup;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarGroup = () => {\n  return (\n    <Center>\n      <Avatar.Group>\n        <Avatar>\n          <img src=\"https://picsum.photos/id/331/90/90\" />\n        </Avatar>\n        <Avatar>\n          <img src=\"https://picsum.photos/id/334/90/90\" />\n        </Avatar>\n        <Avatar>\n          <img src=\"https://picsum.photos/id/338/90/90\" />\n        </Avatar>\n      </Avatar.Group>\n    </Center>\n  );\n};\nexport default AvatarGroup;\n"
     }
   },
   {
@@ -1295,8 +1276,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "group",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nconst AvatarGroup = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar-group>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/331/90/90\" />\n        </plus-avatar>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/334/90/90\" />\n        </plus-avatar>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/338/90/90\" />\n        </plus-avatar>\n      </plus-avatar-group>\n    </div>\n  );\n};\nexport default AvatarGroup;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nconst AvatarGroup = () => {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/331/90/90\" />\n        </plus-avatar>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/334/90/90\" />\n        </plus-avatar>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/338/90/90\" />\n        </plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n};\nexport default AvatarGroup;\n"
     }
   },
   {
@@ -1304,9 +1284,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "group",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</div>\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1314,84 +1293,136 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "group",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</div>\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
     "plugin": "angular",
     "component": "avatar",
-    "example": "hoverable",
+    "example": "group-hoverable",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\"> +2 </plus-avatar>\n  </plus-avatar-group>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\"> +2 </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
     "plugin": "javascript",
     "component": "avatar",
-    "example": "hoverable",
+    "example": "group-hoverable",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\"> +2 </plus-avatar>\n  </plus-avatar-group>\n</div>\n"
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\"> +2 </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
     "plugin": "prepare",
     "component": "avatar",
-    "example": "hoverable",
+    "example": "group-hoverable",
     "output": [
-      {
-        "key": "style",
-        "type": "css",
-        "content": ".center {\r\n  text-align: center;\r\n}"
-      },
       {
         "key": "template",
         "type": "html",
-        "content": "<div class=\"center\">\r\n  <plus-avatar-group stacked hoverable>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/548/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/628/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/660/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/669/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar shape=\"circle\">\r\n      +2\r\n    </plus-avatar>\r\n  </plus-avatar-group>\r\n</div>"
+        "content": "<plus-center>\r\n  <plus-avatar-group stacked hoverable>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/548/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/628/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/660/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/669/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar shape=\"circle\">\r\n      +2\r\n    </plus-avatar>\r\n  </plus-avatar-group>\r\n</plus-center>"
       }
     ]
   },
   {
     "plugin": "react-dedicated",
     "component": "avatar",
-    "example": "hoverable",
+    "example": "group-hoverable",
     "output": {
-      "script": "import { Avatar } from '@htmlplus/react';\nconst AvatarHoverable = () => {\n  return (\n    <div className=\"center\">\n      <Avatar.Group stacked hoverable>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/548/90/90\" />\n        </Avatar>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/628/90/90\" />\n        </Avatar>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/660/90/90\" />\n        </Avatar>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/669/90/90\" />\n        </Avatar>\n        <Avatar shape=\"circle\">+2</Avatar>\n      </Avatar.Group>\n    </div>\n  );\n};\nexport default AvatarHoverable;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarGroupHoverable = () => {\n  return (\n    <Center>\n      <Avatar.Group stacked hoverable>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/548/90/90\" />\n        </Avatar>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/628/90/90\" />\n        </Avatar>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/660/90/90\" />\n        </Avatar>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/669/90/90\" />\n        </Avatar>\n        <Avatar shape=\"circle\">+2</Avatar>\n      </Avatar.Group>\n    </Center>\n  );\n};\nexport default AvatarGroupHoverable;\n"
     }
   },
   {
     "plugin": "react-experimental",
     "component": "avatar",
-    "example": "hoverable",
+    "example": "group-hoverable",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nconst AvatarHoverable = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar-group stacked hoverable>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/548/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/628/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/660/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/669/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">+2</plus-avatar>\n      </plus-avatar-group>\n    </div>\n  );\n};\nexport default AvatarHoverable;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nconst AvatarGroupHoverable = () => {\n  return (\n    <plus-center>\n      <plus-avatar-group stacked hoverable>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/548/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/628/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/660/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/669/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">+2</plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n};\nexport default AvatarGroupHoverable;\n"
     }
   },
   {
     "plugin": "svelte",
     "component": "avatar",
-    "example": "hoverable",
+    "example": "group-hoverable",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\"> +2 </plus-avatar>\n  </plus-avatar-group>\n</div>\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\"> +2 </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
     "plugin": "vue",
     "component": "avatar",
-    "example": "hoverable",
+    "example": "group-hoverable",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\"> +2 </plus-avatar>\n  </plus-avatar-group>\n</div>\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\"> +2 </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "avatar",
+    "example": "group-stacked",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "avatar",
+    "example": "group-stacked",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "avatar",
+    "example": "group-stacked",
+    "output": [
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-center>\r\n  <plus-avatar-group stacked>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/331/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/334/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/338/90/90\" />\r\n    </plus-avatar>\r\n  </plus-avatar-group>\r\n</plus-center>"
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "avatar",
+    "example": "group-stacked",
+    "output": {
+      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarGroupStacked = () => {\n  return (\n    <Center>\n      <Avatar.Group stacked>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/331/90/90\" />\n        </Avatar>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/334/90/90\" />\n        </Avatar>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/338/90/90\" />\n        </Avatar>\n      </Avatar.Group>\n    </Center>\n  );\n};\nexport default AvatarGroupStacked;\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "avatar",
+    "example": "group-stacked",
+    "output": {
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nconst AvatarGroupStacked = () => {\n  return (\n    <plus-center>\n      <plus-avatar-group stacked>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/331/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/334/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/338/90/90\" />\n        </plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n};\nexport default AvatarGroupStacked;\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "avatar",
+    "example": "group-stacked",
+    "output": {
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "avatar",
+    "example": "group-stacked",
+    "output": {
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1399,9 +1430,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "icon",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar>\n    <plus-icon>user</plus-icon>\n  </plus-avatar>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon>user</plus-icon>\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1409,9 +1439,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "icon",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar>\n    <plus-icon>user</plus-icon>\n  </plus-avatar>\n</div>\n"
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+      "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon>user</plus-icon>\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1420,14 +1449,9 @@ export const examples: any[] = [
     "example": "icon",
     "output": [
       {
-        "key": "style",
-        "type": "css",
-        "content": ".center {\r\n  text-align: center;\r\n}"
-      },
-      {
         "key": "template",
         "type": "html",
-        "content": "<div class=\"center\">\r\n  <plus-avatar>\r\n    <plus-icon>user</plus-icon>\r\n  </plus-avatar>\r\n</div>"
+        "content": "<plus-center>\r\n  <plus-avatar>\r\n    <plus-icon>user</plus-icon>\r\n  </plus-avatar>\r\n</plus-center>"
       }
     ]
   },
@@ -1436,8 +1460,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "icon",
     "output": {
-      "script": "import { Avatar, Icon } from '@htmlplus/react';\nconst AvatarIcon = () => {\n  return (\n    <div className=\"center\">\n      <Avatar>\n        <Icon>user</Icon>\n      </Avatar>\n    </div>\n  );\n};\nexport default AvatarIcon;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import { Avatar, Center, Icon } from '@htmlplus/react';\nconst AvatarIcon = () => {\n  return (\n    <Center>\n      <Avatar>\n        <Icon>user</Icon>\n      </Avatar>\n    </Center>\n  );\n};\nexport default AvatarIcon;\n"
     }
   },
   {
@@ -1445,8 +1468,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "icon",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/icon.js';\nconst AvatarIcon = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar>\n        <plus-icon>user</plus-icon>\n      </plus-avatar>\n    </div>\n  );\n};\nexport default AvatarIcon;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst AvatarIcon = () => {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <plus-icon>user</plus-icon>\n      </plus-avatar>\n    </plus-center>\n  );\n};\nexport default AvatarIcon;\n"
     }
   },
   {
@@ -1454,9 +1476,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "icon",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar>\n    <plus-icon>user</plus-icon>\n  </plus-avatar>\n</div>\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon>user</plus-icon>\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1464,9 +1485,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "icon",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar>\n    <plus-icon>user</plus-icon>\n  </plus-avatar>\n</div>\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon>user</plus-icon>\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1474,9 +1494,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "image",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/65/90/90\" />\n  </plus-avatar>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/65/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1484,9 +1503,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "image",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/65/90/90\" />\n  </plus-avatar>\n</div>\n"
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/65/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1495,14 +1513,9 @@ export const examples: any[] = [
     "example": "image",
     "output": [
       {
-        "key": "style",
-        "type": "css",
-        "content": ".center {\r\n  text-align: center;\r\n}"
-      },
-      {
         "key": "template",
         "type": "html",
-        "content": "<div class=\"center\">\r\n  <plus-avatar>\r\n    <img src=\"https://picsum.photos/id/65/90/90\" />\r\n  </plus-avatar>\r\n</div>"
+        "content": "<plus-center>\r\n  <plus-avatar>\r\n    <img src=\"https://picsum.photos/id/65/90/90\" />\r\n  </plus-avatar>\r\n</plus-center>"
       }
     ]
   },
@@ -1511,8 +1524,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "image",
     "output": {
-      "script": "import { Avatar } from '@htmlplus/react';\nconst AvatarImage = () => {\n  return (\n    <div className=\"center\">\n      <Avatar>\n        <img src=\"https://picsum.photos/id/65/90/90\" />\n      </Avatar>\n    </div>\n  );\n};\nexport default AvatarImage;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarImage = () => {\n  return (\n    <Center>\n      <Avatar>\n        <img src=\"https://picsum.photos/id/65/90/90\" />\n      </Avatar>\n    </Center>\n  );\n};\nexport default AvatarImage;\n"
     }
   },
   {
@@ -1520,8 +1532,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "image",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nconst AvatarImage = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar>\n        <img src=\"https://picsum.photos/id/65/90/90\" />\n      </plus-avatar>\n    </div>\n  );\n};\nexport default AvatarImage;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nconst AvatarImage = () => {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <img src=\"https://picsum.photos/id/65/90/90\" />\n      </plus-avatar>\n    </plus-center>\n  );\n};\nexport default AvatarImage;\n"
     }
   },
   {
@@ -1529,9 +1540,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "image",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/65/90/90\" />\n  </plus-avatar>\n</div>\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/65/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1539,9 +1549,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "image",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/65/90/90\" />\n  </plus-avatar>\n</div>\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/65/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1549,9 +1558,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "link",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1559,9 +1567,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "link",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n</div>\n"
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1570,14 +1577,9 @@ export const examples: any[] = [
     "example": "link",
     "output": [
       {
-        "key": "style",
-        "type": "css",
-        "content": ".center {\r\n  text-align: center;\r\n}"
-      },
-      {
         "key": "template",
         "type": "html",
-        "content": "<div class=\"center\">\r\n  <plus-avatar>\r\n    <img src=\"https://picsum.photos/id/177/90/90\" />\r\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\r\n  </plus-avatar>\r\n</div>"
+        "content": "<plus-center>\r\n  <plus-avatar>\r\n    <img src=\"https://picsum.photos/id/177/90/90\" />\r\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\r\n  </plus-avatar>\r\n</plus-center>"
       }
     ]
   },
@@ -1586,8 +1588,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "link",
     "output": {
-      "script": "import { Avatar } from '@htmlplus/react';\nconst AvatarLink = () => {\n  return (\n    <div className=\"center\">\n      <Avatar>\n        <img src=\"https://picsum.photos/id/177/90/90\" />\n        <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n      </Avatar>\n    </div>\n  );\n};\nexport default AvatarLink;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarLink = () => {\n  return (\n    <Center>\n      <Avatar>\n        <img src=\"https://picsum.photos/id/177/90/90\" />\n        <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n      </Avatar>\n    </Center>\n  );\n};\nexport default AvatarLink;\n"
     }
   },
   {
@@ -1595,8 +1596,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "link",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nconst AvatarLink = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar>\n        <img src=\"https://picsum.photos/id/177/90/90\" />\n        <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n      </plus-avatar>\n    </div>\n  );\n};\nexport default AvatarLink;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nconst AvatarLink = () => {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <img src=\"https://picsum.photos/id/177/90/90\" />\n        <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n      </plus-avatar>\n    </plus-center>\n  );\n};\nexport default AvatarLink;\n"
     }
   },
   {
@@ -1604,9 +1604,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "link",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n</div>\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1614,9 +1613,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "link",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n</div>\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1624,9 +1622,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "shape",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar-group>\n    <plus-avatar shape=\"circle\">C</plus-avatar>\n    <plus-avatar shape=\"round\">R</plus-avatar>\n    <plus-avatar shape=\"tile\">T</plus-avatar>\n  </plus-avatar-group>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar shape=\"circle\">C</plus-avatar>\n    <plus-avatar shape=\"round\">R</plus-avatar>\n    <plus-avatar shape=\"tile\">T</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1634,9 +1631,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "shape",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar-group>\n    <plus-avatar shape=\"circle\">C</plus-avatar>\n    <plus-avatar shape=\"round\">R</plus-avatar>\n    <plus-avatar shape=\"tile\">T</plus-avatar>\n  </plus-avatar-group>\n</div>\n"
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar shape=\"circle\">C</plus-avatar>\n    <plus-avatar shape=\"round\">R</plus-avatar>\n    <plus-avatar shape=\"tile\">T</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1645,14 +1641,9 @@ export const examples: any[] = [
     "example": "shape",
     "output": [
       {
-        "key": "style",
-        "type": "css",
-        "content": ".center {\r\n  text-align: center;\r\n}"
-      },
-      {
         "key": "template",
         "type": "html",
-        "content": "<div class=\"center\">\r\n  <plus-avatar-group>\r\n    <plus-avatar shape=\"circle\">C</plus-avatar>\r\n    <plus-avatar shape=\"round\">R</plus-avatar>\r\n    <plus-avatar shape=\"tile\">T</plus-avatar>\r\n  </plus-avatar-group>\r\n</div>"
+        "content": "<plus-center>\r\n  <plus-avatar-group>\r\n    <plus-avatar shape=\"circle\">C</plus-avatar>\r\n    <plus-avatar shape=\"round\">R</plus-avatar>\r\n    <plus-avatar shape=\"tile\">T</plus-avatar>\r\n  </plus-avatar-group>\r\n</plus-center>"
       }
     ]
   },
@@ -1661,8 +1652,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "shape",
     "output": {
-      "script": "import { Avatar } from '@htmlplus/react';\nconst AvatarShape = () => {\n  return (\n    <div className=\"center\">\n      <Avatar.Group>\n        <Avatar shape=\"circle\">C</Avatar>\n        <Avatar shape=\"round\">R</Avatar>\n        <Avatar shape=\"tile\">T</Avatar>\n      </Avatar.Group>\n    </div>\n  );\n};\nexport default AvatarShape;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarShape = () => {\n  return (\n    <Center>\n      <Avatar.Group>\n        <Avatar shape=\"circle\">C</Avatar>\n        <Avatar shape=\"round\">R</Avatar>\n        <Avatar shape=\"tile\">T</Avatar>\n      </Avatar.Group>\n    </Center>\n  );\n};\nexport default AvatarShape;\n"
     }
   },
   {
@@ -1670,8 +1660,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "shape",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nconst AvatarShape = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar-group>\n        <plus-avatar shape=\"circle\">C</plus-avatar>\n        <plus-avatar shape=\"round\">R</plus-avatar>\n        <plus-avatar shape=\"tile\">T</plus-avatar>\n      </plus-avatar-group>\n    </div>\n  );\n};\nexport default AvatarShape;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nconst AvatarShape = () => {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar shape=\"circle\">C</plus-avatar>\n        <plus-avatar shape=\"round\">R</plus-avatar>\n        <plus-avatar shape=\"tile\">T</plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n};\nexport default AvatarShape;\n"
     }
   },
   {
@@ -1679,9 +1668,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "shape",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar-group>\n    <plus-avatar shape=\"circle\">C</plus-avatar>\n    <plus-avatar shape=\"round\">R</plus-avatar>\n    <plus-avatar shape=\"tile\">T</plus-avatar>\n  </plus-avatar-group>\n</div>\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar shape=\"circle\">C</plus-avatar>\n    <plus-avatar shape=\"round\">R</plus-avatar>\n    <plus-avatar shape=\"tile\">T</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1689,9 +1677,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "shape",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar-group>\n    <plus-avatar shape=\"circle\">C</plus-avatar>\n    <plus-avatar shape=\"round\">R</plus-avatar>\n    <plus-avatar shape=\"tile\">T</plus-avatar>\n  </plus-avatar-group>\n</div>\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar shape=\"circle\">C</plus-avatar>\n    <plus-avatar shape=\"round\">R</plus-avatar>\n    <plus-avatar shape=\"tile\">T</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1699,9 +1686,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "size",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar-group>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n  </plus-avatar-group>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"xxs\">xxs</plus-avatar>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n    <plus-avatar size=\"xxl\">xxl</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1709,9 +1695,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "size",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar-group>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n  </plus-avatar-group>\n</div>\n"
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"xxs\">xxs</plus-avatar>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n    <plus-avatar size=\"xxl\">xxl</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1720,14 +1705,9 @@ export const examples: any[] = [
     "example": "size",
     "output": [
       {
-        "key": "style",
-        "type": "css",
-        "content": ".center {\r\n  text-align: center;\r\n}"
-      },
-      {
         "key": "template",
         "type": "html",
-        "content": "<div class=\"center\">\r\n  <plus-avatar-group>\r\n    <plus-avatar size=\"xs\">xs</plus-avatar>\r\n    <plus-avatar size=\"sm\">sm</plus-avatar>\r\n    <plus-avatar size=\"md\">md</plus-avatar>\r\n    <plus-avatar size=\"lg\">lg</plus-avatar>\r\n    <plus-avatar size=\"xl\">xl</plus-avatar>\r\n  </plus-avatar-group>\r\n</div>"
+        "content": "<plus-center>\r\n  <plus-avatar-group>\r\n    <plus-avatar size=\"xxs\">xxs</plus-avatar>\r\n    <plus-avatar size=\"xs\">xs</plus-avatar>\r\n    <plus-avatar size=\"sm\">sm</plus-avatar>\r\n    <plus-avatar size=\"md\">md</plus-avatar>\r\n    <plus-avatar size=\"lg\">lg</plus-avatar>\r\n    <plus-avatar size=\"xl\">xl</plus-avatar>\r\n    <plus-avatar size=\"xxl\">xxl</plus-avatar>\r\n  </plus-avatar-group>\r\n</plus-center>"
       }
     ]
   },
@@ -1736,8 +1716,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "size",
     "output": {
-      "script": "import { Avatar } from '@htmlplus/react';\nconst AvatarSize = () => {\n  return (\n    <div className=\"center\">\n      <Avatar.Group>\n        <Avatar size=\"xs\">xs</Avatar>\n        <Avatar size=\"sm\">sm</Avatar>\n        <Avatar size=\"md\">md</Avatar>\n        <Avatar size=\"lg\">lg</Avatar>\n        <Avatar size=\"xl\">xl</Avatar>\n      </Avatar.Group>\n    </div>\n  );\n};\nexport default AvatarSize;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarSize = () => {\n  return (\n    <Center>\n      <Avatar.Group>\n        <Avatar size=\"xxs\">xxs</Avatar>\n        <Avatar size=\"xs\">xs</Avatar>\n        <Avatar size=\"sm\">sm</Avatar>\n        <Avatar size=\"md\">md</Avatar>\n        <Avatar size=\"lg\">lg</Avatar>\n        <Avatar size=\"xl\">xl</Avatar>\n        <Avatar size=\"xxl\">xxl</Avatar>\n      </Avatar.Group>\n    </Center>\n  );\n};\nexport default AvatarSize;\n"
     }
   },
   {
@@ -1745,8 +1724,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "size",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nconst AvatarSize = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar-group>\n        <plus-avatar size=\"xs\">xs</plus-avatar>\n        <plus-avatar size=\"sm\">sm</plus-avatar>\n        <plus-avatar size=\"md\">md</plus-avatar>\n        <plus-avatar size=\"lg\">lg</plus-avatar>\n        <plus-avatar size=\"xl\">xl</plus-avatar>\n      </plus-avatar-group>\n    </div>\n  );\n};\nexport default AvatarSize;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nconst AvatarSize = () => {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar size=\"xxs\">xxs</plus-avatar>\n        <plus-avatar size=\"xs\">xs</plus-avatar>\n        <plus-avatar size=\"sm\">sm</plus-avatar>\n        <plus-avatar size=\"md\">md</plus-avatar>\n        <plus-avatar size=\"lg\">lg</plus-avatar>\n        <plus-avatar size=\"xl\">xl</plus-avatar>\n        <plus-avatar size=\"xxl\">xxl</plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n};\nexport default AvatarSize;\n"
     }
   },
   {
@@ -1754,9 +1732,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "size",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar-group>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n  </plus-avatar-group>\n</div>\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"xxs\">xxs</plus-avatar>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n    <plus-avatar size=\"xxl\">xxl</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1764,84 +1741,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "size",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar-group>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n  </plus-avatar-group>\n</div>\n"
-    }
-  },
-  {
-    "plugin": "angular",
-    "component": "avatar",
-    "example": "stacked",
-    "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar-group stacked>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</div>\n"
-    }
-  },
-  {
-    "plugin": "javascript",
-    "component": "avatar",
-    "example": "stacked",
-    "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar-group stacked>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</div>\n"
-    }
-  },
-  {
-    "plugin": "prepare",
-    "component": "avatar",
-    "example": "stacked",
-    "output": [
-      {
-        "key": "style",
-        "type": "css",
-        "content": ".center {\r\n  text-align: center;\r\n}"
-      },
-      {
-        "key": "template",
-        "type": "html",
-        "content": "<div class=\"center\">\r\n  <plus-avatar-group stacked>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/331/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/334/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/338/90/90\" />\r\n    </plus-avatar>\r\n  </plus-avatar-group>\r\n</div>"
-      }
-    ]
-  },
-  {
-    "plugin": "react-dedicated",
-    "component": "avatar",
-    "example": "stacked",
-    "output": {
-      "script": "import { Avatar } from '@htmlplus/react';\nconst AvatarStacked = () => {\n  return (\n    <div className=\"center\">\n      <Avatar.Group stacked>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/331/90/90\" />\n        </Avatar>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/334/90/90\" />\n        </Avatar>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/338/90/90\" />\n        </Avatar>\n      </Avatar.Group>\n    </div>\n  );\n};\nexport default AvatarStacked;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
-    }
-  },
-  {
-    "plugin": "react-experimental",
-    "component": "avatar",
-    "example": "stacked",
-    "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nconst AvatarStacked = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar-group stacked>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/331/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/334/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/338/90/90\" />\n        </plus-avatar>\n      </plus-avatar-group>\n    </div>\n  );\n};\nexport default AvatarStacked;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
-    }
-  },
-  {
-    "plugin": "svelte",
-    "component": "avatar",
-    "example": "stacked",
-    "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar-group stacked>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</div>\n"
-    }
-  },
-  {
-    "plugin": "vue",
-    "component": "avatar",
-    "example": "stacked",
-    "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar-group stacked>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</div>\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"xxs\">xxs</plus-avatar>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n    <plus-avatar size=\"xxl\">xxl</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1849,9 +1750,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "svg",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1859,9 +1759,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "svg",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</div>\n"
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1870,14 +1769,9 @@ export const examples: any[] = [
     "example": "svg",
     "output": [
       {
-        "key": "style",
-        "type": "css",
-        "content": ".center {\r\n  text-align: center;\r\n}"
-      },
-      {
         "key": "template",
         "type": "html",
-        "content": "<div class=\"center\">\r\n  <plus-avatar>\r\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\"><path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path><circle cx=\"12\" cy=\"7\" r=\"4\"></circle><path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path></svg>\r\n  </plus-avatar>\r\n</div>"
+        "content": "<plus-center>\r\n  <plus-avatar>\r\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\"><path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path><circle cx=\"12\" cy=\"7\" r=\"4\"></circle><path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path></svg>\r\n  </plus-avatar>\r\n</plus-center>"
       }
     ]
   },
@@ -1886,8 +1780,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "svg",
     "output": {
-      "script": "import { Avatar } from '@htmlplus/react';\nconst AvatarSvg = () => {\n  return (\n    <div className=\"center\">\n      <Avatar>\n        <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n          <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n          <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n          <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n        </svg>\n      </Avatar>\n    </div>\n  );\n};\nexport default AvatarSvg;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarSvg = () => {\n  return (\n    <Center>\n      <Avatar>\n        <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n          <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n          <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n          <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n        </svg>\n      </Avatar>\n    </Center>\n  );\n};\nexport default AvatarSvg;\n"
     }
   },
   {
@@ -1895,8 +1788,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "svg",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nconst AvatarSvg = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar>\n        <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n          <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n          <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n          <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n        </svg>\n      </plus-avatar>\n    </div>\n  );\n};\nexport default AvatarSvg;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nconst AvatarSvg = () => {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n          <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n          <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n          <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n        </svg>\n      </plus-avatar>\n    </plus-center>\n  );\n};\nexport default AvatarSvg;\n"
     }
   },
   {
@@ -1904,9 +1796,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "svg",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</div>\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1914,9 +1805,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "svg",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</div>\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1924,9 +1814,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "text",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar>MA</plus-avatar>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-avatar>MA</plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1934,9 +1823,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "text",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar>MA</plus-avatar>\n</div>\n"
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar>MA</plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1945,14 +1833,9 @@ export const examples: any[] = [
     "example": "text",
     "output": [
       {
-        "key": "style",
-        "type": "css",
-        "content": ".center {\r\n  text-align: center;\r\n}"
-      },
-      {
         "key": "template",
         "type": "html",
-        "content": "<div class=\"center\">\r\n  <plus-avatar>MA</plus-avatar>\r\n</div>"
+        "content": "<plus-center>\r\n  <plus-avatar>MA</plus-avatar>\r\n</plus-center>"
       }
     ]
   },
@@ -1961,8 +1844,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "text",
     "output": {
-      "script": "import { Avatar } from '@htmlplus/react';\nconst AvatarText = () => {\n  return (\n    <div className=\"center\">\n      <Avatar>MA</Avatar>\n    </div>\n  );\n};\nexport default AvatarText;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarText = () => {\n  return (\n    <Center>\n      <Avatar>MA</Avatar>\n    </Center>\n  );\n};\nexport default AvatarText;\n"
     }
   },
   {
@@ -1970,8 +1852,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "text",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nconst AvatarText = () => {\n  return (\n    <div className=\"center\">\n      <plus-avatar>MA</plus-avatar>\n    </div>\n  );\n};\nexport default AvatarText;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nconst AvatarText = () => {\n  return (\n    <plus-center>\n      <plus-avatar>MA</plus-avatar>\n    </plus-center>\n  );\n};\nexport default AvatarText;\n"
     }
   },
   {
@@ -1979,9 +1860,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "text",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar>MA</plus-avatar>\n</div>\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar>MA</plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -1989,9 +1869,8 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "text",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-avatar>MA</plus-avatar>\n</div>\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
+      "template": "<plus-center>\n  <plus-avatar>MA</plus-avatar>\n</plus-center>\n"
     }
   },
   {

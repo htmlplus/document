@@ -2,12 +2,12 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Avatar } from '@htmlplus/react';
+import { Avatar, Center } from '@htmlplus/react';
 const AvatarText = () => {
   return (
-    <div className="center">
+    <Center>
       <Avatar>MA</Avatar>
-    </div>
+    </Center>
   );
 };
 
@@ -15,7 +15,6 @@ const AvatarTextExample = () => {
   return (
     <div className="ex-avatar-text">
       <AvatarText />
-      <style>{`.ex-avatar-text .center {  text-align: center;}`}</style>
     </div>
   )
 };

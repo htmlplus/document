@@ -2,14 +2,14 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Avatar, Icon } from '@htmlplus/react';
+import { Avatar, Center, Icon } from '@htmlplus/react';
 const AvatarIcon = () => {
   return (
-    <div className="center">
+    <Center>
       <Avatar>
         <Icon>user</Icon>
       </Avatar>
-    </div>
+    </Center>
   );
 };
 
@@ -17,7 +17,6 @@ const AvatarIconExample = () => {
   return (
     <div className="ex-avatar-icon">
       <AvatarIcon />
-      <style>{`.ex-avatar-icon .center {  text-align: center;}`}</style>
     </div>
   )
 };

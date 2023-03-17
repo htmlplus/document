@@ -2,10 +2,10 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Avatar } from '@htmlplus/react';
-const AvatarHoverable = () => {
+import { Avatar, Center } from '@htmlplus/react';
+const AvatarGroupHoverable = () => {
   return (
-    <div className="center">
+    <Center>
       <Avatar.Group stacked hoverable>
         <Avatar shape="circle">
           <img src="https://picsum.photos/id/548/90/90" />
@@ -21,17 +21,16 @@ const AvatarHoverable = () => {
         </Avatar>
         <Avatar shape="circle">+2</Avatar>
       </Avatar.Group>
-    </div>
+    </Center>
   );
 };
 
-const AvatarHoverableExample = () => {
+const AvatarGroupHoverableExample = () => {
   return (
-    <div className="ex-avatar-hoverable">
-      <AvatarHoverable />
-      <style>{`.ex-avatar-hoverable .center {  text-align: center;}`}</style>
+    <div className="ex-avatar-group-hoverable">
+      <AvatarGroupHoverable />
     </div>
   )
 };
 
-export default AvatarHoverableExample;
+export default AvatarGroupHoverableExample;
