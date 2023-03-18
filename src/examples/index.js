@@ -31,6 +31,7 @@ export const AvatarShape = dynamic(() => import('./AvatarShape'));
 export const AvatarSize = dynamic(() => import('./AvatarSize'));
 export const AvatarSvg = dynamic(() => import('./AvatarSvg'));
 export const AvatarText = dynamic(() => import('./AvatarText'));
+export const AvatarWildcardSize = dynamic(() => import('./AvatarWildcardSize'));
 export const BreadcrumbCustomExpander = dynamic(() => import('./BreadcrumbCustomExpander'));
 export const BreadcrumbCustomSeparator = dynamic(() => import('./BreadcrumbCustomSeparator'));
 export const BreadcrumbCustomized = dynamic(() => import('./BreadcrumbCustomized'));
