@@ -36,7 +36,7 @@ const AvatarSlotsExample = () => {
   return (
     <div className="ex-avatar-slots">
       <AvatarSlots />
-      <style>{`.ex-avatar-slots div {  background-color: gray;  color: white;  font-size: 10px;  padding: 0.25rem;  font-family: monospace;}.ex-avatar-slots plus-center {  gap: 8rem;}`}</style>
+      <style>{`.ex-avatar-slots plus-avatar > div {  background-color: gray;  color: white;  font-size: 10px;  padding: 0.25rem;  font-family: monospace;}.ex-avatar-slots plus-center {  gap: 8rem;}`}</style>
     </div>
   )
 };
