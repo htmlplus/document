@@ -1314,7 +1314,7 @@ export const examples: any[] = [
     "example": "group",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1323,7 +1323,7 @@ export const examples: any[] = [
     "example": "group",
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
-      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1334,7 +1334,7 @@ export const examples: any[] = [
       {
         "key": "template",
         "type": "html",
-        "content": "<plus-center>\r\n  <plus-avatar-group>\r\n    <plus-avatar>\r\n      <img src=\"https://picsum.photos/id/331/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar>\r\n      <img src=\"https://picsum.photos/id/334/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar>\r\n      <img src=\"https://picsum.photos/id/338/90/90\" />\r\n    </plus-avatar>\r\n  </plus-avatar-group>\r\n</plus-center>"
+        "content": "<plus-center>\r\n  <plus-avatar-group>\r\n    <plus-avatar></plus-avatar>\r\n    <plus-avatar></plus-avatar>\r\n    <plus-avatar></plus-avatar>\r\n  </plus-avatar-group>\r\n</plus-center>"
       }
     ]
   },
@@ -1343,7 +1343,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "group",
     "output": {
-      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarGroup = () => {\n  return (\n    <Center>\n      <Avatar.Group>\n        <Avatar>\n          <img src=\"https://picsum.photos/id/331/90/90\" />\n        </Avatar>\n        <Avatar>\n          <img src=\"https://picsum.photos/id/334/90/90\" />\n        </Avatar>\n        <Avatar>\n          <img src=\"https://picsum.photos/id/338/90/90\" />\n        </Avatar>\n      </Avatar.Group>\n    </Center>\n  );\n};\nexport default AvatarGroup;\n"
+      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarGroup = () => {\n  return (\n    <Center>\n      <Avatar.Group>\n        <Avatar></Avatar>\n        <Avatar></Avatar>\n        <Avatar></Avatar>\n      </Avatar.Group>\n    </Center>\n  );\n};\nexport default AvatarGroup;\n"
     }
   },
   {
@@ -1351,7 +1351,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "group",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nconst AvatarGroup = () => {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/331/90/90\" />\n        </plus-avatar>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/334/90/90\" />\n        </plus-avatar>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/338/90/90\" />\n        </plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n};\nexport default AvatarGroup;\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nconst AvatarGroup = () => {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar></plus-avatar>\n        <plus-avatar></plus-avatar>\n        <plus-avatar></plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n};\nexport default AvatarGroup;\n"
     }
   },
   {
@@ -1360,7 +1360,7 @@ export const examples: any[] = [
     "example": "group",
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n",
-      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1369,7 +1369,7 @@ export const examples: any[] = [
     "example": "group",
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n",
-      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1379,7 +1379,7 @@ export const examples: any[] = [
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
       "style": "plus-avatar-group {\n  --plus-avatar-group-gutter-stacked: -2rem;\n  --plus-avatar-group-gutter-unstacked: 2rem;\n}\n",
-      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>1</plus-avatar>\n    <plus-avatar>2</plus-avatar>\n    <plus-avatar>3</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n<br />\n<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar>1</plus-avatar>\n    <plus-avatar>2</plus-avatar>\n    <plus-avatar>3</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n<br />\n<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1389,7 +1389,7 @@ export const examples: any[] = [
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
       "style": "plus-avatar-group {\n  --plus-avatar-group-gutter-stacked: -2rem;\n  --plus-avatar-group-gutter-unstacked: 2rem;\n}\n",
-      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>1</plus-avatar>\n    <plus-avatar>2</plus-avatar>\n    <plus-avatar>3</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n<br />\n<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar>1</plus-avatar>\n    <plus-avatar>2</plus-avatar>\n    <plus-avatar>3</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n<br />\n<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1405,7 +1405,7 @@ export const examples: any[] = [
       {
         "key": "template",
         "type": "html",
-        "content": "<>\r\n  <plus-center>\r\n    <plus-avatar-group>\r\n      <plus-avatar>1</plus-avatar>\r\n      <plus-avatar>2</plus-avatar>\r\n      <plus-avatar>3</plus-avatar>\r\n    </plus-avatar-group>\r\n  </plus-center>\r\n  <br />\r\n  <plus-center>\r\n    <plus-avatar-group stacked>\r\n      <plus-avatar>1</plus-avatar>\r\n      <plus-avatar>2</plus-avatar>\r\n      <plus-avatar>3</plus-avatar>\r\n    </plus-avatar-group>\r\n  </plus-center>\r\n</>"
+        "content": "<>\r\n  <plus-center>\r\n    <plus-avatar-group>\r\n      <plus-avatar></plus-avatar>\r\n      <plus-avatar></plus-avatar>\r\n      <plus-avatar></plus-avatar>\r\n    </plus-avatar-group>\r\n  </plus-center>\r\n  <br />\r\n  <plus-center>\r\n    <plus-avatar-group stacked>\r\n      <plus-avatar></plus-avatar>\r\n      <plus-avatar></plus-avatar>\r\n      <plus-avatar></plus-avatar>\r\n    </plus-avatar-group>\r\n  </plus-center>\r\n</>"
       }
     ]
   },
@@ -1414,7 +1414,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "group-gutter",
     "output": {
-      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarGroupGutter = () => {\n  return (\n    <>\n      <Center>\n        <Avatar.Group>\n          <Avatar>1</Avatar>\n          <Avatar>2</Avatar>\n          <Avatar>3</Avatar>\n        </Avatar.Group>\n      </Center>\n      <br />\n      <Center>\n        <Avatar.Group stacked>\n          <Avatar>1</Avatar>\n          <Avatar>2</Avatar>\n          <Avatar>3</Avatar>\n        </Avatar.Group>\n      </Center>\n    </>\n  );\n};\nexport default AvatarGroupGutter;\n",
+      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarGroupGutter = () => {\n  return (\n    <>\n      <Center>\n        <Avatar.Group>\n          <Avatar></Avatar>\n          <Avatar></Avatar>\n          <Avatar></Avatar>\n        </Avatar.Group>\n      </Center>\n      <br />\n      <Center>\n        <Avatar.Group stacked>\n          <Avatar></Avatar>\n          <Avatar></Avatar>\n          <Avatar></Avatar>\n        </Avatar.Group>\n      </Center>\n    </>\n  );\n};\nexport default AvatarGroupGutter;\n",
       "style": "plus-avatar-group {\n  --plus-avatar-group-gutter-stacked: -2rem;\n  --plus-avatar-group-gutter-unstacked: 2rem;\n}\n"
     }
   },
@@ -1423,7 +1423,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "group-gutter",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nconst AvatarGroupGutter = () => {\n  return (\n    <>\n      <plus-center>\n        <plus-avatar-group>\n          <plus-avatar>1</plus-avatar>\n          <plus-avatar>2</plus-avatar>\n          <plus-avatar>3</plus-avatar>\n        </plus-avatar-group>\n      </plus-center>\n      <br />\n      <plus-center>\n        <plus-avatar-group stacked>\n          <plus-avatar>1</plus-avatar>\n          <plus-avatar>2</plus-avatar>\n          <plus-avatar>3</plus-avatar>\n        </plus-avatar-group>\n      </plus-center>\n    </>\n  );\n};\nexport default AvatarGroupGutter;\n",
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nconst AvatarGroupGutter = () => {\n  return (\n    <>\n      <plus-center>\n        <plus-avatar-group>\n          <plus-avatar></plus-avatar>\n          <plus-avatar></plus-avatar>\n          <plus-avatar></plus-avatar>\n        </plus-avatar-group>\n      </plus-center>\n      <br />\n      <plus-center>\n        <plus-avatar-group stacked>\n          <plus-avatar></plus-avatar>\n          <plus-avatar></plus-avatar>\n          <plus-avatar></plus-avatar>\n        </plus-avatar-group>\n      </plus-center>\n    </>\n  );\n};\nexport default AvatarGroupGutter;\n",
       "style": "plus-avatar-group {\n  --plus-avatar-group-gutter-stacked: -2rem;\n  --plus-avatar-group-gutter-unstacked: 2rem;\n}\n"
     }
   },
@@ -1434,7 +1434,7 @@ export const examples: any[] = [
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n",
       "style": "plus-avatar-group {\n  --plus-avatar-group-gutter-stacked: -2rem;\n  --plus-avatar-group-gutter-unstacked: 2rem;\n}\n",
-      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>1</plus-avatar>\n    <plus-avatar>2</plus-avatar>\n    <plus-avatar>3</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n<br />\n<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar>1</plus-avatar>\n    <plus-avatar>2</plus-avatar>\n    <plus-avatar>3</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n<br />\n<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1444,7 +1444,7 @@ export const examples: any[] = [
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n",
       "style": "plus-avatar-group {\n  --plus-avatar-group-gutter-stacked: -2rem;\n  --plus-avatar-group-gutter-unstacked: 2rem;\n}\n",
-      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>1</plus-avatar>\n    <plus-avatar>2</plus-avatar>\n    <plus-avatar>3</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n<br />\n<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar>1</plus-avatar>\n    <plus-avatar>2</plus-avatar>\n    <plus-avatar>3</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n<br />\n<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1453,7 +1453,7 @@ export const examples: any[] = [
     "example": "group-hoverable",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\"> +2 </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1462,7 +1462,7 @@ export const examples: any[] = [
     "example": "group-hoverable",
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
-      "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\"> +2 </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1473,7 +1473,7 @@ export const examples: any[] = [
       {
         "key": "template",
         "type": "html",
-        "content": "<plus-center>\r\n  <plus-avatar-group stacked hoverable>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/548/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/628/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/660/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/669/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar shape=\"circle\">\r\n      +2\r\n    </plus-avatar>\r\n  </plus-avatar-group>\r\n</plus-center>"
+        "content": "<plus-center>\r\n  <plus-avatar-group stacked hoverable>\r\n    <plus-avatar></plus-avatar>\r\n    <plus-avatar></plus-avatar>\r\n    <plus-avatar></plus-avatar>\r\n    <plus-avatar></plus-avatar>\r\n    <plus-avatar></plus-avatar>\r\n  </plus-avatar-group>\r\n</plus-center>"
       }
     ]
   },
@@ -1482,7 +1482,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "group-hoverable",
     "output": {
-      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarGroupHoverable = () => {\n  return (\n    <Center>\n      <Avatar.Group stacked hoverable>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/548/90/90\" />\n        </Avatar>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/628/90/90\" />\n        </Avatar>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/660/90/90\" />\n        </Avatar>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/669/90/90\" />\n        </Avatar>\n        <Avatar shape=\"circle\">+2</Avatar>\n      </Avatar.Group>\n    </Center>\n  );\n};\nexport default AvatarGroupHoverable;\n"
+      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarGroupHoverable = () => {\n  return (\n    <Center>\n      <Avatar.Group stacked hoverable>\n        <Avatar></Avatar>\n        <Avatar></Avatar>\n        <Avatar></Avatar>\n        <Avatar></Avatar>\n        <Avatar></Avatar>\n      </Avatar.Group>\n    </Center>\n  );\n};\nexport default AvatarGroupHoverable;\n"
     }
   },
   {
@@ -1490,7 +1490,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "group-hoverable",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nconst AvatarGroupHoverable = () => {\n  return (\n    <plus-center>\n      <plus-avatar-group stacked hoverable>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/548/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/628/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/660/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/669/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">+2</plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n};\nexport default AvatarGroupHoverable;\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nconst AvatarGroupHoverable = () => {\n  return (\n    <plus-center>\n      <plus-avatar-group stacked hoverable>\n        <plus-avatar></plus-avatar>\n        <plus-avatar></plus-avatar>\n        <plus-avatar></plus-avatar>\n        <plus-avatar></plus-avatar>\n        <plus-avatar></plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n};\nexport default AvatarGroupHoverable;\n"
     }
   },
   {
@@ -1499,7 +1499,7 @@ export const examples: any[] = [
     "example": "group-hoverable",
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n",
-      "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\"> +2 </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1508,7 +1508,7 @@ export const examples: any[] = [
     "example": "group-hoverable",
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n",
-      "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\"> +2 </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1517,7 +1517,7 @@ export const examples: any[] = [
     "example": "group-stacked",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1526,7 +1526,7 @@ export const examples: any[] = [
     "example": "group-stacked",
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
-      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1537,7 +1537,7 @@ export const examples: any[] = [
       {
         "key": "template",
         "type": "html",
-        "content": "<plus-center>\r\n  <plus-avatar-group stacked>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/331/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/334/90/90\" />\r\n    </plus-avatar>\r\n    <plus-avatar shape=\"circle\">\r\n      <img src=\"https://picsum.photos/id/338/90/90\" />\r\n    </plus-avatar>\r\n  </plus-avatar-group>\r\n</plus-center>"
+        "content": "<plus-center>\r\n  <plus-avatar-group stacked>\r\n    <plus-avatar></plus-avatar>\r\n    <plus-avatar></plus-avatar>\r\n    <plus-avatar></plus-avatar>\r\n  </plus-avatar-group>\r\n</plus-center>"
       }
     ]
   },
@@ -1546,7 +1546,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "group-stacked",
     "output": {
-      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarGroupStacked = () => {\n  return (\n    <Center>\n      <Avatar.Group stacked>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/331/90/90\" />\n        </Avatar>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/334/90/90\" />\n        </Avatar>\n        <Avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/338/90/90\" />\n        </Avatar>\n      </Avatar.Group>\n    </Center>\n  );\n};\nexport default AvatarGroupStacked;\n"
+      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarGroupStacked = () => {\n  return (\n    <Center>\n      <Avatar.Group stacked>\n        <Avatar></Avatar>\n        <Avatar></Avatar>\n        <Avatar></Avatar>\n      </Avatar.Group>\n    </Center>\n  );\n};\nexport default AvatarGroupStacked;\n"
     }
   },
   {
@@ -1554,7 +1554,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "group-stacked",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nconst AvatarGroupStacked = () => {\n  return (\n    <plus-center>\n      <plus-avatar-group stacked>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/331/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/334/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/338/90/90\" />\n        </plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n};\nexport default AvatarGroupStacked;\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nconst AvatarGroupStacked = () => {\n  return (\n    <plus-center>\n      <plus-avatar-group stacked>\n        <plus-avatar></plus-avatar>\n        <plus-avatar></plus-avatar>\n        <plus-avatar></plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n};\nexport default AvatarGroupStacked;\n"
     }
   },
   {
@@ -1563,7 +1563,7 @@ export const examples: any[] = [
     "example": "group-stacked",
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n",
-      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1572,7 +1572,7 @@ export const examples: any[] = [
     "example": "group-stacked",
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\n",
-      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/331/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/334/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/338/90/90\" />\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1581,7 +1581,7 @@ export const examples: any[] = [
     "example": "group-tooltip",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar shape=\"circle\">A</plus-avatar>\n    <plus-tooltip>Tooltip A</plus-tooltip>\n    <plus-avatar shape=\"circle\">B</plus-avatar>\n    <plus-tooltip>Tooltip B</plus-tooltip>\n    <plus-avatar shape=\"circle\">C</plus-avatar>\n    <plus-tooltip>Tooltip C</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1590,7 +1590,7 @@ export const examples: any[] = [
     "example": "group-tooltip",
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar-group.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tooltip.js';\n",
-      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar shape=\"circle\">A</plus-avatar>\n    <plus-tooltip>Tooltip A</plus-tooltip>\n    <plus-avatar shape=\"circle\">B</plus-avatar>\n    <plus-tooltip>Tooltip B</plus-tooltip>\n    <plus-avatar shape=\"circle\">C</plus-avatar>\n    <plus-tooltip>Tooltip C</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1601,7 +1601,7 @@ export const examples: any[] = [
       {
         "key": "template",
         "type": "html",
-        "content": "<plus-center>\r\n  <plus-avatar-group stacked>\r\n    <plus-avatar shape=\"circle\">A</plus-avatar>\r\n    <plus-tooltip>Tooltip A</plus-tooltip>\r\n    <plus-avatar shape=\"circle\">B</plus-avatar>\r\n    <plus-tooltip>Tooltip B</plus-tooltip>\r\n    <plus-avatar shape=\"circle\">C</plus-avatar>\r\n    <plus-tooltip>Tooltip C</plus-tooltip>\r\n  </plus-avatar-group>\r\n</plus-center>"
+        "content": "<plus-center>\r\n  <plus-avatar-group stacked>\r\n    <plus-avatar></plus-avatar>\r\n    <plus-tooltip>Tooltip</plus-tooltip>\r\n    <plus-avatar></plus-avatar>\r\n    <plus-tooltip>Tooltip</plus-tooltip>\r\n    <plus-avatar></plus-avatar>\r\n    <plus-tooltip>Tooltip</plus-tooltip>\r\n  </plus-avatar-group>\r\n</plus-center>"
       }
     ]
   },
@@ -1610,7 +1610,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "group-tooltip",
     "output": {
-      "script": "import { Avatar, Center, Tooltip } from '@htmlplus/react';\nconst AvatarGroupTooltip = () => {\n  return (\n    <Center>\n      <Avatar.Group stacked>\n        <Avatar shape=\"circle\">A</Avatar>\n        <Tooltip>Tooltip A</Tooltip>\n        <Avatar shape=\"circle\">B</Avatar>\n        <Tooltip>Tooltip B</Tooltip>\n        <Avatar shape=\"circle\">C</Avatar>\n        <Tooltip>Tooltip C</Tooltip>\n      </Avatar.Group>\n    </Center>\n  );\n};\nexport default AvatarGroupTooltip;\n"
+      "script": "import { Avatar, Center, Tooltip } from '@htmlplus/react';\nconst AvatarGroupTooltip = () => {\n  return (\n    <Center>\n      <Avatar.Group stacked>\n        <Avatar></Avatar>\n        <Tooltip>Tooltip</Tooltip>\n        <Avatar></Avatar>\n        <Tooltip>Tooltip</Tooltip>\n        <Avatar></Avatar>\n        <Tooltip>Tooltip</Tooltip>\n      </Avatar.Group>\n    </Center>\n  );\n};\nexport default AvatarGroupTooltip;\n"
     }
   },
   {
@@ -1618,7 +1618,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "group-tooltip",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\nconst AvatarGroupTooltip = () => {\n  return (\n    <plus-center>\n      <plus-avatar-group stacked>\n        <plus-avatar shape=\"circle\">A</plus-avatar>\n        <plus-tooltip>Tooltip A</plus-tooltip>\n        <plus-avatar shape=\"circle\">B</plus-avatar>\n        <plus-tooltip>Tooltip B</plus-tooltip>\n        <plus-avatar shape=\"circle\">C</plus-avatar>\n        <plus-tooltip>Tooltip C</plus-tooltip>\n      </plus-avatar-group>\n    </plus-center>\n  );\n};\nexport default AvatarGroupTooltip;\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\nconst AvatarGroupTooltip = () => {\n  return (\n    <plus-center>\n      <plus-avatar-group stacked>\n        <plus-avatar></plus-avatar>\n        <plus-tooltip>Tooltip</plus-tooltip>\n        <plus-avatar></plus-avatar>\n        <plus-tooltip>Tooltip</plus-tooltip>\n        <plus-avatar></plus-avatar>\n        <plus-tooltip>Tooltip</plus-tooltip>\n      </plus-avatar-group>\n    </plus-center>\n  );\n};\nexport default AvatarGroupTooltip;\n"
     }
   },
   {
@@ -1627,7 +1627,7 @@ export const examples: any[] = [
     "example": "group-tooltip",
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n",
-      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar shape=\"circle\">A</plus-avatar>\n    <plus-tooltip>Tooltip A</plus-tooltip>\n    <plus-avatar shape=\"circle\">B</plus-avatar>\n    <plus-tooltip>Tooltip B</plus-tooltip>\n    <plus-avatar shape=\"circle\">C</plus-avatar>\n    <plus-tooltip>Tooltip C</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -1636,7 +1636,7 @@ export const examples: any[] = [
     "example": "group-tooltip",
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/avatar-group.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n",
-      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar shape=\"circle\">A</plus-avatar>\n    <plus-tooltip>Tooltip A</plus-tooltip>\n    <plus-avatar shape=\"circle\">B</plus-avatar>\n    <plus-tooltip>Tooltip B</plus-tooltip>\n    <plus-avatar shape=\"circle\">C</plus-avatar>\n    <plus-tooltip>Tooltip C</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n    <plus-avatar></plus-avatar>\n    <plus-tooltip>Tooltip</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
     }
   },
   {
@@ -2179,7 +2179,7 @@ export const examples: any[] = [
     "example": "text",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-center>\n  <plus-avatar>MA</plus-avatar>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar>T</plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -2188,7 +2188,7 @@ export const examples: any[] = [
     "example": "text",
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
-      "template": "<plus-center>\n  <plus-avatar>MA</plus-avatar>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar>T</plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -2199,7 +2199,7 @@ export const examples: any[] = [
       {
         "key": "template",
         "type": "html",
-        "content": "<plus-center>\r\n  <plus-avatar>MA</plus-avatar>\r\n</plus-center>"
+        "content": "<plus-center>\r\n  <plus-avatar>T</plus-avatar>\r\n</plus-center>"
       }
     ]
   },
@@ -2208,7 +2208,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "text",
     "output": {
-      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarText = () => {\n  return (\n    <Center>\n      <Avatar>MA</Avatar>\n    </Center>\n  );\n};\nexport default AvatarText;\n"
+      "script": "import { Avatar, Center } from '@htmlplus/react';\nconst AvatarText = () => {\n  return (\n    <Center>\n      <Avatar>T</Avatar>\n    </Center>\n  );\n};\nexport default AvatarText;\n"
     }
   },
   {
@@ -2216,7 +2216,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "text",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nconst AvatarText = () => {\n  return (\n    <plus-center>\n      <plus-avatar>MA</plus-avatar>\n    </plus-center>\n  );\n};\nexport default AvatarText;\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nconst AvatarText = () => {\n  return (\n    <plus-center>\n      <plus-avatar>T</plus-avatar>\n    </plus-center>\n  );\n};\nexport default AvatarText;\n"
     }
   },
   {
@@ -2225,7 +2225,7 @@ export const examples: any[] = [
     "example": "text",
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
-      "template": "<plus-center>\n  <plus-avatar>MA</plus-avatar>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar>T</plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -2234,7 +2234,7 @@ export const examples: any[] = [
     "example": "text",
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
-      "template": "<plus-center>\n  <plus-avatar>MA</plus-avatar>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar>T</plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -2243,7 +2243,7 @@ export const examples: any[] = [
     "example": "tooltip",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-center>\n  <plus-avatar>AB</plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar></plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
     }
   },
   {
@@ -2252,7 +2252,7 @@ export const examples: any[] = [
     "example": "tooltip",
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/tooltip.js';\n",
-      "template": "<plus-center>\n  <plus-avatar>AB</plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar></plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
     }
   },
   {
@@ -2263,7 +2263,7 @@ export const examples: any[] = [
       {
         "key": "template",
         "type": "html",
-        "content": "<plus-center>\r\n  <plus-avatar>AB</plus-avatar>\r\n  <plus-tooltip>Tooltip</plus-tooltip>\r\n</plus-center>"
+        "content": "<plus-center>\r\n  <plus-avatar></plus-avatar>\r\n  <plus-tooltip>Tooltip</plus-tooltip>\r\n</plus-center>"
       }
     ]
   },
@@ -2272,7 +2272,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "tooltip",
     "output": {
-      "script": "import { Avatar, Center, Tooltip } from '@htmlplus/react';\nconst AvatarTooltip = () => {\n  return (\n    <Center>\n      <Avatar>AB</Avatar>\n      <Tooltip>Tooltip</Tooltip>\n    </Center>\n  );\n};\nexport default AvatarTooltip;\n"
+      "script": "import { Avatar, Center, Tooltip } from '@htmlplus/react';\nconst AvatarTooltip = () => {\n  return (\n    <Center>\n      <Avatar></Avatar>\n      <Tooltip>Tooltip</Tooltip>\n    </Center>\n  );\n};\nexport default AvatarTooltip;\n"
     }
   },
   {
@@ -2280,7 +2280,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "tooltip",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\nconst AvatarTooltip = () => {\n  return (\n    <plus-center>\n      <plus-avatar>AB</plus-avatar>\n      <plus-tooltip>Tooltip</plus-tooltip>\n    </plus-center>\n  );\n};\nexport default AvatarTooltip;\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\nconst AvatarTooltip = () => {\n  return (\n    <plus-center>\n      <plus-avatar></plus-avatar>\n      <plus-tooltip>Tooltip</plus-tooltip>\n    </plus-center>\n  );\n};\nexport default AvatarTooltip;\n"
     }
   },
   {
@@ -2289,7 +2289,7 @@ export const examples: any[] = [
     "example": "tooltip",
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n",
-      "template": "<plus-center>\n  <plus-avatar>AB</plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar></plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
     }
   },
   {
@@ -2298,7 +2298,7 @@ export const examples: any[] = [
     "example": "tooltip",
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/tooltip.js';\n",
-      "template": "<plus-center>\n  <plus-avatar>AB</plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar></plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
     }
   },
   {

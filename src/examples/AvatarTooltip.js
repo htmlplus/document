@@ -6,7 +6,7 @@ import { Avatar, Center, Tooltip } from '@htmlplus/react';
 const AvatarTooltip = () => {
   return (
     <Center>
-      <Avatar>AB</Avatar>
+      <Avatar></Avatar>
       <Tooltip>Tooltip</Tooltip>
     </Center>
   );
