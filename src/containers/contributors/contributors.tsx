@@ -1,10 +1,10 @@
-import { useEffect, useMemo, useState } from 'react';
+import { Fragment, useEffect, useMemo, useState } from 'react';
 
 import { useRouter } from 'next/router';
 
 import axios from 'axios';
 
-import { Avatar } from '@app/components';
+import { Avatar, Tooltip } from '@app/components';
 import { Toc } from '@app/containers';
 import { ROUTES, getPath } from '@app/utils';
 
@@ -73,10 +73,13 @@ export const Contributors = () => {
       <p>
         <Avatar.Group hoverable stacked>
           {contributors.reverse().map((contributor) => (
-            <Avatar key={contributor} shape="circle" size="sm">
-              <img src={getPath(ROUTES.CONTRIBUTOR, { contributor })} alt={`Contributor ${contributor}`} />
-              <a rel="noopener" href={getPath(ROUTES.CONTRIBUTOR_GITHUB, { contributor })} target="_blank"></a>
-            </Avatar>
+            <Fragment key={contributor}>
+              <Avatar shape="circle" size="sm">
+                <img src={getPath(ROUTES.CONTRIBUTOR, { contributor })} alt={`Contributor ${contributor}`} />
+                <a rel="noopener" href={getPath(ROUTES.CONTRIBUTOR_GITHUB, { contributor })} target="_blank"></a>
+              </Avatar>
+              <Tooltip>{contributor}</Tooltip>
+            </Fragment>
           ))}
         </Avatar.Group>
       </p>
