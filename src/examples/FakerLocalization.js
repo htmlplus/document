@@ -16,6 +16,15 @@ export const test = setConfig({
 });
 
 const FakerLocalization = () => {
+  setConfig({
+    component: {
+      'plus-faker': {
+        property: {
+          instance: faker
+        }
+      }
+    }
+  });
   return <Faker></Faker>;
 };
 
