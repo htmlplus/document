@@ -1,11 +1,12 @@
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-import { faker } from '@faker-js/faker/locale/ja';
-import { setConfig } from '@htmlplus/core/config.js';
-import { Faker } from '@htmlplus/react';
 
-export const test = setConfig({
+import { Faker } from '@htmlplus/react';
+import { setConfig } from '@htmlplus/core/config.js';
+import { faker } from '@faker-js/faker/locale/ja';
+
+setConfig({
   component: {
     'plus-faker': {
       property: {
@@ -16,22 +17,15 @@ export const test = setConfig({
 });
 
 const FakerLocalization = () => {
-  setConfig({
-    component: {
-      'plus-faker': {
-        property: {
-          instance: faker
-        }
-      }
-    }
-  });
   return <Faker></Faker>;
 };
 
-export const FakerLocalizationExample = () => {
+const FakerLocalizationExample = () => {
   return (
     <div className="ex-faker-localization">
       <FakerLocalization />
     </div>
-  );
+  )
 };
+
+export default FakerLocalizationExample;
