@@ -28,12 +28,10 @@ const FakerLocalization = () => {
   return <Faker></Faker>;
 };
 
-const FakerLocalizationExample = () => {
+export const FakerLocalizationExample = () => {
   return (
     <div className="ex-faker-localization">
       <FakerLocalization />
     </div>
   );
 };
-
-export default FakerLocalizationExample;
