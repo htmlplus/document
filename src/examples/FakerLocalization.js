@@ -1,12 +1,11 @@
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-
-import { Faker } from '@htmlplus/react';
-import { setConfig } from '@htmlplus/core/config.js';
 import { faker } from '@faker-js/faker/locale/ja';
+import { setConfig } from '@htmlplus/core/config.js';
+import { Faker } from '@htmlplus/react';
 
-setConfig({
+export const test = setConfig({
   component: {
     'plus-faker': {
       property: {
@@ -25,7 +24,7 @@ const FakerLocalizationExample = () => {
     <div className="ex-faker-localization">
       <FakerLocalization />
     </div>
-  )
+  );
 };
 
 export default FakerLocalizationExample;
