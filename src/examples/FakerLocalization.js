@@ -2,6 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
+import { useEffect, useState } from 'react';
 import { Faker } from '@htmlplus/react';
 import { setConfig } from '@htmlplus/core/config.js';
 import { faker } from '@faker-js/faker/locale/ja';
@@ -21,9 +22,11 @@ const FakerLocalization = () => {
 };
 
 const FakerLocalizationExample = () => {
+  const [ready, setReady] = useState(false);
+  useEffect(() => setReady(true), []);
   return (
     <div className="ex-faker-localization">
-      <FakerLocalization />
+      {ready && <FakerLocalization />}
     </div>
   )
 };

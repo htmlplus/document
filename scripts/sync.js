@@ -121,9 +121,17 @@ const scoped = (styles, className) => {
       script = script.split('export default ')[0].trim();
       script += '\n\n';
       script += `const ${name}Example = () => {\n`;
+      if (config) {
+        script += '  const [ready, setReady] = useState(false);\n';
+        script += '  useEffect(() => setReady(true), []);\n';
+      }
       script += '  return (\n';
       script += `    <div className="${className}${settings?.dock ? ' dock' : ''}">\n`;
-      script += `      <${name} />\n`;
+      if (config) {
+        script += `      {ready && <${name} />}\n`;
+      } else {
+        script += `      <${name} />\n`;
+      }
       script += style ? `      <style>{\`${style}\`}</style>\n` : '';
       script += '    </div>\n';
       script += '  )\n';
@@ -136,7 +144,9 @@ const scoped = (styles, className) => {
 
         const j = script.indexOf('\n', i);
 
-        script = [script.slice(0, j), config, script.slice(j)].join('\n');
+        const react = `import { useEffect, useState } from 'react';`;
+
+        script = [react, script.slice(0, j), config, script.slice(j)].join('\n');
       }
 
       lines.push(`export const ${name} = dynamic(() => import('./${name}'));`);
