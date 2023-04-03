@@ -17,8 +17,8 @@ export const Api = () => {
         <Button link="underline" to={getPath(ROUTES.API_DETAILS, { component, framework })}>
           here
         </Button>
-        &nbsp;to learn more about <b>Properties</b>, <b>Slots</b>, <b>Events</b>, <b>CSS Variables</b>, <b>CSS Parts</b>
-        , and <b>Methods</b>.
+        &nbsp;to learn more about the <b>Properties</b>, <b>Slots</b>, <b>Events</b>, <b>CSS Variables</b>,{' '}
+        <b>CSS Parts</b>, and <b>Methods</b>.
       </p>
     </>
   );

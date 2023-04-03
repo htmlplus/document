@@ -46,14 +46,24 @@ export const sidebar = (framework: string) => [
       .map((component) => ({
         stable: component.tags.some((tag: any) => tag.key == 'stable'),
         title: component.title,
-        url: getPath(ROUTES.COMPONENT_DETAILS, { framework, component: component.key })
+        url: getPath(ROUTES.COMPONENT_DETAILS, { framework, component: component.key }),
+        meta: {
+          title: component.title + ' component',
+          description: component.description,
+          url: getPath(ROUTES.COMPONENT_DETAILS, { framework, component: component.key })
+        }
       }))
   },
   {
     title: 'UI Components API',
     items: components.map((component) => ({
       title: component.title,
-      url: getPath(ROUTES.API_DETAILS, { framework, component: component.key })
+      url: getPath(ROUTES.API_DETAILS, { framework, component: component.key }),
+      meta: {
+        title: component.title + ' API',
+        description: component.description,
+        url: getPath(ROUTES.API_DETAILS, { framework, component: component.key })
+      }
     }))
   },
   {
