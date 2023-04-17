@@ -1,6 +1,5 @@
 export * from './api';
 export * from './browsers';
-export * from './checklist';
 export * from './contributors';
 export * from './example';
 export * from './examples';

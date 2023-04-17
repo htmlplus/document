@@ -160,6 +160,7 @@ pre {
 }
 
 .example {
+  line-height: initial;
   plus-tabs-panel:first-child {
     margin-top: 0.40625rem;
     border: solid 1px $color-main-lighten-3;

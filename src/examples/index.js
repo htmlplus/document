@@ -4,6 +4,14 @@
 
 import dynamic from 'next/dynamic';
 
+export const AccordionAdvanced = dynamic(() => import('./AccordionAdvanced'));
+export const AccordionCustomIcon = dynamic(() => import('./AccordionCustomIcon'));
+export const AccordionCustomized = dynamic(() => import('./AccordionCustomized'));
+export const AccordionDefault = dynamic(() => import('./AccordionDefault'));
+export const AccordionDisabled = dynamic(() => import('./AccordionDisabled'));
+export const AccordionOpen = dynamic(() => import('./AccordionOpen'));
+export const AccordionPersistent = dynamic(() => import('./AccordionPersistent'));
+export const AccordionPreventFromToggling = dynamic(() => import('./AccordionPreventFromToggling'));
 export const AnimationButton = dynamic(() => import('./AnimationButton'));
 export const AnimationDefault = dynamic(() => import('./AnimationDefault'));
 export const AnimationDuration = dynamic(() => import('./AnimationDuration'));

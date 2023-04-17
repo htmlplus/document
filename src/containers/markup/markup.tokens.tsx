@@ -1,5 +1,5 @@
 import { Alert, Button, Code as CoreCode } from '@app/components';
-import { Api, Browsers, Checklist, Example, Examples, GlobalConfig, LastModified, Toc, Usage } from '@app/containers';
+import { Api, Browsers, Example, Examples, GlobalConfig, LastModified, Toc, Usage } from '@app/containers';
 
 const Heading = (props: any) => {
   const Tag = `h${props.level}` as any;
@@ -15,7 +15,6 @@ export const tokens = {
   Alert,
   Api,
   Browsers,
-  Checklist,
   Example,
   Examples,
   GlobalConfig,
