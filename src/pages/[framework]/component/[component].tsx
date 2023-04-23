@@ -74,13 +74,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
       {
         key: 'github',
         title: 'Github',
-        icon: 'github',
+        icon: 'brand-github',
         url: getPath(ROUTES.EXAMPLE_GITHUB_LINK, { component, framework, example: example.example })
       },
       {
         key: 'codesandbox',
         title: 'CodeSandbox',
-        icon: 'sandbox',
+        icon: 'brand-codesandbox',
         url: getPath(ROUTES.EXAMPLE_CODE_SANDBOX_LINK, { component, framework, example: example.example })
       }
     ];

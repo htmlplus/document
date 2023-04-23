@@ -61,14 +61,14 @@ export const Example = ({ component, example, isolate, links, rtl, tabs, title }
         {rtl && (
           <Grid.Item xs="auto">
             <Button icon text to="#" onClick={onDirection}>
-              <Icon size="lg" name="directions" />
+              <Icon size="lg" name="text-direction-rtl" />
             </Button>
             <Tooltip>Change Direction</Tooltip>
           </Grid.Item>
         )}
         <Grid.Item xs="auto">
           <Button icon text to="#" onClick={onReload}>
-            <Icon size="lg" name="reset" />
+            <Icon size="lg" name="reload" />
           </Button>
           <Tooltip>Reset</Tooltip>
         </Grid.Item>

@@ -173,12 +173,6 @@ pre {
   }
 }
 
-svg.logo {
-  width: 38px;
-  height: 38px;
-  fill: $color-primary;
-}
-
 .nav {
   flex-direction: column;
   flex-wrap: nowrap;
@@ -261,12 +255,6 @@ svg.logo {
   @extend .scrollbar;
   position: relative;
 
-  svg.logo {
-    width: 44px;
-    height: 44px;
-    fill: $color-primary;
-  }
-
   & plus-center > .button {
     font-size: 20px;
     text-decoration: none;
@@ -324,5 +312,14 @@ plus-divider {
     height: 110px;
     background-color: lightgray;
     margin: auto;
+  }
+}
+
+plus-symbol {
+  &::part(svg) {
+    stroke-width: 1.5;
+  }
+  &[name='htmlplus']::part(svg) {
+    fill: currentColor;
   }
 }
