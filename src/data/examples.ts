@@ -10496,9 +10496,9 @@ export const examples: any[] = [
     "component": "icon",
     "example": "color",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon color=\"#08DFC8\">home</plus-icon>\n  <plus-icon color=\"#FF5449\">home</plus-icon>\n  <plus-icon color=\"#5F9EE9\">home</plus-icon>\n  <plus-icon color=\"#FFC903\">home</plus-icon>\n  <plus-icon color=\"#9073C1\">home</plus-icon>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" color=\"#08DFC8\"></plus-icon>\n  <plus-icon name=\"home\" color=\"#FF5449\"></plus-icon>\n  <plus-icon name=\"home\" color=\"#5F9EE9\"></plus-icon>\n  <plus-icon name=\"home\" color=\"#FFC903\"></plus-icon>\n  <plus-icon name=\"home\" color=\"#9073C1\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10506,9 +10506,9 @@ export const examples: any[] = [
     "component": "icon",
     "example": "color",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon color=\"#08DFC8\">home</plus-icon>\n  <plus-icon color=\"#FF5449\">home</plus-icon>\n  <plus-icon color=\"#5F9EE9\">home</plus-icon>\n  <plus-icon color=\"#FFC903\">home</plus-icon>\n  <plus-icon color=\"#9073C1\">home</plus-icon>\n</div>\n"
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" color=\"#08DFC8\"></plus-icon>\n  <plus-icon name=\"home\" color=\"#FF5449\"></plus-icon>\n  <plus-icon name=\"home\" color=\"#5F9EE9\"></plus-icon>\n  <plus-icon name=\"home\" color=\"#FFC903\"></plus-icon>\n  <plus-icon name=\"home\" color=\"#9073C1\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10519,12 +10519,12 @@ export const examples: any[] = [
       {
         "key": "style",
         "type": "css",
-        "content": ".center {\r\n  text-align: center;\r\n}\r\nplus-icon {\r\n  margin: 0 1rem;\r\n}"
+        "content": "plus-icon {\r\n  margin: 0 1rem;\r\n}"
       },
       {
         "key": "template",
         "type": "html",
-        "content": "<div class=\"center\">\r\n  <plus-icon color=\"#08DFC8\">home</plus-icon>\r\n  <plus-icon color=\"#FF5449\">home</plus-icon>\r\n  <plus-icon color=\"#5F9EE9\">home</plus-icon>\r\n  <plus-icon color=\"#FFC903\">home</plus-icon>\r\n  <plus-icon color=\"#9073C1\">home</plus-icon>\r\n</div>"
+        "content": "<plus-center>\r\n  <plus-icon name=\"home\" color=\"#08DFC8\"></plus-icon>\r\n  <plus-icon name=\"home\" color=\"#FF5449\"></plus-icon>\r\n  <plus-icon name=\"home\" color=\"#5F9EE9\"></plus-icon>\r\n  <plus-icon name=\"home\" color=\"#FFC903\"></plus-icon>\r\n  <plus-icon name=\"home\" color=\"#9073C1\"></plus-icon>\r\n</plus-center>"
       }
     ]
   },
@@ -10533,8 +10533,8 @@ export const examples: any[] = [
     "component": "icon",
     "example": "color",
     "output": {
-      "script": "import { Icon } from '@htmlplus/react';\nconst IconColor = () => {\n  return (\n    <div className=\"center\">\n      <Icon color=\"#08DFC8\">home</Icon>\n      <Icon color=\"#FF5449\">home</Icon>\n      <Icon color=\"#5F9EE9\">home</Icon>\n      <Icon color=\"#FFC903\">home</Icon>\n      <Icon color=\"#9073C1\">home</Icon>\n    </div>\n  );\n};\nexport default IconColor;\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n"
+      "script": "import { Center, Icon } from '@htmlplus/react';\nconst IconColor = () => {\n  return (\n    <Center>\n      <Icon name=\"home\" color=\"#08DFC8\"></Icon>\n      <Icon name=\"home\" color=\"#FF5449\"></Icon>\n      <Icon name=\"home\" color=\"#5F9EE9\"></Icon>\n      <Icon name=\"home\" color=\"#FFC903\"></Icon>\n      <Icon name=\"home\" color=\"#9073C1\"></Icon>\n    </Center>\n  );\n};\nexport default IconColor;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n"
     }
   },
   {
@@ -10542,8 +10542,8 @@ export const examples: any[] = [
     "component": "icon",
     "example": "color",
     "output": {
-      "script": "import '@htmlplus/core/icon.js';\nconst IconColor = () => {\n  return (\n    <div className=\"center\">\n      <plus-icon color=\"#08DFC8\">home</plus-icon>\n      <plus-icon color=\"#FF5449\">home</plus-icon>\n      <plus-icon color=\"#5F9EE9\">home</plus-icon>\n      <plus-icon color=\"#FFC903\">home</plus-icon>\n      <plus-icon color=\"#9073C1\">home</plus-icon>\n    </div>\n  );\n};\nexport default IconColor;\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst IconColor = () => {\n  return (\n    <plus-center>\n      <plus-icon name=\"home\" color=\"#08DFC8\"></plus-icon>\n      <plus-icon name=\"home\" color=\"#FF5449\"></plus-icon>\n      <plus-icon name=\"home\" color=\"#5F9EE9\"></plus-icon>\n      <plus-icon name=\"home\" color=\"#FFC903\"></plus-icon>\n      <plus-icon name=\"home\" color=\"#9073C1\"></plus-icon>\n    </plus-center>\n  );\n};\nexport default IconColor;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n"
     }
   },
   {
@@ -10551,9 +10551,9 @@ export const examples: any[] = [
     "component": "icon",
     "example": "color",
     "output": {
-      "script": "import '@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon color=\"#08DFC8\">home</plus-icon>\n  <plus-icon color=\"#FF5449\">home</plus-icon>\n  <plus-icon color=\"#5F9EE9\">home</plus-icon>\n  <plus-icon color=\"#FFC903\">home</plus-icon>\n  <plus-icon color=\"#9073C1\">home</plus-icon>\n</div>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" color=\"#08DFC8\"></plus-icon>\n  <plus-icon name=\"home\" color=\"#FF5449\"></plus-icon>\n  <plus-icon name=\"home\" color=\"#5F9EE9\"></plus-icon>\n  <plus-icon name=\"home\" color=\"#FFC903\"></plus-icon>\n  <plus-icon name=\"home\" color=\"#9073C1\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10561,9 +10561,9 @@ export const examples: any[] = [
     "component": "icon",
     "example": "color",
     "output": {
-      "script": "import '@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon color=\"#08DFC8\">home</plus-icon>\n  <plus-icon color=\"#FF5449\">home</plus-icon>\n  <plus-icon color=\"#5F9EE9\">home</plus-icon>\n  <plus-icon color=\"#FFC903\">home</plus-icon>\n  <plus-icon color=\"#9073C1\">home</plus-icon>\n</div>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" color=\"#08DFC8\"></plus-icon>\n  <plus-icon name=\"home\" color=\"#FF5449\"></plus-icon>\n  <plus-icon name=\"home\" color=\"#5F9EE9\"></plus-icon>\n  <plus-icon name=\"home\" color=\"#FFC903\"></plus-icon>\n  <plus-icon name=\"home\" color=\"#9073C1\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10571,9 +10571,9 @@ export const examples: any[] = [
     "component": "icon",
     "example": "custom-color",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n[color='primary'] {\n  color: #ff5449;\n}\n[color='secondary'] {\n  color: #08dfc8;\n}\n[color='tertiary'] {\n  color: #5f9ee9;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon color=\"primary\">home</plus-icon>\n  <plus-icon color=\"secondary\">home</plus-icon>\n  <plus-icon color=\"tertiary\">home</plus-icon>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n[color='primary'] {\n  color: #ff5449;\n}\n[color='secondary'] {\n  color: #08dfc8;\n}\n[color='tertiary'] {\n  color: #5f9ee9;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" color=\"primary\"></plus-icon>\n  <plus-icon name=\"home\" color=\"secondary\"></plus-icon>\n  <plus-icon name=\"home\" color=\"tertiary\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10581,9 +10581,9 @@ export const examples: any[] = [
     "component": "icon",
     "example": "custom-color",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n[color='primary'] {\n  color: #ff5449;\n}\n[color='secondary'] {\n  color: #08dfc8;\n}\n[color='tertiary'] {\n  color: #5f9ee9;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon color=\"primary\">home</plus-icon>\n  <plus-icon color=\"secondary\">home</plus-icon>\n  <plus-icon color=\"tertiary\">home</plus-icon>\n</div>\n"
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n[color='primary'] {\n  color: #ff5449;\n}\n[color='secondary'] {\n  color: #08dfc8;\n}\n[color='tertiary'] {\n  color: #5f9ee9;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" color=\"primary\"></plus-icon>\n  <plus-icon name=\"home\" color=\"secondary\"></plus-icon>\n  <plus-icon name=\"home\" color=\"tertiary\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10594,12 +10594,12 @@ export const examples: any[] = [
       {
         "key": "style",
         "type": "css",
-        "content": ".center {\r\n  text-align: center;\r\n}\r\nplus-icon {\r\n  margin: 0 1rem;\r\n}\r\n[color=\"primary\"] {\r\n  color: #FF5449;\r\n}\r\n[color=\"secondary\"] {\r\n  color: #08DFC8;\r\n}\r\n[color=\"tertiary\"] {\r\n  color: #5F9EE9;\r\n}"
+        "content": "plus-icon {\r\n  margin: 0 1rem;\r\n}\r\n[color=\"primary\"] {\r\n  color: #FF5449;\r\n}\r\n[color=\"secondary\"] {\r\n  color: #08DFC8;\r\n}\r\n[color=\"tertiary\"] {\r\n  color: #5F9EE9;\r\n}"
       },
       {
         "key": "template",
         "type": "html",
-        "content": "<div class=\"center\">\r\n  <plus-icon color=\"primary\">home</plus-icon>\r\n  <plus-icon color=\"secondary\">home</plus-icon>\r\n  <plus-icon color=\"tertiary\">home</plus-icon>\r\n</div>"
+        "content": "<plus-center>\r\n  <plus-icon name=\"home\" color=\"primary\"></plus-icon>\r\n  <plus-icon name=\"home\" color=\"secondary\"></plus-icon>\r\n  <plus-icon name=\"home\" color=\"tertiary\"></plus-icon>\r\n</plus-center>"
       }
     ]
   },
@@ -10608,8 +10608,8 @@ export const examples: any[] = [
     "component": "icon",
     "example": "custom-color",
     "output": {
-      "script": "import { Icon } from '@htmlplus/react';\nconst IconCustomColor = () => {\n  return (\n    <div className=\"center\">\n      <Icon color=\"primary\">home</Icon>\n      <Icon color=\"secondary\">home</Icon>\n      <Icon color=\"tertiary\">home</Icon>\n    </div>\n  );\n};\nexport default IconCustomColor;\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n[color='primary'] {\n  color: #ff5449;\n}\n[color='secondary'] {\n  color: #08dfc8;\n}\n[color='tertiary'] {\n  color: #5f9ee9;\n}\n"
+      "script": "import { Center, Icon } from '@htmlplus/react';\nconst IconCustomColor = () => {\n  return (\n    <Center>\n      <Icon name=\"home\" color=\"primary\"></Icon>\n      <Icon name=\"home\" color=\"secondary\"></Icon>\n      <Icon name=\"home\" color=\"tertiary\"></Icon>\n    </Center>\n  );\n};\nexport default IconCustomColor;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n[color='primary'] {\n  color: #ff5449;\n}\n[color='secondary'] {\n  color: #08dfc8;\n}\n[color='tertiary'] {\n  color: #5f9ee9;\n}\n"
     }
   },
   {
@@ -10617,8 +10617,8 @@ export const examples: any[] = [
     "component": "icon",
     "example": "custom-color",
     "output": {
-      "script": "import '@htmlplus/core/icon.js';\nconst IconCustomColor = () => {\n  return (\n    <div className=\"center\">\n      <plus-icon color=\"primary\">home</plus-icon>\n      <plus-icon color=\"secondary\">home</plus-icon>\n      <plus-icon color=\"tertiary\">home</plus-icon>\n    </div>\n  );\n};\nexport default IconCustomColor;\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n[color='primary'] {\n  color: #ff5449;\n}\n[color='secondary'] {\n  color: #08dfc8;\n}\n[color='tertiary'] {\n  color: #5f9ee9;\n}\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst IconCustomColor = () => {\n  return (\n    <plus-center>\n      <plus-icon name=\"home\" color=\"primary\"></plus-icon>\n      <plus-icon name=\"home\" color=\"secondary\"></plus-icon>\n      <plus-icon name=\"home\" color=\"tertiary\"></plus-icon>\n    </plus-center>\n  );\n};\nexport default IconCustomColor;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n[color='primary'] {\n  color: #ff5449;\n}\n[color='secondary'] {\n  color: #08dfc8;\n}\n[color='tertiary'] {\n  color: #5f9ee9;\n}\n"
     }
   },
   {
@@ -10626,9 +10626,9 @@ export const examples: any[] = [
     "component": "icon",
     "example": "custom-color",
     "output": {
-      "script": "import '@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n[color='primary'] {\n  color: #ff5449;\n}\n[color='secondary'] {\n  color: #08dfc8;\n}\n[color='tertiary'] {\n  color: #5f9ee9;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon color=\"primary\">home</plus-icon>\n  <plus-icon color=\"secondary\">home</plus-icon>\n  <plus-icon color=\"tertiary\">home</plus-icon>\n</div>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n[color='primary'] {\n  color: #ff5449;\n}\n[color='secondary'] {\n  color: #08dfc8;\n}\n[color='tertiary'] {\n  color: #5f9ee9;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" color=\"primary\"></plus-icon>\n  <plus-icon name=\"home\" color=\"secondary\"></plus-icon>\n  <plus-icon name=\"home\" color=\"tertiary\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10636,9 +10636,9 @@ export const examples: any[] = [
     "component": "icon",
     "example": "custom-color",
     "output": {
-      "script": "import '@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n[color='primary'] {\n  color: #ff5449;\n}\n[color='secondary'] {\n  color: #08dfc8;\n}\n[color='tertiary'] {\n  color: #5f9ee9;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon color=\"primary\">home</plus-icon>\n  <plus-icon color=\"secondary\">home</plus-icon>\n  <plus-icon color=\"tertiary\">home</plus-icon>\n</div>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n[color='primary'] {\n  color: #ff5449;\n}\n[color='secondary'] {\n  color: #08dfc8;\n}\n[color='tertiary'] {\n  color: #5f9ee9;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" color=\"primary\"></plus-icon>\n  <plus-icon name=\"home\" color=\"secondary\"></plus-icon>\n  <plus-icon name=\"home\" color=\"tertiary\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10646,9 +10646,8 @@ export const examples: any[] = [
     "component": "icon",
     "example": "default",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon>home</plus-icon>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10656,9 +10655,8 @@ export const examples: any[] = [
     "component": "icon",
     "example": "default",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon>home</plus-icon>\n</div>\n"
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10667,14 +10665,9 @@ export const examples: any[] = [
     "example": "default",
     "output": [
       {
-        "key": "style",
-        "type": "css",
-        "content": ".center {\r\n  text-align: center;\r\n}"
-      },
-      {
         "key": "template",
         "type": "html",
-        "content": "<div class=\"center\">\r\n  <plus-icon>home</plus-icon>\r\n</div>"
+        "content": "<plus-center>\r\n  <plus-icon name=\"home\"></plus-icon>\r\n</plus-center>"
       }
     ]
   },
@@ -10683,8 +10676,7 @@ export const examples: any[] = [
     "component": "icon",
     "example": "default",
     "output": {
-      "script": "import { Icon } from '@htmlplus/react';\nconst IconDefault = () => {\n  return (\n    <div className=\"center\">\n      <Icon>home</Icon>\n    </div>\n  );\n};\nexport default IconDefault;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import { Center, Icon } from '@htmlplus/react';\nconst IconDefault = () => {\n  return (\n    <Center>\n      <Icon name=\"home\"></Icon>\n    </Center>\n  );\n};\nexport default IconDefault;\n"
     }
   },
   {
@@ -10692,8 +10684,7 @@ export const examples: any[] = [
     "component": "icon",
     "example": "default",
     "output": {
-      "script": "import '@htmlplus/core/icon.js';\nconst IconDefault = () => {\n  return (\n    <div className=\"center\">\n      <plus-icon>home</plus-icon>\n    </div>\n  );\n};\nexport default IconDefault;\n",
-      "style": ".center {\n  text-align: center;\n}\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst IconDefault = () => {\n  return (\n    <plus-center>\n      <plus-icon name=\"home\"></plus-icon>\n    </plus-center>\n  );\n};\nexport default IconDefault;\n"
     }
   },
   {
@@ -10701,9 +10692,8 @@ export const examples: any[] = [
     "component": "icon",
     "example": "default",
     "output": {
-      "script": "import '@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon>home</plus-icon>\n</div>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10711,9 +10701,8 @@ export const examples: any[] = [
     "component": "icon",
     "example": "default",
     "output": {
-      "script": "import '@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon>home</plus-icon>\n</div>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10721,9 +10710,9 @@ export const examples: any[] = [
     "component": "icon",
     "example": "flip",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon>home</plus-icon>\n  <plus-icon flip=\"horizontal\">home</plus-icon>\n  <plus-icon flip=\"vertical\">home</plus-icon>\n  <plus-icon flip=\"both\">home</plus-icon>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\"></plus-icon>\n  <plus-icon name=\"home\" flip=\"horizontal\"></plus-icon>\n  <plus-icon name=\"home\" flip=\"vertical\"></plus-icon>\n  <plus-icon name=\"home\" flip=\"both\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10731,9 +10720,9 @@ export const examples: any[] = [
     "component": "icon",
     "example": "flip",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon>home</plus-icon>\n  <plus-icon flip=\"horizontal\">home</plus-icon>\n  <plus-icon flip=\"vertical\">home</plus-icon>\n  <plus-icon flip=\"both\">home</plus-icon>\n</div>\n"
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\"></plus-icon>\n  <plus-icon name=\"home\" flip=\"horizontal\"></plus-icon>\n  <plus-icon name=\"home\" flip=\"vertical\"></plus-icon>\n  <plus-icon name=\"home\" flip=\"both\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10744,12 +10733,12 @@ export const examples: any[] = [
       {
         "key": "style",
         "type": "css",
-        "content": ".center {\r\n  text-align: center;\r\n}\r\nplus-icon {\r\n  margin: 0 1rem;\r\n}"
+        "content": "plus-icon {\r\n  margin: 0 1rem;\r\n}"
       },
       {
         "key": "template",
         "type": "html",
-        "content": "<div class=\"center\">\r\n  <plus-icon>home</plus-icon>\r\n  <plus-icon flip=\"horizontal\">home</plus-icon>\r\n  <plus-icon flip=\"vertical\">home</plus-icon>\r\n  <plus-icon flip=\"both\">home</plus-icon>\r\n</div>"
+        "content": "<plus-center>\r\n  <plus-icon name=\"home\"></plus-icon>\r\n  <plus-icon name=\"home\" flip=\"horizontal\"></plus-icon>\r\n  <plus-icon name=\"home\" flip=\"vertical\"></plus-icon>\r\n  <plus-icon name=\"home\" flip=\"both\"></plus-icon>\r\n</plus-center>"
       }
     ]
   },
@@ -10758,8 +10747,8 @@ export const examples: any[] = [
     "component": "icon",
     "example": "flip",
     "output": {
-      "script": "import { Icon } from '@htmlplus/react';\nconst IconFlip = () => {\n  return (\n    <div className=\"center\">\n      <Icon>home</Icon>\n      <Icon flip=\"horizontal\">home</Icon>\n      <Icon flip=\"vertical\">home</Icon>\n      <Icon flip=\"both\">home</Icon>\n    </div>\n  );\n};\nexport default IconFlip;\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n"
+      "script": "import { Center, Icon } from '@htmlplus/react';\nconst IconFlip = () => {\n  return (\n    <Center>\n      <Icon name=\"home\"></Icon>\n      <Icon name=\"home\" flip=\"horizontal\"></Icon>\n      <Icon name=\"home\" flip=\"vertical\"></Icon>\n      <Icon name=\"home\" flip=\"both\"></Icon>\n    </Center>\n  );\n};\nexport default IconFlip;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n"
     }
   },
   {
@@ -10767,8 +10756,8 @@ export const examples: any[] = [
     "component": "icon",
     "example": "flip",
     "output": {
-      "script": "import '@htmlplus/core/icon.js';\nconst IconFlip = () => {\n  return (\n    <div className=\"center\">\n      <plus-icon>home</plus-icon>\n      <plus-icon flip=\"horizontal\">home</plus-icon>\n      <plus-icon flip=\"vertical\">home</plus-icon>\n      <plus-icon flip=\"both\">home</plus-icon>\n    </div>\n  );\n};\nexport default IconFlip;\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst IconFlip = () => {\n  return (\n    <plus-center>\n      <plus-icon name=\"home\"></plus-icon>\n      <plus-icon name=\"home\" flip=\"horizontal\"></plus-icon>\n      <plus-icon name=\"home\" flip=\"vertical\"></plus-icon>\n      <plus-icon name=\"home\" flip=\"both\"></plus-icon>\n    </plus-center>\n  );\n};\nexport default IconFlip;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n"
     }
   },
   {
@@ -10776,9 +10765,9 @@ export const examples: any[] = [
     "component": "icon",
     "example": "flip",
     "output": {
-      "script": "import '@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon>home</plus-icon>\n  <plus-icon flip=\"horizontal\">home</plus-icon>\n  <plus-icon flip=\"vertical\">home</plus-icon>\n  <plus-icon flip=\"both\">home</plus-icon>\n</div>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\"></plus-icon>\n  <plus-icon name=\"home\" flip=\"horizontal\"></plus-icon>\n  <plus-icon name=\"home\" flip=\"vertical\"></plus-icon>\n  <plus-icon name=\"home\" flip=\"both\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10786,9 +10775,9 @@ export const examples: any[] = [
     "component": "icon",
     "example": "flip",
     "output": {
-      "script": "import '@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon>home</plus-icon>\n  <plus-icon flip=\"horizontal\">home</plus-icon>\n  <plus-icon flip=\"vertical\">home</plus-icon>\n  <plus-icon flip=\"both\">home</plus-icon>\n</div>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\"></plus-icon>\n  <plus-icon name=\"home\" flip=\"horizontal\"></plus-icon>\n  <plus-icon name=\"home\" flip=\"vertical\"></plus-icon>\n  <plus-icon name=\"home\" flip=\"both\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10796,9 +10785,9 @@ export const examples: any[] = [
     "component": "icon",
     "example": "rotate",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon rotate=\"0\">home</plus-icon>\n  <plus-icon rotate=\"90\">home</plus-icon>\n  <plus-icon rotate=\"180\">home</plus-icon>\n  <plus-icon rotate=\"270\">home</plus-icon>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" rotate=\"0\"></plus-icon>\n  <plus-icon name=\"home\" rotate=\"90\"></plus-icon>\n  <plus-icon name=\"home\" rotate=\"180\"></plus-icon>\n  <plus-icon name=\"home\" rotate=\"270\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10806,9 +10795,9 @@ export const examples: any[] = [
     "component": "icon",
     "example": "rotate",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon rotate=\"0\">home</plus-icon>\n  <plus-icon rotate=\"90\">home</plus-icon>\n  <plus-icon rotate=\"180\">home</plus-icon>\n  <plus-icon rotate=\"270\">home</plus-icon>\n</div>\n"
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" rotate=\"0\"></plus-icon>\n  <plus-icon name=\"home\" rotate=\"90\"></plus-icon>\n  <plus-icon name=\"home\" rotate=\"180\"></plus-icon>\n  <plus-icon name=\"home\" rotate=\"270\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10819,12 +10808,12 @@ export const examples: any[] = [
       {
         "key": "style",
         "type": "css",
-        "content": ".center {\r\n  text-align: center;\r\n}\r\nplus-icon {\r\n  margin: 0 1rem;\r\n}"
+        "content": "plus-icon {\r\n  margin: 0 1rem;\r\n}"
       },
       {
         "key": "template",
         "type": "html",
-        "content": "<div class=\"center\">\r\n  <plus-icon rotate=\"0\">home</plus-icon>\r\n  <plus-icon rotate=\"90\">home</plus-icon>\r\n  <plus-icon rotate=\"180\">home</plus-icon>\r\n  <plus-icon rotate=\"270\">home</plus-icon>\r\n</div>"
+        "content": "<plus-center>\r\n  <plus-icon name=\"home\" rotate=\"0\"></plus-icon>\r\n  <plus-icon name=\"home\" rotate=\"90\"></plus-icon>\r\n  <plus-icon name=\"home\" rotate=\"180\"></plus-icon>\r\n  <plus-icon name=\"home\" rotate=\"270\"></plus-icon>\r\n</plus-center>"
       }
     ]
   },
@@ -10833,8 +10822,8 @@ export const examples: any[] = [
     "component": "icon",
     "example": "rotate",
     "output": {
-      "script": "import { Icon } from '@htmlplus/react';\nconst IconRotate = () => {\n  return (\n    <div className=\"center\">\n      <Icon rotate=\"0\">home</Icon>\n      <Icon rotate=\"90\">home</Icon>\n      <Icon rotate=\"180\">home</Icon>\n      <Icon rotate=\"270\">home</Icon>\n    </div>\n  );\n};\nexport default IconRotate;\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n"
+      "script": "import { Center, Icon } from '@htmlplus/react';\nconst IconRotate = () => {\n  return (\n    <Center>\n      <Icon name=\"home\" rotate=\"0\"></Icon>\n      <Icon name=\"home\" rotate=\"90\"></Icon>\n      <Icon name=\"home\" rotate=\"180\"></Icon>\n      <Icon name=\"home\" rotate=\"270\"></Icon>\n    </Center>\n  );\n};\nexport default IconRotate;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n"
     }
   },
   {
@@ -10842,8 +10831,8 @@ export const examples: any[] = [
     "component": "icon",
     "example": "rotate",
     "output": {
-      "script": "import '@htmlplus/core/icon.js';\nconst IconRotate = () => {\n  return (\n    <div className=\"center\">\n      <plus-icon rotate=\"0\">home</plus-icon>\n      <plus-icon rotate=\"90\">home</plus-icon>\n      <plus-icon rotate=\"180\">home</plus-icon>\n      <plus-icon rotate=\"270\">home</plus-icon>\n    </div>\n  );\n};\nexport default IconRotate;\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst IconRotate = () => {\n  return (\n    <plus-center>\n      <plus-icon name=\"home\" rotate=\"0\"></plus-icon>\n      <plus-icon name=\"home\" rotate=\"90\"></plus-icon>\n      <plus-icon name=\"home\" rotate=\"180\"></plus-icon>\n      <plus-icon name=\"home\" rotate=\"270\"></plus-icon>\n    </plus-center>\n  );\n};\nexport default IconRotate;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n"
     }
   },
   {
@@ -10851,9 +10840,9 @@ export const examples: any[] = [
     "component": "icon",
     "example": "rotate",
     "output": {
-      "script": "import '@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon rotate=\"0\">home</plus-icon>\n  <plus-icon rotate=\"90\">home</plus-icon>\n  <plus-icon rotate=\"180\">home</plus-icon>\n  <plus-icon rotate=\"270\">home</plus-icon>\n</div>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" rotate=\"0\"></plus-icon>\n  <plus-icon name=\"home\" rotate=\"90\"></plus-icon>\n  <plus-icon name=\"home\" rotate=\"180\"></plus-icon>\n  <plus-icon name=\"home\" rotate=\"270\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10861,9 +10850,9 @@ export const examples: any[] = [
     "component": "icon",
     "example": "rotate",
     "output": {
-      "script": "import '@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon rotate=\"0\">home</plus-icon>\n  <plus-icon rotate=\"90\">home</plus-icon>\n  <plus-icon rotate=\"180\">home</plus-icon>\n  <plus-icon rotate=\"270\">home</plus-icon>\n</div>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" rotate=\"0\"></plus-icon>\n  <plus-icon name=\"home\" rotate=\"90\"></plus-icon>\n  <plus-icon name=\"home\" rotate=\"180\"></plus-icon>\n  <plus-icon name=\"home\" rotate=\"270\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10871,9 +10860,9 @@ export const examples: any[] = [
     "component": "icon",
     "example": "size",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n  vertical-align: middle;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon size=\"1x\">home</plus-icon>\n  <plus-icon size=\"2x\">home</plus-icon>\n  <plus-icon size=\"3x\">home</plus-icon>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n  vertical-align: middle;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" size=\"1x\"></plus-icon>\n  <plus-icon name=\"home\" size=\"2x\"></plus-icon>\n  <plus-icon name=\"home\" size=\"3x\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10881,9 +10870,9 @@ export const examples: any[] = [
     "component": "icon",
     "example": "size",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n  vertical-align: middle;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon size=\"1x\">home</plus-icon>\n  <plus-icon size=\"2x\">home</plus-icon>\n  <plus-icon size=\"3x\">home</plus-icon>\n</div>\n"
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n  vertical-align: middle;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" size=\"1x\"></plus-icon>\n  <plus-icon name=\"home\" size=\"2x\"></plus-icon>\n  <plus-icon name=\"home\" size=\"3x\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10894,12 +10883,12 @@ export const examples: any[] = [
       {
         "key": "style",
         "type": "css",
-        "content": ".center {\r\n  text-align: center;\r\n}\r\nplus-icon {\r\n  margin: 0 1rem;\r\n  vertical-align: middle;\r\n}"
+        "content": "plus-icon {\r\n  margin: 0 1rem;\r\n  vertical-align: middle;\r\n}"
       },
       {
         "key": "template",
         "type": "html",
-        "content": "<div class=\"center\">\r\n  <plus-icon size=\"1x\">home</plus-icon>\r\n  <plus-icon size=\"2x\">home</plus-icon>\r\n  <plus-icon size=\"3x\">home</plus-icon>\r\n</div>"
+        "content": "<plus-center>\r\n  <plus-icon name=\"home\" size=\"1x\"></plus-icon>\r\n  <plus-icon name=\"home\" size=\"2x\"></plus-icon>\r\n  <plus-icon name=\"home\" size=\"3x\"></plus-icon>\r\n</plus-center>"
       }
     ]
   },
@@ -10908,8 +10897,8 @@ export const examples: any[] = [
     "component": "icon",
     "example": "size",
     "output": {
-      "script": "import { Icon } from '@htmlplus/react';\nconst IconSize = () => {\n  return (\n    <div className=\"center\">\n      <Icon size=\"1x\">home</Icon>\n      <Icon size=\"2x\">home</Icon>\n      <Icon size=\"3x\">home</Icon>\n    </div>\n  );\n};\nexport default IconSize;\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n  vertical-align: middle;\n}\n"
+      "script": "import { Center, Icon } from '@htmlplus/react';\nconst IconSize = () => {\n  return (\n    <Center>\n      <Icon name=\"home\" size=\"1x\"></Icon>\n      <Icon name=\"home\" size=\"2x\"></Icon>\n      <Icon name=\"home\" size=\"3x\"></Icon>\n    </Center>\n  );\n};\nexport default IconSize;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n  vertical-align: middle;\n}\n"
     }
   },
   {
@@ -10917,8 +10906,8 @@ export const examples: any[] = [
     "component": "icon",
     "example": "size",
     "output": {
-      "script": "import '@htmlplus/core/icon.js';\nconst IconSize = () => {\n  return (\n    <div className=\"center\">\n      <plus-icon size=\"1x\">home</plus-icon>\n      <plus-icon size=\"2x\">home</plus-icon>\n      <plus-icon size=\"3x\">home</plus-icon>\n    </div>\n  );\n};\nexport default IconSize;\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n  vertical-align: middle;\n}\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst IconSize = () => {\n  return (\n    <plus-center>\n      <plus-icon name=\"home\" size=\"1x\"></plus-icon>\n      <plus-icon name=\"home\" size=\"2x\"></plus-icon>\n      <plus-icon name=\"home\" size=\"3x\"></plus-icon>\n    </plus-center>\n  );\n};\nexport default IconSize;\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n  vertical-align: middle;\n}\n"
     }
   },
   {
@@ -10926,9 +10915,9 @@ export const examples: any[] = [
     "component": "icon",
     "example": "size",
     "output": {
-      "script": "import '@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n  vertical-align: middle;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon size=\"1x\">home</plus-icon>\n  <plus-icon size=\"2x\">home</plus-icon>\n  <plus-icon size=\"3x\">home</plus-icon>\n</div>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n  vertical-align: middle;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" size=\"1x\"></plus-icon>\n  <plus-icon name=\"home\" size=\"2x\"></plus-icon>\n  <plus-icon name=\"home\" size=\"3x\"></plus-icon>\n</plus-center>\n"
     }
   },
   {
@@ -10936,9 +10925,9 @@ export const examples: any[] = [
     "component": "icon",
     "example": "size",
     "output": {
-      "script": "import '@htmlplus/core/icon.js';\n",
-      "style": ".center {\n  text-align: center;\n}\nplus-icon {\n  margin: 0 1rem;\n  vertical-align: middle;\n}\n",
-      "template": "<div class=\"center\">\n  <plus-icon size=\"1x\">home</plus-icon>\n  <plus-icon size=\"2x\">home</plus-icon>\n  <plus-icon size=\"3x\">home</plus-icon>\n</div>\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "plus-icon {\n  margin: 0 1rem;\n  vertical-align: middle;\n}\n",
+      "template": "<plus-center>\n  <plus-icon name=\"home\" size=\"1x\"></plus-icon>\n  <plus-icon name=\"home\" size=\"2x\"></plus-icon>\n  <plus-icon name=\"home\" size=\"3x\"></plus-icon>\n</plus-center>\n"
     }
   },
   {

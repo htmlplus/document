@@ -2,15 +2,15 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Icon } from '@htmlplus/react';
+import { Center, Icon } from '@htmlplus/react';
 const IconFlip = () => {
   return (
-    <div className="center">
-      <Icon>home</Icon>
-      <Icon flip="horizontal">home</Icon>
-      <Icon flip="vertical">home</Icon>
-      <Icon flip="both">home</Icon>
-    </div>
+    <Center>
+      <Icon name="home"></Icon>
+      <Icon name="home" flip="horizontal"></Icon>
+      <Icon name="home" flip="vertical"></Icon>
+      <Icon name="home" flip="both"></Icon>
+    </Center>
   );
 };
 
@@ -18,7 +18,7 @@ const IconFlipExample = () => {
   return (
     <div className="ex-icon-flip">
       <IconFlip />
-      <style>{`.ex-icon-flip .center {  text-align: center;}.ex-icon-flip plus-icon {  margin: 0 1rem;}`}</style>
+      <style>{`.ex-icon-flip plus-icon {  margin: 0 1rem;}`}</style>
     </div>
   )
 };
