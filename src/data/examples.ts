@@ -1276,7 +1276,7 @@ export const examples: any[] = [
     "component": "animation",
     "example": "register-a-custom-name",
     "output": {
-      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  asset: {\r\n    animation: {\r\n      'custom-pulse': [\r\n        { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n        { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n      ]\r\n    }\r\n  }\r\n});",
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
       "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
       "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"https://picsum.photos/id/64/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
@@ -1287,7 +1287,7 @@ export const examples: any[] = [
     "component": "animation",
     "example": "register-a-custom-name",
     "output": {
-      "config": "import { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
+      "config": "import { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  asset: {\r\n    animation: {\r\n      'custom-pulse': [\r\n        { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n        { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n      ]\r\n    }\r\n  }\r\n});",
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/animation.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\n",
       "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
       "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"https://picsum.photos/id/64/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
@@ -1306,7 +1306,7 @@ export const examples: any[] = [
       {
         "key": "config",
         "type": "js",
-        "content": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});"
+        "content": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  asset: {\r\n    animation: {\r\n      'custom-pulse': [\r\n        { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n        { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n      ]\r\n    }\r\n  }\r\n});"
       },
       {
         "key": "script",
@@ -1320,7 +1320,7 @@ export const examples: any[] = [
     "component": "animation",
     "example": "register-a-custom-name",
     "output": {
-      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  asset: {\r\n    animation: {\r\n      'custom-pulse': [\r\n        { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n        { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n      ]\r\n    }\r\n  }\r\n});",
       "script": "import { Animation, Avatar, Center } from '@htmlplus/react';\nconst AnimationRegisterACustomName = () => {\n  return (\n    <Center>\n      <Avatar shape=\"circle\">\n        <Animation\n          delay=\"0000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></Animation>\n        <Animation\n          delay=\"1000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></Animation>\n        <img src=\"https://picsum.photos/id/64/90/90\" />\n      </Avatar>\n    </Center>\n  );\n};\nexport default AnimationRegisterACustomName;\n",
       "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n"
     }
@@ -1330,7 +1330,7 @@ export const examples: any[] = [
     "component": "animation",
     "example": "register-a-custom-name",
     "output": {
-      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  asset: {\r\n    animation: {\r\n      'custom-pulse': [\r\n        { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n        { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n      ]\r\n    }\r\n  }\r\n});",
       "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nconst AnimationRegisterACustomName = () => {\n  return (\n    <plus-center>\n      <plus-avatar shape=\"circle\">\n        <plus-animation\n          delay=\"0000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></plus-animation>\n        <plus-animation\n          delay=\"1000\"\n          duration=\"2000\"\n          iterations=\"Infinity\"\n          name=\"custom-pulse\"\n          run\n        ></plus-animation>\n        <img src=\"https://picsum.photos/id/64/90/90\" />\n      </plus-avatar>\n    </plus-center>\n  );\n};\nexport default AnimationRegisterACustomName;\n",
       "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n"
     }
@@ -1340,7 +1340,7 @@ export const examples: any[] = [
     "component": "animation",
     "example": "register-a-custom-name",
     "output": {
-      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  asset: {\r\n    animation: {\r\n      'custom-pulse': [\r\n        { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n        { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n      ]\r\n    }\r\n  }\r\n});",
       "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
       "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
       "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"https://picsum.photos/id/64/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
@@ -1351,7 +1351,7 @@ export const examples: any[] = [
     "component": "animation",
     "example": "register-a-custom-name",
     "output": {
-      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  component: {\r\n    'plus-animation': {\r\n      asset: {\r\n        name: {\r\n          'custom-pulse': [\r\n            { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n            { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n          ]\r\n        }\r\n      }\r\n    }\r\n  }\r\n});",
+      "config": "import { setConfig } from '@htmlplus/core/config.js';\r\n\r\nsetConfig({\r\n  asset: {\r\n    animation: {\r\n      'custom-pulse': [\r\n        { offset: 0, opacity: '0.6', transform: 'scale(1.00)' },\r\n        { offset: 1, opacity: '0.0', transform: 'scale(1.60)' }\r\n      ]\r\n    }\r\n  }\r\n});",
       "script": "import '@htmlplus/core/animation.js';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\n",
       "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
       "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"https://picsum.photos/id/64/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
@@ -2261,7 +2261,7 @@ export const examples: any[] = [
     "example": "icon",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon>user</plus-icon>\n  </plus-avatar>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"user\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -2270,7 +2270,7 @@ export const examples: any[] = [
     "example": "icon",
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/avatar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
-      "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon>user</plus-icon>\n  </plus-avatar>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"user\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -2281,7 +2281,7 @@ export const examples: any[] = [
       {
         "key": "template",
         "type": "html",
-        "content": "<plus-center>\r\n  <plus-avatar>\r\n    <plus-icon>user</plus-icon>\r\n  </plus-avatar>\r\n</plus-center>"
+        "content": "<plus-center>\r\n  <plus-avatar>\r\n    <plus-icon name=\"user\"></plus-icon>\r\n  </plus-avatar>\r\n</plus-center>"
       }
     ]
   },
@@ -2290,7 +2290,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "icon",
     "output": {
-      "script": "import { Avatar, Center, Icon } from '@htmlplus/react';\nconst AvatarIcon = () => {\n  return (\n    <Center>\n      <Avatar>\n        <Icon>user</Icon>\n      </Avatar>\n    </Center>\n  );\n};\nexport default AvatarIcon;\n"
+      "script": "import { Avatar, Center, Icon } from '@htmlplus/react';\nconst AvatarIcon = () => {\n  return (\n    <Center>\n      <Avatar>\n        <Icon name=\"user\"></Icon>\n      </Avatar>\n    </Center>\n  );\n};\nexport default AvatarIcon;\n"
     }
   },
   {
@@ -2298,7 +2298,7 @@ export const examples: any[] = [
     "component": "avatar",
     "example": "icon",
     "output": {
-      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst AvatarIcon = () => {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <plus-icon>user</plus-icon>\n      </plus-avatar>\n    </plus-center>\n  );\n};\nexport default AvatarIcon;\n"
+      "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst AvatarIcon = () => {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <plus-icon name=\"user\"></plus-icon>\n      </plus-avatar>\n    </plus-center>\n  );\n};\nexport default AvatarIcon;\n"
     }
   },
   {
@@ -2307,7 +2307,7 @@ export const examples: any[] = [
     "example": "icon",
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
-      "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon>user</plus-icon>\n  </plus-avatar>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"user\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -2316,7 +2316,7 @@ export const examples: any[] = [
     "example": "icon",
     "output": {
       "script": "import '@htmlplus/core/avatar.js';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
-      "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon>user</plus-icon>\n  </plus-avatar>\n</plus-center>\n"
+      "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"user\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
     }
   },
   {
@@ -4228,7 +4228,7 @@ export const examples: any[] = [
     "example": "inline",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon size=\"2x\">menu</plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
+      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"menu\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
     }
   },
   {
@@ -4237,7 +4237,7 @@ export const examples: any[] = [
     "example": "inline",
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
-      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon size=\"2x\">menu</plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
+      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"menu\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
     }
   },
   {
@@ -4248,7 +4248,7 @@ export const examples: any[] = [
       {
         "key": "template",
         "type": "html",
-        "content": "<plus-center>\r\n    <button>\r\n    <plus-center inline>\r\n        <plus-icon size=\"2x\">menu</plus-icon>\r\n        &nbsp; Menu\r\n    </plus-center>\r\n    </button>\r\n</plus-center>"
+        "content": "<plus-center>\r\n    <button>\r\n    <plus-center inline>\r\n        <plus-icon name=\"menu\" size=\"2x\"></plus-icon>\r\n        &nbsp; Menu\r\n    </plus-center>\r\n    </button>\r\n</plus-center>"
       }
     ]
   },
@@ -4257,7 +4257,7 @@ export const examples: any[] = [
     "component": "center",
     "example": "inline",
     "output": {
-      "script": "import { Center, Icon } from '@htmlplus/react';\nconst CenterInline = () => {\n  return (\n    <Center>\n      <button>\n        <Center inline>\n          <Icon size=\"2x\">menu</Icon>\n          &nbsp; Menu\n        </Center>\n      </button>\n    </Center>\n  );\n};\nexport default CenterInline;\n"
+      "script": "import { Center, Icon } from '@htmlplus/react';\nconst CenterInline = () => {\n  return (\n    <Center>\n      <button>\n        <Center inline>\n          <Icon name=\"menu\" size=\"2x\"></Icon>\n          &nbsp; Menu\n        </Center>\n      </button>\n    </Center>\n  );\n};\nexport default CenterInline;\n"
     }
   },
   {
@@ -4265,7 +4265,7 @@ export const examples: any[] = [
     "component": "center",
     "example": "inline",
     "output": {
-      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst CenterInline = () => {\n  return (\n    <plus-center>\n      <button>\n        <plus-center inline>\n          <plus-icon size=\"2x\">menu</plus-icon>\n          &nbsp; Menu\n        </plus-center>\n      </button>\n    </plus-center>\n  );\n};\nexport default CenterInline;\n"
+      "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\nconst CenterInline = () => {\n  return (\n    <plus-center>\n      <button>\n        <plus-center inline>\n          <plus-icon name=\"menu\" size=\"2x\"></plus-icon>\n          &nbsp; Menu\n        </plus-center>\n      </button>\n    </plus-center>\n  );\n};\nexport default CenterInline;\n"
     }
   },
   {
@@ -4274,7 +4274,7 @@ export const examples: any[] = [
     "example": "inline",
     "output": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
-      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon size=\"2x\">menu</plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
+      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"menu\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
     }
   },
   {
@@ -4283,7 +4283,7 @@ export const examples: any[] = [
     "example": "inline",
     "output": {
       "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
-      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon size=\"2x\">menu</plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
+      "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"menu\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
     }
   },
   {

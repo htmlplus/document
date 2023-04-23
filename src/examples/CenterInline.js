@@ -8,7 +8,7 @@ const CenterInline = () => {
     <Center>
       <button>
         <Center inline>
-          <Icon size="2x">menu</Icon>
+          <Icon name="menu" size="2x"></Icon>
           &nbsp; Menu
         </Center>
       </button>
