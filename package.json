@@ -13,8 +13,8 @@
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
     "@floating-ui/dom": "^1.2.0",
-    "@htmlplus/core": "^0.8.8-next-04240005",
-    "@htmlplus/react": "^0.7.7-next-04240100",
+    "@htmlplus/core": "^0.8.8-next-04242150",
+    "@htmlplus/react": "^0.7.7-next-04242200",
     "@tabler/icons": "^2.16.0",
     "@trivago/prettier-plugin-sort-imports": "^4.0.0",
     "@types/node": "^18.11.9",
