@@ -25,7 +25,7 @@ export const Code = ({ children, copy = true, language }: CodeProps) => {
       <code className={`language-${language}`}>{content}</code>
       {copy && (
         <Button icon onClick={onClick}>
-          <Icon name="copy" />
+          <Icon name="app/copy" />
         </Button>
       )}
     </pre>

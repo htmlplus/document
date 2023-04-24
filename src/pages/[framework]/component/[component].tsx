@@ -68,19 +68,19 @@ export const getStaticProps: GetStaticProps = async (context) => {
       {
         key: 'download',
         title: 'Download',
-        icon: 'download',
+        icon: 'app/download',
         url: getPath(ROUTES.EXAMPLE_DOWNLOAD_LINK, { component, framework, example: example.example })
       },
       {
         key: 'github',
         title: 'Github',
-        icon: 'brand-github',
+        icon: 'app/github',
         url: getPath(ROUTES.EXAMPLE_GITHUB_LINK, { component, framework, example: example.example })
       },
       {
         key: 'codesandbox',
         title: 'CodeSandbox',
-        icon: 'brand-codesandbox',
+        icon: 'app/codesandbox',
         url: getPath(ROUTES.EXAMPLE_CODE_SANDBOX_LINK, { component, framework, example: example.example })
       }
     ];

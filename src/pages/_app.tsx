@@ -22,51 +22,42 @@ setConfig({
     },
     'plus-icon': {
       property: {
-        defaults: false,
         resolver(name: string, parser: any) {
-          // brand-codesandbox
-          // brand-github
-          // brand-instagram
-          // brand-linkedin
-          // brand-twitter
-          // brand-youtube
-          // chevron-left
-          // chevron-right
-          // copy
-          // download
-          // menu-2
-          // reload
-          // text-direction-rtl
+          if (!name.startsWith('app/'))
+            return import(`@htmlplus/core/icon/names/${name}.js`).then((module) => module.default);
 
-          if (name == 'htmlplus')
+          name = name.replace('app/', '');
+
+          if (name == 'htmlplus') {
             return Promise.resolve(`
               <svg viewBox="0 0 1000 1000">
                 <path d="M980.8,521.1L783.2,718.5c-12.2,12.2-32,12.2-44.2,0c-12.2-12.2-12.2-31.9,0-44.1L914.6,499L739,323.7c-12.2-12.2-12.2-31.9,0-44.1c12.2-12.2,32-12.2,44.2,0L980.8,477C993.1,489.2,993.1,508.9,980.8,521.1z M332.9,906.5c-9,15.7-28.9,21.1-44.5,12c-15.6-9-20.9-29.1-11.9-44.8L667.1,93.5c9-15.7,28.9-21.1,44.5-12c15.6,9.1,20.9,29.1,11.9,44.8L332.9,906.5z M261,718.5c-12.2,12.2-32,12.2-44.2,0L19.1,521.1C7,508.9,7,489.2,19.1,477l197.7-197.4c12.2-12.2,32-12.2,44.2,0c12.2,12.2,12.2,31.9,0,44.1L85.4,499L261,674.4C273.2,686.6,273.2,706.3,261,718.5z" />
               </svg>
             `);
+          }
 
-          name = name == 'menu' ? 'menu-2' : name;
+          const MAP = {
+            'codesandbox': 'brand-codesandbox',
+            'github': 'brand-github',
+            'twitter': 'brand-twitter',
+            'linkedin': 'brand-linkedin',
+            'instagram': 'brand-instagram',
+            'youtube': 'brand-youtube',
+            'copy': 'copy',
+            'text-direction-rtl': 'text-direction-rtl',
+            'reload': 'reload',
+            'chevron-left': 'chevron-left',
+            'chevron-right': 'chevron-right',
+            'htmlplus': 'htmlplus',
+            'menu': 'menu-2',
+            'download': 'download'
+          } as any;
 
-          return fetch(`https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`, {
-            mode: 'cors'
-          })
-            .then(async (response) => {
-              if (!response.ok) throw new Error();
+          name = MAP[name];
 
-              const text = await response.text();
+          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;
 
-              const svg = parser(text);
-
-              svg
-                .getAttributeNames()
-                .filter((key: string) => !['part', 'viewBox', 'xmlns'].includes(key))
-                .forEach((key: string) => {
-                  svg.removeAttribute(key);
-                });
-
-              return svg;
-            })
-            .catch(() => {});
+          return fetch(url).then((response) => response.text());
         }
       }
     }
