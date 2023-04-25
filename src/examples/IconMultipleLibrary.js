@@ -3,7 +3,7 @@
  **************************************************/
 
 import { useEffect, useState } from 'react';
-import { Center, Icon } from '@htmlplus/react';
+import { Icon, Stack } from '@htmlplus/react';
 import { setConfig } from '@htmlplus/core/config.js';
 
 setConfig({
@@ -31,11 +31,11 @@ setConfig({
 
 const IconMultipleLibrary = () => {
   return (
-    <Center>
+    <Stack gap="2rem">
       <Icon name="carbon/user"></Icon>
       <Icon name="lucide/user"></Icon>
       <Icon name="tabler/user"></Icon>
-    </Center>
+    </Stack>
   );
 };
 
@@ -45,7 +45,6 @@ const IconMultipleLibraryExample = () => {
   return (
     <div className="ex-icon-multiple-library">
       {ready && <IconMultipleLibrary />}
-      <style>{`.ex-icon-multiple-library plus-icon {  margin: 0 1rem;}`}</style>
     </div>
   )
 };

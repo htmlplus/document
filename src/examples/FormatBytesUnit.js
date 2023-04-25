@@ -2,10 +2,10 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Center, FormatBytes } from '@htmlplus/react';
+import { FormatBytes, Stack } from '@htmlplus/react';
 const FormatBytesUnit = () => {
   return (
-    <Center>
+    <Stack vertical>
       <FormatBytes unit="auto" value="1000"></FormatBytes>
       <FormatBytes unit="base" value="10000"></FormatBytes>
       <FormatBytes unit="kilo" value="100000"></FormatBytes>
@@ -13,7 +13,7 @@ const FormatBytesUnit = () => {
       <FormatBytes unit="kilo" value="10000000"></FormatBytes>
       <FormatBytes unit="kilo" value="100000000"></FormatBytes>
       <FormatBytes unit="kilo" value="1000000000"></FormatBytes>
-    </Center>
+    </Stack>
   );
 };
 
@@ -21,7 +21,6 @@ const FormatBytesUnitExample = () => {
   return (
     <div className="ex-format-bytes-unit">
       <FormatBytesUnit />
-      <style>{`.ex-format-bytes-unit plus-center {  flex-direction: column;}`}</style>
     </div>
   )
 };

@@ -2,10 +2,10 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Avatar, Center } from '@htmlplus/react';
+import { Avatar, Stack } from '@htmlplus/react';
 const AvatarSlots = () => {
   return (
-    <Center>
+    <Stack gap="8rem">
       <Avatar size="xxl">
         <div slot="bottom">bottom</div>
         <div slot="center">center</div>
@@ -28,7 +28,7 @@ const AvatarSlots = () => {
         <div slot="start-top">start-top</div>
         <div slot="top">top</div>
       </Avatar>
-    </Center>
+    </Stack>
   );
 };
 
@@ -36,7 +36,7 @@ const AvatarSlotsExample = () => {
   return (
     <div className="ex-avatar-slots">
       <AvatarSlots />
-      <style>{`.ex-avatar-slots plus-avatar > div {  background-color: gray;  color: white;  font-size: 10px;  padding: 0.25rem;  font-family: monospace;}.ex-avatar-slots plus-center {  gap: 8rem;}`}</style>
+      <style>{`.ex-avatar-slots plus-avatar > div {  background-color: gray;  color: white;  font-size: 10px;  padding: 0.125rem 0.25rem;  font-family: monospace;  line-height: 1;}`}</style>
     </div>
   )
 };

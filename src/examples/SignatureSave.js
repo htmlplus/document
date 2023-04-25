@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Center, Signature } from '@htmlplus/react';
+import { Center, Signature, Stack } from '@htmlplus/react';
 const SignatureSave = () => {
   const save = (background) => {
     const image = new Image();
@@ -18,11 +18,10 @@ const SignatureSave = () => {
         <Signature id="signature3" backgroundColor="lightgray"></Signature>
       </Center>
       <br />
-      <Center>
+      <Stack gap="1rem">
         <button onClick={() => save(true)}>Save With Background</button>
-        &nbsp; &nbsp;
         <button onClick={() => save(false)}>Save Without Background</button>
-      </Center>
+      </Stack>
     </>
   );
 };

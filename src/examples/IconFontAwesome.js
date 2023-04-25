@@ -3,7 +3,7 @@
  **************************************************/
 
 import { useEffect, useState } from 'react';
-import { Center, Icon } from '@htmlplus/react';
+import { Icon, Stack } from '@htmlplus/react';
 import { setConfig } from '@htmlplus/core/config.js';
 
 setConfig({
@@ -35,11 +35,11 @@ setConfig({
 
 const IconFontAwesome = () => {
   return (
-    <Center>
+    <Stack gap="2rem">
       <Icon name="far-user"></Icon>
       <Icon name="fas-user"></Icon>
       <Icon name="fab-apple"></Icon>
-    </Center>
+    </Stack>
   );
 };
 
@@ -49,7 +49,6 @@ const IconFontAwesomeExample = () => {
   return (
     <div className="ex-icon-font-awesome">
       {ready && <IconFontAwesome />}
-      <style>{`.ex-icon-font-awesome plus-icon {  margin: 0 1rem;}`}</style>
     </div>
   )
 };

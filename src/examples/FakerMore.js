@@ -2,10 +2,10 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Faker } from '@htmlplus/react';
+import { Faker, Stack } from '@htmlplus/react';
 const FakerMore = () => {
   return (
-    <div className="container">
+    <Stack vertical>
       <Faker api="name.fullName"></Faker>
       <Faker api="address.county"></Faker>
       <Faker api="date.weekday"></Faker>
@@ -14,7 +14,7 @@ const FakerMore = () => {
       <Faker api="phone.number"></Faker>
       <Faker api="color.human"></Faker>
       <Faker api="datatype.uuid"></Faker>
-    </div>
+    </Stack>
   );
 };
 
@@ -22,7 +22,6 @@ const FakerMoreExample = () => {
   return (
     <div className="ex-faker-more">
       <FakerMore />
-      <style>{`.ex-faker-more .container {  display: flex;  flex-direction: column;  align-items: center;}`}</style>
     </div>
   )
 };

@@ -3,7 +3,7 @@
  **************************************************/
 
 import { useEffect, useState } from 'react';
-import { Center, Icon } from '@htmlplus/react';
+import { Icon, Stack } from '@htmlplus/react';
 import { setConfig } from '@htmlplus/core/config.js';
 
 setConfig({
@@ -30,11 +30,11 @@ setConfig({
 
 const IconMaterial = () => {
   return (
-    <Center>
+    <Stack gap="2rem">
       <Icon name="home_outline"></Icon>
       <Icon name="home_round"></Icon>
       <Icon name="home_sharp"></Icon>
-    </Center>
+    </Stack>
   );
 };
 
@@ -44,7 +44,6 @@ const IconMaterialExample = () => {
   return (
     <div className="ex-icon-material">
       {ready && <IconMaterial />}
-      <style>{`.ex-icon-material plus-icon {  margin: 0 1rem;}`}</style>
     </div>
   )
 };

@@ -15,7 +15,7 @@ const CardDefaultExample = () => {
   return (
     <div className="ex-card-default dock">
       <CardDefault />
-      <style>{`.ex-card-default .container {  padding: 2rem 0;  background-color: #eeeeee;}.ex-card-default plus-card {  height: 12rem;  width: 12rem;  margin: auto;}`}</style>
+      <style>{`.ex-card-default .container {  padding: 2rem 0;  background-color: whitesmoke;}.ex-card-default plus-card {  height: 12rem;  width: 12rem;  margin: auto;}`}</style>
     </div>
   )
 };

@@ -2,15 +2,15 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Center, FormatBytes } from '@htmlplus/react';
+import { FormatBytes, Stack } from '@htmlplus/react';
 const FormatBytesFormatting = () => {
   return (
-    <Center>
+    <Stack vertical>
       <FormatBytes value="1500"></FormatBytes>
       <FormatBytes value="800000000"></FormatBytes>
       <FormatBytes value="6900000000"></FormatBytes>
       <FormatBytes value="222000000000000"></FormatBytes>
-    </Center>
+    </Stack>
   );
 };
 
@@ -18,7 +18,6 @@ const FormatBytesFormattingExample = () => {
   return (
     <div className="ex-format-bytes-formatting">
       <FormatBytesFormatting />
-      <style>{`.ex-format-bytes-formatting plus-center {  flex-direction: column;}`}</style>
     </div>
   )
 };

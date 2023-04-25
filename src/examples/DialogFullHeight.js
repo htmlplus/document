@@ -2,13 +2,13 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Dialog } from '@htmlplus/react';
+import { Center, Dialog, Faker } from '@htmlplus/react';
 const DialogFullHeight = () => {
   return (
     <>
-      <div className="center">
+      <Center>
         <Dialog.Toggler connector="dialog-full-height">Open</Dialog.Toggler>
-      </div>
+      </Center>
       <Dialog
         animation="fade"
         connector="dialog-full-height"
@@ -18,10 +18,7 @@ const DialogFullHeight = () => {
         <Dialog.Content>
           <Dialog.Header>Dialog Title</Dialog.Header>
           <Dialog.Body>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            <Faker></Faker>
           </Dialog.Body>
           <Dialog.Footer>
             <Dialog.Toggler>Close</Dialog.Toggler>
@@ -36,7 +33,6 @@ const DialogFullHeightExample = () => {
   return (
     <div className="ex-dialog-full-height">
       <DialogFullHeight />
-      <style>{`.ex-dialog-full-height .center {  text-align: center;}`}</style>
     </div>
   )
 };

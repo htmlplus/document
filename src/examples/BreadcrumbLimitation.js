@@ -50,7 +50,7 @@ const BreadcrumbLimitationExample = () => {
   return (
     <div className="ex-breadcrumb-limitation">
       <BreadcrumbLimitation />
-      <style>{`.ex-breadcrumb-limitation .container {  text-align: center;  margin: 0.75em;}.ex-breadcrumb-limitation plus-breadcrumb {  display: inline-block;  color: #707070;}.ex-breadcrumb-limitation plus-breadcrumb a {  color: inherit;  text-decoration: none;}.ex-breadcrumb-limitation plus-breadcrumb a:hover {  text-decoration: underline;}`}</style>
+      <style>{`.ex-breadcrumb-limitation .container {  text-align: center;  margin: 0.75em;}.ex-breadcrumb-limitation plus-breadcrumb a {  color: inherit;  text-decoration: none;}.ex-breadcrumb-limitation plus-breadcrumb a:hover {  text-decoration: underline;}`}</style>
     </div>
   )
 };

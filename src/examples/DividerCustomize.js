@@ -21,7 +21,7 @@ const DividerCustomizeExample = () => {
   return (
     <div className="ex-divider-customize">
       <DividerCustomize />
-      <style>{`.ex-divider-customize plus-divider {  --plus-divider-color: #5f9ee9;  --plus-divider-width: 0.5rem;  margin: 2rem 0;}`}</style>
+      <style>{`.ex-divider-customize plus-divider {  --plus-divider-color: darkgray;  --plus-divider-width: 0.5rem;  margin: 2rem 0;}`}</style>
     </div>
   )
 };

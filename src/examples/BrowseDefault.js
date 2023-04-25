@@ -19,7 +19,7 @@ const BrowseDefaultExample = () => {
   return (
     <div className="ex-browse-default">
       <BrowseDefault />
-      <style>{`.ex-browse-default plus-browse {  background: white;  border: 2px dashed #e0e0e0;  border-radius: 4px;  display: block;  padding: 3rem;  text-align: center;}.ex-browse-default plus-browse[dragging]:not([dragging='false']) {  border-color: #0087f7;}`}</style>
+      <style>{`.ex-browse-default plus-browse {  background: white;  border: 2px dashed lightgray;  border-radius: 4px;  display: block;  padding: 3rem;  text-align: center;}.ex-browse-default plus-browse[dragging]:not([dragging='false']) {  border-color: darkgray;}`}</style>
     </div>
   )
 };

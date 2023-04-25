@@ -25,7 +25,7 @@ const CardTileExample = () => {
   return (
     <div className="ex-card-tile dock">
       <CardTile />
-      <style>{`.ex-card-tile .container {  padding: 2rem 0;  background-color: #eeeeee;}.ex-card-tile plus-card {  height: 8rem;  width: 8rem;  margin: auto;}`}</style>
+      <style>{`.ex-card-tile .container {  padding: 2rem 0;  background-color: whitesmoke;}.ex-card-tile plus-card {  height: 8rem;  width: 8rem;  margin: auto;}`}</style>
     </div>
   )
 };

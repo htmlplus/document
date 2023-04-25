@@ -23,7 +23,7 @@ const GridAlignSelfExample = () => {
   return (
     <div className="ex-grid-align-self">
       <GridAlignSelf />
-      <style>{`.ex-grid-align-self plus-grid {  background-color: #eeeeee;  height: 8rem;}.ex-grid-align-self plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  padding: 0.5em;  text-align: center;}`}</style>
+      <style>{`.ex-grid-align-self plus-grid {  background-color: whitesmoke;  height: 8rem;}.ex-grid-align-self plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  padding: 0.5em;  text-align: center;}`}</style>
     </div>
   )
 };
