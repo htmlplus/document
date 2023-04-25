@@ -166,12 +166,14 @@ const scoped = (styles, className) => {
 (async () => {
   const DESTINATION = './src/data/statistics.ts';
 
-  const responses = await Promise.all([
-    axios.get('https://api.github.com/repos/htmlplus/core'),
-    axios.get('https://api.npmjs.org/downloads/point/2021-02-10:2050-01-01/@htmlplus%2Fcore'),
-    axios.get('https://api.npmjs.org/downloads/point/last-month/@htmlplus%2Fcore'),
-    axios.get('https://api.npmjs.org/downloads/point/last-week/@htmlplus%2Fcore')
-  ]);
+  const responses = await Promise.all(
+    [
+      'https://api.github.com/repos/htmlplus/core',
+      'https://api.npmjs.org/downloads/point/2021-02-10:2050-01-01/@htmlplus/core',
+      'https://api.npmjs.org/downloads/point/last-month/@htmlplus/core',
+      'https://api.npmjs.org/downloads/point/last-week/@htmlplus/core'
+    ].map((url) => fetch(url).then((response) => response.json()))
+  );
 
   const [first, second, third, fourth] = responses;
 
@@ -185,12 +187,12 @@ const scoped = (styles, className) => {
     'export const statistics = {',
     "  platforms: 'TODO',",
     "  themes: 'TODO',",
-    `  forks: ${first.data.forks},`,
-    `  stars: ${first.data.stargazers_count},`,
-    `  watchers: ${first.data.subscribers_count},`,
-    `  dowanloads: ${second.data.downloads},`,
-    `  downloadsLastWeek: ${fourth.data.downloads},`,
-    `  downloadsLastMonth: ${third.data.downloads},`,
+    `  forks: ${first.forks},`,
+    `  stars: ${first.stargazers_count},`,
+    `  watchers: ${first.subscribers_count},`,
+    `  dowanloads: ${second.downloads},`,
+    `  downloadsLastWeek: ${fourth.downloads},`,
+    `  downloadsLastMonth: ${third.downloads},`,
     '  get components(): number {',
     '    return this.componentsPerFramework * this.frameworks;',
     '  },',

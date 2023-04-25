@@ -7,12 +7,12 @@ import { components, examples, frameworks } from '@app/data';
 export const statistics = {
   platforms: 'TODO',
   themes: 'TODO',
-  forks: undefined,
-  stars: undefined,
-  watchers: undefined,
-  dowanloads: undefined,
-  downloadsLastWeek: undefined,
-  downloadsLastMonth: undefined,
+  forks: 1,
+  stars: 25,
+  watchers: 5,
+  dowanloads: 13691,
+  downloadsLastWeek: 1107,
+  downloadsLastMonth: 2295,
   get components(): number {
     return this.componentsPerFramework * this.frameworks;
   },
