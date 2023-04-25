@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from 'react';
+import { Suspense, useLayoutEffect, useState } from 'react';
 
 import { pascalCase } from 'change-case';
 
@@ -12,27 +12,38 @@ import { ExampleProps } from './example.types';
 export const Example = ({ component, example, isolate, links, rtl, tabs, title }: ExampleProps) => {
   const store = useStore();
 
-  if (!component || !example) return <Alert type="error">NOT FOUND</Alert>;
-
-  const componentName = `${pascalCase(component)}${pascalCase(example)}`;
-
-  // TODO
-  const Preview = isolate
-    ? () => (
-        <iframe
-          src={getPath(ROUTES.COMPONENT_EXAMPLE, { component, example })}
-          style={{ border: 'none', display: 'block', margin: 0, width: '100%' }}
-        />
-      )
-    : ((Examples as any)[componentName!] as any);
-
   const [direction, setDirection] = useState('ltr');
 
   const [visible, setVisible] = useState(true);
 
+  if (!component || !example) return <Alert type="error">NOT FOUND</Alert>;
+
+  const componentName = `${pascalCase(component)}${pascalCase(example)}`;
+
+  const Component = (Examples as any)[componentName!] as any;
+
   const onDirection = (event?: MouseEvent) => {
     event?.preventDefault();
     setDirection(direction == 'ltr' ? 'rtl' : 'ltr');
+  };
+
+  // TODO
+  const onIframeLoad = (event: any) => {
+    const iframe = event.target;
+
+    const body = iframe.contentWindow.document.body;
+
+    const onChange = () => {
+      if (!body.scrollHeight) {
+        setTimeout(onChange, 1000);
+        return;
+      }
+      iframe.style.height = body.scrollHeight + 'px';
+    };
+
+    new MutationObserver(onChange).observe(body, { childList: true });
+
+    iframe.contentWindow.addEventListener('resize', onChange);
   };
 
   const onReload = (event?: MouseEvent) => {
@@ -83,7 +94,16 @@ export const Example = ({ component, example, isolate, links, rtl, tabs, title }
       </Grid>
       <Tabs.Panels>
         <Tabs.Panel value="preview" dir={direction}>
-          {visible ? <Preview key="main" /> : <Preview key="alternative" />}
+          {visible == true && isolate != true && (
+            <Suspense fallback={<div className="placeholder" />}>
+              <Component />
+            </Suspense>
+          )}
+          {visible == true && isolate == true && (
+            <div>
+              <iframe src={getPath(ROUTES.COMPONENT_EXAMPLE, { component, example })} onLoad={onIframeLoad} />
+            </div>
+          )}
         </Tabs.Panel>
         {tabs
           ?.filter((tab) => tab.key != 'preview')

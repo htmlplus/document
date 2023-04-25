@@ -149,7 +149,7 @@ const scoped = (styles, className) => {
         script = [react, script.slice(0, j), config, script.slice(j)].join('\n');
       }
 
-      lines.push(`export const ${name} = dynamic(() => import('./${name}'));`);
+      lines.push(`export const ${name} = dynamic(() => import('./${name}'), { suspense: true });`);
 
       const script1 = [...HEADER, script].join('\n');
 

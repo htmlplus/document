@@ -7,9 +7,9 @@ import { components, examples, frameworks } from '@app/data';
 export const statistics = {
   platforms: 'TODO',
   themes: 'TODO',
-  forks: 1,
-  stars: 25,
-  watchers: 5,
+  forks: undefined,
+  stars: undefined,
+  watchers: undefined,
   dowanloads: undefined,
   downloadsLastWeek: undefined,
   downloadsLastMonth: undefined,
