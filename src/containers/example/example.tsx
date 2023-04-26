@@ -56,63 +56,61 @@ export const Example = ({ component, example, isolate, links, rtl, tabs, title }
   useLayoutEffect(onReload, [store.framework]);
 
   return (
-    <Tabs className="example" connector={`example:${title}`} value="preview">
-      {/* TODO: remove connector and example */}
-      <Grid alignItems="center" gutterX="sm">
-        <Grid.Item xs="grow">
-          <Tabs.Bar>
-            <Tabs.Tab value="preview">Preview</Tabs.Tab>
-            {tabs?.map((tab) => (
-              <Tabs.Tab key={tab.key} disabled={tab.disabled} value={tab.key}>
-                {tab.title}
-              </Tabs.Tab>
-            ))}
-          </Tabs.Bar>
-        </Grid.Item>
-        {rtl && (
+    <Suspense fallback={<div className="skeleton" />}>
+      <Tabs className="example" connector={`example:${title}`} value="preview">
+        {/* TODO: remove connector and example */}
+        <Grid alignItems="center" gutterX="sm">
+          <Grid.Item xs="grow">
+            <Tabs.Bar>
+              <Tabs.Tab value="preview">Preview</Tabs.Tab>
+              {tabs?.map((tab) => (
+                <Tabs.Tab key={tab.key} disabled={tab.disabled} value={tab.key}>
+                  {tab.title}
+                </Tabs.Tab>
+              ))}
+            </Tabs.Bar>
+          </Grid.Item>
+          {rtl && (
+            <Grid.Item xs="auto">
+              <Button icon text to="#" onClick={onDirection}>
+                <Icon size="lg" name="app/text-direction-rtl" />
+              </Button>
+              <Tooltip>Change Direction</Tooltip>
+            </Grid.Item>
+          )}
           <Grid.Item xs="auto">
-            <Button icon text to="#" onClick={onDirection}>
-              <Icon size="lg" name="app/text-direction-rtl" />
+            <Button icon text to="#" onClick={onReload}>
+              <Icon size="lg" name="app/reload" />
             </Button>
-            <Tooltip>Change Direction</Tooltip>
+            <Tooltip>Reset</Tooltip>
           </Grid.Item>
-        )}
-        <Grid.Item xs="auto">
-          <Button icon text to="#" onClick={onReload}>
-            <Icon size="lg" name="app/reload" />
-          </Button>
-          <Tooltip>Reset</Tooltip>
-        </Grid.Item>
-        {links?.map((link) => (
-          <Grid.Item key={link.key} xs="auto">
-            <Button icon text to={link.url} target="_blank">
-              <Icon size="lg" name={link.icon} />
-            </Button>
-            <Tooltip>{link.title}</Tooltip>
-          </Grid.Item>
-        ))}
-      </Grid>
-      <Tabs.Panels>
-        <Tabs.Panel value="preview" dir={direction}>
-          {visible == true && isolate != true && (
-            <Suspense fallback={<div className="placeholder" />}>
-              <Component />
-            </Suspense>
-          )}
-          {visible == true && isolate == true && (
-            <div>
-              <iframe src={getPath(ROUTES.COMPONENT_EXAMPLE, { component, example })} onLoad={onIframeLoad} />
-            </div>
-          )}
-        </Tabs.Panel>
-        {tabs
-          ?.filter((tab) => tab.key != 'preview')
-          ?.map((tab) => (
-            <Tabs.Panel key={tab.key} value={tab.key}>
-              <Code language={tab.language as any}>{tab.content}</Code>
-            </Tabs.Panel>
+          {links?.map((link) => (
+            <Grid.Item key={link.key} xs="auto">
+              <Button icon text to={link.url} target="_blank">
+                <Icon size="lg" name={link.icon} />
+              </Button>
+              <Tooltip>{link.title}</Tooltip>
+            </Grid.Item>
           ))}
-      </Tabs.Panels>
-    </Tabs>
+        </Grid>
+        <Tabs.Panels>
+          <Tabs.Panel value="preview" dir={direction}>
+            {visible && isolate != true && <Component />}
+            {visible && isolate == true && (
+              <div>
+                <iframe src={getPath(ROUTES.COMPONENT_EXAMPLE, { component, example })} onLoad={onIframeLoad} />
+              </div>
+            )}
+          </Tabs.Panel>
+          {tabs
+            ?.filter((tab) => tab.key != 'preview')
+            ?.map((tab) => (
+              <Tabs.Panel key={tab.key} value={tab.key}>
+                <Code language={tab.language as any}>{tab.content}</Code>
+              </Tabs.Panel>
+            ))}
+        </Tabs.Panels>
+      </Tabs>
+    </Suspense>
   );
 };

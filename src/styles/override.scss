@@ -178,13 +178,19 @@ pre {
     width: 100%;
     height: 0;
   }
-  .placeholder {
-    height: 5rem;
-    position: relative;
-    overflow: hidden;
-    background-color: lightgray;
+}
+
+.skeleton {
+  height: 5rem;
+  position: relative;
+  overflow: hidden;
+  background-color: lightgray;
+
+  & > * {
+    opacity: 0;
   }
-  .placeholder::after {
+
+  &::after {
     content: '';
     position: absolute;
     inset: 0;
@@ -198,10 +204,11 @@ pre {
     );
     animation: shimmer 2s infinite;
   }
-  @keyframes shimmer {
-    100% {
-      transform: translateX(100%);
-    }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
   }
 }
 
