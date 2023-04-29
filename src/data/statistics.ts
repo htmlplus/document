@@ -10,9 +10,9 @@ export const statistics = {
   forks: 1,
   stars: 25,
   watchers: 5,
-  dowanloads: 13691,
-  downloadsLastWeek: 1107,
-  downloadsLastMonth: 2295,
+  dowanloads: 14119,
+  downloadsLastWeek: 1203,
+  downloadsLastMonth: 2580,
   get components(): number {
     return this.componentsPerFramework * this.frameworks;
   },

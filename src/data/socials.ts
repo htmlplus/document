@@ -3,31 +3,31 @@ import { ROUTES, getPath } from '@app/utils';
 export const socials = [
   {
     key: 'twitter',
-    icon: 'app/twitter',
+    icon: 'twitter',
     title: 'Twitter',
     url: getPath(ROUTES.SOCIAL_TWITTER, {})
   },
   {
     key: 'linkedin',
-    icon: 'app/linkedin',
+    icon: 'linkedin',
     title: 'Linkedin',
     url: getPath(ROUTES.SOCIAL_LINKEDIN, {})
   },
   {
     key: 'instagram',
-    icon: 'app/instagram',
+    icon: 'instagram',
     title: 'Instagram',
     url: getPath(ROUTES.SOCIAL_INSTAGRAM, {})
   },
   {
     key: 'github',
-    icon: 'app/github',
+    icon: 'github',
     title: 'Github',
     url: getPath(ROUTES.SOCIAL_GITHUB, {})
   },
   {
     key: 'youtube',
-    icon: 'app/youtube',
+    icon: 'youtube',
     title: 'YouTube',
     url: getPath(ROUTES.SOCIAL_YOUTUBE, {})
   }

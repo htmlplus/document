@@ -117,9 +117,9 @@ code:not([class*='language-']) {
 pre {
   position: relative;
   .button {
-    position: absolute;
-    right: 0.7rem;
-    top: 0.7rem;
+    position: sticky;
+    left: 100%;
+    top: 0;
     cursor: pointer;
   }
   code + .button {
@@ -181,7 +181,6 @@ pre {
 }
 
 .skeleton {
-  height: 5rem;
   position: relative;
   overflow: hidden;
   background-color: lightgray;

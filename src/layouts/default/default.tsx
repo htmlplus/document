@@ -19,7 +19,7 @@ export const LayoutDefault = ({ children }: LayoutDefaultProps) => {
         <Grid.Item hideXlUp>
           <Drawer.Toggler connector="main">
             <Center>
-              <Icon name="app/menu" size="2x" />
+              <Icon name="list" size="2x" />
             </Center>
           </Drawer.Toggler>
         </Grid.Item>

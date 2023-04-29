@@ -22,12 +22,12 @@ export const Code = ({ children, copy = true, language }: CodeProps) => {
 
   return (
     <pre ref={element} className={`language-${language}`} tabIndex={0}>
-      <code className={`language-${language}`}>{content}</code>
       {copy && (
         <Button icon onClick={onClick}>
-          <Icon name="app/copy" />
+          <Icon name="clipboard" />
         </Button>
       )}
+      <code className={`language-${language}`}>{content}</code>
     </pre>
   );
 };

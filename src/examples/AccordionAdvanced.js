@@ -2,14 +2,14 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Accordion, Faker } from '@htmlplus/react';
+import { Accordion, Faker, Stack } from '@htmlplus/react';
 const AccordionAdvanced = () => {
   return (
     <Accordion>
-      <div slot="summary">
+      <Stack slot="summary" justifyContent="space-between">
         <span>Summary</span>
         <button>Action</button>
-      </div>
+      </Stack>
       <Faker></Faker>
     </Accordion>
   );
@@ -19,7 +19,7 @@ const AccordionAdvancedExample = () => {
   return (
     <div className="ex-accordion-advanced">
       <AccordionAdvanced />
-      <style>{`.ex-accordion-advanced [slot='summary'] {  display: flex;  align-items: center;  justify-content: space-between;  flex-grow: 1;  margin-right: 1rem;}`}</style>
+      <style>{`.ex-accordion-advanced [slot='summary'] {  flex-grow: 1;  margin-right: 1rem;}`}</style>
     </div>
   )
 };

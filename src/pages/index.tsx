@@ -29,7 +29,7 @@ const Home: NextPage = () => {
         <div style={{ flexGrow: '1' }} />
         <div>
           <div>
-            <Icon name="app/htmlplus" size="60px" />
+            <Icon name="htmlplus" size="60px" />
             &nbsp; &nbsp;
             <h1 style={{ border: 'none', display: 'inline', verticalAlign: 'middle', padding: 0 }}>HTMLPLUS</h1>
           </div>

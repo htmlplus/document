@@ -108,7 +108,7 @@ export const Sidebar = () => {
             <Button block link to={getPath(ROUTES.HOME, {})}>
               <Grid alignItems="center" gutterX="sm">
                 <Grid.Item>
-                  <Icon name="app/htmlplus" size="44px" />
+                  <Icon name="htmlplus" size="44px" />
                 </Grid.Item>
                 <Grid.Item>
                   <Grid alignItems="end" vertical>
@@ -126,7 +126,7 @@ export const Sidebar = () => {
           <Grid gutterX="md">
             <Grid.Item xs="12">
               <Button block outlined to={getPath(ROUTES.GITHUB_URL, {})} target="_blank">
-                <Icon name="app/github" />
+                <Icon name="github" />
                 Github
               </Button>
             </Grid.Item>

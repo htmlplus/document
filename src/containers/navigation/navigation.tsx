@@ -28,7 +28,7 @@ export const Navigation = () => {
             <Button link to={prev.url}>
               <Grid alignItems="center" gutterX="md" wrap="off">
                 <Grid.Item>
-                  <Icon name="app/chevron-left" size="lg" />
+                  <Icon name="chevron-left" size="lg" />
                 </Grid.Item>
                 <Grid.Item>
                   <Grid alignItems="start" vertical>
@@ -55,7 +55,7 @@ export const Navigation = () => {
                   </Grid>
                 </Grid.Item>
                 <Grid.Item>
-                  <Icon name="app/chevron-right" size="lg" />
+                  <Icon name="chevron-right" size="lg" />
                 </Grid.Item>
               </Grid>
             </Button>

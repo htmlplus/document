@@ -23,11 +23,6 @@ setConfig({
     'plus-icon': {
       property: {
         resolver(name: string, parser: any) {
-          if (!name.startsWith('app/'))
-            return import(`@htmlplus/core/icon/names/${name}.js`).then((module) => module.default);
-
-          name = name.replace('app/', '');
-
           if (name == 'htmlplus') {
             return Promise.resolve(`
               <svg viewBox="0 0 1000 1000" fill="currentColor">
@@ -35,29 +30,7 @@ setConfig({
               </svg>
             `);
           }
-
-          const MAP = {
-            'codesandbox': 'brand-codesandbox',
-            'github': 'brand-github',
-            'twitter': 'brand-twitter',
-            'linkedin': 'brand-linkedin',
-            'instagram': 'brand-instagram',
-            'youtube': 'brand-youtube',
-            'copy': 'copy',
-            'text-direction-rtl': 'text-direction-rtl',
-            'reload': 'reload',
-            'chevron-left': 'chevron-left',
-            'chevron-right': 'chevron-right',
-            'htmlplus': 'htmlplus',
-            'menu': 'menu-2',
-            'download': 'download'
-          } as any;
-
-          name = MAP[name];
-
-          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;
-
-          return fetch(url).then((response) => response.text());
+          return import(`@htmlplus/core/icon/names/${name}.js`).then((module) => module.default);
         }
       }
     }
