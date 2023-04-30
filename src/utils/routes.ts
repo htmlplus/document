@@ -61,6 +61,7 @@ export const ROUTES = {
   VISION: '/vision',
   CODE_COMPLETION: '/code-completion',
   ANIMATIONS: '/component/animation/names',
+  ICONS: '/component/icon/names',
   BIDIRECTIONALITY: '/bidirectionality',
   GLOBAL_CONFIG: '/global-config',
   OVERVIEW: '/overview',

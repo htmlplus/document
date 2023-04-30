@@ -358,3 +358,32 @@ plus-icon {
     fill: currentColor;
   }
 }
+
+input {
+  color: gray;
+  border: solid 1px lightgray;
+  border-radius: 4px;
+  padding-left: 0.5rem;
+}
+
+.icons-preview {
+  background-color: whitesmoke;
+  padding: 1.75rem 1rem;
+  text-align: center;
+  border-radius: 4;
+}
+
+.icons-input {
+  width: 0;
+  input {
+    margin-left: -200px;
+    width: 200px;
+    transform: translateY(8px);
+  }
+}
+
+.icons-empty {
+  padding: 5rem 1rem;
+  background-color: whitesmoke;
+  border-radius: 4;
+}

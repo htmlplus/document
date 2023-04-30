@@ -80,11 +80,15 @@ export const sidebar = (framework: string) => [
     ]
   },
   {
-    title: 'Utils',
+    title: 'Assets',
     items: [
       {
         title: 'Animations',
         url: getPath(ROUTES.ANIMATIONS, {})
+      },
+      {
+        title: 'Icons',
+        url: getPath(ROUTES.ICONS, {})
       }
     ]
   },
