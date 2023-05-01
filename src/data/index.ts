@@ -1,4 +1,5 @@
 export * from './browsers';
+export * from './dependencies';
 export * from './components';
 export * from './examples';
 export * from './features';

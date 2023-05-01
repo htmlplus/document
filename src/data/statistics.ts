@@ -2,30 +2,22 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { components, examples, frameworks } from '@app/data';
-
 export const statistics = {
   platforms: 'TODO',
   themes: 'TODO',
   forks: 1,
   stars: 25,
   watchers: 5,
-  dowanloads: 14329,
-  downloadsLastWeek: 1398,
-  downloadsLastMonth: 2779,
+  dowanloads: 14559,
+  downloadsLastWeek: 1037,
+  downloadsLastMonth: 3008,
   get components(): number {
     return this.componentsPerFramework * this.frameworks;
   },
-  get componentsPerFramework(): number {
-    return components.length;
-  },
+  componentsPerFramework: 10,
   get examples(): number {
     return this.examplesPerFramework * this.frameworks;
   },
-  get examplesPerFramework(): number {
-    return examples.filter((example) => example.category == 'preview').length;
-  },
-  get frameworks(): number {
-    return frameworks.length;
-  }
-};
+  examplesPerFramework: 60,
+  frameworks: 6,
+}

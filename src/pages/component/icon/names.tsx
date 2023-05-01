@@ -3,9 +3,10 @@ import { memo, useLayoutEffect, useRef, useState } from 'react';
 // @ts-ignore
 import { setConfig } from '@htmlplus/core/config';
 import ICONS from '@htmlplus/core/icon/names.json';
+
 import { useDebounce } from 'use-debounce';
 
-import { Center, Grid, Icon, Spinner } from '@app/components';
+import { Center, Grid, Icon } from '@app/components';
 import { LayoutDefault } from '@app/layouts';
 
 // TODO
@@ -19,7 +20,34 @@ ICONS.forEach((icon) => {
   });
 });
 
-const Icons = () => {
+const Children = memo(() => {
+  return (
+    <>
+      {ICONS.map((icon) => (
+        <Grid.Item
+          key={icon.name}
+          data-name={icon.name}
+          data-tags={icon.tags}
+          xs="12"
+          sm="6"
+          md="4"
+          lg="3"
+          xl="3"
+          xxl="2"
+        >
+          <div className="icons-preview">
+            <Icon name={icon.name} size="2x" />
+          </div>
+          <Center>
+            <small>{icon.name}</small>
+          </Center>
+        </Grid.Item>
+      ))}
+    </>
+  );
+});
+
+export default function Icons() {
   const $container = useRef<HTMLElement>(null);
 
   const [empty, setEmpty] = useState(false);
@@ -82,33 +110,4 @@ const Icons = () => {
       <br />
     </LayoutDefault>
   );
-};
-
-const Children = memo(() => {
-  return (
-    <>
-      {ICONS.map((icon) => (
-        <Grid.Item
-          key={icon.name}
-          data-name={icon.name}
-          data-tags={icon.tags}
-          xs="12"
-          sm="6"
-          md="4"
-          lg="3"
-          xl="3"
-          xxl="2"
-        >
-          <div className="icons-preview">
-            <Icon name={icon.name} size="2x" />
-          </div>
-          <Center>
-            <small>{icon.name}</small>
-          </Center>
-        </Grid.Item>
-      ))}
-    </>
-  );
-});
-
-export default Icons;
+}

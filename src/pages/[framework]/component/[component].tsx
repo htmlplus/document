@@ -1,4 +1,4 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+import type { GetStaticPropsContext } from 'next/types';
 
 import { capitalCase, headerCase } from 'change-case';
 
@@ -7,17 +7,15 @@ import { components, examples, frameworks } from '@app/data';
 import { LayoutDefault } from '@app/layouts';
 import { ROUTES, getPath } from '@app/utils';
 
-const ComponentDetails = ({ component, example }: any) => {
+export default function ComponentDetails({ component, example }: any) {
   return (
     <LayoutDefault>
       <Markup value={component?.readmeContent} scope={{ example }} />
     </LayoutDefault>
   );
-};
+}
 
-export default ComponentDetails;
-
-export const getStaticProps: GetStaticProps = async (context) => {
+export function getStaticProps(context: GetStaticPropsContext) {
   const { component, framework } = context.params! as any;
 
   const current = components.find((x) => x.key == component);
@@ -108,9 +106,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
       example: result
     }
   };
-};
+}
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export function getStaticPaths() {
   const paths = frameworks
     .map((framework) =>
       components.map(
@@ -127,4 +125,4 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths,
     fallback: false
   };
-};
+}

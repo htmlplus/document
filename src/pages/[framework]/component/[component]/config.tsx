@@ -1,19 +1,19 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
-import { useRouter } from 'next/router';
+import type { GetStaticPropsContext } from 'next/types';
 
 import { capitalCase } from 'change-case';
 
 import { Alert, Button, Code } from '@app/components';
 import { components, frameworks } from '@app/data';
+import { useStore } from '@app/hooks';
 import { LayoutDefault } from '@app/layouts';
 import { ROUTES, getPath } from '@app/utils';
 
-const ComponentConfig = ({ component }: any) => {
-  const router = useRouter();
+export default function ComponentConfig({ component }: any) {
+  const store = useStore();
   return (
     <LayoutDefault>
       <h1>
-        {capitalCase(component.key)} config in the {capitalCase(router.query!.framework as any)}
+        {capitalCase(component.key)} config in the {capitalCase(store.framework as any)}
       </h1>
       <p>
         All of the component's APIs are configurable as below. Full&nbsp;
@@ -28,7 +28,7 @@ const ComponentConfig = ({ component }: any) => {
         {[
           // TODO
           `import { setConfig } from '${
-            router.query!.framework == 'javascript' ? 'https://unpkg.com/' : ''
+            store.framework == 'javascript' ? 'https://unpkg.com/' : ''
           }@htmlplus/core/config.js';`,
           ``,
           `setConfig({`,
@@ -49,20 +49,18 @@ const ComponentConfig = ({ component }: any) => {
       </Code>
     </LayoutDefault>
   );
-};
+}
 
-export default ComponentConfig;
-
-export const getStaticProps: GetStaticProps = async (context) => {
+export function getStaticProps(context: GetStaticPropsContext) {
   const component = components.find((component) => {
     return component.key == context.params!.component;
   });
   return {
     props: { component }
   };
-};
+}
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export function getStaticPaths() {
   const paths = frameworks
     .map((framework) =>
       components.map(
@@ -79,4 +77,4 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths,
     fallback: false
   };
-};
+}

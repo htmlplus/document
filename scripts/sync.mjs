@@ -1,9 +1,11 @@
-// TODO
+import axios from 'axios';
+import { paramCase, pascalCase } from 'change-case';
+import fs from 'fs';
+import path from 'path';
+import * as url from 'url';
+import document from '@htmlplus/core/json/document.json' assert { type: 'json' };
 
-const axios = require('axios');
-const { paramCase, pascalCase } = require('change-case');
-const fs = require('fs');
-const path = require('path');
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 const load = (local, remote) => {
   return new Promise((resolve, reject) => {
@@ -59,6 +61,41 @@ const scoped = (styles, className) => {
   const REMOTE = 'https://github.com/htmlplus/core/raw/main/CHANGELOG.md';
 
   const content = await load(LOCAL, REMOTE);
+
+  fs.writeFileSync(DESTINATION, content, 'utf8');
+})();
+
+// dependencies
+(async () => {
+  const DESTINATION = './src/data/dependencies.ts'; 
+
+  const lines = [
+    '/**************************************************',
+    ' * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY',
+    ' **************************************************/',
+    '',
+    'export const dependencies = {',
+      document
+        ?.components
+        ?.map((component) => {
+          const dependencies = component
+            ?.tags
+            ?.find((tag) => tag.key == 'dependencies')
+            ?.value
+            ?.split(',')
+            ?.map((dependency) => dependency.trim())
+            ?.filter((dependency) => !!dependency);
+
+          if (!dependencies) return;
+
+          return `  "${component.key}": ${JSON.stringify(dependencies)},`
+        })
+        ?.filter((component) => !!component)
+        ?.join('\n'),
+    '}'
+  ];
+
+  const content = lines.join('\n');
 
   fs.writeFileSync(DESTINATION, content, 'utf8');
 })();
@@ -172,7 +209,7 @@ const scoped = (styles, className) => {
       'https://api.npmjs.org/downloads/point/2021-02-10:2050-01-01/@htmlplus/core',
       'https://api.npmjs.org/downloads/point/last-month/@htmlplus/core',
       'https://api.npmjs.org/downloads/point/last-week/@htmlplus/core'
-    ].map((url) => fetch(url).then((response) => response.json()))
+    ].map((url) => axios.get(url).then((response) => response.data))
   );
 
   const [first, second, third, fourth] = responses;
@@ -181,8 +218,6 @@ const scoped = (styles, className) => {
     '/**************************************************',
     ' * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY',
     ' **************************************************/',
-    '',
-    "import { components, examples, frameworks } from '@app/data';",
     '',
     'export const statistics = {',
     "  platforms: 'TODO',",
@@ -196,19 +231,13 @@ const scoped = (styles, className) => {
     '  get components(): number {',
     '    return this.componentsPerFramework * this.frameworks;',
     '  },',
-    '  get componentsPerFramework(): number {',
-    '    return components.length;',
-    '  },',
+    `  componentsPerFramework: ${10},`,
     '  get examples(): number {',
     '    return this.examplesPerFramework * this.frameworks;',
     '  },',
-    '  get examplesPerFramework(): number {',
-    "    return examples.filter((example) => example.category == 'preview').length;",
-    '  },',
-    '  get frameworks(): number {',
-    '    return frameworks.length;',
-    '  }',
-    '};'
+    `  examplesPerFramework: ${60},`,
+    `  frameworks: ${6},`,
+    '}'
   ];
 
   const content = lines.join('\n');

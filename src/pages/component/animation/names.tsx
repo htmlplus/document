@@ -2,6 +2,7 @@ import { Fragment, useState } from 'react';
 
 // TODO
 import '@htmlplus/core/animation/names/all.js';
+
 import { capitalCase } from 'change-case';
 import glob from 'fast-glob';
 
@@ -9,7 +10,7 @@ import { Animation, Code, Grid } from '@app/components';
 import { Toc } from '@app/containers';
 import { LayoutDefault } from '@app/layouts';
 
-const Animations = ({ categories }: any) => {
+export default function Animations({ categories }: any) {
   const [playing, setPlaying] = useState('');
   return (
     <LayoutDefault>
@@ -85,11 +86,9 @@ const Animations = ({ categories }: any) => {
       ))}
     </LayoutDefault>
   );
-};
+}
 
-export default Animations;
-
-export const getStaticProps = async () => {
+export function getStaticProps() {
   const categories: any[] = [];
 
   const cwd = 'node_modules/@htmlplus/core/animation/names';
@@ -124,4 +123,4 @@ export const getStaticProps = async () => {
       categories
     }
   };
-};
+}

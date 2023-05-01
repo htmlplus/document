@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { GetStaticPaths, GetStaticProps } from 'next';
+import type { GetStaticPropsContext } from 'next/types';
 
 import { paramCase, pascalCase } from 'change-case';
 
@@ -10,7 +10,7 @@ import { components, frameworks } from '@app/data';
 import { LayoutDefault } from '@app/layouts';
 import { ROUTES, getPath } from '@app/utils';
 
-const ComponentAPI = ({ component, sections }: any) => {
+export default function ComponentAPI({ component, sections }: any) {
   return (
     <LayoutDefault>
       <h1>{component.title}</h1>
@@ -34,11 +34,9 @@ const ComponentAPI = ({ component, sections }: any) => {
       ))}
     </LayoutDefault>
   );
-};
+}
 
-export default ComponentAPI;
-
-export const getStaticProps: GetStaticProps = async (context) => {
+export function getStaticProps(context: GetStaticPropsContext) {
   const { component: componentKey, framework } = context.params!;
 
   const component = components.find((component) => component.key == componentKey);
@@ -60,7 +58,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       items: component.events.map((event: any) => ({
         ...event,
         // TODO
-        name: framework == 'react' ? pascalCase(event.name) : paramCase(event.name)
+        name: framework == 'react-dedicated' ? pascalCase(event.name) : paramCase(event.name)
       }))
     },
     {
@@ -86,9 +84,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
       sections
     }
   };
-};
+}
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export function getStaticPaths() {
   const paths = frameworks
     .map((framework) =>
       components.map(
@@ -105,4 +103,4 @@ export const getStaticPaths: GetStaticPaths = async () => {
     paths,
     fallback: false
   };
-};
+}

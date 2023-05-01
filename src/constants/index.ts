@@ -1,1 +1,1 @@
-export const TODO = 'TODO';
+export const FRAMEWORK_DEFAULT = 'react-dedicated';
