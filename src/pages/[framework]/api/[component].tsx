@@ -42,9 +42,9 @@ export function getStaticProps(context: GetStaticPropsContext) {
   const component = components.find((component) => component.key == params.component);
 
   const meta = {
-    title: component.title,
-    description: component.description,
-    url: getPath(ROUTES.API_DETAILS, params)
+    title: component.title || null,
+    description: component.description || null,
+    url: getPath(ROUTES.API_DETAILS, params) || null
   };
 
   const sections = [
