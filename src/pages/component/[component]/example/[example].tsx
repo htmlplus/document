@@ -12,9 +12,9 @@ export default function Example({ name }: any) {
 }
 
 export function getStaticProps(context: GetStaticPropsContext) {
-  const { component, example } = context.params!;
+  const params = context.params! as any;
 
-  const name = pascalCase(component as string) + pascalCase(example as string);
+  const name = pascalCase(params.component as string) + pascalCase(params.example as string);
 
   return {
     props: { name }

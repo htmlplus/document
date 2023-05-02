@@ -1,7 +1,10 @@
 export interface SidebarItem {
-  title: string;
+  active?: boolean;
+  expand?: boolean;
   icon?: string;
+  title: string;
   items?: SidebarItem[];
+  parent?: SidebarItem;
   stable?: boolean;
   url?: string;
 }

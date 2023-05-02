@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 
 import { Button, Code } from '@app/components';
 import { Toc } from '@app/containers';
-import { dependencies } from '@app/data';
+import { componentsLight } from '@app/data';
 import { ROUTES, getPath } from '@app/utils';
 
 export const Usage = () => {
@@ -10,7 +10,17 @@ export const Usage = () => {
 
   const { component, framework } = router.query as any;
 
-  const dependency = (dependencies as any)[component]?.join(' ') || '';
+  const dependencies = componentsLight.find((item) => item.key == component)?.dependencies?.join(' ') || '';
+
+  let dependency;
+
+  if (framework == 'react-dedicated') {
+    dependency = 'npm install @htmlplus/react ';
+  } else {
+    dependency = 'npm install @htmlplus/core ';
+  }
+
+  dependency += dependencies;
 
   return (
     <>
@@ -28,14 +38,7 @@ export const Usage = () => {
         <b>{(framework as string).toUpperCase()}</b>
         &nbsp; projects.
       </p>
-      <Code language="shell">
-        {(() => {
-          if (framework == 'react-dedicated') {
-            return `npm install @htmlplus/react ${dependency}`;
-          }
-          return `npm install @htmlplus/core ${dependency}`;
-        })()}
-      </Code>
+      <Code language="shell">{dependency}</Code>
     </>
   );
 };

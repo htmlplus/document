@@ -16,24 +16,32 @@ export default function ComponentDetails({ component, example }: any) {
 }
 
 export function getStaticProps(context: GetStaticPropsContext) {
-  const { component, framework } = context.params! as any;
+  const params = context.params! as any;
 
-  const current = components.find((x) => x.key == component);
+  const component = components.find((component) => component.key == params.component);
+
+  const example = {} as any;
+
+  const meta = {
+    title: component.title || null,
+    description: component.description || null,
+    url: getPath(ROUTES.COMPONENT_DETAILS, params) || null
+  };
 
   try {
-    current.readmeContent = current.readmeContent
+    component.readmeContent = component.readmeContent
       .replace(/<Example value=(".*") /g, `<Example {...(example[$1] || {})} `)
-      .replace(/<LastModified/g, `<LastModified value="${current.lastModified}"`);
+      .replace(/<LastModified/g, `<LastModified value="${component.lastModified}"`);
   } catch {}
 
-  current.readmeContent ||= null;
+  component.readmeContent ||= null;
 
-  const result: any = {};
+  for (const current of examples) {
+    if (current.plugin != params.framework || current.component != params.component) continue;
 
-  for (const example of examples) {
-    if (example.plugin != framework || example.component != component) continue;
+    const parameters = Object.assign({}, params, { example: current.example });
 
-    const title = capitalCase(example.example);
+    const title = capitalCase(current.example);
 
     const tabs: any[] = [];
 
@@ -47,9 +55,9 @@ export function getStaticProps(context: GetStaticPropsContext) {
     for (const TAB of TABS) {
       const { key, language } = TAB;
 
-      if (key == 'template' && framework.startsWith('react')) continue;
+      if (key == 'template' && params.framework.startsWith('react')) continue;
 
-      const content = example.output?.[key] ?? null;
+      const content = current.output?.[key] ?? null;
 
       if (key == 'config' && !content) continue;
 
@@ -67,31 +75,33 @@ export function getStaticProps(context: GetStaticPropsContext) {
         key: 'download',
         title: 'Download',
         icon: 'download',
-        url: getPath(ROUTES.EXAMPLE_DOWNLOAD_LINK, { component, framework, example: example.example })
+        url: getPath(ROUTES.EXAMPLE_DOWNLOAD_LINK, parameters)
       },
       {
         key: 'github',
         title: 'Github',
         icon: 'github',
-        url: getPath(ROUTES.EXAMPLE_GITHUB_LINK, { component, framework, example: example.example })
+        url: getPath(ROUTES.EXAMPLE_GITHUB_LINK, parameters)
       },
       {
         key: 'codesandbox',
         title: 'CodeSandbox',
         icon: 'box',
-        url: getPath(ROUTES.EXAMPLE_CODE_SANDBOX_LINK, { component, framework, example: example.example })
+        url: getPath(ROUTES.EXAMPLE_CODE_SANDBOX_LINK, parameters)
       }
     ];
 
     // TODO
     const { isolate = false, rtl = false } =
       examples
-        .find((item) => item.plugin == 'prepare' && item.component == component && item.example == example.example)
+        .find(
+          (item) => item.plugin == 'prepare' && item.component == params.component && item.example == current.example
+        )
         ?.output?.find?.((output: any) => output.key == 'settings')?.content || {};
 
-    result[example.example] = {
-      component,
-      example: example.example,
+    example[current.example] = {
+      component: component.key,
+      example: current.example,
       isolate,
       links,
       rtl,
@@ -101,10 +111,7 @@ export function getStaticProps(context: GetStaticPropsContext) {
   }
 
   return {
-    props: {
-      component: current,
-      example: result
-    }
+    props: { component, example, meta }
   };
 }
 

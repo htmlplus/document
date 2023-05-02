@@ -8,7 +8,7 @@
     "format": "prettier --write .",
     "start": "next dev",
     "start:prod": "next start",
-    "sync": "node ./scripts/sync.js"
+    "sync": "node ./scripts/sync.mjs"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",

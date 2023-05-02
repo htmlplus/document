@@ -65,34 +65,34 @@ const scoped = (styles, className) => {
   fs.writeFileSync(DESTINATION, content, 'utf8');
 })();
 
-// dependencies
+// components light
 (async () => {
-  const DESTINATION = './src/data/dependencies.ts'; 
+  const DESTINATION = './src/data/components.light.ts'; 
 
   const lines = [
     '/**************************************************',
     ' * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY',
     ' **************************************************/',
     '',
-    'export const dependencies = {',
+    'export const componentsLight = ' + 
+    JSON.stringify(
       document
         ?.components
-        ?.map((component) => {
-          const dependencies = component
+        ?.map((component) => ({
+          key: component.key,
+          stable: component.tags.some((tag) => tag.key == 'stable') || undefined,
+          title: component.title,
+          dependencies: component
             ?.tags
             ?.find((tag) => tag.key == 'dependencies')
             ?.value
             ?.split(',')
             ?.map((dependency) => dependency.trim())
-            ?.filter((dependency) => !!dependency);
-
-          if (!dependencies) return;
-
-          return `  "${component.key}": ${JSON.stringify(dependencies)},`
-        })
-        ?.filter((component) => !!component)
-        ?.join('\n'),
-    '}'
+            ?.filter((dependency) => !!dependency)
+        })),
+      null,
+      2
+    ),
   ];
 
   const content = lines.join('\n');

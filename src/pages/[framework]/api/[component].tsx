@@ -37,9 +37,15 @@ export default function ComponentAPI({ component, sections }: any) {
 }
 
 export function getStaticProps(context: GetStaticPropsContext) {
-  const { component: componentKey, framework } = context.params!;
+  const params = context.params! as any;
 
-  const component = components.find((component) => component.key == componentKey);
+  const component = components.find((component) => component.key == params.component);
+
+  const meta = {
+    title: component.title,
+    description: component.description,
+    url: getPath(ROUTES.API_DETAILS, params)
+  };
 
   const sections = [
     {
@@ -58,7 +64,7 @@ export function getStaticProps(context: GetStaticPropsContext) {
       items: component.events.map((event: any) => ({
         ...event,
         // TODO
-        name: framework == 'react-dedicated' ? pascalCase(event.name) : paramCase(event.name)
+        name: params.framework == 'react-dedicated' ? pascalCase(event.name) : paramCase(event.name)
       }))
     },
     {
@@ -79,10 +85,7 @@ export function getStaticProps(context: GetStaticPropsContext) {
   ];
 
   return {
-    props: {
-      component,
-      sections
-    }
+    props: { component, sections, meta }
   };
 }
 

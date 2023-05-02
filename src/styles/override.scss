@@ -230,7 +230,7 @@ pre {
   .nav-item {
     margin: 0;
 
-    &.collapse {
+    &:not(.expand) {
       &.active > .button {
         font-weight: 600;
         color: $color-primary;
@@ -241,7 +241,7 @@ pre {
       }
     }
 
-    &:not(.collapse) .nav-link-toggle {
+    &.expand .nav-link-toggle {
       transform: rotate(180deg);
     }
 

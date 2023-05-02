@@ -52,9 +52,10 @@ export default function ComponentConfig({ component }: any) {
 }
 
 export function getStaticProps(context: GetStaticPropsContext) {
-  const component = components.find((component) => {
-    return component.key == context.params!.component;
-  });
+  const params = context.params! as any;
+
+  const component = components.find((component) => component.key == params.component);
+
   return {
     props: { component }
   };
