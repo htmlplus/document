@@ -4,194 +4,200 @@
 
 export const componentsLight = [
   {
-    key: 'accordion',
-    title: 'Accordion'
+    "key": "accordion",
+    "title": "Accordion"
   },
   {
-    key: 'animation',
-    stable: true,
-    title: 'Animation'
+    "key": "animation",
+    "stable": true,
+    "title": "Animation"
   },
   {
-    key: 'aspect-ratio',
-    stable: true,
-    title: 'Aspect Ratio'
+    "key": "aspect-ratio",
+    "stable": true,
+    "title": "Aspect Ratio"
   },
   {
-    key: 'avatar',
-    stable: true,
-    title: 'Avatar'
+    "key": "avatar",
+    "stable": true,
+    "title": "Avatar"
   },
   {
-    key: 'avatar-group',
-    stable: true,
-    title: 'Avatar Group'
+    "key": "avatar-group",
+    "stable": true,
+    "title": "Avatar Group"
   },
   {
-    key: 'breadcrumb',
-    title: 'Breadcrumb'
+    "key": "breadcrumb",
+    "title": "Breadcrumb"
   },
   {
-    key: 'browse',
-    title: 'Browse'
+    "key": "browse",
+    "title": "Browse"
   },
   {
-    key: 'card',
-    title: 'Card'
+    "key": "card",
+    "title": "Card"
   },
   {
-    key: 'card-body',
-    title: 'Card Body'
+    "key": "card-body",
+    "title": "Card Body"
   },
   {
-    key: 'center',
-    stable: true,
-    title: 'Center'
+    "key": "center",
+    "stable": true,
+    "title": "Center"
   },
   {
-    key: 'click-outside',
-    stable: true,
-    title: 'Click Outside'
+    "key": "click-outside",
+    "stable": true,
+    "title": "Click Outside"
   },
   {
-    key: 'counter',
-    stable: true,
-    title: 'Counter'
+    "key": "counter",
+    "stable": true,
+    "title": "Counter"
   },
   {
-    key: 'cropper',
-    stable: true,
-    title: 'Cropper',
-    dependencies: ['cropperjs']
+    "key": "cropper",
+    "stable": true,
+    "title": "Cropper",
+    "dependencies": [
+      "cropperjs"
+    ]
   },
   {
-    key: 'dialog',
-    title: 'Dialog'
+    "key": "dialog",
+    "title": "Dialog"
   },
   {
-    key: 'dialog-body',
-    title: 'Dialog Body'
+    "key": "dialog-body",
+    "title": "Dialog Body"
   },
   {
-    key: 'dialog-content',
-    title: 'Dialog Content'
+    "key": "dialog-content",
+    "title": "Dialog Content"
   },
   {
-    key: 'dialog-footer',
-    title: 'Dialog Footer'
+    "key": "dialog-footer",
+    "title": "Dialog Footer"
   },
   {
-    key: 'dialog-header',
-    title: 'Dialog Header'
+    "key": "dialog-header",
+    "title": "Dialog Header"
   },
   {
-    key: 'dialog-toggler',
-    title: 'Dialog Toggler'
+    "key": "dialog-toggler",
+    "title": "Dialog Toggler"
   },
   {
-    key: 'divider',
-    title: 'Divider'
+    "key": "divider",
+    "title": "Divider"
   },
   {
-    key: 'drawer',
-    title: 'Drawer'
+    "key": "drawer",
+    "title": "Drawer"
   },
   {
-    key: 'drawer-toggler',
-    title: 'Drawer Toggler'
+    "key": "drawer-toggler",
+    "title": "Drawer Toggler"
   },
   {
-    key: 'faker',
-    stable: true,
-    title: 'Faker',
-    dependencies: ['@faker-js/faker']
+    "key": "faker",
+    "stable": true,
+    "title": "Faker",
+    "dependencies": [
+      "@faker-js/faker"
+    ]
   },
   {
-    key: 'floating',
-    stable: true,
-    title: 'Floating'
+    "key": "floating",
+    "stable": true,
+    "title": "Floating"
   },
   {
-    key: 'format-bytes',
-    stable: true,
-    title: 'Format Bytes'
+    "key": "format-bytes",
+    "stable": true,
+    "title": "Format Bytes"
   },
   {
-    key: 'grid',
-    title: 'Grid'
+    "key": "grid",
+    "title": "Grid"
   },
   {
-    key: 'grid-item',
-    title: 'Grid Item'
+    "key": "grid-item",
+    "title": "Grid Item"
   },
   {
-    key: 'icon',
-    title: 'Icon'
+    "key": "icon",
+    "title": "Icon"
   },
   {
-    key: 'intersection',
-    stable: true,
-    title: 'Intersection'
+    "key": "intersection",
+    "stable": true,
+    "title": "Intersection"
   },
   {
-    key: 'portal',
-    title: 'Portal'
+    "key": "portal",
+    "title": "Portal"
   },
   {
-    key: 'scroll-detector',
-    stable: true,
-    title: 'Scroll Detector'
+    "key": "scroll-detector",
+    "stable": true,
+    "title": "Scroll Detector"
   },
   {
-    key: 'scroll-indicator',
-    title: 'Scroll Indicator'
+    "key": "scroll-indicator",
+    "title": "Scroll Indicator"
   },
   {
-    key: 'signature',
-    stable: true,
-    title: 'Signature'
+    "key": "signature",
+    "stable": true,
+    "title": "Signature"
   },
   {
-    key: 'spinner',
-    stable: true,
-    title: 'Spinner'
+    "key": "spinner",
+    "stable": true,
+    "title": "Spinner"
   },
   {
-    key: 'stack',
-    title: 'Stack'
+    "key": "stack",
+    "title": "Stack"
   },
   {
-    key: 'sticky',
-    stable: true,
-    title: 'Sticky'
+    "key": "sticky",
+    "stable": true,
+    "title": "Sticky"
   },
   {
-    key: 'switch',
-    title: 'Switch'
+    "key": "switch",
+    "title": "Switch"
   },
   {
-    key: 'tabs',
-    title: 'Tabs'
+    "key": "tabs",
+    "title": "Tabs"
   },
   {
-    key: 'tabs-bar',
-    title: 'Tabs Bar'
+    "key": "tabs-bar",
+    "title": "Tabs Bar"
   },
   {
-    key: 'tabs-panel',
-    title: 'Tabs Panel'
+    "key": "tabs-panel",
+    "title": "Tabs Panel"
   },
   {
-    key: 'tabs-panels',
-    title: 'Tabs Panels'
+    "key": "tabs-panels",
+    "title": "Tabs Panels"
   },
   {
-    key: 'tabs-tab',
-    title: 'Tabs Tab'
+    "key": "tabs-tab",
+    "title": "Tabs Tab"
   },
   {
-    key: 'tooltip',
-    title: 'Tooltip',
-    dependencies: ['@floating-ui/dom']
+    "key": "tooltip",
+    "title": "Tooltip",
+    "dependencies": [
+      "@floating-ui/dom"
+    ]
   }
-];
+]

@@ -117,16 +117,17 @@ code:not([class*='language-']) {
 pre {
   position: relative;
   .button {
+    display: none;
     position: sticky;
     left: 100%;
     top: 0;
     cursor: pointer;
   }
-  code + .button {
-    display: none;
-  }
-  &:hover code + button {
+  &:hover button {
     display: inline-block;
+  }
+  .toolbar {
+    height: 0;
   }
 }
 
