@@ -79,7 +79,7 @@ const init = (path: string, parent?: SidebarItem, items?: SidebarItem[]) => {
 
     item.parent = parent;
 
-    if (item.url && path.startsWith(item.url)) {
+    if (path == item.url) {
       let parent = item as any;
 
       do {

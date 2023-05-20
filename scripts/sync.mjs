@@ -199,6 +199,17 @@ const scoped = (styles, className) => {
   })();
 })();
 
+// vision
+(async () => {
+  const DESTINATION = './src/content/en/vision.md';
+  const LOCAL = path.join(__dirname, '../../core/VISION.md');
+  const REMOTE = 'https://github.com/htmlplus/core/raw/main/VISION.md';
+
+  const content = await load(LOCAL, REMOTE);
+
+  fs.writeFileSync(DESTINATION, content, 'utf8');
+})();
+
 // statistics
 (async () => {
   const DESTINATION = './src/data/statistics.ts';
@@ -241,17 +252,6 @@ const scoped = (styles, className) => {
   ];
 
   const content = lines.join('\n');
-
-  fs.writeFileSync(DESTINATION, content, 'utf8');
-})();
-
-// vision
-(async () => {
-  const DESTINATION = './src/content/en/vision.md';
-  const LOCAL = path.join(__dirname, '../../core/VISION.md');
-  const REMOTE = 'https://github.com/htmlplus/core/raw/main/VISION.md';
-
-  const content = await load(LOCAL, REMOTE);
 
   fs.writeFileSync(DESTINATION, content, 'utf8');
 })();

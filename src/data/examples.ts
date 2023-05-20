@@ -8691,6 +8691,332 @@ export const examples: any[] = [
   },
   {
     "plugin": "angular",
+    "component": "floating",
+    "example": "default",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "div {\n  position: relative;\n}\n",
+      "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-floating>\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "floating",
+    "example": "default",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/floating.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+      "style": "div {\n  position: relative;\n}\n",
+      "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-floating>\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "floating",
+    "example": "default",
+    "output": [
+      {
+        "key": "style",
+        "type": "css",
+        "content": "div {\r\n  position: relative;\r\n}"
+      },
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<div>\r\n    <plus-faker api=\"lorem.paragraphs\"></plus-faker>\r\n    <plus-floating>\r\n        <plus-icon name=\"circle-fill\"></plus-icon>\r\n    </plus-floating>\r\n</div>"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "@faker-js/faker": "latest"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "floating",
+    "example": "default",
+    "output": {
+      "script": "import { Faker, Floating, Icon } from '@htmlplus/react';\nconst FloatingDefault = () => {\n  return (\n    <div>\n      <Faker api=\"lorem.paragraphs\"></Faker>\n      <Floating>\n        <Icon name=\"circle-fill\"></Icon>\n      </Floating>\n    </div>\n  );\n};\nexport default FloatingDefault;\n",
+      "style": "div {\n  position: relative;\n}\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "floating",
+    "example": "default",
+    "output": {
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\nconst FloatingDefault = () => {\n  return (\n    <div>\n      <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n      <plus-floating>\n        <plus-icon name=\"circle-fill\"></plus-icon>\n      </plus-floating>\n    </div>\n  );\n};\nexport default FloatingDefault;\n",
+      "style": "div {\n  position: relative;\n}\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "floating",
+    "example": "default",
+    "output": {
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "div {\n  position: relative;\n}\n",
+      "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-floating>\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "floating",
+    "example": "default",
+    "output": {
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "div {\n  position: relative;\n}\n",
+      "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-floating>\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "floating",
+    "example": "fixed",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <br />\n  <br />\n  <br />\n  <plus-floating fixed>\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "floating",
+    "example": "fixed",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/floating.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+      "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <br />\n  <br />\n  <br />\n  <plus-floating fixed>\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "floating",
+    "example": "fixed",
+    "output": [
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<div>\r\n    <plus-faker api=\"lorem.paragraphs\"></plus-faker>\r\n    <br />\r\n    <br />\r\n    <br />\r\n    <plus-floating fixed>\r\n        <plus-icon name=\"circle-fill\"></plus-icon>\r\n    </plus-floating>\r\n</div>"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "@faker-js/faker": "latest"
+          },
+          "isolate": true
+        }
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "floating",
+    "example": "fixed",
+    "output": {
+      "script": "import { Faker, Floating, Icon } from '@htmlplus/react';\nconst FloatingFixed = () => {\n  return (\n    <div>\n      <Faker api=\"lorem.paragraphs\"></Faker>\n      <br />\n      <br />\n      <br />\n      <Floating fixed>\n        <Icon name=\"circle-fill\"></Icon>\n      </Floating>\n    </div>\n  );\n};\nexport default FloatingFixed;\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "floating",
+    "example": "fixed",
+    "output": {
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\nconst FloatingFixed = () => {\n  return (\n    <div>\n      <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n      <br />\n      <br />\n      <br />\n      <plus-floating fixed>\n        <plus-icon name=\"circle-fill\"></plus-icon>\n      </plus-floating>\n    </div>\n  );\n};\nexport default FloatingFixed;\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "floating",
+    "example": "fixed",
+    "output": {
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n",
+      "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <br />\n  <br />\n  <br />\n  <plus-floating fixed>\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "floating",
+    "example": "fixed",
+    "output": {
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n",
+      "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <br />\n  <br />\n  <br />\n  <plus-floating fixed>\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "floating",
+    "example": "offset",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "div {\n  position: relative;\n}\n",
+      "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-floating [offset]=\"offset\">\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "floating",
+    "example": "offset",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/floating.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+      "style": "div {\n  position: relative;\n}\n",
+      "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-floating>\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "floating",
+    "example": "offset",
+    "output": [
+      {
+        "key": "style",
+        "type": "css",
+        "content": "div {\r\n  position: relative;\r\n}"
+      },
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<div>\r\n    <plus-faker api=\"lorem.paragraphs\"></plus-faker>\r\n    <plus-floating offset={[20, 20]}>\r\n        <plus-icon name=\"circle-fill\"></plus-icon>\r\n    </plus-floating>\r\n</div>"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "@faker-js/faker": "latest"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "floating",
+    "example": "offset",
+    "output": {
+      "script": "import { Faker, Floating, Icon } from '@htmlplus/react';\nconst FloatingOffset = () => {\n  return (\n    <div>\n      <Faker api=\"lorem.paragraphs\"></Faker>\n      <Floating offset={[20, 20]}>\n        <Icon name=\"circle-fill\"></Icon>\n      </Floating>\n    </div>\n  );\n};\nexport default FloatingOffset;\n",
+      "style": "div {\n  position: relative;\n}\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "floating",
+    "example": "offset",
+    "output": {
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\nconst FloatingOffset = () => {\n  return (\n    <div>\n      <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n      <plus-floating offset={[20, 20]}>\n        <plus-icon name=\"circle-fill\"></plus-icon>\n      </plus-floating>\n    </div>\n  );\n};\nexport default FloatingOffset;\n",
+      "style": "div {\n  position: relative;\n}\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "floating",
+    "example": "offset",
+    "output": {
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\nlet offset = [20, 20];\n",
+      "style": "div {\n  position: relative;\n}\n",
+      "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-floating offset=\"{offset}\">\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "floating",
+    "example": "offset",
+    "output": {
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\noffset = [20, 20];\n",
+      "style": "div {\n  position: relative;\n}\n",
+      "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <plus-floating :offset=\"offset\">\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "floating",
+    "example": "placement",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "div {\n  position: relative;\n}\n",
+      "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <br />\n  <br />\n  <br />\n  <plus-floating placement=\"bottom\">\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "floating",
+    "example": "placement",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/floating.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
+      "style": "div {\n  position: relative;\n}\n",
+      "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <br />\n  <br />\n  <br />\n  <plus-floating placement=\"bottom\">\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "floating",
+    "example": "placement",
+    "output": [
+      {
+        "key": "style",
+        "type": "css",
+        "content": "div {\r\n  position: relative;\r\n}"
+      },
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<div>\r\n    <plus-faker api=\"lorem.paragraphs\"></plus-faker>\r\n    <br />\r\n    <br />\r\n    <br />\r\n    <plus-floating placement=\"bottom\">\r\n        <plus-icon name=\"circle-fill\"></plus-icon>\r\n    </plus-floating>\r\n</div>"
+      },
+      {
+        "key": "settings",
+        "type": "json",
+        "content": {
+          "dependencies": {
+            "@faker-js/faker": "latest"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "floating",
+    "example": "placement",
+    "output": {
+      "script": "import { Faker, Floating, Icon } from '@htmlplus/react';\nconst FloatingPlacement = () => {\n  return (\n    <div>\n      <Faker api=\"lorem.paragraphs\"></Faker>\n      <br />\n      <br />\n      <br />\n      <Floating placement=\"bottom\">\n        <Icon name=\"circle-fill\"></Icon>\n      </Floating>\n    </div>\n  );\n};\nexport default FloatingPlacement;\n",
+      "style": "div {\n  position: relative;\n}\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "floating",
+    "example": "placement",
+    "output": {
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\nconst FloatingPlacement = () => {\n  return (\n    <div>\n      <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n      <br />\n      <br />\n      <br />\n      <plus-floating placement=\"bottom\">\n        <plus-icon name=\"circle-fill\"></plus-icon>\n      </plus-floating>\n    </div>\n  );\n};\nexport default FloatingPlacement;\n",
+      "style": "div {\n  position: relative;\n}\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "floating",
+    "example": "placement",
+    "output": {
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "div {\n  position: relative;\n}\n",
+      "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <br />\n  <br />\n  <br />\n  <plus-floating placement=\"bottom\">\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "floating",
+    "example": "placement",
+    "output": {
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n",
+      "style": "div {\n  position: relative;\n}\n",
+      "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <br />\n  <br />\n  <br />\n  <plus-floating placement=\"bottom\">\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "angular",
     "component": "format-bytes",
     "example": "decimals",
     "output": {
@@ -11663,12 +11989,599 @@ export const examples: any[] = [
   },
   {
     "plugin": "angular",
+    "component": "progress-bar",
+    "example": "aria-label",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/progress-bar.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-progress-bar aria-label=\"With Label\" value=\"100\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "progress-bar",
+    "example": "aria-label",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar aria-label=\"With Label\" value=\"100\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "progress-bar",
+    "example": "aria-label",
+    "output": [
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-progress-bar aria-label=\"With Label\" value=\"100\"></plus-progress-bar>"
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "progress-bar",
+    "example": "aria-label",
+    "output": {
+      "script": "import { ProgressBar } from '@htmlplus/react';\nconst ProgressBarAriaLabel = () => {\n  return <ProgressBar ariaLabel=\"With Label\" value=\"100\"></ProgressBar>;\n};\nexport default ProgressBarAriaLabel;\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "progress-bar",
+    "example": "aria-label",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\nconst ProgressBarAriaLabel = () => {\n  return (\n    <plus-progress-bar aria-label=\"With Label\" value=\"100\"></plus-progress-bar>\n  );\n};\nexport default ProgressBarAriaLabel;\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "progress-bar",
+    "example": "aria-label",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar aria-label=\"With Label\" value=\"100\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "progress-bar",
+    "example": "aria-label",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar aria-label=\"With Label\" value=\"100\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "progress-bar",
+    "example": "buffer",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/progress-bar.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-progress-bar value=\"50\" buffer=\"75\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "progress-bar",
+    "example": "buffer",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar value=\"50\" buffer=\"75\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "progress-bar",
+    "example": "buffer",
+    "output": [
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-progress-bar value=\"50\" buffer=\"75\"></plus-progress-bar>"
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "progress-bar",
+    "example": "buffer",
+    "output": {
+      "script": "import { ProgressBar } from '@htmlplus/react';\nconst ProgressBarBuffer = () => {\n  return <ProgressBar value=\"50\" buffer=\"75\"></ProgressBar>;\n};\nexport default ProgressBarBuffer;\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "progress-bar",
+    "example": "buffer",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\nconst ProgressBarBuffer = () => {\n  return <plus-progress-bar value=\"50\" buffer=\"75\"></plus-progress-bar>;\n};\nexport default ProgressBarBuffer;\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "progress-bar",
+    "example": "buffer",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar value=\"50\" buffer=\"75\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "progress-bar",
+    "example": "buffer",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar value=\"50\" buffer=\"75\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "progress-bar",
+    "example": "custom-label",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/progress-bar.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-progress-bar value=\"75\">Custom label for value of 75</plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "progress-bar",
+    "example": "custom-label",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar value=\"75\">Custom label for value of 75</plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "progress-bar",
+    "example": "custom-label",
+    "output": [
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-progress-bar value=\"75\">Custom label for value of 75</plus-progress-bar>"
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "progress-bar",
+    "example": "custom-label",
+    "output": {
+      "script": "import { ProgressBar } from '@htmlplus/react';\nconst ProgressBarCustomLabel = () => {\n  return <ProgressBar value=\"75\">Custom label for value of 75</ProgressBar>;\n};\nexport default ProgressBarCustomLabel;\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "progress-bar",
+    "example": "custom-label",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\nconst ProgressBarCustomLabel = () => {\n  return (\n    <plus-progress-bar value=\"75\">\n      Custom label for value of 75\n    </plus-progress-bar>\n  );\n};\nexport default ProgressBarCustomLabel;\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "progress-bar",
+    "example": "custom-label",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar value=\"75\">Custom label for value of 75</plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "progress-bar",
+    "example": "custom-label",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar value=\"75\">Custom label for value of 75</plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "progress-bar",
+    "example": "default",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/progress-bar.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-progress-bar></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "progress-bar",
+    "example": "default",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "progress-bar",
+    "example": "default",
+    "output": [
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-progress-bar></plus-progress-bar>"
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "progress-bar",
+    "example": "default",
+    "output": {
+      "script": "import { ProgressBar } from '@htmlplus/react';\nconst ProgressBarDefault = () => {\n  return <ProgressBar></ProgressBar>;\n};\nexport default ProgressBarDefault;\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "progress-bar",
+    "example": "default",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\nconst ProgressBarDefault = () => {\n  return <plus-progress-bar></plus-progress-bar>;\n};\nexport default ProgressBarDefault;\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "progress-bar",
+    "example": "default",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "progress-bar",
+    "example": "default",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "progress-bar",
+    "example": "height",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/progress-bar.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "style": "plus-progress-bar.thin {\n  height: 2px;\n}\nplus-progress-bar.thick {\n  height: 1.5rem;\n}\n",
+      "template": "<plus-progress-bar value=\"50\" class=\"thin\"></plus-progress-bar>\n<br />\n<plus-progress-bar value=\"50\"></plus-progress-bar>\n<br />\n<plus-progress-bar value=\"50\" class=\"thick\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "progress-bar",
+    "example": "height",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\n",
+      "style": "plus-progress-bar.thin {\n  height: 2px;\n}\nplus-progress-bar.thick {\n  height: 1.5rem;\n}\n",
+      "template": "<plus-progress-bar value=\"50\" class=\"thin\"></plus-progress-bar>\n<br />\n<plus-progress-bar value=\"50\"></plus-progress-bar>\n<br />\n<plus-progress-bar value=\"50\" class=\"thick\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "progress-bar",
+    "example": "height",
+    "output": [
+      {
+        "key": "style",
+        "type": "css",
+        "content": "plus-progress-bar.thin {\r\n    height: 2px;\r\n}\r\nplus-progress-bar.thick {\r\n    height: 1.5rem;\r\n}"
+      },
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<>\r\n    <plus-progress-bar value=\"50\" class=\"thin\"></plus-progress-bar>\r\n    <br />\r\n    <plus-progress-bar value=\"50\"></plus-progress-bar>\r\n    <br />\r\n    <plus-progress-bar value=\"50\" class=\"thick\"></plus-progress-bar>\r\n</>"
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "progress-bar",
+    "example": "height",
+    "output": {
+      "script": "import { ProgressBar } from '@htmlplus/react';\nconst ProgressBarHeight = () => {\n  return (\n    <>\n      <ProgressBar value=\"50\" className=\"thin\"></ProgressBar>\n      <br />\n      <ProgressBar value=\"50\"></ProgressBar>\n      <br />\n      <ProgressBar value=\"50\" className=\"thick\"></ProgressBar>\n    </>\n  );\n};\nexport default ProgressBarHeight;\n",
+      "style": "plus-progress-bar.thin {\n  height: 2px;\n}\nplus-progress-bar.thick {\n  height: 1.5rem;\n}\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "progress-bar",
+    "example": "height",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\nconst ProgressBarHeight = () => {\n  return (\n    <>\n      <plus-progress-bar value=\"50\" className=\"thin\"></plus-progress-bar>\n      <br />\n      <plus-progress-bar value=\"50\"></plus-progress-bar>\n      <br />\n      <plus-progress-bar value=\"50\" className=\"thick\"></plus-progress-bar>\n    </>\n  );\n};\nexport default ProgressBarHeight;\n",
+      "style": "plus-progress-bar.thin {\n  height: 2px;\n}\nplus-progress-bar.thick {\n  height: 1.5rem;\n}\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "progress-bar",
+    "example": "height",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\n",
+      "style": "plus-progress-bar.thin {\n  height: 2px;\n}\nplus-progress-bar.thick {\n  height: 1.5rem;\n}\n",
+      "template": "<plus-progress-bar value=\"50\" class=\"thin\"></plus-progress-bar>\n<br />\n<plus-progress-bar value=\"50\"></plus-progress-bar>\n<br />\n<plus-progress-bar value=\"50\" class=\"thick\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "progress-bar",
+    "example": "height",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\n",
+      "style": "plus-progress-bar.thin {\n  height: 2px;\n}\nplus-progress-bar.thick {\n  height: 1.5rem;\n}\n",
+      "template": "<plus-progress-bar value=\"50\" class=\"thin\"></plus-progress-bar>\n<br />\n<plus-progress-bar value=\"50\"></plus-progress-bar>\n<br />\n<plus-progress-bar value=\"50\" class=\"thick\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "progress-bar",
+    "example": "indeterminate",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/progress-bar.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-progress-bar variant=\"indeterminate\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "progress-bar",
+    "example": "indeterminate",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar variant=\"indeterminate\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "progress-bar",
+    "example": "indeterminate",
+    "output": [
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-progress-bar variant=\"indeterminate\"></plus-progress-bar>"
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "progress-bar",
+    "example": "indeterminate",
+    "output": {
+      "script": "import { ProgressBar } from '@htmlplus/react';\nconst ProgressBarIndeterminate = () => {\n  return <ProgressBar variant=\"indeterminate\"></ProgressBar>;\n};\nexport default ProgressBarIndeterminate;\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "progress-bar",
+    "example": "indeterminate",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\nconst ProgressBarIndeterminate = () => {\n  return <plus-progress-bar variant=\"indeterminate\"></plus-progress-bar>;\n};\nexport default ProgressBarIndeterminate;\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "progress-bar",
+    "example": "indeterminate",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar variant=\"indeterminate\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "progress-bar",
+    "example": "indeterminate",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar variant=\"indeterminate\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "progress-bar",
+    "example": "label",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/progress-bar.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-progress-bar label value=\"75\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "progress-bar",
+    "example": "label",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar label value=\"75\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "progress-bar",
+    "example": "label",
+    "output": [
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-progress-bar label value=\"75\"></plus-progress-bar>"
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "progress-bar",
+    "example": "label",
+    "output": {
+      "script": "import { ProgressBar } from '@htmlplus/react';\nconst ProgressBarLabel = () => {\n  return <ProgressBar label value=\"75\"></ProgressBar>;\n};\nexport default ProgressBarLabel;\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "progress-bar",
+    "example": "label",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\nconst ProgressBarLabel = () => {\n  return <plus-progress-bar label value=\"75\"></plus-progress-bar>;\n};\nexport default ProgressBarLabel;\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "progress-bar",
+    "example": "label",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar label value=\"75\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "progress-bar",
+    "example": "label",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar label value=\"75\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "progress-bar",
+    "example": "min-and-max",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/progress-bar.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<div>\n  <plus-progress-bar min=\"0.0\" max=\"1.0\" value=\"0.25\"></plus-progress-bar>\n  <br />\n  <plus-progress-bar min=\"-10\" max=\"+10\" value=\"0.00\"></plus-progress-bar>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "progress-bar",
+    "example": "min-and-max",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\n",
+      "template": "<div>\n  <plus-progress-bar min=\"0.0\" max=\"1.0\" value=\"0.25\"></plus-progress-bar>\n  <br />\n  <plus-progress-bar min=\"-10\" max=\"+10\" value=\"0.00\"></plus-progress-bar>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "progress-bar",
+    "example": "min-and-max",
+    "output": [
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<div>\r\n    <plus-progress-bar min=\"0.0\" max=\"1.0\" value=\"0.25\"></plus-progress-bar>\r\n    <br />\r\n    <plus-progress-bar min=\"-10\" max=\"+10\" value=\"0.00\"></plus-progress-bar>\r\n</div>"
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "progress-bar",
+    "example": "min-and-max",
+    "output": {
+      "script": "import { ProgressBar } from '@htmlplus/react';\nconst ProgressBarMinAndMax = () => {\n  return (\n    <div>\n      <ProgressBar min=\"0.0\" max=\"1.0\" value=\"0.25\"></ProgressBar>\n      <br />\n      <ProgressBar min=\"-10\" max=\"+10\" value=\"0.00\"></ProgressBar>\n    </div>\n  );\n};\nexport default ProgressBarMinAndMax;\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "progress-bar",
+    "example": "min-and-max",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\nconst ProgressBarMinAndMax = () => {\n  return (\n    <div>\n      <plus-progress-bar min=\"0.0\" max=\"1.0\" value=\"0.25\"></plus-progress-bar>\n      <br />\n      <plus-progress-bar min=\"-10\" max=\"+10\" value=\"0.00\"></plus-progress-bar>\n    </div>\n  );\n};\nexport default ProgressBarMinAndMax;\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "progress-bar",
+    "example": "min-and-max",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\n",
+      "template": "<div>\n  <plus-progress-bar min=\"0.0\" max=\"1.0\" value=\"0.25\"></plus-progress-bar>\n  <br />\n  <plus-progress-bar min=\"-10\" max=\"+10\" value=\"0.00\"></plus-progress-bar>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "progress-bar",
+    "example": "min-and-max",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\n",
+      "template": "<div>\n  <plus-progress-bar min=\"0.0\" max=\"1.0\" value=\"0.25\"></plus-progress-bar>\n  <br />\n  <plus-progress-bar min=\"-10\" max=\"+10\" value=\"0.00\"></plus-progress-bar>\n</div>\n"
+    }
+  },
+  {
+    "plugin": "angular",
+    "component": "progress-bar",
+    "example": "value",
+    "output": {
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/progress-bar.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+      "template": "<plus-progress-bar value=\"25\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "javascript",
+    "component": "progress-bar",
+    "example": "value",
+    "output": {
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar value=\"25\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "prepare",
+    "component": "progress-bar",
+    "example": "value",
+    "output": [
+      {
+        "key": "template",
+        "type": "html",
+        "content": "<plus-progress-bar value=\"25\"></plus-progress-bar>"
+      }
+    ]
+  },
+  {
+    "plugin": "react-dedicated",
+    "component": "progress-bar",
+    "example": "value",
+    "output": {
+      "script": "import { ProgressBar } from '@htmlplus/react';\nconst ProgressBarValue = () => {\n  return <ProgressBar value=\"25\"></ProgressBar>;\n};\nexport default ProgressBarValue;\n"
+    }
+  },
+  {
+    "plugin": "react-experimental",
+    "component": "progress-bar",
+    "example": "value",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\nconst ProgressBarValue = () => {\n  return <plus-progress-bar value=\"25\"></plus-progress-bar>;\n};\nexport default ProgressBarValue;\n"
+    }
+  },
+  {
+    "plugin": "svelte",
+    "component": "progress-bar",
+    "example": "value",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar value=\"25\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "vue",
+    "component": "progress-bar",
+    "example": "value",
+    "output": {
+      "script": "import '@htmlplus/core/progress-bar.js';\n",
+      "template": "<plus-progress-bar value=\"25\"></plus-progress-bar>\n"
+    }
+  },
+  {
+    "plugin": "angular",
     "component": "scroll-detector",
     "example": "default",
     "output": {
       "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onChange(event) {\n    console.log(event.detail);\n  }\n}\n",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
-      "template": "<div class=\"container\">\n  <div class=\"scrollable\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\".scrollable\"\n    vertical\n    (plus-change)=\"onChange($event)\"\n  >\n  </plus-scroll-detector>\n</div>\n"
+      "template": "<div class=\"container\">\n  <div class=\"scrollable\" id=\"reference1\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\"#reference1\"\n    vertical\n    (plus-change)=\"onChange($event)\"\n  >\n  </plus-scroll-detector>\n</div>\n"
     }
   },
   {
@@ -11678,7 +12591,7 @@ export const examples: any[] = [
     "output": {
       "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/scroll-detector.js';\n\nscroll1.addEventListener('plus-change', (event) => {\r\n  console.log(event.detail)\r\n})",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
-      "template": "<div class=\"container\">\r\n  <div class=\"scrollable\">\r\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\r\n  </div>\r\n  <plus-scroll-detector id=\"scroll1\" reference=\".scrollable\" vertical></plus-scroll-detector>\r\n</div>"
+      "template": "<div class=\"container\">\r\n  <div class=\"scrollable\" id=\"reference1\">\r\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\r\n  </div>\r\n  <plus-scroll-detector id=\"scroll1\" reference=\"#reference1\" vertical></plus-scroll-detector>\r\n</div>"
     }
   },
   {
@@ -11694,12 +12607,12 @@ export const examples: any[] = [
       {
         "key": "script",
         "type": "tsx",
-        "content": "import { Element } from '@htmlplus/element';\r\n\r\n@Element()\r\nclass ScrollDetectorDefault {\r\n  onChange(event) {\r\n    console.log(event.detail);\r\n  }\r\n  render() {\r\n    return (\r\n      <div class=\"container\">\r\n        <div class=\"scrollable\">\r\n          <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\r\n        </div>\r\n        <plus-scroll-detector\r\n          reference=\".scrollable\"\r\n          vertical\r\n          onPlusChange={(event) => this.onChange(event)}\r\n        >\r\n        </plus-scroll-detector>\r\n      </div>\r\n    )\r\n  }\r\n}"
+        "content": "import { Element } from '@htmlplus/element';\r\n\r\n@Element()\r\nclass ScrollDetectorDefault {\r\n  onChange(event) {\r\n    console.log(event.detail);\r\n  }\r\n  render() {\r\n    return (\r\n      <div class=\"container\">\r\n        <div class=\"scrollable\" id=\"reference1\">\r\n          <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\r\n        </div>\r\n        <plus-scroll-detector\r\n          reference=\"#reference1\"\r\n          vertical\r\n          onPlusChange={(event) => this.onChange(event)}\r\n        >\r\n        </plus-scroll-detector>\r\n      </div>\r\n    )\r\n  }\r\n}"
       },
       {
         "key": "javascript:template",
         "type": "html",
-        "content": "<div class=\"container\">\r\n  <div class=\"scrollable\">\r\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\r\n  </div>\r\n  <plus-scroll-detector id=\"scroll1\" reference=\".scrollable\" vertical></plus-scroll-detector>\r\n</div>"
+        "content": "<div class=\"container\">\r\n  <div class=\"scrollable\" id=\"reference1\">\r\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\r\n  </div>\r\n  <plus-scroll-detector id=\"scroll1\" reference=\"#reference1\" vertical></plus-scroll-detector>\r\n</div>"
       },
       {
         "key": "javascript:script",
@@ -11723,7 +12636,7 @@ export const examples: any[] = [
     "component": "scroll-detector",
     "example": "default",
     "output": {
-      "script": "import { Faker, ScrollDetector } from '@htmlplus/react';\nconst ScrollDetectorDefault = () => {\n  const onChange = (event) => {\n    console.log(event.detail);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable\">\n        <Faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n      </div>\n      <ScrollDetector\n        reference=\".scrollable\"\n        vertical\n        onChange={(event) => onChange(event)}\n      ></ScrollDetector>\n    </div>\n  );\n};\nexport default ScrollDetectorDefault;\n",
+      "script": "import { Faker, ScrollDetector } from '@htmlplus/react';\nconst ScrollDetectorDefault = () => {\n  const onChange = (event) => {\n    console.log(event.detail);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable\" id=\"reference1\">\n        <Faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></Faker>\n      </div>\n      <ScrollDetector\n        reference=\"#reference1\"\n        vertical\n        onChange={(event) => onChange(event)}\n      ></ScrollDetector>\n    </div>\n  );\n};\nexport default ScrollDetectorDefault;\n",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n"
     }
   },
@@ -11732,7 +12645,7 @@ export const examples: any[] = [
     "component": "scroll-detector",
     "example": "default",
     "output": {
-      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\nconst ScrollDetectorDefault = () => {\n  const onChange = (event) => {\n    console.log(event.detail);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable\">\n        <plus-faker\n          api=\"lorem.paragraphs\"\n          arguments='[20, \"\\n\\n\"]'\n        ></plus-faker>\n      </div>\n      <plus-scroll-detector\n        reference=\".scrollable\"\n        vertical\n        onplus-change={(event) => onChange(event)}\n      ></plus-scroll-detector>\n    </div>\n  );\n};\nexport default ScrollDetectorDefault;\n",
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\nconst ScrollDetectorDefault = () => {\n  const onChange = (event) => {\n    console.log(event.detail);\n  };\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable\" id=\"reference1\">\n        <plus-faker\n          api=\"lorem.paragraphs\"\n          arguments='[20, \"\\n\\n\"]'\n        ></plus-faker>\n      </div>\n      <plus-scroll-detector\n        reference=\"#reference1\"\n        vertical\n        onplus-change={(event) => onChange(event)}\n      ></plus-scroll-detector>\n    </div>\n  );\n};\nexport default ScrollDetectorDefault;\n",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n"
     }
   },
@@ -11743,7 +12656,7 @@ export const examples: any[] = [
     "output": {
       "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\nfunction onChange(event) {\n  console.log(event.detail);\n}\n",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
-      "template": "<div class=\"container\">\n  <div class=\"scrollable\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\".scrollable\"\n    vertical\n    on:plus-change=\"{event => onChange(event)}\"\n  >\n  </plus-scroll-detector>\n</div>\n"
+      "template": "<div class=\"container\">\n  <div class=\"scrollable\" id=\"reference1\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\"#reference1\"\n    vertical\n    on:plus-change=\"{event => onChange(event)}\"\n  >\n  </plus-scroll-detector>\n</div>\n"
     }
   },
   {
@@ -11753,50 +12666,53 @@ export const examples: any[] = [
     "output": {
       "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-detector.js';\nfunction onChange(event) {\n  console.log(event.detail);\n}\n",
       "style": ".container {\n  position: relative;\n}\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n",
-      "template": "<div class=\"container\">\n  <div class=\"scrollable\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\".scrollable\"\n    vertical\n    @plus-change=\"onChange($event)\"\n  >\n  </plus-scroll-detector>\n</div>\n"
+      "template": "<div class=\"container\">\n  <div class=\"scrollable\" id=\"reference1\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\"#reference1\"\n    vertical\n    @plus-change=\"onChange($event)\"\n  >\n  </plus-scroll-detector>\n</div>\n"
     }
   },
   {
     "plugin": "angular",
-    "component": "scroll-indicator",
-    "example": "default",
+    "component": "scroll-detector",
+    "example": "scroll-indicator",
     "output": {
-      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-indicator.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-      "style": ".container {\n  position: relative;\n}\n\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n\nplus-scroll-indicator {\n  position: absolute;\n  top: 0;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-scroll-indicator source=\".scrollable\"></plus-scroll-indicator>\n  <div class=\"scrollable\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[15, \"\\n\\n\"]'></plus-faker>\n  </div>\n</div>\n"
+      "script": "import { Component } from '@angular/core';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\nimport '@htmlplus/core/scroll-detector.js';\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  value = 0;\n  onChange(event) {\n    this.value = event.detail.progress;\n  }\n}\n",
+      "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-progress-bar [value]=\"value\"></plus-progress-bar>\n  <div class=\"scrollable\" id=\"reference2\">\n    <plus-faker\n      api=\"lorem.paragraphs\"\n      arguments='[20, \"\\n\\n\"]'\n      [seed]=\"0\"\n    ></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\"#reference2\"\n    vertical\n    (plus-change)=\"onChange($event)\"\n  >\n  </plus-scroll-detector>\n</div>\n"
     }
   },
   {
     "plugin": "javascript",
-    "component": "scroll-indicator",
-    "example": "default",
+    "component": "scroll-detector",
+    "example": "scroll-indicator",
     "output": {
-      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/scroll-indicator.js';\n",
-      "style": ".container {\n  position: relative;\n}\n\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n\nplus-scroll-indicator {\n  position: absolute;\n  top: 0;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-scroll-indicator source=\".scrollable\"></plus-scroll-indicator>\n  <div class=\"scrollable\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[15, \"\\n\\n\"]'></plus-faker>\n  </div>\n</div>\n"
+      "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/progress-bar.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/scroll-detector.js';\n\nscroll2.addEventListener('plus-change', (event) => {\r\n  progressbar2.value = event.detail.progress;\r\n})",
+      "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
+      "template": "<div class=\"container\">\r\n  <plus-progress-bar id=\"progressbar2\"></plus-progress-bar>\r\n  <div class=\"scrollable\" id=\"reference2\">\r\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]' seed=\"0\"></plus-faker>\r\n  </div>\r\n  <plus-scroll-detector id=\"scroll2\" reference=\"#reference2\" vertical></plus-scroll-detector>\r\n</div>"
     }
   },
   {
     "plugin": "prepare",
-    "component": "scroll-indicator",
-    "example": "default",
+    "component": "scroll-detector",
+    "example": "scroll-indicator",
     "output": [
       {
         "key": "style",
         "type": "css",
-        "content": ".container {\r\n  position: relative;\r\n}\r\n\r\n.scrollable {\r\n  height: 20em;\r\n  overflow-y: auto;\r\n}\r\n\r\nplus-scroll-indicator {\r\n  position: absolute;\r\n  top: 0;\r\n}"
+        "content": ".container {\r\n  position: relative;\r\n}\r\n.scrollable {\r\n  padding: 1rem;\r\n  height: 20em;\r\n  overflow-y: auto;\r\n}"
       },
       {
-        "key": "template",
+        "key": "script",
+        "type": "tsx",
+        "content": "import { Element, State } from '@htmlplus/element';\r\n\r\n@Element()\r\nclass ScrollDetectorScrollIndicator {\r\n  @State()\r\n  value = 0;\r\n\r\n  onChange(event) {\r\n    this.value = event.detail.progress;\r\n  }\r\n\r\n  render() {\r\n    return (\r\n      <div class=\"container\">\r\n        <plus-progress-bar value={this.value}></plus-progress-bar>\r\n        <div class=\"scrollable\" id=\"reference2\">\r\n          <plus-faker\r\n            api=\"lorem.paragraphs\"\r\n            arguments='[20, \"\\n\\n\"]'\r\n            seed={0}\r\n          ></plus-faker>\r\n        </div>\r\n        <plus-scroll-detector\r\n          reference=\"#reference2\"\r\n          vertical\r\n          onPlusChange={(event) => this.onChange(event)}\r\n        >\r\n        </plus-scroll-detector>\r\n      </div>\r\n    )\r\n  }\r\n}"
+      },
+      {
+        "key": "javascript:template",
         "type": "html",
-        "content": "<div class=\"container\">\r\n  <plus-scroll-indicator source=\".scrollable\"></plus-scroll-indicator>\r\n  <div class=\"scrollable\">\r\n    <plus-faker api=\"lorem.paragraphs\" arguments='[15, \"\\n\\n\"]'></plus-faker>\r\n  </div>\r\n</div>"
+        "content": "<div class=\"container\">\r\n  <plus-progress-bar id=\"progressbar2\"></plus-progress-bar>\r\n  <div class=\"scrollable\" id=\"reference2\">\r\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]' seed=\"0\"></plus-faker>\r\n  </div>\r\n  <plus-scroll-detector id=\"scroll2\" reference=\"#reference2\" vertical></plus-scroll-detector>\r\n</div>"
       },
       {
-        "key": "settings",
-        "type": "json",
-        "content": {
-          "dock": true
-        }
+        "key": "javascript:script",
+        "type": "js",
+        "content": "scroll2.addEventListener('plus-change', (event) => {\r\n  progressbar2.value = event.detail.progress;\r\n})"
       },
       {
         "key": "settings",
@@ -11804,47 +12720,48 @@ export const examples: any[] = [
         "content": {
           "dependencies": {
             "@faker-js/faker": "latest"
-          }
+          },
+          "dock": true
         }
       }
     ]
   },
   {
     "plugin": "react-dedicated",
-    "component": "scroll-indicator",
-    "example": "default",
+    "component": "scroll-detector",
+    "example": "scroll-indicator",
     "output": {
-      "script": "import { Faker, ScrollIndicator } from '@htmlplus/react';\nconst ScrollIndicatorDefault = () => {\n  return (\n    <div className=\"container\">\n      <ScrollIndicator source=\".scrollable\"></ScrollIndicator>\n      <div className=\"scrollable\">\n        <Faker api=\"lorem.paragraphs\" arguments='[15, \"\\n\\n\"]'></Faker>\n      </div>\n    </div>\n  );\n};\nexport default ScrollIndicatorDefault;\n",
-      "style": ".container {\n  position: relative;\n}\n\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n\nplus-scroll-indicator {\n  position: absolute;\n  top: 0;\n}\n"
+      "script": "import { useState } from 'react';\nimport { Faker, ProgressBar, ScrollDetector } from '@htmlplus/react';\nconst ScrollDetectorScrollIndicator = () => {\n  const [value, setValue] = useState(0);\n  const onChange = (event) => {\n    setValue(event.detail.progress);\n  };\n  return (\n    <div className=\"container\">\n      <ProgressBar value={value}></ProgressBar>\n      <div className=\"scrollable\" id=\"reference2\">\n        <Faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]' seed={0}></Faker>\n      </div>\n      <ScrollDetector\n        reference=\"#reference2\"\n        vertical\n        onChange={(event) => onChange(event)}\n      ></ScrollDetector>\n    </div>\n  );\n};\nexport default ScrollDetectorScrollIndicator;\n",
+      "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n"
     }
   },
   {
     "plugin": "react-experimental",
-    "component": "scroll-indicator",
-    "example": "default",
+    "component": "scroll-detector",
+    "example": "scroll-indicator",
     "output": {
-      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-indicator.js';\nconst ScrollIndicatorDefault = () => {\n  return (\n    <div className=\"container\">\n      <plus-scroll-indicator source=\".scrollable\"></plus-scroll-indicator>\n      <div className=\"scrollable\">\n        <plus-faker\n          api=\"lorem.paragraphs\"\n          arguments='[15, \"\\n\\n\"]'\n        ></plus-faker>\n      </div>\n    </div>\n  );\n};\nexport default ScrollIndicatorDefault;\n",
-      "style": ".container {\n  position: relative;\n}\n\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n\nplus-scroll-indicator {\n  position: absolute;\n  top: 0;\n}\n"
+      "script": "import { useState } from 'react';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\nimport '@htmlplus/core/scroll-detector.js';\nconst ScrollDetectorScrollIndicator = () => {\n  const [value, setValue] = useState(0);\n  const onChange = (event) => {\n    setValue(event.detail.progress);\n  };\n  return (\n    <div className=\"container\">\n      <plus-progress-bar value={value}></plus-progress-bar>\n      <div className=\"scrollable\" id=\"reference2\">\n        <plus-faker\n          api=\"lorem.paragraphs\"\n          arguments='[20, \"\\n\\n\"]'\n          seed={0}\n        ></plus-faker>\n      </div>\n      <plus-scroll-detector\n        reference=\"#reference2\"\n        vertical\n        onplus-change={(event) => onChange(event)}\n      ></plus-scroll-detector>\n    </div>\n  );\n};\nexport default ScrollDetectorScrollIndicator;\n",
+      "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n"
     }
   },
   {
     "plugin": "svelte",
-    "component": "scroll-indicator",
-    "example": "default",
+    "component": "scroll-detector",
+    "example": "scroll-indicator",
     "output": {
-      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-indicator.js';\n",
-      "style": ".container {\n  position: relative;\n}\n\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n\nplus-scroll-indicator {\n  position: absolute;\n  top: 0;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-scroll-indicator source=\".scrollable\"></plus-scroll-indicator>\n  <div class=\"scrollable\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[15, \"\\n\\n\"]'></plus-faker>\n  </div>\n</div>\n"
+      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\nimport '@htmlplus/core/scroll-detector.js';\nlet value = 0;\nfunction onChange(event) {\n  value = event.detail.progress;\n}\n",
+      "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-progress-bar value=\"{value}\"></plus-progress-bar>\n  <div class=\"scrollable\" id=\"reference2\">\n    <plus-faker\n      api=\"lorem.paragraphs\"\n      arguments='[20, \"\\n\\n\"]'\n      seed=\"{0}\"\n    ></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\"#reference2\"\n    vertical\n    on:plus-change=\"{event => onChange(event)}\"\n  >\n  </plus-scroll-detector>\n</div>\n"
     }
   },
   {
     "plugin": "vue",
-    "component": "scroll-indicator",
-    "example": "default",
+    "component": "scroll-detector",
+    "example": "scroll-indicator",
     "output": {
-      "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/scroll-indicator.js';\n",
-      "style": ".container {\n  position: relative;\n}\n\n.scrollable {\n  height: 20em;\n  overflow-y: auto;\n}\n\nplus-scroll-indicator {\n  position: absolute;\n  top: 0;\n}\n",
-      "template": "<div class=\"container\">\n  <plus-scroll-indicator source=\".scrollable\"></plus-scroll-indicator>\n  <div class=\"scrollable\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[15, \"\\n\\n\"]'></plus-faker>\n  </div>\n</div>\n"
+      "script": "import { ref } from 'vue';\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/progress-bar.js';\nimport '@htmlplus/core/scroll-detector.js';\nconst value = ref(0);\nfunction onChange(event) {\n  value.value = event.detail.progress;\n}\n",
+      "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
+      "template": "<div class=\"container\">\n  <plus-progress-bar :value=\"value\"></plus-progress-bar>\n  <div class=\"scrollable\" id=\"reference2\">\n    <plus-faker\n      api=\"lorem.paragraphs\"\n      arguments='[20, \"\\n\\n\"]'\n      :seed=\"0\"\n    ></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\"#reference2\"\n    vertical\n    @plus-change=\"onChange($event)\"\n  >\n  </plus-scroll-detector>\n</div>\n"
     }
   },
   {

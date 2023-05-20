@@ -38,10 +38,9 @@ export const sidebar = (framework: string) => [
     title: 'UI Components',
     items: componentsLight
       .filter((component) => {
-        if (component.key == component.key.split('-')[0]) return true;
-        return !componentsLight.some((x) => {
-          return x.key == component.key.split('-')[0];
-        });
+        const key = component.key.split('-').slice(0, -1).join('-');
+        if (component.key == key) return true;
+        return !componentsLight.some((component) => component.key == key);
       })
       .map((component) => ({
         stable: component.stable,

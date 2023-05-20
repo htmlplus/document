@@ -5,6 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.9.2] - 2023-05-20
+
+### Added
+
+- The `Progress Bar` component.
+- The `Progress Bar Stack` component.
+
+### Removed
+
+- removed the `Scroll Indicator` component.
+
+### Updated
+
+- Updated the `scroll-detector` reference.
+- Updated all components based on the `@Host`, `@Query`, and `@QueryAll` decorators.
+- Cleaned the code base.
+
+## [0.9.1] - 2023-05-06
+
+### Updated
+
+- Updated all components based on the `host` element.
+
 ## [0.9.0] - 2023-05-03
 
 ### Updated

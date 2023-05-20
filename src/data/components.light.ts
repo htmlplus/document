@@ -5,6 +5,7 @@
 export const componentsLight = [
   {
     "key": "accordion",
+    "stable": true,
     "title": "Accordion"
   },
   {
@@ -142,18 +143,26 @@ export const componentsLight = [
     "title": "Portal"
   },
   {
+    "key": "progress-bar",
+    "title": "Progress Bar"
+  },
+  {
+    "key": "progress-bar-stack",
+    "title": "Progress Bar Stack"
+  },
+  {
     "key": "scroll-detector",
     "stable": true,
     "title": "Scroll Detector"
   },
   {
-    "key": "scroll-indicator",
-    "title": "Scroll Indicator"
-  },
-  {
     "key": "signature",
     "stable": true,
     "title": "Signature"
+  },
+  {
+    "key": "spacer",
+    "title": "Spacer"
   },
   {
     "key": "spinner",
