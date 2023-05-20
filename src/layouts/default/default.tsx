@@ -1,15 +1,51 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 
-import { Card, Center, Drawer, Grid, Icon, Sticky } from '@app/components';
+import Router from 'next/router';
+
+import { Card, Center, Drawer, Grid, Icon, ProgressBar, Sticky } from '@app/components';
 import { Contributors, Frameworks, Navigation, Sidebar, Toc } from '@app/containers';
 
 interface LayoutDefaultProps {
   children: ReactNode;
 }
 
+let timeout: NodeJS.Timeout;
+
 export const LayoutDefault = ({ children }: LayoutDefaultProps) => {
+  const [progress, setProgress] = useState(0);
+
+  // TODO
+  useEffect(() => {
+    Router.events.on('routeChangeStart', () => {
+      setProgress(30);
+
+      const increase = () => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          setProgress((progress) => progress + 1);
+          increase();
+        }, 50);
+      };
+
+      increase();
+    });
+
+    Router.events.on('routeChangeComplete', () => {
+      clearTimeout(timeout);
+      setProgress(100);
+      setTimeout(() => setProgress(0), 1500);
+    });
+
+    Router.events.on('routeChangeError', () => {
+      clearTimeout(timeout);
+      setProgress(100);
+      setTimeout(() => setProgress(0), 1500);
+    });
+  }, []);
+
   return (
     <div className="layout-default">
+      {!!progress && <ProgressBar value={progress} />}
       <Drawer open={false} animation="fade" connector="main" temporary size="300px">
         <Card class="drawer" tile elevation="10">
           <Sidebar />

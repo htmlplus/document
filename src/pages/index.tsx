@@ -32,7 +32,7 @@ export default function Index() {
         </p>
         <div>
           <NextLink
-            href={getPath(ROUTES.COMPONENT_DETAILS, { framework: 'react-dedicated', component: 'animation' })!}
+            href={getPath(ROUTES.COMPONENT_DETAILS, { framework: 'react-dedicated', component: 'accordion' })!}
             passHref
             style={{
               padding: '0.75rem 2rem',
