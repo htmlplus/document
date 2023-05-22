@@ -33,7 +33,7 @@ export const LayoutDefault = ({ children }: LayoutDefaultProps) => {
     Router.events.on('routeChangeComplete', () => {
       clearTimeout(timeout);
       setProgress(100);
-      setTimeout(() => setProgress(0), 1500);
+      setTimeout(() => setProgress(0), 1000);
     });
 
     Router.events.on('routeChangeError', () => {
@@ -45,7 +45,7 @@ export const LayoutDefault = ({ children }: LayoutDefaultProps) => {
 
   return (
     <div className="layout-default">
-      {!!progress && <ProgressBar value={progress} />}
+      {!!progress && <ProgressBar className="app-loading-bar" value={progress} />}
       <Drawer open={false} animation="fade" connector="main" temporary size="300px">
         <Card class="drawer" tile elevation="10">
           <Sidebar />

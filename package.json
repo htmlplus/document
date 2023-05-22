@@ -5,9 +5,9 @@
   "scripts": {
     "build": "next build",
     "clean": "rimraf .next",
+    "dev": "next dev",
     "format": "prettier --write .",
-    "start": "next dev",
-    "start:production": "next start",
+    "start": "next start",
     "sync": "node ./scripts/sync.mjs"
   },
   "devDependencies": {
