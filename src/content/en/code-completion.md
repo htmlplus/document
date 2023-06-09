@@ -4,7 +4,7 @@ Intelligent code completion also known as `IntelliSense` or `code hinting` is a 
 
 ## VS Code
 
-VS Code doesn't have the ability to identify custom elements by default. To enable this feature, follow the instructions below.
+VS Code doesn't have the ability to identify `custom elements` by default. To enable this feature, follow the instructions below.
 
 - Install the `HTMLPLUS` package.
 - Create `.vscode` folder at the root of project.
@@ -20,7 +20,7 @@ VS Code doesn't have the ability to identify custom elements by default. To enab
 <br />
 
 <Alert type="warning">
-    VS Code may need to be restarted for changes to take effect.
+  VS Code may need to be restarted for changes to take effect.
 </Alert>
 
 ## Other Editors
