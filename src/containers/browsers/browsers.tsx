@@ -2,7 +2,7 @@ import { Grid } from '@app/components';
 import { browsers } from '@app/data';
 import { ROUTES, getPath } from '@app/utils';
 
-export const Browsers = ({ version }: any) => {
+export const Browsers = () => {
   return (
     <Grid gutterY="lg">
       {browsers.map((browser) => (
@@ -16,9 +16,7 @@ export const Browsers = ({ version }: any) => {
               src={getPath(ROUTES.ASSETS, { filepath: `browsers/${browser.logo}` })}
             />
             <br />
-            <p>
-              {browser.title} {version && browser.version}
-            </p>
+            <p>{browser.title}</p>
           </div>
         </Grid.Item>
       ))}
