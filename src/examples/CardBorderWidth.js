@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Card, Grid } from '@htmlplus/react';
-const CardBorderWidth = () => {
+
+function App() {
   return (
     <Grid justifyContent="evenly" gutter="md">
       <Grid.Item xs="12" sm="auto">
@@ -17,12 +18,12 @@ const CardBorderWidth = () => {
       </Grid.Item>
     </Grid>
   );
-};
+}
 
 const CardBorderWidthExample = () => {
   return (
     <div className="ex-card-border-width">
-      <CardBorderWidth />
+      <App />
       <style>{`.ex-card-border-width plus-card {  height: 8rem;  width: 8rem;  margin: auto;}.ex-card-border-width plus-card.size-1 {  --plus-card-border-width: 1px;}.ex-card-border-width plus-card.size-2 {  --plus-card-border-width: 2px;}.ex-card-border-width plus-card.size-3 {  --plus-card-border-width: 3px;}`}</style>
     </div>
   )

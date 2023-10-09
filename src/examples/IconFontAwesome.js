@@ -12,28 +12,26 @@ setConfig({
       property: {
         resolver: async (name, parser) => {
           let category = 'regular';
-
           if (name.startsWith('fas-')) category = 'solid';
           if (name.startsWith('fab-')) category = 'brands';
-
           name = name.replace(/^fa[rbs]-/, '');
-
           const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;
-
           return fetch(url)
             .then((response) => response.text())
             .then((raw) => parser(raw))
             .then((svg) => {
               svg.setAttribute('fill', 'currentColor');
               return svg;
-            })
+            });
         }
       }
     }
   }
-})
+});
 
-const IconFontAwesome = () => {
+
+
+function App() {
   return (
     <Stack gap="2rem">
       <Icon name="far-user"></Icon>
@@ -41,14 +39,14 @@ const IconFontAwesome = () => {
       <Icon name="fab-apple"></Icon>
     </Stack>
   );
-};
+}
 
 const IconFontAwesomeExample = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
     <div className="ex-icon-font-awesome">
-      {ready && <IconFontAwesome />}
+      {ready && <App />}
     </div>
   )
 };

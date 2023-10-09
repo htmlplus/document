@@ -3,19 +3,20 @@
  **************************************************/
 
 import { Avatar, Center, Tooltip } from '@htmlplus/react';
-const AvatarTooltip = () => {
+
+function App() {
   return (
     <Center>
       <Avatar></Avatar>
       <Tooltip>Tooltip</Tooltip>
     </Center>
   );
-};
+}
 
 const AvatarTooltipExample = () => {
   return (
     <div className="ex-avatar-tooltip">
-      <AvatarTooltip />
+      <App />
     </div>
   )
 };

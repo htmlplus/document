@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Center, Spinner } from '@htmlplus/react';
-const SpinnerCustomize = () => {
+
+function App() {
   return (
     <Center>
       <Spinner type="dual-ring"></Spinner>
     </Center>
   );
-};
+}
 
 const SpinnerCustomizeExample = () => {
   return (
     <div className="ex-spinner-customize">
-      <SpinnerCustomize />
+      <App />
       <style>{`.ex-spinner-customize plus-spinner {  color: purple;  width: 5rem;  height: 5rem;  font-size: 0.8rem;}`}</style>
     </div>
   )

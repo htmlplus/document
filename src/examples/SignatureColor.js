@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Center, Signature } from '@htmlplus/react';
-const SignatureColor = () => {
+
+function App() {
   return (
     <Center>
       <Signature backgroundColor="lightgray" color="blue"></Signature>
     </Center>
   );
-};
+}
 
 const SignatureColorExample = () => {
   return (
     <div className="ex-signature-color">
-      <SignatureColor />
+      <App />
     </div>
   )
 };

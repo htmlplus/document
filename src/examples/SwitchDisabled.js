@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Center, Switch } from '@htmlplus/react';
-const SwitchDisabled = () => {
+
+function App() {
   return (
     <Center>
       <Switch disabled></Switch>
     </Center>
   );
-};
+}
 
 const SwitchDisabledExample = () => {
   return (
     <div className="ex-switch-disabled">
-      <SwitchDisabled />
+      <App />
     </div>
   )
 };

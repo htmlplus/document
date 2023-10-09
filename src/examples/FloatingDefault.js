@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Faker, Floating, Icon } from '@htmlplus/react';
-const FloatingDefault = () => {
+
+function App() {
   return (
     <div>
       <Faker api="lorem.paragraphs"></Faker>
@@ -12,12 +13,12 @@ const FloatingDefault = () => {
       </Floating>
     </div>
   );
-};
+}
 
 const FloatingDefaultExample = () => {
   return (
     <div className="ex-floating-default">
-      <FloatingDefault />
+      <App />
       <style>{`.ex-floating-default div {  position: relative;}`}</style>
     </div>
   )

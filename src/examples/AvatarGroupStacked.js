@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Avatar, Center } from '@htmlplus/react';
-const AvatarGroupStacked = () => {
+
+function App() {
   return (
     <Center>
       <Avatar.Group stacked>
@@ -13,12 +14,12 @@ const AvatarGroupStacked = () => {
       </Avatar.Group>
     </Center>
   );
-};
+}
 
 const AvatarGroupStackedExample = () => {
   return (
     <div className="ex-avatar-group-stacked">
-      <AvatarGroupStacked />
+      <App />
     </div>
   )
 };

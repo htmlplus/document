@@ -22,6 +22,7 @@ export function getStaticProps(context: GetStaticPropsContext) {
 }
 
 export function getStaticPaths() {
+  // TODO
   const paths = examples
     .filter((example) => {
       return example.output?.find?.((output: any) => output.key == 'settings')?.content?.isolate;

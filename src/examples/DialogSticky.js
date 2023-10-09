@@ -3,11 +3,12 @@
  **************************************************/
 
 import { Center, Dialog, Faker } from '@htmlplus/react';
-const DialogSticky = () => {
+
+function App() {
   return (
     <>
       <Center>
-        <Dialog.Toggler connector="dialog-sticky">Open</Dialog.Toggler>
+        <Dialog.Toggler connector="dialog-sticky"> Open </Dialog.Toggler>
       </Center>
       <Dialog animation="fade" connector="dialog-sticky" fullWidth sticky>
         <Dialog.Content>
@@ -18,12 +19,12 @@ const DialogSticky = () => {
       </Dialog>
     </>
   );
-};
+}
 
 const DialogStickyExample = () => {
   return (
     <div className="ex-dialog-sticky">
-      <DialogSticky />
+      <App />
     </div>
   )
 };

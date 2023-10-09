@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Center, FormatBytes } from '@htmlplus/react';
-const FormatBytesDefault = () => {
+
+function App() {
   return (
     <Center>
-      <FormatBytes value="1000"></FormatBytes>
+      <FormatBytes value={1000}></FormatBytes>
     </Center>
   );
-};
+}
 
 const FormatBytesDefaultExample = () => {
   return (
     <div className="ex-format-bytes-default">
-      <FormatBytesDefault />
+      <App />
     </div>
   )
 };

@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Center, Signature } from '@htmlplus/react';
-const SignatureDefault = () => {
+
+function App() {
   return (
     <Center>
       <Signature backgroundColor="lightgray"></Signature>
     </Center>
   );
-};
+}
 
 const SignatureDefaultExample = () => {
   return (
     <div className="ex-signature-default">
-      <SignatureDefault />
+      <App />
     </div>
   )
 };

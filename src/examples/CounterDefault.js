@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Center, Counter } from '@htmlplus/react';
-const CounterDefault = () => {
+
+function App() {
   return (
     <Center>
-      <Counter to="1000" play></Counter>
+      <Counter to={1000} play></Counter>
     </Center>
   );
-};
+}
 
 const CounterDefaultExample = () => {
   return (
     <div className="ex-counter-default">
-      <CounterDefault />
+      <App />
     </div>
   )
 };

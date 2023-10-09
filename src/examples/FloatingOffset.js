@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Faker, Floating, Icon } from '@htmlplus/react';
-const FloatingOffset = () => {
+
+function App() {
   return (
     <div>
       <Faker api="lorem.paragraphs"></Faker>
@@ -12,12 +13,12 @@ const FloatingOffset = () => {
       </Floating>
     </div>
   );
-};
+}
 
 const FloatingOffsetExample = () => {
   return (
     <div className="ex-floating-offset">
-      <FloatingOffset />
+      <App />
       <style>{`.ex-floating-offset div {  position: relative;}`}</style>
     </div>
   )

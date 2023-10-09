@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Avatar, Stack } from '@htmlplus/react';
-const AvatarSlots = () => {
+
+function App() {
   return (
     <Stack gap="8rem">
       <Avatar size="xxl">
@@ -30,12 +31,12 @@ const AvatarSlots = () => {
       </Avatar>
     </Stack>
   );
-};
+}
 
 const AvatarSlotsExample = () => {
   return (
     <div className="ex-avatar-slots">
-      <AvatarSlots />
+      <App />
       <style>{`.ex-avatar-slots plus-avatar > div {  background-color: gray;  color: white;  font-size: 10px;  padding: 0.125rem 0.25rem;  font-family: monospace;  line-height: 1;}`}</style>
     </div>
   )

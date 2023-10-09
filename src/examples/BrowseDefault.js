@@ -3,22 +3,24 @@
  **************************************************/
 
 import { Browse } from '@htmlplus/react';
-const BrowseDefault = () => {
-  const onChange = (event) => {
+
+function App() {
+  function onChange(event) {
     const name = event.detail.files[0].file.name;
     alert(`File '${name}' selected.`);
-  };
+  }
   return (
-    <Browse droppable onChange={(event) => onChange(event)}>
-      Click or Drag & Drop a file(s) here
+    <Browse droppable onChange={onChange}>
+      {' '}
+      Click or Drag & Drop a file(s) here{' '}
     </Browse>
   );
-};
+}
 
 const BrowseDefaultExample = () => {
   return (
     <div className="ex-browse-default">
-      <BrowseDefault />
+      <App />
       <style>{`.ex-browse-default plus-browse {  background: white;  border: 2px dashed lightgray;  border-radius: 4px;  display: block;  padding: 3rem;  text-align: center;}.ex-browse-default plus-browse[dragging]:not([dragging='false']) {  border-color: darkgray;}`}</style>
     </div>
   )

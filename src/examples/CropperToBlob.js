@@ -2,33 +2,37 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
+import { useRef } from 'react';
+
 import { Center, Cropper } from '@htmlplus/react';
-const CropperToBlob = () => {
-  const toBlob = () => {
-    window.cropper3.toCanvas().toBlob((blob) => {
+
+function App() {
+  const cropperRef = useRef();
+  function onClick() {
+    cropperRef.current.toCanvas().toBlob((blob) => {
       console.log(blob);
     });
-  };
+  }
   return (
     <>
       <Center>
         <Cropper
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-          id="cropper3"
+          ref={cropperRef}
         ></Cropper>
       </Center>
       <br />
       <Center>
-        <button onClick={() => toBlob()}>To Blob</button>
+        <button onClick={onClick}>To URL</button>
       </Center>
     </>
   );
-};
+}
 
 const CropperToBlobExample = () => {
   return (
     <div className="ex-cropper-to-blob">
-      <CropperToBlob />
+      <App />
     </div>
   )
 };

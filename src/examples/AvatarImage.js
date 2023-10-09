@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Avatar, Center } from '@htmlplus/react';
-const AvatarImage = () => {
+
+function App() {
   return (
     <Center>
       <Avatar>
@@ -11,12 +12,12 @@ const AvatarImage = () => {
       </Avatar>
     </Center>
   );
-};
+}
 
 const AvatarImageExample = () => {
   return (
     <div className="ex-avatar-image">
-      <AvatarImage />
+      <App />
     </div>
   )
 };

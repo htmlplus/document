@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Card } from '@htmlplus/react';
-const CardDefault = () => {
+
+function App() {
   return (
     <div className="container">
       <Card></Card>
     </div>
   );
-};
+}
 
 const CardDefaultExample = () => {
   return (
-    <div className="ex-card-default dock">
-      <CardDefault />
+    <div className="ex-card-default">
+      <App />
       <style>{`.ex-card-default .container {  padding: 2rem 0;  background-color: whitesmoke;}.ex-card-default plus-card {  height: 12rem;  width: 12rem;  margin: auto;}`}</style>
     </div>
   )

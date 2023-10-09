@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Accordion, Faker, Icon } from '@htmlplus/react';
-const AccordionCustomIcon = () => {
+
+function App() {
   return (
     <Accordion summary="First">
       <Icon slot="icon-expand" name="plus"></Icon>
@@ -11,12 +12,12 @@ const AccordionCustomIcon = () => {
       <Faker></Faker>
     </Accordion>
   );
-};
+}
 
 const AccordionCustomIconExample = () => {
   return (
     <div className="ex-accordion-custom-icon">
-      <AccordionCustomIcon />
+      <App />
     </div>
   )
 };

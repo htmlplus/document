@@ -3,14 +3,15 @@
  **************************************************/
 
 import { Faker } from '@htmlplus/react';
-const FakerSeed = () => {
-  return <Faker seed="12345"></Faker>;
-};
+
+function App() {
+  return <Faker seed={12345}></Faker>;
+}
 
 const FakerSeedExample = () => {
   return (
     <div className="ex-faker-seed">
-      <FakerSeed />
+      <App />
     </div>
   )
 };

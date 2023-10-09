@@ -4,8 +4,9 @@
 
 import { useEffect, useState } from 'react';
 import { Faker } from '@htmlplus/react';
-import { setConfig } from '@htmlplus/core/config.js';
 import { faker } from '@faker-js/faker/locale/ja';
+
+import { setConfig } from '@htmlplus/core/config.js';
 
 setConfig({
   component: {
@@ -17,16 +18,18 @@ setConfig({
   }
 });
 
-const FakerLocalization = () => {
+
+
+function App() {
   return <Faker></Faker>;
-};
+}
 
 const FakerLocalizationExample = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
     <div className="ex-faker-localization">
-      {ready && <FakerLocalization />}
+      {ready && <App />}
     </div>
   )
 };

@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Grid } from '@htmlplus/react';
-const GridHide = () => {
+
+function App() {
   return (
     <Grid>
       <Grid.Item hideSm xs="3">
@@ -17,12 +18,12 @@ const GridHide = () => {
       </Grid.Item>
     </Grid>
   );
-};
+}
 
 const GridHideExample = () => {
   return (
     <div className="ex-grid-hide">
-      <GridHide />
+      <App />
       <style>{`.ex-grid-hide plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  padding: 0.5em;  text-align: center;}`}</style>
     </div>
   )

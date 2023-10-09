@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Breadcrumb, Center, Icon } from '@htmlplus/react';
-const BreadcrumbCustomExpander = () => {
+
+function App() {
   return (
     <Center>
       <Breadcrumb separator="-" max={2} expanderText="Show more">
@@ -15,12 +16,12 @@ const BreadcrumbCustomExpander = () => {
       </Breadcrumb>
     </Center>
   );
-};
+}
 
 const BreadcrumbCustomExpanderExample = () => {
   return (
     <div className="ex-breadcrumb-custom-expander">
-      <BreadcrumbCustomExpander />
+      <App />
       <style>{`.ex-breadcrumb-custom-expander plus-breadcrumb a {  color: inherit;  text-decoration: none;}.ex-breadcrumb-custom-expander plus-breadcrumb a:hover {  text-decoration: underline;}`}</style>
     </div>
   )

@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Avatar, Center } from '@htmlplus/react';
-const AvatarSize = () => {
+
+function App() {
   return (
     <Center>
       <Avatar.Group>
@@ -17,12 +18,12 @@ const AvatarSize = () => {
       </Avatar.Group>
     </Center>
   );
-};
+}
 
 const AvatarSizeExample = () => {
   return (
     <div className="ex-avatar-size">
-      <AvatarSize />
+      <App />
     </div>
   )
 };

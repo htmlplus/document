@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Animation, Center } from '@htmlplus/react';
-const AnimationDefault = () => {
+
+function App() {
   return (
     <Center>
-      <Animation iterations="Infinity" name="fade-in" run></Animation>
+      <Animation iterations={Infinity} name="fade-in" run></Animation>
     </Center>
   );
-};
+}
 
 const AnimationDefaultExample = () => {
   return (
     <div className="ex-animation-default">
-      <AnimationDefault />
+      <App />
       <style>{`.ex-animation-default plus-animation {  background: lightgray;  width: 100px;  height: 100px;}`}</style>
     </div>
   )

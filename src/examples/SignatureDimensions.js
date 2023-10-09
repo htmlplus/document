@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Center, Signature } from '@htmlplus/react';
-const SignatureDimensions = () => {
+
+function App() {
   return (
     <Center>
       <Signature backgroundColor="lightgray"></Signature>
     </Center>
   );
-};
+}
 
 const SignatureDimensionsExample = () => {
   return (
     <div className="ex-signature-dimensions">
-      <SignatureDimensions />
+      <App />
       <style>{`.ex-signature-dimensions plus-signature {  height: 320px;  width: 480px;}`}</style>
     </div>
   )

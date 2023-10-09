@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Avatar, Center } from '@htmlplus/react';
-const AvatarText = () => {
+
+function App() {
   return (
     <Center>
       <Avatar>T</Avatar>
     </Center>
   );
-};
+}
 
 const AvatarTextExample = () => {
   return (
     <div className="ex-avatar-text">
-      <AvatarText />
+      <App />
     </div>
   )
 };

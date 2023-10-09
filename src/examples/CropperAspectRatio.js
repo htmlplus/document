@@ -3,19 +3,20 @@
  **************************************************/
 
 import { Cropper } from '@htmlplus/react';
-const CropperAspectRatio = () => {
+
+function App() {
   return (
     <Cropper
       aspectRatio="3/4"
       src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
     ></Cropper>
   );
-};
+}
 
 const CropperAspectRatioExample = () => {
   return (
-    <div className="ex-cropper-aspect-ratio dock">
-      <CropperAspectRatio />
+    <div className="ex-cropper-aspect-ratio">
+      <App />
     </div>
   )
 };

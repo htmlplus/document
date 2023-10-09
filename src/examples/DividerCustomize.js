@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Divider, Faker, Grid } from '@htmlplus/react';
-const DividerCustomize = () => {
+
+function App() {
   return (
     <Grid alignItems="center" justifyContent="evenly">
       <Grid.Item xs="5">
@@ -15,12 +16,12 @@ const DividerCustomize = () => {
       </Grid.Item>
     </Grid>
   );
-};
+}
 
 const DividerCustomizeExample = () => {
   return (
     <div className="ex-divider-customize">
-      <DividerCustomize />
+      <App />
       <style>{`.ex-divider-customize plus-divider {  --plus-divider-color: darkgray;  --plus-divider-width: 0.5rem;  margin: 2rem 0;}`}</style>
     </div>
   )

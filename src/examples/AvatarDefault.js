@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Avatar, Center } from '@htmlplus/react';
-const AvatarDefault = () => {
+
+function App() {
   return (
     <Center>
       <Avatar></Avatar>
     </Center>
   );
-};
+}
 
 const AvatarDefaultExample = () => {
   return (
     <div className="ex-avatar-default">
-      <AvatarDefault />
+      <App />
     </div>
   )
 };

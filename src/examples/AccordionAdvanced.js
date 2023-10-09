@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Accordion, Faker, Stack } from '@htmlplus/react';
-const AccordionAdvanced = () => {
+
+function App() {
   return (
     <Accordion>
       <Stack slot="summary" justifyContent="space-between">
@@ -13,12 +14,12 @@ const AccordionAdvanced = () => {
       <Faker></Faker>
     </Accordion>
   );
-};
+}
 
 const AccordionAdvancedExample = () => {
   return (
     <div className="ex-accordion-advanced">
-      <AccordionAdvanced />
+      <App />
       <style>{`.ex-accordion-advanced [slot='summary'] {  flex-grow: 1;  margin-right: 1rem;}`}</style>
     </div>
   )

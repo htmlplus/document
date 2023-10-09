@@ -3,22 +3,23 @@
  **************************************************/
 
 import { Faker, Sticky } from '@htmlplus/react';
-const StickyDefault = () => {
+
+function App() {
   return (
     <div className="container">
       <Faker api="lorem.paragraphs"></Faker>
       <Sticky>
         <Faker></Faker>
       </Sticky>
-      <Faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></Faker>
+      <Faker api="lorem.paragraphs" arguments={[20, '\n\n']}></Faker>
     </div>
   );
-};
+}
 
 const StickyDefaultExample = () => {
   return (
-    <div className="ex-sticky-default dock">
-      <StickyDefault />
+    <div className="ex-sticky-default">
+      <App />
       <style>{`.ex-sticky-default .container {  height: 20rem;  overflow: auto;}.ex-sticky-default plus-faker {  display: block;  padding: 1rem;  text-align: justify;}.ex-sticky-default plus-sticky {  background-color: gold;}`}</style>
     </div>
   )

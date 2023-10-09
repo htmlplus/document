@@ -3,14 +3,15 @@
  **************************************************/
 
 import { ProgressBar } from '@htmlplus/react';
-const ProgressBarDefault = () => {
+
+function App() {
   return <ProgressBar></ProgressBar>;
-};
+}
 
 const ProgressBarDefaultExample = () => {
   return (
     <div className="ex-progress-bar-default">
-      <ProgressBarDefault />
+      <App />
     </div>
   )
 };

@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Grid } from '@htmlplus/react';
-const GridVertical = () => {
+
+function App() {
   return (
     <Grid alignItems="center" vertical>
       <Grid.Item xs="3">
@@ -17,12 +18,12 @@ const GridVertical = () => {
       </Grid.Item>
     </Grid>
   );
-};
+}
 
 const GridVerticalExample = () => {
   return (
     <div className="ex-grid-vertical">
-      <GridVertical />
+      <App />
       <style>{`.ex-grid-vertical plus-grid {  height: 12rem;}.ex-grid-vertical plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  height: 100%;  padding: 0.5em;  text-align: center;}`}</style>
     </div>
   )

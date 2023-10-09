@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Avatar, Center } from '@htmlplus/react';
-const AvatarSvgRatio = () => {
+
+function App() {
   return (
     <Center>
       <Avatar>
@@ -15,12 +16,12 @@ const AvatarSvgRatio = () => {
       </Avatar>
     </Center>
   );
-};
+}
 
 const AvatarSvgRatioExample = () => {
   return (
     <div className="ex-avatar-svg-ratio">
-      <AvatarSvgRatio />
+      <App />
       <style>{`.ex-avatar-svg-ratio svg {  padding: 0.5rem;  box-sizing: border-box;}`}</style>
     </div>
   )

@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Center, Spinner } from '@htmlplus/react';
-const SpinnerDefault = () => {
+
+function App() {
   return (
     <Center>
       <Spinner></Spinner>
     </Center>
   );
-};
+}
 
 const SpinnerDefaultExample = () => {
   return (
     <div className="ex-spinner-default">
-      <SpinnerDefault />
+      <App />
     </div>
   )
 };

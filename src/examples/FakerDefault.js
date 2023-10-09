@@ -3,14 +3,15 @@
  **************************************************/
 
 import { Faker } from '@htmlplus/react';
-const FakerDefault = () => {
+
+function App() {
   return <Faker></Faker>;
-};
+}
 
 const FakerDefaultExample = () => {
   return (
     <div className="ex-faker-default">
-      <FakerDefault />
+      <App />
     </div>
   )
 };

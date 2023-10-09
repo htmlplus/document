@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Center, Icon } from '@htmlplus/react';
-const IconDefault = () => {
+
+function App() {
   return (
     <Center>
       <Icon name="house"></Icon>
     </Center>
   );
-};
+}
 
 const IconDefaultExample = () => {
   return (
     <div className="ex-icon-default">
-      <IconDefault />
+      <App />
     </div>
   )
 };

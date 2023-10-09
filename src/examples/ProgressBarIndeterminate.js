@@ -3,14 +3,15 @@
  **************************************************/
 
 import { ProgressBar } from '@htmlplus/react';
-const ProgressBarIndeterminate = () => {
+
+function App() {
   return <ProgressBar variant="indeterminate"></ProgressBar>;
-};
+}
 
 const ProgressBarIndeterminateExample = () => {
   return (
     <div className="ex-progress-bar-indeterminate">
-      <ProgressBarIndeterminate />
+      <App />
     </div>
   )
 };

@@ -3,9 +3,10 @@
  **************************************************/
 
 import { Faker, Floating, Icon } from '@htmlplus/react';
-const FloatingFixed = () => {
+
+function App() {
   return (
-    <div>
+    <>
       <Faker api="lorem.paragraphs"></Faker>
       <br />
       <br />
@@ -13,14 +14,14 @@ const FloatingFixed = () => {
       <Floating fixed>
         <Icon name="circle-fill"></Icon>
       </Floating>
-    </div>
+    </>
   );
-};
+}
 
 const FloatingFixedExample = () => {
   return (
     <div className="ex-floating-fixed">
-      <FloatingFixed />
+      <App />
     </div>
   )
 };

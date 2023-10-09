@@ -3,19 +3,17 @@
  **************************************************/
 
 import { Cropper } from '@htmlplus/react';
-const CropperArea = () => {
+
+function App() {
   return (
-    <Cropper
-      area={1}
-      src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-    ></Cropper>
+    <Cropper area={1} src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"></Cropper>
   );
-};
+}
 
 const CropperAreaExample = () => {
   return (
-    <div className="ex-cropper-area dock">
-      <CropperArea />
+    <div className="ex-cropper-area">
+      <App />
     </div>
   )
 };

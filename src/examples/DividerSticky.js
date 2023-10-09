@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Divider, Sticky } from '@htmlplus/react';
-const DividerSticky = () => {
+
+function App() {
   return (
     <div className="container">
       <Sticky>
@@ -33,12 +34,12 @@ const DividerSticky = () => {
       </Sticky>
     </div>
   );
-};
+}
 
 const DividerStickyExample = () => {
   return (
-    <div className="ex-divider-sticky dock">
-      <DividerSticky />
+    <div className="ex-divider-sticky">
+      <App />
       <style>{`.ex-divider-sticky .container {  height: 20rem;  overflow: auto;}.ex-divider-sticky span {  background-color: white;  color: black;  padding: 0.5rem 1rem;}.ex-divider-sticky plus-divider {  --plus-divider-color: lightgray;  --plus-divider-opacity: 1;}.ex-divider-sticky plus-sticky {  margin-bottom: 20rem;}`}</style>
     </div>
   )

@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Center, Counter } from '@htmlplus/react';
-const CounterSeparatorDecimal = () => {
+
+function App() {
   return (
     <Center>
-      <Counter decimal="." decimals="2" separator="," to="1000" play></Counter>
+      <Counter decimal="." decimals={2} separator="," to={1000} play></Counter>
     </Center>
   );
-};
+}
 
 const CounterSeparatorDecimalExample = () => {
   return (
     <div className="ex-counter-separator-decimal">
-      <CounterSeparatorDecimal />
+      <App />
     </div>
   )
 };

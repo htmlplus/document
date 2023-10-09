@@ -3,14 +3,15 @@
  **************************************************/
 
 import { ProgressBar } from '@htmlplus/react';
-const ProgressBarBuffer = () => {
-  return <ProgressBar value="50" buffer="75"></ProgressBar>;
-};
+
+function App() {
+  return <ProgressBar value={50} buffer={75}></ProgressBar>;
+}
 
 const ProgressBarBufferExample = () => {
   return (
     <div className="ex-progress-bar-buffer">
-      <ProgressBarBuffer />
+      <App />
     </div>
   )
 };

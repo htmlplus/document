@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Cropper, Grid } from '@htmlplus/react';
-const CropperShape = () => {
+
+function App() {
   return (
     <Grid gutter="md">
       <Grid.Item xs="12" sm="6">
@@ -31,12 +32,12 @@ const CropperShape = () => {
       </Grid.Item>
     </Grid>
   );
-};
+}
 
 const CropperShapeExample = () => {
   return (
     <div className="ex-cropper-shape">
-      <CropperShape />
+      <App />
       <style>{`.ex-cropper-shape plus-cropper[shape='rectangle'] {  height: 100%;}`}</style>
     </div>
   )

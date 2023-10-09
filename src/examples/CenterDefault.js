@@ -3,14 +3,15 @@
  **************************************************/
 
 import { Center } from '@htmlplus/react';
-const CenterDefault = () => {
+
+function App() {
   return <Center>All elements are centered</Center>;
-};
+}
 
 const CenterDefaultExample = () => {
   return (
-    <div className="ex-center-default dock">
-      <CenterDefault />
+    <div className="ex-center-default">
+      <App />
       <style>{`.ex-center-default plus-center {  height: 10rem;  background-color: whitesmoke;}`}</style>
     </div>
   )

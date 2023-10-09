@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Center, Counter } from '@htmlplus/react';
-const CounterRange = () => {
+
+function App() {
   return (
     <Center>
-      <Counter from="10" to="1000" play></Counter>
+      <Counter from={10} to={1000} play></Counter>
     </Center>
   );
-};
+}
 
 const CounterRangeExample = () => {
   return (
     <div className="ex-counter-range">
-      <CounterRange />
+      <App />
     </div>
   )
 };

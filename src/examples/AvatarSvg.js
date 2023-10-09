@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Avatar, Center } from '@htmlplus/react';
-const AvatarSvg = () => {
+
+function App() {
   return (
     <Center>
       <Avatar>
@@ -15,12 +16,12 @@ const AvatarSvg = () => {
       </Avatar>
     </Center>
   );
-};
+}
 
 const AvatarSvgExample = () => {
   return (
     <div className="ex-avatar-svg">
-      <AvatarSvg />
+      <App />
     </div>
   )
 };

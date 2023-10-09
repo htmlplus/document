@@ -3,14 +3,15 @@
  **************************************************/
 
 import { Card } from '@htmlplus/react';
-const CardOutlined = () => {
+
+function App() {
   return <Card outlined></Card>;
-};
+}
 
 const CardOutlinedExample = () => {
   return (
     <div className="ex-card-outlined">
-      <CardOutlined />
+      <App />
       <style>{`.ex-card-outlined plus-card {  height: 12rem;  width: 12rem;  margin: auto;}`}</style>
     </div>
   )

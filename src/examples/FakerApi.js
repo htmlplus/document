@@ -3,14 +3,15 @@
  **************************************************/
 
 import { Faker } from '@htmlplus/react';
-const FakerApi = () => {
+
+function App() {
   return <Faker api="lorem.paragraphs"></Faker>;
-};
+}
 
 const FakerApiExample = () => {
   return (
     <div className="ex-faker-api">
-      <FakerApi />
+      <App />
     </div>
   )
 };

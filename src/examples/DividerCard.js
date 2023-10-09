@@ -3,9 +3,10 @@
  **************************************************/
 
 import { Card, Divider } from '@htmlplus/react';
-const DividerCard = () => {
+
+function App() {
   return (
-    <Card elevation="10">
+    <Card elevation={10}>
       Item 1<Divider></Divider>
       Item 2<Divider></Divider>
       Item 3<Divider></Divider>
@@ -13,12 +14,12 @@ const DividerCard = () => {
       Item 5
     </Card>
   );
-};
+}
 
 const DividerCardExample = () => {
   return (
     <div className="ex-divider-card">
-      <DividerCard />
+      <App />
       <style>{`.ex-divider-card plus-card {  padding: 0 1rem;  line-height: 3rem;}`}</style>
     </div>
   )

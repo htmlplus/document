@@ -3,19 +3,17 @@
  **************************************************/
 
 import { Cropper } from '@htmlplus/react';
-const CropperIndicator = () => {
+
+function App() {
   return (
-    <Cropper
-      indicator
-      src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-    ></Cropper>
+    <Cropper indicator src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"></Cropper>
   );
-};
+}
 
 const CropperIndicatorExample = () => {
   return (
-    <div className="ex-cropper-indicator dock">
-      <CropperIndicator />
+    <div className="ex-cropper-indicator">
+      <App />
     </div>
   )
 };

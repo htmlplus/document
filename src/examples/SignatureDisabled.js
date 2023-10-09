@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Center, Signature } from '@htmlplus/react';
-const SignatureDisabled = () => {
+
+function App() {
   return (
     <Center>
       <Signature backgroundColor="lightgray" disabled></Signature>
     </Center>
   );
-};
+}
 
 const SignatureDisabledExample = () => {
   return (
     <div className="ex-signature-disabled">
-      <SignatureDisabled />
+      <App />
     </div>
   )
 };

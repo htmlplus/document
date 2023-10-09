@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Icon, Stack } from '@htmlplus/react';
-const IconColor = () => {
+
+function App() {
   return (
     <Stack gap="2rem">
       <Icon name="house" color="#08DFC8"></Icon>
@@ -13,12 +14,12 @@ const IconColor = () => {
       <Icon name="house" color="#9073C1"></Icon>
     </Stack>
   );
-};
+}
 
 const IconColorExample = () => {
   return (
     <div className="ex-icon-color">
-      <IconColor />
+      <App />
     </div>
   )
 };

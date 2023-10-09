@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Grid } from '@htmlplus/react';
-const GridGutterY = () => {
+
+function App() {
   return (
     <Grid gutterY="md">
       <Grid.Item xs="12" sm="6" lg="5">
@@ -26,12 +27,12 @@ const GridGutterY = () => {
       </Grid.Item>
     </Grid>
   );
-};
+}
 
 const GridGutterYExample = () => {
   return (
     <div className="ex-grid-gutter-y">
-      <GridGutterY />
+      <App />
       <style>{`.ex-grid-gutter-y plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  padding: 0.5em;  text-align: center;}`}</style>
     </div>
   )

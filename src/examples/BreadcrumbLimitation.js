@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Breadcrumb, Stack } from '@htmlplus/react';
-const BreadcrumbLimitation = () => {
+
+function App() {
   return (
     <Stack gap="0.75rem" vertical>
       <Breadcrumb separator="/" max={4} offset={0}>
@@ -38,12 +39,12 @@ const BreadcrumbLimitation = () => {
       </Breadcrumb>
     </Stack>
   );
-};
+}
 
 const BreadcrumbLimitationExample = () => {
   return (
     <div className="ex-breadcrumb-limitation">
-      <BreadcrumbLimitation />
+      <App />
       <style>{`.ex-breadcrumb-limitation plus-breadcrumb a {  color: inherit;  text-decoration: none;}.ex-breadcrumb-limitation plus-breadcrumb a:hover {  text-decoration: underline;}`}</style>
     </div>
   )

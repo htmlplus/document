@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Avatar, Center } from '@htmlplus/react';
-const AvatarWildcardSize = () => {
+
+function App() {
   return (
     <Center>
       <Avatar.Group>
@@ -13,12 +14,12 @@ const AvatarWildcardSize = () => {
       </Avatar.Group>
     </Center>
   );
-};
+}
 
 const AvatarWildcardSizeExample = () => {
   return (
     <div className="ex-avatar-wildcard-size">
-      <AvatarWildcardSize />
+      <App />
     </div>
   )
 };

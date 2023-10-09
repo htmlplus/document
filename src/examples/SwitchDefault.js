@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Center, Switch } from '@htmlplus/react';
-const SwitchDefault = () => {
+
+function App() {
   return (
     <Center>
       <Switch></Switch>
     </Center>
   );
-};
+}
 
 const SwitchDefaultExample = () => {
   return (
     <div className="ex-switch-default">
-      <SwitchDefault />
+      <App />
     </div>
   )
 };

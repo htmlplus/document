@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Grid } from '@htmlplus/react';
-const GridWrap = () => {
+
+function App() {
   return (
     <Grid wrap="off">
       <Grid.Item xs="6">
@@ -20,12 +21,12 @@ const GridWrap = () => {
       </Grid.Item>
     </Grid>
   );
-};
+}
 
 const GridWrapExample = () => {
   return (
     <div className="ex-grid-wrap">
-      <GridWrap />
+      <App />
       <style>{`.ex-grid-wrap plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  padding: 0.5em;  text-align: center;}`}</style>
     </div>
   )

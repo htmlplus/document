@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Spinner, Stack } from '@htmlplus/react';
-const SpinnerSize = () => {
+
+function App() {
   return (
     <Stack gap="2rem">
       <Spinner size="sm"></Spinner>
@@ -11,12 +12,12 @@ const SpinnerSize = () => {
       <Spinner size="lg"></Spinner>
     </Stack>
   );
-};
+}
 
 const SpinnerSizeExample = () => {
   return (
     <div className="ex-spinner-size">
-      <SpinnerSize />
+      <App />
     </div>
   )
 };

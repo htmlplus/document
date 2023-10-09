@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Avatar, Center, Tooltip } from '@htmlplus/react';
-const AvatarGroupTooltip = () => {
+
+function App() {
   return (
     <Center>
       <Avatar.Group stacked>
@@ -16,12 +17,12 @@ const AvatarGroupTooltip = () => {
       </Avatar.Group>
     </Center>
   );
-};
+}
 
 const AvatarGroupTooltipExample = () => {
   return (
     <div className="ex-avatar-group-tooltip">
-      <AvatarGroupTooltip />
+      <App />
     </div>
   )
 };

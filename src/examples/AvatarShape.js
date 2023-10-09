@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Avatar, Center } from '@htmlplus/react';
-const AvatarShape = () => {
+
+function App() {
   return (
     <Center>
       <Avatar.Group>
@@ -13,12 +14,12 @@ const AvatarShape = () => {
       </Avatar.Group>
     </Center>
   );
-};
+}
 
 const AvatarShapeExample = () => {
   return (
     <div className="ex-avatar-shape">
-      <AvatarShape />
+      <App />
     </div>
   )
 };

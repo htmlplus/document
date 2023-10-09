@@ -3,7 +3,8 @@
  **************************************************/
 
 import { AspectRatio, Card, Center } from '@htmlplus/react';
-const AspectRatioCard = () => {
+
+function App() {
   return (
     <Center>
       <Card outlined>
@@ -17,12 +18,12 @@ const AspectRatioCard = () => {
       </Card>
     </Center>
   );
-};
+}
 
 const AspectRatioCardExample = () => {
   return (
     <div className="ex-aspect-ratio-card">
-      <AspectRatioCard />
+      <App />
       <style>{`.ex-aspect-ratio-card plus-card {  width: 300px;}.ex-aspect-ratio-card .placeholder {  background-color: lightgray;  border-radius: 4px;}`}</style>
     </div>
   )

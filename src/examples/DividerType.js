@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Divider } from '@htmlplus/react';
-const DividerType = () => {
+
+function App() {
   return (
     <>
       <Divider type="dashed"></Divider>
@@ -23,12 +24,12 @@ const DividerType = () => {
       <Divider type="solid"></Divider>
     </>
   );
-};
+}
 
 const DividerTypeExample = () => {
   return (
     <div className="ex-divider-type">
-      <DividerType />
+      <App />
     </div>
   )
 };

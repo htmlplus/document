@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Accordion, Faker } from '@htmlplus/react';
-const AccordionOpen = () => {
+
+function App() {
   return (
     <Accordion summary="Summary" open>
       <Faker></Faker>
     </Accordion>
   );
-};
+}
 
 const AccordionOpenExample = () => {
   return (
     <div className="ex-accordion-open">
-      <AccordionOpen />
+      <App />
     </div>
   )
 };

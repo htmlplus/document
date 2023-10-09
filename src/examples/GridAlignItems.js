@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Grid } from '@htmlplus/react';
-const GridAlignItems = () => {
+
+function App() {
   return (
     <Grid alignItems="center">
       <Grid.Item xs="6">
@@ -26,12 +27,12 @@ const GridAlignItems = () => {
       </Grid.Item>
     </Grid>
   );
-};
+}
 
 const GridAlignItemsExample = () => {
   return (
     <div className="ex-grid-align-items">
-      <GridAlignItems />
+      <App />
       <style>{`.ex-grid-align-items plus-grid {  background-color: whitesmoke;  height: 8rem;}.ex-grid-align-items plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  padding: 0.5em;  text-align: center;}`}</style>
     </div>
   )

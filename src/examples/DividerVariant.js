@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Divider } from '@htmlplus/react';
-const DividerVariant = () => {
+
+function App() {
   return (
     <>
       <Divider variant="middle"></Divider>
@@ -13,12 +14,12 @@ const DividerVariant = () => {
       <Divider variant="full"></Divider>
     </>
   );
-};
+}
 
 const DividerVariantExample = () => {
   return (
     <div className="ex-divider-variant">
-      <DividerVariant />
+      <App />
     </div>
   )
 };

@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Center, Signature } from '@htmlplus/react';
-const SignatureDistance = () => {
+
+function App() {
   return (
     <Center>
-      <Signature backgroundColor="lightgray" distance="10"></Signature>
+      <Signature backgroundColor="lightgray" distance={10}></Signature>
     </Center>
   );
-};
+}
 
 const SignatureDistanceExample = () => {
   return (
     <div className="ex-signature-distance">
-      <SignatureDistance />
+      <App />
     </div>
   )
 };

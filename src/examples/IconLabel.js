@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Center, Icon } from '@htmlplus/react';
-const IconLabel = () => {
+
+function App() {
   return (
     <Center>
       <Icon name="house" label="Go to home"></Icon>
     </Center>
   );
-};
+}
 
 const IconLabelExample = () => {
   return (
     <div className="ex-icon-label">
-      <IconLabel />
+      <App />
     </div>
   )
 };

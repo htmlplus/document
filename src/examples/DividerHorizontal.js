@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Divider, Faker } from '@htmlplus/react';
-const DividerHorizontal = () => {
+
+function App() {
   return (
     <>
       <Faker></Faker>
@@ -13,12 +14,12 @@ const DividerHorizontal = () => {
       <Faker></Faker>
     </>
   );
-};
+}
 
 const DividerHorizontalExample = () => {
   return (
     <div className="ex-divider-horizontal">
-      <DividerHorizontal />
+      <App />
       <style>{`.ex-divider-horizontal plus-divider {  margin: 1rem 0;}`}</style>
     </div>
   )

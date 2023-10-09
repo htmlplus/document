@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Icon, Stack } from '@htmlplus/react';
-const IconCustomSize = () => {
+
+function App() {
   return (
     <Stack gap="2rem">
       <Icon name="house" size="16"></Icon>
@@ -11,12 +12,12 @@ const IconCustomSize = () => {
       <Icon name="house" size="3rem"></Icon>
     </Stack>
   );
-};
+}
 
 const IconCustomSizeExample = () => {
   return (
     <div className="ex-icon-custom-size">
-      <IconCustomSize />
+      <App />
     </div>
   )
 };

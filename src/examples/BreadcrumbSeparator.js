@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Breadcrumb, Center } from '@htmlplus/react';
-const BreadcrumbSeparator = () => {
+
+function App() {
   return (
     <Center>
       <Breadcrumb separator="-">
@@ -15,12 +16,12 @@ const BreadcrumbSeparator = () => {
       </Breadcrumb>
     </Center>
   );
-};
+}
 
 const BreadcrumbSeparatorExample = () => {
   return (
     <div className="ex-breadcrumb-separator">
-      <BreadcrumbSeparator />
+      <App />
       <style>{`.ex-breadcrumb-separator plus-breadcrumb a {  color: inherit;  text-decoration: none;}.ex-breadcrumb-separator plus-breadcrumb a:hover {  text-decoration: underline;}`}</style>
     </div>
   )

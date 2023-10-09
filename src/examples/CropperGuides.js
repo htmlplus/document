@@ -3,19 +3,17 @@
  **************************************************/
 
 import { Cropper } from '@htmlplus/react';
-const CropperGuides = () => {
+
+function App() {
   return (
-    <Cropper
-      guides
-      src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-    ></Cropper>
+    <Cropper guides src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"></Cropper>
   );
-};
+}
 
 const CropperGuidesExample = () => {
   return (
-    <div className="ex-cropper-guides dock">
-      <CropperGuides />
+    <div className="ex-cropper-guides">
+      <App />
     </div>
   )
 };

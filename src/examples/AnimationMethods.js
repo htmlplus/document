@@ -2,28 +2,44 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
+import { useRef } from 'react';
+
 import { Animation, Center } from '@htmlplus/react';
-const AnimationMethods = () => {
+
+function App() {
+  const animationRef = useRef();
+  function onClick1() {
+    animationRef.current.cancel();
+  }
+  function onClick2() {
+    animationRef.current.finish();
+  }
+  function onClick3() {
+    animationRef.current.pause();
+  }
+  function onClick4() {
+    animationRef.current.play();
+  }
   return (
     <>
       <Center>
-        <Animation id="animation4" iterations="3" name="fade-out"></Animation>
+        <Animation iterations={3} name="fade-out" ref={animationRef}></Animation>
       </Center>
       <br />
       <Center>
-        <button onClick={() => window.animation4.cancel()}>Cancel</button>
-        <button onClick={() => window.animation4.finish()}>Finish</button>
-        <button onClick={() => window.animation4.pause()}>Pause</button>
-        <button onClick={() => window.animation4.play()}>Play</button>
+        <button onClick={onClick1}>Cancel</button>
+        <button onClick={onClick2}>Finish</button>
+        <button onClick={onClick3}>Pause</button>
+        <button onClick={onClick4}>Play</button>
       </Center>
     </>
   );
-};
+}
 
 const AnimationMethodsExample = () => {
   return (
     <div className="ex-animation-methods">
-      <AnimationMethods />
+      <App />
       <style>{`.ex-animation-methods button {  margin: 0 0.5rem;}.ex-animation-methods plus-animation {  background: lightgray;  width: 100px;  height: 100px;}`}</style>
     </div>
   )

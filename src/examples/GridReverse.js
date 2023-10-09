@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Grid } from '@htmlplus/react';
-const GridReverse = () => {
+
+function App() {
   return (
     <Grid reverse>
       <Grid.Item xs="2">
@@ -17,12 +18,12 @@ const GridReverse = () => {
       </Grid.Item>
     </Grid>
   );
-};
+}
 
 const GridReverseExample = () => {
   return (
     <div className="ex-grid-reverse">
-      <GridReverse />
+      <App />
       <style>{`.ex-grid-reverse plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  padding: 0.5em;  text-align: center;}`}</style>
     </div>
   )

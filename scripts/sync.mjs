@@ -104,7 +104,7 @@ const scoped = (styles, className) => {
 (async () => {
   const DIRECTORY = './src/examples';
   const FILE = './src/data/examples.ts';
-  const LOCAL = path.join(__dirname, '../../examples/dist/db.json');
+  const LOCAL = path.join(__dirname, '../../examples.new/dist/db.json'); // TODO
   const REMOTE = 'https://github.com/htmlplus/examples/raw/main/dist/db.json';
   const HEADER = [
     '/**************************************************',
@@ -135,21 +135,16 @@ const scoped = (styles, className) => {
     const lines = [...HEADER, `import dynamic from 'next/dynamic';`, ''];
 
     for (const item of db) {
-      if (item.plugin != 'react-dedicated') continue;
+      if (!item.key.startsWith('react-dedicated')) continue;
 
-      const name = `${pascalCase(item.component)}${pascalCase(item.example)}`;
+      const name = pascalCase(item.key.replace('react-dedicated/', ''));
 
       const className = `ex-${paramCase(name)}`;
 
-      const outputs = db.find((X) => {
-        return X.plugin == 'prepare' && X.component == item.component && X.example == item.example;
-      })?.output;
+      let { config, script, style } = item;
 
-      const config = outputs?.find((output) => output.key == 'config')?.content;
-
-      const settings = outputs?.find((output) => output.key == 'settings')?.content;
-
-      let { script, style } = item.output;
+      // TODO
+      const settings = {};
 
       if (style) {
         style = scoped(style, `.${className}`);
@@ -165,9 +160,9 @@ const scoped = (styles, className) => {
       script += '  return (\n';
       script += `    <div className="${className}${settings?.dock ? ' dock' : ''}">\n`;
       if (config) {
-        script += `      {ready && <${name} />}\n`;
+        script += `      {ready && <App />}\n`;
       } else {
-        script += `      <${name} />\n`;
+        script += `      <App />\n`;
       }
       script += style ? `      <style>{\`${style}\`}</style>\n` : '';
       script += '    </div>\n';

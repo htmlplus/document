@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Divider } from '@htmlplus/react';
-const DividerWidth = () => {
+
+function App() {
   return (
     <>
       <Divider width="xs"></Divider>
@@ -17,12 +18,12 @@ const DividerWidth = () => {
       <Divider width="xl"></Divider>
     </>
   );
-};
+}
 
 const DividerWidthExample = () => {
   return (
     <div className="ex-divider-width">
-      <DividerWidth />
+      <App />
     </div>
   )
 };

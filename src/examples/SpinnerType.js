@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Spinner, Stack } from '@htmlplus/react';
-const SpinnerType = () => {
+
+function App() {
   return (
     <Stack gap="2rem">
       <Spinner type="default"></Spinner>
@@ -14,12 +15,12 @@ const SpinnerType = () => {
       <Spinner type="square"></Spinner>
     </Stack>
   );
-};
+}
 
 const SpinnerTypeExample = () => {
   return (
     <div className="ex-spinner-type">
-      <SpinnerType />
+      <App />
     </div>
   )
 };

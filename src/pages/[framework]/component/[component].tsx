@@ -37,11 +37,13 @@ export function getStaticProps(context: GetStaticPropsContext) {
   component.readmeContent ||= null;
 
   for (const current of examples) {
-    if (current.plugin != params.framework || current.component != params.component) continue;
+    if (!current.key.startsWith(`${params.framework}/${params.component}/`)) continue;
 
-    const parameters = Object.assign({}, params, { example: current.example });
+    const name = current.key.split('/').at(2);
 
-    const title = capitalCase(current.example);
+    const parameters = Object.assign({}, params, { example: name });
+
+    const title = capitalCase(name);
 
     const tabs: any[] = [];
 
@@ -57,7 +59,7 @@ export function getStaticProps(context: GetStaticPropsContext) {
 
       if (key == 'template' && params.framework.startsWith('react')) continue;
 
-      const content = current.output?.[key] ?? null;
+      const content = current[key] ?? null;
 
       if (key == 'config' && !content) continue;
 
@@ -92,16 +94,16 @@ export function getStaticProps(context: GetStaticPropsContext) {
     ];
 
     // TODO
-    const { isolate = false, rtl = false } =
-      examples
-        .find(
-          (item) => item.plugin == 'prepare' && item.component == params.component && item.example == current.example
-        )
-        ?.output?.find?.((output: any) => output.key == 'settings')?.content || {};
+    const { isolate = false, rtl = false } = {};
+    // examples
+    //   .find(
+    //     (item) => item.plugin == 'prepare' && item.component == params.component && item.example == current.example
+    //   )
+    //   ?.output?.find?.((output: any) => output.key == 'settings')?.content || {};
 
-    example[current.example] = {
+    example[name] = {
       component: component.key,
-      example: current.example,
+      example: name,
       isolate,
       links,
       rtl,

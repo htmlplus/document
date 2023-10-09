@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Breadcrumb, Center } from '@htmlplus/react';
-const BreadcrumbDefault = () => {
+
+function App() {
   return (
     <Center>
       <Breadcrumb separator="/">
@@ -14,12 +15,12 @@ const BreadcrumbDefault = () => {
       </Breadcrumb>
     </Center>
   );
-};
+}
 
 const BreadcrumbDefaultExample = () => {
   return (
     <div className="ex-breadcrumb-default">
-      <BreadcrumbDefault />
+      <App />
       <style>{`.ex-breadcrumb-default plus-breadcrumb a {  color: inherit;  text-decoration: none;}.ex-breadcrumb-default plus-breadcrumb a:hover {  text-decoration: underline;}`}</style>
     </div>
   )

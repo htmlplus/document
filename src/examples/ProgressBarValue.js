@@ -3,14 +3,15 @@
  **************************************************/
 
 import { ProgressBar } from '@htmlplus/react';
-const ProgressBarValue = () => {
-  return <ProgressBar value="25"></ProgressBar>;
-};
+
+function App() {
+  return <ProgressBar value={25}></ProgressBar>;
+}
 
 const ProgressBarValueExample = () => {
   return (
     <div className="ex-progress-bar-value">
-      <ProgressBarValue />
+      <App />
     </div>
   )
 };

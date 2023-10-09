@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Avatar, Center } from '@htmlplus/react';
-const AvatarCustomSize = () => {
+
+function App() {
   return (
     <Center>
       <Avatar.Group>
@@ -17,12 +18,12 @@ const AvatarCustomSize = () => {
       </Avatar.Group>
     </Center>
   );
-};
+}
 
 const AvatarCustomSizeExample = () => {
   return (
     <div className="ex-avatar-custom-size">
-      <AvatarCustomSize />
+      <App />
       <style>{`.ex-avatar-custom-size plus-avatar[size='xxs'] {  --plus-avatar-size: 1.5rem;}.ex-avatar-custom-size plus-avatar[size='xs'] {  --plus-avatar-size: 2rem;}.ex-avatar-custom-size plus-avatar[size='sm'] {  --plus-avatar-size: 2.5rem;}.ex-avatar-custom-size plus-avatar[size='md'] {  --plus-avatar-size: 3rem;}.ex-avatar-custom-size plus-avatar[size='lg'] {  --plus-avatar-size: 3.5rem;}.ex-avatar-custom-size plus-avatar[size='xl'] {  --plus-avatar-size: 4rem;}.ex-avatar-custom-size plus-avatar[size='xxl'] {  --plus-avatar-size: 4.5rem;}`}</style>
     </div>
   )

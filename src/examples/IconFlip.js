@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Icon, Stack } from '@htmlplus/react';
-const IconFlip = () => {
+
+function App() {
   return (
     <Stack gap="2rem">
       <Icon name="house"></Icon>
@@ -12,12 +13,12 @@ const IconFlip = () => {
       <Icon name="house" flip="both"></Icon>
     </Stack>
   );
-};
+}
 
 const IconFlipExample = () => {
   return (
     <div className="ex-icon-flip">
-      <IconFlip />
+      <App />
     </div>
   )
 };

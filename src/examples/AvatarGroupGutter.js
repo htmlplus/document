@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Avatar, Center } from '@htmlplus/react';
-const AvatarGroupGutter = () => {
+
+function App() {
   return (
     <>
       <Center>
@@ -23,12 +24,12 @@ const AvatarGroupGutter = () => {
       </Center>
     </>
   );
-};
+}
 
 const AvatarGroupGutterExample = () => {
   return (
     <div className="ex-avatar-group-gutter">
-      <AvatarGroupGutter />
+      <App />
       <style>{`.ex-avatar-group-gutter plus-avatar-group {  --plus-avatar-group-gutter-stacked: -2rem;  --plus-avatar-group-gutter-unstacked: 2rem;}`}</style>
     </div>
   )

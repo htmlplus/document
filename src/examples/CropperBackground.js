@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Cropper, Grid } from '@htmlplus/react';
-const CropperBackground = () => {
+
+function App() {
   return (
     <Grid gutter="md">
       <Grid.Item xs="12" sm="6">
@@ -22,12 +23,12 @@ const CropperBackground = () => {
       </Grid.Item>
     </Grid>
   );
-};
+}
 
 const CropperBackgroundExample = () => {
   return (
     <div className="ex-cropper-background">
-      <CropperBackground />
+      <App />
     </div>
   )
 };

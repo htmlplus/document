@@ -3,18 +3,19 @@
  **************************************************/
 
 import { Center, Counter } from '@htmlplus/react';
-const CounterDelay = () => {
+
+function App() {
   return (
     <Center>
-      <Counter delay="1500" to="1000" play></Counter>
+      <Counter delay={1500} to={1000} play></Counter>
     </Center>
   );
-};
+}
 
 const CounterDelayExample = () => {
   return (
     <div className="ex-counter-delay">
-      <CounterDelay />
+      <App />
     </div>
   )
 };

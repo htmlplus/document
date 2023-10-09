@@ -3,9 +3,10 @@
  **************************************************/
 
 import { Accordion, Faker } from '@htmlplus/react';
-const AccordionDisabled = () => {
+
+function App() {
   return (
-    <div>
+    <>
       <Accordion summary="First">
         <Faker></Faker>
       </Accordion>
@@ -15,14 +16,14 @@ const AccordionDisabled = () => {
       <Accordion summary="Third" disabled>
         <Faker></Faker>
       </Accordion>
-    </div>
+    </>
   );
-};
+}
 
 const AccordionDisabledExample = () => {
   return (
     <div className="ex-accordion-disabled">
-      <AccordionDisabled />
+      <App />
     </div>
   )
 };

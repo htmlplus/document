@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Center, Icon } from '@htmlplus/react';
-const CenterInline = () => {
+
+function App() {
   return (
     <Center>
       <button>
@@ -14,12 +15,12 @@ const CenterInline = () => {
       </button>
     </Center>
   );
-};
+}
 
 const CenterInlineExample = () => {
   return (
     <div className="ex-center-inline">
-      <CenterInline />
+      <App />
     </div>
   )
 };

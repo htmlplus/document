@@ -3,7 +3,8 @@
  **************************************************/
 
 import { AspectRatio, Grid } from '@htmlplus/react';
-const AspectRatioMore = () => {
+
+function App() {
   return (
     <Grid>
       <Grid.Item xs="12" sm="6">
@@ -41,12 +42,12 @@ const AspectRatioMore = () => {
       </Grid.Item>
     </Grid>
   );
-};
+}
 
 const AspectRatioMoreExample = () => {
   return (
     <div className="ex-aspect-ratio-more">
-      <AspectRatioMore />
+      <App />
       <style>{`.ex-aspect-ratio-more .box {  color: white;  padding: 0.75rem;  margin: 0.25rem;}.ex-aspect-ratio-more .ratio-one {  width: 40.625%;  float: right;}.ex-aspect-ratio-more .one {  background: #08dfc8;}.ex-aspect-ratio-more .two {  background: #ff5449;}.ex-aspect-ratio-more .three {  background: #5f9ee9;}.ex-aspect-ratio-more .four {  background: #ffc903;}.ex-aspect-ratio-more .five {  background: #9073c1;}`}</style>
     </div>
   )

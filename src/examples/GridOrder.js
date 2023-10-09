@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Grid } from '@htmlplus/react';
-const GridOrder = () => {
+
+function App() {
   return (
     <Grid>
       <Grid.Item orderXs="3" xs="grow">
@@ -17,12 +18,12 @@ const GridOrder = () => {
       </Grid.Item>
     </Grid>
   );
-};
+}
 
 const GridOrderExample = () => {
   return (
     <div className="ex-grid-order">
-      <GridOrder />
+      <App />
       <style>{`.ex-grid-order plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  padding: 0.5em;  text-align: center;}`}</style>
     </div>
   )

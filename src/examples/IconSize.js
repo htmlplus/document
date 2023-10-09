@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Icon, Stack } from '@htmlplus/react';
-const IconSize = () => {
+
+function App() {
   return (
     <>
       <Stack gap="2rem">
@@ -26,12 +27,12 @@ const IconSize = () => {
       </Stack>
     </>
   );
-};
+}
 
 const IconSizeExample = () => {
   return (
     <div className="ex-icon-size">
-      <IconSize />
+      <App />
     </div>
   )
 };

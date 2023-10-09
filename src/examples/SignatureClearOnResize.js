@@ -3,16 +3,15 @@
  **************************************************/
 
 import { Signature } from '@htmlplus/react';
-const SignatureClearOnResize = () => {
-  return (
-    <Signature backgroundColor="lightgray" clearOnResize resizable></Signature>
-  );
-};
+
+function App() {
+  return <Signature backgroundColor="lightgray" clearOnResize resizable></Signature>;
+}
 
 const SignatureClearOnResizeExample = () => {
   return (
-    <div className="ex-signature-clear-on-resize dock">
-      <SignatureClearOnResize />
+    <div className="ex-signature-clear-on-resize">
+      <App />
       <style>{`.ex-signature-clear-on-resize plus-signature {  height: 15rem;  width: 100%;}`}</style>
     </div>
   )

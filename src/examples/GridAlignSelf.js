@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Grid } from '@htmlplus/react';
-const GridAlignSelf = () => {
+
+function App() {
   return (
     <Grid alignItems="center">
       <Grid.Item xs="grow" alignSelf="start">
@@ -17,12 +18,12 @@ const GridAlignSelf = () => {
       </Grid.Item>
     </Grid>
   );
-};
+}
 
 const GridAlignSelfExample = () => {
   return (
     <div className="ex-grid-align-self">
-      <GridAlignSelf />
+      <App />
       <style>{`.ex-grid-align-self plus-grid {  background-color: whitesmoke;  height: 8rem;}.ex-grid-align-self plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  padding: 0.5em;  text-align: center;}`}</style>
     </div>
   )

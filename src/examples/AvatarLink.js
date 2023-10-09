@@ -3,7 +3,8 @@
  **************************************************/
 
 import { Avatar, Center } from '@htmlplus/react';
-const AvatarLink = () => {
+
+function App() {
   return (
     <Center>
       <Avatar>
@@ -12,12 +13,12 @@ const AvatarLink = () => {
       </Avatar>
     </Center>
   );
-};
+}
 
 const AvatarLinkExample = () => {
   return (
     <div className="ex-avatar-link">
-      <AvatarLink />
+      <App />
     </div>
   )
 };
