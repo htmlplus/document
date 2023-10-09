@@ -23,7 +23,7 @@ function App() {
       </Center>
       <br />
       <Center>
-        <button onClick={onClick}>To URL</button>
+        <button onClick={onClick}>To Blob</button>
       </Center>
     </>
   );

@@ -37,13 +37,13 @@ export function getStaticProps(context: GetStaticPropsContext) {
   component.readmeContent ||= null;
 
   for (const current of examples) {
-    if (!current.key.startsWith(`${params.framework}/${params.component}/`)) continue;
+    const [frameworkKey, componentKey, exampleKey] = current.key.split('/');
 
-    const name = current.key.split('/').at(2);
+    if (params.framework != frameworkKey || params.component != componentKey) continue;
 
-    const parameters = Object.assign({}, params, { example: name });
+    const parameters = Object.assign({}, params, { example: exampleKey });
 
-    const title = capitalCase(name);
+    const title = capitalCase(exampleKey);
 
     const tabs: any[] = [];
 
@@ -93,20 +93,11 @@ export function getStaticProps(context: GetStaticPropsContext) {
       }
     ];
 
-    // TODO
-    const { isolate = false, rtl = false } = {};
-    // examples
-    //   .find(
-    //     (item) => item.plugin == 'prepare' && item.component == params.component && item.example == current.example
-    //   )
-    //   ?.output?.find?.((output: any) => output.key == 'settings')?.content || {};
-
-    example[name] = {
+    example[exampleKey] = {
       component: component.key,
-      example: name,
-      isolate,
+      example: exampleKey,
+      ...current.settings, // TODO
       links,
-      rtl,
       tabs,
       title
     };

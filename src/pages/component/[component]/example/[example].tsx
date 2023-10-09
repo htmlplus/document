@@ -22,13 +22,14 @@ export function getStaticProps(context: GetStaticPropsContext) {
 }
 
 export function getStaticPaths() {
-  // TODO
   const paths = examples
-    .filter((example) => {
-      return example.output?.find?.((output: any) => output.key == 'settings')?.content?.isolate;
-    })
+    .filter((example) => example.settings?.isolate)
     .map((example) => {
-      return getPath(ROUTES.COMPONENT_EXAMPLE, example);
+      const [frameworkKey, componentKey, exampleKey] = example.key.split('/');
+      return getPath(ROUTES.COMPONENT_EXAMPLE, {
+        component: componentKey,
+        example: exampleKey
+      });
     });
   return {
     paths,

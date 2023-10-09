@@ -2576,30 +2576,30 @@ export const examples: any[] = [
   {
     "key": "angular/cropper/to-blob",
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('cropper')\n  cropperRef!: ElementRef;\n  onClick() {\n    this.cropperRef.nativeElement.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  }\n}\n",
-    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    #cropper\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"onClick()\">To URL</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    #cropper\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"onClick()\">To Blob</button>\n</plus-center>\n"
   },
   {
     "key": "javascript/cropper/to-blob",
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/center.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/cropper.js';\n\n$button.addEventListener('click', () => {\n  $cropper.toCanvas().toBlob((blob) => {\n    console.log(blob);\n  });\n});\n",
-    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"$cropper\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button id=\"$button\">To URL</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"$cropper\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button id=\"$button\">To Blob</button>\n</plus-center>\n"
   },
   {
     "key": "react-dedicated/cropper/to-blob",
-    "script": "import { useRef } from 'react';\n\nimport { Center, Cropper } from '@htmlplus/react';\n\nfunction App() {\n  const cropperRef = useRef();\n  function onClick() {\n    cropperRef.current.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  }\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          ref={cropperRef}\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={onClick}>To URL</button>\n      </Center>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef } from 'react';\n\nimport { Center, Cropper } from '@htmlplus/react';\n\nfunction App() {\n  const cropperRef = useRef();\n  function onClick() {\n    cropperRef.current.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  }\n  return (\n    <>\n      <Center>\n        <Cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          ref={cropperRef}\n        ></Cropper>\n      </Center>\n      <br />\n      <Center>\n        <button onClick={onClick}>To Blob</button>\n      </Center>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/cropper/to-blob",
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\n\nfunction App() {\n  const cropperRef = useRef();\n  function onClick() {\n    cropperRef.current.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          ref={cropperRef}\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onclick={onClick}>To URL</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\n\nfunction App() {\n  const cropperRef = useRef();\n  function onClick() {\n    cropperRef.current.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          ref={cropperRef}\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onclick={onClick}>To Blob</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/cropper/to-blob",
     "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\n\nlet cropperRef;\nfunction onClick() {\n  cropperRef.toCanvas().toBlob((blob) => {\n    console.log(blob);\n  });\n}\n",
-    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    bind:this={cropperRef}\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click={onClick}>To URL</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    bind:this={cropperRef}\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click={onClick}>To Blob</button>\n</plus-center>\n"
   },
   {
     "key": "vue/cropper/to-blob",
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/cropper.js';\n\nconst cropperRef = ref();\nfunction onClick() {\n  cropperRef.value.toCanvas().toBlob((blob) => {\n    console.log(blob);\n  });\n}\n",
-    "template": "<div>\n  <plus-center>\n    <plus-cropper\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ref=\"cropperRef\"\n    ></plus-cropper>\n  </plus-center>\n  <br />\n  <plus-center>\n    <button @click=\"onClick\">To URL</button>\n  </plus-center>\n</div>\n"
+    "template": "<div>\n  <plus-center>\n    <plus-cropper\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ref=\"cropperRef\"\n    ></plus-cropper>\n  </plus-center>\n  <br />\n  <plus-center>\n    <button @click=\"onClick\">To Blob</button>\n  </plus-center>\n</div>\n"
   },
   {
     "key": "angular/cropper/to-url",
@@ -3445,34 +3445,64 @@ export const examples: any[] = [
   },
   {
     "key": "angular/faker/localization",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-faker': {\n      property: {\n        instance: faker\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-faker></plus-faker>\n"
   },
   {
     "key": "javascript/faker/localization",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { faker } from 'https://cdn.skypack.dev/@faker-js/faker/locale/ja';\n\nimport { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-faker': {\n      property: {\n        instance: faker\n      }\n    }\n  }\n});\n",
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\n",
     "template": "<plus-faker></plus-faker>\n"
   },
   {
     "key": "react-dedicated/faker/localization",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-faker': {\n      property: {\n        instance: faker\n      }\n    }\n  }\n});\n",
     "script": "import { Faker } from '@htmlplus/react';\n\nfunction App() {\n  return <Faker></Faker>;\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/faker/localization",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-faker': {\n      property: {\n        instance: faker\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/core/faker.js';\n\nfunction App() {\n  return <plus-faker></plus-faker>;\n}\nexport default App;\n"
   },
   {
     "key": "svelte/faker/localization",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-faker': {\n      property: {\n        instance: faker\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/core/faker.js';\n",
     "template": "<plus-faker></plus-faker>\n"
   },
   {
     "key": "vue/faker/localization",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-faker': {\n      property: {\n        instance: faker\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/core/faker.js';\n",
     "template": "<plus-faker></plus-faker>\n"
@@ -3569,29 +3599,59 @@ export const examples: any[] = [
   },
   {
     "key": "angular/floating/fixed",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-faker api=\"lorem.paragraphs\"></plus-faker>\n<br />\n<br />\n<br />\n<plus-floating fixed>\n  <plus-icon name=\"circle-fill\"></plus-icon>\n</plus-floating>\n"
   },
   {
     "key": "javascript/floating/fixed",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/faker.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/floating.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\n",
     "template": "<plus-faker api=\"lorem.paragraphs\"></plus-faker>\n<br />\n<br />\n<br />\n<plus-floating fixed>\n  <plus-icon name=\"circle-fill\"></plus-icon>\n</plus-floating>\n"
   },
   {
     "key": "react-dedicated/floating/fixed",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "script": "import { Faker, Floating, Icon } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <>\n      <Faker api=\"lorem.paragraphs\"></Faker>\n      <br />\n      <br />\n      <br />\n      <Floating fixed>\n        <Icon name=\"circle-fill\"></Icon>\n      </Floating>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/floating/fixed",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n      <br />\n      <br />\n      <br />\n      <plus-floating fixed>\n        <plus-icon name=\"circle-fill\"></plus-icon>\n      </plus-floating>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/floating/fixed",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n",
     "template": "<plus-faker api=\"lorem.paragraphs\"></plus-faker>\n<br />\n<br />\n<br />\n<plus-floating fixed>\n  <plus-icon name=\"circle-fill\"></plus-icon>\n</plus-floating>\n"
   },
   {
     "key": "vue/floating/fixed",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "script": "import '@htmlplus/core/faker.js';\nimport '@htmlplus/core/floating.js';\nimport '@htmlplus/core/icon.js';\n",
     "template": "<div>\n  <plus-faker api=\"lorem.paragraphs\"></plus-faker>\n  <br />\n  <br />\n  <br />\n  <plus-floating fixed>\n    <plus-icon name=\"circle-fill\"></plus-icon>\n  </plus-floating>\n</div>\n"
   },
@@ -4573,34 +4633,64 @@ export const examples: any[] = [
   },
   {
     "key": "angular/icon/font-awesome",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-stack>\n"
   },
   {
     "key": "javascript/icon/font-awesome",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-stack>\n"
   },
   {
     "key": "react-dedicated/icon/font-awesome",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Icon, Stack } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <Stack gap=\"2rem\">\n      <Icon name=\"far-user\"></Icon>\n      <Icon name=\"fas-user\"></Icon>\n      <Icon name=\"fab-apple\"></Icon>\n    </Stack>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/icon/font-awesome",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"far-user\"></plus-icon>\n      <plus-icon name=\"fas-user\"></plus-icon>\n      <plus-icon name=\"fab-apple\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/icon/font-awesome",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-stack>\n"
   },
   {
     "key": "vue/icon/font-awesome",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-stack>\n"
@@ -4635,68 +4725,128 @@ export const examples: any[] = [
   },
   {
     "key": "angular/icon/material",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: (name, parser) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
   },
   {
     "key": "javascript/icon/material",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: (name, parser) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
   },
   {
     "key": "react-dedicated/icon/material",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: (name, parser) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Icon, Stack } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <Stack gap=\"2rem\">\n      <Icon name=\"home_outline\"></Icon>\n      <Icon name=\"home_round\"></Icon>\n      <Icon name=\"home_sharp\"></Icon>\n    </Stack>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/icon/material",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: (name, parser) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"home_outline\"></plus-icon>\n      <plus-icon name=\"home_round\"></plus-icon>\n      <plus-icon name=\"home_sharp\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/icon/material",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: (name, parser) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
   },
   {
     "key": "vue/icon/material",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: (name, parser) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
   },
   {
     "key": "angular/icon/multiple-library",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: (name) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then((response) => response.text());\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"carbon/user\"></plus-icon>\n  <plus-icon name=\"lucide/user\"></plus-icon>\n  <plus-icon name=\"tabler/user\"></plus-icon>\n</plus-stack>\n"
   },
   {
     "key": "javascript/icon/multiple-library",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { setConfig } from 'https://cdn.skypack.dev/@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: (name) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then((response) => response.text());\n        }\n      }\n    }\n  }\n});\n",
     "script": "import 'https://cdn.skypack.dev/@htmlplus/core/icon.js';\nimport 'https://cdn.skypack.dev/@htmlplus/core/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"carbon/user\"></plus-icon>\n  <plus-icon name=\"lucide/user\"></plus-icon>\n  <plus-icon name=\"tabler/user\"></plus-icon>\n</plus-stack>\n"
   },
   {
     "key": "react-dedicated/icon/multiple-library",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: (name) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then((response) => response.text());\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Icon, Stack } from '@htmlplus/react';\n\nfunction App() {\n  return (\n    <Stack gap=\"2rem\">\n      <Icon name=\"carbon/user\"></Icon>\n      <Icon name=\"lucide/user\"></Icon>\n      <Icon name=\"tabler/user\"></Icon>\n    </Stack>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/icon/multiple-library",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: (name) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then((response) => response.text());\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"carbon/user\"></plus-icon>\n      <plus-icon name=\"lucide/user\"></plus-icon>\n      <plus-icon name=\"tabler/user\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/icon/multiple-library",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: (name) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then((response) => response.text());\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"carbon/user\"></plus-icon>\n  <plus-icon name=\"lucide/user\"></plus-icon>\n  <plus-icon name=\"tabler/user\"></plus-icon>\n</plus-stack>\n"
   },
   {
     "key": "vue/icon/multiple-library",
+    "settings": {
+      "dock": false,
+      "isolate": true,
+      "rtl": false
+    },
     "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  component: {\n    'plus-icon': {\n      property: {\n        resolver: (name) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then((response) => response.text());\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/core/icon.js';\nimport '@htmlplus/core/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"carbon/user\"></plus-icon>\n  <plus-icon name=\"lucide/user\"></plus-icon>\n  <plus-icon name=\"tabler/user\"></plus-icon>\n</plus-stack>\n"
