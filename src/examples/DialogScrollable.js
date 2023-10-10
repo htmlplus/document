@@ -14,7 +14,7 @@ function App() {
         <Dialog.Content>
           <Dialog.Header> Dialog Title </Dialog.Header>
           <Dialog.Body>
-            <Faker api="lorem.paragraphs" arguments={[15, '\n\n']}></Faker>
+            <Faker api="lorem.paragraphs" arguments='[15, "\n\n"]'></Faker>
           </Dialog.Body>
           <Dialog.Footer>
             <Dialog.Toggler> Close </Dialog.Toggler>
@@ -30,7 +30,7 @@ const DialogScrollableExample = () => {
     <div className="ex-dialog-scrollable">
       <App />
     </div>
-  )
+  );
 };
 
 export default DialogScrollableExample;

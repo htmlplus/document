@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <Faker api="lorem.paragraphs"></Faker>
-      <Floating offset={[20, 20]}>
+      <Floating offset="[20, 20]">
         <Icon name="circle-fill"></Icon>
       </Floating>
     </div>
@@ -21,7 +21,7 @@ const FloatingOffsetExample = () => {
       <App />
       <style>{`.ex-floating-offset div {  position: relative;}`}</style>
     </div>
-  )
+  );
 };
 
 export default FloatingOffsetExample;

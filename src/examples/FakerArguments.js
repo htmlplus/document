@@ -5,7 +5,7 @@
 import { Faker } from '@htmlplus/react';
 
 function App() {
-  return <Faker api="lorem.paragraphs" arguments={[5, '\n\n']}></Faker>;
+  return <Faker api="lorem.paragraphs" arguments='[5, "\n\n"]'></Faker>;
 }
 
 const FakerArgumentsExample = () => {
@@ -13,7 +13,7 @@ const FakerArgumentsExample = () => {
     <div className="ex-faker-arguments">
       <App />
     </div>
-  )
+  );
 };
 
 export default FakerArgumentsExample;

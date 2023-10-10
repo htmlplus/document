@@ -11,7 +11,7 @@ function App() {
       <Sticky top="20px">
         <Faker></Faker>
       </Sticky>
-      <Faker api="lorem.paragraphs" arguments={[20, '\n\n']}></Faker>
+      <Faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></Faker>
     </div>
   );
 }
@@ -22,7 +22,7 @@ const StickyTopExample = () => {
       <App />
       <style>{`.ex-sticky-top .container {  height: 20rem;  overflow: auto;}.ex-sticky-top plus-faker {  display: block;  padding: 1rem;  text-align: justify;}.ex-sticky-top plus-sticky {  background-color: gold;}`}</style>
     </div>
-  )
+  );
 };
 
 export default StickyTopExample;

@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="container">
       <div className="scrollable reference1">
-        <Faker api="lorem.paragraphs" arguments={[20, '\n\n']}></Faker>
+        <Faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></Faker>
       </div>
       <ScrollDetector reference=".reference1" vertical onChange={onChange}></ScrollDetector>
     </div>
@@ -24,7 +24,7 @@ const ScrollDetectorDefaultExample = () => {
       <App />
       <style>{`.ex-scroll-detector-default .container {  position: relative;}.ex-scroll-detector-default .scrollable {  height: 20em;  overflow-y: auto;}`}</style>
     </div>
-  )
+  );
 };
 
 export default ScrollDetectorDefaultExample;
