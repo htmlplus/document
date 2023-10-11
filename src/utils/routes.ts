@@ -34,25 +34,25 @@ type Routes = {
 
 const getPathCore =
   <R extends Routes>() =>
-  <Path extends ExtractRouteKey<R>, Parameter extends ExtractParameters<Path>>(path: Path, parameter: Parameter) => {
-    let result = path as string;
+    <Path extends ExtractRouteKey<R>, Parameter extends ExtractParameters<Path>>(path: Path, parameter: Parameter) => {
+      let result = path as string;
 
-    result = result.replace(/\[(\w+)(\?)?(:)?(\w+)?\]/g, '[$1$2]');
+      result = result.replace(/\[(\w+)(\?)?(:)?(\w+)?\]/g, '[$1$2]');
 
-    if (parameter) {
-      for (const key in parameter) {
-        const value = (parameter as any)[key] as string;
-        result = result.replace(`[${key}]`, value).replace(`[${key}?]`, value);
+      if (parameter) {
+        for (const key in parameter) {
+          const value = (parameter as any)[key] as string;
+          result = result.replace(`[${key}]`, value).replace(`[${key}?]`, value);
+        }
       }
-    }
 
-    result = result
-      .replace(/\/\[(\w+)\?\]/g, '')
-      .replace(/\w+=\[\w+(\?)\]/g, '')
-      .replace(/(\?|&)+$/, '');
+      result = result
+        .replace(/\/\[(\w+)\?\]/g, '')
+        .replace(/\w+=\[\w+(\?)\]/g, '')
+        .replace(/(\?|&)+$/, '');
 
-    return result;
-  };
+      return result;
+    };
 
 export const ROUTES = {
   HOME: '/',
@@ -84,7 +84,7 @@ export const ROUTES = {
   SOCIAL_YOUTUBE: 'https://www.youtube.com/channel/UCsNkxDmLU7vK_L1jgSVWWCA',
   GITHUB_COMMITS: 'https://api.github.com/repos/htmlplus/[repository]/commits?path=[path]',
   EXAMPLE_CODE_SANDBOX_LINK:
-    'https://codesandbox.io/s/github/htmlplus/examples/tree/main/dist/[framework]/[component]/[example]',
+    'https://githubbox.com/htmlplus/examples/tree/main/dist/[framework]/[component]/[example]',
   EXAMPLE_GITHUB_LINK: 'https://github.com/htmlplus/examples/tree/main/dist/[framework]/[component]/[example]',
   EXAMPLE_DOWNLOAD_LINK:
     'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/htmlplus/examples/tree/main/dist/[framework]/[component]/[example]',
