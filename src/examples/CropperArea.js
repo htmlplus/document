@@ -12,7 +12,7 @@ function App() {
 
 const CropperAreaExample = () => {
   return (
-    <div className="ex-cropper-area">
+    <div className="ex-cropper-area dock">
       <App />
     </div>
   )

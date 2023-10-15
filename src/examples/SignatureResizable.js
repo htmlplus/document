@@ -10,7 +10,7 @@ function App() {
 
 const SignatureResizableExample = () => {
   return (
-    <div className="ex-signature-resizable">
+    <div className="ex-signature-resizable dock">
       <App />
       <style>{`.ex-signature-resizable plus-signature {  height: 15rem;  width: 100%;}`}</style>
     </div>

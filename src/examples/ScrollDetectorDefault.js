@@ -1,7 +1,6 @@
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-
 import { Faker, ScrollDetector } from '@htmlplus/react';
 
 function App() {
@@ -20,7 +19,7 @@ function App() {
 
 const ScrollDetectorDefaultExample = () => {
   return (
-    <div className="ex-scroll-detector-default">
+    <div className="ex-scroll-detector-default dock">
       <App />
       <style>{`.ex-scroll-detector-default .container {  position: relative;}.ex-scroll-detector-default .scrollable {  height: 20em;  overflow-y: auto;}`}</style>
     </div>

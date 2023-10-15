@@ -10,7 +10,7 @@ function App() {
 
 const CenterDefaultExample = () => {
   return (
-    <div className="ex-center-default">
+    <div className="ex-center-default dock">
       <App />
       <style>{`.ex-center-default plus-center {  height: 10rem;  background-color: whitesmoke;}`}</style>
     </div>

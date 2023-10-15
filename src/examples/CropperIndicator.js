@@ -12,7 +12,7 @@ function App() {
 
 const CropperIndicatorExample = () => {
   return (
-    <div className="ex-cropper-indicator">
+    <div className="ex-cropper-indicator dock">
       <App />
     </div>
   )

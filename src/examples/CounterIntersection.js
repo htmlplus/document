@@ -22,7 +22,7 @@ function App() {
 
 const CounterIntersectionExample = () => {
   return (
-    <div className="ex-counter-intersection">
+    <div className="ex-counter-intersection dock">
       <App />
       <style>{`.ex-counter-intersection plus-intersection {  display: block;  text-align: center;  margin: 25rem auto;}.ex-counter-intersection .container {  position: relative;  height: 20rem;  overflow: auto;  background-color: whitesmoke;}`}</style>
     </div>

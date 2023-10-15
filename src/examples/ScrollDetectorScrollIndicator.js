@@ -1,7 +1,6 @@
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-
 import { useState } from 'react';
 
 import { Faker, ProgressBar, ScrollDetector } from '@htmlplus/react';
@@ -24,7 +23,7 @@ function App() {
 
 const ScrollDetectorScrollIndicatorExample = () => {
   return (
-    <div className="ex-scroll-detector-scroll-indicator">
+    <div className="ex-scroll-detector-scroll-indicator dock">
       <App />
       <style>{`.ex-scroll-detector-scroll-indicator .container {  position: relative;}.ex-scroll-detector-scroll-indicator .scrollable {  padding: 1rem;  height: 20em;  overflow-y: auto;}`}</style>
     </div>

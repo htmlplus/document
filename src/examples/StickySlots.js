@@ -1,7 +1,6 @@
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-
 import { Faker, Sticky } from '@htmlplus/react';
 
 function App() {
@@ -19,7 +18,7 @@ function App() {
 
 const StickySlotsExample = () => {
   return (
-    <div className="ex-sticky-slots">
+    <div className="ex-sticky-slots dock">
       <App />
       <style>{`.ex-sticky-slots .container {  height: 20rem;  overflow: auto;}.ex-sticky-slots header {  background: lightgray;  text-align: center;  padding: 1rem;}.ex-sticky-slots plus-faker {  display: block;  padding: 1rem;  text-align: justify;}.ex-sticky-slots plus-sticky[state='normal'] header {  border-radius: 4px;  margin: 1rem;}`}</style>
     </div>

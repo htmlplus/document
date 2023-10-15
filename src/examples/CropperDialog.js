@@ -39,7 +39,7 @@ function App() {
 
 const CropperDialogExample = () => {
   return (
-    <div className="ex-cropper-dialog">
+    <div className="ex-cropper-dialog dock">
       <App />
     </div>
   )

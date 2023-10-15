@@ -10,7 +10,7 @@ function App() {
 
 const CropperDefaultExample = () => {
   return (
-    <div className="ex-cropper-default">
+    <div className="ex-cropper-default dock">
       <App />
     </div>
   )

@@ -12,7 +12,7 @@ function App() {
 
 const CropperDisabledExample = () => {
   return (
-    <div className="ex-cropper-disabled">
+    <div className="ex-cropper-disabled dock">
       <App />
     </div>
   )

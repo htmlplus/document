@@ -1,7 +1,6 @@
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
-
 import { Faker, Sticky } from '@htmlplus/react';
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
 
 const StickyTopExample = () => {
   return (
-    <div className="ex-sticky-top">
+    <div className="ex-sticky-top dock">
       <App />
       <style>{`.ex-sticky-top .container {  height: 20rem;  overflow: auto;}.ex-sticky-top plus-faker {  display: block;  padding: 1rem;  text-align: justify;}.ex-sticky-top plus-sticky {  background-color: gold;}`}</style>
     </div>

@@ -96,7 +96,7 @@ export function getStaticProps(context: GetStaticPropsContext) {
     example[exampleKey] = {
       component: component.key,
       example: exampleKey,
-      ...current.settings, // TODO
+      ...(current.settings || {}), // TODO
       links,
       tabs,
       title

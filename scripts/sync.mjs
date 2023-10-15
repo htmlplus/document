@@ -141,10 +141,7 @@ const scoped = (styles, className) => {
 
       const className = `ex-${paramCase(name)}`;
 
-      let { config, script, style } = item;
-
-      // TODO
-      const settings = {};
+      let { config, script, settings, style } = item;
 
       if (style) {
         style = scoped(style, `.${className}`);
