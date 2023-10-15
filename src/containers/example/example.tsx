@@ -1,4 +1,4 @@
-import { Suspense, useLayoutEffect, useState } from 'react';
+import { Suspense, useLayoutEffect, useRef, useState } from 'react';
 
 import { pascalCase } from 'change-case';
 
@@ -11,6 +11,8 @@ import { ExampleProps } from './example.types';
 
 export const Example = ({ component, example, isolate, links, rtl, tabs, title }: ExampleProps) => {
   const store = useStore();
+
+  const $preview = useRef<HTMLElement>(null);
 
   const [direction, setDirection] = useState('ltr');
 
@@ -96,7 +98,8 @@ export const Example = ({ component, example, isolate, links, rtl, tabs, title }
         ))}
       </Grid>
       <Tabs.Panels>
-        <Tabs.Panel value="preview" dir={direction}>
+        <Tabs.Panel value="preview" dir={direction} ref={$preview}>
+          {!visible && <div style={{ height: $preview.current!.clientHeight + 'px' }}></div>}
           {visible && isolate != true && (
             <Suspense fallback={<div className="skeleton" />}>
               <Component />
