@@ -47,7 +47,7 @@ export const LayoutDefault = ({ children }: LayoutDefaultProps) => {
     <div className="layout-default">
       {!!progress && <ProgressBar className="app-loading-bar" value={progress} />}
       <Drawer open={false} animation="fade" connector="main" temporary size="300px">
-        <Card class="drawer" tile elevation="10">
+        <Card class="drawer" tile elevation={10}>
           <Sidebar />
         </Card>
       </Drawer>
