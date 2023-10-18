@@ -1,6 +1,7 @@
 /**************************************************
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
+
 import { Faker, Sticky } from '@htmlplus/react';
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
       <Sticky>
         <Faker></Faker>
       </Sticky>
-      <Faker api="lorem.paragraphs" arguments='[20, "\n\n"]'></Faker>
+      <Faker api="lorem.paragraphs" arguments={[20, '\n\n']}></Faker>
     </div>
   );
 }
@@ -21,7 +22,7 @@ const StickyDefaultExample = () => {
       <App />
       <style>{`.ex-sticky-default .container {  height: 20rem;  overflow: auto;}.ex-sticky-default plus-faker {  display: block;  padding: 1rem;  text-align: justify;}.ex-sticky-default plus-sticky {  background-color: gold;}`}</style>
     </div>
-  );
+  )
 };
 
 export default StickyDefaultExample;
