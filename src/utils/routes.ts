@@ -83,8 +83,8 @@ export const ROUTES = {
   SOCIAL_GITHUB: 'https://github.com/htmlplus/htmlplus',
   SOCIAL_YOUTUBE: 'https://www.youtube.com/channel/UCsNkxDmLU7vK_L1jgSVWWCA',
   GITHUB_COMMITS: 'https://api.github.com/repos/htmlplus/[repository]/commits?path=[path]',
-  EXAMPLE_CODE_SANDBOX_LINK:
-    'https://githubbox.com/htmlplus/examples/tree/main/dist/[framework]/[component]/[example]',
+  EXAMPLE_STACKBLITZ_LINK:
+    'https://stackblitz.com/github/htmlplus/examples/tree/main/dist/[framework]/[component]/[example]',
   EXAMPLE_GITHUB_LINK: 'https://github.com/htmlplus/examples/tree/main/dist/[framework]/[component]/[example]',
   EXAMPLE_DOWNLOAD_LINK:
     'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/htmlplus/examples/tree/main/dist/[framework]/[component]/[example]',

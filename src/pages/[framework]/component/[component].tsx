@@ -86,10 +86,10 @@ export function getStaticProps(context: GetStaticPropsContext) {
         url: getPath(ROUTES.EXAMPLE_GITHUB_LINK, parameters)
       },
       {
-        key: 'codesandbox',
-        title: 'CodeSandbox',
-        icon: 'box',
-        url: getPath(ROUTES.EXAMPLE_CODE_SANDBOX_LINK, parameters)
+        key: 'stackblitz',
+        title: 'StackBlitz',
+        icon: 'stackblitz',
+        url: getPath(ROUTES.EXAMPLE_STACKBLITZ_LINK, parameters)
       }
     ];
 
