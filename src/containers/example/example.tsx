@@ -22,7 +22,7 @@ export const Example = ({ component, example, isolate, links, rtl, tabs, title }
 
   if (!component || !example) return <Alert type="error">NOT FOUND</Alert>;
 
-  const componentName = `${pascalCase(component)}${pascalCase(example)}`;
+  const componentName = pascalCase(component) + pascalCase(example);
 
   const Component = (Examples as any)[componentName!] as any;
 
@@ -48,6 +48,8 @@ export const Example = ({ component, example, isolate, links, rtl, tabs, title }
     new MutationObserver(onChange).observe(body, { childList: true });
 
     iframe.contentWindow.addEventListener('resize', onChange);
+
+    onChange();
   };
 
   const onReload = (event?: MouseEvent) => {
