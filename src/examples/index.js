@@ -10,6 +10,7 @@ export const AccordionCustomSummaryTemplate = dynamic(() => import('./AccordionC
 export const AccordionCustomized = dynamic(() => import('./AccordionCustomized'), { suspense: true });
 export const AccordionDefault = dynamic(() => import('./AccordionDefault'), { suspense: true });
 export const AccordionDisabled = dynamic(() => import('./AccordionDisabled'), { suspense: true });
+export const AccordionMethods = dynamic(() => import('./AccordionMethods'), { suspense: true });
 export const AccordionOpen = dynamic(() => import('./AccordionOpen'), { suspense: true });
 export const AccordionPersistent = dynamic(() => import('./AccordionPersistent'), { suspense: true });
 export const AccordionPreventFromToggling = dynamic(() => import('./AccordionPreventFromToggling'), { suspense: true });
