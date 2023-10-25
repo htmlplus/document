@@ -4,14 +4,16 @@
 
 import dynamic from 'next/dynamic';
 
-export const AccordionAdvanced = dynamic(() => import('./AccordionAdvanced'), { suspense: true });
+export const AccordionAsyncContent = dynamic(() => import('./AccordionAsyncContent'), { suspense: true });
 export const AccordionCustomIcon = dynamic(() => import('./AccordionCustomIcon'), { suspense: true });
+export const AccordionCustomSummaryTemplate = dynamic(() => import('./AccordionCustomSummaryTemplate'), { suspense: true });
 export const AccordionCustomized = dynamic(() => import('./AccordionCustomized'), { suspense: true });
 export const AccordionDefault = dynamic(() => import('./AccordionDefault'), { suspense: true });
 export const AccordionDisabled = dynamic(() => import('./AccordionDisabled'), { suspense: true });
 export const AccordionOpen = dynamic(() => import('./AccordionOpen'), { suspense: true });
 export const AccordionPersistent = dynamic(() => import('./AccordionPersistent'), { suspense: true });
 export const AccordionPreventFromToggling = dynamic(() => import('./AccordionPreventFromToggling'), { suspense: true });
+export const AccordionSlots = dynamic(() => import('./AccordionSlots'), { suspense: true });
 export const AnimationButton = dynamic(() => import('./AnimationButton'), { suspense: true });
 export const AnimationDefault = dynamic(() => import('./AnimationDefault'), { suspense: true });
 export const AnimationDuration = dynamic(() => import('./AnimationDuration'), { suspense: true });

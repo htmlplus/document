@@ -5,6 +5,46 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.9.6] - 2023-10-25
+
+### Added
+
+- Added some examples for the `Accordion`.
+- Added the `top`, `middle`, and `bottom` slots to the `Accordion`.
+
+### Updated
+
+- Updated the `Accordion` comments.
+- Converted the `collapse`, `expand`, and `toggle` method to async.
+
+## [0.9.5] - 2023-10-23
+
+### Updated
+
+- Updated the `@htmlplus/element` dependency to `0.7.9` version.
+
+## [0.9.4] - 2023-10-21
+
+### Updated
+
+- Updated the `connectCallback` lifecycle in `Cropper`, `Faker`, and `Tooltip`.
+- Updated the `@faker-js/faker` dependency to `8.2.0` version.
+- Updated the `@floating-ui/dom` dependency to `1.5.3` version.
+- Updated the `cropperjs` dependency to `1.6.1` version.
+
+## [0.9.3] - 2023-10-17
+
+### Added
+
+- Added the material colors.
+- Added the `PlusBase` class.
+- Added an experimental color property for the `Icon` component.
+- Added an experimental color property for the `Spinner` component.
+
+### Updated
+
+- Updated the `@htmlplus/element` dependency to `0.7.8` version.
+
 ## [0.9.2] - 2023-05-20
 
 ### Added
@@ -18,7 +58,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Updated
 
-- Updated the `scroll-detector` reference.
+- Updated the `Scroll Detector` reference.
 - Updated all components based on the `@Host`, `@Query`, and `@QueryAll` decorators.
 - Cleaned the code base.
 
@@ -51,7 +91,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added the themeing system.
-- The `accordion` component.
+- The `Accordion` component.
 
 ### Updated
 
@@ -62,8 +102,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- The `avatar` component.
-- The `floating` component.
+- The `Avatar` component.
+- The `Floating` component.
 
 ### Updated
 

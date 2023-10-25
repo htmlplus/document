@@ -8,7 +8,7 @@ function App() {
   return (
     <Accordion>
       <Stack slot="summary" justifyContent="space-between">
-        <span>Summary</span>
+        <b>Summary</b>
         <button>Action</button>
       </Stack>
       <Faker></Faker>
@@ -16,13 +16,13 @@ function App() {
   );
 }
 
-const AccordionAdvancedExample = () => {
+const AccordionCustomSummaryTemplateExample = () => {
   return (
-    <div className="ex-accordion-advanced">
+    <div className="ex-accordion-custom-summary-template">
       <App />
-      <style>{`.ex-accordion-advanced [slot='summary'] {  flex-grow: 1;  margin-right: 1rem;}`}</style>
+      <style>{`.ex-accordion-custom-summary-template [slot='summary'] {  flex-grow: 1;  margin-right: 1rem;}`}</style>
     </div>
   )
 };
 
-export default AccordionAdvancedExample;
+export default AccordionCustomSummaryTemplateExample;
