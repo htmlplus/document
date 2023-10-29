@@ -6,7 +6,11 @@ import { Faker, Floating, Icon } from '@htmlplus/react';
 
 function App() {
   return (
-    <div>
+    <div
+      style={{
+        position: 'relative'
+      }}
+    >
       <Faker api="lorem.paragraphs"></Faker>
       <Floating>
         <Icon name="circle-fill"></Icon>
@@ -19,7 +23,6 @@ const FloatingDefaultExample = () => {
   return (
     <div className="ex-floating-default">
       <App />
-      <style>{`.ex-floating-default div {  position: relative;}`}</style>
     </div>
   )
 };

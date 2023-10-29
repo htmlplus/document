@@ -34,11 +34,16 @@ export const AvatarCustomSize = dynamic(() => import('./AvatarCustomSize'), { su
 export const AvatarDefault = dynamic(() => import('./AvatarDefault'), { suspense: true });
 export const AvatarGroupGutter = dynamic(() => import('./AvatarGroupGutter'), { suspense: true });
 export const AvatarGroupHoverable = dynamic(() => import('./AvatarGroupHoverable'), { suspense: true });
+export const AvatarGroupLinkWithTooltip = dynamic(() => import('./AvatarGroupLinkWithTooltip'), { suspense: true });
+export const AvatarGroupLink = dynamic(() => import('./AvatarGroupLink'), { suspense: true });
 export const AvatarGroupStacked = dynamic(() => import('./AvatarGroupStacked'), { suspense: true });
 export const AvatarGroupTooltip = dynamic(() => import('./AvatarGroupTooltip'), { suspense: true });
 export const AvatarGroup = dynamic(() => import('./AvatarGroup'), { suspense: true });
+export const AvatarIconRatioGlobal = dynamic(() => import('./AvatarIconRatioGlobal'), { suspense: true });
+export const AvatarIconRatioInline = dynamic(() => import('./AvatarIconRatioInline'), { suspense: true });
 export const AvatarIcon = dynamic(() => import('./AvatarIcon'), { suspense: true });
 export const AvatarImage = dynamic(() => import('./AvatarImage'), { suspense: true });
+export const AvatarLinkWithTooltip = dynamic(() => import('./AvatarLinkWithTooltip'), { suspense: true });
 export const AvatarLink = dynamic(() => import('./AvatarLink'), { suspense: true });
 export const AvatarShape = dynamic(() => import('./AvatarShape'), { suspense: true });
 export const AvatarSize = dynamic(() => import('./AvatarSize'), { suspense: true });
