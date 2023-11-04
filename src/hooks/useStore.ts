@@ -1,6 +1,6 @@
-import create from 'zustand';
+import { create } from 'zustand';
 
-import * as CONSTANTS from '@app/constants';
+import * as CONSTANTS from '@/constants';
 
 interface UseStore {
   framework?: string;

@@ -1,8 +1,10 @@
-import * as Utils from '@app/utils';
+'use client';
 
-import { AlertProps } from './alert.types';
+import { classes } from '@/utils';
 
-export const Alert = ({ children, type }: AlertProps) => {
-  const classes = Utils.classes('alert', { type });
-  return <div className={classes}>{children}</div>;
-};
+import { IAlert } from './alert.types';
+
+export function Alert({ children, type }: IAlert) {
+  const className = classes('alert', { type });
+  return <div className={className}>{children}</div>;
+}

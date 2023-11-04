@@ -1,4 +1,4 @@
-import { paramCase } from 'change-case';
+import { kebabCase } from 'change-case';
 
 export const classes = (...inputs: any[]): string => {
   const names = [];
@@ -14,7 +14,7 @@ export const classes = (...inputs: any[]): string => {
         for (let i = 0; i < keys.length; i++) {
           let key = keys[i];
           const value = element[key];
-          key = paramCase(key);
+          key = kebabCase(key);
           const type = Object.prototype.toString.call(value);
           switch (type) {
             case '[object Boolean]':

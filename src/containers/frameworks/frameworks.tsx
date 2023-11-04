@@ -1,37 +1,38 @@
+'use client';
+
 import { useEffect, useMemo } from 'react';
 import Select, { components } from 'react-select';
 
 import { useRouter } from 'next/router';
 
-import { frameworks } from '@app/data';
-import { useStore } from '@app/hooks';
-import { getPath } from '@app/utils';
+import { frameworks } from '@/data';
+import { getPath } from '@/utils';
 
-const Option = (props: any) => {
+function Option(props: any) {
   return (
     <components.Option {...props}>
       <SingleValue {...props} />
     </components.Option>
   );
-};
+}
 
-const SingleValue = (props: any) => (
-  <components.Placeholder {...props}>
-    {/* TODO */}
-    <img
-      style={{ width: '1.25rem', height: '1.25rem', objectFit: 'contain', verticalAlign: 'middle', margin: '0' }}
-      src={props.data.logo}
-      alt={`${props.data.label} logo`}
-    />
-    &nbsp;&nbsp;
-    {props.data.label}
-  </components.Placeholder>
-);
+function SingleValue(props: any) {
+  return (
+    <components.Placeholder {...props}>
+      {/* TODO */}
+      <img
+        style={{ width: '1.25rem', height: '1.25rem', objectFit: 'contain', verticalAlign: 'middle', margin: '0' }}
+        src={props.data.logo}
+        alt={`${props.data.label} logo`}
+      />
+      &nbsp;&nbsp;
+      {props.data.label}
+    </components.Placeholder>
+  );
+}
 
-export const Frameworks = () => {
+export function Frameworks() {
   const router = useRouter();
-
-  const store = useStore();
 
   const items = useMemo(
     () =>
@@ -53,18 +54,22 @@ export const Frameworks = () => {
     return framework;
   }, [router.asPath]);
 
-  const selected = useMemo(
-    () => items.find((framework) => framework.value === store.framework),
-    [items, store.framework]
-  );
+  // TODO
+  // const selected = useMemo(
+  //   () => items.find((framework) => framework.value === store.framework),
+  //   [items, store.framework]
+  // );
 
-  useEffect(() => {
-    if (!key) return;
-    store.setFramework(key);
-  }, [key]);
+  // TODO
+  // useEffect(() => {
+  //   if (!key) return;
+  //   store.setFramework(key);
+  // }, [key]);
 
   const change = (framework: any) => {
-    store.setFramework(framework.value);
+    // TODO
+    // store.setFramework(framework.value);
+
     const query = Object.assign({}, router.query, { framework: framework.value });
     const prev = router.asPath;
     const next = getPath(router.route as any, query);
@@ -77,7 +82,8 @@ export const Frameworks = () => {
   return (
     <div className="frameworks">
       <p>Select Your Framework</p>
-      <Select
+      {/* TODO */}
+      {/* <Select
         isSearchable={false}
         isDisabled={!key}
         components={{
@@ -87,7 +93,7 @@ export const Frameworks = () => {
         options={items}
         value={selected}
         onChange={change}
-      />
+      /> */}
     </div>
   );
-};
+}

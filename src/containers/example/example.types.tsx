@@ -1,4 +1,4 @@
-export interface ExampleProps {
+export interface IExample {
   component?: string;
   example?: string;
   isolate?: boolean;

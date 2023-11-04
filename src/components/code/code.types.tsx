@@ -1,7 +1,5 @@
-import { ReactNode } from 'react';
-
-export interface CodeProps {
-  children?: ReactNode;
+export interface ICode {
+  children?: React.ReactNode;
   copy?: boolean;
   language: 'html' | 'css' | 'js' | 'jsx' | 'shell';
 }

@@ -1,4 +1,4 @@
-import { ROUTES, getPath } from '@app/utils';
+import { ROUTES, getPath } from '@/utils';
 
 export const socials = [
   {

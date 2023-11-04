@@ -1,4 +1,5 @@
 export * from './api';
+export * from './app-loading-bar';
 export * from './browsers';
 export * from './contributors';
 export * from './example';

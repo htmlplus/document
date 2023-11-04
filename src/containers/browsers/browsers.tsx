@@ -1,12 +1,13 @@
-import { Grid } from '@app/components';
-import { browsers } from '@app/data';
-import { ROUTES, getPath } from '@app/utils';
+'use client';
 
-export const Browsers = () => {
+import { browsers } from '@/data';
+import { ROUTES, getPath } from '@/utils';
+
+export function Browsers() {
   return (
-    <Grid gutterY="lg">
+    <plus-grid gutterY="lg">
       {browsers.map((browser) => (
-        <Grid.Item xs="12" sm="grow" key={browser.key}>
+        <plus-grid-item xs="12" sm="grow" key={browser.key}>
           {/* TODO */}
           <div style={{ textAlign: 'center', minWidth: 100 }}>
             <img
@@ -18,8 +19,8 @@ export const Browsers = () => {
             <br />
             <p>{browser.title}</p>
           </div>
-        </Grid.Item>
+        </plus-grid-item>
       ))}
-    </Grid>
+    </plus-grid>
   );
-};
+}

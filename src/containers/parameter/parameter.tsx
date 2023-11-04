@@ -1,8 +1,11 @@
-import { Button, Code, Grid } from '@app/components';
-import { Markup } from '@app/containers';
-import { ROUTES, getPath } from '@app/utils';
+'use client';
 
-export const Parameter = (item: any) => {
+import { Button, Code } from '@/components';
+import { Markup } from '@/containers';
+import { ROUTES, getPath } from '@/utils';
+
+// TODO: set item type
+export function Parameter(item: any) {
   const type = item.detail ?? item.returns ?? item.type;
 
   const typeReference = (() => {
@@ -24,17 +27,17 @@ export const Parameter = (item: any) => {
 
   return (
     <>
-      <Grid gutterX="md">
-        <Grid.Item xs="12" sm="12" md="6">
+      <plus-grid gutterX="md">
+        <plus-grid-item xs="12" sm="12" md="6">
           <b>Name</b>
           <div>
             {item.name}
             {item.experimental && <span> (Experimental)</span>}
           </div>
-        </Grid.Item>
+        </plus-grid-item>
         {['event', 'method', 'property'].includes(item.kind) && (
           <>
-            <Grid.Item xs="12" sm="6" md="grow">
+            <plus-grid-item xs="12" sm="6" md="grow">
               {!!type && (
                 <>
                   <b>Type</b>
@@ -48,60 +51,60 @@ export const Parameter = (item: any) => {
                   </div>
                 </>
               )}
-            </Grid.Item>
+            </plus-grid-item>
           </>
         )}
-        {['style'].includes(item.kind) && <Grid.Item xs="12" sm="grow" hideSmDown />}
+        {['style'].includes(item.kind) && <plus-grid-item xs="12" sm="grow" hideSmDown />}
         {['property', 'style'].includes(item.kind) && (
           <>
-            <Grid.Item xs="12" sm="auto" hideMdUp>
+            <plus-grid-item xs="12" sm="auto" hideMdUp>
               <b>Default</b>
               <div>{item.initializer || 'undefined'}</div>
-            </Grid.Item>
-            <Grid.Item xs="12" sm="auto" hideSmDown style={{ textAlign: 'right' }}>
+            </plus-grid-item>
+            <plus-grid-item xs="12" sm="auto" hideSmDown style={{ textAlign: 'right' }}>
               <b>Default</b>
               <div>{item.initializer || 'undefined'}</div>
-            </Grid.Item>
+            </plus-grid-item>
           </>
         )}
-        <Grid.Item xs="12" />
+        <plus-grid-item xs="12" />
         {['event'].includes(item.kind) && (
-          <Grid.Item xs="12">
+          <plus-grid-item xs="12">
             <b>Cancelable</b>
             <div>{`${!!item.cancelable}`}</div>
-          </Grid.Item>
+          </plus-grid-item>
         )}
         {['property'].includes(item.kind) && (
           <>
-            <Grid.Item xs="12" sm="6">
+            <plus-grid-item xs="12" sm="6">
               <b>Attribute</b>
               <div>{item.attribute}</div>
-            </Grid.Item>
-            <Grid.Item xs="12" sm="grow">
+            </plus-grid-item>
+            <plus-grid-item xs="12" sm="grow">
               <b>Reflect</b>
               <div>{`${!!item.reflects}`}</div>
-            </Grid.Item>
+            </plus-grid-item>
           </>
         )}
         {['method'].includes(item.kind) && (
           <>
             {!!item.signature && (
-              <Grid.Item xs="12">
+              <plus-grid-item xs="12">
                 <b>Signature</b>
                 <div>
                   <Code language="js">{item.signature}</Code>
                 </div>
-              </Grid.Item>
+              </plus-grid-item>
             )}
           </>
         )}
         {!!item.description && (
-          <Grid.Item xs="12">
+          <plus-grid-item xs="12">
             <b>Description</b>
             <Markup value={item.description} />
-          </Grid.Item>
+          </plus-grid-item>
         )}
-      </Grid>
+      </plus-grid>
     </>
   );
-};
+}

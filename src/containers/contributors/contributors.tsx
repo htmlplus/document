@@ -1,14 +1,15 @@
+'use client';
+
 import { Fragment, useEffect, useMemo, useState } from 'react';
 
 import { useRouter } from 'next/router';
 
 import axios from 'axios';
 
-import { Avatar, Tooltip } from '@app/components';
-import { Toc } from '@app/containers';
-import { ROUTES, getPath } from '@app/utils';
+import { TocItem } from '@/containers';
+import { ROUTES, getPath } from '@/utils';
 
-export const Contributors = () => {
+export function Contributors() {
   const router = useRouter();
 
   const [contributors, setContributors] = useState<string[]>([]);
@@ -68,21 +69,21 @@ export const Contributors = () => {
   return (
     <>
       <h2>
-        <Toc.Item level={2}>Contributors</Toc.Item>
+        <TocItem level={2}>Contributors</TocItem>
       </h2>
       <p>
-        <Avatar.Group hoverable stacked>
+        <plus-avatar-group hoverable stacked>
           {contributors.reverse().map((contributor) => (
             <Fragment key={contributor}>
-              <Avatar shape="circle" size="sm">
+              <plus-avatar shape="circle" size="sm">
                 <img src={getPath(ROUTES.CONTRIBUTOR, { contributor })} alt={`Contributor ${contributor}`} />
                 <a rel="noopener" href={getPath(ROUTES.CONTRIBUTOR_GITHUB, { contributor })} target="_blank"></a>
-              </Avatar>
-              <Tooltip>{contributor}</Tooltip>
+              </plus-avatar>
+              <plus-tooltip>{contributor}</plus-tooltip>
             </Fragment>
           ))}
-        </Avatar.Group>
+        </plus-avatar-group>
       </p>
     </>
   );
-};
+}

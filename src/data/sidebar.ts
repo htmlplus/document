@@ -1,5 +1,5 @@
-import { componentsLight, frameworks } from '@app/data';
-import { ROUTES, getPath } from '@app/utils';
+import { componentsLight, frameworks } from '@/data';
+import { ROUTES, getPath } from '@/utils';
 
 export const sidebar = (framework: string) => [
   {

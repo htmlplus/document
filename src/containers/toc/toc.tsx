@@ -1,11 +1,13 @@
+'use client';
+
 import { useEffect, useMemo, useRef, useState } from 'react';
 
-import { paramCase } from 'change-case';
-import create from 'zustand';
+import { kebabCase } from 'change-case';
+import { create } from 'zustand';
 
-import * as Utils from '@app/utils';
+import { classes } from '@/utils';
 
-import { TocItemProps } from './toc.types';
+import { ITocItem } from './toc.types';
 
 interface UseTocItem {
   isActive?: boolean;
@@ -67,7 +69,7 @@ const useToc = create<UseToc>((set, get) => ({
   }
 }));
 
-export const Toc = () => {
+export function Toc() {
   const toc = useToc();
   useEffect(() => {
     let clear: any;
@@ -89,7 +91,7 @@ export const Toc = () => {
       <p>Contents</p>
       {toc.items.map((item) => (
         <a
-          className={Utils.classes({
+          className={classes({
             ['active']: item.isActive,
             [`level-${item.level}`]: true
           })}
@@ -101,9 +103,9 @@ export const Toc = () => {
       ))}
     </div>
   );
-};
+}
 
-Toc.Item = ({ children, level }: TocItemProps) => {
+export function TocItem({ children, level }: ITocItem) {
   const element = useRef(null);
 
   const [isReady, setIsReady] = useState(false);
@@ -114,7 +116,7 @@ Toc.Item = ({ children, level }: TocItemProps) => {
     if (!isReady) return;
     return {
       element: element.current!,
-      id: paramCase(children?.toString() ?? ''),
+      id: kebabCase(children?.toString() ?? ''),
       key: Math.random().toString(),
       level,
       title: children?.toString()
@@ -142,4 +144,4 @@ Toc.Item = ({ children, level }: TocItemProps) => {
       {children}
     </>
   );
-};
+}

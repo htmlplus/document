@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { paramCase, pascalCase } from 'change-case';
+import { kebabCase, pascalCase } from 'change-case';
 import fs from 'fs';
 import path from 'path';
 import * as url from 'url';
@@ -54,6 +54,13 @@ const scoped = (styles, className) => {
   } catch {}
 };
 
+const HEADER = [
+  '/**************************************************',
+  ' * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY',
+  ' **************************************************/',
+  ''
+];
+
 // changelog
 (async () => {
   const DESTINATION = './src/content/en/changelog.md';
@@ -67,32 +74,25 @@ const scoped = (styles, className) => {
 
 // components light
 (async () => {
-  const DESTINATION = './src/data/components.light.ts'; 
+  const DESTINATION = './src/data/components.light.ts';
 
   const lines = [
-    '/**************************************************',
-    ' * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY',
-    ' **************************************************/',
-    '',
-    'export const componentsLight = ' + 
-    JSON.stringify(
-      document
-        ?.components
-        ?.map((component) => ({
+    ...HEADER,
+    'export const componentsLight = ' +
+      JSON.stringify(
+        document?.components?.map((component) => ({
           key: component.key,
           stable: component.tags.some((tag) => tag.key == 'stable') || undefined,
           title: component.title,
-          dependencies: component
-            ?.tags
+          dependencies: component?.tags
             ?.find((tag) => tag.key == 'dependencies')
-            ?.value
-            ?.split(',')
+            ?.value?.split(',')
             ?.map((dependency) => dependency.trim())
             ?.filter((dependency) => !!dependency)
         })),
-      null,
-      2
-    ),
+        null,
+        2
+      )
   ];
 
   const content = lines.join('\n');
@@ -100,95 +100,93 @@ const scoped = (styles, className) => {
   fs.writeFileSync(DESTINATION, content, 'utf8');
 })();
 
-// examples
+// examples data
 (async () => {
-  const DIRECTORY = './src/examples';
   const FILE = './src/data/examples.ts';
   const LOCAL = path.join(__dirname, '../../examples/dist/db.json');
   const REMOTE = 'https://github.com/htmlplus/examples/raw/main/dist/db.json';
-  const HEADER = [
-    '/**************************************************',
-    ' * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY',
-    ' **************************************************/',
-    ''
-  ];
 
   const db = JSON.parse(await load(LOCAL, REMOTE));
 
-  (() => {
-    fs.rmSync(FILE, { force: true, recursive: true });
+  fs.rmSync(FILE, { force: true, recursive: true });
 
-    fs.mkdirSync(path.dirname(FILE), { recursive: true });
+  fs.mkdirSync(path.dirname(FILE), { recursive: true });
 
-    const lines = [...HEADER, `export const examples: any[] = ${JSON.stringify(db, null, 2)};`];
+  const lines = [...HEADER, `export const examples: any[] = ${JSON.stringify(db, null, 2)};`];
 
-    const content = lines.join('\n');
+  const content = lines.join('\n');
 
-    fs.writeFileSync(FILE, content, 'utf8');
-  })();
+  fs.writeFileSync(FILE, content, 'utf8');
+})();
 
-  (() => {
-    fs.rmSync(DIRECTORY, { force: true, recursive: true });
+// examples component
+(async () => {
+  const DIRECTORY = './src/examples';
+  const LOCAL = path.join(__dirname, '../../examples/dist/db.json');
+  const REMOTE = 'https://github.com/htmlplus/examples/raw/main/dist/db.json';
 
-    fs.mkdirSync(DIRECTORY, { recursive: true });
+  const db = JSON.parse(await load(LOCAL, REMOTE));
 
-    const lines = [...HEADER, `import dynamic from 'next/dynamic';`, ''];
+  fs.rmSync(DIRECTORY, { force: true, recursive: true });
 
-    for (const item of db) {
-      if (!item.key.startsWith('react-dedicated')) continue;
+  fs.mkdirSync(DIRECTORY, { recursive: true });
 
-      const name = pascalCase(item.key.replace('react-dedicated/', ''));
+  const lines = ["'use client';", '', ...HEADER, `import dynamic from 'next/dynamic';`, ''];
 
-      const className = `ex-${paramCase(name)}`;
+  for (const item of db) {
+    if (!item.key.startsWith('react-dedicated')) continue;
 
-      let { config, script, settings, style } = item;
+    const name = pascalCase(item.key.replace('react-dedicated/', ''));
 
-      if (style) {
-        style = scoped(style, `.${className}`);
-      }
+    const className = `ex-${kebabCase(name)}`;
 
-      script = script.split('export default ')[0].trim();
-      script += '\n\n';
-      script += `const ${name}Example = () => {\n`;
-      if (config) {
-        script += '  const [ready, setReady] = useState(false);\n';
-        script += '  useEffect(() => setReady(true), []);\n';
-      }
-      script += '  return (\n';
-      script += `    <div className="${className}${settings?.dock ? ' dock' : ''}">\n`;
-      if (config) {
-        script += `      {ready && <App />}\n`;
-      } else {
-        script += `      <App />\n`;
-      }
-      script += style ? `      <style>{\`${style}\`}</style>\n` : '';
-      script += '    </div>\n';
-      script += '  )\n';
-      script += '};\n';
-      script += '\n';
-      script += `export default ${name}Example;\n`;
+    let { config, script, settings, style } = item;
 
-      if (config) {
-        const i = script.lastIndexOf('import');
-
-        const j = script.indexOf('\n', i);
-
-        const react = `import { useEffect, useState } from 'react';`;
-
-        script = [react, script.slice(0, j), config, script.slice(j)].join('\n');
-      }
-
-      lines.push(`export const ${name} = dynamic(() => import('./${name}'), { suspense: true });`);
-
-      const script1 = [...HEADER, script].join('\n');
-
-      fs.writeFileSync(`${DIRECTORY}/${name}.js`, script1);
+    if (style) {
+      style = scoped(style, `.${className}`);
     }
 
-    const content = lines.join('\n');
+    script = script.split('export default ')[0].trim();
+    script += '\n\n';
+    script += `const ${name}Example = () => {\n`;
+    if (config) {
+      script += '  const [ready, setReady] = useState(false);\n';
+      script += '  useEffect(() => setReady(true), []);\n';
+    }
+    script += '  return (\n';
+    script += `    <div className="${className}${settings?.dock ? ' dock' : ''}">\n`;
+    if (config) {
+      script += `      {ready && <App />}\n`;
+    } else {
+      script += `      <App />\n`;
+    }
+    script += style ? `      <style>{\`${style}\`}</style>\n` : '';
+    script += '    </div>\n';
+    script += '  )\n';
+    script += '};\n';
+    script += '\n';
+    script += `export default ${name}Example;\n`;
 
-    fs.writeFileSync(`${DIRECTORY}/index.js`, content);
-  })();
+    if (config) {
+      const i = script.lastIndexOf('import');
+
+      const j = script.indexOf('\n', i);
+
+      const react = `import { useEffect, useState } from 'react';`;
+
+      script = [react, script.slice(0, j), config, script.slice(j)].join('\n');
+    }
+
+    lines.push(`export const ${name} = dynamic(() => import('./${name}'), { suspense: true });`);
+
+    const script1 = [...HEADER, script].join('\n');
+
+    fs.writeFileSync(`${DIRECTORY}/${name}.js`, script1);
+  }
+
+  const content = lines.join('\n');
+
+  fs.writeFileSync(`${DIRECTORY}/index.js`, content);
 })();
 
 // vision
@@ -218,10 +216,7 @@ const scoped = (styles, className) => {
   const [first, second, third, fourth] = responses;
 
   const lines = [
-    '/**************************************************',
-    ' * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY',
-    ' **************************************************/',
-    '',
+    ...HEADER,
     'export const statistics = {',
     "  platforms: 'TODO',",
     "  themes: 'TODO',",

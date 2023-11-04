@@ -1,6 +1,4 @@
-import { ReactNode } from 'react';
-
-export interface AlertProps {
-  children?: ReactNode;
+export interface IAlert {
+  children?: React.ReactNode;
   type?: 'error' | 'info' | 'success' | 'warning';
 }

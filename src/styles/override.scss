@@ -20,7 +20,7 @@ a {
 }
 
 .layout-default {
-  plus-progress-bar.app-loading-bar {
+  .app-loading-bar plus-progress-bar {
     position: fixed;
     inset: 0 0 auto;
     height: 2px;

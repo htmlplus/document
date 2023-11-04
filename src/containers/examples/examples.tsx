@@ -1,12 +1,14 @@
-import { Toc } from '@app/containers';
+'use client';
 
-export const Examples = () => {
+import { TocItem } from '@/containers';
+
+export function Examples() {
   return (
     <>
       <h2>
-        <Toc.Item level={2}>Examples</Toc.Item>
+        <TocItem level={2}>Examples</TocItem>
       </h2>
       <p>Below is a collection of simple to complex examples.</p>
     </>
   );
-};
+}

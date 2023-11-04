@@ -1,22 +1,21 @@
 import NextLink from 'next/link';
 
-import { Spinner } from '@app/components';
-import * as Utils from '@app/utils';
+import { classes } from '@/utils';
 
-import { ButtonProps } from './button.types';
+import { IButton } from './button.types';
 
-const Link = ({ children, to, ...attributes }: any) => {
+function Link({ children, to, ...attributes }: any) {
   if (attributes.target === '_blank' && !attributes.rel) {
     attributes.rel = 'noopener noreferrer';
   }
   return (
-    <NextLink href={to} {...attributes}>
+    <NextLink href={to} {...attributes} prefetch={false}>
       {children}
     </NextLink>
   );
-};
+}
 
-export const Button = ({
+export function Button({
   block,
   children,
   color,
@@ -28,18 +27,18 @@ export const Button = ({
   size = 'md',
   text,
   ...args
-}: ButtonProps) => {
-  const classes = Utils.classes('button', { block, color, disabled, icon, link, loading, outlined, size, text });
+}: IButton) {
+  const className = classes('button', { block, color, disabled, icon, link, loading, outlined, size, text });
   const Tag = args.to ? Link : ('button' as any);
   return (
-    <Tag className={classes} disabled={disabled} {...args}>
+    <Tag className={className} disabled={disabled} {...args}>
       {!loading && children}
       {loading && (
         <>
           <span>{children}</span>
-          <Spinner className="loading" type="dual-ring" size="sm" />
+          <plus-spinner className="loading" type="dual-ring" size="sm"></plus-spinner>
         </>
       )}
     </Tag>
   );
-};
+}

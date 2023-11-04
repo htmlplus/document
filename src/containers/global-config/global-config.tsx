@@ -1,10 +1,12 @@
+'use client';
+
 import { useRouter } from 'next/router';
 
-import { Button } from '@app/components';
-import { Toc } from '@app/containers';
-import { ROUTES, getPath } from '@app/utils';
+import { Button } from '@/components';
+import { TocItem } from '@/containers';
+import { ROUTES, getPath } from '@/utils';
 
-export const GlobalConfig = () => {
+export function GlobalConfig() {
   const router = useRouter();
 
   const { component, framework } = router.query as any;
@@ -12,7 +14,7 @@ export const GlobalConfig = () => {
   return (
     <>
       <h2>
-        <Toc.Item level={2}>Global Config</Toc.Item>
+        <TocItem level={2}>Global Config</TocItem>
       </h2>
       <p>
         See the animation's&nbsp;
@@ -27,4 +29,4 @@ export const GlobalConfig = () => {
       </p>
     </>
   );
-};
+}

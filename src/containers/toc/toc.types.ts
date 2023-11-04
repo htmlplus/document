@@ -1,6 +1,4 @@
-import { ReactNode } from 'react';
-
-export interface TocItemProps {
-  children?: ReactNode;
+export interface ITocItem {
+  children?: React.ReactNode;
   level?: number;
 }

@@ -1,7 +1,7 @@
-import create from 'zustand';
+import { create } from 'zustand';
 
-import { SidebarItem } from '@app/containers';
-import { sidebar } from '@app/data';
+import { SidebarItem } from '@/containers';
+import { sidebar } from '@/data';
 
 export interface UseSidebar {
   items: SidebarItem[];

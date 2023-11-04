@@ -1,15 +1,17 @@
+'use client';
+
 import { Suspense, useLayoutEffect, useRef, useState } from 'react';
 
 import { pascalCase } from 'change-case';
 
-import { Alert, Button, Code, Grid, Icon, Tabs, Tooltip } from '@app/components';
-import * as Examples from '@app/examples';
-import { useStore } from '@app/hooks';
-import { getPath, ROUTES } from '@app/utils';
+import { Alert, Button, Code, Grid, Icon, Tabs, Tooltip } from '@/components';
+import * as Examples from '@/examples';
+import { useStore } from '@/hooks';
+import { getPath, ROUTES } from '@/utils';
 
-import { ExampleProps } from './example.types';
+import { IExample } from './example.types';
 
-export const Example = ({ component, example, isolate, links, rtl, tabs, title }: ExampleProps) => {
+export function Example({ component, example, isolate, links, rtl, tabs, title }: IExample) {
   const store = useStore();
 
   const $preview = useRef<HTMLElement>(null);
@@ -123,4 +125,4 @@ export const Example = ({ component, example, isolate, links, rtl, tabs, title }
       </Tabs.Panels>
     </Tabs>
   );
-};
+}

@@ -1,4 +1,3 @@
-export interface MarkupProps {
-  scope?: any;
-  value?: string;
+export interface IMarkup {
+  value: string;
 }

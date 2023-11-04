@@ -1,16 +1,21 @@
-import { useRouter } from 'next/router';
+'use client';
 
-import { Button, Code } from '@app/components';
-import { Toc } from '@app/containers';
-import { componentsLight } from '@app/data';
-import { ROUTES, getPath } from '@app/utils';
+// TODO
+// import { useRouter } from 'next/router';
 
-export const Usage = () => {
-  const router = useRouter();
+import { Button, Code } from '@/components';
+import { TocItem } from '@/containers';
+import { ROUTES, getPath } from '@/utils';
 
-  const { component, framework } = router.query as any;
+export function Usage() {
+  // TODO
+  // const router = useRouter();
 
-  const dependencies = componentsLight.find((item) => item.key == component)?.dependencies?.join(' ') || '';
+  // TODO
+  const { component = 'avatar', framework = 'svelte' } = {} as any;
+
+  // TODO
+  const dependencies = '';
 
   let dependency;
 
@@ -25,7 +30,7 @@ export const Usage = () => {
   return (
     <>
       <h2>
-        <Toc.Item level={2}>Usage</Toc.Item>
+        <TocItem level={2}>Usage</TocItem>
       </h2>
       <p>
         Follow the tutorials &nbsp;
@@ -41,4 +46,4 @@ export const Usage = () => {
       <Code language="shell">{dependency}</Code>
     </>
   );
-};
+}

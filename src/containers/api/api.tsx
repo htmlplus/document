@@ -1,16 +1,20 @@
+'use client';
+
 import { useRouter } from 'next/router';
 
-import { Button } from '@app/components';
-import { Toc } from '@app/containers';
-import { ROUTES, getPath } from '@app/utils';
+import { Button } from '@/components';
+import { TocItem } from '@/containers';
+import { ROUTES, getPath } from '@/utils';
 
-export const Api = () => {
+export function Api() {
   const router = useRouter();
+
   const { component, framework } = router.query as any;
+
   return (
     <>
       <h2>
-        <Toc.Item level={2}>Api</Toc.Item>
+        <TocItem level={2}>Api</TocItem>
       </h2>
       <p>
         Click&nbsp;
@@ -22,4 +26,4 @@ export const Api = () => {
       </p>
     </>
   );
-};
+}

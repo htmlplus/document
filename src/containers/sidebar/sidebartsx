@@ -1,17 +1,19 @@
-import React, { useEffect } from 'react';
+'use client';
+
+import { useEffect } from 'react';
 
 import { useRouter } from 'next/router';
 
 import PACKAGE from '@htmlplus/core/package.json';
 
-import { Button, Center, Divider, Icon, Stack } from '@app/components';
-import { useSidebar, useStore } from '@app/hooks';
-import * as Utils from '@app/utils';
-import { ROUTES, getPath } from '@app/utils';
+import { Button, Center, Divider, Icon, Stack } from '@/components';
+import { useSidebar, useStore } from '@/hooks';
+import * as Utils from '@/utils';
+import { ROUTES, getPath } from '@/utils';
 
 import { SidebarItem } from './sidebar.types';
 
-export const Sidebar = () => {
+export function Sidebar() {
   const router = useRouter();
 
   const sidebar = useSidebar();
@@ -89,4 +91,4 @@ export const Sidebar = () => {
       </Stack>
     </div>
   );
-};
+}

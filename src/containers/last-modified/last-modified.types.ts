@@ -1,3 +1,3 @@
-export interface LastModifiedProps {
+export interface ILastModified {
   value: Date;
 }

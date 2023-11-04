@@ -1,43 +1,55 @@
-import { Alert, Button, Code as CoreCode } from '@app/components';
-import { Api, Browsers, Example, Examples, GlobalConfig, LastModified, Toc, Usage } from '@app/containers';
+import { Alert, Button, Code } from '@/components';
+import { Api, Browsers /*, Example*/, Examples, GlobalConfig, LastModified, TocItem, Usage } from '@/containers';
 
-const Heading = (props: any) => {
-  const Tag = `h${props.level}` as any;
-  if (props.level == 1) return <Tag>{props.children}</Tag>;
-  return (
-    <Tag>
-      <Toc.Item level={props.level}>{props.children}</Toc.Item>
-    </Tag>
-  );
-};
+function Heading(level: number) {
+  return function (props: any) {
+    const Tag = `h${level}` as any;
+
+    if (level == 1) return <Tag>{props.children}</Tag>;
+
+    return (
+      <Tag>
+        <TocItem level={level}>{props.children}</TocItem>
+      </Tag>
+    );
+  };
+}
 
 export const tokens = {
   Alert,
   Api,
   Browsers,
-  Example,
+  Example() {
+    return null;
+  },
   Examples,
   GlobalConfig,
   LastModified,
-  Playground: () => null,
-  Usage: () => <Usage />,
-  a: ({ children, href }: any) => {
+  Playground() {
+    return null;
+  },
+  Usage,
+  a({ children, href }: any) {
     return (
       <Button to={href} link="underline">
         {children}
       </Button>
     );
   },
-  code: ({ children, className }: any) => {
+  code({ children, className }: any) {
     const language = className?.split('-').pop();
+
     if (!language) return <code>{children}</code>;
-    return <CoreCode language={language}>{children}</CoreCode>;
+
+    return <Code language={language}>{children}</Code>;
   },
-  h1: (props: any) => <Heading level={1} {...props} />,
-  h2: (props: any) => <Heading level={2} {...props} />,
-  h3: (props: any) => <Heading level={3} {...props} />,
-  h4: (props: any) => <Heading level={4} {...props} />,
-  h5: (props: any) => <Heading level={5} {...props} />,
-  h6: (props: any) => <Heading level={6} {...props} />,
-  pre: ({ children }: any) => children
+  h1: Heading(1),
+  h2: Heading(2),
+  h3: Heading(3),
+  h4: Heading(4),
+  h5: Heading(5),
+  h6: Heading(6),
+  pre({ children }: any) {
+    return children;
+  }
 };

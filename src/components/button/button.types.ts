@@ -1,10 +1,8 @@
-import { ReactNode } from 'react';
+import { Colors } from '@/types';
 
-import { Colors } from '@app/types';
-
-export interface ButtonProps {
+export interface IButton {
   block?: boolean;
-  children: ReactNode;
+  children: React.ReactNode;
   color?: Colors;
   disabled?: boolean;
   icon?: boolean;
