@@ -1,18 +1,25 @@
 'use client';
 
+import { useEffect } from 'react';
+
+import { usePathname } from 'next/navigation';
+
 import PACKAGE from '@htmlplus/core/package.json';
 
 import { Button } from '@/components';
 import { ROUTES } from '@/constants';
+import { useFrameworks } from '@/containers';
 import { classes, getPath } from '@/utils';
 
 import { ISidebarItem } from './sidebar.types';
+import { useSidebar } from './useSidebar';
 
 export function Sidebar() {
-  // TODO
-  // const router = useRouter();
-  // const sidebar = useSidebar();
-  // const store = useStore();
+  const frameworks = useFrameworks();
+
+  const pathname = usePathname();
+
+  const sidebar = useSidebar();
 
   const menu = (items: ISidebarItem[], parents: ISidebarItem[] = []) => {
     return (
@@ -55,24 +62,22 @@ export function Sidebar() {
 
     event.preventDefault();
 
-    // TODO
-    // sidebar.toggle(item);
+    sidebar.toggle(item);
   };
 
-  // TODO
-  // useEffect(() => {
-  //   sidebar.sync(router.asPath, store.framework!);
-  // }, [router.asPath, store.framework]);
+  useEffect(() => {
+    sidebar.sync(pathname, frameworks.framework);
+  }, [pathname, frameworks.framework]);
 
   return (
     <div className="sidebar">
       <br />
-      <plus-stack gap="1rem" alignItems="stretch" vertical>
+      <plus-stack gap="1rem" align-items="stretch" vertical>
         <plus-center>
           <Button block link to={getPath(ROUTES.HOME, {})}>
             <plus-stack gap="1rem">
               <plus-icon name="htmlplus" size="44px"></plus-icon>
-              <plus-stack alignItems="end" vertical>
+              <plus-stack align-items="end" vertical>
                 <div>HTMLPLUS</div>
                 <div className="version">Version {PACKAGE.version}</div>
               </plus-stack>
@@ -84,8 +89,7 @@ export function Sidebar() {
           Github
         </Button>
         <plus-divider></plus-divider>
-        {/* TODO */}
-        {/* {menu(sidebar.items)} */}
+        {menu(sidebar.items)}
       </plus-stack>
     </div>
   );

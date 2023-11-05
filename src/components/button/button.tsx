@@ -36,7 +36,7 @@ export function Button({
       {loading && (
         <>
           <span>{children}</span>
-          <plus-spinner className="loading" type="dual-ring" size="sm"></plus-spinner>
+          <plus-spinner class="loading" type="dual-ring" size="sm"></plus-spinner>
         </>
       )}
     </Tag>

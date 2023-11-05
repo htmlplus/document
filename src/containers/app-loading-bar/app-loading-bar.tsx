@@ -1,43 +1,43 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-import Router from 'next/router';
-
-// TODO
-let timeout: NodeJS.Timeout;
+import { usePathname } from 'next/navigation';
 
 export function AppLoadingBar() {
+  const timeout = useRef<NodeJS.Timeout>();
+
   const [progress, setProgress] = useState(0);
 
-  // TODO
+  const pathname = usePathname();
+
+  function start() {
+    setProgress(30);
+
+    const increase = () => {
+      clearTimeout(timeout.current);
+
+      timeout.current = setTimeout(() => {
+        setProgress((progress) => progress + 1);
+        increase();
+      }, 50);
+    };
+
+    increase();
+  }
+
+  function stop() {
+    clearTimeout(timeout.current);
+
+    setProgress(100);
+
+    setTimeout(() => setProgress(0), 1000);
+  }
+
   useEffect(() => {
-    Router.events.on('routeChangeStart', () => {
-      setProgress(30);
-
-      const increase = () => {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => {
-          setProgress((progress) => progress + 1);
-          increase();
-        }, 50);
-      };
-
-      increase();
-    });
-
-    Router.events.on('routeChangeComplete', () => {
-      clearTimeout(timeout);
-      setProgress(100);
-      setTimeout(() => setProgress(0), 1000);
-    });
-
-    Router.events.on('routeChangeError', () => {
-      clearTimeout(timeout);
-      setProgress(100);
-      setTimeout(() => setProgress(0), 1500);
-    });
-  }, []);
+    stop();
+    return () => start();
+  }, [pathname]);
 
   if (!progress) return null;
 

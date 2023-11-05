@@ -1,14 +1,15 @@
 import { create } from 'zustand';
 
-import { SidebarItem } from '@/containers';
 import { sidebar } from '@/data';
 
+import { ISidebarItem } from './sidebar.types';
+
 export interface UseSidebar {
-  items: SidebarItem[];
-  prev?: SidebarItem;
-  next?: SidebarItem;
+  items: ISidebarItem[];
+  prev?: ISidebarItem;
+  next?: ISidebarItem;
   sync(path: string, framework: string): void;
-  toggle(item: SidebarItem): void;
+  toggle(item: ISidebarItem): void;
   update(): void;
 }
 
@@ -57,7 +58,7 @@ export const useSidebar = create<UseSidebar>((set, get) => ({
   }
 }));
 
-const flat = (items?: SidebarItem[]) => {
+const flat = (items?: ISidebarItem[]) => {
   if (!items) return [];
 
   const result = [...items];
@@ -69,7 +70,7 @@ const flat = (items?: SidebarItem[]) => {
   return result;
 };
 
-const init = (path: string, parent?: SidebarItem, items?: SidebarItem[]) => {
+const init = (path: string, parent?: ISidebarItem, items?: ISidebarItem[]) => {
   if (!items) return;
 
   for (const item of items) {

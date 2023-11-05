@@ -1,12 +1,15 @@
 'use client';
 
 import { useEffect, useMemo } from 'react';
+// TODO: it's a large dependency
 import Select, { components } from 'react-select';
 
-import { useRouter } from 'next/router';
+import { usePathname, useRouter } from 'next/navigation';
 
 import { frameworks } from '@/data';
 import { getPath } from '@/utils';
+
+import { useFrameworks } from './useFrameworks';
 
 function Option(props: any) {
   return (
@@ -32,7 +35,11 @@ function SingleValue(props: any) {
 }
 
 export function Frameworks() {
+  const pathname = usePathname();
+
   const router = useRouter();
+
+  const store = useFrameworks();
 
   const items = useMemo(
     () =>
@@ -46,44 +53,37 @@ export function Frameworks() {
     [frameworks]
   );
 
+  // TODO
   const key = useMemo(() => {
-    const framework = router.asPath.split('/')?.[1];
+    const framework = pathname.split('/')?.[1];
     if (!framework) return;
-    if (!frameworks.some((framework) => router.asPath.startsWith(`/${framework.key}`))) return;
-    if (!framework) return;
+    if (!frameworks.some((framework) => pathname.startsWith(`/${framework.key}`))) return;
     return framework;
-  }, [router.asPath]);
+  }, [pathname]);
+
+  const selected = useMemo(
+    () => items.find((framework) => framework.value === store.framework),
+    [items, store.framework]
+  );
+
+  useEffect(() => {
+    if (!key) return;
+    store.setFramework(key);
+  }, [key]);
 
   // TODO
-  // const selected = useMemo(
-  //   () => items.find((framework) => framework.value === store.framework),
-  //   [items, store.framework]
-  // );
-
-  // TODO
-  // useEffect(() => {
-  //   if (!key) return;
-  //   store.setFramework(key);
-  // }, [key]);
-
   const change = (framework: any) => {
-    // TODO
-    // store.setFramework(framework.value);
-
-    const query = Object.assign({}, router.query, { framework: framework.value });
-    const prev = router.asPath;
-    const next = getPath(router.route as any, query);
+    const prev = pathname;
+    const next = pathname.replace(`/${store.framework}/`, `/${framework.value}/`);
     if (next == prev) return;
-    if (next != router.route) return router.replace(next!);
-    if (!frameworks.some((framework) => prev.startsWith(`/${framework.key}`))) return;
-    router.replace(`/${framework.value}/` + prev.split('/').slice(2).join('/'));
+    router.replace(next);
+    store.setFramework(framework.value);
   };
 
   return (
     <div className="frameworks">
       <p>Select Your Framework</p>
-      {/* TODO */}
-      {/* <Select
+      <Select
         isSearchable={false}
         isDisabled={!key}
         components={{
@@ -93,7 +93,7 @@ export function Frameworks() {
         options={items}
         value={selected}
         onChange={change}
-      /> */}
+      />
     </div>
   );
 }

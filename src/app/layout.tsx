@@ -1,22 +1,22 @@
 'use client';
 
-import '@htmlplus/core';
-
-import '../styles/index.scss';
+// TODO
+import '@/config/htmlplus';
+import '@/styles/index.scss';
 
 interface ILayout {
   children: React.ReactNode;
 }
 
 export default function Layout({ children }: ILayout) {
+  // TODO
+  import('@htmlplus/core');
   return (
     <html lang="en">
       <head>
         <title>HTMLPLUS</title>
 
         <link rel="icon" href="/favicon.ico" />
-
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {/* TODO */}
         {/* <meta name="description" content={meta?.description} />

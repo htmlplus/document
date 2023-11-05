@@ -5,7 +5,7 @@ import { socials } from '@/data';
 
 export function Socials() {
   return (
-    <plus-grid alignItems="center" justifyContent="center" wrap="off">
+    <plus-grid align-items="center" justify-content="center" wrap="off">
       {socials.map((social) => (
         <plus-grid-item key={social.key}>
           <Button icon text to={social.url}>

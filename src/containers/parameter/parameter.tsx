@@ -28,7 +28,7 @@ export function Parameter(item: any) {
 
   return (
     <>
-      <plus-grid gutterX="md">
+      <plus-grid gutter-x="md">
         <plus-grid-item xs="12" sm="12" md="6">
           <b>Name</b>
           <div>
@@ -55,14 +55,14 @@ export function Parameter(item: any) {
             </plus-grid-item>
           </>
         )}
-        {['style'].includes(item.kind) && <plus-grid-item xs="12" sm="grow" hideSmDown />}
+        {['style'].includes(item.kind) && <plus-grid-item xs="12" sm="grow" hide-sm-down />}
         {['property', 'style'].includes(item.kind) && (
           <>
-            <plus-grid-item xs="12" sm="auto" hideMdUp>
+            <plus-grid-item xs="12" sm="auto" hide-md-up>
               <b>Default</b>
               <div>{item.initializer || 'undefined'}</div>
             </plus-grid-item>
-            <plus-grid-item xs="12" sm="auto" hideSmDown style={{ textAlign: 'right' }}>
+            <plus-grid-item xs="12" sm="auto" hide-sm-down style={{ textAlign: 'right' }}>
               <b>Default</b>
               <div>{item.initializer || 'undefined'}</div>
             </plus-grid-item>

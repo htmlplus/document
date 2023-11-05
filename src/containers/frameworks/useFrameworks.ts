@@ -2,12 +2,12 @@ import { create } from 'zustand';
 
 import * as CONSTANTS from '@/constants';
 
-interface UseStore {
-  framework?: string;
+interface IUseFrameworks {
+  framework: string;
   setFramework: (framework: string) => void;
 }
 
-export const useStore = create<UseStore>((set) => ({
+export const useFrameworks = create<IUseFrameworks>((set) => ({
   framework: CONSTANTS.FRAMEWORK_DEFAULT,
   setFramework: (framework: string) => {
     set({ framework });

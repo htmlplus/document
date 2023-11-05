@@ -6,7 +6,7 @@ import { getPath } from '@/utils';
 
 export function Browsers() {
   return (
-    <plus-grid gutterY="lg">
+    <plus-grid gutter-y="lg">
       {browsers.map((browser) => (
         <plus-grid-item xs="12" sm="grow" key={browser.key}>
           {/* TODO */}

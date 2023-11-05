@@ -1,27 +1,22 @@
 'use client';
 
 import { Button } from '@/components';
-
-// TODO
-// import { useSidebar } from '@/hooks';
+import { useSidebar } from '@/containers';
 
 export function Navigation() {
-  // TODO
-  // const sidebar = useSidebar();
-  const sidebar = { prev: { url: '', title: '' }, next: { url: '', title: '' } };
-
+  const sidebar = useSidebar();
   return (
     <p>
-      <plus-grid justifyContent="between" alignItems="center">
+      <plus-grid justify-content="between" align-items="center">
         <plus-grid-item xs="auto">
           {!!sidebar.prev && (
             <Button link to={sidebar.prev.url}>
-              <plus-grid alignItems="center" gutterX="md" wrap="off">
+              <plus-grid align-items="center" gutter-x="md" wrap="off">
                 <plus-grid-item>
                   <plus-icon name="chevron-left" size="lg"></plus-icon>
                 </plus-grid-item>
                 <plus-grid-item>
-                  <plus-grid alignItems="start" vertical>
+                  <plus-grid align-items="start" vertical>
                     <plus-grid-item>
                       <b>Prev</b>
                     </plus-grid-item>
@@ -35,9 +30,9 @@ export function Navigation() {
         <plus-grid-item xs="auto">
           {!!sidebar.next && (
             <Button link to={sidebar.next.url}>
-              <plus-grid alignItems="center" gutterX="md" wrap="off">
+              <plus-grid align-items="center" gutter-x="md" wrap="off">
                 <plus-grid-item>
-                  <plus-grid alignItems="end" vertical>
+                  <plus-grid align-items="end" vertical>
                     <plus-grid-item>
                       <b>Next</b>
                     </plus-grid-item>
