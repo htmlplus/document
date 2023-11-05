@@ -15,5 +15,6 @@
   ],
   "importOrderCaseInsensitive": true,
   "importOrderSeparation": true,
-  "importOrderSortSpecifiers": false
+  "importOrderSortSpecifiers": false,
+  "plugins": ["@trivago/prettier-plugin-sort-imports"]
 }

@@ -1,5 +1,5 @@
-// TODO
 'use client';
+
 import '@htmlplus/core';
 
 import '../styles/index.scss';

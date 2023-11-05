@@ -1,5 +1,4 @@
 import glob from 'fast-glob';
-import path from 'path';
 import fs from 'fs';
 
 import { Markup } from '@/containers';
@@ -12,14 +11,12 @@ interface IParams {
   sections: string[];
 }
 
-const base = 'src/content/en';
+const ROOT = 'src/content/en';
 
-function getContent(sections: string[]) {
-  const url = sections.join('/');
+function getContent(key: string) {
+  const main = `${key}.md`;
 
-  const main = path.join(base, `${url}.md`);
-
-  const alternative = path.join(base, `${url}/index.md`);
+  const alternative = `${key}/index.md`;
 
   const final = fs.existsSync(main) ? main : alternative;
 
@@ -29,14 +26,18 @@ function getContent(sections: string[]) {
 }
 
 export function generateStaticParams() {
-  return glob.sync(`${base}/**/*.md`).map((file) =>
+  return glob.sync(ROOT + '/**/*.md').map((file) =>
     file
-      .replace(base, '')
+      .replace(ROOT, '')
       .replace('.md', '')
       .replace(/\/index$/, '')
   );
 }
 
 export default function Page({ params }: IPage) {
-  return <Markup value={getContent(params.sections)} />;
+  const key = ROOT + '/' + params.sections.join('/');
+
+  const content = getContent(key);
+
+  return <Markup value={content} />;
 }

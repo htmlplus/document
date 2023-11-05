@@ -19,5 +19,5 @@ export const statistics = {
     return this.examplesPerFramework * this.frameworks;
   },
   examplesPerFramework: 60,
-  frameworks: 6,
-}
+  frameworks: 6
+};

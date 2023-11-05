@@ -3,8 +3,9 @@
 import { useRouter } from 'next/router';
 
 import { Button } from '@/components';
+import { ROUTES } from '@/constants';
 import { TocItem } from '@/containers';
-import { ROUTES, getPath } from '@/utils';
+import { getPath } from '@/utils';
 
 export function GlobalConfig() {
   const router = useRouter();

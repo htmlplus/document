@@ -6,8 +6,9 @@ import { useRouter } from 'next/router';
 
 import axios from 'axios';
 
+import { ROUTES } from '@/constants';
 import { TocItem } from '@/containers';
-import { ROUTES, getPath } from '@/utils';
+import { getPath } from '@/utils';
 
 export function Contributors() {
   const router = useRouter();

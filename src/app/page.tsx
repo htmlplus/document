@@ -1,6 +1,7 @@
 import NextLink from 'next/link';
 
-import { ROUTES, getPath } from '@/utils';
+import { ROUTES } from '@/constants';
+import { getPath } from '@/utils';
 
 export default function Page() {
   return (

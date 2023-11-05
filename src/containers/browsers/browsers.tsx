@@ -1,7 +1,8 @@
 'use client';
 
+import { ROUTES } from '@/constants';
 import { browsers } from '@/data';
-import { ROUTES, getPath } from '@/utils';
+import { getPath } from '@/utils';
 
 export function Browsers() {
   return (

@@ -2,10 +2,10 @@
 
 // TODO
 // import { useRouter } from 'next/router';
-
 import { Button, Code } from '@/components';
+import { ROUTES } from '@/constants';
 import { TocItem } from '@/containers';
-import { ROUTES, getPath } from '@/utils';
+import { getPath } from '@/utils';
 
 export function Usage() {
   // TODO
@@ -15,6 +15,7 @@ export function Usage() {
   const { component = 'avatar', framework = 'svelte' } = {} as any;
 
   // TODO
+  // const dependencies = componentsLight.find((item) => item.key == component)?.dependencies?.join(' ') || '';
   const dependencies = '';
 
   let dependency;

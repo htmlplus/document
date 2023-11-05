@@ -1,8 +1,9 @@
 'use client';
 
 import { Button, Code } from '@/components';
+import { ROUTES } from '@/constants';
 import { Markup } from '@/containers';
-import { ROUTES, getPath } from '@/utils';
+import { getPath } from '@/utils';
 
 // TODO: set item type
 export function Parameter(item: any) {

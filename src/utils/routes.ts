@@ -1,3 +1,5 @@
+import { ROUTES } from '@/constants';
+
 type ExtractOptional<Key extends string> = Key extends `${infer Start}?`
   ? true
   : Key extends `${infer Start}?${infer End}`
@@ -34,61 +36,24 @@ type Routes = {
 
 const getPathCore =
   <R extends Routes>() =>
-    <Path extends ExtractRouteKey<R>, Parameter extends ExtractParameters<Path>>(path: Path, parameter: Parameter) => {
-      let result = path as string;
+  <Path extends ExtractRouteKey<R>, Parameter extends ExtractParameters<Path>>(path: Path, parameter: Parameter) => {
+    let result = path as string;
 
-      result = result.replace(/\[(\w+)(\?)?(:)?(\w+)?\]/g, '[$1$2]');
+    result = result.replace(/\[(\w+)(\?)?(:)?(\w+)?\]/g, '[$1$2]');
 
-      if (parameter) {
-        for (const key in parameter) {
-          const value = (parameter as any)[key] as string;
-          result = result.replace(`[${key}]`, value).replace(`[${key}?]`, value);
-        }
+    if (parameter) {
+      for (const key in parameter) {
+        const value = (parameter as any)[key] as string;
+        result = result.replace(`[${key}]`, value).replace(`[${key}?]`, value);
       }
+    }
 
-      result = result
-        .replace(/\/\[(\w+)\?\]/g, '')
-        .replace(/\w+=\[\w+(\?)\]/g, '')
-        .replace(/(\?|&)+$/, '');
+    result = result
+      .replace(/\/\[(\w+)\?\]/g, '')
+      .replace(/\w+=\[\w+(\?)\]/g, '')
+      .replace(/(\?|&)+$/, '');
 
-      return result;
-    };
-
-export const ROUTES = {
-  HOME: '/',
-  CONTRIBUTING: '/contributing',
-  CHANGELOG: '/changelog',
-  VISION: '/vision',
-  CODE_COMPLETION: '/code-completion',
-  ANIMATIONS: '/component/animation/names',
-  ICONS: '/component/icon/names',
-  BIDIRECTIONALITY: '/bidirectionality',
-  GLOBAL_CONFIG: '/global-config',
-  OVERVIEW: '/overview',
-  INSTALLATION: '/installation',
-  INSTALLATION_FRAMEWORK: '/[framework]/installation',
-  BROWSERS: '/browsers',
-  COMPONENT_DETAILS: '/[framework]/component/[component]',
-  COMPONENT_EXAMPLE: '/component/[component]/example/[example]',
-  COMPONENT_CONFIG: '/[framework]/component/[component]/config',
-  API_DETAILS: '/[framework]/api/[component]',
-  CODEOFCONDUCT: '/code-of-conduct',
-  GITHUB_URL: 'https://github.com/htmlplus/core',
-  ASSETS: '/assets/[filepath]',
-  CONTRIBUTOR: 'https://github.com/[contributor].png?size=90',
-  CONTRIBUTOR_GITHUB: 'https://github.com/[contributor]',
-  SOCIAL_TWITTER: 'https://www.twitter.com/htmlplusio',
-  SOCIAL_LINKEDIN: 'https://www.linkedin.com/company/htmlplus',
-  SOCIAL_INSTAGRAM: 'https://www.instagram.com/htmlplus.io',
-  SOCIAL_GITHUB: 'https://github.com/htmlplus/htmlplus',
-  SOCIAL_YOUTUBE: 'https://www.youtube.com/channel/UCsNkxDmLU7vK_L1jgSVWWCA',
-  GITHUB_COMMITS: 'https://api.github.com/repos/htmlplus/[repository]/commits?path=[path]',
-  EXAMPLE_STACKBLITZ_LINK:
-    'https://stackblitz.com/github/htmlplus/examples/tree/main/dist/[framework]/[component]/[example]',
-  EXAMPLE_GITHUB_LINK: 'https://github.com/htmlplus/examples/tree/main/dist/[framework]/[component]/[example]',
-  EXAMPLE_DOWNLOAD_LINK:
-    'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/htmlplus/examples/tree/main/dist/[framework]/[component]/[example]',
-  TYPE_GITHUB_LINK: 'https://github.com/htmlplus/core/tree/main/src/components/[component]/[fileName]'
-} as const;
+    return result;
+  };
 
 export const getPath = getPathCore<typeof ROUTES>();

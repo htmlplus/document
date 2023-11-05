@@ -1,4 +1,5 @@
-import { ROUTES, getPath } from '@/utils';
+import { ROUTES } from '@/constants';
+import { getPath } from '@/utils';
 
 export const socials = [
   {

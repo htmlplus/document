@@ -1,8 +1,8 @@
 'use client';
 
-import Router from 'next/router';
-
 import { useEffect, useState } from 'react';
+
+import Router from 'next/router';
 
 // TODO
 let timeout: NodeJS.Timeout;
