@@ -1,51 +1,48 @@
 import { Fragment } from 'react';
 
-// TODO
-// import '@htmlplus/core/animation/names/all.js';
-
 import { capitalCase } from 'change-case';
 import glob from 'fast-glob';
 
-import { Animation, Code, Grid } from '@/components';
-import { TocItem } from '@/containers';
-
 // TODO
-// function getCategories() {
-//   const categories: any[] = [];
+import { Code } from '@/components/code';
+import { TocItem } from '@/containers/toc';
 
-//   const cwd = 'node_modules/@htmlplus/core/animation/names';
+import { Box } from './box';
 
-//   const files = glob.sync('*/*.js', { cwd }).filter((file) => !file.endsWith('all.js'));
+function getCategories() {
+  const categories: any[] = [];
 
-//   for (const file of files) {
-//     const [directoryName, fileName] = file
-//       .split('.')
-//       .slice(0, -1)
-//       .join('.')
-//       .split('/')
-//       .filter((section) => !!section);
+  const cwd = 'node_modules/@htmlplus/core/animation/names';
 
-//     if (!categories.some((category) => category.key == directoryName))
-//       categories.push({
-//         key: directoryName,
-//         title: capitalCase(directoryName),
-//         items: []
-//       });
+  const files = glob.sync('*/*.js', { cwd }).filter((file) => !file.endsWith('all.js'));
 
-//     const category = categories.find((category) => category.key == directoryName);
+  for (const file of files) {
+    const [directoryName, fileName] = file
+      .split('.')
+      .slice(0, -1)
+      .join('.')
+      .split('/')
+      .filter((section) => !!section);
 
-//     category.items.push({
-//       key: fileName,
-//       title: capitalCase(fileName)
-//     });
-//   }
+    if (!categories.some((category) => category.key == directoryName))
+      categories.push({
+        key: directoryName,
+        title: capitalCase(directoryName),
+        items: []
+      });
 
-//   return categories;
-// }
+    const category = categories.find((category) => category.key == directoryName);
+
+    category.items.push({
+      key: fileName,
+      title: capitalCase(fileName)
+    });
+  }
+
+  return categories;
+}
 
 export default function Page() {
-  // TODO
-  // const [playing, setPlaying] = useState('');
   return (
     <>
       <h1>Animations</h1>
@@ -97,26 +94,19 @@ export default function Page() {
         </a>
         library.
       </p>
-      {[].map((category: any) => (
+      {getCategories().map((category: any) => (
         <Fragment key={category.key}>
           <h3>
             <TocItem level={3}>{category.title}</TocItem>
           </h3>
-          <Grid gutter="md">
+          <plus-grid gutter="md">
             {category.items.map((item: any) => (
-              <Grid.Item class="animation" key={`${category.key}:${item.key}`}>
-                {/* TODO */}
-                {/* <div
-                  className={playing == item.key ? '' : 'stop'}
-                  onMouseEnter={() => setPlaying(item.key)}
-                  onMouseLeave={() => setPlaying('')}
-                >
-                  {playing == item.key && <Animation name={item.key} run />}
-                </div> */}
+              <plus-grid-item class="animation" key={`${category.key}:${item.key}`}>
+                <Box name={item.key}></Box>
                 <small>{item.title}</small>
-              </Grid.Item>
+              </plus-grid-item>
             ))}
-          </Grid>
+          </plus-grid>
         </Fragment>
       ))}
     </>

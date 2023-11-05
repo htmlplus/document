@@ -1,32 +1,26 @@
 'use client';
 
-import { useEffect } from 'react';
-
-import { useRouter } from 'next/router';
-
 import PACKAGE from '@htmlplus/core/package.json';
 
-import { Button, Center, Divider, Icon, Stack } from '@/components';
-import { useSidebar, useStore } from '@/hooks';
-import * as Utils from '@/utils';
-import { ROUTES, getPath } from '@/utils';
+import { Button } from '@/components';
+import { ROUTES } from '@/constants';
+import { classes, getPath } from '@/utils';
 
-import { SidebarItem } from './sidebar.types';
+import { ISidebarItem } from './sidebar.types';
 
 export function Sidebar() {
-  const router = useRouter();
+  // TODO
+  // const router = useRouter();
+  // const sidebar = useSidebar();
+  // const store = useStore();
 
-  const sidebar = useSidebar();
-
-  const store = useStore();
-
-  const menu = (items: SidebarItem[], parents: SidebarItem[] = []) => {
+  const menu = (items: ISidebarItem[], parents: ISidebarItem[] = []) => {
     return (
       <ul className="nav">
         {items.map((item) => (
           <li
             key={item.title + item.url}
-            className={Utils.classes({
+            className={classes({
               active: item.active,
               expand: item.expand,
               navItem: true
@@ -34,11 +28,12 @@ export function Sidebar() {
           >
             <Button block text to={item.url || '#'} onClick={(event: MouseEvent) => toggle(event, item)}>
               <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between ' }}>
+                {/* TODO */}
                 {/* {item.icon && (
-                <>
-                  <Icon name={item.icon as any} /> &nbsp;
-                </>
-              )} */}
+                  <>
+                    <plus-icon name={item.icon as any}></plus-icon> &nbsp;
+                  </>
+                )} */}
                 {item.title}
                 {!!item.items?.length && <span className="nav-link-toggle" />}
                 {item.stable && (
@@ -55,40 +50,43 @@ export function Sidebar() {
     );
   };
 
-  const toggle = (event: MouseEvent, item: SidebarItem) => {
+  const toggle = (event: MouseEvent, item: ISidebarItem) => {
     if (!item || item.url) return;
 
     event.preventDefault();
 
-    sidebar.toggle(item);
+    // TODO
+    // sidebar.toggle(item);
   };
 
-  useEffect(() => {
-    sidebar.sync(router.asPath, store.framework!);
-  }, [router.asPath, store.framework]);
+  // TODO
+  // useEffect(() => {
+  //   sidebar.sync(router.asPath, store.framework!);
+  // }, [router.asPath, store.framework]);
 
   return (
     <div className="sidebar">
       <br />
-      <Stack gap="1rem" alignItems="stretch" vertical>
-        <Center>
+      <plus-stack gap="1rem" alignItems="stretch" vertical>
+        <plus-center>
           <Button block link to={getPath(ROUTES.HOME, {})}>
-            <Stack gap="1rem">
-              <Icon name="htmlplus" size="44px" />
-              <Stack alignItems="end" vertical>
+            <plus-stack gap="1rem">
+              <plus-icon name="htmlplus" size="44px"></plus-icon>
+              <plus-stack alignItems="end" vertical>
                 <div>HTMLPLUS</div>
                 <div className="version">Version {PACKAGE.version}</div>
-              </Stack>
-            </Stack>
+              </plus-stack>
+            </plus-stack>
           </Button>
-        </Center>
+        </plus-center>
         <Button block outlined to={getPath(ROUTES.GITHUB_URL, {})} target="_blank">
-          <Icon name="github" />
+          <plus-icon name="github"></plus-icon>
           Github
         </Button>
-        <Divider />
-        {menu(sidebar.items)}
-      </Stack>
+        <plus-divider></plus-divider>
+        {/* TODO */}
+        {/* {menu(sidebar.items)} */}
+      </plus-stack>
     </div>
   );
 }

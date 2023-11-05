@@ -10,7 +10,7 @@ import { getPath } from '@/utils';
 export function GlobalConfig() {
   const router = useRouter();
 
-  const { component, framework } = router.query as any;
+  const { component } = router.query as any;
 
   return (
     <>
@@ -19,7 +19,7 @@ export function GlobalConfig() {
       </h2>
       <p>
         See the animation's&nbsp;
-        <Button link="underline" to={getPath(ROUTES.COMPONENT_CONFIG, { component, framework })}>
+        <Button link="underline" to={getPath(ROUTES.COMPONENT_CONFIG, { component })}>
           config
         </Button>
         . Full&nbsp;

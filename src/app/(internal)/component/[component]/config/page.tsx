@@ -1,8 +1,9 @@
 import { capitalCase } from 'change-case';
 
 import { Alert, Button, Code } from '@/components';
+import { ROUTES } from '@/constants';
 import { components, frameworks } from '@/data';
-import { ROUTES, getPath } from '@/utils';
+import { getPath } from '@/utils';
 
 interface IPage {
   params: IParams;
@@ -10,7 +11,6 @@ interface IPage {
 
 interface IParams {
   component: string;
-  framework: string;
 }
 
 export function generateStaticParams() {
@@ -19,8 +19,7 @@ export function generateStaticParams() {
   for (const framework of frameworks) {
     for (const component of components) {
       params.push({
-        component: component.key,
-        framework: framework.key
+        component: component.key
       });
     }
   }
@@ -32,9 +31,7 @@ export default function Page({ params }: IPage) {
   const component = components.find((component) => component.key == params.component);
   return (
     <>
-      <h1>
-        {capitalCase(component.key)} config in the {capitalCase(params.framework as any)}
-      </h1>
+      <h1>{capitalCase(component.key)} global config</h1>
       <p>
         All of the component's APIs are configurable as below. Full&nbsp;
         <Button link="underline" to={getPath(ROUTES.GLOBAL_CONFIG, {})}>
@@ -47,9 +44,7 @@ export default function Page({ params }: IPage) {
       <Code language="js">
         {[
           // TODO
-          `import { setConfig } from '${
-            params.framework == 'javascript' ? 'https://unpkg.com/' : ''
-          }@htmlplus/core/config.js';`,
+          `import { setConfig } from '@htmlplus/core/config.js';`,
           ``,
           `setConfig({`,
           `  component: {`,

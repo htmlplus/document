@@ -14,7 +14,7 @@ export const ROUTES = {
   BROWSERS: '/browsers',
   COMPONENT_DETAILS: '/[framework]/component/[component]',
   COMPONENT_EXAMPLE: '/component/[component]/example/[example]',
-  COMPONENT_CONFIG: '/[framework]/component/[component]/config',
+  COMPONENT_CONFIG: '/component/[component]/config',
   API_DETAILS: '/[framework]/api/[component]',
   CODEOFCONDUCT: '/code-of-conduct',
   GITHUB_URL: 'https://github.com/htmlplus/core',

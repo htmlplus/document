@@ -1,7 +1,6 @@
-import NextLink from 'next/link';
-
 // TODO
 import { AppLoadingBar } from '@/containers/app-loading-bar';
+import { Sidebar } from '@/containers/sidebar';
 
 interface ILayout {
   children: React.ReactNode;
@@ -15,8 +14,7 @@ export default function Layout({ children }: ILayout) {
       </div>
       <plus-drawer open={false} animation="fade" connector="main" temporary size="300px">
         <plus-card class="drawer" tile elevation={10}>
-          {/* TODO */}
-          {/* <Sidebar /> */}
+          <Sidebar />
         </plus-card>
       </plus-drawer>
       <plus-grid>
@@ -31,23 +29,7 @@ export default function Layout({ children }: ILayout) {
       <plus-grid>
         <plus-grid-item xs="auto" hideLgDown>
           <plus-sticky class="sidebar-start">
-            {/* TODO */}
-            <div>
-              <NextLink href="/overview" prefetch={false}>
-                overview
-              </NextLink>
-              <NextLink href="/changelog" prefetch={false}>
-                changelog
-              </NextLink>
-              <NextLink href="/vision" prefetch={false}>
-                vision
-              </NextLink>
-              <NextLink href="/code-completion" prefetch={false}>
-                code-completion
-              </NextLink>
-            </div>
-            {/* TODO */}
-            {/* <Sidebar /> */}
+            <Sidebar />
           </plus-sticky>
         </plus-grid-item>
         <plus-grid-item xs="grow">
