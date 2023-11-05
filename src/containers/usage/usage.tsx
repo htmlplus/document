@@ -1,26 +1,24 @@
 'use client';
 
-// TODO
-// import { useRouter } from 'next/router';
+import { useParams } from 'next/navigation';
+
 import { Button, Code } from '@/components';
 import { ROUTES } from '@/constants';
 import { TocItem } from '@/containers';
+import { componentsLight } from '@/data';
 import { getPath } from '@/utils';
 
 export function Usage() {
-  // TODO
-  // const router = useRouter();
+  const params = useParams<any>();
+
+  if (!params) return null;
 
   // TODO
-  const { component = 'avatar', framework = 'svelte' } = {} as any;
-
-  // TODO
-  // const dependencies = componentsLight.find((item) => item.key == component)?.dependencies?.join(' ') || '';
-  const dependencies = '';
+  const dependencies = componentsLight.find((item) => item.key == params.component)?.dependencies?.join(' ') || '';
 
   let dependency;
 
-  if (framework == 'react-dedicated') {
+  if (params.framework == 'react-dedicated') {
     dependency = 'npm install @htmlplus/react ';
   } else {
     dependency = 'npm install @htmlplus/core ';
@@ -35,13 +33,13 @@ export function Usage() {
       </h2>
       <p>
         Follow the tutorials &nbsp;
-        <Button link="underline" to={getPath(ROUTES.INSTALLATION_FRAMEWORK, { framework })}>
+        <Button link="underline" to={getPath(ROUTES.INSTALLATION_FRAMEWORK, { framework: params.framework })}>
           here
         </Button>
         &nbsp; to use the &nbsp;
         <b>HTMLPLUS</b>
         &nbsp; library on &nbsp;
-        <b>{(framework as string).toUpperCase()}</b>
+        <b>{params.framework?.toUpperCase()}</b>
         &nbsp; projects.
       </p>
       <Code language="shell">{dependency}</Code>
