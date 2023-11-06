@@ -5,10 +5,10 @@ import remarkGfm from 'remark-gfm';
 import { MarkupClient } from './markup.client';
 import { IMarkup } from './markup.types';
 
-export async function Markup({ value }: IMarkup) {
+export async function Markup({ scope, value }: IMarkup) {
   const options = { mdxOptions: { development: false, remarkPlugins: [remarkGfm] } };
 
   const serialized = await serialize(value, options);
 
-  return <MarkupClient {...serialized} />;
+  return <MarkupClient {...serialized} scope={scope} />;
 }

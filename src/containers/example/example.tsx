@@ -4,15 +4,16 @@ import { Suspense, useLayoutEffect, useRef, useState } from 'react';
 
 import { pascalCase } from 'change-case';
 
-import { Alert, Button, Code, Grid, Icon, Tabs, Tooltip } from '@/components';
-import * as Examples from '@/examples';
-import { useStore } from '@/hooks';
-import { getPath, ROUTES } from '@/utils';
+import { Alert, Button, Code } from '@/components';
+import { ROUTES } from '@/constants';
+import { useFrameworks } from '@/containers';
+// import * as Examples from '@/examples';
+import { getPath } from '@/utils';
 
 import { IExample } from './example.types';
 
 export function Example({ component, example, isolate, links, rtl, tabs, title }: IExample) {
-  const store = useStore();
+  const frameworks = useFrameworks();
 
   const $preview = useRef<HTMLElement>(null);
 
@@ -26,7 +27,8 @@ export function Example({ component, example, isolate, links, rtl, tabs, title }
 
   const componentName = pascalCase(component) + pascalCase(example);
 
-  const Component = (Examples as any)[componentName!] as any;
+  // TODO
+  // const Component = (Examples as any)[componentName!] as any;
 
   const onDirection = (event?: MouseEvent) => {
     event?.preventDefault();
@@ -62,67 +64,68 @@ export function Example({ component, example, isolate, links, rtl, tabs, title }
     setLoaded(false);
   };
 
-  useLayoutEffect(onReload, [store.framework]);
+  useLayoutEffect(onReload, [frameworks.framework]);
 
   return (
-    <Tabs className="example" connector={`example:${title}`} value="preview">
+    <plus-tabs class="example" connector={`example:${title}`} value="preview">
       {/* TODO: remove connector and example */}
-      <Grid alignItems="center" gutterX="sm">
-        <Grid.Item xs="grow">
-          <Tabs.Bar>
-            <Tabs.Tab value="preview">Preview</Tabs.Tab>
+      <plus-grid align-items="center" gutter-x="sm">
+        <plus-grid-item xs="grow">
+          <plus-tabs-bar>
+            <plus-tabs-tab value="preview">Preview</plus-tabs-tab>
             {tabs?.map((tab) => (
-              <Tabs.Tab key={tab.key} disabled={tab.disabled} value={tab.key}>
+              <plus-tabs-tab key={tab.key} disabled={tab.disabled} value={tab.key}>
                 {tab.title}
-              </Tabs.Tab>
+              </plus-tabs-tab>
             ))}
-          </Tabs.Bar>
-        </Grid.Item>
+          </plus-tabs-bar>
+        </plus-grid-item>
         {rtl && (
-          <Grid.Item xs="auto">
+          <plus-grid-item xs="auto">
             <Button icon text to="#" onClick={onDirection}>
-              <Icon name="sign-turn-left" />
+              <plus-icon name="sign-turn-left"></plus-icon>
             </Button>
-            <Tooltip>Change Direction</Tooltip>
-          </Grid.Item>
+            <plus-tooltip>Change Direction</plus-tooltip>
+          </plus-grid-item>
         )}
-        <Grid.Item xs="auto">
+        <plus-grid-item xs="auto">
           <Button icon text to="#" onClick={onReload}>
-            <Icon name="arrow-clockwise" />
+            <plus-icon name="arrow-clockwise"></plus-icon>
           </Button>
-          <Tooltip>Reset</Tooltip>
-        </Grid.Item>
+          <plus-tooltip>Reset</plus-tooltip>
+        </plus-grid-item>
         {links?.map((link) => (
-          <Grid.Item key={link.key} xs="auto">
+          <plus-grid-item key={link.key} xs="auto">
             <Button icon text to={link.url} target="_blank">
-              <Icon name={link.icon} />
+              <plus-icon name={link.icon}></plus-icon>
             </Button>
-            <Tooltip>{link.title}</Tooltip>
-          </Grid.Item>
+            <plus-tooltip>{link.title}</plus-tooltip>
+          </plus-grid-item>
         ))}
-      </Grid>
-      <Tabs.Panels>
-        <Tabs.Panel value="preview" dir={direction} ref={$preview}>
+      </plus-grid>
+      <plus-tabs-panels>
+        <plus-tabs-panel value="preview" dir={direction} ref={$preview}>
           {!visible && <div style={{ height: $preview.current!.clientHeight + 'px' }}></div>}
-          {visible && isolate != true && (
+          {/* TODO */}
+          {/* {visible && isolate != true && (
             <Suspense fallback={<div className="skeleton" />}>
               <Component />
             </Suspense>
-          )}
+          )} */}
           {visible && isolate == true && (
             <div className={loaded ? '' : 'skeleton'}>
               <iframe src={getPath(ROUTES.COMPONENT_EXAMPLE, { component, example })} onLoad={onIframeLoad} />
             </div>
           )}
-        </Tabs.Panel>
+        </plus-tabs-panel>
         {tabs
           ?.filter((tab) => tab.key != 'preview')
           ?.map((tab) => (
-            <Tabs.Panel key={tab.key} value={tab.key}>
+            <plus-tabs-panel key={tab.key} value={tab.key}>
               <Code language={tab.language as any}>{tab.content}</Code>
-            </Tabs.Panel>
+            </plus-tabs-panel>
           ))}
-      </Tabs.Panels>
-    </Tabs>
+      </plus-tabs-panels>
+    </plus-tabs>
   );
 }

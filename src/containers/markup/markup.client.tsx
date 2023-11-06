@@ -1,9 +1,10 @@
 'use client';
 
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
+import { MDXRemote } from 'next-mdx-remote';
 
 import { tokens } from './markup.tokens';
 
-export function MarkupClient(props: MDXRemoteSerializeResult) {
+// TODO: props type
+export function MarkupClient(props: any) {
   return <MDXRemote {...props} components={tokens} />;
 }

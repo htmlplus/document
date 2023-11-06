@@ -1,14 +1,5 @@
 import { Alert, Button, Code } from '@/components';
-import {
-  Api,
-  Browsers,
-  /*, Example*/
-  Examples,
-  GlobalConfig,
-  LastModified,
-  TocItem,
-  Usage
-} from '@/containers';
+import { Api, Browsers, Example, Examples, GlobalConfig, LastModified, TocItem, Usage } from '@/containers';
 
 function Heading(level: number) {
   return function (props: any) {
@@ -28,9 +19,7 @@ export const tokens = {
   Alert,
   Api,
   Browsers,
-  Example() {
-    return null;
-  },
+  Example,
   Examples,
   GlobalConfig,
   LastModified,

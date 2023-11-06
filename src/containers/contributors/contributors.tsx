@@ -4,8 +4,6 @@ import { Fragment, useEffect, useMemo, useState } from 'react';
 
 import { useParams, usePathname } from 'next/navigation';
 
-import axios from 'axios';
-
 import { ROUTES } from '@/constants';
 import { TocItem } from '@/containers';
 import { getPath } from '@/utils';
@@ -59,17 +57,19 @@ export function Contributors() {
     // TODO
     // if (process && process.env.NODE_ENV === 'development') return;
 
-    const promises = [paths].flat().map((path) => axios.get(path));
+    // TODO: make it smaller
+    const promises = [paths].flat().map((path) => fetch(path));
 
     Promise.all(promises)
-      .then((responses) => {
-        return responses
-          .map((response) => response.data.map((commit: any) => commit.author?.login as string))
+      .then((responses) => Promise.all(responses.map((response) => response.json())))
+      .then((responses) =>
+        responses
           .flat()
+          .map((commit) => commit.author.login)
           .filter((contributor, index, contributors) => {
             return contributors?.indexOf(contributor) === index;
-          });
-      })
+          })
+      )
       .then(setContributors);
   }, [paths]);
 
