@@ -5,7 +5,7 @@ export const ROUTES = {
   VISION: '/vision',
   CODE_COMPLETION: '/code-completion',
   ANIMATIONS: '/component/animation/names',
-  ICONS: '/component/icon/names',
+  ICONS: 'https://icons.getbootstrap.com',
   BIDIRECTIONALITY: '/bidirectionality',
   GLOBAL_CONFIG: '/global-config',
   OVERVIEW: '/overview',

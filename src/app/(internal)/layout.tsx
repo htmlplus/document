@@ -1,5 +1,6 @@
 // TODO
 import { AppLoadingBar } from '@/containers/app-loading-bar';
+import { Contributors } from '@/containers/contributors';
 import { Frameworks } from '@/containers/frameworks';
 import { Navigation } from '@/containers/navigation';
 import { Sidebar } from '@/containers/sidebar';
@@ -21,7 +22,7 @@ export default function Layout({ children }: ILayout) {
         </plus-card>
       </plus-drawer>
       <plus-grid>
-        <plus-grid-item hide-xs-up>
+        <plus-grid-item hide-xl-up>
           <plus-drawer-toggler connector="main">
             <plus-center>
               <plus-icon name="list" size="2x" />
@@ -40,8 +41,7 @@ export default function Layout({ children }: ILayout) {
             <plus-grid-item xs="12" md="grow">
               <div className="content">
                 {children}
-                {/* TODO */}
-                {/* <Contributors /> */}
+                <Contributors />
                 <Navigation />
               </div>
             </plus-grid-item>

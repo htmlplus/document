@@ -2,7 +2,7 @@
 
 import { Fragment, useEffect, useMemo, useState } from 'react';
 
-import { useRouter } from 'next/router';
+import { useParams, usePathname } from 'next/navigation';
 
 import axios from 'axios';
 
@@ -11,55 +11,63 @@ import { TocItem } from '@/containers';
 import { getPath } from '@/utils';
 
 export function Contributors() {
-  const router = useRouter();
+  const params = useParams();
+
+  const pathname = usePathname();
 
   const [contributors, setContributors] = useState<string[]>([]);
 
   // TODO
   const paths = useMemo(() => {
-    switch (router.route) {
-      case '/[...content]':
-        return getPath(ROUTES.GITHUB_COMMITS, {
-          repository: 'document',
-          path: `src/content/en/${(router.query?.content as string[])?.join('/')}.md`
-        });
-
-      case '/component/animation/names':
-        return getPath(ROUTES.GITHUB_COMMITS, {
-          repository: 'document',
-          path: 'src/pages/component/animation/names.tsx'
-        });
-
-      case '/[framework]/api/[component]':
-      case '/[framework]/component/[component]':
-      case '/[framework]/component/[component]/config':
-        return [
-          getPath(ROUTES.GITHUB_COMMITS, {
-            repository: 'core',
-            path: `src/components/${router.query?.component}`
-          }),
-          getPath(ROUTES.GITHUB_COMMITS, {
-            repository: 'examples',
-            path: `src/${router.query?.component}`
-          })
-        ];
+    if (pathname.match(/\/[^/]+\/api\/[^/]+/)) {
+      return getPath(ROUTES.GITHUB_COMMITS, {
+        repository: 'core',
+        path: `src/components/${params.component}`
+      });
     }
-  }, [router.asPath, router.route]);
+
+    if (pathname.match(/\/[^/]+\/component\/[^/]+/)) {
+      return getPath(ROUTES.GITHUB_COMMITS, {
+        repository: 'core',
+        path: `src/components/${params.component}`
+      });
+    }
+
+    if (pathname.match(/\/component\/[^/]+\/config/)) {
+      return getPath(ROUTES.GITHUB_COMMITS, {
+        repository: 'document',
+        path: `src/app/(internal)/component/[component]/config`
+      });
+    }
+
+    if (pathname.match(/\/component\/animation\/names/)) {
+      return getPath(ROUTES.GITHUB_COMMITS, {
+        repository: 'document',
+        path: 'src/app/(internal)/component/animation/names'
+      });
+    }
+
+    return getPath(ROUTES.GITHUB_COMMITS, {
+      repository: 'document',
+      path: `src/content/en${pathname}.md`
+    });
+  }, [params, pathname]);
 
   useEffect(() => {
-    if (process && process.env.NODE_ENV === 'development') return;
-
     if (!paths) return;
+
+    // TODO
+    // if (process && process.env.NODE_ENV === 'development') return;
 
     const promises = [paths].flat().map((path) => axios.get(path));
 
     Promise.all(promises)
       .then((responses) => {
         return responses
-          .map((response) => response.data.map((commit: any) => commit.author?.login))
+          .map((response) => response.data.map((commit: any) => commit.author?.login as string))
           .flat()
-          .filter((contributor: string, index: number, contributors: string[]) => {
-            return contributor && contributors.indexOf(contributor) === index;
+          .filter((contributor, index, contributors) => {
+            return contributors?.indexOf(contributor) === index;
           });
       })
       .then(setContributors);
