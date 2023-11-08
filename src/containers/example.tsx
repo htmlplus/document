@@ -2,7 +2,7 @@
 
 import { Suspense, useLayoutEffect, useRef, useState } from 'react';
 
-import { Alert, Button, Code } from '@/components';
+import { Alert, Button, Code, Grid, Icon, Tabs, Tooltip } from '@/components';
 import { ROUTES } from '@/constants';
 import { useFrameworks } from '@/containers';
 import { getPath } from '@/utils';
@@ -79,62 +79,62 @@ export function Example({ Preview, component, example, isolate, links, rtl, tabs
   useLayoutEffect(onReload, [frameworks.framework]);
 
   return (
-    <plus-tabs class="example" connector={`example:${title}`} value="preview">
+    <Tabs className="example" connector={`example:${title}`} value="preview">
       {/* TODO: remove connector and example */}
-      <plus-grid align-items="center" gutter-x="sm">
-        <plus-grid-item xs="grow">
-          <plus-tabs-bar>
-            <plus-tabs-tab value="preview">Preview</plus-tabs-tab>
+      <Grid alignItems="center" gutterX="sm">
+        <Grid.Item xs="grow">
+          <Tabs.Bar>
+            <Tabs.Tab value="preview">Preview</Tabs.Tab>
             {tabs?.map((tab) => (
-              <plus-tabs-tab key={tab.key} disabled={tab.disabled} value={tab.key}>
+              <Tabs.Tab key={tab.key} disabled={tab.disabled} value={tab.key}>
                 {tab.title}
-              </plus-tabs-tab>
+              </Tabs.Tab>
             ))}
-          </plus-tabs-bar>
-        </plus-grid-item>
+          </Tabs.Bar>
+        </Grid.Item>
         {rtl && (
-          <plus-grid-item xs="auto">
+          <Grid.Item xs="auto">
             <Button icon text to="#" onClick={onDirection}>
-              <plus-icon name="sign-turn-left"></plus-icon>
+              <Icon name="sign-turn-left"></Icon>
             </Button>
-            <plus-tooltip>Change Direction</plus-tooltip>
-          </plus-grid-item>
+            <Tooltip>Change Direction</Tooltip>
+          </Grid.Item>
         )}
-        <plus-grid-item xs="auto">
+        <Grid.Item xs="auto">
           <Button icon text to="#" onClick={onReload}>
-            <plus-icon name="arrow-clockwise"></plus-icon>
+            <Icon name="arrow-clockwise"></Icon>
           </Button>
-          <plus-tooltip>Reset</plus-tooltip>
-        </plus-grid-item>
+          <Tooltip>Reset</Tooltip>
+        </Grid.Item>
         {links?.map((link) => (
-          <plus-grid-item key={link.key} xs="auto">
+          <Grid.Item key={link.key} xs="auto">
             <Button icon text to={link.url} target="_blank">
-              <plus-icon name={link.icon}></plus-icon>
+              <Icon name={link.icon}></Icon>
             </Button>
-            <plus-tooltip>{link.title}</plus-tooltip>
-          </plus-grid-item>
+            <Tooltip>{link.title}</Tooltip>
+          </Grid.Item>
         ))}
-      </plus-grid>
-      <plus-tabs-panels>
-        <plus-tabs-panel value="preview" dir={direction} ref={$preview}>
+      </Grid>
+      <Tabs.Panels>
+        <Tabs.Panel value="preview" dir={direction} ref={$preview}>
           {!visible && <div style={{ height: $preview.current!.clientHeight + 'px' }}></div>}
           {visible && isolate != true && (
-            <Suspense fallback={<div className="skeleton" />}>{Preview && <Preview />}</Suspense>
+            <Suspense fallback={<div className="skeleton" />}>{Preview && <Preview></Preview>}</Suspense>
           )}
           {visible && isolate == true && (
             <div className={loaded ? '' : 'skeleton'}>
               <iframe src={getPath(ROUTES.COMPONENT_EXAMPLE, { component, example })} onLoad={onIframeLoad} />
             </div>
           )}
-        </plus-tabs-panel>
+        </Tabs.Panel>
         {tabs
           ?.filter((tab) => tab.key != 'preview')
           ?.map((tab) => (
-            <plus-tabs-panel key={tab.key} value={tab.key}>
+            <Tabs.Panel key={tab.key} value={tab.key}>
               <Code language={tab.language as any}>{tab.content}</Code>
-            </plus-tabs-panel>
+            </Tabs.Panel>
           ))}
-      </plus-tabs-panels>
-    </plus-tabs>
+      </Tabs.Panels>
+    </Tabs>
   );
 }

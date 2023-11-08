@@ -14,8 +14,8 @@
   "dependencies": {
     "@faker-js/faker": "^8.2.0",
     "@floating-ui/dom": "^1.5.3",
-    "@htmlplus/core": "^0.9.7",
-    "@htmlplus/react": "^0.8.4",
+    "@htmlplus/core": "^0.9.9",
+    "@htmlplus/react": "^0.8.5",
     "axios": "^1.6.0",
     "change-case": "^5.1.2",
     "fast-glob": "^3.3.1",

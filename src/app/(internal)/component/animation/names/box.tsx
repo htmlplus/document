@@ -5,15 +5,24 @@ import { useState } from 'react';
 // TODO
 import '@htmlplus/core/animation/names/all.js';
 
-export function Box({ name }: { name: string }) {
+import { Animation, Grid } from '@/components';
+
+export function Box({ category }: { category: any }) {
   const [playing, setPlaying] = useState('');
   return (
-    <div
-      className={playing == name ? '' : 'stop'}
-      onMouseEnter={() => setPlaying(name)}
-      onMouseLeave={() => setPlaying('')}
-    >
-      {playing == name && <plus-animation name={name} run></plus-animation>}
-    </div>
+    <Grid gutter="md">
+      {category.items.map((item: any) => (
+        <Grid.Item className="animation" key={`${category.key}:${item.key}`}>
+          <div
+            className={playing == item.key ? '' : 'stop'}
+            onMouseEnter={() => setPlaying(item.key)}
+            onMouseLeave={() => setPlaying('')}
+          >
+            {playing == item.key && <Animation name={item.key} run></Animation>}
+          </div>
+          <small>{item.title}</small>
+        </Grid.Item>
+      ))}
+    </Grid>
   );
 }

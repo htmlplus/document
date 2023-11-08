@@ -10,5 +10,5 @@ export async function Markup({ scope, value }: IMarkup) {
 
   const serialized = await serialize(value, options);
 
-  return <MarkupClient {...serialized} scope={scope} />;
+  return <MarkupClient {...serialized} scope={scope}></MarkupClient>;
 }

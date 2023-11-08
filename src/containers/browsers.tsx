@@ -1,14 +1,15 @@
 'use client';
 
+import { Grid } from '@/components';
 import { ROUTES } from '@/constants';
 import { browsers } from '@/data';
 import { getPath } from '@/utils';
 
 export function Browsers() {
   return (
-    <plus-grid gutter-y="lg">
+    <Grid gutterY="lg">
       {browsers.map((browser) => (
-        <plus-grid-item xs="12" sm="grow" key={browser.key}>
+        <Grid.Item xs="12" sm="grow" key={browser.key}>
           {/* TODO */}
           <div style={{ textAlign: 'center', minWidth: 100 }}>
             <img
@@ -20,8 +21,8 @@ export function Browsers() {
             <br />
             <p>{browser.title}</p>
           </div>
-        </plus-grid-item>
+        </Grid.Item>
       ))}
-    </plus-grid>
+    </Grid>
   );
 }

@@ -123,5 +123,5 @@ export default function Page({ params }: IPage) {
     };
   }
 
-  return <Markup value={component.readmeContent} scope={{ example }} />;
+  return <Markup value={component.readmeContent} scope={{ example }}></Markup>;
 }

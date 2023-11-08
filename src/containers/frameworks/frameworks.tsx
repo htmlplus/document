@@ -7,14 +7,13 @@ import Select, { components } from 'react-select';
 import { usePathname, useRouter } from 'next/navigation';
 
 import { frameworks } from '@/data';
-import { getPath } from '@/utils';
 
 import { useFrameworks } from './useFrameworks';
 
 function Option(props: any) {
   return (
     <components.Option {...props}>
-      <SingleValue {...props} />
+      <SingleValue {...props}></SingleValue>
     </components.Option>
   );
 }
@@ -93,7 +92,7 @@ export function Frameworks() {
         options={items}
         value={selected}
         onChange={change}
-      />
+      ></Select>
     </div>
   );
 }

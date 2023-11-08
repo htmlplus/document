@@ -1,4 +1,7 @@
+'use client';
+
 // TODO
+import { Card, Center, Drawer, Grid, Icon, Sticky } from '@/components';
 import { AppLoadingBar } from '@/containers/app-loading-bar';
 import { Contributors } from '@/containers/contributors';
 import { Frameworks } from '@/containers/frameworks';
@@ -14,48 +17,48 @@ export default function Layout({ children }: ILayout) {
   return (
     <div className="layout-default">
       <div className="app-loading-bar">
-        <AppLoadingBar />
+        <AppLoadingBar></AppLoadingBar>
       </div>
-      <plus-drawer open={false} animation="fade" connector="main" temporary size="300px">
-        <plus-card class="drawer" tile elevation={10}>
-          <Sidebar />
-        </plus-card>
-      </plus-drawer>
-      <plus-grid>
-        <plus-grid-item hide-xl-up>
-          <plus-drawer-toggler connector="main">
-            <plus-center>
-              <plus-icon name="list" size="2x" />
-            </plus-center>
-          </plus-drawer-toggler>
-        </plus-grid-item>
-      </plus-grid>
-      <plus-grid>
-        <plus-grid-item xs="auto" hide-lg-down>
-          <plus-sticky class="sidebar-start">
-            <Sidebar />
-          </plus-sticky>
-        </plus-grid-item>
-        <plus-grid-item xs="grow">
-          <plus-grid>
-            <plus-grid-item xs="12" md="grow">
+      <Drawer open={false} animation="fade" connector="main" temporary size="300px">
+        <Card className="drawer" tile elevation={10}>
+          <Sidebar></Sidebar>
+        </Card>
+      </Drawer>
+      <Grid>
+        <Grid.Item hideXlUp>
+          <Drawer.Toggler connector="main">
+            <Center>
+              <Icon name="list" size="2x"></Icon>
+            </Center>
+          </Drawer.Toggler>
+        </Grid.Item>
+      </Grid>
+      <Grid>
+        <Grid.Item xs="auto" hideLgDown>
+          <Sticky className="sidebar-start">
+            <Sidebar></Sidebar>
+          </Sticky>
+        </Grid.Item>
+        <Grid.Item xs="grow">
+          <Grid>
+            <Grid.Item xs="12" md="grow">
               <div className="content">
                 {children}
-                <Contributors />
-                <Navigation />
+                <Contributors></Contributors>
+                <Navigation></Navigation>
               </div>
-            </plus-grid-item>
-            <plus-grid-item xs="12" md="auto" hide-md-down>
-              <plus-sticky class="sidebar-end">
+            </Grid.Item>
+            <Grid.Item xs="12" md="auto" hideMdDown>
+              <Sticky className="sidebar-end">
                 <br />
-                <Frameworks />
+                <Frameworks></Frameworks>
                 <br />
-                <Toc />
-              </plus-sticky>
-            </plus-grid-item>
-          </plus-grid>
-        </plus-grid-item>
-      </plus-grid>
+                <Toc></Toc>
+              </Sticky>
+            </Grid.Item>
+          </Grid>
+        </Grid.Item>
+      </Grid>
     </div>
   );
 }

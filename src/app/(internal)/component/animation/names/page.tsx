@@ -99,14 +99,7 @@ export default function Page() {
           <h3>
             <TocItem level={3}>{category.title}</TocItem>
           </h3>
-          <plus-grid gutter="md">
-            {category.items.map((item: any) => (
-              <plus-grid-item class="animation" key={`${category.key}:${item.key}`}>
-                <Box name={item.key}></Box>
-                <small>{item.title}</small>
-              </plus-grid-item>
-            ))}
-          </plus-grid>
+          <Box category={category}></Box>
         </Fragment>
       ))}
     </>

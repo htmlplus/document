@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 
 import PACKAGE from '@htmlplus/core/package.json';
 
-import { Button } from '@/components';
+import { Button, Center, Divider, Icon, Stack } from '@/components';
 import { ROUTES } from '@/constants';
 import { useFrameworks } from '@/containers';
 import { classes, getPath } from '@/utils';
@@ -38,11 +38,11 @@ export function Sidebar() {
                 {/* TODO */}
                 {/* {item.icon && (
                   <>
-                    <plus-icon name={item.icon as any}></plus-icon> &nbsp;
+                    <Icon name={item.icon as any}></Icon> &nbsp;
                   </>
                 )} */}
                 {item.title}
-                {!!item.items?.length && <span className="nav-link-toggle" />}
+                {!!item.items?.length && <span className="nav-link-toggle"></span>}
                 {item.stable && (
                   <code>
                     <small>Stable</small>
@@ -72,25 +72,25 @@ export function Sidebar() {
   return (
     <div className="sidebar">
       <br />
-      <plus-stack gap="1rem" align-items="stretch" vertical>
-        <plus-center>
+      <Stack gap="1rem" alignItems="stretch" vertical>
+        <Center>
           <Button block link to={getPath(ROUTES.HOME, {})}>
-            <plus-stack gap="1rem">
-              <plus-icon name="htmlplus" size="44px"></plus-icon>
-              <plus-stack align-items="end" vertical>
+            <Stack gap="1rem">
+              <Icon name="htmlplus" size="44px"></Icon>
+              <Stack alignItems="end" vertical>
                 <div>HTMLPLUS</div>
                 <div className="version">Version {PACKAGE.version}</div>
-              </plus-stack>
-            </plus-stack>
+              </Stack>
+            </Stack>
           </Button>
-        </plus-center>
+        </Center>
         <Button block outlined to={getPath(ROUTES.GITHUB_URL, {})} target="_blank">
-          <plus-icon name="github"></plus-icon>
+          <Icon name="github"></Icon>
           Github
         </Button>
-        <plus-divider></plus-divider>
+        <Divider></Divider>
         {menu(sidebar.items)}
-      </plus-stack>
+      </Stack>
     </div>
   );
 }

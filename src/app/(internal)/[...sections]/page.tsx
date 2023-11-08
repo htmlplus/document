@@ -39,5 +39,5 @@ export default function Page({ params }: IPage) {
 
   const content = getContent(key);
 
-  return <Markup value={content} />;
+  return <Markup value={content}></Markup>;
 }

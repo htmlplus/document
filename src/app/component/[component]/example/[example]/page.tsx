@@ -30,9 +30,9 @@ export function generateStaticParams() {
 }
 
 export default function Page({ params }: IPage) {
-  const name = pascalCase(params.component) + pascalCase(params.example);
+  const name = pascalCase(params.component + ' ' + params.example) as keyof typeof Examples;
 
-  const Preview = (Examples as any)[name] as any;
+  const Preview = Examples[name];
 
-  return <Preview />;
+  return <Preview></Preview>;
 }

@@ -9,8 +9,6 @@ interface ILayout {
 }
 
 export default function Layout({ children }: ILayout) {
-  // TODO
-  import('@htmlplus/core');
   return (
     <html lang="en">
       <head>
