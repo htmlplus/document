@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const AnimationDurationExample = () => {
+const AnimationDuration = () => {
   return (
     <div className="ex-animation-duration">
       <App />
@@ -21,4 +21,4 @@ const AnimationDurationExample = () => {
   )
 };
 
-export default AnimationDurationExample;
+export default AnimationDuration;

@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const SignatureWidthExample = () => {
+const SignatureWidth = () => {
   return (
     <div className="ex-signature-width">
       <App />
@@ -20,4 +20,4 @@ const SignatureWidthExample = () => {
   )
 };
 
-export default SignatureWidthExample;
+export default SignatureWidth;

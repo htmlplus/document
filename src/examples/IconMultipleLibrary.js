@@ -37,7 +37,7 @@ function App() {
   );
 }
 
-const IconMultipleLibraryExample = () => {
+const IconMultipleLibrary = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
@@ -47,4 +47,4 @@ const IconMultipleLibraryExample = () => {
   )
 };
 
-export default IconMultipleLibraryExample;
+export default IconMultipleLibrary;

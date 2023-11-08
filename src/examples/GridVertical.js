@@ -20,7 +20,7 @@ function App() {
   );
 }
 
-const GridVerticalExample = () => {
+const GridVertical = () => {
   return (
     <div className="ex-grid-vertical">
       <App />
@@ -29,4 +29,4 @@ const GridVerticalExample = () => {
   )
 };
 
-export default GridVerticalExample;
+export default GridVertical;

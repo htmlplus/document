@@ -15,7 +15,7 @@ function App() {
   );
 }
 
-const SwitchEventExample = () => {
+const SwitchEvent = () => {
   return (
     <div className="ex-switch-event">
       <App />
@@ -23,4 +23,4 @@ const SwitchEventExample = () => {
   )
 };
 
-export default SwitchEventExample;
+export default SwitchEvent;

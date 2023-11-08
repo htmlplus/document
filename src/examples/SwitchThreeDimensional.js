@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const SwitchThreeDimensionalExample = () => {
+const SwitchThreeDimensional = () => {
   return (
     <div className="ex-switch-three-dimensional">
       <App />
@@ -21,4 +21,4 @@ const SwitchThreeDimensionalExample = () => {
   )
 };
 
-export default SwitchThreeDimensionalExample;
+export default SwitchThreeDimensional;

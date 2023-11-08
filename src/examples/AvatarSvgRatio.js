@@ -18,7 +18,7 @@ function App() {
   );
 }
 
-const AvatarSvgRatioExample = () => {
+const AvatarSvgRatio = () => {
   return (
     <div className="ex-avatar-svg-ratio">
       <App />
@@ -27,4 +27,4 @@ const AvatarSvgRatioExample = () => {
   )
 };
 
-export default AvatarSvgRatioExample;
+export default AvatarSvgRatio;

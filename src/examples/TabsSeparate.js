@@ -39,7 +39,7 @@ function App() {
   );
 }
 
-const TabsSeparateExample = () => {
+const TabsSeparate = () => {
   return (
     <div className="ex-tabs-separate">
       <App />
@@ -47,4 +47,4 @@ const TabsSeparateExample = () => {
   )
 };
 
-export default TabsSeparateExample;
+export default TabsSeparate;

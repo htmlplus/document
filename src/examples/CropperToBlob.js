@@ -29,7 +29,7 @@ function App() {
   );
 }
 
-const CropperToBlobExample = () => {
+const CropperToBlob = () => {
   return (
     <div className="ex-cropper-to-blob">
       <App />
@@ -37,4 +37,4 @@ const CropperToBlobExample = () => {
   )
 };
 
-export default CropperToBlobExample;
+export default CropperToBlob;

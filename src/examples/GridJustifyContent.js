@@ -20,7 +20,7 @@ function App() {
   );
 }
 
-const GridJustifyContentExample = () => {
+const GridJustifyContent = () => {
   return (
     <div className="ex-grid-justify-content">
       <App />
@@ -29,4 +29,4 @@ const GridJustifyContentExample = () => {
   )
 };
 
-export default GridJustifyContentExample;
+export default GridJustifyContent;

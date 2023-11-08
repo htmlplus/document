@@ -20,7 +20,7 @@ function App() {
   );
 }
 
-const GridAlignSelfExample = () => {
+const GridAlignSelf = () => {
   return (
     <div className="ex-grid-align-self">
       <App />
@@ -29,4 +29,4 @@ const GridAlignSelfExample = () => {
   )
 };
 
-export default GridAlignSelfExample;
+export default GridAlignSelf;

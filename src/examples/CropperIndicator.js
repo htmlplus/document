@@ -10,7 +10,7 @@ function App() {
   );
 }
 
-const CropperIndicatorExample = () => {
+const CropperIndicator = () => {
   return (
     <div className="ex-cropper-indicator dock">
       <App />
@@ -18,4 +18,4 @@ const CropperIndicatorExample = () => {
   )
 };
 
-export default CropperIndicatorExample;
+export default CropperIndicator;

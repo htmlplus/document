@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const IconDefaultExample = () => {
+const IconDefault = () => {
   return (
     <div className="ex-icon-default">
       <App />
@@ -20,4 +20,4 @@ const IconDefaultExample = () => {
   )
 };
 
-export default IconDefaultExample;
+export default IconDefault;

@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const IconLabelExample = () => {
+const IconLabel = () => {
   return (
     <div className="ex-icon-label">
       <App />
@@ -20,4 +20,4 @@ const IconLabelExample = () => {
   )
 };
 
-export default IconLabelExample;
+export default IconLabel;

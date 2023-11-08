@@ -13,7 +13,7 @@ function App() {
   );
 }
 
-const FormatBytesDisplayExample = () => {
+const FormatBytesDisplay = () => {
   return (
     <div className="ex-format-bytes-display">
       <App />
@@ -21,4 +21,4 @@ const FormatBytesDisplayExample = () => {
   )
 };
 
-export default FormatBytesDisplayExample;
+export default FormatBytesDisplay;

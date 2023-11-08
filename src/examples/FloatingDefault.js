@@ -19,7 +19,7 @@ function App() {
   );
 }
 
-const FloatingDefaultExample = () => {
+const FloatingDefault = () => {
   return (
     <div className="ex-floating-default">
       <App />
@@ -27,4 +27,4 @@ const FloatingDefaultExample = () => {
   )
 };
 
-export default FloatingDefaultExample;
+export default FloatingDefault;

@@ -8,7 +8,7 @@ function App() {
   return <Faker api="lorem.paragraphs"></Faker>;
 }
 
-const FakerApiExample = () => {
+const FakerApi = () => {
   return (
     <div className="ex-faker-api">
       <App />
@@ -16,4 +16,4 @@ const FakerApiExample = () => {
   )
 };
 
-export default FakerApiExample;
+export default FakerApi;

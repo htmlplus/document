@@ -17,7 +17,7 @@ function App() {
   );
 }
 
-const SpinnerTypeExample = () => {
+const SpinnerType = () => {
   return (
     <div className="ex-spinner-type">
       <App />
@@ -25,4 +25,4 @@ const SpinnerTypeExample = () => {
   )
 };
 
-export default SpinnerTypeExample;
+export default SpinnerType;

@@ -20,7 +20,7 @@ function App() {
   );
 }
 
-const DividerWidthExample = () => {
+const DividerWidth = () => {
   return (
     <div className="ex-divider-width">
       <App />
@@ -28,4 +28,4 @@ const DividerWidthExample = () => {
   )
 };
 
-export default DividerWidthExample;
+export default DividerWidth;

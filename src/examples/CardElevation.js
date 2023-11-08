@@ -15,18 +15,18 @@ function App() {
     <>
       <Card elevation={elevation}></Card>
       <br />
-      <input type="range" value={elevation} min="1" max="24" onChange={onChange} />
+      <input type="range" value="12" min="1" max="24" onChange={onChange} />
     </>
   );
 }
 
-const CardElevationExample = () => {
+const CardElevation = () => {
   return (
     <div className="ex-card-elevation">
       <App />
       <style>{`.ex-card-elevation plus-card {  height: 12rem;  width: 12rem;  margin: auto;}.ex-card-elevation input[type='range'] {  display: block;  width: 12rem;  margin: auto;}`}</style>
     </div>
-  );
+  )
 };
 
-export default CardElevationExample;
+export default CardElevation;

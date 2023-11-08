@@ -8,7 +8,7 @@ function App() {
   return <Signature backgroundColor="lightgray" resizable></Signature>;
 }
 
-const SignatureResizableExample = () => {
+const SignatureResizable = () => {
   return (
     <div className="ex-signature-resizable dock">
       <App />
@@ -17,4 +17,4 @@ const SignatureResizableExample = () => {
   )
 };
 
-export default SignatureResizableExample;
+export default SignatureResizable;

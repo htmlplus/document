@@ -22,7 +22,7 @@ function App() {
   );
 }
 
-const CardTileExample = () => {
+const CardTile = () => {
   return (
     <div className="ex-card-tile dock">
       <App />
@@ -31,4 +31,4 @@ const CardTileExample = () => {
   )
 };
 
-export default CardTileExample;
+export default CardTile;

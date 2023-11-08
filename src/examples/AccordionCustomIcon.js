@@ -14,7 +14,7 @@ function App() {
   );
 }
 
-const AccordionCustomIconExample = () => {
+const AccordionCustomIcon = () => {
   return (
     <div className="ex-accordion-custom-icon">
       <App />
@@ -22,4 +22,4 @@ const AccordionCustomIconExample = () => {
   )
 };
 
-export default AccordionCustomIconExample;
+export default AccordionCustomIcon;

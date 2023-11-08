@@ -13,7 +13,7 @@ function App() {
   );
 }
 
-const FormatBytesSeparatorExample = () => {
+const FormatBytesSeparator = () => {
   return (
     <div className="ex-format-bytes-separator">
       <App />
@@ -21,4 +21,4 @@ const FormatBytesSeparatorExample = () => {
   )
 };
 
-export default FormatBytesSeparatorExample;
+export default FormatBytesSeparator;

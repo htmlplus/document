@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-const BreadcrumbCustomizedExample = () => {
+const BreadcrumbCustomized = () => {
   return (
     <div className="ex-breadcrumb-customized">
       <App />
@@ -25,4 +25,4 @@ const BreadcrumbCustomizedExample = () => {
   )
 };
 
-export default BreadcrumbCustomizedExample;
+export default BreadcrumbCustomized;

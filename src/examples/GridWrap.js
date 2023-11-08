@@ -23,7 +23,7 @@ function App() {
   );
 }
 
-const GridWrapExample = () => {
+const GridWrap = () => {
   return (
     <div className="ex-grid-wrap">
       <App />
@@ -32,4 +32,4 @@ const GridWrapExample = () => {
   )
 };
 
-export default GridWrapExample;
+export default GridWrap;

@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const CounterReverseExample = () => {
+const CounterReverse = () => {
   return (
     <div className="ex-counter-reverse">
       <App />
@@ -20,4 +20,4 @@ const CounterReverseExample = () => {
   )
 };
 
-export default CounterReverseExample;
+export default CounterReverse;

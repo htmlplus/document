@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-const DividerCardExample = () => {
+const DividerCard = () => {
   return (
     <div className="ex-divider-card">
       <App />
@@ -25,4 +25,4 @@ const DividerCardExample = () => {
   )
 };
 
-export default DividerCardExample;
+export default DividerCard;

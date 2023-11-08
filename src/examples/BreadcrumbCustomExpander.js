@@ -18,7 +18,7 @@ function App() {
   );
 }
 
-const BreadcrumbCustomExpanderExample = () => {
+const BreadcrumbCustomExpander = () => {
   return (
     <div className="ex-breadcrumb-custom-expander">
       <App />
@@ -27,4 +27,4 @@ const BreadcrumbCustomExpanderExample = () => {
   )
 };
 
-export default BreadcrumbCustomExpanderExample;
+export default BreadcrumbCustomExpander;

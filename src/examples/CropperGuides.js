@@ -10,7 +10,7 @@ function App() {
   );
 }
 
-const CropperGuidesExample = () => {
+const CropperGuides = () => {
   return (
     <div className="ex-cropper-guides dock">
       <App />
@@ -18,4 +18,4 @@ const CropperGuidesExample = () => {
   )
 };
 
-export default CropperGuidesExample;
+export default CropperGuides;

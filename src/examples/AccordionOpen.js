@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const AccordionOpenExample = () => {
+const AccordionOpen = () => {
   return (
     <div className="ex-accordion-open">
       <App />
@@ -20,4 +20,4 @@ const AccordionOpenExample = () => {
   )
 };
 
-export default AccordionOpenExample;
+export default AccordionOpen;

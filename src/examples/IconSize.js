@@ -29,7 +29,7 @@ function App() {
   );
 }
 
-const IconSizeExample = () => {
+const IconSize = () => {
   return (
     <div className="ex-icon-size">
       <App />
@@ -37,4 +37,4 @@ const IconSizeExample = () => {
   )
 };
 
-export default IconSizeExample;
+export default IconSize;

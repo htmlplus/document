@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const SignatureDisabledExample = () => {
+const SignatureDisabled = () => {
   return (
     <div className="ex-signature-disabled">
       <App />
@@ -20,4 +20,4 @@ const SignatureDisabledExample = () => {
   )
 };
 
-export default SignatureDisabledExample;
+export default SignatureDisabled;

@@ -25,7 +25,7 @@ function App() {
   );
 }
 
-const DialogPlacementExample = () => {
+const DialogPlacement = () => {
   return (
     <div className="ex-dialog-placement">
       <App />
@@ -33,4 +33,4 @@ const DialogPlacementExample = () => {
   )
 };
 
-export default DialogPlacementExample;
+export default DialogPlacement;

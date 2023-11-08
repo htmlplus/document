@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-const StickyDefaultExample = () => {
+const StickyDefault = () => {
   return (
     <div className="ex-sticky-default dock">
       <App />
@@ -25,4 +25,4 @@ const StickyDefaultExample = () => {
   )
 };
 
-export default StickyDefaultExample;
+export default StickyDefault;

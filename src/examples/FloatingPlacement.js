@@ -22,7 +22,7 @@ function App() {
   );
 }
 
-const FloatingPlacementExample = () => {
+const FloatingPlacement = () => {
   return (
     <div className="ex-floating-placement">
       <App />
@@ -30,4 +30,4 @@ const FloatingPlacementExample = () => {
   )
 };
 
-export default FloatingPlacementExample;
+export default FloatingPlacement;

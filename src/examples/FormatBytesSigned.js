@@ -17,7 +17,7 @@ function App() {
   );
 }
 
-const FormatBytesSignedExample = () => {
+const FormatBytesSigned = () => {
   return (
     <div className="ex-format-bytes-signed">
       <App />
@@ -25,4 +25,4 @@ const FormatBytesSignedExample = () => {
   )
 };
 
-export default FormatBytesSignedExample;
+export default FormatBytesSigned;

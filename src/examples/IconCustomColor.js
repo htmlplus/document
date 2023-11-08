@@ -14,7 +14,7 @@ function App() {
   );
 }
 
-const IconCustomColorExample = () => {
+const IconCustomColor = () => {
   return (
     <div className="ex-icon-custom-color">
       <App />
@@ -23,4 +23,4 @@ const IconCustomColorExample = () => {
   )
 };
 
-export default IconCustomColorExample;
+export default IconCustomColor;

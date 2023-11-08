@@ -13,7 +13,7 @@ function App() {
   );
 }
 
-const CropperAspectRatioExample = () => {
+const CropperAspectRatio = () => {
   return (
     <div className="ex-cropper-aspect-ratio dock">
       <App />
@@ -21,4 +21,4 @@ const CropperAspectRatioExample = () => {
   )
 };
 
-export default CropperAspectRatioExample;
+export default CropperAspectRatio;

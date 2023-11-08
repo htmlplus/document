@@ -18,7 +18,7 @@ function App() {
   );
 }
 
-const ScrollDetectorDefaultExample = () => {
+const ScrollDetectorDefault = () => {
   return (
     <div className="ex-scroll-detector-default dock">
       <App />
@@ -27,4 +27,4 @@ const ScrollDetectorDefaultExample = () => {
   )
 };
 
-export default ScrollDetectorDefaultExample;
+export default ScrollDetectorDefault;

@@ -26,7 +26,7 @@ function App() {
   );
 }
 
-const ClickOutsideMenuExample = () => {
+const ClickOutsideMenu = () => {
   return (
     <div className="ex-click-outside-menu">
       <App />
@@ -35,4 +35,4 @@ const ClickOutsideMenuExample = () => {
   )
 };
 
-export default ClickOutsideMenuExample;
+export default ClickOutsideMenu;

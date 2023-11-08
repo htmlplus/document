@@ -32,7 +32,7 @@ function App() {
   );
 }
 
-const AccordionPersistentExample = () => {
+const AccordionPersistent = () => {
   return (
     <div className="ex-accordion-persistent">
       <App />
@@ -40,4 +40,4 @@ const AccordionPersistentExample = () => {
   )
 };
 
-export default AccordionPersistentExample;
+export default AccordionPersistent;

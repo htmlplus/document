@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const SpinnerDefaultExample = () => {
+const SpinnerDefault = () => {
   return (
     <div className="ex-spinner-default">
       <App />
@@ -20,4 +20,4 @@ const SpinnerDefaultExample = () => {
   )
 };
 
-export default SpinnerDefaultExample;
+export default SpinnerDefault;

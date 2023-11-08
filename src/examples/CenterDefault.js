@@ -8,7 +8,7 @@ function App() {
   return <Center>All elements are centered</Center>;
 }
 
-const CenterDefaultExample = () => {
+const CenterDefault = () => {
   return (
     <div className="ex-center-default dock">
       <App />
@@ -17,4 +17,4 @@ const CenterDefaultExample = () => {
   )
 };
 
-export default CenterDefaultExample;
+export default CenterDefault;

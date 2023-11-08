@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-const ProgressBarHeightExample = () => {
+const ProgressBarHeight = () => {
   return (
     <div className="ex-progress-bar-height">
       <App />
@@ -25,4 +25,4 @@ const ProgressBarHeightExample = () => {
   )
 };
 
-export default ProgressBarHeightExample;
+export default ProgressBarHeight;

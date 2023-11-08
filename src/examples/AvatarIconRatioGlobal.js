@@ -22,7 +22,7 @@ function App() {
   );
 }
 
-const AvatarIconRatioGlobalExample = () => {
+const AvatarIconRatioGlobal = () => {
   return (
     <div className="ex-avatar-icon-ratio-global">
       <App />
@@ -31,4 +31,4 @@ const AvatarIconRatioGlobalExample = () => {
   )
 };
 
-export default AvatarIconRatioGlobalExample;
+export default AvatarIconRatioGlobal;

@@ -1,3 +1,4 @@
+import { faker } from '@faker-js/faker/locale/en'
 // @ts-ignore
 import { setConfig } from '@htmlplus/core/config';
 
@@ -8,6 +9,11 @@ if (typeof window != 'undefined' && !location.pathname.match(/\/component\/(.*)\
         property: {
           // TODO: has conflict with examples
           // width: 'xs'
+        }
+      },
+      'plus-faker': {
+        property: {
+          instance: faker
         }
       },
       'plus-icon': {

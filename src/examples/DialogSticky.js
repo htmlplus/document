@@ -21,7 +21,7 @@ function App() {
   );
 }
 
-const DialogStickyExample = () => {
+const DialogSticky = () => {
   return (
     <div className="ex-dialog-sticky">
       <App />
@@ -29,4 +29,4 @@ const DialogStickyExample = () => {
   )
 };
 
-export default DialogStickyExample;
+export default DialogSticky;

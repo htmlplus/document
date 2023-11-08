@@ -35,7 +35,7 @@ function App() {
   );
 }
 
-const CropperZoomableExample = () => {
+const CropperZoomable = () => {
   return (
     <div className="ex-cropper-zoomable">
       <App />
@@ -43,4 +43,4 @@ const CropperZoomableExample = () => {
   )
 };
 
-export default CropperZoomableExample;
+export default CropperZoomable;

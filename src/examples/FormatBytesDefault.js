@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const FormatBytesDefaultExample = () => {
+const FormatBytesDefault = () => {
   return (
     <div className="ex-format-bytes-default">
       <App />
@@ -20,4 +20,4 @@ const FormatBytesDefaultExample = () => {
   )
 };
 
-export default FormatBytesDefaultExample;
+export default FormatBytesDefault;

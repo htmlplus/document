@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-const StickyStateAttributeExample = () => {
+const StickyStateAttribute = () => {
   return (
     <div className="ex-sticky-state-attribute dock">
       <App />
@@ -25,4 +25,4 @@ const StickyStateAttributeExample = () => {
   )
 };
 
-export default StickyStateAttributeExample;
+export default StickyStateAttribute;

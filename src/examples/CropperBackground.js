@@ -25,7 +25,7 @@ function App() {
   );
 }
 
-const CropperBackgroundExample = () => {
+const CropperBackground = () => {
   return (
     <div className="ex-cropper-background">
       <App />
@@ -33,4 +33,4 @@ const CropperBackgroundExample = () => {
   )
 };
 
-export default CropperBackgroundExample;
+export default CropperBackground;

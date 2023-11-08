@@ -4,7 +4,7 @@ import { sidebar } from '@/data';
 
 import { ISidebarItem } from './sidebar.types';
 
-export interface UseSidebar {
+export interface IUseSidebar {
   items: ISidebarItem[];
   prev?: ISidebarItem;
   next?: ISidebarItem;
@@ -15,7 +15,7 @@ export interface UseSidebar {
 
 const expanded = new Set<string>();
 
-export const useSidebar = create<UseSidebar>((set, get) => ({
+export const useSidebar = create<IUseSidebar>((set, get) => ({
   items: [],
   prev: undefined,
   next: undefined,

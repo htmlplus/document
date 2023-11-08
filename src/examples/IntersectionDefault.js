@@ -29,7 +29,7 @@ function App() {
   );
 }
 
-const IntersectionDefaultExample = () => {
+const IntersectionDefault = () => {
   return (
     <div className="ex-intersection-default dock">
       <App />
@@ -38,4 +38,4 @@ const IntersectionDefaultExample = () => {
   )
 };
 
-export default IntersectionDefaultExample;
+export default IntersectionDefault;

@@ -34,7 +34,7 @@ function App() {
   );
 }
 
-const CropperShapeExample = () => {
+const CropperShape = () => {
   return (
     <div className="ex-cropper-shape">
       <App />
@@ -43,4 +43,4 @@ const CropperShapeExample = () => {
   )
 };
 
-export default CropperShapeExample;
+export default CropperShape;

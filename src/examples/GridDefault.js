@@ -20,7 +20,7 @@ function App() {
   );
 }
 
-const GridDefaultExample = () => {
+const GridDefault = () => {
   return (
     <div className="ex-grid-default">
       <App />
@@ -29,4 +29,4 @@ const GridDefaultExample = () => {
   )
 };
 
-export default GridDefaultExample;
+export default GridDefault;

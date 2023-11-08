@@ -2,17 +2,34 @@
 
 import { Suspense, useLayoutEffect, useRef, useState } from 'react';
 
-import { pascalCase } from 'change-case';
-
 import { Alert, Button, Code } from '@/components';
 import { ROUTES } from '@/constants';
 import { useFrameworks } from '@/containers';
-// import * as Examples from '@/examples';
 import { getPath } from '@/utils';
 
-import { IExample } from './example.types';
+export interface IExample {
+  Preview?: React.FC;
+  component?: string;
+  example?: string;
+  isolate?: boolean;
+  links?: Array<{
+    icon?: string;
+    key?: string;
+    title?: string;
+    url?: string;
+  }>;
+  rtl?: boolean;
+  tabs?: Array<{
+    content?: string;
+    disabled?: boolean;
+    key?: string;
+    language?: string;
+    title?: string;
+  }>;
+  title?: string;
+}
 
-export function Example({ component, example, isolate, links, rtl, tabs, title }: IExample) {
+export function Example({ Preview, component, example, isolate, links, rtl, tabs, title }: IExample) {
   const frameworks = useFrameworks();
 
   const $preview = useRef<HTMLElement>(null);
@@ -24,11 +41,6 @@ export function Example({ component, example, isolate, links, rtl, tabs, title }
   const [visible, setVisible] = useState(true);
 
   if (!component || !example) return <Alert type="error">NOT FOUND</Alert>;
-
-  const componentName = pascalCase(component) + pascalCase(example);
-
-  // TODO
-  // const Component = (Examples as any)[componentName!] as any;
 
   const onDirection = (event?: MouseEvent) => {
     event?.preventDefault();
@@ -106,12 +118,9 @@ export function Example({ component, example, isolate, links, rtl, tabs, title }
       <plus-tabs-panels>
         <plus-tabs-panel value="preview" dir={direction} ref={$preview}>
           {!visible && <div style={{ height: $preview.current!.clientHeight + 'px' }}></div>}
-          {/* TODO */}
-          {/* {visible && isolate != true && (
-            <Suspense fallback={<div className="skeleton" />}>
-              <Component />
-            </Suspense>
-          )} */}
+          {visible && isolate != true && (
+            <Suspense fallback={<div className="skeleton" />}>{Preview && <Preview />}</Suspense>
+          )}
           {visible && isolate == true && (
             <div className={loaded ? '' : 'skeleton'}>
               <iframe src={getPath(ROUTES.COMPONENT_EXAMPLE, { component, example })} onLoad={onIframeLoad} />

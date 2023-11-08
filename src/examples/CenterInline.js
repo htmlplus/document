@@ -17,7 +17,7 @@ function App() {
   );
 }
 
-const CenterInlineExample = () => {
+const CenterInline = () => {
   return (
     <div className="ex-center-inline">
       <App />
@@ -25,4 +25,4 @@ const CenterInlineExample = () => {
   )
 };
 
-export default CenterInlineExample;
+export default CenterInline;

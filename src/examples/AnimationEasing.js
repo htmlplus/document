@@ -32,7 +32,7 @@ function App() {
   );
 }
 
-const AnimationEasingExample = () => {
+const AnimationEasing = () => {
   return (
     <div className="ex-animation-easing">
       <App />
@@ -41,4 +41,4 @@ const AnimationEasingExample = () => {
   )
 };
 
-export default AnimationEasingExample;
+export default AnimationEasing;

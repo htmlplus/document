@@ -20,7 +20,7 @@ function App() {
   );
 }
 
-const CardBorderColorExample = () => {
+const CardBorderColor = () => {
   return (
     <div className="ex-card-border-color">
       <App />
@@ -29,4 +29,4 @@ const CardBorderColorExample = () => {
   )
 };
 
-export default CardBorderColorExample;
+export default CardBorderColor;

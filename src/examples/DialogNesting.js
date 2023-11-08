@@ -51,7 +51,7 @@ function App() {
   );
 }
 
-const DialogNestingExample = () => {
+const DialogNesting = () => {
   return (
     <div className="ex-dialog-nesting">
       <App />
@@ -59,4 +59,4 @@ const DialogNestingExample = () => {
   )
 };
 
-export default DialogNestingExample;
+export default DialogNesting;

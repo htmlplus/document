@@ -23,7 +23,7 @@ function App() {
   );
 }
 
-const StickyContactsExample = () => {
+const StickyContacts = () => {
   return (
     <div className="ex-sticky-contacts dock">
       <App />
@@ -32,4 +32,4 @@ const StickyContactsExample = () => {
   )
 };
 
-export default StickyContactsExample;
+export default StickyContacts;

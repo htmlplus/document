@@ -23,7 +23,7 @@ function App() {
   );
 }
 
-const StickySidebarExample = () => {
+const StickySidebar = () => {
   return (
     <div className="ex-sticky-sidebar dock">
       <App />
@@ -32,4 +32,4 @@ const StickySidebarExample = () => {
   )
 };
 
-export default StickySidebarExample;
+export default StickySidebar;

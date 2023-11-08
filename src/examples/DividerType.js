@@ -26,7 +26,7 @@ function App() {
   );
 }
 
-const DividerTypeExample = () => {
+const DividerType = () => {
   return (
     <div className="ex-divider-type">
       <App />
@@ -34,4 +34,4 @@ const DividerTypeExample = () => {
   )
 };
 
-export default DividerTypeExample;
+export default DividerType;

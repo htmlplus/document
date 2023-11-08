@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-const TabsGrowExample = () => {
+const TabsGrow = () => {
   return (
     <div className="ex-tabs-grow">
       <App />
@@ -24,4 +24,4 @@ const TabsGrowExample = () => {
   )
 };
 
-export default TabsGrowExample;
+export default TabsGrow;

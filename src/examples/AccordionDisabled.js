@@ -20,7 +20,7 @@ function App() {
   );
 }
 
-const AccordionDisabledExample = () => {
+const AccordionDisabled = () => {
   return (
     <div className="ex-accordion-disabled">
       <App />
@@ -28,4 +28,4 @@ const AccordionDisabledExample = () => {
   )
 };
 
-export default AccordionDisabledExample;
+export default AccordionDisabled;

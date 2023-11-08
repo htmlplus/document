@@ -25,7 +25,7 @@ function App() {
   );
 }
 
-const DialogSpecificScrollableExample = () => {
+const DialogSpecificScrollable = () => {
   return (
     <div className="ex-dialog-specific-scrollable">
       <App />
@@ -33,4 +33,4 @@ const DialogSpecificScrollableExample = () => {
   )
 };
 
-export default DialogSpecificScrollableExample;
+export default DialogSpecificScrollable;

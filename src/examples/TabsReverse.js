@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-const TabsReverseExample = () => {
+const TabsReverse = () => {
   return (
     <div className="ex-tabs-reverse">
       <App />
@@ -24,4 +24,4 @@ const TabsReverseExample = () => {
   )
 };
 
-export default TabsReverseExample;
+export default TabsReverse;

@@ -25,7 +25,7 @@ function App() {
   );
 }
 
-const CropperZoomRatioExample = () => {
+const CropperZoomRatio = () => {
   return (
     <div className="ex-cropper-zoom-ratio">
       <App />
@@ -33,4 +33,4 @@ const CropperZoomRatioExample = () => {
   )
 };
 
-export default CropperZoomRatioExample;
+export default CropperZoomRatio;

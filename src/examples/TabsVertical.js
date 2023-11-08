@@ -33,7 +33,7 @@ function App() {
   );
 }
 
-const TabsVerticalExample = () => {
+const TabsVertical = () => {
   return (
     <div className="ex-tabs-vertical">
       <App />
@@ -41,4 +41,4 @@ const TabsVerticalExample = () => {
   )
 };
 
-export default TabsVerticalExample;
+export default TabsVertical;

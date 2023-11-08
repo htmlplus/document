@@ -28,7 +28,7 @@ function App() {
   );
 }
 
-const IconRegisterACustomNameExample = () => {
+const IconRegisterACustomName = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
@@ -38,4 +38,4 @@ const IconRegisterACustomNameExample = () => {
   )
 };
 
-export default IconRegisterACustomNameExample;
+export default IconRegisterACustomName;

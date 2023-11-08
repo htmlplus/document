@@ -8,7 +8,7 @@ function App() {
   return <ProgressBar value={50} buffer={75}></ProgressBar>;
 }
 
-const ProgressBarBufferExample = () => {
+const ProgressBarBuffer = () => {
   return (
     <div className="ex-progress-bar-buffer">
       <App />
@@ -16,4 +16,4 @@ const ProgressBarBufferExample = () => {
   )
 };
 
-export default ProgressBarBufferExample;
+export default ProgressBarBuffer;

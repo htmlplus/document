@@ -8,7 +8,7 @@ function App() {
   return <ProgressBar variant="indeterminate"></ProgressBar>;
 }
 
-const ProgressBarIndeterminateExample = () => {
+const ProgressBarIndeterminate = () => {
   return (
     <div className="ex-progress-bar-indeterminate">
       <App />
@@ -16,4 +16,4 @@ const ProgressBarIndeterminateExample = () => {
   )
 };
 
-export default ProgressBarIndeterminateExample;
+export default ProgressBarIndeterminate;

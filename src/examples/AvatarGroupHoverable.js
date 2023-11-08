@@ -26,7 +26,7 @@ function App() {
   );
 }
 
-const AvatarGroupHoverableExample = () => {
+const AvatarGroupHoverable = () => {
   return (
     <div className="ex-avatar-group-hoverable">
       <App />
@@ -34,4 +34,4 @@ const AvatarGroupHoverableExample = () => {
   )
 };
 
-export default AvatarGroupHoverableExample;
+export default AvatarGroupHoverable;

@@ -20,7 +20,7 @@ function App() {
   );
 }
 
-const AccordionCustomizedExample = () => {
+const AccordionCustomized = () => {
   return (
     <div className="ex-accordion-customized">
       <App />
@@ -29,4 +29,4 @@ const AccordionCustomizedExample = () => {
   )
 };
 
-export default AccordionCustomizedExample;
+export default AccordionCustomized;

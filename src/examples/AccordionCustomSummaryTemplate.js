@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-const AccordionCustomSummaryTemplateExample = () => {
+const AccordionCustomSummaryTemplate = () => {
   return (
     <div className="ex-accordion-custom-summary-template">
       <App />
@@ -25,4 +25,4 @@ const AccordionCustomSummaryTemplateExample = () => {
   )
 };
 
-export default AccordionCustomSummaryTemplateExample;
+export default AccordionCustomSummaryTemplate;

@@ -28,7 +28,7 @@ function App() {
   );
 }
 
-const IntersectionLazyImageExample = () => {
+const IntersectionLazyImage = () => {
   return (
     <div className="ex-intersection-lazy-image dock">
       <App />
@@ -37,4 +37,4 @@ const IntersectionLazyImageExample = () => {
   )
 };
 
-export default IntersectionLazyImageExample;
+export default IntersectionLazyImage;

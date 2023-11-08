@@ -22,7 +22,7 @@ function App() {
   );
 }
 
-const ScrollDetectorScrollIndicatorExample = () => {
+const ScrollDetectorScrollIndicator = () => {
   return (
     <div className="ex-scroll-detector-scroll-indicator dock">
       <App />
@@ -31,4 +31,4 @@ const ScrollDetectorScrollIndicatorExample = () => {
   )
 };
 
-export default ScrollDetectorScrollIndicatorExample;
+export default ScrollDetectorScrollIndicator;

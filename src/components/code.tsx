@@ -8,7 +8,11 @@ import 'prismjs/components/prism-jsx';
 
 import { Button } from '@/components';
 
-import { ICode } from './code.types';
+export interface ICode {
+  children?: React.ReactNode;
+  copy?: boolean;
+  language: 'html' | 'css' | 'js' | 'jsx' | 'shell';
+}
 
 export function Code({ children, copy = true, language }: ICode) {
   const element = useRef<HTMLPreElement>(null);

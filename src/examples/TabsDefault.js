@@ -33,7 +33,7 @@ function App() {
   );
 }
 
-const TabsDefaultExample = () => {
+const TabsDefault = () => {
   return (
     <div className="ex-tabs-default">
       <App />
@@ -41,4 +41,4 @@ const TabsDefaultExample = () => {
   )
 };
 
-export default TabsDefaultExample;
+export default TabsDefault;

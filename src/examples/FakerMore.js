@@ -19,7 +19,7 @@ function App() {
   );
 }
 
-const FakerMoreExample = () => {
+const FakerMore = () => {
   return (
     <div className="ex-faker-more">
       <App />
@@ -27,4 +27,4 @@ const FakerMoreExample = () => {
   )
 };
 
-export default FakerMoreExample;
+export default FakerMore;

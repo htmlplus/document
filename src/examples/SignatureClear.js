@@ -24,7 +24,7 @@ function App() {
   );
 }
 
-const SignatureClearExample = () => {
+const SignatureClear = () => {
   return (
     <div className="ex-signature-clear">
       <App />
@@ -32,4 +32,4 @@ const SignatureClearExample = () => {
   )
 };
 
-export default SignatureClearExample;
+export default SignatureClear;

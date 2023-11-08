@@ -34,7 +34,7 @@ function App() {
   );
 }
 
-const TabsJustifyExample = () => {
+const TabsJustify = () => {
   return (
     <div className="ex-tabs-justify">
       <App />
@@ -42,4 +42,4 @@ const TabsJustifyExample = () => {
   )
 };
 
-export default TabsJustifyExample;
+export default TabsJustify;

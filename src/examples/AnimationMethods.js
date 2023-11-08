@@ -36,7 +36,7 @@ function App() {
   );
 }
 
-const AnimationMethodsExample = () => {
+const AnimationMethods = () => {
   return (
     <div className="ex-animation-methods">
       <App />
@@ -45,4 +45,4 @@ const AnimationMethodsExample = () => {
   )
 };
 
-export default AnimationMethodsExample;
+export default AnimationMethods;

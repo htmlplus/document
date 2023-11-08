@@ -25,7 +25,7 @@ function App() {
   );
 }
 
-const DialogScrollableExample = () => {
+const DialogScrollable = () => {
   return (
     <div className="ex-dialog-scrollable">
       <App />
@@ -33,4 +33,4 @@ const DialogScrollableExample = () => {
   )
 };
 
-export default DialogScrollableExample;
+export default DialogScrollable;

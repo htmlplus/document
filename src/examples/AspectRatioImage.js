@@ -17,7 +17,7 @@ function App() {
   );
 }
 
-const AspectRatioImageExample = () => {
+const AspectRatioImage = () => {
   return (
     <div className="ex-aspect-ratio-image">
       <App />
@@ -25,4 +25,4 @@ const AspectRatioImageExample = () => {
   )
 };
 
-export default AspectRatioImageExample;
+export default AspectRatioImage;

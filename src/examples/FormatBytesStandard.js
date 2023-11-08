@@ -13,7 +13,7 @@ function App() {
   );
 }
 
-const FormatBytesStandardExample = () => {
+const FormatBytesStandard = () => {
   return (
     <div className="ex-format-bytes-standard">
       <App />
@@ -21,4 +21,4 @@ const FormatBytesStandardExample = () => {
   )
 };
 
-export default FormatBytesStandardExample;
+export default FormatBytesStandard;

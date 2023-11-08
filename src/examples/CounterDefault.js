@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const CounterDefaultExample = () => {
+const CounterDefault = () => {
   return (
     <div className="ex-counter-default">
       <App />
@@ -20,4 +20,4 @@ const CounterDefaultExample = () => {
   )
 };
 
-export default CounterDefaultExample;
+export default CounterDefault;

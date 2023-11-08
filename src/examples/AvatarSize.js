@@ -20,7 +20,7 @@ function App() {
   );
 }
 
-const AvatarSizeExample = () => {
+const AvatarSize = () => {
   return (
     <div className="ex-avatar-size">
       <App />
@@ -28,4 +28,4 @@ const AvatarSizeExample = () => {
   )
 };
 
-export default AvatarSizeExample;
+export default AvatarSize;

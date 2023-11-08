@@ -33,7 +33,7 @@ function App() {
   );
 }
 
-const DialogPreventExample = () => {
+const DialogPrevent = () => {
   return (
     <div className="ex-dialog-prevent">
       <App />
@@ -41,4 +41,4 @@ const DialogPreventExample = () => {
   )
 };
 
-export default DialogPreventExample;
+export default DialogPrevent;

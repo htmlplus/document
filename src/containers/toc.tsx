@@ -7,9 +7,20 @@ import { create } from 'zustand';
 
 import { classes } from '@/utils';
 
-import { ITocItem } from './toc.types';
+export interface ITocItem {
+  children?: React.ReactNode;
+  level?: number;
+}
 
-interface UseTocItem {
+interface IUseToc {
+  items: IUseTocItem[];
+  add: (item: IUseTocItem) => void;
+  remove: (item: IUseTocItem) => void;
+  scrollTo: (item: IUseTocItem) => void;
+  update: (item: IUseTocItem, entry: IntersectionObserverEntry) => void;
+}
+
+interface IUseTocItem {
   isActive?: boolean;
   element?: HTMLElement;
   entry?: IntersectionObserverEntry;
@@ -21,17 +32,9 @@ interface UseTocItem {
   top?: number;
 }
 
-interface UseToc {
-  items: UseTocItem[];
-  add: (item: UseTocItem) => void;
-  remove: (item: UseTocItem) => void;
-  scrollTo: (item: UseTocItem) => void;
-  update: (item: UseTocItem, entry: IntersectionObserverEntry) => void;
-}
-
-const useToc = create<UseToc>((set, get) => ({
+const useToc = create<IUseToc>((set, get) => ({
   items: [],
-  add: (item: UseTocItem) => {
+  add: (item: IUseTocItem) => {
     let items = get().items.concat(item);
 
     for (const item of items) {
@@ -46,12 +49,12 @@ const useToc = create<UseToc>((set, get) => ({
 
     item.observer.observe(item.element!);
   },
-  remove: (item: UseTocItem) => {
+  remove: (item: IUseTocItem) => {
     item.observer?.disconnect();
     const items = get().items.filter((x) => x.key != item.key);
     set({ items });
   },
-  scrollTo: (item: UseTocItem) => {
+  scrollTo: (item: IUseTocItem) => {
     item.element?.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
@@ -59,7 +62,7 @@ const useToc = create<UseToc>((set, get) => ({
     });
     setTimeout(() => (window.location.hash = `#${item.id}`), 500);
   },
-  update(item: UseTocItem, entry: IntersectionObserverEntry) {
+  update(item: IUseTocItem, entry: IntersectionObserverEntry) {
     item.entry = entry;
     const entries = get().items.filter((item) => item.entry?.isIntersecting);
     if (!entries.length) return;
@@ -112,7 +115,7 @@ export function TocItem({ children, level }: ITocItem) {
 
   const toc = useToc();
 
-  const item: UseTocItem | undefined = useMemo(() => {
+  const item: IUseTocItem | undefined = useMemo(() => {
     if (!isReady) return;
     return {
       element: element.current!,

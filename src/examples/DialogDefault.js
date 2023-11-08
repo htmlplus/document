@@ -25,7 +25,7 @@ function App() {
   );
 }
 
-const DialogDefaultExample = () => {
+const DialogDefault = () => {
   return (
     <div className="ex-dialog-default">
       <App />
@@ -33,4 +33,4 @@ const DialogDefaultExample = () => {
   )
 };
 
-export default DialogDefaultExample;
+export default DialogDefault;

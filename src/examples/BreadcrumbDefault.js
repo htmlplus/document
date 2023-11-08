@@ -17,7 +17,7 @@ function App() {
   );
 }
 
-const BreadcrumbDefaultExample = () => {
+const BreadcrumbDefault = () => {
   return (
     <div className="ex-breadcrumb-default">
       <App />
@@ -26,4 +26,4 @@ const BreadcrumbDefaultExample = () => {
   )
 };
 
-export default BreadcrumbDefaultExample;
+export default BreadcrumbDefault;

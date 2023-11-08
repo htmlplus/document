@@ -22,7 +22,7 @@ function App() {
   );
 }
 
-const AvatarIconRatioInlineExample = () => {
+const AvatarIconRatioInline = () => {
   return (
     <div className="ex-avatar-icon-ratio-inline">
       <App />
@@ -30,4 +30,4 @@ const AvatarIconRatioInlineExample = () => {
   )
 };
 
-export default AvatarIconRatioInlineExample;
+export default AvatarIconRatioInline;

@@ -25,7 +25,7 @@ function App() {
   );
 }
 
-const DialogFullscreenExample = () => {
+const DialogFullscreen = () => {
   return (
     <div className="ex-dialog-fullscreen">
       <App />
@@ -33,4 +33,4 @@ const DialogFullscreenExample = () => {
   )
 };
 
-export default DialogFullscreenExample;
+export default DialogFullscreen;

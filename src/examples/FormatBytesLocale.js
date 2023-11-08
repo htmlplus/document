@@ -13,7 +13,7 @@ function App() {
   );
 }
 
-const FormatBytesLocaleExample = () => {
+const FormatBytesLocale = () => {
   return (
     <div className="ex-format-bytes-locale">
       <App />
@@ -21,4 +21,4 @@ const FormatBytesLocaleExample = () => {
   )
 };
 
-export default FormatBytesLocaleExample;
+export default FormatBytesLocale;

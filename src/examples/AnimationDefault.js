@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const AnimationDefaultExample = () => {
+const AnimationDefault = () => {
   return (
     <div className="ex-animation-default">
       <App />
@@ -21,4 +21,4 @@ const AnimationDefaultExample = () => {
   )
 };
 
-export default AnimationDefaultExample;
+export default AnimationDefault;

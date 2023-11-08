@@ -26,7 +26,7 @@ function App() {
   );
 }
 
-const AvatarGroupGutterExample = () => {
+const AvatarGroupGutter = () => {
   return (
     <div className="ex-avatar-group-gutter">
       <App />
@@ -35,4 +35,4 @@ const AvatarGroupGutterExample = () => {
   )
 };
 
-export default AvatarGroupGutterExample;
+export default AvatarGroupGutter;

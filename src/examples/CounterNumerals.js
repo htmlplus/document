@@ -13,7 +13,7 @@ function App() {
   );
 }
 
-const CounterNumeralsExample = () => {
+const CounterNumerals = () => {
   return (
     <div className="ex-counter-numerals">
       <App />
@@ -21,4 +21,4 @@ const CounterNumeralsExample = () => {
   )
 };
 
-export default CounterNumeralsExample;
+export default CounterNumerals;

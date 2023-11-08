@@ -13,7 +13,7 @@ function App() {
   );
 }
 
-const SwitchCustomizedExample = () => {
+const SwitchCustomized = () => {
   return (
     <div className="ex-switch-customized">
       <App />
@@ -22,4 +22,4 @@ const SwitchCustomizedExample = () => {
   )
 };
 
-export default SwitchCustomizedExample;
+export default SwitchCustomized;

@@ -32,7 +32,7 @@ function App() {
   );
 }
 
-const CropperToBase64Example = () => {
+const CropperToBase64 = () => {
   return (
     <div className="ex-cropper-to-base64">
       <App />
@@ -40,4 +40,4 @@ const CropperToBase64Example = () => {
   )
 };
 
-export default CropperToBase64Example;
+export default CropperToBase64;

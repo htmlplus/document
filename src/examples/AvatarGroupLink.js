@@ -25,7 +25,7 @@ function App() {
   );
 }
 
-const AvatarGroupLinkExample = () => {
+const AvatarGroupLink = () => {
   return (
     <div className="ex-avatar-group-link">
       <App />
@@ -33,4 +33,4 @@ const AvatarGroupLinkExample = () => {
   )
 };
 
-export default AvatarGroupLinkExample;
+export default AvatarGroupLink;

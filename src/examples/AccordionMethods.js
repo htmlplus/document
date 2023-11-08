@@ -32,7 +32,7 @@ function App() {
   );
 }
 
-const AccordionMethodsExample = () => {
+const AccordionMethods = () => {
   return (
     <div className="ex-accordion-methods">
       <App />
@@ -40,4 +40,4 @@ const AccordionMethodsExample = () => {
   )
 };
 
-export default AccordionMethodsExample;
+export default AccordionMethods;

@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-const DividerVariantExample = () => {
+const DividerVariant = () => {
   return (
     <div className="ex-divider-variant">
       <App />
@@ -24,4 +24,4 @@ const DividerVariantExample = () => {
   )
 };
 
-export default DividerVariantExample;
+export default DividerVariant;

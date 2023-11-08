@@ -15,7 +15,7 @@ function App() {
   );
 }
 
-const IconFlipExample = () => {
+const IconFlip = () => {
   return (
     <div className="ex-icon-flip">
       <App />
@@ -23,4 +23,4 @@ const IconFlipExample = () => {
   )
 };
 
-export default IconFlipExample;
+export default IconFlip;

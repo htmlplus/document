@@ -25,7 +25,7 @@ function App() {
   );
 }
 
-const DialogBackdropExample = () => {
+const DialogBackdrop = () => {
   return (
     <div className="ex-dialog-backdrop">
       <App />
@@ -33,4 +33,4 @@ const DialogBackdropExample = () => {
   )
 };
 
-export default DialogBackdropExample;
+export default DialogBackdrop;

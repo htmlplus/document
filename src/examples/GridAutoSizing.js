@@ -33,7 +33,7 @@ function App() {
   );
 }
 
-const GridAutoSizingExample = () => {
+const GridAutoSizing = () => {
   return (
     <div className="ex-grid-auto-sizing">
       <App />
@@ -42,4 +42,4 @@ const GridAutoSizingExample = () => {
   )
 };
 
-export default GridAutoSizingExample;
+export default GridAutoSizing;

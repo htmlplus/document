@@ -33,7 +33,7 @@ function App() {
   );
 }
 
-const AvatarSlotsExample = () => {
+const AvatarSlots = () => {
   return (
     <div className="ex-avatar-slots">
       <App />
@@ -42,4 +42,4 @@ const AvatarSlotsExample = () => {
   )
 };
 
-export default AvatarSlotsExample;
+export default AvatarSlots;

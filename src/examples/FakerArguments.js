@@ -8,7 +8,7 @@ function App() {
   return <Faker api="lorem.paragraphs" arguments={[5, '\n\n']}></Faker>;
 }
 
-const FakerArgumentsExample = () => {
+const FakerArguments = () => {
   return (
     <div className="ex-faker-arguments">
       <App />
@@ -16,4 +16,4 @@ const FakerArgumentsExample = () => {
   )
 };
 
-export default FakerArgumentsExample;
+export default FakerArguments;

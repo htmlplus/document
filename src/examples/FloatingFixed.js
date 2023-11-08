@@ -18,7 +18,7 @@ function App() {
   );
 }
 
-const FloatingFixedExample = () => {
+const FloatingFixed = () => {
   return (
     <div className="ex-floating-fixed">
       <App />
@@ -26,4 +26,4 @@ const FloatingFixedExample = () => {
   )
 };
 
-export default FloatingFixedExample;
+export default FloatingFixed;

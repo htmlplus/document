@@ -41,7 +41,7 @@ function App() {
   );
 }
 
-const BreadcrumbLimitationExample = () => {
+const BreadcrumbLimitation = () => {
   return (
     <div className="ex-breadcrumb-limitation">
       <App />
@@ -50,4 +50,4 @@ const BreadcrumbLimitationExample = () => {
   )
 };
 
-export default BreadcrumbLimitationExample;
+export default BreadcrumbLimitation;

@@ -29,7 +29,7 @@ function App() {
   );
 }
 
-const CropperToUrlExample = () => {
+const CropperToUrl = () => {
   return (
     <div className="ex-cropper-to-url">
       <App />
@@ -37,4 +37,4 @@ const CropperToUrlExample = () => {
   )
 };
 
-export default CropperToUrlExample;
+export default CropperToUrl;

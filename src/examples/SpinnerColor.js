@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-const SpinnerColorExample = () => {
+const SpinnerColor = () => {
   return (
     <div className="ex-spinner-color">
       <App />
@@ -25,4 +25,4 @@ const SpinnerColorExample = () => {
   )
 };
 
-export default SpinnerColorExample;
+export default SpinnerColor;

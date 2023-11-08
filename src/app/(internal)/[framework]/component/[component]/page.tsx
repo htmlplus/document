@@ -1,8 +1,9 @@
-import { capitalCase, sentenceCase } from 'change-case';
+import { capitalCase, pascalCase, sentenceCase } from 'change-case';
 
 import { ROUTES } from '@/constants';
 import { Markup } from '@/containers';
 import { components, examples, frameworks } from '@/data';
+import * as Examples from '@/examples';
 import { getPath } from '@/utils';
 
 interface IPage {
@@ -32,6 +33,9 @@ export function generateStaticParams() {
 export default function Page({ params }: IPage) {
   const component = components.find((component) => component.key == params.component);
 
+  // TODO
+  if (!component) return null;
+
   const example = {} as any;
 
   // TODO
@@ -53,6 +57,8 @@ export default function Page({ params }: IPage) {
     const [frameworkKey, componentKey, exampleKey] = current.key.split('/');
 
     if (params.framework != frameworkKey || params.component != componentKey) continue;
+
+    const Preview = Examples[pascalCase(componentKey + ' ' + exampleKey) as keyof typeof Examples];
 
     const parameters = Object.assign({}, params, { example: exampleKey });
 
@@ -112,7 +118,8 @@ export default function Page({ params }: IPage) {
       ...(current.settings || {}), // TODO
       links,
       tabs,
-      title
+      title,
+      Preview
     };
   }
 

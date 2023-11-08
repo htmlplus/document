@@ -34,7 +34,7 @@ function App() {
   );
 }
 
-const ClickOutsideDefaultExample = () => {
+const ClickOutsideDefault = () => {
   return (
     <div className="ex-click-outside-default">
       <App />
@@ -42,4 +42,4 @@ const ClickOutsideDefaultExample = () => {
   )
 };
 
-export default ClickOutsideDefaultExample;
+export default ClickOutsideDefault;

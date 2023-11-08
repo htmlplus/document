@@ -8,7 +8,7 @@ function App() {
   return <Cropper src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"></Cropper>;
 }
 
-const CropperDefaultExample = () => {
+const CropperDefault = () => {
   return (
     <div className="ex-cropper-default dock">
       <App />
@@ -16,4 +16,4 @@ const CropperDefaultExample = () => {
   )
 };
 
-export default CropperDefaultExample;
+export default CropperDefault;

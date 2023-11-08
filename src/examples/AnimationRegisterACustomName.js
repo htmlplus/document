@@ -51,7 +51,7 @@ function App() {
   );
 }
 
-const AnimationRegisterACustomNameExample = () => {
+const AnimationRegisterACustomName = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
@@ -62,4 +62,4 @@ const AnimationRegisterACustomNameExample = () => {
   )
 };
 
-export default AnimationRegisterACustomNameExample;
+export default AnimationRegisterACustomName;

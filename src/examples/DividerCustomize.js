@@ -18,7 +18,7 @@ function App() {
   );
 }
 
-const DividerCustomizeExample = () => {
+const DividerCustomize = () => {
   return (
     <div className="ex-divider-customize">
       <App />
@@ -27,4 +27,4 @@ const DividerCustomizeExample = () => {
   )
 };
 
-export default DividerCustomizeExample;
+export default DividerCustomize;

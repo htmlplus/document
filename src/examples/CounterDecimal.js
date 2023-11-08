@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const CounterDecimalExample = () => {
+const CounterDecimal = () => {
   return (
     <div className="ex-counter-decimal">
       <App />
@@ -20,4 +20,4 @@ const CounterDecimalExample = () => {
   )
 };
 
-export default CounterDecimalExample;
+export default CounterDecimal;

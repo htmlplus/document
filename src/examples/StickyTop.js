@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-const StickyTopExample = () => {
+const StickyTop = () => {
   return (
     <div className="ex-sticky-top dock">
       <App />
@@ -25,4 +25,4 @@ const StickyTopExample = () => {
   )
 };
 
-export default StickyTopExample;
+export default StickyTop;

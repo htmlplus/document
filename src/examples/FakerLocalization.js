@@ -24,7 +24,7 @@ function App() {
   return <Faker></Faker>;
 }
 
-const FakerLocalizationExample = () => {
+const FakerLocalization = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
@@ -34,4 +34,4 @@ const FakerLocalizationExample = () => {
   )
 };
 
-export default FakerLocalizationExample;
+export default FakerLocalization;

@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-const IconOverrideSizeExample = () => {
+const IconOverrideSize = () => {
   return (
     <div className="ex-icon-override-size">
       <App />
@@ -25,4 +25,4 @@ const IconOverrideSizeExample = () => {
   )
 };
 
-export default IconOverrideSizeExample;
+export default IconOverrideSize;

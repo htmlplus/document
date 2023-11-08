@@ -15,7 +15,7 @@ function App() {
   );
 }
 
-const FloatingOffsetExample = () => {
+const FloatingOffset = () => {
   return (
     <div className="ex-floating-offset">
       <App />
@@ -24,4 +24,4 @@ const FloatingOffsetExample = () => {
   )
 };
 
-export default FloatingOffsetExample;
+export default FloatingOffset;

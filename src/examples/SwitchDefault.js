@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const SwitchDefaultExample = () => {
+const SwitchDefault = () => {
   return (
     <div className="ex-switch-default">
       <App />
@@ -20,4 +20,4 @@ const SwitchDefaultExample = () => {
   )
 };
 
-export default SwitchDefaultExample;
+export default SwitchDefault;

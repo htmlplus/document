@@ -8,7 +8,7 @@ function App() {
   return <ProgressBar ariaLabel="With Label" value={100}></ProgressBar>;
 }
 
-const ProgressBarAriaLabelExample = () => {
+const ProgressBarAriaLabel = () => {
   return (
     <div className="ex-progress-bar-aria-label">
       <App />
@@ -16,4 +16,4 @@ const ProgressBarAriaLabelExample = () => {
   )
 };
 
-export default ProgressBarAriaLabelExample;
+export default ProgressBarAriaLabel;

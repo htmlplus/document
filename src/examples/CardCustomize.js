@@ -8,7 +8,7 @@ function App() {
   return <Card elevation={12} outlined></Card>;
 }
 
-const CardCustomizeExample = () => {
+const CardCustomize = () => {
   return (
     <div className="ex-card-customize">
       <App />
@@ -17,4 +17,4 @@ const CardCustomizeExample = () => {
   )
 };
 
-export default CardCustomizeExample;
+export default CardCustomize;

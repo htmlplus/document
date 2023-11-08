@@ -8,7 +8,7 @@ function App() {
   return <Signature backgroundColor="lightgray" clearOnResize resizable></Signature>;
 }
 
-const SignatureClearOnResizeExample = () => {
+const SignatureClearOnResize = () => {
   return (
     <div className="ex-signature-clear-on-resize dock">
       <App />
@@ -17,4 +17,4 @@ const SignatureClearOnResizeExample = () => {
   )
 };
 
-export default SignatureClearOnResizeExample;
+export default SignatureClearOnResize;

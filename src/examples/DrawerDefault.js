@@ -21,7 +21,7 @@ function App() {
   );
 }
 
-const DrawerDefaultExample = () => {
+const DrawerDefault = () => {
   return (
     <div className="ex-drawer-default">
       <App />
@@ -30,4 +30,4 @@ const DrawerDefaultExample = () => {
   )
 };
 
-export default DrawerDefaultExample;
+export default DrawerDefault;

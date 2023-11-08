@@ -20,7 +20,7 @@ function App() {
   );
 }
 
-const GridHideExample = () => {
+const GridHide = () => {
   return (
     <div className="ex-grid-hide">
       <App />
@@ -29,4 +29,4 @@ const GridHideExample = () => {
   )
 };
 
-export default GridHideExample;
+export default GridHide;

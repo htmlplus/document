@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const SignatureDimensionsExample = () => {
+const SignatureDimensions = () => {
   return (
     <div className="ex-signature-dimensions">
       <App />
@@ -21,4 +21,4 @@ const SignatureDimensionsExample = () => {
   )
 };
 
-export default SignatureDimensionsExample;
+export default SignatureDimensions;

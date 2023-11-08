@@ -10,7 +10,7 @@ function App() {
   );
 }
 
-const CropperDisabledExample = () => {
+const CropperDisabled = () => {
   return (
     <div className="ex-cropper-disabled dock">
       <App />
@@ -18,4 +18,4 @@ const CropperDisabledExample = () => {
   )
 };
 
-export default CropperDisabledExample;
+export default CropperDisabled;

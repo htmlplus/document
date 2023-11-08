@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const SignatureDefaultExample = () => {
+const SignatureDefault = () => {
   return (
     <div className="ex-signature-default">
       <App />
@@ -20,4 +20,4 @@ const SignatureDefaultExample = () => {
   )
 };
 
-export default SignatureDefaultExample;
+export default SignatureDefault;

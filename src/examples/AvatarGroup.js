@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-const AvatarGroupExample = () => {
+const AvatarGroup = () => {
   return (
     <div className="ex-avatar-group">
       <App />
@@ -24,4 +24,4 @@ const AvatarGroupExample = () => {
   )
 };
 
-export default AvatarGroupExample;
+export default AvatarGroup;

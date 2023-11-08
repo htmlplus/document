@@ -22,7 +22,7 @@ function App() {
   );
 }
 
-const AnimationIntersectionExample = () => {
+const AnimationIntersection = () => {
   return (
     <div className="ex-animation-intersection dock">
       <App />
@@ -31,4 +31,4 @@ const AnimationIntersectionExample = () => {
   )
 };
 
-export default AnimationIntersectionExample;
+export default AnimationIntersection;

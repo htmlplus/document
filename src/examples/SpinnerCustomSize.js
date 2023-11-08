@@ -14,7 +14,7 @@ function App() {
   );
 }
 
-const SpinnerCustomSizeExample = () => {
+const SpinnerCustomSize = () => {
   return (
     <div className="ex-spinner-custom-size">
       <App />
@@ -23,4 +23,4 @@ const SpinnerCustomSizeExample = () => {
   )
 };
 
-export default SpinnerCustomSizeExample;
+export default SpinnerCustomSize;

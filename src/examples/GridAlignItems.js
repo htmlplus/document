@@ -29,7 +29,7 @@ function App() {
   );
 }
 
-const GridAlignItemsExample = () => {
+const GridAlignItems = () => {
   return (
     <div className="ex-grid-align-items">
       <App />
@@ -38,4 +38,4 @@ const GridAlignItemsExample = () => {
   )
 };
 
-export default GridAlignItemsExample;
+export default GridAlignItems;

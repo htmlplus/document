@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-const AvatarWildcardSizeExample = () => {
+const AvatarWildcardSize = () => {
   return (
     <div className="ex-avatar-wildcard-size">
       <App />
@@ -24,4 +24,4 @@ const AvatarWildcardSizeExample = () => {
   )
 };
 
-export default AvatarWildcardSizeExample;
+export default AvatarWildcardSize;

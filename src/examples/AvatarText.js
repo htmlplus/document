@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const AvatarTextExample = () => {
+const AvatarText = () => {
   return (
     <div className="ex-avatar-text">
       <App />
@@ -20,4 +20,4 @@ const AvatarTextExample = () => {
   )
 };
 
-export default AvatarTextExample;
+export default AvatarText;

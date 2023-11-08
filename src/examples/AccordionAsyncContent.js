@@ -32,7 +32,7 @@ function App() {
   );
 }
 
-const AccordionAsyncContentExample = () => {
+const AccordionAsyncContent = () => {
   return (
     <div className="ex-accordion-async-content">
       <App />
@@ -40,4 +40,4 @@ const AccordionAsyncContentExample = () => {
   )
 };
 
-export default AccordionAsyncContentExample;
+export default AccordionAsyncContent;

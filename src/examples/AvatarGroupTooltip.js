@@ -19,7 +19,7 @@ function App() {
   );
 }
 
-const AvatarGroupTooltipExample = () => {
+const AvatarGroupTooltip = () => {
   return (
     <div className="ex-avatar-group-tooltip">
       <App />
@@ -27,4 +27,4 @@ const AvatarGroupTooltipExample = () => {
   )
 };
 
-export default AvatarGroupTooltipExample;
+export default AvatarGroupTooltip;

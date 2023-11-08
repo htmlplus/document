@@ -21,7 +21,7 @@ function App() {
   );
 }
 
-const DialogFullWidthExample = () => {
+const DialogFullWidth = () => {
   return (
     <div className="ex-dialog-full-width">
       <App />
@@ -29,4 +29,4 @@ const DialogFullWidthExample = () => {
   )
 };
 
-export default DialogFullWidthExample;
+export default DialogFullWidth;

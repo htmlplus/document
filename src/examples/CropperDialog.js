@@ -37,7 +37,7 @@ function App() {
   );
 }
 
-const CropperDialogExample = () => {
+const CropperDialog = () => {
   return (
     <div className="ex-cropper-dialog dock">
       <App />
@@ -45,4 +45,4 @@ const CropperDialogExample = () => {
   )
 };
 
-export default CropperDialogExample;
+export default CropperDialog;

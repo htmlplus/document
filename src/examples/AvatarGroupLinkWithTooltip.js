@@ -28,7 +28,7 @@ function App() {
   );
 }
 
-const AvatarGroupLinkWithTooltipExample = () => {
+const AvatarGroupLinkWithTooltip = () => {
   return (
     <div className="ex-avatar-group-link-with-tooltip">
       <App />
@@ -36,4 +36,4 @@ const AvatarGroupLinkWithTooltipExample = () => {
   )
 };
 
-export default AvatarGroupLinkWithTooltipExample;
+export default AvatarGroupLinkWithTooltip;

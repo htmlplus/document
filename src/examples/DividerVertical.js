@@ -18,7 +18,7 @@ function App() {
   );
 }
 
-const DividerVerticalExample = () => {
+const DividerVertical = () => {
   return (
     <div className="ex-divider-vertical">
       <App />
@@ -26,4 +26,4 @@ const DividerVerticalExample = () => {
   )
 };
 
-export default DividerVerticalExample;
+export default DividerVertical;

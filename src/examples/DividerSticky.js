@@ -36,7 +36,7 @@ function App() {
   );
 }
 
-const DividerStickyExample = () => {
+const DividerSticky = () => {
   return (
     <div className="ex-divider-sticky dock">
       <App />
@@ -45,4 +45,4 @@ const DividerStickyExample = () => {
   )
 };
 
-export default DividerStickyExample;
+export default DividerSticky;

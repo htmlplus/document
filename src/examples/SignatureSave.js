@@ -30,7 +30,7 @@ function App() {
   );
 }
 
-const SignatureSaveExample = () => {
+const SignatureSave = () => {
   return (
     <div className="ex-signature-save">
       <App />
@@ -38,4 +38,4 @@ const SignatureSaveExample = () => {
   )
 };
 
-export default SignatureSaveExample;
+export default SignatureSave;

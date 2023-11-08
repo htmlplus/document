@@ -24,7 +24,7 @@ function App() {
   );
 }
 
-const CropperModeExample = () => {
+const CropperMode = () => {
   return (
     <div className="ex-cropper-mode">
       <App />
@@ -33,4 +33,4 @@ const CropperModeExample = () => {
   )
 };
 
-export default CropperModeExample;
+export default CropperMode;

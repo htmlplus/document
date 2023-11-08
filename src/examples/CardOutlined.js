@@ -8,7 +8,7 @@ function App() {
   return <Card outlined></Card>;
 }
 
-const CardOutlinedExample = () => {
+const CardOutlined = () => {
   return (
     <div className="ex-card-outlined">
       <App />
@@ -17,4 +17,4 @@ const CardOutlinedExample = () => {
   )
 };
 
-export default CardOutlinedExample;
+export default CardOutlined;

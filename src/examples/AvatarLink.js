@@ -15,7 +15,7 @@ function App() {
   );
 }
 
-const AvatarLinkExample = () => {
+const AvatarLink = () => {
   return (
     <div className="ex-avatar-link">
       <App />
@@ -23,4 +23,4 @@ const AvatarLinkExample = () => {
   )
 };
 
-export default AvatarLinkExample;
+export default AvatarLink;

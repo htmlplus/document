@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const SwitchCheckedExample = () => {
+const SwitchChecked = () => {
   return (
     <div className="ex-switch-checked">
       <App />
@@ -20,4 +20,4 @@ const SwitchCheckedExample = () => {
   )
 };
 
-export default SwitchCheckedExample;
+export default SwitchChecked;

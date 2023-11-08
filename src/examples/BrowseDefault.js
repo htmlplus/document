@@ -17,7 +17,7 @@ function App() {
   );
 }
 
-const BrowseDefaultExample = () => {
+const BrowseDefault = () => {
   return (
     <div className="ex-browse-default">
       <App />
@@ -26,4 +26,4 @@ const BrowseDefaultExample = () => {
   )
 };
 
-export default BrowseDefaultExample;
+export default BrowseDefault;

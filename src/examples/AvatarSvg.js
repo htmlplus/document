@@ -18,7 +18,7 @@ function App() {
   );
 }
 
-const AvatarSvgExample = () => {
+const AvatarSvg = () => {
   return (
     <div className="ex-avatar-svg">
       <App />
@@ -26,4 +26,4 @@ const AvatarSvgExample = () => {
   )
 };
 
-export default AvatarSvgExample;
+export default AvatarSvg;

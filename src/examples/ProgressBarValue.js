@@ -8,7 +8,7 @@ function App() {
   return <ProgressBar value={25}></ProgressBar>;
 }
 
-const ProgressBarValueExample = () => {
+const ProgressBarValue = () => {
   return (
     <div className="ex-progress-bar-value">
       <App />
@@ -16,4 +16,4 @@ const ProgressBarValueExample = () => {
   )
 };
 
-export default ProgressBarValueExample;
+export default ProgressBarValue;

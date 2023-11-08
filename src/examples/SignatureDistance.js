@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const SignatureDistanceExample = () => {
+const SignatureDistance = () => {
   return (
     <div className="ex-signature-distance">
       <App />
@@ -20,4 +20,4 @@ const SignatureDistanceExample = () => {
   )
 };
 
-export default SignatureDistanceExample;
+export default SignatureDistance;

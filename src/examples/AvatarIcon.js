@@ -14,7 +14,7 @@ function App() {
   );
 }
 
-const AvatarIconExample = () => {
+const AvatarIcon = () => {
   return (
     <div className="ex-avatar-icon">
       <App />
@@ -22,4 +22,4 @@ const AvatarIconExample = () => {
   )
 };
 
-export default AvatarIconExample;
+export default AvatarIcon;

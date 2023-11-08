@@ -17,7 +17,7 @@ function App() {
   );
 }
 
-const StickySlotsExample = () => {
+const StickySlots = () => {
   return (
     <div className="ex-sticky-slots dock">
       <App />
@@ -26,4 +26,4 @@ const StickySlotsExample = () => {
   )
 };
 
-export default StickySlotsExample;
+export default StickySlots;

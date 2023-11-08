@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const CounterSeparatorDecimalExample = () => {
+const CounterSeparatorDecimal = () => {
   return (
     <div className="ex-counter-separator-decimal">
       <App />
@@ -20,4 +20,4 @@ const CounterSeparatorDecimalExample = () => {
   )
 };
 
-export default CounterSeparatorDecimalExample;
+export default CounterSeparatorDecimal;

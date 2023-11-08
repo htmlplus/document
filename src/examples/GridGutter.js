@@ -29,7 +29,7 @@ function App() {
   );
 }
 
-const GridGutterExample = () => {
+const GridGutter = () => {
   return (
     <div className="ex-grid-gutter">
       <App />
@@ -38,4 +38,4 @@ const GridGutterExample = () => {
   )
 };
 
-export default GridGutterExample;
+export default GridGutter;

@@ -20,7 +20,7 @@ function App() {
   );
 }
 
-const GridOrderExample = () => {
+const GridOrder = () => {
   return (
     <div className="ex-grid-order">
       <App />
@@ -29,4 +29,4 @@ const GridOrderExample = () => {
   )
 };
 
-export default GridOrderExample;
+export default GridOrder;

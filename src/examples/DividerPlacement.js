@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-const DividerPlacementExample = () => {
+const DividerPlacement = () => {
   return (
     <div className="ex-divider-placement">
       <App />
@@ -24,4 +24,4 @@ const DividerPlacementExample = () => {
   )
 };
 
-export default DividerPlacementExample;
+export default DividerPlacement;

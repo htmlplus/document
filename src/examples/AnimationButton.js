@@ -22,7 +22,7 @@ function App() {
   );
 }
 
-const AnimationButtonExample = () => {
+const AnimationButton = () => {
   return (
     <div className="ex-animation-button">
       <App />
@@ -31,4 +31,4 @@ const AnimationButtonExample = () => {
   )
 };
 
-export default AnimationButtonExample;
+export default AnimationButton;

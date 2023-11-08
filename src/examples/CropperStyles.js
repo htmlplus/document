@@ -68,7 +68,7 @@ function App() {
   );
 }
 
-const CropperStylesExample = () => {
+const CropperStyles = () => {
   return (
     <div className="ex-cropper-styles">
       <App />
@@ -77,4 +77,4 @@ const CropperStylesExample = () => {
   )
 };
 
-export default CropperStylesExample;
+export default CropperStyles;

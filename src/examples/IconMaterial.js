@@ -38,7 +38,7 @@ function App() {
   );
 }
 
-const IconMaterialExample = () => {
+const IconMaterial = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
@@ -48,4 +48,4 @@ const IconMaterialExample = () => {
   )
 };
 
-export default IconMaterialExample;
+export default IconMaterial;

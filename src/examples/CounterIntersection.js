@@ -20,7 +20,7 @@ function App() {
   );
 }
 
-const CounterIntersectionExample = () => {
+const CounterIntersection = () => {
   return (
     <div className="ex-counter-intersection dock">
       <App />
@@ -29,4 +29,4 @@ const CounterIntersectionExample = () => {
   )
 };
 
-export default CounterIntersectionExample;
+export default CounterIntersection;

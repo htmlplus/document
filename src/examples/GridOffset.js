@@ -20,7 +20,7 @@ function App() {
   );
 }
 
-const GridOffsetExample = () => {
+const GridOffset = () => {
   return (
     <div className="ex-grid-offset">
       <App />
@@ -29,4 +29,4 @@ const GridOffsetExample = () => {
   )
 };
 
-export default GridOffsetExample;
+export default GridOffset;

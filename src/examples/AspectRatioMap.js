@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const AspectRatioMapExample = () => {
+const AspectRatioMap = () => {
   return (
     <div className="ex-aspect-ratio-map">
       <App />
@@ -20,4 +20,4 @@ const AspectRatioMapExample = () => {
   )
 };
 
-export default AspectRatioMapExample;
+export default AspectRatioMap;

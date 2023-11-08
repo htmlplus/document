@@ -17,7 +17,7 @@ function App() {
   );
 }
 
-const FormatBytesDecimalsExample = () => {
+const FormatBytesDecimals = () => {
   return (
     <div className="ex-format-bytes-decimals">
       <App />
@@ -25,4 +25,4 @@ const FormatBytesDecimalsExample = () => {
   )
 };
 
-export default FormatBytesDecimalsExample;
+export default FormatBytesDecimals;

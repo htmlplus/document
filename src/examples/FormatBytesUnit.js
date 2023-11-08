@@ -18,7 +18,7 @@ function App() {
   );
 }
 
-const FormatBytesUnitExample = () => {
+const FormatBytesUnit = () => {
   return (
     <div className="ex-format-bytes-unit">
       <App />
@@ -26,4 +26,4 @@ const FormatBytesUnitExample = () => {
   )
 };
 
-export default FormatBytesUnitExample;
+export default FormatBytesUnit;

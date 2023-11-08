@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const CounterDurationExample = () => {
+const CounterDuration = () => {
   return (
     <div className="ex-counter-duration">
       <App />
@@ -20,4 +20,4 @@ const CounterDurationExample = () => {
   )
 };
 
-export default CounterDurationExample;
+export default CounterDuration;

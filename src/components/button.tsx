@@ -1,8 +1,24 @@
 import NextLink from 'next/link';
 
+import { Colors } from '@/types';
 import { classes } from '@/utils';
 
-import { IButton } from './button.types';
+export interface IButton {
+  block?: boolean;
+  children: React.ReactNode;
+  color?: Colors;
+  disabled?: boolean;
+  icon?: boolean;
+  link?: boolean | 'underline';
+  loading?: boolean;
+  outlined?: boolean;
+  size?: 'sm' | 'md' | 'lg';
+  target?: string;
+  text?: boolean;
+  title?: string;
+  to?: string;
+  onClick?: any;
+}
 
 function Link({ children, to, ...attributes }: any) {
   if (attributes.target === '_blank' && !attributes.rel) {

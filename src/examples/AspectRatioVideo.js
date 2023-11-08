@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const AspectRatioVideoExample = () => {
+const AspectRatioVideo = () => {
   return (
     <div className="ex-aspect-ratio-video">
       <App />
@@ -20,4 +20,4 @@ const AspectRatioVideoExample = () => {
   )
 };
 
-export default AspectRatioVideoExample;
+export default AspectRatioVideo;

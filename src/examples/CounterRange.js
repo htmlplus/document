@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const CounterRangeExample = () => {
+const CounterRange = () => {
   return (
     <div className="ex-counter-range">
       <App />
@@ -20,4 +20,4 @@ const CounterRangeExample = () => {
   )
 };
 
-export default CounterRangeExample;
+export default CounterRange;

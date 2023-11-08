@@ -8,7 +8,7 @@ function App() {
   return <ProgressBar value={75}>Custom label for value of 75</ProgressBar>;
 }
 
-const ProgressBarCustomLabelExample = () => {
+const ProgressBarCustomLabel = () => {
   return (
     <div className="ex-progress-bar-custom-label">
       <App />
@@ -16,4 +16,4 @@ const ProgressBarCustomLabelExample = () => {
   )
 };
 
-export default ProgressBarCustomLabelExample;
+export default ProgressBarCustomLabel;

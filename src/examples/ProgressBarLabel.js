@@ -8,7 +8,7 @@ function App() {
   return <ProgressBar label value={75}></ProgressBar>;
 }
 
-const ProgressBarLabelExample = () => {
+const ProgressBarLabel = () => {
   return (
     <div className="ex-progress-bar-label">
       <App />
@@ -16,4 +16,4 @@ const ProgressBarLabelExample = () => {
   )
 };
 
-export default ProgressBarLabelExample;
+export default ProgressBarLabel;

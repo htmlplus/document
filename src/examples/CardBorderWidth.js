@@ -20,7 +20,7 @@ function App() {
   );
 }
 
-const CardBorderWidthExample = () => {
+const CardBorderWidth = () => {
   return (
     <div className="ex-card-border-width">
       <App />
@@ -29,4 +29,4 @@ const CardBorderWidthExample = () => {
   )
 };
 
-export default CardBorderWidthExample;
+export default CardBorderWidth;

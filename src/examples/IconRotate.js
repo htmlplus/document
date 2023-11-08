@@ -15,7 +15,7 @@ function App() {
   );
 }
 
-const IconRotateExample = () => {
+const IconRotate = () => {
   return (
     <div className="ex-icon-rotate">
       <App />
@@ -23,4 +23,4 @@ const IconRotateExample = () => {
   )
 };
 
-export default IconRotateExample;
+export default IconRotate;

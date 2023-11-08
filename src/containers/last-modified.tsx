@@ -2,7 +2,9 @@
 
 import { TocItem } from '@/containers';
 
-import { ILastModified } from './last-modified.types';
+export interface ILastModified {
+  value: Date;
+}
 
 export function LastModified({ value }: ILastModified) {
   return (

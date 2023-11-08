@@ -41,7 +41,7 @@ function App() {
   );
 }
 
-const IconFontAwesomeExample = () => {
+const IconFontAwesome = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
@@ -51,4 +51,4 @@ const IconFontAwesomeExample = () => {
   )
 };
 
-export default IconFontAwesomeExample;
+export default IconFontAwesome;

@@ -8,7 +8,7 @@ function App() {
   return <ProgressBar></ProgressBar>;
 }
 
-const ProgressBarDefaultExample = () => {
+const ProgressBarDefault = () => {
   return (
     <div className="ex-progress-bar-default">
       <App />
@@ -16,4 +16,4 @@ const ProgressBarDefaultExample = () => {
   )
 };
 
-export default ProgressBarDefaultExample;
+export default ProgressBarDefault;

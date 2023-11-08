@@ -8,7 +8,7 @@ function App() {
   return <Faker></Faker>;
 }
 
-const FakerDefaultExample = () => {
+const FakerDefault = () => {
   return (
     <div className="ex-faker-default">
       <App />
@@ -16,4 +16,4 @@ const FakerDefaultExample = () => {
   )
 };
 
-export default FakerDefaultExample;
+export default FakerDefault;

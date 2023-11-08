@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-const AvatarShapeExample = () => {
+const AvatarShape = () => {
   return (
     <div className="ex-avatar-shape">
       <App />
@@ -24,4 +24,4 @@ const AvatarShapeExample = () => {
   )
 };
 
-export default AvatarShapeExample;
+export default AvatarShape;

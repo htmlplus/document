@@ -25,7 +25,7 @@ function App() {
   );
 }
 
-const DialogPersistentExample = () => {
+const DialogPersistent = () => {
   return (
     <div className="ex-dialog-persistent">
       <App />
@@ -33,4 +33,4 @@ const DialogPersistentExample = () => {
   )
 };
 
-export default DialogPersistentExample;
+export default DialogPersistent;

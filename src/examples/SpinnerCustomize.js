@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const SpinnerCustomizeExample = () => {
+const SpinnerCustomize = () => {
   return (
     <div className="ex-spinner-customize">
       <App />
@@ -21,4 +21,4 @@ const SpinnerCustomizeExample = () => {
   )
 };
 
-export default SpinnerCustomizeExample;
+export default SpinnerCustomize;

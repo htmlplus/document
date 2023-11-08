@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const SignatureColorExample = () => {
+const SignatureColor = () => {
   return (
     <div className="ex-signature-color">
       <App />
@@ -20,4 +20,4 @@ const SignatureColorExample = () => {
   )
 };
 
-export default SignatureColorExample;
+export default SignatureColor;

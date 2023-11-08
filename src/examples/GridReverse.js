@@ -20,7 +20,7 @@ function App() {
   );
 }
 
-const GridReverseExample = () => {
+const GridReverse = () => {
   return (
     <div className="ex-grid-reverse">
       <App />
@@ -29,4 +29,4 @@ const GridReverseExample = () => {
   )
 };
 
-export default GridReverseExample;
+export default GridReverse;

@@ -12,7 +12,7 @@ function App() {
   );
 }
 
-const CardDefaultExample = () => {
+const CardDefault = () => {
   return (
     <div className="ex-card-default dock">
       <App />
@@ -21,4 +21,4 @@ const CardDefaultExample = () => {
   )
 };
 
-export default CardDefaultExample;
+export default CardDefault;

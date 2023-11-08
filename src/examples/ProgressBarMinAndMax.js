@@ -14,7 +14,7 @@ function App() {
   );
 }
 
-const ProgressBarMinAndMaxExample = () => {
+const ProgressBarMinAndMax = () => {
   return (
     <div className="ex-progress-bar-min-and-max">
       <App />
@@ -22,4 +22,4 @@ const ProgressBarMinAndMaxExample = () => {
   )
 };
 
-export default ProgressBarMinAndMaxExample;
+export default ProgressBarMinAndMax;

@@ -148,7 +148,7 @@ const HEADER = [
 
     script = script.split('export default ')[0].trim();
     script += '\n\n';
-    script += `const ${name}Example = () => {\n`;
+    script += `const ${name} = () => {\n`;
     if (config) {
       script += '  const [ready, setReady] = useState(false);\n';
       script += '  useEffect(() => setReady(true), []);\n';
@@ -165,7 +165,7 @@ const HEADER = [
     script += '  )\n';
     script += '};\n';
     script += '\n';
-    script += `export default ${name}Example;\n`;
+    script += `export default ${name};\n`;
 
     if (config) {
       const i = script.lastIndexOf('import');

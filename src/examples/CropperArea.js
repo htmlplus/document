@@ -10,7 +10,7 @@ function App() {
   );
 }
 
-const CropperAreaExample = () => {
+const CropperArea = () => {
   return (
     <div className="ex-cropper-area dock">
       <App />
@@ -18,4 +18,4 @@ const CropperAreaExample = () => {
   )
 };
 
-export default CropperAreaExample;
+export default CropperArea;

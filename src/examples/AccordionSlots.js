@@ -47,7 +47,7 @@ function App() {
   );
 }
 
-const AccordionSlotsExample = () => {
+const AccordionSlots = () => {
   return (
     <div className="ex-accordion-slots">
       <App />
@@ -55,4 +55,4 @@ const AccordionSlotsExample = () => {
   )
 };
 
-export default AccordionSlotsExample;
+export default AccordionSlots;

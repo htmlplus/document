@@ -15,7 +15,7 @@ function App() {
   );
 }
 
-const FormatBytesFormattingExample = () => {
+const FormatBytesFormatting = () => {
   return (
     <div className="ex-format-bytes-formatting">
       <App />
@@ -23,4 +23,4 @@ const FormatBytesFormattingExample = () => {
   )
 };
 
-export default FormatBytesFormattingExample;
+export default FormatBytesFormatting;

@@ -20,7 +20,7 @@ function App() {
   );
 }
 
-const AccordionPreventFromTogglingExample = () => {
+const AccordionPreventFromToggling = () => {
   return (
     <div className="ex-accordion-prevent-from-toggling">
       <App />
@@ -28,4 +28,4 @@ const AccordionPreventFromTogglingExample = () => {
   )
 };
 
-export default AccordionPreventFromTogglingExample;
+export default AccordionPreventFromToggling;

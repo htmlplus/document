@@ -43,7 +43,7 @@ function App() {
   );
 }
 
-const SignatureHistoryExample = () => {
+const SignatureHistory = () => {
   return (
     <div className="ex-signature-history">
       <App />
@@ -51,4 +51,4 @@ const SignatureHistoryExample = () => {
   )
 };
 
-export default SignatureHistoryExample;
+export default SignatureHistory;

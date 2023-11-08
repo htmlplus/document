@@ -20,7 +20,7 @@ function App() {
   );
 }
 
-const AspectRatioCardExample = () => {
+const AspectRatioCard = () => {
   return (
     <div className="ex-aspect-ratio-card">
       <App />
@@ -29,4 +29,4 @@ const AspectRatioCardExample = () => {
   )
 };
 
-export default AspectRatioCardExample;
+export default AspectRatioCard;

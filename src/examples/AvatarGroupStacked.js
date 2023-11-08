@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-const AvatarGroupStackedExample = () => {
+const AvatarGroupStacked = () => {
   return (
     <div className="ex-avatar-group-stacked">
       <App />
@@ -24,4 +24,4 @@ const AvatarGroupStackedExample = () => {
   )
 };
 
-export default AvatarGroupStackedExample;
+export default AvatarGroupStacked;

@@ -16,7 +16,7 @@ function App() {
   );
 }
 
-const DividerHorizontalExample = () => {
+const DividerHorizontal = () => {
   return (
     <div className="ex-divider-horizontal">
       <App />
@@ -25,4 +25,4 @@ const DividerHorizontalExample = () => {
   )
 };
 
-export default DividerHorizontalExample;
+export default DividerHorizontal;

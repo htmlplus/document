@@ -20,7 +20,7 @@ function App() {
   );
 }
 
-const CardBackgroundColorExample = () => {
+const CardBackgroundColor = () => {
   return (
     <div className="ex-card-background-color">
       <App />
@@ -29,4 +29,4 @@ const CardBackgroundColorExample = () => {
   )
 };
 
-export default CardBackgroundColorExample;
+export default CardBackgroundColor;

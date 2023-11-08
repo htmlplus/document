@@ -44,7 +44,7 @@ function App() {
   );
 }
 
-const AspectRatioMoreExample = () => {
+const AspectRatioMore = () => {
   return (
     <div className="ex-aspect-ratio-more">
       <App />
@@ -53,4 +53,4 @@ const AspectRatioMoreExample = () => {
   )
 };
 
-export default AspectRatioMoreExample;
+export default AspectRatioMore;

@@ -22,7 +22,7 @@ function App() {
   );
 }
 
-const AnimationKeyframesExample = () => {
+const AnimationKeyframes = () => {
   return (
     <div className="ex-animation-keyframes">
       <App />
@@ -31,4 +31,4 @@ const AnimationKeyframesExample = () => {
   )
 };
 
-export default AnimationKeyframesExample;
+export default AnimationKeyframes;

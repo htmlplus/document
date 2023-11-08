@@ -25,7 +25,7 @@ function App() {
   );
 }
 
-const DialogAnimationExample = () => {
+const DialogAnimation = () => {
   return (
     <div className="ex-dialog-animation">
       <App />
@@ -33,4 +33,4 @@ const DialogAnimationExample = () => {
   )
 };
 
-export default DialogAnimationExample;
+export default DialogAnimation;

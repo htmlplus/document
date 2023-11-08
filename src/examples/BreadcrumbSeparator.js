@@ -18,7 +18,7 @@ function App() {
   );
 }
 
-const BreadcrumbSeparatorExample = () => {
+const BreadcrumbSeparator = () => {
   return (
     <div className="ex-breadcrumb-separator">
       <App />
@@ -27,4 +27,4 @@ const BreadcrumbSeparatorExample = () => {
   )
 };
 
-export default BreadcrumbSeparatorExample;
+export default BreadcrumbSeparator;

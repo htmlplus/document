@@ -8,7 +8,7 @@ function App() {
   return <Faker seed={12345}></Faker>;
 }
 
-const FakerSeedExample = () => {
+const FakerSeed = () => {
   return (
     <div className="ex-faker-seed">
       <App />
@@ -16,4 +16,4 @@ const FakerSeedExample = () => {
   )
 };
 
-export default FakerSeedExample;
+export default FakerSeed;
