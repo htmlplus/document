@@ -1,7 +1,7 @@
 'use client';
 
-// TODO
-import '@/config/htmlplus';
+import { useEffect, useState } from 'react';
+
 import '@/styles/index.scss';
 
 interface ILayout {
@@ -9,6 +9,16 @@ interface ILayout {
 }
 
 export default function Layout({ children }: ILayout) {
+  // TODO
+  const [ready, setReady] = useState(false);
+
+  // TODO
+  useEffect(() => {
+    import('@/config/htmlplus').then(() => {
+      setReady(true);
+    });
+  }, []);
+
   return (
     <html lang="en">
       <head>
@@ -30,7 +40,7 @@ export default function Layout({ children }: ILayout) {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={meta?.url} /> */}
       </head>
-      <body>{children}</body>
+      <body>{ready && children}</body>
     </html>
   );
 }
