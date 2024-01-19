@@ -10,7 +10,7 @@ function App() {
       <Icon slot="separator" name="arrow-right-short"></Icon>
       <a href="#">HTMLPLUS</a>
       <a href="#">Core</a>
-      <a href="#">UI Components</a>
+      <a href="#">UI Elements</a>
       <a href="#">Breadcrumb</a>
     </Breadcrumb>
   );

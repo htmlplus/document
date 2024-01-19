@@ -6,11 +6,11 @@ export const statistics = {
   platforms: 'TODO',
   themes: 'TODO',
   forks: 1,
-  stars: 26,
+  stars: 30,
   watchers: 6,
-  dowanloads: 19921,
-  downloadsLastWeek: 130,
-  downloadsLastMonth: 1351,
+  dowanloads: 20995,
+  downloadsLastWeek: 171,
+  downloadsLastMonth: 424,
   get components(): number {
     return this.componentsPerFramework * this.frameworks;
   },

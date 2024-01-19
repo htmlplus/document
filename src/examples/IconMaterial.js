@@ -7,7 +7,7 @@ import { Icon, Stack } from '@htmlplus/react';
 import { setConfig } from '@htmlplus/core/config.js';
 
 setConfig({
-  component: {
+  element: {
     'plus-icon': {
       property: {
         resolver: (name, parser) => {
