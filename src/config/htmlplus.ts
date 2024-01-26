@@ -1,10 +1,11 @@
-import { faker } from '@faker-js/faker/locale/en'
 // @ts-ignore
 import { setConfig } from '@htmlplus/core/config';
 
+import { faker } from '@faker-js/faker/locale/en';
+
 if (typeof window != 'undefined' && !location.pathname.match(/\/component\/(.*)\/example\/(.*)/)) {
   setConfig({
-    component: {
+    element: {
       'plus-divider': {
         property: {
           // TODO: has conflict with examples

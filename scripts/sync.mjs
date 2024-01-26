@@ -80,7 +80,7 @@ const HEADER = [
     ...HEADER,
     'export const componentsLight = ' +
       JSON.stringify(
-        document?.components?.map((component) => ({
+        document?.elements?.map((component) => ({
           key: component.key,
           stable: component.tags.some((tag) => tag.key == 'stable') || undefined,
           title: component.title,
