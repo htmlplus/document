@@ -6,7 +6,7 @@ import 'prism-themes/themes/prism-nord.css';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-jsx';
 
-import { Button, Icon } from '@/components';
+import { Button } from '@/components';
 
 export interface ICode {
   children?: React.ReactNode;
@@ -31,7 +31,7 @@ export function Code({ children, copy = true, language }: ICode) {
       <div className="toolbar">
         {copy && (
           <Button icon onClick={onClick}>
-            <Icon name="clipboard"></Icon>
+            <plus-icon name="clipboard"></plus-icon>
           </Button>
         )}
       </div>

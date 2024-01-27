@@ -2,7 +2,6 @@
 
 import NextLink from 'next/link';
 
-import { Icon } from '@/components';
 import { ROUTES } from '@/constants';
 import { getPath } from '@/utils';
 
@@ -24,7 +23,7 @@ export default function Page() {
       <div style={{ flexGrow: '1' }} />
       <div>
         <div>
-          <Icon name="htmlplus" size="60px"></Icon>
+          <plus-icon name="htmlplus" size="60px"></plus-icon>
           &nbsp; &nbsp;
           <h1 style={{ border: 'none', display: 'inline', verticalAlign: 'middle', padding: 0 }}>HTMLPLUS</h1>
         </div>

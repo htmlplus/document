@@ -1,6 +1,5 @@
 import NextLink from 'next/link';
 
-import { Spinner } from '@/components';
 import { Colors } from '@/types';
 import { classes } from '@/utils';
 
@@ -53,7 +52,7 @@ export function Button({
       {loading && (
         <>
           <span>{children}</span>
-          <Spinner className="loading" type="dual-ring" size="sm"></Spinner>
+          <plus-spinner class="loading" type="dual-ring" size="sm"></plus-spinner>
         </>
       )}
     </Tag>

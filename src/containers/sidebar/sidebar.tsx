@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 
 import PACKAGE from '@htmlplus/core/package.json';
 
-import { Button, Center, Divider, Icon, Stack } from '@/components';
+import { Button } from '@/components';
 import { ROUTES } from '@/constants';
 import { useFrameworks } from '@/containers';
 import { classes, getPath } from '@/utils';
@@ -72,25 +72,25 @@ export function Sidebar() {
   return (
     <div className="sidebar">
       <br />
-      <Stack gap="1rem" alignItems="stretch" vertical>
-        <Center>
+      <plus-stack gap="1rem" align-items="stretch" vertical>
+        <plus-center>
           <Button block link to={getPath(ROUTES.HOME, {})}>
-            <Stack gap="1rem">
-              <Icon name="htmlplus" size="44px"></Icon>
-              <Stack alignItems="end" vertical>
+            <plus-stack gap="1rem">
+              <plus-icon name="htmlplus" size="44px"></plus-icon>
+              <plus-stack align-items="end" vertical>
                 <div>HTMLPLUS</div>
                 <div className="version">Version {PACKAGE.version}</div>
-              </Stack>
-            </Stack>
+              </plus-stack>
+            </plus-stack>
           </Button>
-        </Center>
+        </plus-center>
         <Button block outlined to={getPath(ROUTES.GITHUB_URL, {})} target="_blank">
-          <Icon name="github"></Icon>
+          <plus-icon name="github"></plus-icon>
           Github
         </Button>
-        <Divider></Divider>
+        <plus-divider></plus-divider>
         {menu(sidebar.items)}
-      </Stack>
+      </plus-stack>
     </div>
   );
 }

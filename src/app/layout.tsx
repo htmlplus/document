@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from 'react';
 
+// TODO
+import '@htmlplus/core';
+
 import '@/styles/index.scss';
 
 interface ILayout {

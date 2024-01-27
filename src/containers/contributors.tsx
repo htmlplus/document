@@ -4,7 +4,6 @@ import { Fragment, useEffect, useMemo, useState } from 'react';
 
 import { useParams, usePathname } from 'next/navigation';
 
-import { Avatar, Tooltip } from '@/components';
 import { ROUTES } from '@/constants';
 import { TocItem } from '@/containers';
 import { getPath } from '@/utils';
@@ -82,17 +81,17 @@ export function Contributors() {
         <TocItem level={2}>Contributors</TocItem>
       </h2>
       <p>
-        <Avatar.Group hoverable stacked>
+        <plus-avatar-group hoverable stacked>
           {contributors.reverse().map((contributor) => (
             <Fragment key={contributor}>
-              <Avatar shape="circle" size="sm">
+              <plus-avatar shape="circle" size="sm">
                 <img src={getPath(ROUTES.CONTRIBUTOR, { contributor })} alt={`Contributor ${contributor}`} />
                 <a rel="noopener" href={getPath(ROUTES.CONTRIBUTOR_GITHUB, { contributor })} target="_blank"></a>
-              </Avatar>
-              <Tooltip>{contributor}</Tooltip>
+              </plus-avatar>
+              <plus-tooltip>{contributor}</plus-tooltip>
             </Fragment>
           ))}
-        </Avatar.Group>
+        </plus-avatar-group>
       </p>
     </>
   );

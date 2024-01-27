@@ -4,8 +4,6 @@ import { useEffect, useRef, useState } from 'react';
 
 import { usePathname } from 'next/navigation';
 
-import { ProgressBar } from '@/components';
-
 export function AppLoadingBar() {
   const timeout = useRef<NodeJS.Timeout>();
 
@@ -43,5 +41,5 @@ export function AppLoadingBar() {
 
   if (!progress) return null;
 
-  return <ProgressBar value={progress}></ProgressBar>;
+  return <plus-progress-bar value={progress}></plus-progress-bar>;
 }

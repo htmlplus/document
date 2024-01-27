@@ -1,52 +1,52 @@
 'use client';
 
-import { Button, Grid, Icon } from '@/components';
+import { Button } from '@/components';
 import { useSidebar } from '@/containers';
 
 export function Navigation() {
   const sidebar = useSidebar();
   return (
     <p>
-      <Grid justifyContent="between" alignItems="center">
-        <Grid.Item xs="auto">
+      <plus-grid justify-content="between" align-items="center">
+        <plus-grid-item xs="auto">
           {!!sidebar.prev && (
             <Button link to={sidebar.prev.url}>
-              <Grid alignItems="center" gutterX="md" wrap="off">
-                <Grid.Item>
-                  <Icon name="chevron-left" size="lg"></Icon>
-                </Grid.Item>
-                <Grid.Item>
-                  <Grid alignItems="start" vertical>
-                    <Grid.Item>
+              <plus-grid align-items="center" gutter-x="md" wrap="off">
+                <plus-grid-item>
+                  <plus-icon name="chevron-left" size="lg"></plus-icon>
+                </plus-grid-item>
+                <plus-grid-item>
+                  <plus-grid align-items="start" vertical>
+                    <plus-grid-item>
                       <b>Prev</b>
-                    </Grid.Item>
-                    <Grid.Item>{sidebar.prev.title}</Grid.Item>
-                  </Grid>
-                </Grid.Item>
-              </Grid>
+                    </plus-grid-item>
+                    <plus-grid-item>{sidebar.prev.title}</plus-grid-item>
+                  </plus-grid>
+                </plus-grid-item>
+              </plus-grid>
             </Button>
           )}
-        </Grid.Item>
-        <Grid.Item xs="auto">
+        </plus-grid-item>
+        <plus-grid-item xs="auto">
           {!!sidebar.next && (
             <Button link to={sidebar.next.url}>
-              <Grid alignItems="center" gutterX="md" wrap="off">
-                <Grid.Item>
-                  <Grid alignItems="end" vertical>
-                    <Grid.Item>
+              <plus-grid align-items="center" gutter-x="md" wrap="off">
+                <plus-grid-item>
+                  <plus-grid align-items="end" vertical>
+                    <plus-grid-item>
                       <b>Next</b>
-                    </Grid.Item>
-                    <Grid.Item>{sidebar.next.title}</Grid.Item>
-                  </Grid>
-                </Grid.Item>
-                <Grid.Item>
-                  <Icon name="chevron-right" size="lg"></Icon>
-                </Grid.Item>
-              </Grid>
+                    </plus-grid-item>
+                    <plus-grid-item>{sidebar.next.title}</plus-grid-item>
+                  </plus-grid>
+                </plus-grid-item>
+                <plus-grid-item>
+                  <plus-icon name="chevron-right" size="lg"></plus-icon>
+                </plus-grid-item>
+              </plus-grid>
             </Button>
           )}
-        </Grid.Item>
-      </Grid>
+        </plus-grid-item>
+      </plus-grid>
     </p>
   );
 }

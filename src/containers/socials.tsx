@@ -1,18 +1,18 @@
 'use client';
 
-import { Button, Grid, Icon } from '@/components';
+import { Button } from '@/components';
 import { socials } from '@/data';
 
 export function Socials() {
   return (
-    <Grid alignItems="center" justifyContent="center" wrap="off">
+    <plus-grid align-items="center" justify-content="center" wrap="off">
       {socials.map((social) => (
-        <Grid.Item key={social.key}>
+        <plus-grid-item key={social.key}>
           <Button icon text to={social.url}>
-            <Icon name={social.icon}></Icon>
+            <plus-icon name={social.icon}></plus-icon>
           </Button>
-        </Grid.Item>
+        </plus-grid-item>
       ))}
-    </Grid>
+    </plus-grid>
   );
 }
