@@ -2,12 +2,13 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Breadcrumb, Stack } from '@htmlplus/react';
+import '@htmlplus/core/breadcrumb.js';
+import '@htmlplus/core/stack.js';
 
 function App() {
   return (
-    <Stack gap="0.75rem" vertical>
-      <Breadcrumb separator="/" max={4} offset={0}>
+    <plus-stack gap="0.75rem" vertical>
+      <plus-breadcrumb separator="/" max={4} offset={0}>
         <a href="#">Item 1</a>
         <a href="#">Item 2</a>
         <a href="#">Item 3</a>
@@ -16,8 +17,8 @@ function App() {
         <a href="#">Item 6</a>
         <a href="#">Item 7</a>
         <a href="#">Item 8</a>
-      </Breadcrumb>
-      <Breadcrumb separator="/" max={4} offset={2}>
+      </plus-breadcrumb>
+      <plus-breadcrumb separator="/" max={4} offset={2}>
         <a href="#">Item 1</a>
         <a href="#">Item 2</a>
         <a href="#">Item 3</a>
@@ -26,8 +27,8 @@ function App() {
         <a href="#">Item 6</a>
         <a href="#">Item 7</a>
         <a href="#">Item 8</a>
-      </Breadcrumb>
-      <Breadcrumb separator="/" max={4} offset={-1}>
+      </plus-breadcrumb>
+      <plus-breadcrumb separator="/" max={4} offset={-1}>
         <a href="#">Item 1</a>
         <a href="#">Item 2</a>
         <a href="#">Item 3</a>
@@ -36,8 +37,8 @@ function App() {
         <a href="#">Item 6</a>
         <a href="#">Item 7</a>
         <a href="#">Item 8</a>
-      </Breadcrumb>
-    </Stack>
+      </plus-breadcrumb>
+    </plus-stack>
   );
 }
 

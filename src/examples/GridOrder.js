@@ -2,21 +2,22 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Grid } from '@htmlplus/react';
+import '@htmlplus/core/grid-item.js';
+import '@htmlplus/core/grid.js';
 
 function App() {
   return (
-    <Grid>
-      <Grid.Item orderXs="3" xs="grow">
+    <plus-grid>
+      <plus-grid-item order-xs="3" xs="grow">
         <div>order=3</div>
-      </Grid.Item>
-      <Grid.Item orderXs="2" xs="grow">
+      </plus-grid-item>
+      <plus-grid-item order-xs="2" xs="grow">
         <div>order=2</div>
-      </Grid.Item>
-      <Grid.Item orderXs="1" xs="grow">
+      </plus-grid-item>
+      <plus-grid-item order-xs="1" xs="grow">
         <div>order=1</div>
-      </Grid.Item>
-    </Grid>
+      </plus-grid-item>
+    </plus-grid>
   );
 }
 

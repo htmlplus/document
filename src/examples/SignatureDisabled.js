@@ -2,13 +2,14 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Center, Signature } from '@htmlplus/react';
+import '@htmlplus/core/center.js';
+import '@htmlplus/core/signature.js';
 
 function App() {
   return (
-    <Center>
-      <Signature backgroundColor="lightgray" disabled></Signature>
-    </Center>
+    <plus-center>
+      <plus-signature background-color="lightgray" disabled></plus-signature>
+    </plus-center>
   );
 }
 

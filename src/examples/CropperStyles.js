@@ -2,69 +2,71 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Cropper, Grid } from '@htmlplus/react';
+import '@htmlplus/core/cropper.js';
+import '@htmlplus/core/grid-item.js';
+import '@htmlplus/core/grid.js';
 
 function App() {
   return (
-    <Grid gutter="md">
-      <Grid.Item xs="12" sm="5">
-        <Cropper
-          className="style-1"
+    <plus-grid gutter="md">
+      <plus-grid-item xs="12" sm="5">
+        <plus-cropper
+          class="style-1"
           indicator
           mode="crop"
           shape="circle"
           resizer="main"
-          resizerShape="line"
+          resizer-shape="line"
           src="/assets/images/penguin.jpg"
-        ></Cropper>
-      </Grid.Item>
-      <Grid.Item xs="12" sm="7">
-        <Cropper
-          className="style-2"
+        ></plus-cropper>
+      </plus-grid-item>
+      <plus-grid-item xs="12" sm="7">
+        <plus-cropper
+          class="style-2"
           indicator
           mode="crop"
           resizer="both"
-          resizerShape="line"
+          resizer-shape="line"
           src="/assets/images/penguin.jpg"
-        ></Cropper>
-      </Grid.Item>
-      <Grid.Item xs="12" sm="6">
-        <Cropper
-          className="style-3"
+        ></plus-cropper>
+      </plus-grid-item>
+      <plus-grid-item xs="12" sm="6">
+        <plus-cropper
+          class="style-3"
           guides
           indicator
           mode="crop"
           resizer="main"
-          resizerShape="circle"
+          resizer-shape="circle"
           shape="circle"
           src="/assets/images/cat.jpg"
-        ></Cropper>
-      </Grid.Item>
-      <Grid.Item xs="12" sm="6">
-        <Cropper
-          className="style-4"
+        ></plus-cropper>
+      </plus-grid-item>
+      <plus-grid-item xs="12" sm="6">
+        <plus-cropper
+          class="style-4"
           guides
           mode="crop"
           resizer="edge"
-          resizerShape="line"
+          resizer-shape="line"
           src="/assets/images/cat.jpg"
-        ></Cropper>
-      </Grid.Item>
-      <Grid.Item xs="12" sm="7">
-        <Cropper
-          className="style-5"
+        ></plus-cropper>
+      </plus-grid-item>
+      <plus-grid-item xs="12" sm="7">
+        <plus-cropper
+          class="style-5"
           backdrop
           background
           mode="crop"
           resizer="edge"
-          resizerShape="line"
+          resizer-shape="line"
           src="/assets/images/ladybug.jpg"
-        ></Cropper>
-      </Grid.Item>
-      <Grid.Item xs="12" sm="5">
-        <Cropper className="style-6" src="/assets/images/bear.jpg"></Cropper>
-      </Grid.Item>
-    </Grid>
+        ></plus-cropper>
+      </plus-grid-item>
+      <plus-grid-item xs="12" sm="5">
+        <plus-cropper class="style-6" src="/assets/images/bear.jpg"></plus-cropper>
+      </plus-grid-item>
+    </plus-grid>
   );
 }
 

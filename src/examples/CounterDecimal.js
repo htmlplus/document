@@ -2,13 +2,14 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Center, Counter } from '@htmlplus/react';
+import '@htmlplus/core/center.js';
+import '@htmlplus/core/counter.js';
 
 function App() {
   return (
-    <Center>
-      <Counter decimal="/" decimals={3} to={1000} play></Counter>
-    </Center>
+    <plus-center>
+      <plus-counter decimal="/" decimals={3} to={1000} play></plus-counter>
+    </plus-center>
   );
 }
 

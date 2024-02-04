@@ -2,26 +2,28 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Cropper, Grid } from '@htmlplus/react';
+import '@htmlplus/core/cropper.js';
+import '@htmlplus/core/grid-item.js';
+import '@htmlplus/core/grid.js';
 
 function App() {
   return (
-    <Grid gutter="md">
-      <Grid.Item xs="12" sm="6">
-        <Cropper
+    <plus-grid gutter="md">
+      <plus-grid-item xs="12" sm="6">
+        <plus-cropper
           zoomable
-          zoomRatio={0.1}
+          zoom-ratio={0.1}
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-        ></Cropper>
-      </Grid.Item>
-      <Grid.Item xs="12" sm="6">
-        <Cropper
+        ></plus-cropper>
+      </plus-grid-item>
+      <plus-grid-item xs="12" sm="6">
+        <plus-cropper
           zoomable
-          zoomRatio={1}
+          zoom-ratio={1}
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-        ></Cropper>
-      </Grid.Item>
-    </Grid>
+        ></plus-cropper>
+      </plus-grid-item>
+    </plus-grid>
   );
 }
 

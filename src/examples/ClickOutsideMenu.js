@@ -2,27 +2,37 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-import { Card, Center, ClickOutside } from '@htmlplus/react';
+import '@htmlplus/core/card-body.js';
+import '@htmlplus/core/card.js';
+import '@htmlplus/core/center.js';
+import '@htmlplus/core/click-outside.js';
 
 function App() {
+  const clickOutsideRef = useRef();
   const [hidden, setHidden] = useState(true);
   function onClick() {
     setHidden(!hidden);
   }
-  function onClickOutside() {
-    setHidden(true);
-  }
+  useEffect(() => {
+    function onPlusClickOutside() {
+      setHidden(true);
+    }
+    clickOutsideRef.current.addEventListener('plus-click-outside', onPlusClickOutside);
+    return () => {
+      clickOutsideRef.current.removeEventListener('plus-click-outside', onPlusClickOutside);
+    };
+  });
   return (
-    <Center>
-      <ClickOutside onClickOutside={onClickOutside}>
+    <plus-center>
+      <plus-click-outside ref={clickOutsideRef}>
         <button onClick={onClick}>Open Menu Dropdown</button>
-        <Card elevation={10} hidden={hidden} outlined>
-          <Card.Body> It will stay visible until you click outside. </Card.Body>
-        </Card>
-      </ClickOutside>
-    </Center>
+        <plus-card elevation={10} hidden={hidden} outlined>
+          <plus-card-body> It will stay visible until you click outside. </plus-card-body>
+        </plus-card>
+      </plus-click-outside>
+    </plus-center>
   );
 }
 

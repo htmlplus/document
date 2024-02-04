@@ -2,17 +2,18 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Breadcrumb, Icon } from '@htmlplus/react';
+import '@htmlplus/core/breadcrumb.js';
+import '@htmlplus/core/icon.js';
 
 function App() {
   return (
-    <Breadcrumb max={2}>
-      <Icon slot="separator" name="arrow-right-short"></Icon>
+    <plus-breadcrumb max={2}>
+      <plus-icon slot="separator" name="arrow-right-short"></plus-icon>
       <a href="#">HTMLPLUS</a>
       <a href="#">Core</a>
       <a href="#">UI Elements</a>
       <a href="#">Breadcrumb</a>
-    </Breadcrumb>
+    </plus-breadcrumb>
   );
 }
 

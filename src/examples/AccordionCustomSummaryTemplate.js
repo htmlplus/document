@@ -2,17 +2,19 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Accordion, Faker, Stack } from '@htmlplus/react';
+import '@htmlplus/core/accordion.js';
+import '@htmlplus/core/faker.js';
+import '@htmlplus/core/stack.js';
 
 function App() {
   return (
-    <Accordion>
-      <Stack slot="summary" justifyContent="space-between">
+    <plus-accordion>
+      <plus-stack slot="summary" justify-content="space-between">
         <b>Summary</b>
         <button>Action</button>
-      </Stack>
-      <Faker></Faker>
-    </Accordion>
+      </plus-stack>
+      <plus-faker></plus-faker>
+    </plus-accordion>
   );
 }
 

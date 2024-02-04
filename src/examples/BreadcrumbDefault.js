@@ -2,18 +2,19 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Breadcrumb, Center } from '@htmlplus/react';
+import '@htmlplus/core/breadcrumb.js';
+import '@htmlplus/core/center.js';
 
 function App() {
   return (
-    <Center>
-      <Breadcrumb separator="/">
+    <plus-center>
+      <plus-breadcrumb separator="/">
         <a href="#">HTMLPLUS</a>
         <a href="#">Core</a>
         <a href="#">UI Elements</a>
         <span>Breadcrumb</span>
-      </Breadcrumb>
-    </Center>
+      </plus-breadcrumb>
+    </plus-center>
   );
 }
 

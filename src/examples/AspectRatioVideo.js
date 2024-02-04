@@ -2,13 +2,13 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { AspectRatio } from '@htmlplus/react';
+import '@htmlplus/core/aspect-ratio.js';
 
 function App() {
   return (
-    <AspectRatio value="16/9">
+    <plus-aspect-ratio value="16/9">
       <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-    </AspectRatio>
+    </plus-aspect-ratio>
   );
 }
 

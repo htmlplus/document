@@ -2,23 +2,32 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Faker, Grid, Sticky } from '@htmlplus/react';
+import { useEffect, useRef } from 'react';
+
+import '@htmlplus/core/faker.js';
+import '@htmlplus/core/grid-item.js';
+import '@htmlplus/core/grid.js';
+import '@htmlplus/core/sticky.js';
 
 function App() {
+  const plusFakerRef = useRef();
+  useEffect(() => {
+    plusFakerRef.current.arguments = [10, '\n\n'];
+  }, []);
   return (
     <div className="container">
       <header>Header</header>
-      <Grid>
-        <Grid.Item xs="7">
-          <Faker api="lorem.paragraphs" arguments={[10, '\n\n']}></Faker>
-        </Grid.Item>
-        <Grid.Item xs="5">
+      <plus-grid>
+        <plus-grid-item xs="7">
+          <plus-faker api="lorem.paragraphs" ref={plusFakerRef}></plus-faker>
+        </plus-grid-item>
+        <plus-grid-item xs="5">
           <br />
-          <Sticky>
+          <plus-sticky>
             <aside>A Sticky Sidebar</aside>
-          </Sticky>
-        </Grid.Item>
-      </Grid>
+          </plus-sticky>
+        </plus-grid-item>
+      </plus-grid>
     </div>
   );
 }

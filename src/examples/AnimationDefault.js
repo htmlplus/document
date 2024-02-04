@@ -2,13 +2,14 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Animation, Center } from '@htmlplus/react';
+import '@htmlplus/core/animation.js';
+import '@htmlplus/core/center.js';
 
 function App() {
   return (
-    <Center>
-      <Animation iterations={Infinity} name="fade-in" run></Animation>
-    </Center>
+    <plus-center>
+      <plus-animation iterations={Infinity} name="fade-in" run></plus-animation>
+    </plus-center>
   );
 }
 

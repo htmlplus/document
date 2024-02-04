@@ -2,16 +2,17 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Divider, Faker } from '@htmlplus/react';
+import '@htmlplus/core/divider.js';
+import '@htmlplus/core/faker.js';
 
 function App() {
   return (
     <>
-      <Faker></Faker>
-      <Divider></Divider>
-      <Faker></Faker>
-      <Divider></Divider>
-      <Faker></Faker>
+      <plus-faker></plus-faker>
+      <plus-divider></plus-divider>
+      <plus-faker></plus-faker>
+      <plus-divider></plus-divider>
+      <plus-faker></plus-faker>
     </>
   );
 }

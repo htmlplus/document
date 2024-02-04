@@ -2,20 +2,20 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Divider } from '@htmlplus/react';
+import '@htmlplus/core/divider.js';
 
 function App() {
   return (
     <>
-      <Divider width="xs"></Divider>
+      <plus-divider width="xs"></plus-divider>
       <br />
-      <Divider width="sm"></Divider>
+      <plus-divider width="sm"></plus-divider>
       <br />
-      <Divider width="md"></Divider>
+      <plus-divider width="md"></plus-divider>
       <br />
-      <Divider width="lg"></Divider>
+      <plus-divider width="lg"></plus-divider>
       <br />
-      <Divider width="xl"></Divider>
+      <plus-divider width="xl"></plus-divider>
     </>
   );
 }

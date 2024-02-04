@@ -2,10 +2,10 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Faker } from '@htmlplus/react';
+import '@htmlplus/core/faker.js';
 
 function App() {
-  return <Faker seed={12345}></Faker>;
+  return <plus-faker seed={12345}></plus-faker>;
 }
 
 const FakerSeed = () => {

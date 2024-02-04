@@ -2,18 +2,19 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Center, Icon } from '@htmlplus/react';
+import '@htmlplus/core/center.js';
+import '@htmlplus/core/icon.js';
 
 function App() {
   return (
-    <Center>
+    <plus-center>
       <button>
-        <Center inline>
-          <Icon name="list" size="2x"></Icon>
+        <plus-center inline>
+          <plus-icon name="list" size="2x"></plus-icon>
           &nbsp; Menu
-        </Center>
+        </plus-center>
       </button>
-    </Center>
+    </plus-center>
   );
 }
 

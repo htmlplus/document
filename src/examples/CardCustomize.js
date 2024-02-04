@@ -2,10 +2,10 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Card } from '@htmlplus/react';
+import '@htmlplus/core/card.js';
 
 function App() {
-  return <Card elevation={12} outlined></Card>;
+  return <plus-card elevation={12} outlined></plus-card>;
 }
 
 const CardCustomize = () => {

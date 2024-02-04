@@ -2,13 +2,14 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Center, Switch } from '@htmlplus/react';
+import '@htmlplus/core/center.js';
+import '@htmlplus/core/switch.js';
 
 function App() {
   return (
-    <Center>
-      <Switch disabled></Switch>
-    </Center>
+    <plus-center>
+      <plus-switch disabled></plus-switch>
+    </plus-center>
   );
 }
 

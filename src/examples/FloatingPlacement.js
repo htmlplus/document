@@ -2,7 +2,9 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Faker, Floating, Icon } from '@htmlplus/react';
+import '@htmlplus/core/faker.js';
+import '@htmlplus/core/floating.js';
+import '@htmlplus/core/icon.js';
 
 function App() {
   return (
@@ -11,13 +13,13 @@ function App() {
         position: 'relative'
       }}
     >
-      <Faker api="lorem.paragraphs"></Faker>
+      <plus-faker api="lorem.paragraphs"></plus-faker>
       <br />
       <br />
       <br />
-      <Floating placement="bottom">
-        <Icon name="circle-fill"></Icon>
-      </Floating>
+      <plus-floating placement="bottom">
+        <plus-icon name="circle-fill"></plus-icon>
+      </plus-floating>
     </div>
   );
 }

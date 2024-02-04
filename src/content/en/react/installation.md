@@ -1,6 +1,6 @@
 # React
 
-To use UI components based on [Web Components](https://mdn.io/using-custom-elements) in React applications, follow the below steps.
+`HTMLPLUS` web components are not fully [compatible](https://custom-elements-everywhere.com/#react@experimental) with React library.
 
 <br/>
 
@@ -96,14 +96,3 @@ const App = () => {
 
 export default App;
 ```
-
-## Pros
-
-- Is used [Web Components](https://mdn.io/using-custom-elements) directly.
-
-## Cons
-
-- Handles event's callbacks difficult.
-- Handles complex types difficult.
-- `plus-` prefix is required for the component's name.
-- `plus-` prefix is required for the event's name.

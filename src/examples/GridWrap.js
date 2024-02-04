@@ -2,24 +2,25 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Grid } from '@htmlplus/react';
+import '@htmlplus/core/grid-item.js';
+import '@htmlplus/core/grid.js';
 
 function App() {
   return (
-    <Grid wrap="off">
-      <Grid.Item xs="6">
+    <plus-grid wrap="off">
+      <plus-grid-item xs="6">
         <div>xs=6</div>
-      </Grid.Item>
-      <Grid.Item xs="2">
+      </plus-grid-item>
+      <plus-grid-item xs="2">
         <div>xs=2</div>
-      </Grid.Item>
-      <Grid.Item xs="6">
+      </plus-grid-item>
+      <plus-grid-item xs="6">
         <div>xs=6</div>
-      </Grid.Item>
-      <Grid.Item xs="2">
+      </plus-grid-item>
+      <plus-grid-item xs="2">
         <div>xs=2</div>
-      </Grid.Item>
-    </Grid>
+      </plus-grid-item>
+    </plus-grid>
   );
 }
 

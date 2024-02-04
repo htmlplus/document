@@ -2,10 +2,10 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Card } from '@htmlplus/react';
+import '@htmlplus/core/card.js';
 
 function App() {
-  return <Card outlined></Card>;
+  return <plus-card outlined></plus-card>;
 }
 
 const CardOutlined = () => {

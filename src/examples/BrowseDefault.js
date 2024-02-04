@@ -2,18 +2,27 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Browse } from '@htmlplus/react';
+import { useEffect, useRef } from 'react';
+
+import '@htmlplus/core/browse.js';
 
 function App() {
-  function onChange(event) {
-    const name = event.detail.files[0].file.name;
-    alert(`File '${name}' selected.`);
-  }
+  const browseRef = useRef();
+  useEffect(() => {
+    function onPlusChange(event) {
+      const name = event.detail.files[0].file.name;
+      alert(`File '${name}' selected.`);
+    }
+    browseRef.current.addEventListener('plus-change', onPlusChange);
+    return () => {
+      browseRef.current.removeEventListener('plus-change', onPlusChange);
+    };
+  });
   return (
-    <Browse droppable onChange={onChange}>
+    <plus-browse droppable ref={browseRef}>
       {' '}
       Click or Drag & Drop a file(s) here{' '}
-    </Browse>
+    </plus-browse>
   );
 }
 

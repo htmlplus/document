@@ -2,26 +2,28 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Avatar, Center } from '@htmlplus/react';
+import '@htmlplus/core/avatar-group.js';
+import '@htmlplus/core/avatar.js';
+import '@htmlplus/core/center.js';
 
 function App() {
   return (
-    <Center>
-      <Avatar.Group>
-        <Avatar>
+    <plus-center>
+      <plus-avatar-group>
+        <plus-avatar>
           <img src="https://picsum.photos/id/177/90/90" />
           <a href="https://picsum.photos/id/177/90/90" target="_blank"></a>
-        </Avatar>
-        <Avatar>
+        </plus-avatar>
+        <plus-avatar>
           <img src="https://picsum.photos/id/177/90/90" />
           <a href="https://picsum.photos/id/177/90/90" target="_blank"></a>
-        </Avatar>
-        <Avatar>
+        </plus-avatar>
+        <plus-avatar>
           <img src="https://picsum.photos/id/177/90/90" />
           <a href="https://picsum.photos/id/177/90/90" target="_blank"></a>
-        </Avatar>
-      </Avatar.Group>
-    </Center>
+        </plus-avatar>
+      </plus-avatar-group>
+    </plus-center>
   );
 }
 

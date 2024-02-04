@@ -2,20 +2,21 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Faker, Stack } from '@htmlplus/react';
+import '@htmlplus/core/faker.js';
+import '@htmlplus/core/stack.js';
 
 function App() {
   return (
-    <Stack vertical>
-      <Faker api="name.fullName"></Faker>
-      <Faker api="address.county"></Faker>
-      <Faker api="date.weekday"></Faker>
-      <Faker api="animal.dog"></Faker>
-      <Faker api="internet.email"></Faker>
-      <Faker api="phone.number"></Faker>
-      <Faker api="color.human"></Faker>
-      <Faker api="datatype.uuid"></Faker>
-    </Stack>
+    <plus-stack vertical>
+      <plus-faker api="name.fullName"></plus-faker>
+      <plus-faker api="address.county"></plus-faker>
+      <plus-faker api="date.weekday"></plus-faker>
+      <plus-faker api="animal.dog"></plus-faker>
+      <plus-faker api="internet.email"></plus-faker>
+      <plus-faker api="phone.number"></plus-faker>
+      <plus-faker api="color.human"></plus-faker>
+      <plus-faker api="datatype.uuid"></plus-faker>
+    </plus-stack>
   );
 }
 

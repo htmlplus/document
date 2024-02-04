@@ -2,17 +2,18 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Spinner, Stack } from '@htmlplus/react';
+import '@htmlplus/core/spinner.js';
+import '@htmlplus/core/stack.js';
 
 function App() {
   return (
-    <Stack gap="2rem">
-      <Spinner className="spinner-1"></Spinner>
-      <Spinner className="spinner-2"></Spinner>
-      <Spinner className="spinner-3"></Spinner>
-      <Spinner className="spinner-4"></Spinner>
-      <Spinner className="spinner-5"></Spinner>
-    </Stack>
+    <plus-stack gap="2rem">
+      <plus-spinner class="spinner-1"></plus-spinner>
+      <plus-spinner class="spinner-2"></plus-spinner>
+      <plus-spinner class="spinner-3"></plus-spinner>
+      <plus-spinner class="spinner-4"></plus-spinner>
+      <plus-spinner class="spinner-5"></plus-spinner>
+    </plus-stack>
   );
 }
 

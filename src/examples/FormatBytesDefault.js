@@ -2,13 +2,14 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Center, FormatBytes } from '@htmlplus/react';
+import '@htmlplus/core/center.js';
+import '@htmlplus/core/format-bytes.js';
 
 function App() {
   return (
-    <Center>
-      <FormatBytes value={1000}></FormatBytes>
-    </Center>
+    <plus-center>
+      <plus-format-bytes value={1000}></plus-format-bytes>
+    </plus-center>
   );
 }
 

@@ -4,7 +4,8 @@
 
 import { useRef } from 'react';
 
-import { Center, Signature } from '@htmlplus/react';
+import '@htmlplus/core/center.js';
+import '@htmlplus/core/signature.js';
 
 function App() {
   const signatureRef = useRef();
@@ -13,13 +14,13 @@ function App() {
   }
   return (
     <>
-      <Center>
-        <Signature backgroundColor="lightgray" ref={signatureRef}></Signature>
-      </Center>
+      <plus-center>
+        <plus-signature background-color="lightgray" ref={signatureRef}></plus-signature>
+      </plus-center>
       <br />
-      <Center>
+      <plus-center>
         <button onClick={onClick}>Clear</button>
-      </Center>
+      </plus-center>
     </>
   );
 }

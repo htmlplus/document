@@ -2,13 +2,14 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Accordion, Faker } from '@htmlplus/react';
+import '@htmlplus/core/accordion.js';
+import '@htmlplus/core/faker.js';
 
 function App() {
   return (
-    <Accordion summary="Summary">
-      <Faker></Faker>
-    </Accordion>
+    <plus-accordion summary="Summary">
+      <plus-faker></plus-faker>
+    </plus-accordion>
   );
 }
 

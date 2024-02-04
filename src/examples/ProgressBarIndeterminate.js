@@ -2,10 +2,10 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { ProgressBar } from '@htmlplus/react';
+import '@htmlplus/core/progress-bar.js';
 
 function App() {
-  return <ProgressBar variant="indeterminate"></ProgressBar>;
+  return <plus-progress-bar variant="indeterminate"></plus-progress-bar>;
 }
 
 const ProgressBarIndeterminate = () => {

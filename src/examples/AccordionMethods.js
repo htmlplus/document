@@ -4,7 +4,9 @@
 
 import { useRef } from 'react';
 
-import { Accordion, Faker, Stack } from '@htmlplus/react';
+import '@htmlplus/core/accordion.js';
+import '@htmlplus/core/faker.js';
+import '@htmlplus/core/stack.js';
 
 function App() {
   const accordionRef = useRef();
@@ -19,15 +21,15 @@ function App() {
   }
   return (
     <>
-      <Stack gap="1rem">
+      <plus-stack gap="1rem">
         <button onClick={onClick1}>Collapse</button>
         <button onClick={onClick2}>Expand</button>
         <button onClick={onClick3}>Toggle</button>
-      </Stack>
+      </plus-stack>
       <br />
-      <Accordion summary="Summary" ref={accordionRef}>
-        <Faker></Faker>
-      </Accordion>
+      <plus-accordion summary="Summary" ref={accordionRef}>
+        <plus-faker></plus-faker>
+      </plus-accordion>
     </>
   );
 }

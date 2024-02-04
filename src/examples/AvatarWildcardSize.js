@@ -2,17 +2,19 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Avatar, Center } from '@htmlplus/react';
+import '@htmlplus/core/avatar-group.js';
+import '@htmlplus/core/avatar.js';
+import '@htmlplus/core/center.js';
 
 function App() {
   return (
-    <Center>
-      <Avatar.Group>
-        <Avatar size="48">48px</Avatar>
-        <Avatar size="64px">64px</Avatar>
-        <Avatar size="5rem">5rem</Avatar>
-      </Avatar.Group>
-    </Center>
+    <plus-center>
+      <plus-avatar-group>
+        <plus-avatar size="48">48px</plus-avatar>
+        <plus-avatar size="64px">64px</plus-avatar>
+        <plus-avatar size="5rem">5rem</plus-avatar>
+      </plus-avatar-group>
+    </plus-center>
   );
 }
 

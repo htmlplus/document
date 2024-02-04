@@ -2,20 +2,23 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Avatar, Center, Tooltip } from '@htmlplus/react';
+import '@htmlplus/core/avatar-group.js';
+import '@htmlplus/core/avatar.js';
+import '@htmlplus/core/center.js';
+import '@htmlplus/core/tooltip.js';
 
 function App() {
   return (
-    <Center>
-      <Avatar.Group>
-        <Avatar></Avatar>
-        <Tooltip>Tooltip</Tooltip>
-        <Avatar></Avatar>
-        <Tooltip>Tooltip</Tooltip>
-        <Avatar></Avatar>
-        <Tooltip>Tooltip</Tooltip>
-      </Avatar.Group>
-    </Center>
+    <plus-center>
+      <plus-avatar-group>
+        <plus-avatar></plus-avatar>
+        <plus-tooltip>Tooltip</plus-tooltip>
+        <plus-avatar></plus-avatar>
+        <plus-tooltip>Tooltip</plus-tooltip>
+        <plus-avatar></plus-avatar>
+        <plus-tooltip>Tooltip</plus-tooltip>
+      </plus-avatar-group>
+    </plus-center>
   );
 }
 

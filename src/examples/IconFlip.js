@@ -2,16 +2,17 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Icon, Stack } from '@htmlplus/react';
+import '@htmlplus/core/icon.js';
+import '@htmlplus/core/stack.js';
 
 function App() {
   return (
-    <Stack gap="2rem">
-      <Icon name="house"></Icon>
-      <Icon name="house" flip="horizontal"></Icon>
-      <Icon name="house" flip="vertical"></Icon>
-      <Icon name="house" flip="both"></Icon>
-    </Stack>
+    <plus-stack gap="2rem">
+      <plus-icon name="house"></plus-icon>
+      <plus-icon name="house" flip="horizontal"></plus-icon>
+      <plus-icon name="house" flip="vertical"></plus-icon>
+      <plus-icon name="house" flip="both"></plus-icon>
+    </plus-stack>
   );
 }
 

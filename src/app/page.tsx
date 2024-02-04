@@ -2,7 +2,7 @@
 
 import NextLink from 'next/link';
 
-import { ROUTES } from '@/constants';
+import { FRAMEWORK_DEFAULT, ROUTES } from '@/constants';
 import { getPath } from '@/utils';
 
 export default function Page() {
@@ -34,7 +34,7 @@ export default function Page() {
         </p>
         <div>
           <NextLink
-            href={getPath(ROUTES.COMPONENT_DETAILS, { framework: 'react-dedicated', component: 'accordion' })!}
+            href={getPath(ROUTES.COMPONENT_DETAILS, { framework: FRAMEWORK_DEFAULT, component: 'accordion' })!}
             passHref
             style={{
               padding: '0.75rem 2rem',

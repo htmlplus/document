@@ -2,10 +2,16 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Faker } from '@htmlplus/react';
+import { useEffect, useRef } from 'react';
+
+import '@htmlplus/core/faker.js';
 
 function App() {
-  return <Faker api="lorem.paragraphs" arguments={[5, '\n\n']}></Faker>;
+  const plusFakerRef = useRef();
+  useEffect(() => {
+    plusFakerRef.current.arguments = [5, '\n\n'];
+  }, []);
+  return <plus-faker api="lorem.paragraphs" ref={plusFakerRef}></plus-faker>;
 }
 
 const FakerArguments = () => {

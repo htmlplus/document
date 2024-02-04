@@ -16,13 +16,7 @@ export function Usage() {
   // TODO
   const dependencies = componentsLight.find((item) => item.key == params.component)?.dependencies?.join(' ') || '';
 
-  let dependency;
-
-  if (params.framework == 'react-dedicated') {
-    dependency = 'npm install @htmlplus/react ';
-  } else {
-    dependency = 'npm install @htmlplus/core ';
-  }
+  let dependency = 'npm install @htmlplus/core ';
 
   dependency += dependencies;
 

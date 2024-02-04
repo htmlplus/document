@@ -2,51 +2,58 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Dialog, Faker, Stack } from '@htmlplus/react';
+import '@htmlplus/core/dialog-body.js';
+import '@htmlplus/core/dialog-content.js';
+import '@htmlplus/core/dialog-footer.js';
+import '@htmlplus/core/dialog-header.js';
+import '@htmlplus/core/dialog-toggler.js';
+import '@htmlplus/core/dialog.js';
+import '@htmlplus/core/faker.js';
+import '@htmlplus/core/stack.js';
 
 function App() {
   return (
     <>
-      <Stack gap="1rem">
-        <Dialog.Toggler connector="dialog-nesting-1"> Open Dialog 1 </Dialog.Toggler>
-        <Dialog.Toggler connector="dialog-nesting-2"> Open Dialog 2 </Dialog.Toggler>
-        <Dialog.Toggler connector="dialog-nesting-3"> Open Dialog 3 </Dialog.Toggler>
-      </Stack>
-      <Dialog animation="fade" connector="dialog-nesting-1" size="xl">
-        <Dialog.Content>
-          <Dialog.Header> Dialog 1 </Dialog.Header>
-          <Dialog.Body>
-            <Faker></Faker>
-          </Dialog.Body>
-          <Dialog.Footer>
-            <Dialog.Toggler connector="dialog-nesting-2"> Open Dialog 2 </Dialog.Toggler>
-            <Dialog.Toggler> Close </Dialog.Toggler>
-          </Dialog.Footer>
-        </Dialog.Content>
-      </Dialog>
-      <Dialog animation="fade" connector="dialog-nesting-2" size="lg">
-        <Dialog.Content>
-          <Dialog.Header> Dialog 2 </Dialog.Header>
-          <Dialog.Body>
-            <Faker></Faker>
-          </Dialog.Body>
-          <Dialog.Footer>
-            <Dialog.Toggler connector="dialog-nesting-3"> Open Dialog 3 </Dialog.Toggler>
-            <Dialog.Toggler> Close </Dialog.Toggler>
-          </Dialog.Footer>
-        </Dialog.Content>
-      </Dialog>
-      <Dialog animation="fade" connector="dialog-nesting-3" size="sm">
-        <Dialog.Content>
-          <Dialog.Header> Dialog 3 </Dialog.Header>
-          <Dialog.Body>
-            <Faker></Faker>
-          </Dialog.Body>
-          <Dialog.Footer>
-            <Dialog.Toggler> Close </Dialog.Toggler>
-          </Dialog.Footer>
-        </Dialog.Content>
-      </Dialog>
+      <plus-stack gap="1rem">
+        <plus-dialog-toggler connector="dialog-nesting-1"> Open Dialog 1 </plus-dialog-toggler>
+        <plus-dialog-toggler connector="dialog-nesting-2"> Open Dialog 2 </plus-dialog-toggler>
+        <plus-dialog-toggler connector="dialog-nesting-3"> Open Dialog 3 </plus-dialog-toggler>
+      </plus-stack>
+      <plus-dialog animation="fade" connector="dialog-nesting-1" size="xl">
+        <plus-dialog-content>
+          <plus-dialog-header> Dialog 1 </plus-dialog-header>
+          <plus-dialog-body>
+            <plus-faker></plus-faker>
+          </plus-dialog-body>
+          <plus-dialog-footer>
+            <plus-dialog-toggler connector="dialog-nesting-2"> Open Dialog 2 </plus-dialog-toggler>
+            <plus-dialog-toggler> Close </plus-dialog-toggler>
+          </plus-dialog-footer>
+        </plus-dialog-content>
+      </plus-dialog>
+      <plus-dialog animation="fade" connector="dialog-nesting-2" size="lg">
+        <plus-dialog-content>
+          <plus-dialog-header> Dialog 2 </plus-dialog-header>
+          <plus-dialog-body>
+            <plus-faker></plus-faker>
+          </plus-dialog-body>
+          <plus-dialog-footer>
+            <plus-dialog-toggler connector="dialog-nesting-3"> Open Dialog 3 </plus-dialog-toggler>
+            <plus-dialog-toggler> Close </plus-dialog-toggler>
+          </plus-dialog-footer>
+        </plus-dialog-content>
+      </plus-dialog>
+      <plus-dialog animation="fade" connector="dialog-nesting-3" size="sm">
+        <plus-dialog-content>
+          <plus-dialog-header> Dialog 3 </plus-dialog-header>
+          <plus-dialog-body>
+            <plus-faker></plus-faker>
+          </plus-dialog-body>
+          <plus-dialog-footer>
+            <plus-dialog-toggler> Close </plus-dialog-toggler>
+          </plus-dialog-footer>
+        </plus-dialog-content>
+      </plus-dialog>
     </>
   );
 }

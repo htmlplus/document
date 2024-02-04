@@ -2,17 +2,18 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Card, Divider } from '@htmlplus/react';
+import '@htmlplus/core/card.js';
+import '@htmlplus/core/divider.js';
 
 function App() {
   return (
-    <Card elevation={10}>
-      Item 1<Divider></Divider>
-      Item 2<Divider></Divider>
-      Item 3<Divider></Divider>
-      Item 4<Divider></Divider>
+    <plus-card elevation={10}>
+      Item 1<plus-divider></plus-divider>
+      Item 2<plus-divider></plus-divider>
+      Item 3<plus-divider></plus-divider>
+      Item 4<plus-divider></plus-divider>
       Item 5
-    </Card>
+    </plus-card>
   );
 }
 

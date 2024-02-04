@@ -2,11 +2,14 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Cropper } from '@htmlplus/react';
+import '@htmlplus/core/cropper.js';
 
 function App() {
   return (
-    <Cropper area={1} src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"></Cropper>
+    <plus-cropper
+      area={1}
+      src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+    ></plus-cropper>
   );
 }
 

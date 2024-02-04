@@ -2,16 +2,17 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { FormatBytes, Stack } from '@htmlplus/react';
+import '@htmlplus/core/format-bytes.js';
+import '@htmlplus/core/stack.js';
 
 function App() {
   return (
-    <Stack vertical>
-      <FormatBytes value={1500}></FormatBytes>
-      <FormatBytes value={800000000}></FormatBytes>
-      <FormatBytes value={6900000000}></FormatBytes>
-      <FormatBytes value={222000000000000}></FormatBytes>
-    </Stack>
+    <plus-stack vertical>
+      <plus-format-bytes value={1500}></plus-format-bytes>
+      <plus-format-bytes value={800000000}></plus-format-bytes>
+      <plus-format-bytes value={6900000000}></plus-format-bytes>
+      <plus-format-bytes value={222000000000000}></plus-format-bytes>
+    </plus-stack>
   );
 }
 

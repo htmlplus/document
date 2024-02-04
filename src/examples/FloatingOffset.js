@@ -2,15 +2,23 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Faker, Floating, Icon } from '@htmlplus/react';
+import { useEffect, useRef } from 'react';
+
+import '@htmlplus/core/faker.js';
+import '@htmlplus/core/floating.js';
+import '@htmlplus/core/icon.js';
 
 function App() {
+  const plusFloatingRef = useRef();
+  useEffect(() => {
+    plusFloatingRef.current.offset = [20, 20];
+  }, []);
   return (
     <div>
-      <Faker api="lorem.paragraphs"></Faker>
-      <Floating offset={[20, 20]}>
-        <Icon name="circle-fill"></Icon>
-      </Floating>
+      <plus-faker api="lorem.paragraphs"></plus-faker>
+      <plus-floating ref={plusFloatingRef}>
+        <plus-icon name="circle-fill"></plus-icon>
+      </plus-floating>
     </div>
   );
 }

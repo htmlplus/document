@@ -4,7 +4,8 @@
 
 import { useEffect, useRef } from 'react';
 
-import { Accordion, Faker } from '@htmlplus/react';
+import '@htmlplus/core/accordion.js';
+import '@htmlplus/core/faker.js';
 
 function App() {
   const accordionsRef = useRef();
@@ -19,15 +20,15 @@ function App() {
   }, []);
   return (
     <div ref={accordionsRef}>
-      <Accordion summary="First">
-        <Faker></Faker>
-      </Accordion>
-      <Accordion summary="Second">
-        <Faker></Faker>
-      </Accordion>
-      <Accordion summary="Third">
-        <Faker></Faker>
-      </Accordion>
+      <plus-accordion summary="First">
+        <plus-faker></plus-faker>
+      </plus-accordion>
+      <plus-accordion summary="Second">
+        <plus-faker></plus-faker>
+      </plus-accordion>
+      <plus-accordion summary="Third">
+        <plus-faker></plus-faker>
+      </plus-accordion>
     </div>
   );
 }

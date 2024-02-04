@@ -3,7 +3,7 @@
  **************************************************/
 
 import { useEffect, useState } from 'react';
-import { Faker } from '@htmlplus/react';
+import '@htmlplus/core/faker.js';
 import { faker } from '@faker-js/faker/locale/ja';
 
 import { setConfig } from '@htmlplus/core/config.js';
@@ -21,7 +21,7 @@ setConfig({
 
 
 function App() {
-  return <Faker></Faker>;
+  return <plus-faker></plus-faker>;
 }
 
 const FakerLocalization = () => {

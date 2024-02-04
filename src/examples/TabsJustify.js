@@ -2,34 +2,36 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Tabs } from '@htmlplus/react';
+import '@htmlplus/core/tabs-bar.js';
+import '@htmlplus/core/tabs-tab.js';
+import '@htmlplus/core/tabs.js';
 
 function App() {
   return (
     <>
-      <Tabs>
-        <Tabs.Bar justify="start">
-          <Tabs.Tab> Tab 1 </Tabs.Tab>
-          <Tabs.Tab> Tab 2 </Tabs.Tab>
-          <Tabs.Tab> Tab 3 </Tabs.Tab>
-        </Tabs.Bar>
-      </Tabs>
+      <plus-tabs>
+        <plus-tabs-bar justify="start">
+          <plus-tabs-tab> Tab 1 </plus-tabs-tab>
+          <plus-tabs-tab> Tab 2 </plus-tabs-tab>
+          <plus-tabs-tab> Tab 3 </plus-tabs-tab>
+        </plus-tabs-bar>
+      </plus-tabs>
       <br />
-      <Tabs>
-        <Tabs.Bar justify="center">
-          <Tabs.Tab> Tab 1 </Tabs.Tab>
-          <Tabs.Tab> Tab 2 </Tabs.Tab>
-          <Tabs.Tab> Tab 3 </Tabs.Tab>
-        </Tabs.Bar>
-      </Tabs>
+      <plus-tabs>
+        <plus-tabs-bar justify="center">
+          <plus-tabs-tab> Tab 1 </plus-tabs-tab>
+          <plus-tabs-tab> Tab 2 </plus-tabs-tab>
+          <plus-tabs-tab> Tab 3 </plus-tabs-tab>
+        </plus-tabs-bar>
+      </plus-tabs>
       <br />
-      <Tabs>
-        <Tabs.Bar justify="end">
-          <Tabs.Tab> Tab 1 </Tabs.Tab>
-          <Tabs.Tab> Tab 2 </Tabs.Tab>
-          <Tabs.Tab> Tab 3 </Tabs.Tab>
-        </Tabs.Bar>
-      </Tabs>
+      <plus-tabs>
+        <plus-tabs-bar justify="end">
+          <plus-tabs-tab> Tab 1 </plus-tabs-tab>
+          <plus-tabs-tab> Tab 2 </plus-tabs-tab>
+          <plus-tabs-tab> Tab 3 </plus-tabs-tab>
+        </plus-tabs-bar>
+      </plus-tabs>
     </>
   );
 }

@@ -2,14 +2,20 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Center, Counter } from '@htmlplus/react';
+import { useEffect, useRef } from 'react';
+
+import '@htmlplus/core/center.js';
+import '@htmlplus/core/counter.js';
 
 function App() {
-  const numerals = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+  const counterRef = useRef();
+  useEffect(() => {
+    counterRef.current.numerals = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+  }, []);
   return (
-    <Center>
-      <Counter to={1000} play numerals={numerals}></Counter>
-    </Center>
+    <plus-center>
+      <plus-counter to={1000} play ref={counterRef}></plus-counter>
+    </plus-center>
   );
 }
 

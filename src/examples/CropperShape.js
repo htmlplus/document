@@ -2,35 +2,37 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Cropper, Grid } from '@htmlplus/react';
+import '@htmlplus/core/cropper.js';
+import '@htmlplus/core/grid-item.js';
+import '@htmlplus/core/grid.js';
 
 function App() {
   return (
-    <Grid gutter="md">
-      <Grid.Item xs="12" sm="6">
-        <Cropper
+    <plus-grid gutter="md">
+      <plus-grid-item xs="12" sm="6">
+        <plus-cropper
           shape="rectangle"
-          aspectRatio="2"
+          aspect-ratio="2"
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-        ></Cropper>
-      </Grid.Item>
-      <Grid.Item xs="12" sm="6">
-        <Grid gutter="md">
-          <Grid.Item xs="12">
-            <Cropper
+        ></plus-cropper>
+      </plus-grid-item>
+      <plus-grid-item xs="12" sm="6">
+        <plus-grid gutter="md">
+          <plus-grid-item xs="12">
+            <plus-cropper
               shape="square"
               src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-            ></Cropper>
-          </Grid.Item>
-          <Grid.Item xs="12">
-            <Cropper
+            ></plus-cropper>
+          </plus-grid-item>
+          <plus-grid-item xs="12">
+            <plus-cropper
               shape="circle"
               src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-            ></Cropper>
-          </Grid.Item>
-        </Grid>
-      </Grid.Item>
-    </Grid>
+            ></plus-cropper>
+          </plus-grid-item>
+        </plus-grid>
+      </plus-grid-item>
+    </plus-grid>
   );
 }
 

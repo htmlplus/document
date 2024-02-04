@@ -3,7 +3,9 @@
  **************************************************/
 
 import { useEffect, useState } from 'react';
-import { Animation, Avatar, Center } from '@htmlplus/react';
+import '@htmlplus/core/animation.js';
+import '@htmlplus/core/avatar.js';
+import '@htmlplus/core/center.js';
 import { setConfig } from '@htmlplus/core/config.js';
 
 setConfig({
@@ -29,25 +31,25 @@ setConfig({
 
 function App() {
   return (
-    <Center>
-      <Avatar shape="circle">
-        <Animation
+    <plus-center>
+      <plus-avatar shape="circle">
+        <plus-animation
           delay={0}
           duration={2000}
           iterations={Infinity}
           name="custom-pulse"
           run
-        ></Animation>
-        <Animation
+        ></plus-animation>
+        <plus-animation
           delay={1000}
           duration={2000}
           iterations={Infinity}
           name="custom-pulse"
           run
-        ></Animation>
+        ></plus-animation>
         <img src="https://picsum.photos/id/64/90/90" />
-      </Avatar>
-    </Center>
+      </plus-avatar>
+    </plus-center>
   );
 }
 

@@ -2,16 +2,23 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Faker, Sticky } from '@htmlplus/react';
+import { useEffect, useRef } from 'react';
+
+import '@htmlplus/core/faker.js';
+import '@htmlplus/core/sticky.js';
 
 function App() {
+  const plusFakerRef = useRef();
+  useEffect(() => {
+    plusFakerRef.current.arguments = [20, '\n\n'];
+  }, []);
   return (
     <div className="container">
-      <Faker api="lorem.paragraphs"></Faker>
-      <Sticky>
-        <Faker></Faker>
-      </Sticky>
-      <Faker api="lorem.paragraphs" arguments={[20, '\n\n']}></Faker>
+      <plus-faker api="lorem.paragraphs"></plus-faker>
+      <plus-sticky>
+        <plus-faker></plus-faker>
+      </plus-sticky>
+      <plus-faker api="lorem.paragraphs" ref={plusFakerRef}></plus-faker>
     </div>
   );
 }

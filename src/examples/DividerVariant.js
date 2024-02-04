@@ -2,16 +2,16 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Divider } from '@htmlplus/react';
+import '@htmlplus/core/divider.js';
 
 function App() {
   return (
     <>
-      <Divider variant="middle"></Divider>
+      <plus-divider variant="middle"></plus-divider>
       <br />
-      <Divider variant="inset"></Divider>
+      <plus-divider variant="inset"></plus-divider>
       <br />
-      <Divider variant="full"></Divider>
+      <plus-divider variant="full"></plus-divider>
     </>
   );
 }

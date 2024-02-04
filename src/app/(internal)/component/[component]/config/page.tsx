@@ -47,7 +47,7 @@ export default function Page({ params }: IPage) {
           `import { setConfig } from '@htmlplus/core/config.js';`,
           ``,
           `setConfig({`,
-          `  component: {`,
+          `  element: {`,
           // TODO: remove plus
           `    'plus-${component.key}': {`,
           `      property: {`,

@@ -2,12 +2,12 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Card } from '@htmlplus/react';
+import '@htmlplus/core/card.js';
 
 function App() {
   return (
     <div className="container">
-      <Card></Card>
+      <plus-card></plus-card>
     </div>
   );
 }

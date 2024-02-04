@@ -2,21 +2,37 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Accordion, Faker } from '@htmlplus/react';
+import { useEffect, useRef } from 'react';
+
+import '@htmlplus/core/accordion.js';
+import '@htmlplus/core/faker.js';
 
 function App() {
-  function onCollapse(event) {
-    if (confirm('Are you sure you want to collapse it?')) return;
-    event.preventDefault();
-  }
-  function onExpand(event) {
-    if (confirm('Are you sure you want to expand it?')) return;
-    event.preventDefault();
-  }
+  const accordionRef = useRef();
+  useEffect(() => {
+    function onPlusCollapse(event) {
+      if (confirm('Are you sure you want to collapse it?')) return;
+      event.preventDefault();
+    }
+    accordionRef.current.addEventListener('plus-collapse', onPlusCollapse);
+    return () => {
+      accordionRef.current.removeEventListener('plus-collapse', onPlusCollapse);
+    };
+  });
+  useEffect(() => {
+    function onPlusExpand(event) {
+      if (confirm('Are you sure you want to expand it?')) return;
+      event.preventDefault();
+    }
+    accordionRef.current.addEventListener('plus-expand', onPlusExpand);
+    return () => {
+      accordionRef.current.removeEventListener('plus-expand', onPlusExpand);
+    };
+  });
   return (
-    <Accordion summary="Summary" onCollapse={onCollapse} onExpand={onExpand}>
-      <Faker></Faker>
-    </Accordion>
+    <plus-accordion summary="Summary" ref={accordionRef}>
+      <plus-faker></plus-faker>
+    </plus-accordion>
   );
 }
 

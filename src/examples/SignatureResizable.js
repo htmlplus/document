@@ -2,10 +2,10 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Signature } from '@htmlplus/react';
+import '@htmlplus/core/signature.js';
 
 function App() {
-  return <Signature backgroundColor="lightgray" resizable></Signature>;
+  return <plus-signature background-color="lightgray" resizable></plus-signature>;
 }
 
 const SignatureResizable = () => {

@@ -2,36 +2,37 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Divider, Sticky } from '@htmlplus/react';
+import '@htmlplus/core/divider.js';
+import '@htmlplus/core/sticky.js';
 
 function App() {
   return (
     <div className="container">
-      <Sticky>
-        <Divider>
+      <plus-sticky>
+        <plus-divider>
           <span>Today</span>
-        </Divider>
-      </Sticky>
-      <Sticky>
-        <Divider>
+        </plus-divider>
+      </plus-sticky>
+      <plus-sticky>
+        <plus-divider>
           <span>Yesterday</span>
-        </Divider>
-      </Sticky>
-      <Sticky>
-        <Divider>
+        </plus-divider>
+      </plus-sticky>
+      <plus-sticky>
+        <plus-divider>
           <span>5 Days Ago</span>
-        </Divider>
-      </Sticky>
-      <Sticky>
-        <Divider>
+        </plus-divider>
+      </plus-sticky>
+      <plus-sticky>
+        <plus-divider>
           <span>2 Weeks Ago</span>
-        </Divider>
-      </Sticky>
-      <Sticky>
-        <Divider>
+        </plus-divider>
+      </plus-sticky>
+      <plus-sticky>
+        <plus-divider>
           <span>1 Month Ago</span>
-        </Divider>
-      </Sticky>
+        </plus-divider>
+      </plus-sticky>
     </div>
   );
 }

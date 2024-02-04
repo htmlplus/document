@@ -2,14 +2,15 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Stack, Switch } from '@htmlplus/react';
+import '@htmlplus/core/stack.js';
+import '@htmlplus/core/switch.js';
 
 function App() {
   return (
-    <Stack gap="2rem">
-      <Switch className="switch-1"></Switch>
-      <Switch className="switch-2"></Switch>
-    </Stack>
+    <plus-stack gap="2rem">
+      <plus-switch class="switch-1"></plus-switch>
+      <plus-switch class="switch-2"></plus-switch>
+    </plus-stack>
   );
 }
 

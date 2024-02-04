@@ -2,14 +2,14 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { ProgressBar } from '@htmlplus/react';
+import '@htmlplus/core/progress-bar.js';
 
 function App() {
   return (
     <>
-      <ProgressBar min={0} max={1} value={0.25}></ProgressBar>
+      <plus-progress-bar min={0} max={1} value={0.25}></plus-progress-bar>
       <br />
-      <ProgressBar min={-10} max={10} value={0}></ProgressBar>
+      <plus-progress-bar min={-10} max={10} value={0}></plus-progress-bar>
     </>
   );
 }

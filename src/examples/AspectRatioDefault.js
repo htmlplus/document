@@ -2,15 +2,19 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { AspectRatio, Card } from '@htmlplus/react';
+import '@htmlplus/core/aspect-ratio.js';
+import '@htmlplus/core/card-body.js';
+import '@htmlplus/core/card.js';
 
 function App() {
   return (
-    <AspectRatio value="16/9">
-      <Card tile>
-        <Card.Body>This box will always be 16/9 (unless you put more stuff in it)</Card.Body>
-      </Card>
-    </AspectRatio>
+    <plus-aspect-ratio value="16/9">
+      <plus-card tile>
+        <plus-card-body>
+          This box will always be 16/9 (unless you put more stuff in it)
+        </plus-card-body>
+      </plus-card>
+    </plus-aspect-ratio>
   );
 }
 

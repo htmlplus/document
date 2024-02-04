@@ -2,26 +2,28 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Avatar, Center } from '@htmlplus/react';
+import '@htmlplus/core/avatar-group.js';
+import '@htmlplus/core/avatar.js';
+import '@htmlplus/core/center.js';
 
 function App() {
   return (
     <>
-      <Center>
-        <Avatar.Group>
-          <Avatar></Avatar>
-          <Avatar></Avatar>
-          <Avatar></Avatar>
-        </Avatar.Group>
-      </Center>
+      <plus-center>
+        <plus-avatar-group>
+          <plus-avatar></plus-avatar>
+          <plus-avatar></plus-avatar>
+          <plus-avatar></plus-avatar>
+        </plus-avatar-group>
+      </plus-center>
       <br />
-      <Center>
-        <Avatar.Group stacked>
-          <Avatar></Avatar>
-          <Avatar></Avatar>
-          <Avatar></Avatar>
-        </Avatar.Group>
-      </Center>
+      <plus-center>
+        <plus-avatar-group stacked>
+          <plus-avatar></plus-avatar>
+          <plus-avatar></plus-avatar>
+          <plus-avatar></plus-avatar>
+        </plus-avatar-group>
+      </plus-center>
     </>
   );
 }

@@ -2,19 +2,22 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Divider, Faker, Grid } from '@htmlplus/react';
+import '@htmlplus/core/divider.js';
+import '@htmlplus/core/faker.js';
+import '@htmlplus/core/grid-item.js';
+import '@htmlplus/core/grid.js';
 
 function App() {
   return (
-    <Grid alignItems="center" justifyContent="evenly">
-      <Grid.Item xs="5">
-        <Faker></Faker>
-      </Grid.Item>
-      <Divider vertical></Divider>
-      <Grid.Item xs="5">
-        <Faker></Faker>
-      </Grid.Item>
-    </Grid>
+    <plus-grid align-items="center" justify-content="evenly">
+      <plus-grid-item xs="5">
+        <plus-faker></plus-faker>
+      </plus-grid-item>
+      <plus-divider vertical></plus-divider>
+      <plus-grid-item xs="5">
+        <plus-faker></plus-faker>
+      </plus-grid-item>
+    </plus-grid>
   );
 }
 

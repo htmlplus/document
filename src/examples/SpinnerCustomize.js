@@ -2,13 +2,14 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Center, Spinner } from '@htmlplus/react';
+import '@htmlplus/core/center.js';
+import '@htmlplus/core/spinner.js';
 
 function App() {
   return (
-    <Center>
-      <Spinner type="dual-ring"></Spinner>
-    </Center>
+    <plus-center>
+      <plus-spinner type="dual-ring"></plus-spinner>
+    </plus-center>
   );
 }
 

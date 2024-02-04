@@ -2,10 +2,10 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Center } from '@htmlplus/react';
+import '@htmlplus/core/center.js';
 
 function App() {
-  return <Center>All elements are centered</Center>;
+  return <plus-center>All elements are centered</plus-center>;
 }
 
 const CenterDefault = () => {

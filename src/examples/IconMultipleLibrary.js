@@ -3,7 +3,8 @@
  **************************************************/
 
 import { useEffect, useState } from 'react';
-import { Icon, Stack } from '@htmlplus/react';
+import '@htmlplus/core/icon.js';
+import '@htmlplus/core/stack.js';
 import { setConfig } from '@htmlplus/core/config.js';
 
 setConfig({
@@ -29,11 +30,11 @@ setConfig({
 
 function App() {
   return (
-    <Stack gap="2rem">
-      <Icon name="carbon/user"></Icon>
-      <Icon name="lucide/user"></Icon>
-      <Icon name="tabler/user"></Icon>
-    </Stack>
+    <plus-stack gap="2rem">
+      <plus-icon name="carbon/user"></plus-icon>
+      <plus-icon name="lucide/user"></plus-icon>
+      <plus-icon name="tabler/user"></plus-icon>
+    </plus-stack>
   );
 }
 

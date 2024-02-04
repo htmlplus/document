@@ -2,16 +2,16 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { ProgressBar } from '@htmlplus/react';
+import '@htmlplus/core/progress-bar.js';
 
 function App() {
   return (
     <>
-      <ProgressBar value={50} className="thin"></ProgressBar>
+      <plus-progress-bar value={50} class="thin"></plus-progress-bar>
       <br />
-      <ProgressBar value={50}></ProgressBar>
+      <plus-progress-bar value={50}></plus-progress-bar>
       <br />
-      <ProgressBar value={50} className="thick"></ProgressBar>
+      <plus-progress-bar value={50} class="thick"></plus-progress-bar>
     </>
   );
 }

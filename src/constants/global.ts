@@ -1,1 +1,1 @@
-export const FRAMEWORK_DEFAULT = 'react-dedicated';
+export const FRAMEWORK_DEFAULT = 'javascript';

@@ -2,10 +2,10 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { ProgressBar } from '@htmlplus/react';
+import '@htmlplus/core/progress-bar.js';
 
 function App() {
-  return <ProgressBar label value={75}></ProgressBar>;
+  return <plus-progress-bar label value={75}></plus-progress-bar>;
 }
 
 const ProgressBarLabel = () => {

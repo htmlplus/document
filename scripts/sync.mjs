@@ -134,9 +134,9 @@ const HEADER = [
   const lines = ["'use client';", '', ...HEADER, `import dynamic from 'next/dynamic';`, ''];
 
   for (const item of db) {
-    if (!item.key.startsWith('react-dedicated')) continue;
+    if (!item.key.startsWith('react/')) continue;
 
-    const name = pascalCase(item.key.replace('react-dedicated/', ''));
+    const name = pascalCase(item.key.replace('react/', ''));
 
     const className = `ex-${kebabCase(name)}`;
 

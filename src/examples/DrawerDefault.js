@@ -2,22 +2,26 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Card, Drawer, Grid } from '@htmlplus/react';
+import '@htmlplus/core/card.js';
+import '@htmlplus/core/drawer-toggler.js';
+import '@htmlplus/core/drawer.js';
+import '@htmlplus/core/grid-item.js';
+import '@htmlplus/core/grid.js';
 
 function App() {
   return (
-    <Grid>
-      <Grid.Item xs="auto">
-        <Drawer animation="fade" size="200px" connector="drawer-default">
-          <Card> Drawer Content </Card>
-        </Drawer>
-      </Grid.Item>
-      <Grid.Item xs="grow">
-        <Card>
-          <Drawer.Toggler connector="drawer-default"> Toggle </Drawer.Toggler>
-        </Card>
-      </Grid.Item>
-    </Grid>
+    <plus-grid>
+      <plus-grid-item xs="auto">
+        <plus-drawer animation="fade" size="200px" connector="drawer-default">
+          <plus-card> Drawer Content </plus-card>
+        </plus-drawer>
+      </plus-grid-item>
+      <plus-grid-item xs="grow">
+        <plus-card>
+          <plus-drawer-toggler connector="drawer-default"> Toggle </plus-drawer-toggler>
+        </plus-card>
+      </plus-grid-item>
+    </plus-grid>
   );
 }
 

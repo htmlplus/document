@@ -2,29 +2,30 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Icon, Stack } from '@htmlplus/react';
+import '@htmlplus/core/icon.js';
+import '@htmlplus/core/stack.js';
 
 function App() {
   return (
     <>
-      <Stack gap="2rem">
-        <Icon name="house" size="xs"></Icon>
-        <Icon name="house" size="sm"></Icon>
-        <Icon name="house" size="md"></Icon>
-        <Icon name="house" size="lg"></Icon>
-        <Icon name="house" size="xl"></Icon>
-      </Stack>
-      <Stack gap="2rem">
-        <Icon name="house" size="1x"></Icon>
-        <Icon name="house" size="2x"></Icon>
-        <Icon name="house" size="3x"></Icon>
-        <Icon name="house" size="4x"></Icon>
-        <Icon name="house" size="5x"></Icon>
-        <Icon name="house" size="6x"></Icon>
-        <Icon name="house" size="7x"></Icon>
-        <Icon name="house" size="8x"></Icon>
-        <Icon name="house" size="9x"></Icon>
-      </Stack>
+      <plus-stack gap="2rem">
+        <plus-icon name="house" size="xs"></plus-icon>
+        <plus-icon name="house" size="sm"></plus-icon>
+        <plus-icon name="house" size="md"></plus-icon>
+        <plus-icon name="house" size="lg"></plus-icon>
+        <plus-icon name="house" size="xl"></plus-icon>
+      </plus-stack>
+      <plus-stack gap="2rem">
+        <plus-icon name="house" size="1x"></plus-icon>
+        <plus-icon name="house" size="2x"></plus-icon>
+        <plus-icon name="house" size="3x"></plus-icon>
+        <plus-icon name="house" size="4x"></plus-icon>
+        <plus-icon name="house" size="5x"></plus-icon>
+        <plus-icon name="house" size="6x"></plus-icon>
+        <plus-icon name="house" size="7x"></plus-icon>
+        <plus-icon name="house" size="8x"></plus-icon>
+        <plus-icon name="house" size="9x"></plus-icon>
+      </plus-stack>
     </>
   );
 }

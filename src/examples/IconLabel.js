@@ -2,13 +2,14 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Center, Icon } from '@htmlplus/react';
+import '@htmlplus/core/center.js';
+import '@htmlplus/core/icon.js';
 
 function App() {
   return (
-    <Center>
-      <Icon name="house" label="Go to home"></Icon>
-    </Center>
+    <plus-center>
+      <plus-icon name="house" label="Go to home"></plus-icon>
+    </plus-center>
   );
 }
 

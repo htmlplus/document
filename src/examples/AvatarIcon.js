@@ -2,15 +2,17 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Avatar, Center, Icon } from '@htmlplus/react';
+import '@htmlplus/core/avatar.js';
+import '@htmlplus/core/center.js';
+import '@htmlplus/core/icon.js';
 
 function App() {
   return (
-    <Center>
-      <Avatar>
-        <Icon name="person"></Icon>
-      </Avatar>
-    </Center>
+    <plus-center>
+      <plus-avatar>
+        <plus-icon name="person"></plus-icon>
+      </plus-avatar>
+    </plus-center>
   );
 }
 

@@ -4,7 +4,8 @@
 
 import { useRef } from 'react';
 
-import { Center, Cropper } from '@htmlplus/react';
+import '@htmlplus/core/center.js';
+import '@htmlplus/core/cropper.js';
 
 function App() {
   const cropperRef = useRef();
@@ -15,16 +16,16 @@ function App() {
   }
   return (
     <>
-      <Center>
-        <Cropper
+      <plus-center>
+        <plus-cropper
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
           ref={cropperRef}
-        ></Cropper>
-      </Center>
+        ></plus-cropper>
+      </plus-center>
       <br />
-      <Center>
+      <plus-center>
         <button onClick={onClick}>To Blob</button>
-      </Center>
+      </plus-center>
     </>
   );
 }

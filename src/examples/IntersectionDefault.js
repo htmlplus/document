@@ -2,29 +2,41 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
-import { Card, Center, Faker, Intersection, Sticky } from '@htmlplus/react';
+import '@htmlplus/core/card-body.js';
+import '@htmlplus/core/card.js';
+import '@htmlplus/core/center.js';
+import '@htmlplus/core/faker.js';
+import '@htmlplus/core/intersection.js';
+import '@htmlplus/core/sticky.js';
 
 function App() {
+  const intersectionRef = useRef();
   const statusRef = useRef();
-  function onChange(event) {
-    statusRef.current.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';
-  }
+  useEffect(() => {
+    function onPlusChange(event) {
+      statusRef.current.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';
+    }
+    intersectionRef.current.addEventListener('plus-change', onPlusChange);
+    return () => {
+      intersectionRef.current.removeEventListener('plus-change', onPlusChange);
+    };
+  });
   return (
     <div className="container">
-      <Sticky top="1rem" zIndex={1}>
-        <Center>
+      <plus-sticky top="1rem" z-index={1}>
+        <plus-center>
           <div className="status" ref={statusRef}></div>
-        </Center>
-      </Sticky>
-      <Intersection onChange={onChange}>
-        <Card elevation={10}>
-          <Card.Body>
-            <Faker></Faker>
-          </Card.Body>
-        </Card>
-      </Intersection>
+        </plus-center>
+      </plus-sticky>
+      <plus-intersection ref={intersectionRef}>
+        <plus-card elevation={10}>
+          <plus-card-body>
+            <plus-faker></plus-faker>
+          </plus-card-body>
+        </plus-card>
+      </plus-intersection>
     </div>
   );
 }

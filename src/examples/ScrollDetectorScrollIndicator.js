@@ -2,22 +2,39 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-import { Faker, ProgressBar, ScrollDetector } from '@htmlplus/react';
+import '@htmlplus/core/faker.js';
+import '@htmlplus/core/progress-bar.js';
+import '@htmlplus/core/scroll-detector.js';
 
 function App() {
+  const plusFakerRef = useRef();
+  const detectorRef = useRef();
   const [value, setValue] = useState(0);
-  function onChange(event) {
-    setValue(event.detail.progress);
-  }
+  useEffect(() => {
+    function onPlusChange(event) {
+      setValue(event.detail.progress);
+    }
+    detectorRef.current.addEventListener('plus-change', onPlusChange);
+    return () => {
+      detectorRef.current.removeEventListener('plus-change', onPlusChange);
+    };
+  });
+  useEffect(() => {
+    plusFakerRef.current.arguments = [20, '\n\n'];
+  }, []);
   return (
     <div className="container">
-      <ProgressBar value={value}></ProgressBar>
+      <plus-progress-bar value={value}></plus-progress-bar>
       <div className="scrollable reference2">
-        <Faker api="lorem.paragraphs" arguments={[20, '\n\n']} seed={0}></Faker>
+        <plus-faker api="lorem.paragraphs" seed={0} ref={plusFakerRef}></plus-faker>
       </div>
-      <ScrollDetector reference=".reference2" vertical onChange={onChange}></ScrollDetector>
+      <plus-scroll-detector
+        reference=".reference2"
+        vertical
+        ref={detectorRef}
+      ></plus-scroll-detector>
     </div>
   );
 }

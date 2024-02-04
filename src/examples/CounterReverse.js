@@ -2,13 +2,14 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Center, Counter } from '@htmlplus/react';
+import '@htmlplus/core/center.js';
+import '@htmlplus/core/counter.js';
 
 function App() {
   return (
-    <Center>
-      <Counter from={1000} to={10} play></Counter>
-    </Center>
+    <plus-center>
+      <plus-counter from={1000} to={10} play></plus-counter>
+    </plus-center>
   );
 }
 

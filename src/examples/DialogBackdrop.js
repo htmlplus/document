@@ -2,25 +2,32 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Center, Dialog, Faker } from '@htmlplus/react';
+import '@htmlplus/core/center.js';
+import '@htmlplus/core/dialog-body.js';
+import '@htmlplus/core/dialog-content.js';
+import '@htmlplus/core/dialog-footer.js';
+import '@htmlplus/core/dialog-header.js';
+import '@htmlplus/core/dialog-toggler.js';
+import '@htmlplus/core/dialog.js';
+import '@htmlplus/core/faker.js';
 
 function App() {
   return (
     <>
-      <Center>
-        <Dialog.Toggler connector="dialog-backdrop"> Open </Dialog.Toggler>
-      </Center>
-      <Dialog animation="fade" connector="dialog-backdrop" backdrop={false}>
-        <Dialog.Content>
-          <Dialog.Header> Dialog Title </Dialog.Header>
-          <Dialog.Body>
-            <Faker></Faker>
-          </Dialog.Body>
-          <Dialog.Footer>
-            <Dialog.Toggler> Close </Dialog.Toggler>
-          </Dialog.Footer>
-        </Dialog.Content>
-      </Dialog>
+      <plus-center>
+        <plus-dialog-toggler connector="dialog-backdrop"> Open </plus-dialog-toggler>
+      </plus-center>
+      <plus-dialog animation="fade" connector="dialog-backdrop" backdrop={false}>
+        <plus-dialog-content>
+          <plus-dialog-header> Dialog Title </plus-dialog-header>
+          <plus-dialog-body>
+            <plus-faker></plus-faker>
+          </plus-dialog-body>
+          <plus-dialog-footer>
+            <plus-dialog-toggler> Close </plus-dialog-toggler>
+          </plus-dialog-footer>
+        </plus-dialog-content>
+      </plus-dialog>
     </>
   );
 }

@@ -1,6 +1,6 @@
 # Global Config In Javascript
 
-Sets a config for the `size` property of the `spinner` component.
+Sets a config for the `size` property of the `spinner` element.
 
 ```html
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ Sets a config for the `size` property of the `spinner` component.
     <script type="module">
       import { setConfig } from 'https://unpkg.com/@htmlplus/core/config.js';
       setConfig({
-        component: {
+        element: {
           'plus-spinner': {
             property: {
               size: 'lg',

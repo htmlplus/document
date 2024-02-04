@@ -2,10 +2,10 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Faker } from '@htmlplus/react';
+import '@htmlplus/core/faker.js';
 
 function App() {
-  return <Faker api="lorem.paragraphs"></Faker>;
+  return <plus-faker api="lorem.paragraphs"></plus-faker>;
 }
 
 const FakerApi = () => {

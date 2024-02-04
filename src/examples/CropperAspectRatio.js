@@ -2,14 +2,14 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Cropper } from '@htmlplus/react';
+import '@htmlplus/core/cropper.js';
 
 function App() {
   return (
-    <Cropper
-      aspectRatio="3/4"
+    <plus-cropper
+      aspect-ratio="3/4"
       src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-    ></Cropper>
+    ></plus-cropper>
   );
 }
 

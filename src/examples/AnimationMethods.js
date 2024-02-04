@@ -4,7 +4,8 @@
 
 import { useRef } from 'react';
 
-import { Animation, Center } from '@htmlplus/react';
+import '@htmlplus/core/animation.js';
+import '@htmlplus/core/center.js';
 
 function App() {
   const animationRef = useRef();
@@ -22,16 +23,16 @@ function App() {
   }
   return (
     <>
-      <Center>
-        <Animation iterations={3} name="fade-out" ref={animationRef}></Animation>
-      </Center>
+      <plus-center>
+        <plus-animation iterations={3} name="fade-out" ref={animationRef}></plus-animation>
+      </plus-center>
       <br />
-      <Center>
+      <plus-center>
         <button onClick={onClick1}>Cancel</button>
         <button onClick={onClick2}>Finish</button>
         <button onClick={onClick3}>Pause</button>
         <button onClick={onClick4}>Play</button>
-      </Center>
+      </plus-center>
     </>
   );
 }

@@ -2,34 +2,39 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Faker, Tabs } from '@htmlplus/react';
+import '@htmlplus/core/faker.js';
+import '@htmlplus/core/tabs-bar.js';
+import '@htmlplus/core/tabs-panel.js';
+import '@htmlplus/core/tabs-panels.js';
+import '@htmlplus/core/tabs-tab.js';
+import '@htmlplus/core/tabs.js';
 
 function App() {
   return (
-    <Tabs value="tab-1">
-      <Tabs.Bar>
-        <Tabs.Tab value="tab-1"> Tab 1 </Tabs.Tab>
-        <Tabs.Tab value="tab-2"> Tab 2 </Tabs.Tab>
-        <Tabs.Tab value="tab-3"> Tab 3 </Tabs.Tab>
-      </Tabs.Bar>
-      <Tabs.Panels>
-        <Tabs.Panel value="tab-1">
+    <plus-tabs value="tab-1">
+      <plus-tabs-bar>
+        <plus-tabs-tab value="tab-1"> Tab 1 </plus-tabs-tab>
+        <plus-tabs-tab value="tab-2"> Tab 2 </plus-tabs-tab>
+        <plus-tabs-tab value="tab-3"> Tab 3 </plus-tabs-tab>
+      </plus-tabs-bar>
+      <plus-tabs-panels>
+        <plus-tabs-panel value="tab-1">
           <b>Tab One</b>
           <br />
-          <Faker></Faker>
-        </Tabs.Panel>
-        <Tabs.Panel value="tab-2">
+          <plus-faker></plus-faker>
+        </plus-tabs-panel>
+        <plus-tabs-panel value="tab-2">
           <b>Tab Two</b>
           <br />
-          <Faker></Faker>
-        </Tabs.Panel>
-        <Tabs.Panel value="tab-3">
+          <plus-faker></plus-faker>
+        </plus-tabs-panel>
+        <plus-tabs-panel value="tab-3">
           <b>Tab Three</b>
           <br />
-          <Faker></Faker>
-        </Tabs.Panel>
-      </Tabs.Panels>
-    </Tabs>
+          <plus-faker></plus-faker>
+        </plus-tabs-panel>
+      </plus-tabs-panels>
+    </plus-tabs>
   );
 }
 

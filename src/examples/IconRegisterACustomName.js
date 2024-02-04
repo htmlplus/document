@@ -3,7 +3,8 @@
  **************************************************/
 
 import { useEffect, useState } from 'react';
-import { Center, Icon } from '@htmlplus/react';
+import '@htmlplus/core/center.js';
+import '@htmlplus/core/icon.js';
 import { setConfig } from '@htmlplus/core/config.js';
 
 setConfig({
@@ -22,9 +23,9 @@ setConfig({
 
 function App() {
   return (
-    <Center>
-      <Icon name="custom-logo" size="5x"></Icon>
-    </Center>
+    <plus-center>
+      <plus-icon name="custom-logo" size="5x"></plus-icon>
+    </plus-center>
   );
 }
 

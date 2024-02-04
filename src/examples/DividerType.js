@@ -2,26 +2,26 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Divider } from '@htmlplus/react';
+import '@htmlplus/core/divider.js';
 
 function App() {
   return (
     <>
-      <Divider type="dashed"></Divider>
+      <plus-divider type="dashed"></plus-divider>
       <br />
-      <Divider type="dotted"></Divider>
+      <plus-divider type="dotted"></plus-divider>
       <br />
-      <Divider type="double"></Divider>
+      <plus-divider type="double"></plus-divider>
       <br />
-      <Divider type="groove"></Divider>
+      <plus-divider type="groove"></plus-divider>
       <br />
-      <Divider type="inset"></Divider>
+      <plus-divider type="inset"></plus-divider>
       <br />
-      <Divider type="outset"></Divider>
+      <plus-divider type="outset"></plus-divider>
       <br />
-      <Divider type="ridge"></Divider>
+      <plus-divider type="ridge"></plus-divider>
       <br />
-      <Divider type="solid"></Divider>
+      <plus-divider type="solid"></plus-divider>
     </>
   );
 }

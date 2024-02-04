@@ -2,21 +2,23 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Card, Grid } from '@htmlplus/react';
+import '@htmlplus/core/card.js';
+import '@htmlplus/core/grid-item.js';
+import '@htmlplus/core/grid.js';
 
 function App() {
   return (
-    <Grid justifyContent="evenly" gutter="md">
-      <Grid.Item xs="12" sm="auto">
-        <Card className="pink" outlined></Card>
-      </Grid.Item>
-      <Grid.Item xs="12" sm="auto">
-        <Card className="yellow" outlined></Card>
-      </Grid.Item>
-      <Grid.Item xs="12" sm="auto">
-        <Card className="blue" outlined></Card>
-      </Grid.Item>
-    </Grid>
+    <plus-grid justify-content="evenly" gutter="md">
+      <plus-grid-item xs="12" sm="auto">
+        <plus-card class="pink" outlined></plus-card>
+      </plus-grid-item>
+      <plus-grid-item xs="12" sm="auto">
+        <plus-card class="yellow" outlined></plus-card>
+      </plus-grid-item>
+      <plus-grid-item xs="12" sm="auto">
+        <plus-card class="blue" outlined></plus-card>
+      </plus-grid-item>
+    </plus-grid>
   );
 }
 

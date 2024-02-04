@@ -2,17 +2,19 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Avatar, Center, Tooltip } from '@htmlplus/react';
+import '@htmlplus/core/avatar.js';
+import '@htmlplus/core/center.js';
+import '@htmlplus/core/tooltip.js';
 
 function App() {
   return (
-    <Center>
-      <Avatar>
+    <plus-center>
+      <plus-avatar>
         <img src="https://picsum.photos/id/177/90/90" />
         <a href="https://picsum.photos/id/177/90/90" target="_blank"></a>
-      </Avatar>
-      <Tooltip>Tooltip</Tooltip>
-    </Center>
+      </plus-avatar>
+      <plus-tooltip>Tooltip</plus-tooltip>
+    </plus-center>
   );
 }
 

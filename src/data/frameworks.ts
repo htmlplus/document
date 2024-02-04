@@ -12,9 +12,9 @@ export const frameworks = [
     disabled: false
   },
   {
-    key: 'react-dedicated',
+    key: 'react',
     logo: '/assets/logo/react.svg',
-    title: 'React (dedicated)',
+    title: 'React',
     disabled: false
   },
   {

@@ -2,9 +2,11 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-import { Center, Signature, Stack } from '@htmlplus/react';
+import '@htmlplus/core/center.js';
+import '@htmlplus/core/signature.js';
+import '@htmlplus/core/stack.js';
 
 function App() {
   const signatureRef = useRef();
@@ -22,23 +24,29 @@ function App() {
     signatureRef.current.redo();
     sync();
   }
-  function onEnd() {
-    sync();
-  }
+  useEffect(() => {
+    function onPlusEnd() {
+      sync();
+    }
+    signatureRef.current.addEventListener('plus-end', onPlusEnd);
+    return () => {
+      signatureRef.current.removeEventListener('plus-end', onPlusEnd);
+    };
+  });
   return (
     <>
-      <Center>
-        <Signature backgroundColor="lightgray" onEnd={onEnd} ref={signatureRef}></Signature>
-      </Center>
+      <plus-center>
+        <plus-signature background-color="lightgray" ref={signatureRef}></plus-signature>
+      </plus-center>
       <br />
-      <Stack gap="1rem">
+      <plus-stack gap="1rem">
         <button disabled={disabled1} onClick={onClick1}>
           Undo
         </button>
         <button disabled={disabled2} onClick={onClick2}>
           Redo
         </button>
-      </Stack>
+      </plus-stack>
     </>
   );
 }

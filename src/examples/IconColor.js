@@ -2,17 +2,18 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Icon, Stack } from '@htmlplus/react';
+import '@htmlplus/core/icon.js';
+import '@htmlplus/core/stack.js';
 
 function App() {
   return (
-    <Stack gap="2rem">
-      <Icon name="house" color="#08DFC8"></Icon>
-      <Icon name="house" color="#FF5449"></Icon>
-      <Icon name="house" color="#5F9EE9"></Icon>
-      <Icon name="house" color="#FFC903"></Icon>
-      <Icon name="house" color="#9073C1"></Icon>
-    </Stack>
+    <plus-stack gap="2rem">
+      <plus-icon name="house" color="#08DFC8"></plus-icon>
+      <plus-icon name="house" color="#FF5449"></plus-icon>
+      <plus-icon name="house" color="#5F9EE9"></plus-icon>
+      <plus-icon name="house" color="#FFC903"></plus-icon>
+      <plus-icon name="house" color="#9073C1"></plus-icon>
+    </plus-stack>
   );
 }
 

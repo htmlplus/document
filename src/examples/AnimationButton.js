@@ -4,9 +4,9 @@
 
 import { useRef } from 'react';
 
-import { Animation, Center } from '@htmlplus/react';
-
+import '@htmlplus/core/animation.js';
 import '@htmlplus/core/animation/names/attention-seekers/tada.js';
+import '@htmlplus/core/center.js';
 
 function App() {
   const animationRef = useRef();
@@ -14,11 +14,11 @@ function App() {
     animationRef.current.run = true;
   }
   return (
-    <Center>
-      <Animation name="tada" ref={animationRef}>
+    <plus-center>
+      <plus-animation name="tada" ref={animationRef}>
         <button onClick={onClick}>Click Me</button>
-      </Animation>
-    </Center>
+      </plus-animation>
+    </plus-center>
   );
 }
 

@@ -2,33 +2,41 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-import { Accordion, Faker, ProgressBar } from '@htmlplus/react';
+import '@htmlplus/core/accordion.js';
+import '@htmlplus/core/faker.js';
+import '@htmlplus/core/progress-bar.js';
 
 function App() {
   const accordionRef = useRef();
   const [hidden, setHidden] = useState(true);
-  function onExpand(event) {
-    event.preventDefault();
-    setHidden(false);
-    setTimeout(() => {
-      setHidden(true);
-      accordionRef.current.open = true;
-    }, 2500);
-  }
+  useEffect(() => {
+    function onPlusExpand(event) {
+      event.preventDefault();
+      setHidden(false);
+      setTimeout(() => {
+        setHidden(true);
+        accordionRef.current.open = true;
+      }, 2500);
+    }
+    accordionRef.current.addEventListener('plus-expand', onPlusExpand);
+    return () => {
+      accordionRef.current.removeEventListener('plus-expand', onPlusExpand);
+    };
+  });
   return (
-    <Accordion summary="Summary" onExpand={onExpand} ref={accordionRef}>
-      <ProgressBar
+    <plus-accordion summary="Summary" ref={accordionRef}>
+      <plus-progress-bar
         variant="indeterminate"
         slot="top"
         style={{
           height: '2px'
         }}
         hidden={hidden}
-      ></ProgressBar>
-      <Faker></Faker>
-    </Accordion>
+      ></plus-progress-bar>
+      <plus-faker></plus-faker>
+    </plus-accordion>
   );
 }
 

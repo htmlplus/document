@@ -4,7 +4,9 @@
 
 import { useRef } from 'react';
 
-import { Center, Signature, Stack } from '@htmlplus/react';
+import '@htmlplus/core/center.js';
+import '@htmlplus/core/signature.js';
+import '@htmlplus/core/stack.js';
 
 function App() {
   const signatureRef = useRef();
@@ -18,14 +20,14 @@ function App() {
   };
   return (
     <>
-      <Center>
-        <Signature backgroundColor="lightgray" ref={signatureRef}></Signature>
-      </Center>
+      <plus-center>
+        <plus-signature background-color="lightgray" ref={signatureRef}></plus-signature>
+      </plus-center>
       <br />
-      <Stack gap="1rem">
+      <plus-stack gap="1rem">
         <button onClick={() => save(true)}>Save With Background</button>
         <button onClick={() => save(false)}>Save Without Background</button>
-      </Stack>
+      </plus-stack>
     </>
   );
 }

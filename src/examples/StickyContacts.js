@@ -2,22 +2,22 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Sticky } from '@htmlplus/react';
+import '@htmlplus/core/sticky.js';
 
 function App() {
   return (
     <div className="container">
-      <Sticky>A</Sticky>
+      <plus-sticky>A</plus-sticky>
       <p>A</p>
-      <Sticky>B</Sticky>
+      <plus-sticky>B</plus-sticky>
       <p>B</p>
-      <Sticky>C</Sticky>
+      <plus-sticky>C</plus-sticky>
       <p>C</p>
-      <Sticky>D</Sticky>
+      <plus-sticky>D</plus-sticky>
       <p>D</p>
-      <Sticky>E</Sticky>
+      <plus-sticky>E</plus-sticky>
       <p>E</p>
-      <Sticky>F</Sticky>
+      <plus-sticky>F</plus-sticky>
       <p>F</p>
     </div>
   );

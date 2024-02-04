@@ -2,15 +2,17 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { Accordion, Faker, Icon } from '@htmlplus/react';
+import '@htmlplus/core/accordion.js';
+import '@htmlplus/core/faker.js';
+import '@htmlplus/core/icon.js';
 
 function App() {
   return (
-    <Accordion summary="First">
-      <Icon slot="icon-expand" name="plus"></Icon>
-      <Icon slot="icon-collapse" name="dash"></Icon>
-      <Faker></Faker>
-    </Accordion>
+    <plus-accordion summary="First">
+      <plus-icon slot="icon-expand" name="plus"></plus-icon>
+      <plus-icon slot="icon-collapse" name="dash"></plus-icon>
+      <plus-faker></plus-faker>
+    </plus-accordion>
   );
 }
 

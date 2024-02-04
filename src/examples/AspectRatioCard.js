@@ -2,21 +2,24 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { AspectRatio, Card, Center } from '@htmlplus/react';
+import '@htmlplus/core/aspect-ratio.js';
+import '@htmlplus/core/card-body.js';
+import '@htmlplus/core/card.js';
+import '@htmlplus/core/center.js';
 
 function App() {
   return (
-    <Center>
-      <Card outlined>
-        <Card.Body>
-          <AspectRatio value="16/9">
+    <plus-center>
+      <plus-card outlined>
+        <plus-card-body>
+          <plus-aspect-ratio value="16/9">
             <div className="placeholder"></div>
-          </AspectRatio>
+          </plus-aspect-ratio>
           <h3>Title</h3>
           <p>Description of the card.</p>
-        </Card.Body>
-      </Card>
-    </Center>
+        </plus-card-body>
+      </plus-card>
+    </plus-center>
   );
 }
 
