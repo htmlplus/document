@@ -12,6 +12,7 @@ function App() {
   const accordionRef = useRef();
   const [hidden, setHidden] = useState(true);
   useEffect(() => {
+    if (!accordionRef.current) return;
     function onPlusExpand(event) {
       event.preventDefault();
       setHidden(false);
@@ -22,6 +23,7 @@ function App() {
     }
     accordionRef.current.addEventListener('plus-expand', onPlusExpand);
     return () => {
+      if (!accordionRef.current) return;
       accordionRef.current.removeEventListener('plus-expand', onPlusExpand);
     };
   });

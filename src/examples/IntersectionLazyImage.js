@@ -11,6 +11,7 @@ import '@htmlplus/core/spinner.js';
 function App() {
   const intersectionRef = useRef();
   useEffect(() => {
+    if (!intersectionRef.current) return;
     function onPlusChange(event) {
       if (!event.detail.isIntersecting) return;
       setTimeout(() => {
@@ -24,6 +25,7 @@ function App() {
     }
     intersectionRef.current.addEventListener('plus-change', onPlusChange);
     return () => {
+      if (!intersectionRef.current) return;
       intersectionRef.current.removeEventListener('plus-change', onPlusChange);
     };
   });

@@ -7,7 +7,7 @@ import { useState } from 'react';
 import '@htmlplus/core/card.js';
 
 function App() {
-  const [elevation, setElevation] = useState(12);
+  const [elevation, setElevation] = useState(24);
   function onChange(event) {
     setElevation(event.target.value);
   }
@@ -15,7 +15,7 @@ function App() {
     <>
       <plus-card elevation={elevation}></plus-card>
       <br />
-      <input type="range" value="12" min="1" max="24" onChange={onChange} />
+      <input type="range" min="1" max="24" onChange={onChange} />
     </>
   );
 }

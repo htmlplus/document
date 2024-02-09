@@ -11,11 +11,13 @@ function App() {
   const plusFakerRef = useRef();
   const detectorRef = useRef();
   useEffect(() => {
+    if (!detectorRef.current) return;
     function onPlusChange(event) {
       console.log(event.detail);
     }
     detectorRef.current.addEventListener('plus-change', onPlusChange);
     return () => {
+      if (!detectorRef.current) return;
       detectorRef.current.removeEventListener('plus-change', onPlusChange);
     };
   });
