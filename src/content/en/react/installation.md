@@ -1,11 +1,11 @@
 # React
 
-`HTMLPLUS` web components are not fully [compatible](https://custom-elements-everywhere.com/#react@experimental) with React library.
+`HTMLPLUS` elements are not fully [compatible](https://custom-elements-everywhere.com/#react@experimental) with React library.
 
 <br/>
 
 <Alert type="warning">
-  React is not fully compatible with [Web Components](https://mdn.io/using-custom-elements), check the compatibility [here](https://custom-elements-everywhere.com).
+  React is not fully compatible with [Custom Elements](https://mdn.io/using-custom-elements), check the compatibility [here](https://custom-elements-everywhere.com).
 </Alert>
 
 ## Install
@@ -18,7 +18,7 @@ npm install @htmlplus/core
 
 ## Usage
 
-Import the reference of components.
+Import the reference of elements.
 
 ```jsx
 import '@htmlplus/core';

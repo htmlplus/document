@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation';
 import { Button, Code } from '@/components';
 import { ROUTES } from '@/constants';
 import { TocItem } from '@/containers';
-import { componentsLight } from '@/data';
+import { elementsLight } from '@/data';
 import { getPath } from '@/utils';
 
 export function Usage() {
@@ -14,7 +14,7 @@ export function Usage() {
   if (!params) return null;
 
   // TODO
-  const dependencies = componentsLight.find((item) => item.key == params.component)?.dependencies?.join(' ') || '';
+  const dependencies = elementsLight.find((item) => item.key == params.element)?.dependencies?.join(' ') || '';
 
   let dependency = 'npm install @htmlplus/core ';
 

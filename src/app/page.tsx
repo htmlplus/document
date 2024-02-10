@@ -27,14 +27,14 @@ export default function Page() {
           &nbsp; &nbsp;
           <h1 style={{ border: 'none', display: 'inline', verticalAlign: 'middle', padding: 0 }}>HTMLPLUS</h1>
         </div>
-        <h1 style={{ border: 'none' }}>The Most Flexible Open Source Web Component Library!</h1>
+        <h1 style={{ border: 'none' }}>The Most Flexible Open Source Web UI Library!</h1>
         <p style={{ maxWidth: '700px', margin: 'auto' }}>
           HTMLPLUS is framework-less and lightweight. It's totally native and developed purely with javascript. All
-          HTMLPLUS components are customizable and configurable.
+          HTMLPLUS elements are customizable and configurable.
         </p>
         <div>
           <NextLink
-            href={getPath(ROUTES.COMPONENT_DETAILS, { framework: FRAMEWORK_DEFAULT, component: 'accordion' })!}
+            href={getPath(ROUTES.ELEMENT_DETAILS, { framework: FRAMEWORK_DEFAULT, element: 'accordion' })!}
             passHref
             style={{
               padding: '0.75rem 2rem',

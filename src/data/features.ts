@@ -4,7 +4,7 @@ export const features = [
     icon: 'cross-framework',
     title: 'Cross Framework',
     description:
-      'All components are developed based on web components. They are  completely compatible with all framework.'
+      'All elements are developed based on custom elements. They are  completely compatible with all framework.'
   },
   {
     key: 'performance',
@@ -23,7 +23,7 @@ export const features = [
     key: 'lightweight',
     icon: 'lightweight',
     title: 'Lightweight',
-    description: 'We tried to keep the size of components as tiny as possbile.'
+    description: 'We tried to keep the size of elements as tiny as possbile.'
   },
   {
     key: 'dependency-free',
@@ -36,6 +36,6 @@ export const features = [
     key: 'simple',
     icon: 'simple',
     title: 'Simple and Easy-to-learn',
-    description: 'Robust explanation and complete examples aids are presented with components.'
+    description: 'Robust explanation and complete examples aids are presented with elements.'
   }
 ];

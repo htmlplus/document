@@ -1,6 +1,6 @@
 # Angular
 
-`HTMLPLUS` web components are fully [compatible](https://custom-elements-everywhere.com/#angular) with Angular framework.
+`HTMLPLUS` elements are fully [compatible](https://custom-elements-everywhere.com/#angular) with Angular framework.
 
 ## Install
 
@@ -31,7 +31,7 @@ export class AppModule { }
 
 ## Usage
 
-Import the reference of components.
+Import the reference of elements.
 
 ```js
 import { Component } from '@angular/core';
@@ -53,7 +53,7 @@ export class AppComponent { }
 <br/>
 
 <Alert type="info">
-All `HTMLPLUS` components are available as same as a local tag (div, video, etc.) in the angular project.
+All `HTMLPLUS` elements are available as same as a local tag (div, video, etc.) in the angular project.
 </Alert>
 
 ## Properties

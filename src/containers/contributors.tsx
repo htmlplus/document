@@ -20,28 +20,28 @@ export function Contributors() {
     if (pathname.match(/\/[^/]+\/api\/[^/]+/)) {
       return getPath(ROUTES.GITHUB_COMMITS, {
         repository: 'core',
-        path: `src/components/${params.component}`
+        path: `src/elements/${params.element}`
       });
     }
 
-    if (pathname.match(/\/[^/]+\/component\/[^/]+/)) {
+    if (pathname.match(/\/[^/]+\/element\/[^/]+/)) {
       return getPath(ROUTES.GITHUB_COMMITS, {
         repository: 'core',
-        path: `src/components/${params.component}`
+        path: `src/elements/${params.element}`
       });
     }
 
-    if (pathname.match(/\/component\/[^/]+\/config/)) {
+    if (pathname.match(/\/element\/[^/]+\/config/)) {
       return getPath(ROUTES.GITHUB_COMMITS, {
         repository: 'document',
-        path: `src/app/(internal)/component/[component]/config`
+        path: `src/app/(internal)/element/[element]/config`
       });
     }
 
-    if (pathname.match(/\/component\/animation\/names/)) {
+    if (pathname.match(/\/element\/animation\/names/)) {
       return getPath(ROUTES.GITHUB_COMMITS, {
         repository: 'document',
-        path: 'src/app/(internal)/component/animation/names'
+        path: 'src/app/(internal)/element/animation/names'
       });
     }
 
@@ -70,7 +70,8 @@ export function Contributors() {
             return contributors?.indexOf(contributor) === index;
           })
       )
-      .then(setContributors);
+      .then(setContributors)
+      .catch(() => {});
   }, [paths]);
 
   if (!contributors?.length) return null;

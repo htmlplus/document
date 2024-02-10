@@ -1,5 +1,5 @@
 import { ROUTES } from '@/constants';
-import { componentsLight, frameworks } from '@/data';
+import { elementsLight, frameworks } from '@/data';
 import { getPath } from '@/utils';
 
 export const sidebar = (framework: string) => [
@@ -36,24 +36,24 @@ export const sidebar = (framework: string) => [
     }))
   },
   {
-    title: 'UI Components',
-    items: componentsLight
-      .filter((component) => {
-        const key = component.key.split('-').slice(0, -1).join('-');
-        if (component.key == key) return true;
-        return !componentsLight.some((component) => component.key == key);
+    title: 'UI Elements',
+    items: elementsLight
+      .filter((element) => {
+        const key = element.key.split('-').slice(0, -1).join('-');
+        if (element.key == key) return true;
+        return !elementsLight.some((element) => element.key == key);
       })
-      .map((component) => ({
-        stable: component.stable,
-        title: component.title,
-        url: getPath(ROUTES.COMPONENT_DETAILS, { framework, component: component.key })
+      .map((element) => ({
+        stable: element.stable,
+        title: element.title,
+        url: getPath(ROUTES.ELEMENT_DETAILS, { framework, element: element.key })
       }))
   },
   {
-    title: 'UI Components API',
-    items: componentsLight.map((component) => ({
-      title: component.title,
-      url: getPath(ROUTES.API_DETAILS, { framework, component: component.key })
+    title: 'UI Elements API',
+    items: elementsLight.map((element) => ({
+      title: element.title,
+      url: getPath(ROUTES.API_DETAILS, { framework, element: element.key })
     }))
   },
   {

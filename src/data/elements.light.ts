@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-export const componentsLight = [
+export const elementsLight = [
   {
     "key": "accordion",
     "stable": true,

@@ -1,6 +1,6 @@
 # Vue
 
-`HTMLPLUS` web components are fully [compatible](https://custom-elements-everywhere.com/#vue) with Vue framework.
+`HTMLPLUS` elements are fully [compatible](https://custom-elements-everywhere.com/#vue) with Vue framework.
 
 ## Install
 
@@ -24,7 +24,7 @@ compilerOptions: {
 
 ## Usage
 
-Import the reference of components.
+Import the reference of elements.
 
 ```html
 <template>
@@ -39,7 +39,7 @@ Import the reference of components.
 <br/>
 
 <Alert type="info">
-All `HTMLPLUS` components are available as same as a local tag (div, video, etc.) in the vue project.
+All `HTMLPLUS` elements are available as same as a local tag (div, video, etc.) in the vue project.
 </Alert>
 
 ## Properties

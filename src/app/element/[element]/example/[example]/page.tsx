@@ -8,7 +8,7 @@ interface IPage {
 }
 
 interface IParams {
-  component: string;
+  element: string;
   example: string;
 }
 
@@ -18,10 +18,10 @@ export function generateStaticParams() {
   for (const example of examples) {
     if (!example.settings?.isolate) continue;
 
-    const [frameworkKey, componentKey, exampleKey] = example.key.split('/');
+    const [frameworkKey, elementKey, exampleKey] = example.key.split('/');
 
     params.push({
-      component: componentKey,
+      element: elementKey,
       example: exampleKey
     });
   }
@@ -30,7 +30,7 @@ export function generateStaticParams() {
 }
 
 export default function Page({ params }: IPage) {
-  const name = pascalCase(params.component + ' ' + params.example);
+  const name = pascalCase(params.element + ' ' + params.example);
 
   const Preview = Examples[name as keyof typeof Examples];
 

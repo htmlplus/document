@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 
-// TODO
 import '@htmlplus/core/animation/names/all.js';
 
 export function Box({ category }: { category: any }) {

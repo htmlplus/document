@@ -30,7 +30,7 @@ Sets a config for the `size` property of the `spinner` element.
       });
     </script>
 
-    <!-- Loads components after initialize the global config -->
+    <!-- Loads elements after initialize the global config -->
     <script type="module">
       import "https://unpkg.com/@htmlplus/core/spinner";
     </script>

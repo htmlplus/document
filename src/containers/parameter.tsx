@@ -1,5 +1,4 @@
-'use client';
-
+// TODO 'use client';
 import { Button, Code } from '@/components';
 import { ROUTES } from '@/constants';
 import { Markup } from '@/containers';
@@ -23,7 +22,7 @@ export function Parameter(item: any) {
         break;
     }
     if (!reference) return;
-    return getPath(ROUTES.TYPE_GITHUB_LINK, { component: item.component.key, fileName: `${reference.slice(2)}.ts` });
+    return getPath(ROUTES.TYPE_GITHUB_LINK, { element: item.element.key, fileName: `${reference.slice(2)}.ts` });
   })();
 
   return (

@@ -9,7 +9,7 @@ import { getPath } from '@/utils';
 
 export interface IExample {
   Preview?: React.FC;
-  component?: string;
+  element?: string;
   example?: string;
   isolate?: boolean;
   links?: Array<{
@@ -29,7 +29,7 @@ export interface IExample {
   title?: string;
 }
 
-export function Example({ Preview, component, example, isolate, links, rtl, tabs, title }: IExample) {
+export function Example({ Preview, element, example, isolate, links, rtl, tabs, title }: IExample) {
   const frameworks = useFrameworks();
 
   const $preview = useRef<HTMLElement>(null);
@@ -40,7 +40,7 @@ export function Example({ Preview, component, example, isolate, links, rtl, tabs
 
   const [visible, setVisible] = useState(true);
 
-  if (!component || !example) return <Alert type="error">NOT FOUND</Alert>;
+  if (!element || !example) return <Alert type="error">NOT FOUND</Alert>;
 
   const onDirection = (event?: MouseEvent) => {
     event?.preventDefault();
@@ -123,7 +123,7 @@ export function Example({ Preview, component, example, isolate, links, rtl, tabs
           )}
           {visible && isolate == true && (
             <div className={loaded ? '' : 'skeleton'}>
-              <iframe src={getPath(ROUTES.COMPONENT_EXAMPLE, { component, example })} onLoad={onIframeLoad} />
+              <iframe src={getPath(ROUTES.ELEMENT_EXAMPLE, { element, example })} onLoad={onIframeLoad} />
             </div>
           )}
         </plus-tabs-panel>

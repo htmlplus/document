@@ -1,6 +1,6 @@
 # Svelte
 
-`HTMLPLUS` web components are fully [compatible](https://custom-elements-everywhere.com/#svelte) with Svelte framework.
+`HTMLPLUS` elements are fully [compatible](https://custom-elements-everywhere.com/#svelte) with Svelte framework.
 
 ## Install
 
@@ -12,7 +12,7 @@ npm install @htmlplus/core
 
 ## Usage
 
-Import the reference of components.
+Import the reference of elements.
 
 ```html
 <script>
@@ -25,7 +25,7 @@ Import the reference of components.
 <br/>
 
 <Alert type="info">
-All `HTMLPLUS` components are available as same as a local tag (div, video, etc.) in the svelte project.
+All `HTMLPLUS` elements are available as same as a local tag (div, video, etc.) in the svelte project.
 </Alert>
 
 ## Properties

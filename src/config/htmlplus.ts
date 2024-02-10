@@ -3,7 +3,7 @@ import { setConfig } from '@htmlplus/core/config';
 
 import { faker } from '@faker-js/faker/locale/en';
 
-if (typeof window != 'undefined' && !location.pathname.match(/\/component\/(.*)\/example\/(.*)/)) {
+if (typeof window != 'undefined' && !location.pathname.match(/\/element\/(.*)\/example\/(.*)/)) {
   setConfig({
     element: {
       'plus-divider': {

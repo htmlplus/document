@@ -1,6 +1,6 @@
 # React (experimental)
 
-`HTMLPLUS` web components are fully [compatible](https://custom-elements-everywhere.com/#react@experimental) with React library.
+`HTMLPLUS` elements are fully [compatible](https://custom-elements-everywhere.com/#react@experimental) with React library.
 
 ## Install
 
@@ -12,7 +12,7 @@ npm install @htmlplus/core
 
 ## Usage
 
-Import the reference of components.
+Import the reference of elements.
 
 ```jsx
 import '@htmlplus/core';

@@ -2,7 +2,7 @@ import { capitalCase, pascalCase, sentenceCase } from 'change-case';
 
 import { ROUTES } from '@/constants';
 import { Markup } from '@/containers';
-import { components, examples, frameworks } from '@/data';
+import { elements, examples, frameworks } from '@/data';
 import * as Examples from '@/examples';
 import { getPath } from '@/utils';
 
@@ -11,7 +11,7 @@ interface IPage {
 }
 
 interface IParams {
-  component: string;
+  element: string;
   framework: string;
 }
 
@@ -19,9 +19,9 @@ export function generateStaticParams() {
   const params: IParams[] = [];
 
   for (const framework of frameworks) {
-    for (const component of components) {
+    for (const element of elements) {
       params.push({
-        component: component.key,
+        element: element.key,
         framework: framework.key
       });
     }
@@ -31,34 +31,34 @@ export function generateStaticParams() {
 }
 
 export default function Page({ params }: IPage) {
-  const component = components.find((component) => component.key == params.component);
+  const element = elements.find((element) => element.key == params.element);
 
   // TODO
-  if (!component) return null;
+  if (!element) return null;
 
   const example = {} as any;
 
   // TODO
   // const meta = {
-  //   title: component.title || null,
-  //   description: component.description || null,
-  //   url: getPath(ROUTES.COMPONENT_DETAILS, params) || null
+  //   title: element.title || null,
+  //   description: element.description || null,
+  //   url: getPath(ROUTES.ELEMENT_DETAILS, params) || null
   // };
 
   try {
-    component.readmeContent = component.readmeContent
+    element.readmeContent = element.readmeContent
       .replace(/<Example value=(".*") /g, `<Example {...(example[$1] || {})} `)
-      .replace(/<LastModified/g, `<LastModified value="${component.lastModified}"`);
+      .replace(/<LastModified/g, `<LastModified value="${element.lastModified}"`);
   } catch {}
 
-  component.readmeContent ||= '';
+  element.readmeContent ||= '';
 
   for (const current of examples) {
-    const [frameworkKey, componentKey, exampleKey] = current.key.split('/');
+    const [frameworkKey, elementKey, exampleKey] = current.key.split('/');
 
-    if (params.framework != frameworkKey || params.component != componentKey) continue;
+    if (params.framework != frameworkKey || params.element != elementKey) continue;
 
-    const Preview = Examples[pascalCase(componentKey + ' ' + exampleKey) as keyof typeof Examples];
+    const Preview = Examples[pascalCase(elementKey + ' ' + exampleKey) as keyof typeof Examples];
 
     const parameters = Object.assign({}, params, { example: exampleKey });
 
@@ -113,7 +113,7 @@ export default function Page({ params }: IPage) {
     ];
 
     example[exampleKey] = {
-      component: component.key,
+      element: element.key,
       example: exampleKey,
       ...(current.settings || {}), // TODO
       links,
@@ -123,5 +123,5 @@ export default function Page({ params }: IPage) {
     };
   }
 
-  return <Markup value={component.readmeContent} scope={{ example }}></Markup>;
+  return <Markup value={element.readmeContent} scope={{ example }}></Markup>;
 }

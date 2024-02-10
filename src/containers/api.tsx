@@ -20,7 +20,7 @@ export function Api() {
         Click&nbsp;
         <Button
           link="underline"
-          to={getPath(ROUTES.API_DETAILS, { component: params.component, framework: params.framework })}
+          to={getPath(ROUTES.API_DETAILS, { element: params.element, framework: params.framework })}
         >
           here
         </Button>

@@ -47,7 +47,7 @@ export default function Page() {
     <>
       <h1>Animations</h1>
       <p>
-        A large range of animations for use in the <code>animation</code> component.
+        A large range of animations for use in the <code>animation</code> element.
       </p>
       <h2>
         <TocItem level={2}>Usage</TocItem>

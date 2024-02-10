@@ -72,19 +72,19 @@ const HEADER = [
   fs.writeFileSync(DESTINATION, content, 'utf8');
 })();
 
-// components light
+// elements light
 (async () => {
-  const DESTINATION = './src/data/components.light.ts';
+  const DESTINATION = './src/data/elements.light.ts';
 
   const lines = [
     ...HEADER,
-    'export const componentsLight = ' +
+    'export const elementsLight = ' +
       JSON.stringify(
-        document?.elements?.map((component) => ({
-          key: component.key,
-          stable: component.tags.some((tag) => tag.key == 'stable') || undefined,
-          title: component.title,
-          dependencies: component?.tags
+        document?.elements?.map((element) => ({
+          key: element.key,
+          stable: element.tags.some((tag) => tag.key == 'stable') || undefined,
+          title: element.title,
+          dependencies: element?.tags
             ?.find((tag) => tag.key == 'dependencies')
             ?.value?.split(',')
             ?.map((dependency) => dependency.trim())
@@ -119,7 +119,7 @@ const HEADER = [
   fs.writeFileSync(FILE, content, 'utf8');
 })();
 
-// examples component
+// examples element
 (async () => {
   const DIRECTORY = './src/examples';
   const LOCAL = path.join(__dirname, '../../examples/dist/db.json');
@@ -218,18 +218,16 @@ const HEADER = [
   const lines = [
     ...HEADER,
     'export const statistics = {',
-    "  platforms: 'TODO',",
-    "  themes: 'TODO',",
     `  forks: ${first.forks},`,
     `  stars: ${first.stargazers_count},`,
     `  watchers: ${first.subscribers_count},`,
     `  dowanloads: ${second.downloads},`,
     `  downloadsLastWeek: ${fourth.downloads},`,
     `  downloadsLastMonth: ${third.downloads},`,
-    '  get components(): number {',
-    '    return this.componentsPerFramework * this.frameworks;',
+    '  get elements(): number {',
+    '    return this.elementsPerFramework * this.frameworks;',
     '  },',
-    `  componentsPerFramework: ${10},`,
+    `  elementsPerFramework: ${10},`,
     '  get examples(): number {',
     '    return this.examplesPerFramework * this.frameworks;',
     '  },',

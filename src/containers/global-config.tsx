@@ -19,7 +19,7 @@ export function GlobalConfig() {
       </h2>
       <p>
         See the animation's&nbsp;
-        <Button link="underline" to={getPath(ROUTES.COMPONENT_CONFIG, { component: params.component })}>
+        <Button link="underline" to={getPath(ROUTES.ELEMENT_CONFIG, { element: params.element })}>
           config
         </Button>
         . Full&nbsp;

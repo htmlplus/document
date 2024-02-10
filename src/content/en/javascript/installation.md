@@ -1,6 +1,6 @@
 # JavaScript
 
-`HTMLPLUS` web components are fully compatible with JavaScript. To utilize web components in your JavaScript application follow these steps.
+`HTMLPLUS` elements are fully compatible with JavaScript. To utilize elements in your JavaScript application follow these steps.
 
 ## Import
 
@@ -49,7 +49,7 @@ To set property. All Standard JavaScript APIs are supported. Feel free to use th
 
 ## Events
 
-To add event to components you can use this format.
+To add event to elements you can use this format.
 
 ```html
 <plus-switch id="element"></plus-switch>

@@ -1,17 +1,17 @@
 import { Fragment } from 'react';
 
-import { kebabCase, pascalCase } from 'change-case';
+import { kebabCase } from 'change-case';
 
 import { Alert } from '@/components';
 import { Parameter, TocItem } from '@/containers';
-import { components, frameworks } from '@/data';
+import { elements, frameworks } from '@/data';
 
 interface IPage {
   params: IParams;
 }
 
 interface IParams {
-  component: string;
+  element: string;
   framework: string;
 }
 
@@ -19,9 +19,9 @@ export function generateStaticParams() {
   const params: IParams[] = [];
 
   for (const framework of frameworks) {
-    for (const component of components) {
+    for (const element of elements) {
       params.push({
-        component: component.key,
+        element: element.key,
         framework: framework.key
       });
     }
@@ -31,12 +31,12 @@ export function generateStaticParams() {
 }
 
 export default function Page({ params }: IPage) {
-  const component = components.find((component) => component.key == params.component);
+  const element = elements.find((element) => element.key == params.element);
 
   // TODO
   // const meta = {
-  //   title: component.title || null,
-  //   description: component.description || null,
+  //   title: element.title || null,
+  //   description: element.description || null,
   //   url: getPath(ROUTES.API_DETAILS, params) || null
   // };
 
@@ -44,45 +44,44 @@ export default function Page({ params }: IPage) {
     {
       key: 'property',
       title: 'Properties',
-      items: component.properties
+      items: element.properties
     },
     {
       key: 'slot',
       title: 'Slots',
-      items: component.slots
+      items: element.slots
     },
     {
       key: 'event',
       title: 'Events',
-      items: component.events.map((event: any) => ({
+      items: element.events.map((event: any) => ({
         ...event,
-        // TODO
-        name: params.framework == 'react-dedicated' ? pascalCase(event.name) : kebabCase(event.name)
+        name: kebabCase(event.name)
       }))
     },
     {
       key: 'style',
       title: 'CSS Variables',
-      items: component.styles
+      items: element.styles
     },
     {
       key: 'part',
       title: 'CSS Parts',
-      items: component.parts
+      items: element.parts
     },
     {
       key: 'method',
       title: 'Methods',
-      items: component.methods
+      items: element.methods
     }
   ];
 
   return (
     <>
-      <h1>{component.title}</h1>
+      <h1>{element.title}</h1>
       <p>See below to learn more about properties, slots, events, style variables, CSS parts, and methods.</p>
       <Alert type="info">
-        There is no difference between the APIs of the components, And the only difference is in the names of the events
+        There is no difference between the APIs of the elements, And the only difference is in the names of the events
       </Alert>
       {sections.map((section: any) => (
         <Fragment key={section.key}>
@@ -92,7 +91,7 @@ export default function Page({ params }: IPage) {
           {!section.items?.length && <p>There are no {section.title}.</p>}
           {section.items.map((item: any, index: number) => (
             <Fragment key={item.name}>
-              <Parameter component={component} kind={section.key} {...item} />
+              <Parameter element={element} kind={section.key} {...item} />
               {section.items.length - 1 > index && <plus-divider></plus-divider>}
             </Fragment>
           ))}

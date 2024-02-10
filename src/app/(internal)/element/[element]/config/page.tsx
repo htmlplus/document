@@ -2,7 +2,7 @@ import { capitalCase } from 'change-case';
 
 import { Alert, Button, Code } from '@/components';
 import { ROUTES } from '@/constants';
-import { components, frameworks } from '@/data';
+import { elements, frameworks } from '@/data';
 import { getPath } from '@/utils';
 
 interface IPage {
@@ -10,16 +10,16 @@ interface IPage {
 }
 
 interface IParams {
-  component: string;
+  element: string;
 }
 
 export function generateStaticParams() {
   const params: IParams[] = [];
 
   for (const framework of frameworks) {
-    for (const component of components) {
+    for (const element of elements) {
       params.push({
-        component: component.key
+        element: element.key
       });
     }
   }
@@ -28,12 +28,12 @@ export function generateStaticParams() {
 }
 
 export default function Page({ params }: IPage) {
-  const component = components.find((component) => component.key == params.component);
+  const element = elements.find((element) => element.key == params.element);
   return (
     <>
-      <h1>{capitalCase(component.key)} global config</h1>
+      <h1>{capitalCase(element.key)} global config</h1>
       <p>
-        All of the component's APIs are configurable as below. Full&nbsp;
+        All of the element's APIs are configurable as below. Full&nbsp;
         <Button link="underline" to={getPath(ROUTES.GLOBAL_CONFIG, {})}>
           documentation
         </Button>
@@ -49,9 +49,9 @@ export default function Page({ params }: IPage) {
           `setConfig({`,
           `  element: {`,
           // TODO: remove plus
-          `    'plus-${component.key}': {`,
+          `    'plus-${element.key}': {`,
           `      property: {`,
-          component.properties.map((property: any) => {
+          element.properties.map((property: any) => {
             return `        ${property.name}: ${property.initializer},`;
           }),
           `      }`,
