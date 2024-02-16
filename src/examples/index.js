@@ -130,10 +130,6 @@ export const FakerDefault = dynamic(() => import('./FakerDefault'), { suspense: 
 export const FakerLocalization = dynamic(() => import('./FakerLocalization'), { suspense: true });
 export const FakerMore = dynamic(() => import('./FakerMore'), { suspense: true });
 export const FakerSeed = dynamic(() => import('./FakerSeed'), { suspense: true });
-export const FloatingDefault = dynamic(() => import('./FloatingDefault'), { suspense: true });
-export const FloatingFixed = dynamic(() => import('./FloatingFixed'), { suspense: true });
-export const FloatingOffset = dynamic(() => import('./FloatingOffset'), { suspense: true });
-export const FloatingPlacement = dynamic(() => import('./FloatingPlacement'), { suspense: true });
 export const FormatBytesDecimals = dynamic(() => import('./FormatBytesDecimals'), { suspense: true });
 export const FormatBytesDefault = dynamic(() => import('./FormatBytesDefault'), { suspense: true });
 export const FormatBytesDisplay = dynamic(() => import('./FormatBytesDisplay'), { suspense: true });

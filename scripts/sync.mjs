@@ -3,7 +3,6 @@ import { kebabCase, pascalCase } from 'change-case';
 import fs from 'fs';
 import path from 'path';
 import * as url from 'url';
-import document from '@htmlplus/core/json/document.json' assert { type: 'json' };
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
@@ -75,6 +74,9 @@ const HEADER = [
 // elements light
 (async () => {
   const DESTINATION = './src/data/elements.light.ts';
+  const LOCAL = path.join(__dirname, './node_modules/@htmlplus/core/json/document.json');
+
+  const document = JSON.parse(await load(LOCAL));
 
   const lines = [
     ...HEADER,

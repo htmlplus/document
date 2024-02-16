@@ -112,11 +112,6 @@ export const elementsLight = [
     ]
   },
   {
-    "key": "floating",
-    "stable": true,
-    "title": "Floating"
-  },
-  {
     "key": "format-bytes",
     "stable": true,
     "title": "Format Bytes"
@@ -137,10 +132,6 @@ export const elementsLight = [
     "key": "intersection",
     "stable": true,
     "title": "Intersection"
-  },
-  {
-    "key": "portal",
-    "title": "Portal"
   },
   {
     "key": "progress-bar",
