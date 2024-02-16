@@ -50,7 +50,8 @@ export const AvatarLink = dynamic(() => import('./AvatarLink'), { suspense: true
 export const AvatarShape = dynamic(() => import('./AvatarShape'), { suspense: true });
 export const AvatarSize = dynamic(() => import('./AvatarSize'), { suspense: true });
 export const AvatarSlots = dynamic(() => import('./AvatarSlots'), { suspense: true });
-export const AvatarSvgRatio = dynamic(() => import('./AvatarSvgRatio'), { suspense: true });
+export const AvatarSvgRatioGlobal = dynamic(() => import('./AvatarSvgRatioGlobal'), { suspense: true });
+export const AvatarSvgRatioInline = dynamic(() => import('./AvatarSvgRatioInline'), { suspense: true });
 export const AvatarSvg = dynamic(() => import('./AvatarSvg'), { suspense: true });
 export const AvatarText = dynamic(() => import('./AvatarText'), { suspense: true });
 export const AvatarTooltip = dynamic(() => import('./AvatarTooltip'), { suspense: true });

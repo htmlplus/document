@@ -74,9 +74,10 @@ const HEADER = [
 // elements light
 (async () => {
   const DESTINATION = './src/data/elements.light.ts';
-  const LOCAL = path.join(__dirname, './node_modules/@htmlplus/core/json/document.json');
+  const LOCAL = path.join(__dirname, '../../core/dist/json/document.json');
+  const REMOTE = 'https://github.com/htmlplus/core/raw/main/dist/json/document.json';
 
-  const document = JSON.parse(await load(LOCAL));
+  const document = JSON.parse(await load(LOCAL, REMOTE));
 
   const lines = [
     ...HEADER,
