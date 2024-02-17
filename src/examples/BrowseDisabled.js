@@ -11,8 +11,8 @@ function App() {
   const browseRef = useRef();
   useEffect(() => {
     if (!browseRef.current) return;
-    function onPlusChange(event) {
-      console.log(event.detail);
+    function onPlusChange() {
+      alert('File selected.');
     }
     browseRef.current.addEventListener('plus-change', onPlusChange);
     return () => {
@@ -22,17 +22,20 @@ function App() {
   });
   return (
     <plus-center>
-      <plus-browse ref={browseRef}> Click Here </plus-browse>
+      <plus-browse disabled ref={browseRef}>
+        {' '}
+        Click Here{' '}
+      </plus-browse>
     </plus-center>
   );
 }
 
-const BrowseDefault = () => {
+const BrowseDisabled = () => {
   return (
-    <div className="ex-browse-default">
+    <div className="ex-browse-disabled">
       <App />
     </div>
   )
 };
 
-export default BrowseDefault;
+export default BrowseDisabled;

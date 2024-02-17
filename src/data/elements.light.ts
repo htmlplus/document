@@ -34,6 +34,7 @@ export const elementsLight = [
   },
   {
     "key": "browse",
+    "stable": true,
     "title": "Browse"
   },
   {

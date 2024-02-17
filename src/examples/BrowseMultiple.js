@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     if (!browseRef.current) return;
     function onPlusChange(event) {
-      console.log(event.detail);
+      alert(`${event.detail.files.length} file(s) are selected.`);
     }
     browseRef.current.addEventListener('plus-change', onPlusChange);
     return () => {
@@ -22,17 +22,19 @@ function App() {
   });
   return (
     <plus-center>
-      <plus-browse ref={browseRef}> Click Here </plus-browse>
+      <plus-browse multiple ref={browseRef}>
+        Click Here
+      </plus-browse>
     </plus-center>
   );
 }
 
-const BrowseDefault = () => {
+const BrowseMultiple = () => {
   return (
-    <div className="ex-browse-default">
+    <div className="ex-browse-multiple">
       <App />
     </div>
   )
 };
 
-export default BrowseDefault;
+export default BrowseMultiple;

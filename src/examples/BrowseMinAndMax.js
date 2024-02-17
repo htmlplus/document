@@ -12,7 +12,9 @@ function App() {
   useEffect(() => {
     if (!browseRef.current) return;
     function onPlusChange(event) {
-      console.log(event.detail);
+      if (event.detail.error) {
+        alert(event.detail.error.message);
+      }
     }
     browseRef.current.addEventListener('plus-change', onPlusChange);
     return () => {
@@ -22,17 +24,20 @@ function App() {
   });
   return (
     <plus-center>
-      <plus-browse ref={browseRef}> Click Here </plus-browse>
+      <plus-browse min={3} max={5} multiple ref={browseRef}>
+        {' '}
+        Click Here{' '}
+      </plus-browse>
     </plus-center>
   );
 }
 
-const BrowseDefault = () => {
+const BrowseMinAndMax = () => {
   return (
-    <div className="ex-browse-default">
+    <div className="ex-browse-min-and-max">
       <App />
     </div>
   )
 };
 
-export default BrowseDefault;
+export default BrowseMinAndMax;

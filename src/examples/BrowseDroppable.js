@@ -5,14 +5,14 @@
 import { useEffect, useRef } from 'react';
 
 import '@htmlplus/core/browse.js';
-import '@htmlplus/core/center.js';
 
 function App() {
   const browseRef = useRef();
   useEffect(() => {
     if (!browseRef.current) return;
     function onPlusChange(event) {
-      console.log(event.detail);
+      const name = event.detail.files[0].file.name;
+      alert(`File '${name}' selected.`);
     }
     browseRef.current.addEventListener('plus-change', onPlusChange);
     return () => {
@@ -21,18 +21,20 @@ function App() {
     };
   });
   return (
-    <plus-center>
-      <plus-browse ref={browseRef}> Click Here </plus-browse>
-    </plus-center>
+    <plus-browse droppable ref={browseRef}>
+      {' '}
+      Click or Drag & Drop a file(s) here{' '}
+    </plus-browse>
   );
 }
 
-const BrowseDefault = () => {
+const BrowseDroppable = () => {
   return (
-    <div className="ex-browse-default">
+    <div className="ex-browse-droppable">
       <App />
+      <style>{`.ex-browse-droppable plus-browse {  background: white;  border: 2px dashed lightgray;  border-radius: 4px;  display: block;  padding: 3rem;  text-align: center;}.ex-browse-droppable plus-browse[dragging]:not([dragging='false']) {  border-color: darkgray;}`}</style>
     </div>
   )
 };
 
-export default BrowseDefault;
+export default BrowseDroppable;
