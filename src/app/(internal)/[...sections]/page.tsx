@@ -22,7 +22,7 @@ function getContent(key: string) {
 
   const content = fs.readFileSync(final, 'utf8');
 
-  return content;
+  return '# Test';
 }
 
 export function generateStaticParams() {
@@ -37,7 +37,7 @@ export function generateStaticParams() {
 export default function Page({ params }: IPage) {
   const key = ROOT + '/' + params.sections.join('/');
 
-  //const content = getContent(key);
+  const content = getContent(key);
 
-  return <div>{key}</div>;
+  return <Markup value={content}></Markup>;
 }
