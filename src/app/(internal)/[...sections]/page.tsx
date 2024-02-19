@@ -1,5 +1,6 @@
 import glob from 'fast-glob';
 import fs from 'fs';
+import path from 'path';
 
 import { Markup } from '@/containers';
 
@@ -13,18 +14,6 @@ interface IParams {
 
 const ROOT = 'src/content/en';
 
-function getContent(key: string) {
-  // const main = `${key}.md`;
-
-  // const alternative = `${key}/index.md`;
-
-  // const final = fs.existsSync(main) ? main : alternative;
-
-  // const content = fs.readFileSync(final, 'utf8');
-
-  return '# Test';
-}
-
 export function generateStaticParams() {
   return glob.sync(ROOT + '/**/*.md').map((file) =>
     file
@@ -37,7 +26,13 @@ export function generateStaticParams() {
 export default function Page({ params }: IPage) {
   const key = ROOT + '/' + params.sections.join('/');
 
-  const content = getContent(key);
+  const main = path.resolve(`${key}.md`);
+
+  const alternative = path.resolve(`${key}/index.md`);
+
+  const final = fs.existsSync(main) ? main : alternative;
+
+  const content = fs.readFileSync(final, 'utf8');
 
   return <Markup value={content}></Markup>;
 }
