@@ -37,7 +37,7 @@ export function generateStaticParams() {
 export default function Page({ params }: IPage) {
   const key = ROOT + '/' + params.sections.join('/');
 
-  const content = getContent(key);
+  //const content = getContent(key);
 
-  return <Markup value={content}></Markup>;
+  return <div>{key}</div>;
 }
