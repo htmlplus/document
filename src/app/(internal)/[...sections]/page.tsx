@@ -25,6 +25,7 @@ export function generateStaticParams() {
 
 export default function Page({ params }: IPage) {
   const key = ROOT + '/' + params.sections.join('/');
+
   const main = path.resolve(`${key}.md`);
 
   const alternative = path.resolve(`${key}/index.md`);
