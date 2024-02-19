@@ -14,15 +14,15 @@ interface IParams {
 const ROOT = 'src/content/en';
 
 function getContent(key: string) {
-  const main = `${key}.md`;
+  // const main = `${key}.md`;
 
-  const alternative = `${key}/index.md`;
+  // const alternative = `${key}/index.md`;
 
-  const final = fs.existsSync(main) ? main : alternative;
+  // const final = fs.existsSync(main) ? main : alternative;
 
-  const content = fs.readFileSync(final, 'utf8');
+  // const content = fs.readFileSync(final, 'utf8');
 
-  return content;
+  return '# Test';
 }
 
 export function generateStaticParams() {
@@ -39,5 +39,5 @@ export default function Page({ params }: IPage) {
 
   const content = getContent(key);
 
-  return <div>{content}</div>;
+  return <Markup value={content}></Markup>;
 }
