@@ -4,20 +4,14 @@
 
 import '@htmlplus/core/divider.js';
 import '@htmlplus/core/faker.js';
-import '@htmlplus/core/grid-item.js';
-import '@htmlplus/core/grid.js';
 
 function App() {
   return (
-    <plus-grid align-items="center" justify-content="evenly">
-      <plus-grid-item xs="5">
-        <plus-faker></plus-faker>
-      </plus-grid-item>
-      <plus-divider vertical></plus-divider>
-      <plus-grid-item xs="5">
-        <plus-faker></plus-faker>
-      </plus-grid-item>
-    </plus-grid>
+    <>
+      <plus-faker></plus-faker>
+      <plus-divider>OR</plus-divider>
+      <plus-faker></plus-faker>
+    </>
   );
 }
 
@@ -25,7 +19,7 @@ const DividerCustomize = () => {
   return (
     <div className="ex-divider-customize">
       <App />
-      <style>{`.ex-divider-customize plus-divider {  --plus-divider-color: darkgray;  --plus-divider-width: 0.5rem;  margin: 2rem 0;}`}</style>
+      <style>{`.ex-divider-customize plus-divider {  gap: 1rem;  color: rgb(238, 110, 115);  margin: 1rem 0;}.ex-divider-customize plus-divider::part(line) {  border-color: rgba(238, 110, 115, 0.25);}`}</style>
     </div>
   )
 };

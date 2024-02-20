@@ -30,6 +30,7 @@ export const elementsLight = [
   },
   {
     "key": "breadcrumb",
+    "stable": true,
     "title": "Breadcrumb"
   },
   {
@@ -127,6 +128,7 @@ export const elementsLight = [
   },
   {
     "key": "icon",
+    "stable": true,
     "title": "Icon"
   },
   {
