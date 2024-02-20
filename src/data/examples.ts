@@ -6062,7 +6062,7 @@ export const examples: any[] = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          // From local\n          // return import(`./assets/icons/${name}.svg`).then((module) => module.default);\n\n          // From CDN\n          return fetch(`https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          return fetch(`https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-center>\n  <plus-icon name=\"heart\"></plus-icon>\n</plus-center>\n"
   },
@@ -6073,7 +6073,7 @@ export const examples: any[] = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          // From local\n          // return import(`./assets/icons/${name}.svg`).then((module) => module.default);\n\n          // From CDN\n          return fetch(`https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          return fetch(`https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"heart\"></plus-icon>\n</plus-center>\n"
   },
@@ -6084,7 +6084,7 @@ export const examples: any[] = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          // From local\n          // return import(`./assets/icons/${name}.svg`).then((module) => module.default);\n\n          // From CDN\n          return fetch(`https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          return fetch(`https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-icon name=\"heart\"></plus-icon>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
@@ -6094,7 +6094,7 @@ export const examples: any[] = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          // From local\n          // return import(`./assets/icons/${name}.svg`).then((module) => module.default);\n\n          // From CDN\n          return fetch(`https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          return fetch(`https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-icon name=\"heart\"></plus-icon>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
@@ -6104,7 +6104,7 @@ export const examples: any[] = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          // From local\n          // return import(`./assets/icons/${name}.svg`).then((module) => module.default);\n\n          // From CDN\n          return fetch(`https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          return fetch(`https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"heart\"></plus-icon>\n</plus-center>\n"
   },
@@ -6115,7 +6115,7 @@ export const examples: any[] = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          // From local\n          // return import(`./assets/icons/${name}.svg`).then((module) => module.default);\n\n          // From CDN\n          return fetch(`https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/core/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: async (name, parser) => {\n          return fetch(`https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`)\n            .then((response) => response.text())\n            .then((raw) => parser(raw))\n            .then((svg) => {\n              svg.setAttribute('fill', 'currentColor');\n              return svg;\n            });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/core/center.js';\nimport '@htmlplus/core/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"heart\"></plus-icon>\n</plus-center>\n"
   },
