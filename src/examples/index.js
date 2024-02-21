@@ -122,7 +122,6 @@ export const DialogPrevent = dynamic(() => import('./DialogPrevent'), { suspense
 export const DialogScrollable = dynamic(() => import('./DialogScrollable'), { suspense: true });
 export const DialogSpecificScrollable = dynamic(() => import('./DialogSpecificScrollable'), { suspense: true });
 export const DialogSticky = dynamic(() => import('./DialogSticky'), { suspense: true });
-export const DividerCard = dynamic(() => import('./DividerCard'), { suspense: true });
 export const DividerCustomize = dynamic(() => import('./DividerCustomize'), { suspense: true });
 export const DividerDefault = dynamic(() => import('./DividerDefault'), { suspense: true });
 export const DividerHorizontal = dynamic(() => import('./DividerHorizontal'), { suspense: true });
@@ -163,6 +162,7 @@ export const GridOrder = dynamic(() => import('./GridOrder'), { suspense: true }
 export const GridReverse = dynamic(() => import('./GridReverse'), { suspense: true });
 export const GridVertical = dynamic(() => import('./GridVertical'), { suspense: true });
 export const GridWrap = dynamic(() => import('./GridWrap'), { suspense: true });
+export const IconAnimation = dynamic(() => import('./IconAnimation'), { suspense: true });
 export const IconColor = dynamic(() => import('./IconColor'), { suspense: true });
 export const IconCustomColor = dynamic(() => import('./IconCustomColor'), { suspense: true });
 export const IconCustomSize = dynamic(() => import('./IconCustomSize'), { suspense: true });

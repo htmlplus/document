@@ -6,7 +6,7 @@ export const statistics = {
   forks: 1,
   stars: 31,
   watchers: 6,
-  dowanloads: 21289,
+  dowanloads: 21245,
   downloadsLastWeek: 493,
   downloadsLastMonth: 884,
   get elements(): number {
