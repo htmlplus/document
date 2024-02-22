@@ -10,14 +10,11 @@ function App() {
   return (
     <plus-grid gutter="md">
       <plus-grid-item xs="12" sm="6">
-        <plus-cropper
-          backdrop={false}
-          src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-        ></plus-cropper>
+        <plus-cropper src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"></plus-cropper>
       </plus-grid-item>
       <plus-grid-item xs="12" sm="6">
         <plus-cropper
-          backdrop={true}
+          transparent
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
         ></plus-cropper>
       </plus-grid-item>
@@ -25,12 +22,12 @@ function App() {
   );
 }
 
-const CropperBackdrop = () => {
+const CropperTransparent = () => {
   return (
-    <div className="ex-cropper-backdrop">
+    <div className="ex-cropper-transparent">
       <App />
     </div>
   )
 };
 
-export default CropperBackdrop;
+export default CropperTransparent;

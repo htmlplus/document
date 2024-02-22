@@ -17,7 +17,7 @@ function App() {
       <plus-center>
         <plus-dialog-toggler connector="dialog-backdrop"> Open </plus-dialog-toggler>
       </plus-center>
-      <plus-dialog animation="fade" connector="dialog-backdrop" backdrop={false}>
+      <plus-dialog animation="fade" connector="dialog-backdrop" transparent>
         <plus-dialog-content>
           <plus-dialog-header> Dialog Title </plus-dialog-header>
           <plus-dialog-body>
@@ -32,12 +32,12 @@ function App() {
   );
 }
 
-const DialogBackdrop = () => {
+const DialogTransparent = () => {
   return (
-    <div className="ex-dialog-backdrop">
+    <div className="ex-dialog-transparent">
       <App />
     </div>
   )
 };
 
-export default DialogBackdrop;
+export default DialogTransparent;

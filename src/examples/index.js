@@ -73,7 +73,7 @@ export const BrowseMultiple = dynamic(() => import('./BrowseMultiple'), { suspen
 export const CardBackgroundColor = dynamic(() => import('./CardBackgroundColor'), { suspense: true });
 export const CardBorderColor = dynamic(() => import('./CardBorderColor'), { suspense: true });
 export const CardBorderWidth = dynamic(() => import('./CardBorderWidth'), { suspense: true });
-export const CardCustomize = dynamic(() => import('./CardCustomize'), { suspense: true });
+export const CardCustomized = dynamic(() => import('./CardCustomized'), { suspense: true });
 export const CardDefault = dynamic(() => import('./CardDefault'), { suspense: true });
 export const CardElevation = dynamic(() => import('./CardElevation'), { suspense: true });
 export const CardOutlined = dynamic(() => import('./CardOutlined'), { suspense: true });
@@ -94,7 +94,6 @@ export const CounterSeparatorDecimal = dynamic(() => import('./CounterSeparatorD
 export const CounterSeparator = dynamic(() => import('./CounterSeparator'), { suspense: true });
 export const CropperArea = dynamic(() => import('./CropperArea'), { suspense: true });
 export const CropperAspectRatio = dynamic(() => import('./CropperAspectRatio'), { suspense: true });
-export const CropperBackdrop = dynamic(() => import('./CropperBackdrop'), { suspense: true });
 export const CropperBackground = dynamic(() => import('./CropperBackground'), { suspense: true });
 export const CropperDefault = dynamic(() => import('./CropperDefault'), { suspense: true });
 export const CropperDialog = dynamic(() => import('./CropperDialog'), { suspense: true });
@@ -107,10 +106,10 @@ export const CropperStyles = dynamic(() => import('./CropperStyles'), { suspense
 export const CropperToBase64 = dynamic(() => import('./CropperToBase64'), { suspense: true });
 export const CropperToBlob = dynamic(() => import('./CropperToBlob'), { suspense: true });
 export const CropperToUrl = dynamic(() => import('./CropperToUrl'), { suspense: true });
+export const CropperTransparent = dynamic(() => import('./CropperTransparent'), { suspense: true });
 export const CropperZoomRatio = dynamic(() => import('./CropperZoomRatio'), { suspense: true });
 export const CropperZoomable = dynamic(() => import('./CropperZoomable'), { suspense: true });
 export const DialogAnimation = dynamic(() => import('./DialogAnimation'), { suspense: true });
-export const DialogBackdrop = dynamic(() => import('./DialogBackdrop'), { suspense: true });
 export const DialogDefault = dynamic(() => import('./DialogDefault'), { suspense: true });
 export const DialogFullHeight = dynamic(() => import('./DialogFullHeight'), { suspense: true });
 export const DialogFullWidth = dynamic(() => import('./DialogFullWidth'), { suspense: true });
@@ -122,7 +121,8 @@ export const DialogPrevent = dynamic(() => import('./DialogPrevent'), { suspense
 export const DialogScrollable = dynamic(() => import('./DialogScrollable'), { suspense: true });
 export const DialogSpecificScrollable = dynamic(() => import('./DialogSpecificScrollable'), { suspense: true });
 export const DialogSticky = dynamic(() => import('./DialogSticky'), { suspense: true });
-export const DividerCustomize = dynamic(() => import('./DividerCustomize'), { suspense: true });
+export const DialogTransparent = dynamic(() => import('./DialogTransparent'), { suspense: true });
+export const DividerCustomized = dynamic(() => import('./DividerCustomized'), { suspense: true });
 export const DividerDefault = dynamic(() => import('./DividerDefault'), { suspense: true });
 export const DividerHorizontal = dynamic(() => import('./DividerHorizontal'), { suspense: true });
 export const DividerPlacement = dynamic(() => import('./DividerPlacement'), { suspense: true });
@@ -204,7 +204,7 @@ export const SignatureSave = dynamic(() => import('./SignatureSave'), { suspense
 export const SignatureWidth = dynamic(() => import('./SignatureWidth'), { suspense: true });
 export const SpinnerColor = dynamic(() => import('./SpinnerColor'), { suspense: true });
 export const SpinnerCustomSize = dynamic(() => import('./SpinnerCustomSize'), { suspense: true });
-export const SpinnerCustomize = dynamic(() => import('./SpinnerCustomize'), { suspense: true });
+export const SpinnerCustomized = dynamic(() => import('./SpinnerCustomized'), { suspense: true });
 export const SpinnerDefault = dynamic(() => import('./SpinnerDefault'), { suspense: true });
 export const SpinnerSize = dynamic(() => import('./SpinnerSize'), { suspense: true });
 export const SpinnerType = dynamic(() => import('./SpinnerType'), { suspense: true });

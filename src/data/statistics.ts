@@ -6,9 +6,9 @@ export const statistics = {
   forks: 1,
   stars: 31,
   watchers: 6,
-  dowanloads: 21245,
-  downloadsLastWeek: 493,
-  downloadsLastMonth: 884,
+  dowanloads: 21537,
+  downloadsLastWeek: 613,
+  downloadsLastMonth: 1235,
   get elements(): number {
     return this.elementsPerFramework * this.frameworks;
   },

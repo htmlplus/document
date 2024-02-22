@@ -19,13 +19,13 @@ function App() {
   );
 }
 
-const DividerCustomize = () => {
+const DividerCustomized = () => {
   return (
-    <div className="ex-divider-customize">
+    <div className="ex-divider-customized">
       <App />
-      <style>{`.ex-divider-customize plus-divider {  gap: 1rem;  color: rgb(238, 110, 115);  margin: 1rem 0;}.ex-divider-customize plus-divider::part(line) {  border-color: rgba(238, 110, 115, 0.25);}`}</style>
+      <style>{`.ex-divider-customized plus-divider {  gap: 1rem;  color: rgb(238, 110, 115);  margin-bottom: 1rem;}.ex-divider-customized plus-divider::part(line) {  border-color: rgba(238, 110, 115, 0.25);}`}</style>
     </div>
   )
 };
 
-export default DividerCustomize;
+export default DividerCustomized;

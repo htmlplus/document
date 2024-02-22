@@ -13,13 +13,13 @@ function App() {
   );
 }
 
-const SpinnerCustomize = () => {
+const SpinnerCustomized = () => {
   return (
-    <div className="ex-spinner-customize">
+    <div className="ex-spinner-customized">
       <App />
-      <style>{`.ex-spinner-customize plus-spinner {  color: purple;  width: 5rem;  height: 5rem;  font-size: 0.8rem;}`}</style>
+      <style>{`.ex-spinner-customized plus-spinner {  color: purple;  width: 5rem;  height: 5rem;  font-size: 0.8rem;}`}</style>
     </div>
   )
 };
 
-export default SpinnerCustomize;
+export default SpinnerCustomized;
