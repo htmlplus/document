@@ -1,3 +1,17 @@
+## [1.1.7](https://github.com/htmlplus/core/compare/v1.1.6...v1.1.7) (2024-02-23)
+
+
+### Bug Fixes
+
+* Fix style typing ([c006626](https://github.com/htmlplus/core/commit/c006626e036c21e593f6f2f3d7131959a0785bf4))
+
+## [1.1.6](https://github.com/htmlplus/core/compare/v1.1.5...v1.1.6) (2024-02-22)
+
+
+### Bug Fixes
+
+* Remove default true values from boolean properties ([b294ebe](https://github.com/htmlplus/core/commit/b294ebee6e7cabb2f9f954510cc1b6492d1425d0))
+
 ## [1.1.5](https://github.com/htmlplus/core/compare/v1.1.4...v1.1.5) (2024-02-21)
 
 
