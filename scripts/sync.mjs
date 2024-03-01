@@ -85,11 +85,10 @@ const HEADER = [
       JSON.stringify(
         document?.elements?.map((element) => ({
           key: element.key,
-          stable: element.tags.some((tag) => tag.key == 'stable') || undefined,
+          stable: element.stable,
           title: element.title,
-          dependencies: element?.tags
-            ?.find((tag) => tag.key == 'dependencies')
-            ?.value?.split(',')
+          dependencies: element.dependencies
+            ?.split(',')
             ?.map((dependency) => dependency.trim())
             ?.filter((dependency) => !!dependency)
         })),

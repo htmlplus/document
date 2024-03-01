@@ -10,6 +10,7 @@ export function Parameter(item: any) {
 
   const typeReference = (() => {
     let reference = '';
+
     switch (item.kind) {
       case 'event':
         reference = item.detailReference;
@@ -21,7 +22,9 @@ export function Parameter(item: any) {
         reference = item.typeReference;
         break;
     }
-    if (!reference) return;
+
+    if (!reference) return '';
+
     return getPath(ROUTES.TYPE_GITHUB_LINK, { element: item.element.key, fileName: `${reference.slice(2)}.ts` });
   })();
 

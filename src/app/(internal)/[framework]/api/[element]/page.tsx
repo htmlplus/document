@@ -44,17 +44,17 @@ export default function Page({ params }: IPage) {
     {
       key: 'property',
       title: 'Properties',
-      items: element.properties
+      items: element.properties || []
     },
     {
       key: 'slot',
       title: 'Slots',
-      items: element.slots
+      items: element.slots || []
     },
     {
       key: 'event',
       title: 'Events',
-      items: element.events.map((event: any) => ({
+      items: (element.events || []).map((event: any) => ({
         ...event,
         name: kebabCase(event.name)
       }))
@@ -62,17 +62,17 @@ export default function Page({ params }: IPage) {
     {
       key: 'style',
       title: 'CSS Variables',
-      items: element.styles
+      items: element.styles || []
     },
     {
       key: 'part',
       title: 'CSS Parts',
-      items: element.parts
+      items: element.parts || []
     },
     {
       key: 'method',
       title: 'Methods',
-      items: element.methods
+      items: element.methods || []
     }
   ];
 
