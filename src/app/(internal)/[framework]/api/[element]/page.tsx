@@ -92,7 +92,7 @@ export default function Page({ params }: IPage) {
           {section.items.map((item: any, index: number) => (
             <Fragment key={item.name}>
               <Parameter element={element} kind={section.key} {...item} />
-              {section.items.length - 1 > index && <plus-divider></plus-divider>}
+              {section.items.length - 1 > index && <plus-divider width="xs"></plus-divider>}
             </Fragment>
           ))}
         </Fragment>
