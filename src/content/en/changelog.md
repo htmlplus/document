@@ -1,3 +1,24 @@
+## [1.1.12](https://github.com/htmlplus/core/compare/v1.1.11...v1.1.12) (2024-03-06)
+
+
+### Bug Fixes
+
+* Update the `@htmlplus/element` dependency to improve performance. ([9d8f09c](https://github.com/htmlplus/core/commit/9d8f09cac8ad6303ea4018ec9bde5dd7931f240e))
+
+## [1.1.11](https://github.com/htmlplus/core/compare/v1.1.10...v1.1.11) (2024-03-05)
+
+
+### Bug Fixes
+
+* Update @htmlplus/element dependency. ([bf83548](https://github.com/htmlplus/core/commit/bf83548f52c4ba51da2d176a42e0691de8af6491))
+
+## [1.1.10](https://github.com/htmlplus/core/compare/v1.1.9...v1.1.10) (2024-03-01)
+
+
+### Bug Fixes
+
+* Update documentation ([182bfd9](https://github.com/htmlplus/core/commit/182bfd92227c932284d345a65614ae2053d52273))
+
 ## [1.1.9](https://github.com/htmlplus/core/compare/v1.1.8...v1.1.9) (2024-02-25)
 
 
