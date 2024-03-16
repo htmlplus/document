@@ -1,3 +1,17 @@
+## [1.1.14](https://github.com/htmlplus/core/compare/v1.1.13...v1.1.14) (2024-03-08)
+
+
+### Bug Fixes
+
+* Update lifecycles and use new context api on tabs ([3e33c6b](https://github.com/htmlplus/core/commit/3e33c6b0a9288d92e46b670c75402b2b46f3311c))
+
+## [1.1.13](https://github.com/htmlplus/core/compare/v1.1.12...v1.1.13) (2024-03-08)
+
+
+### Bug Fixes
+
+* Improve signature element logic ([fd61680](https://github.com/htmlplus/core/commit/fd616800671d4f6d644c4c5f5a5f3c9cd0205772))
+
 ## [1.1.12](https://github.com/htmlplus/core/compare/v1.1.11...v1.1.12) (2024-03-06)
 
 

@@ -171,8 +171,10 @@ pre {
 
 .example {
   line-height: initial;
-  plus-tabs-panel:first-child {
-    margin-top: 0.40625rem;
+  & > plus-tabs-panels > plus-tabs-panel > * {
+    margin: 0;
+  }
+  & > plus-tabs-panels > plus-tabs-panel:first-child {
     border: solid 1px $color-main-lighten-3;
     & > *:not(.dock) {
       padding: 1.5em;

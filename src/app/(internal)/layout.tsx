@@ -18,7 +18,7 @@ export default function Layout({ children }: ILayout) {
       <div className="app-loading-bar">
         <AppLoadingBar></AppLoadingBar>
       </div>
-      <plus-drawer open={false} animation="fade" connector="main" temporary size="300px">
+      <plus-drawer open={false} animation backdrop={true} connector="main" floating="on-lg-down" size="300px">
         <plus-card class="drawer" tile elevation={10}>
           <Sidebar></Sidebar>
         </plus-card>
