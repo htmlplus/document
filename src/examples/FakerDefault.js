@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import '@htmlplus/core/faker.js';
+import '@htmlplus/ui/faker.js';
 
 function App() {
   return <plus-faker></plus-faker>;

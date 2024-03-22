@@ -1,5 +1,5 @@
 // @ts-ignore
-import { setConfig } from '@htmlplus/core/config';
+import { setConfig } from '@htmlplus/ui/config';
 
 import { faker } from '@faker-js/faker/locale/en';
 

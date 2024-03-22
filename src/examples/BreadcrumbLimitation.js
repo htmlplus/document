@@ -2,8 +2,8 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import '@htmlplus/core/breadcrumb.js';
-import '@htmlplus/core/stack.js';
+import '@htmlplus/ui/breadcrumb.js';
+import '@htmlplus/ui/stack.js';
 
 function App() {
   return (

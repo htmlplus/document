@@ -17,7 +17,7 @@ export const ROUTES = {
   ELEMENT_CONFIG: '/element/[element]/config',
   API_DETAILS: '/[framework]/api/[element]',
   CODEOFCONDUCT: '/code-of-conduct',
-  GITHUB_URL: 'https://github.com/htmlplus/core',
+  GITHUB_URL: 'https://github.com/htmlplus/ui',
   ASSETS: '/assets/[filepath]',
   CONTRIBUTOR: 'https://github.com/[contributor].png?size=90',
   CONTRIBUTOR_GITHUB: 'https://github.com/[contributor]',
@@ -32,5 +32,5 @@ export const ROUTES = {
   EXAMPLE_GITHUB_LINK: 'https://github.com/htmlplus/examples/tree/main/dist/[framework]/[element]/[example]',
   EXAMPLE_DOWNLOAD_LINK:
     'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/htmlplus/examples/tree/main/dist/[framework]/[element]/[example]',
-  TYPE_GITHUB_LINK: 'https://github.com/htmlplus/core/tree/main/src/elements/[element]/[fileName]'
+  TYPE_GITHUB_LINK: 'https://github.com/htmlplus/ui/tree/main/src/elements/[element]/[fileName]'
 } as const;

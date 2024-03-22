@@ -6,7 +6,7 @@ Sets a config for the `size` property of the `spinner` element.
 import App from './App.svelte';
 
 // Setup the global config.
-import { setConfig } from '@htmlplus/core/config.js';
+import { setConfig } from '@htmlplus/ui/config.js';
 setConfig({
   element: {
     'plus-spinner': {

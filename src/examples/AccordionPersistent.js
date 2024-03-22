@@ -4,8 +4,8 @@
 
 import { useEffect, useRef } from 'react';
 
-import '@htmlplus/core/accordion.js';
-import '@htmlplus/core/faker.js';
+import '@htmlplus/ui/accordion.js';
+import '@htmlplus/ui/faker.js';
 
 function App() {
   const accordionsRef = useRef();

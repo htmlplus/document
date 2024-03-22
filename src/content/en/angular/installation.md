@@ -7,12 +7,12 @@
 Install `HTMLPLUS` package into Angular application.
 
 ```shell
-npm install @htmlplus/core
+npm install @htmlplus/ui
 ```
 
 ## Update Angular Module
 
-Tell Angular to ignore all custom element tags defined in the `@htmlplus/core`.
+Tell Angular to ignore all custom element tags defined in the `@htmlplus/ui`.
 
 ```js
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -36,7 +36,7 @@ Import the reference of elements.
 ```js
 import { Component } from '@angular/core';
 
-import '@htmlplus/core';
+import '@htmlplus/ui';
 
 @Component({
   selector: 'my-app',
@@ -71,7 +71,7 @@ To handle event's callback.
 ```js
 import { Component } from '@angular/core';
 
-import '@htmlplus/core';
+import '@htmlplus/ui';
 
 @Component({
   selector: 'my-app',

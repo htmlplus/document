@@ -8,7 +8,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 
 // Setup the global config.
-import { setConfig } from '@htmlplus/core/config.js';
+import { setConfig } from '@htmlplus/ui/config.js';
 setConfig({
   element: {
     'plus-spinner': {

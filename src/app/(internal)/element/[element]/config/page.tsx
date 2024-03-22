@@ -44,7 +44,7 @@ export default function Page({ params }: IPage) {
       <Code language="js">
         {[
           // TODO
-          `import { setConfig } from '@htmlplus/core/config.js';`,
+          `import { setConfig } from '@htmlplus/ui/config.js';`,
           ``,
           `setConfig({`,
           `  element: {`,

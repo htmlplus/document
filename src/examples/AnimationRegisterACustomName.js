@@ -3,10 +3,10 @@
  **************************************************/
 
 import { useEffect, useState } from 'react';
-import '@htmlplus/core/animation.js';
-import '@htmlplus/core/avatar.js';
-import '@htmlplus/core/center.js';
-import { setConfig } from '@htmlplus/core/config.js';
+import '@htmlplus/ui/animation.js';
+import '@htmlplus/ui/avatar.js';
+import '@htmlplus/ui/center.js';
+import { setConfig } from '@htmlplus/ui/config.js';
 
 setConfig({
   asset: {

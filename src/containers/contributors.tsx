@@ -19,14 +19,14 @@ export function Contributors() {
   const paths = useMemo(() => {
     if (pathname.match(/\/[^/]+\/api\/[^/]+/)) {
       return getPath(ROUTES.GITHUB_COMMITS, {
-        repository: 'core',
+        repository: 'ui',
         path: `src/elements/${params.element}`
       });
     }
 
     if (pathname.match(/\/[^/]+\/element\/[^/]+/)) {
       return getPath(ROUTES.GITHUB_COMMITS, {
-        repository: 'core',
+        repository: 'ui',
         path: `src/elements/${params.element}`
       });
     }

@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import '@htmlplus/core/sticky.js';
+import '@htmlplus/ui/sticky.js';
 
 function App() {
   return (

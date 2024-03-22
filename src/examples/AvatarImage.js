@@ -2,8 +2,8 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import '@htmlplus/core/avatar.js';
-import '@htmlplus/core/center.js';
+import '@htmlplus/ui/avatar.js';
+import '@htmlplus/ui/center.js';
 
 function App() {
   return (

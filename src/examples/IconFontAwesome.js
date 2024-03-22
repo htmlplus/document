@@ -3,9 +3,9 @@
  **************************************************/
 
 import { useEffect, useState } from 'react';
-import '@htmlplus/core/icon.js';
-import '@htmlplus/core/stack.js';
-import { setConfig } from '@htmlplus/core/config.js';
+import '@htmlplus/ui/icon.js';
+import '@htmlplus/ui/stack.js';
+import { setConfig } from '@htmlplus/ui/config.js';
 
 setConfig({
   element: {

@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 import { usePathname } from 'next/navigation';
 
-import PACKAGE from '@htmlplus/core/package.json';
+import PACKAGE from '@htmlplus/ui/package.json';
 
 import { Button } from '@/components';
 import { ROUTES } from '@/constants';

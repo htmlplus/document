@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import '@htmlplus/core/progress-bar.js';
+import '@htmlplus/ui/progress-bar.js';
 
 function App() {
   return <plus-progress-bar variant="indeterminate"></plus-progress-bar>;

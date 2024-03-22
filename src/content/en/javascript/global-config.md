@@ -18,7 +18,7 @@ Sets a config for the `size` property of the `spinner` element.
 
     <!-- Initializes the global config -->
     <script type="module">
-      import { setConfig } from 'https://unpkg.com/@htmlplus/core/config.js';
+      import { setConfig } from 'https://unpkg.com/@htmlplus/ui/config.js';
       setConfig({
         element: {
           'plus-spinner': {
@@ -32,7 +32,7 @@ Sets a config for the `size` property of the `spinner` element.
 
     <!-- Loads elements after initialize the global config -->
     <script type="module">
-      import "https://unpkg.com/@htmlplus/core/spinner";
+      import "https://unpkg.com/@htmlplus/ui/spinner";
     </script>
   </body>
 </html>

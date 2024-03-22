@@ -13,7 +13,7 @@ VS Code doesn't have the ability to identify `custom elements` by default. To en
 
 ```js
 {
-  "html.customData": ["./node_modules/@htmlplus/core/json/vscode.json"]
+  "html.customData": ["./node_modules/@htmlplus/ui/json/vscode.json"]
 }
 ```
 
@@ -25,4 +25,4 @@ VS Code doesn't have the ability to identify `custom elements` by default. To en
 
 ## Other Editors
 
-Most popular editors support code completion without any special configuration. Otherwise [submit a feature request](https://github.com/htmlplus/core/issues/new) for your editor of choice.
+Most popular editors support code completion without any special configuration. Otherwise [submit a feature request](https://github.com/htmlplus/ui/issues/new) for your editor of choice.

@@ -13,7 +13,7 @@
 Install `HTMLPLUS` package into React application.
 
 ```shell
-npm install @htmlplus/core
+npm install @htmlplus/ui
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ npm install @htmlplus/core
 Import the reference of elements.
 
 ```jsx
-import '@htmlplus/core';
+import '@htmlplus/ui';
 
 const App = () => <plus-switch/>;
 
@@ -37,7 +37,7 @@ To set properties and attributes.
 To use number, string, boolean, null, undefined, symbol and bigint types.
 
 ```jsx
-import '@htmlplus/core';
+import '@htmlplus/ui';
 
 const App = () => <plus-switch disabled/>;
 
@@ -51,7 +51,7 @@ To use object and array types.
 ```jsx
 import { useEffect, useRef } from 'react';
 
-import '@htmlplus/core';
+import '@htmlplus/ui';
 
 const App = () => {
   const ref = useRef(null);
@@ -79,7 +79,7 @@ To handle event's callback.
 ```jsx
 import { useEffect, useRef } from 'react';
 
-import '@htmlplus/core';
+import '@htmlplus/ui';
 
 const App = () => {
   const ref = useRef(null);

@@ -7,7 +7,7 @@ Defines the properties of elements as global. For instance `placement` property 
 A simple template for defining a collection of configs.
 
 ```js
-import { setConfig } from '@htmlplus/core/config.js';
+import { setConfig } from '@htmlplus/ui/config.js';
 
 setConfig({
   element: {
@@ -31,7 +31,7 @@ setConfig({
 A real example of a definition.
 
 ```js
-import { setConfig } from '@htmlplus/core/config.js';
+import { setConfig } from '@htmlplus/ui/config.js';
 
 setConfig({
   element: {

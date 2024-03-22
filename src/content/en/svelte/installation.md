@@ -7,7 +7,7 @@
 Install `HTMLPLUS` package into Svelte application.
 
 ```shell
-npm install @htmlplus/core
+npm install @htmlplus/ui
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ Import the reference of elements.
 
 ```html
 <script>
-  import '@htmlplus/core';
+  import '@htmlplus/ui';
 </script>
 
 <plus-switch />
@@ -34,7 +34,7 @@ To set properties and attributes.
 
 ```html
 <script>
-  import '@htmlplus/core';
+  import '@htmlplus/ui';
 </script>
 
 <plus-switch disabled/>
@@ -46,7 +46,7 @@ To handle event's callback.
 
 ```html
 <script>
-  import '@htmlplus/core';
+  import '@htmlplus/ui';
 
   function onChange() {
     alert('The switch toggled!')

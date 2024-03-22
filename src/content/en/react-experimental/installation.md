@@ -7,7 +7,7 @@
 Install `HTMLPLUS` package into React application.
 
 ```shell
-npm install @htmlplus/core
+npm install @htmlplus/ui
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install @htmlplus/core
 Import the reference of elements.
 
 ```jsx
-import '@htmlplus/core';
+import '@htmlplus/ui';
 
 const App = () => <plus-switch/>;
 
@@ -27,7 +27,7 @@ export default App;
 To set properties and attributes.
 
 ```jsx
-import '@htmlplus/core';
+import '@htmlplus/ui';
 
 const App = () => <plus-switch disabled/>;
 
@@ -39,7 +39,7 @@ export default App;
 To handle event's callback.
 
 ```jsx
-import '@htmlplus/core';
+import '@htmlplus/ui';
 
 const App = () => <plus-switch onplus-Change={() => alert('The switch toggled!')} />;
 

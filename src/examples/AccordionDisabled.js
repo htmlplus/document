@@ -2,8 +2,8 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import '@htmlplus/core/accordion.js';
-import '@htmlplus/core/faker.js';
+import '@htmlplus/ui/accordion.js';
+import '@htmlplus/ui/faker.js';
 
 function App() {
   return (

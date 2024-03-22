@@ -16,7 +16,7 @@ export function Usage() {
   // TODO
   const dependencies = elementsLight.find((item) => item.key == params.element)?.dependencies?.join(' ') || '';
 
-  let dependency = 'npm install @htmlplus/core ';
+  let dependency = 'npm install @htmlplus/ui ';
 
   dependency += dependencies;
 

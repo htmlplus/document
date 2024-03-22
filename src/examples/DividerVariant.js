@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import '@htmlplus/core/divider.js';
+import '@htmlplus/ui/divider.js';
 
 function App() {
   return (

@@ -2,8 +2,8 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import '@htmlplus/core/divider.js';
-import '@htmlplus/core/faker.js';
+import '@htmlplus/ui/divider.js';
+import '@htmlplus/ui/faker.js';
 
 function App() {
   return (

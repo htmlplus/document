@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import '@htmlplus/core/animation/names/all.js';
+import '@htmlplus/ui/animation/names/all.js';
 
 export function Box({ category }: { category: any }) {
   const [playing, setPlaying] = useState('');

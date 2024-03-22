@@ -63,8 +63,8 @@ const HEADER = [
 // changelog
 (async () => {
   const DESTINATION = './src/content/en/changelog.md';
-  const LOCAL = path.join(__dirname, '../../core/CHANGELOG.md');
-  const REMOTE = 'https://github.com/htmlplus/core/raw/main/CHANGELOG.md';
+  const LOCAL = path.join(__dirname, '../../ui/CHANGELOG.md');
+  const REMOTE = 'https://github.com/htmlplus/ui/raw/main/CHANGELOG.md';
 
   const content = await load(LOCAL, REMOTE);
 
@@ -74,8 +74,8 @@ const HEADER = [
 // elements light
 (async () => {
   const DESTINATION = './src/data/elements.light.ts';
-  const LOCAL = path.join(__dirname, '../../core/dist/json/document.json');
-  const REMOTE = 'https://github.com/htmlplus/core/raw/main/dist/json/document.json';
+  const LOCAL = path.join(__dirname, '../../ui/dist/json/document.json');
+  const REMOTE = 'https://github.com/htmlplus/ui/raw/main/dist/json/document.json';
 
   const document = JSON.parse(await load(LOCAL, REMOTE));
 
@@ -194,51 +194,52 @@ const HEADER = [
 // vision
 (async () => {
   const DESTINATION = './src/content/en/vision.md';
-  const LOCAL = path.join(__dirname, '../../core/VISION.md');
-  const REMOTE = 'https://github.com/htmlplus/core/raw/main/VISION.md';
+  const LOCAL = path.join(__dirname, '../../ui/VISION.md');
+  const REMOTE = 'https://github.com/htmlplus/ui/raw/main/VISION.md';
 
   const content = await load(LOCAL, REMOTE);
 
   fs.writeFileSync(DESTINATION, content, 'utf8');
 })();
 
+// TODO
 // statistics
-(async () => {
-  const DESTINATION = './src/data/statistics.ts';
+// (async () => {
+//   const DESTINATION = './src/data/statistics.ts';
 
-  const responses = await Promise.all(
-    [
-      'https://api.github.com/repos/htmlplus/core',
-      'https://api.npmjs.org/downloads/point/2021-02-10:2050-01-01/@htmlplus/core',
-      'https://api.npmjs.org/downloads/point/last-month/@htmlplus/core',
-      'https://api.npmjs.org/downloads/point/last-week/@htmlplus/core'
-    ].map((url) => axios.get(url).then((response) => response.data))
-  );
+//   const responses = await Promise.all(
+//     [
+//       'https://api.github.com/repos/htmlplus/ui',
+//       'https://api.npmjs.org/downloads/point/2021-02-10:2050-01-01/@htmlplus/ui',
+//       'https://api.npmjs.org/downloads/point/last-month/@htmlplus/ui',
+//       'https://api.npmjs.org/downloads/point/last-week/@htmlplus/ui'
+//     ].map((url) => axios.get(url).then((response) => response.data))
+//   );
 
-  const [first, second, third, fourth] = responses;
+//   const [first, second, third, fourth] = responses;
 
-  const lines = [
-    ...HEADER,
-    'export const statistics = {',
-    `  forks: ${first.forks},`,
-    `  stars: ${first.stargazers_count},`,
-    `  watchers: ${first.subscribers_count},`,
-    `  dowanloads: ${second.downloads},`,
-    `  downloadsLastWeek: ${fourth.downloads},`,
-    `  downloadsLastMonth: ${third.downloads},`,
-    '  get elements(): number {',
-    '    return this.elementsPerFramework * this.frameworks;',
-    '  },',
-    `  elementsPerFramework: ${10},`,
-    '  get examples(): number {',
-    '    return this.examplesPerFramework * this.frameworks;',
-    '  },',
-    `  examplesPerFramework: ${60},`,
-    `  frameworks: ${6},`,
-    '}'
-  ];
+//   const lines = [
+//     ...HEADER,
+//     'export const statistics = {',
+//     `  forks: ${first.forks},`,
+//     `  stars: ${first.stargazers_count},`,
+//     `  watchers: ${first.subscribers_count},`,
+//     `  dowanloads: ${second.downloads},`,
+//     `  downloadsLastWeek: ${fourth.downloads},`,
+//     `  downloadsLastMonth: ${third.downloads},`,
+//     '  get elements(): number {',
+//     '    return this.elementsPerFramework * this.frameworks;',
+//     '  },',
+//     `  elementsPerFramework: ${10},`,
+//     '  get examples(): number {',
+//     '    return this.examplesPerFramework * this.frameworks;',
+//     '  },',
+//     `  examplesPerFramework: ${60},`,
+//     `  frameworks: ${6},`,
+//     '}'
+//   ];
 
-  const content = lines.join('\n');
+//   const content = lines.join('\n');
 
-  fs.writeFileSync(DESTINATION, content, 'utf8');
-})();
+//   fs.writeFileSync(DESTINATION, content, 'utf8');
+// })();

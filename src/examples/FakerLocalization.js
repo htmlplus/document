@@ -3,10 +3,10 @@
  **************************************************/
 
 import { useEffect, useState } from 'react';
-import '@htmlplus/core/faker.js';
+import '@htmlplus/ui/faker.js';
 import { faker } from '@faker-js/faker/locale/ja';
 
-import { setConfig } from '@htmlplus/core/config.js';
+import { setConfig } from '@htmlplus/ui/config.js';
 
 setConfig({
   element: {

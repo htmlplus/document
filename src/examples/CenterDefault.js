@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import '@htmlplus/core/center.js';
+import '@htmlplus/ui/center.js';
 
 function App() {
   return <plus-center>All elements are centered</plus-center>;

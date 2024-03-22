@@ -4,7 +4,7 @@
 
 import { useEffect, useRef } from 'react';
 
-import '@htmlplus/core/animation.js';
+import '@htmlplus/ui/animation.js';
 
 function App() {
   const animationRef = useRef();

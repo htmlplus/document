@@ -2,8 +2,8 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import '@htmlplus/core/stack.js';
-import '@htmlplus/core/switch.js';
+import '@htmlplus/ui/stack.js';
+import '@htmlplus/ui/switch.js';
 
 function App() {
   return (

@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 
 // TODO
-import '@htmlplus/core';
+import '@htmlplus/ui';
 
 import '@/styles/index.scss';
 

@@ -16,7 +16,7 @@ You can utilize `HTMLPLUS` simply by adding a simple scirpt in your main html li
   <body>
     <plus-switch></plus-switch>
     <script type="module">
-      import "https://unpkg.com/@htmlplus/core";
+      import "https://unpkg.com/@htmlplus/ui";
     </script>
   </body>
 </html>

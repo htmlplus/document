@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import '@htmlplus/core/cropper.js';
+import '@htmlplus/ui/cropper.js';
 
 function App() {
   return (

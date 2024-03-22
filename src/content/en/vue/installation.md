@@ -7,12 +7,12 @@
 Install `HTMLPLUS` package into Vue application.
 
 ```shell
-npm install @htmlplus/core
+npm install @htmlplus/ui
 ```
 
 ## Update Vue Compiler Options
 
-Tell Vue to ignore all custom element tags defined in the `@htmlplus/core`. So, follow the instructions [here](https://vuejs.org/guide/extras/web-components.html#using-custom-elements-in-vue).
+Tell Vue to ignore all custom element tags defined in the `@htmlplus/ui`. So, follow the instructions [here](https://vuejs.org/guide/extras/web-components.html#using-custom-elements-in-vue).
 
 The compiler options would be something like this:
 
@@ -32,7 +32,7 @@ Import the reference of elements.
 </template>
 
 <script setup>
-  import '@htmlplus/core';
+  import '@htmlplus/ui';
 </script>
 ```
 
@@ -56,7 +56,7 @@ To use number, string, boolean, null, undefined, symbol and bigint types.
 </template>
 
 <script setup>
-  import '@htmlplus/core';
+  import '@htmlplus/ui';
 </script>
 ```
 
@@ -70,7 +70,7 @@ To use object and array types.
 </template>
 
 <script setup>
-  import '@htmlplus/core';
+  import '@htmlplus/ui';
 
   const keyframes = [
     { offset: 0.00, opacity: '1' },
@@ -92,7 +92,7 @@ To handle event's callback.
 </template>
 
 <script setup>
-  import '@htmlplus/core';
+  import '@htmlplus/ui';
 
   function onChange() {
     alert('The switch toggled!')
