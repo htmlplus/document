@@ -38,11 +38,7 @@ export const sidebar = (framework: string) => [
   {
     title: 'UI Elements',
     items: elementsLight
-      .filter((element) => {
-        const key = element.key.split('-').slice(0, -1).join('-');
-        if (element.key == key) return true;
-        return !elementsLight.some((element) => element.key == key);
-      })
+      .filter((element) => !element.subset)
       .map((element) => ({
         stable: element.stable,
         title: element.title,

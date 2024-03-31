@@ -6,64 +6,82 @@ export const elementsLight = [
   {
     "key": "accordion",
     "stable": true,
+    "subset": false,
     "title": "Accordion"
+  },
+  {
+    "key": "accordions",
+    "subset": true,
+    "title": "Accordions"
   },
   {
     "key": "animation",
     "stable": true,
+    "subset": false,
     "title": "Animation"
   },
   {
     "key": "aspect-ratio",
     "stable": true,
+    "subset": false,
     "title": "Aspect Ratio"
   },
   {
     "key": "avatar",
     "stable": true,
+    "subset": false,
     "title": "Avatar"
   },
   {
     "key": "avatar-group",
     "stable": true,
+    "subset": true,
     "title": "Avatar Group"
   },
   {
     "key": "breadcrumb",
     "stable": true,
+    "subset": false,
     "title": "Breadcrumb"
   },
   {
     "key": "browse",
     "stable": true,
+    "subset": false,
     "title": "Browse"
   },
   {
     "key": "card",
+    "subset": false,
     "title": "Card"
   },
   {
     "key": "card-body",
+    "subset": true,
     "title": "Card Body"
   },
   {
     "key": "center",
     "stable": true,
+    "subset": false,
     "title": "Center"
   },
   {
     "key": "click-outside",
     "stable": true,
+    "subset": false,
     "title": "Click Outside"
   },
   {
     "key": "counter",
     "stable": true,
+    "subset": false,
     "title": "Counter"
   },
   {
     "key": "cropper",
     "stable": true,
+    "subset": false,
     "title": "Cropper",
     "dependencies": [
       "cropperjs"
@@ -71,43 +89,53 @@ export const elementsLight = [
   },
   {
     "key": "dialog",
+    "subset": false,
     "title": "Dialog"
   },
   {
     "key": "dialog-body",
+    "subset": true,
     "title": "Dialog Body"
   },
   {
     "key": "dialog-content",
+    "subset": true,
     "title": "Dialog Content"
   },
   {
     "key": "dialog-footer",
+    "subset": true,
     "title": "Dialog Footer"
   },
   {
     "key": "dialog-header",
+    "subset": true,
     "title": "Dialog Header"
   },
   {
     "key": "dialog-toggler",
+    "subset": true,
     "title": "Dialog Toggler"
   },
   {
     "key": "divider",
+    "subset": false,
     "title": "Divider"
   },
   {
     "key": "drawer",
+    "subset": false,
     "title": "Drawer"
   },
   {
     "key": "drawer-toggler",
+    "subset": true,
     "title": "Drawer Toggler"
   },
   {
     "key": "faker",
     "stable": true,
+    "subset": false,
     "title": "Faker",
     "dependencies": [
       "@faker-js/faker"
@@ -116,88 +144,108 @@ export const elementsLight = [
   {
     "key": "format-bytes",
     "stable": true,
+    "subset": false,
     "title": "Format Bytes"
   },
   {
     "key": "grid",
+    "subset": false,
     "title": "Grid"
   },
   {
     "key": "grid-item",
+    "subset": true,
     "title": "Grid Item"
   },
   {
     "key": "icon",
     "stable": true,
+    "subset": false,
     "title": "Icon"
   },
   {
     "key": "intersection",
     "stable": true,
+    "subset": false,
     "title": "Intersection"
   },
   {
     "key": "progress-bar",
+    "subset": false,
     "title": "Progress Bar"
   },
   {
     "key": "progress-bar-stack",
+    "subset": true,
     "title": "Progress Bar Stack"
   },
   {
     "key": "scroll-detector",
     "stable": true,
+    "subset": false,
     "title": "Scroll Detector"
   },
   {
     "key": "signature",
     "stable": true,
+    "subset": false,
     "title": "Signature"
   },
   {
     "key": "spacer",
+    "subset": false,
     "title": "Spacer"
   },
   {
     "key": "spinner",
     "stable": true,
+    "subset": false,
     "title": "Spinner"
   },
   {
     "key": "stack",
+    "subset": false,
     "title": "Stack"
   },
   {
     "key": "sticky",
     "stable": true,
+    "subset": false,
     "title": "Sticky"
   },
   {
     "key": "switch",
+    "subset": false,
     "title": "Switch"
   },
   {
     "key": "tabs",
+    "subset": false,
     "title": "Tabs"
   },
   {
     "key": "tabs-bar",
+    "subset": true,
     "title": "Tabs Bar"
   },
   {
     "key": "tabs-panel",
+    "subset": true,
     "title": "Tabs Panel"
   },
   {
     "key": "tabs-panels",
+    "subset": true,
     "title": "Tabs Panels"
   },
   {
     "key": "tabs-tab",
+    "subset": true,
     "title": "Tabs Tab"
   },
   {
     "key": "tooltip",
+    "subset": false,
     "title": "Tooltip",
     "dependencies": [
       "@floating-ui/dom"

@@ -83,9 +83,10 @@ const HEADER = [
     ...HEADER,
     'export const elementsLight = ' +
       JSON.stringify(
-        document?.elements?.map((element) => ({
+        document.elements.map((element) => ({
           key: element.key,
           stable: element.stable,
+          subset: !!element.subset,
           title: element.title,
           dependencies: element.dependencies
             ?.split(',')
