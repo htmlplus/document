@@ -119,6 +119,7 @@ export const elementsLight = [
   },
   {
     "key": "divider",
+    "stable": true,
     "subset": false,
     "title": "Divider"
   },
