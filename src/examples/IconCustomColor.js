@@ -19,7 +19,7 @@ const IconCustomColor = () => {
   return (
     <div className="ex-icon-custom-color">
       <App />
-      <style>{`.ex-icon-custom-color [color='primary'] {  color: #ff5449;}.ex-icon-custom-color [color='secondary'] {  color: #08dfc8;}.ex-icon-custom-color [color='tertiary'] {  color: #5f9ee9;}`}</style>
+      <style>{`.ex-icon-custom-color plus-icon[color='primary'] {  color: #ff5449;}.ex-icon-custom-color plus-icon[color='secondary'] {  color: #08dfc8;}.ex-icon-custom-color plus-icon[color='tertiary'] {  color: #5f9ee9;}`}</style>
     </div>
   )
 };

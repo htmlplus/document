@@ -127,7 +127,7 @@ export const examples: any[] = [
       "rtl": true
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n",
+    "style": "plus-stack[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n",
     "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify-content=\"space-between\">\n    <b>Summary</b>\n    <button>Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
@@ -138,7 +138,7 @@ export const examples: any[] = [
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "style": "[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n",
+    "style": "plus-stack[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n",
     "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify-content=\"space-between\">\n    <b>Summary</b>\n    <button>Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
@@ -149,7 +149,7 @@ export const examples: any[] = [
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-accordion>\n      <plus-stack slot=\"summary\" justify-content=\"space-between\">\n        <b>Summary</b>\n        <button>Action</button>\n      </plus-stack>\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n}\nexport default App;\n",
-    "style": "[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n"
+    "style": "plus-stack[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n"
   },
   {
     "key": "react-experimental/accordion/custom-summary-template",
@@ -159,7 +159,7 @@ export const examples: any[] = [
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-accordion>\n      <plus-stack slot=\"summary\" justify-content=\"space-between\">\n        <b>Summary</b>\n        <button>Action</button>\n      </plus-stack>\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n}\nexport default App;\n",
-    "style": "[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n"
+    "style": "plus-stack[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n"
   },
   {
     "key": "svelte/accordion/custom-summary-template",
@@ -169,7 +169,7 @@ export const examples: any[] = [
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "style": "[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n",
+    "style": "plus-stack[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n",
     "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify-content=\"space-between\">\n    <b>Summary</b>\n    <button>Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
@@ -180,7 +180,7 @@ export const examples: any[] = [
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "style": "[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n",
+    "style": "plus-stack[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n",
     "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify-content=\"space-between\">\n    <b>Summary</b>\n    <button>Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
@@ -190,9 +190,9 @@ export const examples: any[] = [
       "isolate": false,
       "rtl": true
     },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-accordion {\n  border: 2px solid whitesmoke;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n}\nplus-accordion:not(:last-of-type) {\n  margin-bottom: 0.5rem;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding: 0.75rem;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
-    "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    "template": "<plus-accordions>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
   },
   {
     "key": "javascript/accordion/customized",
@@ -201,9 +201,9 @@ export const examples: any[] = [
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n",
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n",
     "style": "plus-accordion {\n  border: 2px solid whitesmoke;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n}\nplus-accordion:not(:last-of-type) {\n  margin-bottom: 0.5rem;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding: 0.75rem;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
-    "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    "template": "<plus-accordions>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
   },
   {
     "key": "react/accordion/customized",
@@ -212,7 +212,7 @@ export const examples: any[] = [
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <div>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </div>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <plus-accordions>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </plus-accordions>\n  );\n}\nexport default App;\n",
     "style": "plus-accordion {\n  border: 2px solid whitesmoke;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n}\nplus-accordion:not(:last-of-type) {\n  margin-bottom: 0.5rem;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding: 0.75rem;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n"
   },
   {
@@ -222,7 +222,7 @@ export const examples: any[] = [
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <div>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </div>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <plus-accordions>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </plus-accordions>\n  );\n}\nexport default App;\n",
     "style": "plus-accordion {\n  border: 2px solid whitesmoke;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n}\nplus-accordion:not(:last-of-type) {\n  margin-bottom: 0.5rem;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding: 0.75rem;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n"
   },
   {
@@ -232,9 +232,9 @@ export const examples: any[] = [
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n",
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n",
     "style": "plus-accordion {\n  border: 2px solid whitesmoke;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n}\nplus-accordion:not(:last-of-type) {\n  margin-bottom: 0.5rem;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding: 0.75rem;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
-    "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    "template": "<plus-accordions>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
   },
   {
     "key": "vue/accordion/customized",
@@ -243,9 +243,9 @@ export const examples: any[] = [
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n",
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n",
     "style": "plus-accordion {\n  border: 2px solid whitesmoke;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n}\nplus-accordion:not(:last-of-type) {\n  margin-bottom: 0.5rem;\n}\nplus-accordion::part(body),\nplus-accordion::part(svg) {\n  transition: all 0.5s ease-out;\n}\nplus-accordion::part(header) {\n  column-gap: 0.5rem;\n  flex-direction: row-reverse;\n  padding: 0.75rem;\n}\nplus-accordion[state^='expand']::part(header) {\n  font-weight: bold;\n}\nplus-accordion[state^='expand']::part(svg) {\n  fill: gray;\n  transform: rotate(90deg);\n}\nplus-accordion[state^='collap']::part(svg) {\n  fill: gray;\n  transform: rotate(0deg);\n}\n",
-    "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    "template": "<plus-accordions>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
   },
   {
     "key": "angular/accordion/default",
@@ -312,8 +312,8 @@ export const examples: any[] = [
       "isolate": false,
       "rtl": true
     },
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-accordion summary=\"First\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n<plus-accordion summary=\"Second\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n<plus-accordion summary=\"Third\" disabled>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-accordions>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\" disabled>\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
   },
   {
     "key": "javascript/accordion/disabled",
@@ -322,8 +322,8 @@ export const examples: any[] = [
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n",
-    "template": "<plus-accordion summary=\"First\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n<plus-accordion summary=\"Second\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n<plus-accordion summary=\"Third\" disabled>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n",
+    "template": "<plus-accordions>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\" disabled>\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
   },
   {
     "key": "react/accordion/disabled",
@@ -332,7 +332,7 @@ export const examples: any[] = [
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\" disabled>\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <plus-accordions>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\" disabled>\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </plus-accordions>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/accordion/disabled",
@@ -341,7 +341,7 @@ export const examples: any[] = [
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\" disabled>\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return (\n    <plus-accordions>\n      <plus-accordion summary=\"First\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Second\">\n        <plus-faker></plus-faker>\n      </plus-accordion>\n      <plus-accordion summary=\"Third\" disabled>\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </plus-accordions>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/accordion/disabled",
@@ -350,8 +350,8 @@ export const examples: any[] = [
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n",
-    "template": "<plus-accordion summary=\"First\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n<plus-accordion summary=\"Second\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n<plus-accordion summary=\"Third\" disabled>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n",
+    "template": "<plus-accordions>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\" disabled>\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
   },
   {
     "key": "vue/accordion/disabled",
@@ -360,8 +360,8 @@ export const examples: any[] = [
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\n",
-    "template": "<div>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\" disabled>\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/accordions.js';\nimport '@htmlplus/ui/faker.js';\n",
+    "template": "<plus-accordions>\n  <plus-accordion summary=\"First\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Second\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n  <plus-accordion summary=\"Third\" disabled>\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</plus-accordions>\n"
   },
   {
     "key": "angular/accordion/methods",
@@ -603,7 +603,7 @@ export const examples: any[] = [
       "rtl": true
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n      <plus-faker [seed]=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"middle\"\n      ></plus-progress-bar>\n      <plus-faker [seed]=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"bottom\"\n      ></plus-progress-bar>\n      <plus-faker [seed]=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n</plus-stack>\n"
+    "template": "<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n  <plus-faker [seed]=\"0\"></plus-faker>\n</plus-accordion>\n<br />\n<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"middle\"></plus-progress-bar>\n  <plus-faker [seed]=\"0\"></plus-faker>\n</plus-accordion>\n<br />\n<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"bottom\"></plus-progress-bar>\n  <plus-faker [seed]=\"0\"></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "javascript/accordion/slots",
@@ -613,7 +613,7 @@ export const examples: any[] = [
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n      <plus-faker seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"middle\"\n      ></plus-progress-bar>\n      <plus-faker seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"bottom\"\n      ></plus-progress-bar>\n      <plus-faker seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n</plus-stack>\n"
+    "template": "<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n  <plus-faker seed=\"0\"></plus-faker>\n</plus-accordion>\n<br />\n<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"middle\"></plus-progress-bar>\n  <plus-faker seed=\"0\"></plus-faker>\n</plus-accordion>\n<br />\n<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"bottom\"></plus-progress-bar>\n  <plus-faker seed=\"0\"></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "react/accordion/slots",
@@ -622,7 +622,7 @@ export const examples: any[] = [
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"top\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"middle\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"bottom\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-accordion summary=\"Summary\" open>\n        <plus-progress-bar\n          variant=\"indeterminate\"\n          style={{\n            height: '2px'\n          }}\n          slot=\"top\"\n        ></plus-progress-bar>\n        <plus-faker seed={0}></plus-faker>\n      </plus-accordion>\n      <br />\n      <plus-accordion summary=\"Summary\" open>\n        <plus-progress-bar\n          variant=\"indeterminate\"\n          style={{\n            height: '2px'\n          }}\n          slot=\"middle\"\n        ></plus-progress-bar>\n        <plus-faker seed={0}></plus-faker>\n      </plus-accordion>\n      <br />\n      <plus-accordion summary=\"Summary\" open>\n        <plus-progress-bar\n          variant=\"indeterminate\"\n          style={{\n            height: '2px'\n          }}\n          slot=\"bottom\"\n        ></plus-progress-bar>\n        <plus-faker seed={0}></plus-faker>\n      </plus-accordion>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/accordion/slots",
@@ -631,7 +631,7 @@ export const examples: any[] = [
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"top\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"middle\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"bottom\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-accordion summary=\"Summary\" open>\n        <plus-progress-bar\n          variant=\"indeterminate\"\n          style={{\n            height: '2px'\n          }}\n          slot=\"top\"\n        ></plus-progress-bar>\n        <plus-faker seed={0}></plus-faker>\n      </plus-accordion>\n      <br />\n      <plus-accordion summary=\"Summary\" open>\n        <plus-progress-bar\n          variant=\"indeterminate\"\n          style={{\n            height: '2px'\n          }}\n          slot=\"middle\"\n        ></plus-progress-bar>\n        <plus-faker seed={0}></plus-faker>\n      </plus-accordion>\n      <br />\n      <plus-accordion summary=\"Summary\" open>\n        <plus-progress-bar\n          variant=\"indeterminate\"\n          style={{\n            height: '2px'\n          }}\n          slot=\"bottom\"\n        ></plus-progress-bar>\n        <plus-faker seed={0}></plus-faker>\n      </plus-accordion>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/accordion/slots",
@@ -641,7 +641,7 @@ export const examples: any[] = [
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"top\"\n      ></plus-progress-bar>\n      <plus-faker seed={0}></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"middle\"\n      ></plus-progress-bar>\n      <plus-faker seed={0}></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"bottom\"\n      ></plus-progress-bar>\n      <plus-faker seed={0}></plus-faker>\n    </plus-accordion>\n  </div>\n</plus-stack>\n"
+    "template": "<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"top\"></plus-progress-bar>\n  <plus-faker seed={0}></plus-faker>\n</plus-accordion>\n<br />\n<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"middle\"></plus-progress-bar>\n  <plus-faker seed={0}></plus-faker>\n</plus-accordion>\n<br />\n<plus-accordion summary=\"Summary\" open>\n  <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"bottom\"></plus-progress-bar>\n  <plus-faker seed={0}></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "vue/accordion/slots",
@@ -651,7 +651,7 @@ export const examples: any[] = [
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack align-items=\"stretch\" gap=\"1rem\" vertical>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"middle\"\n      ></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"bottom\"\n      ></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n</plus-stack>\n"
+    "template": "<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n    <plus-faker :seed=\"0\"></plus-faker>\n  </plus-accordion>\n  <br />\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar\n      variant=\"indeterminate\"\n      style=\"height: 2px\"\n      slot=\"middle\"\n    ></plus-progress-bar>\n    <plus-faker :seed=\"0\"></plus-faker>\n  </plus-accordion>\n  <br />\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar\n      variant=\"indeterminate\"\n      style=\"height: 2px\"\n      slot=\"bottom\"\n    ></plus-progress-bar>\n    <plus-faker :seed=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n"
   },
   {
     "key": "angular/animation/button",
@@ -1182,38 +1182,32 @@ export const examples: any[] = [
     "template": "<plus-aspect-ratio value=\"16/9\">\n  <iframe src=\"https://www.youtube.com/embed/tgbNymZ7vqY\"></iframe>\n</plus-aspect-ratio>\n"
   },
   {
-    "key": "angular/avatar/custom-size",
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 2rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.5rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 3.5rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 4.5rem;\n}\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"xxs\">xxs</plus-avatar>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n    <plus-avatar size=\"xxl\">xxl</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    "key": "angular/avatar/color",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-stack gap=\"1rem\">\n  <plus-avatar color=\"#808080\">AB</plus-avatar>\n  <plus-avatar color=\"#2fb344\">CD</plus-avatar>\n  <plus-avatar color=\"#d63939\">EF</plus-avatar>\n  <plus-avatar color=\"#f59f00\">GH</plus-avatar>\n  <plus-avatar color=\"#206bc4\">IJ</plus-avatar>\n</plus-stack>\n"
   },
   {
-    "key": "javascript/avatar/custom-size",
-    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 2rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.5rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 3.5rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 4.5rem;\n}\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"xxs\">xxs</plus-avatar>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n    <plus-avatar size=\"xxl\">xxl</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    "key": "javascript/avatar/color",
+    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"1rem\">\n  <plus-avatar color=\"#808080\">AB</plus-avatar>\n  <plus-avatar color=\"#2fb344\">CD</plus-avatar>\n  <plus-avatar color=\"#d63939\">EF</plus-avatar>\n  <plus-avatar color=\"#f59f00\">GH</plus-avatar>\n  <plus-avatar color=\"#206bc4\">IJ</plus-avatar>\n</plus-stack>\n"
   },
   {
-    "key": "react/avatar/custom-size",
-    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar size=\"xxs\">xxs</plus-avatar>\n        <plus-avatar size=\"xs\">xs</plus-avatar>\n        <plus-avatar size=\"sm\">sm</plus-avatar>\n        <plus-avatar size=\"md\">md</plus-avatar>\n        <plus-avatar size=\"lg\">lg</plus-avatar>\n        <plus-avatar size=\"xl\">xl</plus-avatar>\n        <plus-avatar size=\"xxl\">xxl</plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n",
-    "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 2rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.5rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 3.5rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 4.5rem;\n}\n"
+    "key": "react/avatar/color",
+    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"1rem\">\n      <plus-avatar color=\"#808080\">AB</plus-avatar>\n      <plus-avatar color=\"#2fb344\">CD</plus-avatar>\n      <plus-avatar color=\"#d63939\">EF</plus-avatar>\n      <plus-avatar color=\"#f59f00\">GH</plus-avatar>\n      <plus-avatar color=\"#206bc4\">IJ</plus-avatar>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
-    "key": "react-experimental/avatar/custom-size",
-    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar size=\"xxs\">xxs</plus-avatar>\n        <plus-avatar size=\"xs\">xs</plus-avatar>\n        <plus-avatar size=\"sm\">sm</plus-avatar>\n        <plus-avatar size=\"md\">md</plus-avatar>\n        <plus-avatar size=\"lg\">lg</plus-avatar>\n        <plus-avatar size=\"xl\">xl</plus-avatar>\n        <plus-avatar size=\"xxl\">xxl</plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n",
-    "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 2rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.5rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 3.5rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 4.5rem;\n}\n"
+    "key": "react-experimental/avatar/color",
+    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"1rem\">\n      <plus-avatar color=\"#808080\">AB</plus-avatar>\n      <plus-avatar color=\"#2fb344\">CD</plus-avatar>\n      <plus-avatar color=\"#d63939\">EF</plus-avatar>\n      <plus-avatar color=\"#f59f00\">GH</plus-avatar>\n      <plus-avatar color=\"#206bc4\">IJ</plus-avatar>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
-    "key": "svelte/avatar/custom-size",
-    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 2rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.5rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 3.5rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 4.5rem;\n}\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"xxs\">xxs</plus-avatar>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n    <plus-avatar size=\"xxl\">xxl</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    "key": "svelte/avatar/color",
+    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"1rem\">\n  <plus-avatar color=\"#808080\">AB</plus-avatar>\n  <plus-avatar color=\"#2fb344\">CD</plus-avatar>\n  <plus-avatar color=\"#d63939\">EF</plus-avatar>\n  <plus-avatar color=\"#f59f00\">GH</plus-avatar>\n  <plus-avatar color=\"#206bc4\">IJ</plus-avatar>\n</plus-stack>\n"
   },
   {
-    "key": "vue/avatar/custom-size",
-    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 2rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.5rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 3.5rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 4.5rem;\n}\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"xxs\">xxs</plus-avatar>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n    <plus-avatar size=\"xxl\">xxl</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    "key": "vue/avatar/color",
+    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"1rem\">\n  <plus-avatar color=\"#808080\">AB</plus-avatar>\n  <plus-avatar color=\"#2fb344\">CD</plus-avatar>\n  <plus-avatar color=\"#d63939\">EF</plus-avatar>\n  <plus-avatar color=\"#f59f00\">GH</plus-avatar>\n  <plus-avatar color=\"#206bc4\">IJ</plus-avatar>\n</plus-stack>\n"
   },
   {
     "key": "angular/avatar/default",
@@ -1246,35 +1240,35 @@ export const examples: any[] = [
   {
     "key": "angular/avatar/group-gutter",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-avatar-group {\n  --plus-avatar-group-gutter-stacked: -2rem;\n  --plus-avatar-group-gutter-unstacked: 2rem;\n}\n",
+    "style": "plus-avatar-group plus-avatar {\n  margin-inline-end: 2rem;\n}\nplus-avatar-group[stacked] plus-avatar {\n  margin-inline-end: -2rem;\n}\n",
     "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n<br />\n<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "javascript/avatar/group-gutter",
     "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "style": "plus-avatar-group {\n  --plus-avatar-group-gutter-stacked: -2rem;\n  --plus-avatar-group-gutter-unstacked: 2rem;\n}\n",
+    "style": "plus-avatar-group plus-avatar {\n  margin-inline-end: 2rem;\n}\nplus-avatar-group[stacked] plus-avatar {\n  margin-inline-end: -2rem;\n}\n",
     "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n<br />\n<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "react/avatar/group-gutter",
     "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-center>\n        <plus-avatar-group>\n          <plus-avatar></plus-avatar>\n          <plus-avatar></plus-avatar>\n          <plus-avatar></plus-avatar>\n        </plus-avatar-group>\n      </plus-center>\n      <br />\n      <plus-center>\n        <plus-avatar-group stacked>\n          <plus-avatar></plus-avatar>\n          <plus-avatar></plus-avatar>\n          <plus-avatar></plus-avatar>\n        </plus-avatar-group>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n",
-    "style": "plus-avatar-group {\n  --plus-avatar-group-gutter-stacked: -2rem;\n  --plus-avatar-group-gutter-unstacked: 2rem;\n}\n"
+    "style": "plus-avatar-group plus-avatar {\n  margin-inline-end: 2rem;\n}\nplus-avatar-group[stacked] plus-avatar {\n  margin-inline-end: -2rem;\n}\n"
   },
   {
     "key": "react-experimental/avatar/group-gutter",
     "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-center>\n        <plus-avatar-group>\n          <plus-avatar></plus-avatar>\n          <plus-avatar></plus-avatar>\n          <plus-avatar></plus-avatar>\n        </plus-avatar-group>\n      </plus-center>\n      <br />\n      <plus-center>\n        <plus-avatar-group stacked>\n          <plus-avatar></plus-avatar>\n          <plus-avatar></plus-avatar>\n          <plus-avatar></plus-avatar>\n        </plus-avatar-group>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n",
-    "style": "plus-avatar-group {\n  --plus-avatar-group-gutter-stacked: -2rem;\n  --plus-avatar-group-gutter-unstacked: 2rem;\n}\n"
+    "style": "plus-avatar-group plus-avatar {\n  margin-inline-end: 2rem;\n}\nplus-avatar-group[stacked] plus-avatar {\n  margin-inline-end: -2rem;\n}\n"
   },
   {
     "key": "svelte/avatar/group-gutter",
     "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "style": "plus-avatar-group {\n  --plus-avatar-group-gutter-stacked: -2rem;\n  --plus-avatar-group-gutter-unstacked: 2rem;\n}\n",
+    "style": "plus-avatar-group plus-avatar {\n  margin-inline-end: 2rem;\n}\nplus-avatar-group[stacked] plus-avatar {\n  margin-inline-end: -2rem;\n}\n",
     "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n<br />\n<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "vue/avatar/group-gutter",
     "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "style": "plus-avatar-group {\n  --plus-avatar-group-gutter-stacked: -2rem;\n  --plus-avatar-group-gutter-unstacked: 2rem;\n}\n",
+    "style": "plus-avatar-group plus-avatar {\n  margin-inline-end: 2rem;\n}\nplus-avatar-group[stacked] plus-avatar {\n  margin-inline-end: -2rem;\n}\n",
     "template": "<div>\n  <plus-center>\n    <plus-avatar-group>\n      <plus-avatar></plus-avatar>\n      <plus-avatar></plus-avatar>\n      <plus-avatar></plus-avatar>\n    </plus-avatar-group>\n  </plus-center>\n  <br />\n  <plus-center>\n    <plus-avatar-group stacked>\n      <plus-avatar></plus-avatar>\n      <plus-avatar></plus-avatar>\n      <plus-avatar></plus-avatar>\n    </plus-avatar-group>\n  </plus-center>\n</div>\n"
   },
   {
@@ -1334,34 +1328,6 @@ export const examples: any[] = [
     "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 1</plus-tooltip>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 2</plus-tooltip>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 3</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
-    "key": "angular/avatar/group-link",
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
-  },
-  {
-    "key": "javascript/avatar/group-link",
-    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
-  },
-  {
-    "key": "react/avatar/group-link",
-    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </plus-avatar>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </plus-avatar>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "react-experimental/avatar/group-link",
-    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </plus-avatar>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </plus-avatar>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "svelte/avatar/group-link",
-    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
-  },
-  {
-    "key": "vue/avatar/group-link",
-    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
-  },
-  {
     "key": "angular/avatar/group-stacked",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
@@ -1390,34 +1356,6 @@ export const examples: any[] = [
     "template": "<plus-center>\n  <plus-avatar-group stacked>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
-    "key": "angular/avatar/group-tooltip",
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>A</plus-avatar>\n    <plus-tooltip>Tooltip A</plus-tooltip>\n    <plus-avatar>B</plus-avatar>\n    <plus-tooltip>Tooltip B</plus-tooltip>\n    <plus-avatar>C</plus-avatar>\n    <plus-tooltip>Tooltip C</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
-  },
-  {
-    "key": "javascript/avatar/group-tooltip",
-    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>A</plus-avatar>\n    <plus-tooltip>Tooltip A</plus-tooltip>\n    <plus-avatar>B</plus-avatar>\n    <plus-tooltip>Tooltip B</plus-tooltip>\n    <plus-avatar>C</plus-avatar>\n    <plus-tooltip>Tooltip C</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
-  },
-  {
-    "key": "react/avatar/group-tooltip",
-    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar>A</plus-avatar>\n        <plus-tooltip>Tooltip A</plus-tooltip>\n        <plus-avatar>B</plus-avatar>\n        <plus-tooltip>Tooltip B</plus-tooltip>\n        <plus-avatar>C</plus-avatar>\n        <plus-tooltip>Tooltip C</plus-tooltip>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "react-experimental/avatar/group-tooltip",
-    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar>A</plus-avatar>\n        <plus-tooltip>Tooltip A</plus-tooltip>\n        <plus-avatar>B</plus-avatar>\n        <plus-tooltip>Tooltip B</plus-tooltip>\n        <plus-avatar>C</plus-avatar>\n        <plus-tooltip>Tooltip C</plus-tooltip>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "svelte/avatar/group-tooltip",
-    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>A</plus-avatar>\n    <plus-tooltip>Tooltip A</plus-tooltip>\n    <plus-avatar>B</plus-avatar>\n    <plus-tooltip>Tooltip B</plus-tooltip>\n    <plus-avatar>C</plus-avatar>\n    <plus-tooltip>Tooltip C</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
-  },
-  {
-    "key": "vue/avatar/group-tooltip",
-    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>A</plus-avatar>\n    <plus-tooltip>Tooltip A</plus-tooltip>\n    <plus-avatar>B</plus-avatar>\n    <plus-tooltip>Tooltip B</plus-tooltip>\n    <plus-avatar>C</plus-avatar>\n    <plus-tooltip>Tooltip C</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
-  },
-  {
     "key": "angular/avatar/group",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
@@ -1444,68 +1382,6 @@ export const examples: any[] = [
     "key": "vue/avatar/group",
     "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
     "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n    <plus-avatar></plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
-  },
-  {
-    "key": "angular/avatar/icon-ratio-global",
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-icon {\n  padding: 0.75em;\n}\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"person\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
-  },
-  {
-    "key": "javascript/avatar/icon-ratio-global",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
-    "style": "plus-icon {\n  padding: 0.75em;\n}\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"person\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
-  },
-  {
-    "key": "react/avatar/icon-ratio-global",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <plus-icon name=\"person\"></plus-icon>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n",
-    "style": "plus-icon {\n  padding: 0.75em;\n}\n"
-  },
-  {
-    "key": "react-experimental/avatar/icon-ratio-global",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <plus-icon name=\"person\"></plus-icon>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n",
-    "style": "plus-icon {\n  padding: 0.75em;\n}\n"
-  },
-  {
-    "key": "svelte/avatar/icon-ratio-global",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
-    "style": "plus-icon {\n  padding: 0.75em;\n}\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"person\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
-  },
-  {
-    "key": "vue/avatar/icon-ratio-global",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
-    "style": "plus-icon {\n  padding: 0.75em;\n}\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"person\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
-  },
-  {
-    "key": "angular/avatar/icon-ratio-inline",
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"person\" size=\"1.25em\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
-  },
-  {
-    "key": "javascript/avatar/icon-ratio-inline",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"person\" size=\"1.25em\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
-  },
-  {
-    "key": "react/avatar/icon-ratio-inline",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <plus-icon name=\"person\" size=\"1.25em\"></plus-icon>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "react-experimental/avatar/icon-ratio-inline",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <plus-icon name=\"person\" size=\"1.25em\"></plus-icon>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "svelte/avatar/icon-ratio-inline",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"person\" size=\"1.25em\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
-  },
-  {
-    "key": "vue/avatar/icon-ratio-inline",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <plus-icon name=\"person\" size=\"1.25em\"></plus-icon>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "angular/avatar/icon",
@@ -1592,34 +1468,6 @@ export const examples: any[] = [
     "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
   },
   {
-    "key": "angular/avatar/link",
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n</plus-center>\n"
-  },
-  {
-    "key": "javascript/avatar/link",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n</plus-center>\n"
-  },
-  {
-    "key": "react/avatar/link",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <img src=\"https://picsum.photos/id/177/90/90\" />\n        <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "react-experimental/avatar/link",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <img src=\"https://picsum.photos/id/177/90/90\" />\n        <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "svelte/avatar/link",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n</plus-center>\n"
-  },
-  {
-    "key": "vue/avatar/link",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n</plus-center>\n"
-  },
-  {
     "key": "angular/avatar/shape",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar shape=\"circle\">C</plus-avatar>\n    <plus-avatar shape=\"round\">R</plus-avatar>\n    <plus-avatar shape=\"tile\">T</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
@@ -1646,6 +1494,40 @@ export const examples: any[] = [
     "key": "vue/avatar/shape",
     "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
     "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar shape=\"circle\">C</plus-avatar>\n    <plus-avatar shape=\"round\">R</plus-avatar>\n    <plus-avatar shape=\"tile\">T</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+  },
+  {
+    "key": "angular/avatar/size-overriding",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 2rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.5rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 3.5rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 4.5rem;\n}\n",
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"xxs\">xxs</plus-avatar>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n    <plus-avatar size=\"xxl\">xxl</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+  },
+  {
+    "key": "javascript/avatar/size-overriding",
+    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
+    "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 2rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.5rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 3.5rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 4.5rem;\n}\n",
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"xxs\">xxs</plus-avatar>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n    <plus-avatar size=\"xxl\">xxl</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+  },
+  {
+    "key": "react/avatar/size-overriding",
+    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar size=\"xxs\">xxs</plus-avatar>\n        <plus-avatar size=\"xs\">xs</plus-avatar>\n        <plus-avatar size=\"sm\">sm</plus-avatar>\n        <plus-avatar size=\"md\">md</plus-avatar>\n        <plus-avatar size=\"lg\">lg</plus-avatar>\n        <plus-avatar size=\"xl\">xl</plus-avatar>\n        <plus-avatar size=\"xxl\">xxl</plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n",
+    "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 2rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.5rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 3.5rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 4.5rem;\n}\n"
+  },
+  {
+    "key": "react-experimental/avatar/size-overriding",
+    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar size=\"xxs\">xxs</plus-avatar>\n        <plus-avatar size=\"xs\">xs</plus-avatar>\n        <plus-avatar size=\"sm\">sm</plus-avatar>\n        <plus-avatar size=\"md\">md</plus-avatar>\n        <plus-avatar size=\"lg\">lg</plus-avatar>\n        <plus-avatar size=\"xl\">xl</plus-avatar>\n        <plus-avatar size=\"xxl\">xxl</plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n",
+    "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 2rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.5rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 3.5rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 4.5rem;\n}\n"
+  },
+  {
+    "key": "svelte/avatar/size-overriding",
+    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
+    "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 2rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.5rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 3.5rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 4.5rem;\n}\n",
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"xxs\">xxs</plus-avatar>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n    <plus-avatar size=\"xxl\">xxl</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+  },
+  {
+    "key": "vue/avatar/size-overriding",
+    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
+    "style": "plus-avatar[size='xxs'] {\n  --plus-avatar-size: 1.5rem;\n}\nplus-avatar[size='xs'] {\n  --plus-avatar-size: 2rem;\n}\nplus-avatar[size='sm'] {\n  --plus-avatar-size: 2.5rem;\n}\nplus-avatar[size='md'] {\n  --plus-avatar-size: 3rem;\n}\nplus-avatar[size='lg'] {\n  --plus-avatar-size: 3.5rem;\n}\nplus-avatar[size='xl'] {\n  --plus-avatar-size: 4rem;\n}\nplus-avatar[size='xxl'] {\n  --plus-avatar-size: 4.5rem;\n}\n",
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar size=\"xxs\">xxs</plus-avatar>\n    <plus-avatar size=\"xs\">xs</plus-avatar>\n    <plus-avatar size=\"sm\">sm</plus-avatar>\n    <plus-avatar size=\"md\">md</plus-avatar>\n    <plus-avatar size=\"lg\">lg</plus-avatar>\n    <plus-avatar size=\"xl\">xl</plus-avatar>\n    <plus-avatar size=\"xxl\">xxl</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "angular/avatar/size",
@@ -1710,68 +1592,6 @@ export const examples: any[] = [
     "template": "<plus-stack gap=\"8rem\">\n  <plus-avatar size=\"xxl\">\n    <div slot=\"bottom\">bottom</div>\n    <div slot=\"center\">center</div>\n    <div slot=\"left\">left</div>\n    <div slot=\"left-bottom\">left-bottom</div>\n    <div slot=\"left-top\">left-top</div>\n    <div slot=\"right\">right</div>\n    <div slot=\"right-bottom\">right-bottom</div>\n    <div slot=\"right-top\">right-top</div>\n    <div slot=\"top\">top</div>\n  </plus-avatar>\n  <plus-avatar size=\"xxl\">\n    <div slot=\"bottom\">bottom</div>\n    <div slot=\"center\">center</div>\n    <div slot=\"end\">end</div>\n    <div slot=\"end-bottom\">end-bottom</div>\n    <div slot=\"end-top\">end-top</div>\n    <div slot=\"start\">start</div>\n    <div slot=\"start-bottom\">start-bottom</div>\n    <div slot=\"start-top\">start-top</div>\n    <div slot=\"top\">top</div>\n  </plus-avatar>\n</plus-stack>\n"
   },
   {
-    "key": "angular/avatar/svg-ratio-global",
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "svg {\n  padding: 0.5em;\n}\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
-  },
-  {
-    "key": "javascript/avatar/svg-ratio-global",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "style": "svg {\n  padding: 0.5em;\n}\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
-  },
-  {
-    "key": "react/avatar/svg-ratio-global",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n          <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n          <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n          <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n        </svg>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n",
-    "style": "svg {\n  padding: 0.5em;\n}\n"
-  },
-  {
-    "key": "react-experimental/avatar/svg-ratio-global",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n          <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n          <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n          <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n        </svg>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n",
-    "style": "svg {\n  padding: 0.5em;\n}\n"
-  },
-  {
-    "key": "svelte/avatar/svg-ratio-global",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "style": "svg {\n  padding: 0.5em;\n}\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
-  },
-  {
-    "key": "vue/avatar/svg-ratio-global",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "style": "svg {\n  padding: 0.5em;\n}\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
-  },
-  {
-    "key": "angular/avatar/svg-ratio-inline",
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\" style=\"padding: 0.5em\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
-  },
-  {
-    "key": "javascript/avatar/svg-ratio-inline",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\" style=\"padding: 0.5em\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
-  },
-  {
-    "key": "react/avatar/svg-ratio-inline",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <svg\n          viewBox=\"0 0 24 24\"\n          stroke=\"currentColor\"\n          fill=\"none\"\n          style={{\n            padding: '0.5em'\n          }}\n        >\n          <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n          <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n          <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n        </svg>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "react-experimental/avatar/svg-ratio-inline",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <svg\n          viewBox=\"0 0 24 24\"\n          stroke=\"currentColor\"\n          fill=\"none\"\n          style={{\n            padding: '0.5em'\n          }}\n        >\n          <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n          <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n          <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n        </svg>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "svelte/avatar/svg-ratio-inline",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\" style=\"padding: 0.5em;\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
-  },
-  {
-    "key": "vue/avatar/svg-ratio-inline",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\" style=\"padding: 0.5em\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
-  },
-  {
     "key": "angular/avatar/svg",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
@@ -1826,34 +1646,6 @@ export const examples: any[] = [
     "key": "vue/avatar/text",
     "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
     "template": "<plus-center>\n  <plus-avatar>T</plus-avatar>\n</plus-center>\n"
-  },
-  {
-    "key": "angular/avatar/tooltip",
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-center>\n  <plus-avatar></plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
-  },
-  {
-    "key": "javascript/avatar/tooltip",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n",
-    "template": "<plus-center>\n  <plus-avatar></plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
-  },
-  {
-    "key": "react/avatar/tooltip",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar></plus-avatar>\n      <plus-tooltip>Tooltip</plus-tooltip>\n    </plus-center>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "react-experimental/avatar/tooltip",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar></plus-avatar>\n      <plus-tooltip>Tooltip</plus-tooltip>\n    </plus-center>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "svelte/avatar/tooltip",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n",
-    "template": "<plus-center>\n  <plus-avatar></plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
-  },
-  {
-    "key": "vue/avatar/tooltip",
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n",
-    "template": "<plus-center>\n  <plus-avatar></plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
   },
   {
     "key": "angular/avatar/wildcard-size",
@@ -5618,92 +5410,64 @@ export const examples: any[] = [
   {
     "key": "angular/icon/custom-color",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "[color='primary'] {\n  color: #ff5449;\n}\n[color='secondary'] {\n  color: #08dfc8;\n}\n[color='tertiary'] {\n  color: #5f9ee9;\n}\n",
+    "style": "plus-icon[color='primary'] {\n  color: #ff5449;\n}\nplus-icon[color='secondary'] {\n  color: #08dfc8;\n}\nplus-icon[color='tertiary'] {\n  color: #5f9ee9;\n}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" color=\"primary\"></plus-icon>\n  <plus-icon name=\"house\" color=\"secondary\"></plus-icon>\n  <plus-icon name=\"house\" color=\"tertiary\"></plus-icon>\n</plus-stack>\n"
   },
   {
     "key": "javascript/icon/custom-color",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "style": "[color='primary'] {\n  color: #ff5449;\n}\n[color='secondary'] {\n  color: #08dfc8;\n}\n[color='tertiary'] {\n  color: #5f9ee9;\n}\n",
+    "style": "plus-icon[color='primary'] {\n  color: #ff5449;\n}\nplus-icon[color='secondary'] {\n  color: #08dfc8;\n}\nplus-icon[color='tertiary'] {\n  color: #5f9ee9;\n}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" color=\"primary\"></plus-icon>\n  <plus-icon name=\"house\" color=\"secondary\"></plus-icon>\n  <plus-icon name=\"house\" color=\"tertiary\"></plus-icon>\n</plus-stack>\n"
   },
   {
     "key": "react/icon/custom-color",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"house\" color=\"primary\"></plus-icon>\n      <plus-icon name=\"house\" color=\"secondary\"></plus-icon>\n      <plus-icon name=\"house\" color=\"tertiary\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n",
-    "style": "[color='primary'] {\n  color: #ff5449;\n}\n[color='secondary'] {\n  color: #08dfc8;\n}\n[color='tertiary'] {\n  color: #5f9ee9;\n}\n"
+    "style": "plus-icon[color='primary'] {\n  color: #ff5449;\n}\nplus-icon[color='secondary'] {\n  color: #08dfc8;\n}\nplus-icon[color='tertiary'] {\n  color: #5f9ee9;\n}\n"
   },
   {
     "key": "react-experimental/icon/custom-color",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"house\" color=\"primary\"></plus-icon>\n      <plus-icon name=\"house\" color=\"secondary\"></plus-icon>\n      <plus-icon name=\"house\" color=\"tertiary\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n",
-    "style": "[color='primary'] {\n  color: #ff5449;\n}\n[color='secondary'] {\n  color: #08dfc8;\n}\n[color='tertiary'] {\n  color: #5f9ee9;\n}\n"
+    "style": "plus-icon[color='primary'] {\n  color: #ff5449;\n}\nplus-icon[color='secondary'] {\n  color: #08dfc8;\n}\nplus-icon[color='tertiary'] {\n  color: #5f9ee9;\n}\n"
   },
   {
     "key": "svelte/icon/custom-color",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "style": "[color='primary'] {\n  color: #ff5449;\n}\n[color='secondary'] {\n  color: #08dfc8;\n}\n[color='tertiary'] {\n  color: #5f9ee9;\n}\n",
+    "style": "plus-icon[color='primary'] {\n  color: #ff5449;\n}\nplus-icon[color='secondary'] {\n  color: #08dfc8;\n}\nplus-icon[color='tertiary'] {\n  color: #5f9ee9;\n}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" color=\"primary\"></plus-icon>\n  <plus-icon name=\"house\" color=\"secondary\"></plus-icon>\n  <plus-icon name=\"house\" color=\"tertiary\"></plus-icon>\n</plus-stack>\n"
   },
   {
     "key": "vue/icon/custom-color",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "style": "[color='primary'] {\n  color: #ff5449;\n}\n[color='secondary'] {\n  color: #08dfc8;\n}\n[color='tertiary'] {\n  color: #5f9ee9;\n}\n",
+    "style": "plus-icon[color='primary'] {\n  color: #ff5449;\n}\nplus-icon[color='secondary'] {\n  color: #08dfc8;\n}\nplus-icon[color='tertiary'] {\n  color: #5f9ee9;\n}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" color=\"primary\"></plus-icon>\n  <plus-icon name=\"house\" color=\"secondary\"></plus-icon>\n  <plus-icon name=\"house\" color=\"tertiary\"></plus-icon>\n</plus-stack>\n"
-  },
-  {
-    "key": "angular/icon/custom-size",
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"16\"></plus-icon>\n  <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n</plus-stack>\n"
-  },
-  {
-    "key": "javascript/icon/custom-size",
-    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"16\"></plus-icon>\n  <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n</plus-stack>\n"
-  },
-  {
-    "key": "react/icon/custom-size",
-    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"house\" size=\"16\"></plus-icon>\n      <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n      <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "react-experimental/icon/custom-size",
-    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"house\" size=\"16\"></plus-icon>\n      <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n      <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n"
-  },
-  {
-    "key": "svelte/icon/custom-size",
-    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"16\"></plus-icon>\n  <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n</plus-stack>\n"
-  },
-  {
-    "key": "vue/icon/custom-size",
-    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"16\"></plus-icon>\n  <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n</plus-stack>\n"
   },
   {
     "key": "angular/icon/default",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-center>\n  <plus-icon name=\"house\"></plus-icon>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-icon></plus-icon>\n</plus-center>\n"
   },
   {
     "key": "javascript/icon/default",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
-    "template": "<plus-center>\n  <plus-icon name=\"house\"></plus-icon>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-icon></plus-icon>\n</plus-center>\n"
   },
   {
     "key": "react/icon/default",
-    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-icon name=\"house\"></plus-icon>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-icon></plus-icon>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/icon/default",
-    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-icon name=\"house\"></plus-icon>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-icon></plus-icon>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/icon/default",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
-    "template": "<plus-center>\n  <plus-icon name=\"house\"></plus-icon>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-icon></plus-icon>\n</plus-center>\n"
   },
   {
     "key": "vue/icon/default",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
-    "template": "<plus-center>\n  <plus-icon name=\"house\"></plus-icon>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-icon></plus-icon>\n</plus-center>\n"
   },
   {
     "key": "angular/icon/flip",
@@ -5955,65 +5719,31 @@ export const examples: any[] = [
   },
   {
     "key": "angular/icon/name",
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"gear\"></plus-icon>\n  <plus-icon name=\"list\"></plus-icon>\n  <plus-icon name=\"bell\"></plus-icon>\n</plus-stack>\n"
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-center>\n  <plus-icon name=\"house\"></plus-icon>\n</plus-center>\n"
   },
   {
     "key": "javascript/icon/name",
-    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"gear\"></plus-icon>\n  <plus-icon name=\"list\"></plus-icon>\n  <plus-icon name=\"bell\"></plus-icon>\n</plus-stack>\n"
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
+    "template": "<plus-center>\n  <plus-icon name=\"house\"></plus-icon>\n</plus-center>\n"
   },
   {
     "key": "react/icon/name",
-    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"gear\"></plus-icon>\n      <plus-icon name=\"list\"></plus-icon>\n      <plus-icon name=\"bell\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-icon name=\"house\"></plus-icon>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "react-experimental/icon/name",
-    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"gear\"></plus-icon>\n      <plus-icon name=\"list\"></plus-icon>\n      <plus-icon name=\"bell\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-icon name=\"house\"></plus-icon>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/icon/name",
-    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"gear\"></plus-icon>\n  <plus-icon name=\"list\"></plus-icon>\n  <plus-icon name=\"bell\"></plus-icon>\n</plus-stack>\n"
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
+    "template": "<plus-center>\n  <plus-icon name=\"house\"></plus-icon>\n</plus-center>\n"
   },
   {
     "key": "vue/icon/name",
-    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"gear\"></plus-icon>\n  <plus-icon name=\"list\"></plus-icon>\n  <plus-icon name=\"bell\"></plus-icon>\n</plus-stack>\n"
-  },
-  {
-    "key": "angular/icon/override-size",
-    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": "plus-icon[size='xs'] {\n  height: 1em;\n  width: 1em;\n}\nplus-icon[size='sm'] {\n  height: 1.25em;\n  width: 1.25em;\n}\nplus-icon[size='md'] {\n  height: 1.5em;\n  width: 1.5em;\n}\nplus-icon[size='lg'] {\n  height: 1.75em;\n  width: 1.75em;\n}\nplus-icon[size='xl'] {\n  height: 2em;\n  width: 2em;\n}\n",
-    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"xs\"></plus-icon>\n  <plus-icon name=\"house\" size=\"sm\"></plus-icon>\n  <plus-icon name=\"house\" size=\"md\"></plus-icon>\n  <plus-icon name=\"house\" size=\"lg\"></plus-icon>\n  <plus-icon name=\"house\" size=\"xl\"></plus-icon>\n</plus-stack>\n"
-  },
-  {
-    "key": "javascript/icon/override-size",
-    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "style": "plus-icon[size='xs'] {\n  height: 1em;\n  width: 1em;\n}\nplus-icon[size='sm'] {\n  height: 1.25em;\n  width: 1.25em;\n}\nplus-icon[size='md'] {\n  height: 1.5em;\n  width: 1.5em;\n}\nplus-icon[size='lg'] {\n  height: 1.75em;\n  width: 1.75em;\n}\nplus-icon[size='xl'] {\n  height: 2em;\n  width: 2em;\n}\n",
-    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"xs\"></plus-icon>\n  <plus-icon name=\"house\" size=\"sm\"></plus-icon>\n  <plus-icon name=\"house\" size=\"md\"></plus-icon>\n  <plus-icon name=\"house\" size=\"lg\"></plus-icon>\n  <plus-icon name=\"house\" size=\"xl\"></plus-icon>\n</plus-stack>\n"
-  },
-  {
-    "key": "react/icon/override-size",
-    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"house\" size=\"xs\"></plus-icon>\n      <plus-icon name=\"house\" size=\"sm\"></plus-icon>\n      <plus-icon name=\"house\" size=\"md\"></plus-icon>\n      <plus-icon name=\"house\" size=\"lg\"></plus-icon>\n      <plus-icon name=\"house\" size=\"xl\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n",
-    "style": "plus-icon[size='xs'] {\n  height: 1em;\n  width: 1em;\n}\nplus-icon[size='sm'] {\n  height: 1.25em;\n  width: 1.25em;\n}\nplus-icon[size='md'] {\n  height: 1.5em;\n  width: 1.5em;\n}\nplus-icon[size='lg'] {\n  height: 1.75em;\n  width: 1.75em;\n}\nplus-icon[size='xl'] {\n  height: 2em;\n  width: 2em;\n}\n"
-  },
-  {
-    "key": "react-experimental/icon/override-size",
-    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"house\" size=\"xs\"></plus-icon>\n      <plus-icon name=\"house\" size=\"sm\"></plus-icon>\n      <plus-icon name=\"house\" size=\"md\"></plus-icon>\n      <plus-icon name=\"house\" size=\"lg\"></plus-icon>\n      <plus-icon name=\"house\" size=\"xl\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n",
-    "style": "plus-icon[size='xs'] {\n  height: 1em;\n  width: 1em;\n}\nplus-icon[size='sm'] {\n  height: 1.25em;\n  width: 1.25em;\n}\nplus-icon[size='md'] {\n  height: 1.5em;\n  width: 1.5em;\n}\nplus-icon[size='lg'] {\n  height: 1.75em;\n  width: 1.75em;\n}\nplus-icon[size='xl'] {\n  height: 2em;\n  width: 2em;\n}\n"
-  },
-  {
-    "key": "svelte/icon/override-size",
-    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "style": "plus-icon[size='xs'] {\n  height: 1em;\n  width: 1em;\n}\nplus-icon[size='sm'] {\n  height: 1.25em;\n  width: 1.25em;\n}\nplus-icon[size='md'] {\n  height: 1.5em;\n  width: 1.5em;\n}\nplus-icon[size='lg'] {\n  height: 1.75em;\n  width: 1.75em;\n}\nplus-icon[size='xl'] {\n  height: 2em;\n  width: 2em;\n}\n",
-    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"xs\"></plus-icon>\n  <plus-icon name=\"house\" size=\"sm\"></plus-icon>\n  <plus-icon name=\"house\" size=\"md\"></plus-icon>\n  <plus-icon name=\"house\" size=\"lg\"></plus-icon>\n  <plus-icon name=\"house\" size=\"xl\"></plus-icon>\n</plus-stack>\n"
-  },
-  {
-    "key": "vue/icon/override-size",
-    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "style": "plus-icon[size='xs'] {\n  height: 1em;\n  width: 1em;\n}\nplus-icon[size='sm'] {\n  height: 1.25em;\n  width: 1.25em;\n}\nplus-icon[size='md'] {\n  height: 1.5em;\n  width: 1.5em;\n}\nplus-icon[size='lg'] {\n  height: 1.75em;\n  width: 1.75em;\n}\nplus-icon[size='xl'] {\n  height: 2em;\n  width: 2em;\n}\n",
-    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"xs\"></plus-icon>\n  <plus-icon name=\"house\" size=\"sm\"></plus-icon>\n  <plus-icon name=\"house\" size=\"md\"></plus-icon>\n  <plus-icon name=\"house\" size=\"lg\"></plus-icon>\n  <plus-icon name=\"house\" size=\"xl\"></plus-icon>\n</plus-stack>\n"
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
+    "template": "<plus-center>\n  <plus-icon name=\"house\"></plus-icon>\n</plus-center>\n"
   },
   {
     "key": "angular/icon/register-a-custom-name",
@@ -6142,6 +5872,40 @@ export const examples: any[] = [
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" :rotate=\"0\"></plus-icon>\n  <plus-icon name=\"house\" :rotate=\"90\"></plus-icon>\n  <plus-icon name=\"house\" :rotate=\"180\"></plus-icon>\n  <plus-icon name=\"house\" :rotate=\"270\"></plus-icon>\n</plus-stack>\n"
   },
   {
+    "key": "angular/icon/size-overriding",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "style": "plus-icon[size='xs'] {\n  height: 1em;\n  width: 1em;\n}\nplus-icon[size='sm'] {\n  height: 1.25em;\n  width: 1.25em;\n}\nplus-icon[size='md'] {\n  height: 1.5em;\n  width: 1.5em;\n}\nplus-icon[size='lg'] {\n  height: 1.75em;\n  width: 1.75em;\n}\nplus-icon[size='xl'] {\n  height: 2em;\n  width: 2em;\n}\n",
+    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"xs\"></plus-icon>\n  <plus-icon name=\"house\" size=\"sm\"></plus-icon>\n  <plus-icon name=\"house\" size=\"md\"></plus-icon>\n  <plus-icon name=\"house\" size=\"lg\"></plus-icon>\n  <plus-icon name=\"house\" size=\"xl\"></plus-icon>\n</plus-stack>\n"
+  },
+  {
+    "key": "javascript/icon/size-overriding",
+    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "style": "plus-icon[size='xs'] {\n  height: 1em;\n  width: 1em;\n}\nplus-icon[size='sm'] {\n  height: 1.25em;\n  width: 1.25em;\n}\nplus-icon[size='md'] {\n  height: 1.5em;\n  width: 1.5em;\n}\nplus-icon[size='lg'] {\n  height: 1.75em;\n  width: 1.75em;\n}\nplus-icon[size='xl'] {\n  height: 2em;\n  width: 2em;\n}\n",
+    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"xs\"></plus-icon>\n  <plus-icon name=\"house\" size=\"sm\"></plus-icon>\n  <plus-icon name=\"house\" size=\"md\"></plus-icon>\n  <plus-icon name=\"house\" size=\"lg\"></plus-icon>\n  <plus-icon name=\"house\" size=\"xl\"></plus-icon>\n</plus-stack>\n"
+  },
+  {
+    "key": "react/icon/size-overriding",
+    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"house\" size=\"xs\"></plus-icon>\n      <plus-icon name=\"house\" size=\"sm\"></plus-icon>\n      <plus-icon name=\"house\" size=\"md\"></plus-icon>\n      <plus-icon name=\"house\" size=\"lg\"></plus-icon>\n      <plus-icon name=\"house\" size=\"xl\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n",
+    "style": "plus-icon[size='xs'] {\n  height: 1em;\n  width: 1em;\n}\nplus-icon[size='sm'] {\n  height: 1.25em;\n  width: 1.25em;\n}\nplus-icon[size='md'] {\n  height: 1.5em;\n  width: 1.5em;\n}\nplus-icon[size='lg'] {\n  height: 1.75em;\n  width: 1.75em;\n}\nplus-icon[size='xl'] {\n  height: 2em;\n  width: 2em;\n}\n"
+  },
+  {
+    "key": "react-experimental/icon/size-overriding",
+    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"house\" size=\"xs\"></plus-icon>\n      <plus-icon name=\"house\" size=\"sm\"></plus-icon>\n      <plus-icon name=\"house\" size=\"md\"></plus-icon>\n      <plus-icon name=\"house\" size=\"lg\"></plus-icon>\n      <plus-icon name=\"house\" size=\"xl\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n",
+    "style": "plus-icon[size='xs'] {\n  height: 1em;\n  width: 1em;\n}\nplus-icon[size='sm'] {\n  height: 1.25em;\n  width: 1.25em;\n}\nplus-icon[size='md'] {\n  height: 1.5em;\n  width: 1.5em;\n}\nplus-icon[size='lg'] {\n  height: 1.75em;\n  width: 1.75em;\n}\nplus-icon[size='xl'] {\n  height: 2em;\n  width: 2em;\n}\n"
+  },
+  {
+    "key": "svelte/icon/size-overriding",
+    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "style": "plus-icon[size='xs'] {\n  height: 1em;\n  width: 1em;\n}\nplus-icon[size='sm'] {\n  height: 1.25em;\n  width: 1.25em;\n}\nplus-icon[size='md'] {\n  height: 1.5em;\n  width: 1.5em;\n}\nplus-icon[size='lg'] {\n  height: 1.75em;\n  width: 1.75em;\n}\nplus-icon[size='xl'] {\n  height: 2em;\n  width: 2em;\n}\n",
+    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"xs\"></plus-icon>\n  <plus-icon name=\"house\" size=\"sm\"></plus-icon>\n  <plus-icon name=\"house\" size=\"md\"></plus-icon>\n  <plus-icon name=\"house\" size=\"lg\"></plus-icon>\n  <plus-icon name=\"house\" size=\"xl\"></plus-icon>\n</plus-stack>\n"
+  },
+  {
+    "key": "vue/icon/size-overriding",
+    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "style": "plus-icon[size='xs'] {\n  height: 1em;\n  width: 1em;\n}\nplus-icon[size='sm'] {\n  height: 1.25em;\n  width: 1.25em;\n}\nplus-icon[size='md'] {\n  height: 1.5em;\n  width: 1.5em;\n}\nplus-icon[size='lg'] {\n  height: 1.75em;\n  width: 1.75em;\n}\nplus-icon[size='xl'] {\n  height: 2em;\n  width: 2em;\n}\n",
+    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"xs\"></plus-icon>\n  <plus-icon name=\"house\" size=\"sm\"></plus-icon>\n  <plus-icon name=\"house\" size=\"md\"></plus-icon>\n  <plus-icon name=\"house\" size=\"lg\"></plus-icon>\n  <plus-icon name=\"house\" size=\"xl\"></plus-icon>\n</plus-stack>\n"
+  },
+  {
     "key": "angular/icon/size",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"xs\"></plus-icon>\n  <plus-icon name=\"house\" size=\"sm\"></plus-icon>\n  <plus-icon name=\"house\" size=\"md\"></plus-icon>\n  <plus-icon name=\"house\" size=\"lg\"></plus-icon>\n  <plus-icon name=\"house\" size=\"xl\"></plus-icon>\n</plus-stack>\n<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"1x\"></plus-icon>\n  <plus-icon name=\"house\" size=\"2x\"></plus-icon>\n  <plus-icon name=\"house\" size=\"3x\"></plus-icon>\n  <plus-icon name=\"house\" size=\"4x\"></plus-icon>\n  <plus-icon name=\"house\" size=\"5x\"></plus-icon>\n  <plus-icon name=\"house\" size=\"6x\"></plus-icon>\n  <plus-icon name=\"house\" size=\"7x\"></plus-icon>\n  <plus-icon name=\"house\" size=\"8x\"></plus-icon>\n  <plus-icon name=\"house\" size=\"9x\"></plus-icon>\n</plus-stack>\n"
@@ -6168,6 +5932,34 @@ export const examples: any[] = [
     "key": "vue/icon/size",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<div>\n  <plus-stack gap=\"2rem\">\n    <plus-icon name=\"house\" size=\"xs\"></plus-icon>\n    <plus-icon name=\"house\" size=\"sm\"></plus-icon>\n    <plus-icon name=\"house\" size=\"md\"></plus-icon>\n    <plus-icon name=\"house\" size=\"lg\"></plus-icon>\n    <plus-icon name=\"house\" size=\"xl\"></plus-icon>\n  </plus-stack>\n  <plus-stack gap=\"2rem\">\n    <plus-icon name=\"house\" size=\"1x\"></plus-icon>\n    <plus-icon name=\"house\" size=\"2x\"></plus-icon>\n    <plus-icon name=\"house\" size=\"3x\"></plus-icon>\n    <plus-icon name=\"house\" size=\"4x\"></plus-icon>\n    <plus-icon name=\"house\" size=\"5x\"></plus-icon>\n    <plus-icon name=\"house\" size=\"6x\"></plus-icon>\n    <plus-icon name=\"house\" size=\"7x\"></plus-icon>\n    <plus-icon name=\"house\" size=\"8x\"></plus-icon>\n    <plus-icon name=\"house\" size=\"9x\"></plus-icon>\n  </plus-stack>\n</div>\n"
+  },
+  {
+    "key": "angular/icon/wildcard-size",
+    "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
+    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"16\"></plus-icon>\n  <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n</plus-stack>\n"
+  },
+  {
+    "key": "javascript/icon/wildcard-size",
+    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"16\"></plus-icon>\n  <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n</plus-stack>\n"
+  },
+  {
+    "key": "react/icon/wildcard-size",
+    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"house\" size=\"16\"></plus-icon>\n      <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n      <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "react-experimental/icon/wildcard-size",
+    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"house\" size=\"16\"></plus-icon>\n      <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n      <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+  },
+  {
+    "key": "svelte/icon/wildcard-size",
+    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"16\"></plus-icon>\n  <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n</plus-stack>\n"
+  },
+  {
+    "key": "vue/icon/wildcard-size",
+    "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
+    "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"house\" size=\"16\"></plus-icon>\n  <plus-icon name=\"house\" size=\"32px\"></plus-icon>\n  <plus-icon name=\"house\" size=\"3rem\"></plus-icon>\n</plus-stack>\n"
   },
   {
     "key": "angular/intersection/default",

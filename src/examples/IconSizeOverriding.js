@@ -17,13 +17,13 @@ function App() {
   );
 }
 
-const IconOverrideSize = () => {
+const IconSizeOverriding = () => {
   return (
-    <div className="ex-icon-override-size">
+    <div className="ex-icon-size-overriding">
       <App />
-      <style>{`.ex-icon-override-size plus-icon[size='xs'] {  height: 1em;  width: 1em;}.ex-icon-override-size plus-icon[size='sm'] {  height: 1.25em;  width: 1.25em;}.ex-icon-override-size plus-icon[size='md'] {  height: 1.5em;  width: 1.5em;}.ex-icon-override-size plus-icon[size='lg'] {  height: 1.75em;  width: 1.75em;}.ex-icon-override-size plus-icon[size='xl'] {  height: 2em;  width: 2em;}`}</style>
+      <style>{`.ex-icon-size-overriding plus-icon[size='xs'] {  height: 1em;  width: 1em;}.ex-icon-size-overriding plus-icon[size='sm'] {  height: 1.25em;  width: 1.25em;}.ex-icon-size-overriding plus-icon[size='md'] {  height: 1.5em;  width: 1.5em;}.ex-icon-size-overriding plus-icon[size='lg'] {  height: 1.75em;  width: 1.75em;}.ex-icon-size-overriding plus-icon[size='xl'] {  height: 2em;  width: 2em;}`}</style>
     </div>
   )
 };
 
-export default IconOverrideSize;
+export default IconSizeOverriding;

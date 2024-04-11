@@ -15,12 +15,12 @@ function App() {
   );
 }
 
-const IconCustomSize = () => {
+const IconWildcardSize = () => {
   return (
-    <div className="ex-icon-custom-size">
+    <div className="ex-icon-wildcard-size">
       <App />
     </div>
   )
 };
 
-export default IconCustomSize;
+export default IconWildcardSize;
