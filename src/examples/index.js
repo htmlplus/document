@@ -112,12 +112,15 @@ export const DialogPersistent = dynamic(() => import('./DialogPersistent'), { su
 export const DialogPlacement = dynamic(() => import('./DialogPlacement'), { suspense: true });
 export const DialogPrevent = dynamic(() => import('./DialogPrevent'), { suspense: true });
 export const DialogScrollable = dynamic(() => import('./DialogScrollable'), { suspense: true });
+export const DialogSize = dynamic(() => import('./DialogSize'), { suspense: true });
 export const DialogSpecificScrollable = dynamic(() => import('./DialogSpecificScrollable'), { suspense: true });
 export const DialogSticky = dynamic(() => import('./DialogSticky'), { suspense: true });
 export const DialogTransparent = dynamic(() => import('./DialogTransparent'), { suspense: true });
+export const DividerColor = dynamic(() => import('./DividerColor'), { suspense: true });
 export const DividerCustomized = dynamic(() => import('./DividerCustomized'), { suspense: true });
 export const DividerDefault = dynamic(() => import('./DividerDefault'), { suspense: true });
 export const DividerHorizontal = dynamic(() => import('./DividerHorizontal'), { suspense: true });
+export const DividerIcon = dynamic(() => import('./DividerIcon'), { suspense: true });
 export const DividerPlacement = dynamic(() => import('./DividerPlacement'), { suspense: true });
 export const DividerSticky = dynamic(() => import('./DividerSticky'), { suspense: true });
 export const DividerType = dynamic(() => import('./DividerType'), { suspense: true });

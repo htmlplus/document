@@ -38,6 +38,7 @@ export default function Layout({ children }: ILayout) {
             <Sidebar></Sidebar>
           </plus-sticky>
         </plus-grid-item>
+        <plus-divider width="xs" vertical></plus-divider>
         <plus-grid-item xs="grow">
           <plus-grid>
             <plus-grid-item xs="12" md="grow">
