@@ -323,9 +323,8 @@ plus-drawer-toggler[connector='main'] {
   left: 0;
 }
 
-plus-divider {
-  --plus-divider-color: #{$color-main-lighten-3};
-  --plus-divider-opacity: 1;
+plus-divider:not([color]) {
+  --plus-divider-color: #{$color-main};
 }
 
 .button {

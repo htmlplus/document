@@ -49,6 +49,7 @@ export const AvatarSlots = dynamic(() => import('./AvatarSlots'), { suspense: tr
 export const AvatarSvg = dynamic(() => import('./AvatarSvg'), { suspense: true });
 export const AvatarText = dynamic(() => import('./AvatarText'), { suspense: true });
 export const AvatarWildcardSize = dynamic(() => import('./AvatarWildcardSize'), { suspense: true });
+export const AvatarWithAvatar = dynamic(() => import('./AvatarWithAvatar'), { suspense: true });
 export const BreadcrumbCustomExpander = dynamic(() => import('./BreadcrumbCustomExpander'), { suspense: true });
 export const BreadcrumbCustomSeparator = dynamic(() => import('./BreadcrumbCustomSeparator'), { suspense: true });
 export const BreadcrumbCustomized = dynamic(() => import('./BreadcrumbCustomized'), { suspense: true });
