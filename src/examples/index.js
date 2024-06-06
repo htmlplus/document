@@ -211,6 +211,9 @@ export const SpinnerCustomized = dynamic(() => import('./SpinnerCustomized'), { 
 export const SpinnerDefault = dynamic(() => import('./SpinnerDefault'), { suspense: true });
 export const SpinnerSize = dynamic(() => import('./SpinnerSize'), { suspense: true });
 export const SpinnerType = dynamic(() => import('./SpinnerType'), { suspense: true });
+export const StackDefault = dynamic(() => import('./StackDefault'), { suspense: true });
+export const StackDivider = dynamic(() => import('./StackDivider'), { suspense: true });
+export const StackVertical = dynamic(() => import('./StackVertical'), { suspense: true });
 export const StickyContacts = dynamic(() => import('./StickyContacts'), { suspense: true });
 export const StickyDefault = dynamic(() => import('./StickyDefault'), { suspense: true });
 export const StickySidebar = dynamic(() => import('./StickySidebar'), { suspense: true });
@@ -225,8 +228,8 @@ export const SwitchEvent = dynamic(() => import('./SwitchEvent'), { suspense: tr
 export const SwitchThreeDimensional = dynamic(() => import('./SwitchThreeDimensional'), { suspense: true });
 export const TabsBelow = dynamic(() => import('./TabsBelow'), { suspense: true });
 export const TabsDefault = dynamic(() => import('./TabsDefault'), { suspense: true });
+export const TabsDisabled = dynamic(() => import('./TabsDisabled'), { suspense: true });
 export const TabsGrow = dynamic(() => import('./TabsGrow'), { suspense: true });
 export const TabsJustify = dynamic(() => import('./TabsJustify'), { suspense: true });
 export const TabsReverse = dynamic(() => import('./TabsReverse'), { suspense: true });
-export const TabsSeparate = dynamic(() => import('./TabsSeparate'), { suspense: true });
 export const TabsVertical = dynamic(() => import('./TabsVertical'), { suspense: true });

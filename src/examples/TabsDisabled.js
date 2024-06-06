@@ -11,10 +11,12 @@ import '@htmlplus/ui/tabs.js';
 
 function App() {
   return (
-    <plus-tabs value="tab-1" vertical>
+    <plus-tabs value="tab-1">
       <plus-tabs-bar>
         <plus-tabs-tab value="tab-1">Tab 1</plus-tabs-tab>
-        <plus-tabs-tab value="tab-2">Tab 2</plus-tabs-tab>
+        <plus-tabs-tab value="tab-2" disabled>
+          Tab 2
+        </plus-tabs-tab>
         <plus-tabs-tab value="tab-3">Tab 3</plus-tabs-tab>
       </plus-tabs-bar>
       <plus-tabs-panels>
@@ -38,12 +40,12 @@ function App() {
   );
 }
 
-const TabsVertical = () => {
+const TabsDisabled = () => {
   return (
-    <div className="ex-tabs-vertical">
+    <div className="ex-tabs-disabled">
       <App />
     </div>
   )
 };
 
-export default TabsVertical;
+export default TabsDisabled;

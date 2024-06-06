@@ -18,12 +18,6 @@ export const frameworks = [
     disabled: false
   },
   {
-    key: 'react-experimental',
-    logo: '/assets/logo/react.svg',
-    title: 'React (experimental)',
-    disabled: false
-  },
-  {
     key: 'svelte',
     logo: '/assets/logo/svelte.svg',
     title: 'Svelte',

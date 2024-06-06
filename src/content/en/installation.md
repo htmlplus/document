@@ -5,6 +5,5 @@
 - [Angular](/angular/installation)
 - [Javascript](/javascript/installation)
 - [React](/react/installation)
-- [React (experimental)](/react-experimental/installation)
 - [Svelte](/svelte/installation)
 - [Vue](/vue/installation)

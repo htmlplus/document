@@ -72,12 +72,12 @@ export function Sidebar() {
   return (
     <div className="sidebar">
       <br />
-      <plus-stack gap="1rem" align-items="stretch" vertical>
+      <plus-stack gap="1rem" items="stretch" vertical>
         <plus-center>
           <Button block link to={getPath(ROUTES.HOME, {})}>
             <plus-stack gap="1rem">
               <plus-icon name="htmlplus" size="44px"></plus-icon>
-              <plus-stack align-items="end" vertical>
+              <plus-stack items="end" vertical>
                 <div>HTMLPLUS</div>
                 <div className="version">Version {PACKAGE.version}</div>
               </plus-stack>

@@ -47,9 +47,9 @@ export default function Page({ params }: IPage) {
 
   try {
     element.readmeContent = element.readmeContent
-      .replace(/<Example value=(".*") /g, `<Example {...(example[$1] || {})} `)
+      .replace(/<Example src="examples\/(.*?)"/g, `<Example {...(example["$1"] || {})}`)
       .replace(/<LastModified/g, `<LastModified value="${element.lastModified}"`);
-  } catch {}
+  } catch { }
 
   element.readmeContent ||= '';
 
