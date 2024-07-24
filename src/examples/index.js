@@ -193,6 +193,7 @@ export const ProgressBarSync = dynamic(() => import('./ProgressBarSync'), { susp
 export const ProgressBarValue = dynamic(() => import('./ProgressBarValue'), { suspense: true });
 export const ScrollDetectorDefault = dynamic(() => import('./ScrollDetectorDefault'), { suspense: true });
 export const ScrollDetectorScrollIndicator = dynamic(() => import('./ScrollDetectorScrollIndicator'), { suspense: true });
+export const SignatureBackgroundColor = dynamic(() => import('./SignatureBackgroundColor'), { suspense: true });
 export const SignatureClearOnResize = dynamic(() => import('./SignatureClearOnResize'), { suspense: true });
 export const SignatureClear = dynamic(() => import('./SignatureClear'), { suspense: true });
 export const SignatureColor = dynamic(() => import('./SignatureColor'), { suspense: true });

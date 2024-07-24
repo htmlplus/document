@@ -8,17 +8,17 @@ import '@htmlplus/ui/signature.js';
 function App() {
   return (
     <plus-center>
-      <plus-signature></plus-signature>
+      <plus-signature background-color="#fdeeee"></plus-signature>
     </plus-center>
   );
 }
 
-const SignatureDefault = () => {
+const SignatureBackgroundColor = () => {
   return (
-    <div className="ex-signature-default">
+    <div className="ex-signature-background-color">
       <App />
     </div>
   )
 };
 
-export default SignatureDefault;
+export default SignatureBackgroundColor;
