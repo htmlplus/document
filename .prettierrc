@@ -14,7 +14,10 @@
     "^[.](.*)"
   ],
   "importOrderCaseInsensitive": true,
+  "importOrderParserPlugins" : [],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": false,
-  "plugins": ["@trivago/prettier-plugin-sort-imports"]
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports"
+  ]
 }
