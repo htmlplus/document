@@ -21,10 +21,10 @@ function App() {
       if (confirm('Are you sure you want to open it?')) return;
       event.preventDefault();
     }
-    dialogRef.current.addEventListener('plus-open', onPlusOpen);
+    dialogRef.current.addEventListener('PlusOpen', onPlusOpen);
     return () => {
       if (!dialogRef.current) return;
-      dialogRef.current.removeEventListener('plus-open', onPlusOpen);
+      dialogRef.current.removeEventListener('PlusOpen', onPlusOpen);
     };
   });
   useEffect(() => {
@@ -33,10 +33,10 @@ function App() {
       if (confirm('Are you sure you want to close it?')) return;
       event.preventDefault();
     }
-    dialogRef.current.addEventListener('plus-close', onPlusClose);
+    dialogRef.current.addEventListener('PlusClose', onPlusClose);
     return () => {
       if (!dialogRef.current) return;
-      dialogRef.current.removeEventListener('plus-close', onPlusClose);
+      dialogRef.current.removeEventListener('PlusClose', onPlusClose);
     };
   });
   return (

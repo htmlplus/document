@@ -17,10 +17,10 @@ function App() {
     function onPlusChange(event) {
       setValue(event.detail.progress);
     }
-    detectorRef.current.addEventListener('plus-change', onPlusChange);
+    detectorRef.current.addEventListener('PlusChange', onPlusChange);
     return () => {
       if (!detectorRef.current) return;
-      detectorRef.current.removeEventListener('plus-change', onPlusChange);
+      detectorRef.current.removeEventListener('PlusChange', onPlusChange);
     };
   });
   useEffect(() => {

@@ -14,10 +14,10 @@ function App() {
     function onPlusChange(event) {
       alert(`${event.detail.files.length} file(s) are selected.`);
     }
-    browseRef.current.addEventListener('plus-change', onPlusChange);
+    browseRef.current.addEventListener('PlusChange', onPlusChange);
     return () => {
       if (!browseRef.current) return;
-      browseRef.current.removeEventListener('plus-change', onPlusChange);
+      browseRef.current.removeEventListener('PlusChange', onPlusChange);
     };
   });
   return (

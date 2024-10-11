@@ -14,10 +14,10 @@ function App() {
     function onPlusChange(event) {
       alert(`Will be changed to ${event.target.checked ? 'On' : 'Off'}`);
     }
-    switchRef.current.addEventListener('plus-change', onPlusChange);
+    switchRef.current.addEventListener('PlusChange', onPlusChange);
     return () => {
       if (!switchRef.current) return;
-      switchRef.current.removeEventListener('plus-change', onPlusChange);
+      switchRef.current.removeEventListener('PlusChange', onPlusChange);
     };
   });
   return (

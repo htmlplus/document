@@ -21,10 +21,10 @@ function App() {
     function onPlusOpened() {
       setDisabled(false);
     }
-    dialogRef.current.addEventListener('plus-opened', onPlusOpened);
+    dialogRef.current.addEventListener('PlusOpened', onPlusOpened);
     return () => {
       if (!dialogRef.current) return;
-      dialogRef.current.removeEventListener('plus-opened', onPlusOpened);
+      dialogRef.current.removeEventListener('PlusOpened', onPlusOpened);
     };
   });
   useEffect(() => {
@@ -32,10 +32,10 @@ function App() {
     function onPlusClosed() {
       setDisabled(true);
     }
-    dialogRef.current.addEventListener('plus-closed', onPlusClosed);
+    dialogRef.current.addEventListener('PlusClosed', onPlusClosed);
     return () => {
       if (!dialogRef.current) return;
-      dialogRef.current.removeEventListener('plus-closed', onPlusClosed);
+      dialogRef.current.removeEventListener('PlusClosed', onPlusClosed);
     };
   });
   return (

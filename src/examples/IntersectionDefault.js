@@ -19,10 +19,10 @@ function App() {
     function onPlusChange(event) {
       statusRef.current.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';
     }
-    intersectionRef.current.addEventListener('plus-change', onPlusChange);
+    intersectionRef.current.addEventListener('PlusChange', onPlusChange);
     return () => {
       if (!intersectionRef.current) return;
-      intersectionRef.current.removeEventListener('plus-change', onPlusChange);
+      intersectionRef.current.removeEventListener('PlusChange', onPlusChange);
     };
   });
   return (

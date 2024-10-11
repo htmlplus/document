@@ -14,19 +14,21 @@ function App() {
     function onPlusChange(event) {
       if (event.detail.error) {
         alert(event.detail.error.message);
+      } 
+      else {
+        alert(`${event.detail.files.length} file(s) are selected.`);
       }
     }
-    browseRef.current.addEventListener('plus-change', onPlusChange);
+    browseRef.current.addEventListener('PlusChange', onPlusChange);
     return () => {
       if (!browseRef.current) return;
-      browseRef.current.removeEventListener('plus-change', onPlusChange);
+      browseRef.current.removeEventListener('PlusChange', onPlusChange);
     };
   });
   return (
     <plus-center>
       <plus-browse min={3} max={5} multiple ref={browseRef}>
-        {' '}
-        Click Here{' '}
+        Click Here
       </plus-browse>
     </plus-center>
   );

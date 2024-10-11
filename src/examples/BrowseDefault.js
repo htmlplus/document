@@ -14,10 +14,10 @@ function App() {
     function onPlusChange(event) {
       console.log(event.detail);
     }
-    browseRef.current.addEventListener('plus-change', onPlusChange);
+    browseRef.current.addEventListener('PlusChange', onPlusChange);
     return () => {
       if (!browseRef.current) return;
-      browseRef.current.removeEventListener('plus-change', onPlusChange);
+      browseRef.current.removeEventListener('PlusChange', onPlusChange);
     };
   });
   return (

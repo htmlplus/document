@@ -29,16 +29,16 @@ function App() {
     function onPlusEnd() {
       sync();
     }
-    signatureRef.current.addEventListener('plus-end', onPlusEnd);
+    signatureRef.current.addEventListener('PlusEnd', onPlusEnd);
     return () => {
       if (!signatureRef.current) return;
-      signatureRef.current.removeEventListener('plus-end', onPlusEnd);
+      signatureRef.current.removeEventListener('PlusEnd', onPlusEnd);
     };
   });
   return (
     <>
       <plus-center>
-        <plus-signature background-color="lightgray" ref={signatureRef}></plus-signature>
+        <plus-signature ref={signatureRef}></plus-signature>
       </plus-center>
       <br />
       <plus-stack gap="1rem">

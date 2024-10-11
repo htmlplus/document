@@ -15,10 +15,10 @@ function App() {
       if (confirm('Are you sure you want to collapse it?')) return;
       event.preventDefault();
     }
-    accordionRef.current.addEventListener('plus-collapse', onPlusCollapse);
+    accordionRef.current.addEventListener('PlusCollapse', onPlusCollapse);
     return () => {
       if (!accordionRef.current) return;
-      accordionRef.current.removeEventListener('plus-collapse', onPlusCollapse);
+      accordionRef.current.removeEventListener('PlusCollapse', onPlusCollapse);
     };
   });
   useEffect(() => {
@@ -27,10 +27,10 @@ function App() {
       if (confirm('Are you sure you want to expand it?')) return;
       event.preventDefault();
     }
-    accordionRef.current.addEventListener('plus-expand', onPlusExpand);
+    accordionRef.current.addEventListener('PlusExpand', onPlusExpand);
     return () => {
       if (!accordionRef.current) return;
-      accordionRef.current.removeEventListener('plus-expand', onPlusExpand);
+      accordionRef.current.removeEventListener('PlusExpand', onPlusExpand);
     };
   });
   return (

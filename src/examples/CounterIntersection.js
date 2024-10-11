@@ -15,10 +15,10 @@ function App() {
     function onPlusChange(event) {
       counterRef.current.play = event.detail.isIntersecting;
     }
-    intersectionRef.current.addEventListener('plus-change', onPlusChange);
+    intersectionRef.current.addEventListener('PlusChange', onPlusChange);
     return () => {
       if (!intersectionRef.current) return;
-      intersectionRef.current.removeEventListener('plus-change', onPlusChange);
+      intersectionRef.current.removeEventListener('PlusChange', onPlusChange);
     };
   });
   return (

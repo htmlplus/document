@@ -15,10 +15,10 @@ function App() {
     function onPlusChange(event) {
       console.log(event.detail);
     }
-    detectorRef.current.addEventListener('plus-change', onPlusChange);
+    detectorRef.current.addEventListener('PlusChange', onPlusChange);
     return () => {
       if (!detectorRef.current) return;
-      detectorRef.current.removeEventListener('plus-change', onPlusChange);
+      detectorRef.current.removeEventListener('PlusChange', onPlusChange);
     };
   });
   useEffect(() => {

@@ -21,10 +21,10 @@ function App() {
         accordionRef.current.open = true;
       }, 2500);
     }
-    accordionRef.current.addEventListener('plus-expand', onPlusExpand);
+    accordionRef.current.addEventListener('PlusExpand', onPlusExpand);
     return () => {
       if (!accordionRef.current) return;
-      accordionRef.current.removeEventListener('plus-expand', onPlusExpand);
+      accordionRef.current.removeEventListener('PlusExpand', onPlusExpand);
     };
   });
   return (

@@ -23,10 +23,10 @@ function App() {
         spinner.hidden = true;
       }, 1000);
     }
-    intersectionRef.current.addEventListener('plus-change', onPlusChange);
+    intersectionRef.current.addEventListener('PlusChange', onPlusChange);
     return () => {
       if (!intersectionRef.current) return;
-      intersectionRef.current.removeEventListener('plus-change', onPlusChange);
+      intersectionRef.current.removeEventListener('PlusChange', onPlusChange);
     };
   });
   return (
@@ -34,7 +34,7 @@ function App() {
       <plus-intersection once ref={intersectionRef}>
         <plus-card elevation={10}>
           <plus-spinner></plus-spinner>
-          <img alt="Lazy Image" hidden data-src="https://placekitten.com/200/200" />
+          <img alt="Lazy Image" hidden data-src="https://picsum.photos/id/25/200/200" />
         </plus-card>
       </plus-intersection>
     </div>

@@ -34,10 +34,10 @@ function App() {
       setOutside(count);
       outsideRef.current.innerHTML = `${count}`;
     }
-    clickOutsideRef.current.addEventListener('plus-click-outside', onPlusClickOutside);
+    clickOutsideRef.current.addEventListener('PlusClickOutside', onPlusClickOutside);
     return () => {
       if (!clickOutsideRef.current) return;
-      clickOutsideRef.current.removeEventListener('plus-click-outside', onPlusClickOutside);
+      clickOutsideRef.current.removeEventListener('PlusClickOutside', onPlusClickOutside);
     };
   });
   return (
