@@ -2,8 +2,6 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { useEffect, useRef } from 'react';
-
 import '@htmlplus/ui/center.js';
 import '@htmlplus/ui/dialog-body.js';
 import '@htmlplus/ui/dialog-content.js';
@@ -14,23 +12,19 @@ import '@htmlplus/ui/dialog.js';
 import '@htmlplus/ui/faker.js';
 
 function App() {
-  const plusFakerRef = useRef();
-  useEffect(() => {
-    plusFakerRef.current.arguments = [15, '\n\n'];
-  }, []);
   return (
     <>
       <plus-center>
-        <plus-dialog-toggler connector="dialog-scrollable"> Open </plus-dialog-toggler>
+        <plus-dialog-toggler connector="dialog-scrollable">Open</plus-dialog-toggler>
       </plus-center>
       <plus-dialog animation connector="dialog-scrollable" scrollable>
         <plus-dialog-content>
-          <plus-dialog-header> Dialog Title </plus-dialog-header>
+          <plus-dialog-header>Dialog Title</plus-dialog-header>
           <plus-dialog-body>
-            <plus-faker api="lorem.paragraphs" ref={plusFakerRef}></plus-faker>
+            <plus-faker api="lorem.paragraphs" arguments={[15, '\n\n']}></plus-faker>
           </plus-dialog-body>
           <plus-dialog-footer>
-            <plus-dialog-toggler> Close </plus-dialog-toggler>
+            <plus-dialog-toggler>Close</plus-dialog-toggler>
           </plus-dialog-footer>
         </plus-dialog-content>
       </plus-dialog>

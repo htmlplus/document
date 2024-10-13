@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 
 import '@htmlplus/ui/animation.js';
 import '@htmlplus/ui/animation/names/attention-seekers/heart-beat.js';
@@ -10,21 +10,12 @@ import '@htmlplus/ui/intersection.js';
 
 function App() {
   const animationRef = useRef();
-  const intersectionRef = useRef();
-  useEffect(() => {
-    if (!intersectionRef.current) return;
-    function onPlusChange(event) {
-      animationRef.current.run = event.detail.isIntersecting;
-    }
-    intersectionRef.current.addEventListener('PlusChange', onPlusChange);
-    return () => {
-      if (!intersectionRef.current) return;
-      intersectionRef.current.removeEventListener('PlusChange', onPlusChange);
-    };
-  });
+  function onPlusChange(event) {
+    animationRef.current.run = event.detail.isIntersecting;
+  }
   return (
     <div className="container">
-      <plus-intersection ref={intersectionRef}>
+      <plus-intersection onPlusChange={onPlusChange}>
         <plus-animation name="heart-beat" ref={animationRef}></plus-animation>
       </plus-intersection>
     </div>

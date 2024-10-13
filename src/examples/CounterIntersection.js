@@ -2,28 +2,19 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 
 import '@htmlplus/ui/counter.js';
 import '@htmlplus/ui/intersection.js';
 
 function App() {
   const counterRef = useRef();
-  const intersectionRef = useRef();
-  useEffect(() => {
-    if (!intersectionRef.current) return;
-    function onPlusChange(event) {
-      counterRef.current.play = event.detail.isIntersecting;
-    }
-    intersectionRef.current.addEventListener('PlusChange', onPlusChange);
-    return () => {
-      if (!intersectionRef.current) return;
-      intersectionRef.current.removeEventListener('PlusChange', onPlusChange);
-    };
-  });
+  function onPlusChange(event) {
+    counterRef.current.play = event.detail.isIntersecting;
+  }
   return (
     <div className="container">
-      <plus-intersection ref={intersectionRef}>
+      <plus-intersection onPlusChange={onPlusChange}>
         <plus-counter to={1000} ref={counterRef}></plus-counter>
       </plus-intersection>
     </div>

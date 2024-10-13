@@ -1,11 +1,67 @@
 'use client';
 
-import { Suspense, useLayoutEffect, useRef, useState } from 'react';
+import { Suspense, useEffect, useLayoutEffect, useRef, useState } from 'react';
 
 import { Alert, Button, Code } from '@/components';
 import { ROUTES } from '@/constants';
 import { useFrameworks } from '@/containers';
 import { getPath } from '@/utils';
+
+// TODO: Once React 19 is applied, it should eliminate.
+const Ready = () => {
+  const $div = useRef<HTMLDivElement>(null);
+  
+  const timeout = useRef<NodeJS.Timeout>();
+
+  const getElements = () => { 
+    return Array
+      .from($div.current?.parentElement?.querySelectorAll('*') || [])
+      .filter((element) => element.localName.includes('-')) 
+  }
+
+  const getProps = (element: Element) => {
+    return element[Object.keys(element).find((key) => key.startsWith('__reactProps')) as keyof Element] as { [key: string]: any }
+  }
+
+  const bind = () => {
+    clearTimeout(timeout.current);
+    const elements = getElements();
+    if (!elements.length) return void (timeout.current = setTimeout(bind, 250));
+    for (const element of elements) {
+      const props = getProps(element);
+      for (const key of Object.keys(props)) {
+        if (['children', 'style'].includes(key)) {
+          continue;
+        } else if (key.startsWith('onPlus')) {
+          element.addEventListener(key.slice(2), props[key]);
+        } else if (typeof props[key] == 'object') {
+          (element as any)[key] = props[key];
+        }
+      }
+    }
+  }
+
+  const unbind = () => {
+    clearTimeout(timeout.current);
+    const elements = getElements();
+    if (!elements.length) return;
+    for (const element of elements) {
+      const props = getProps(element);
+      for (const key of Object.keys(props)) {
+        if (key.startsWith('onPlus')) {
+          element.removeEventListener(key.slice(2), props[key]);
+        }
+      }
+    }
+  }
+
+  useEffect(() => {
+    bind();
+    return unbind
+  }, []);
+
+  return <div ref={$div} hidden />
+}
 
 export interface IExample {
   Preview?: React.FC;
@@ -119,7 +175,14 @@ export function Example({ Preview, element, example, isolate, links, rtl, tabs, 
         <plus-tabs-panel value="preview" dir={direction} ref={$preview}>
           {!visible && <div style={{ height: $preview.current!.clientHeight + 'px' }}></div>}
           {visible && isolate != true && (
-            <Suspense fallback={<div className="skeleton" />}>{Preview && <Preview></Preview>}</Suspense>
+            <Suspense fallback={<div className="skeleton" />}>
+              {Preview && (
+                <>
+                  <Preview />
+                  <Ready />
+                </>
+              )}
+            </Suspense>
           )}
           {visible && isolate == true && (
             <div className={loaded ? '' : 'skeleton'}>
