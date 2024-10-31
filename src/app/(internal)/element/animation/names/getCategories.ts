@@ -13,16 +13,19 @@ export type Category = {
 export async function getCategories(): Promise<Category[]> {
   const categories: Category[] = [];
 
-  const files = ((root: string) => {
-    let counter = 0;
-    while (true) {
-      const cwd = path.join(process.cwd(), '../'.repeat(counter++), root);
-      if (root === cwd) break;
-      const names = glob.sync('*/*.js', { cwd }).filter((file) => !file.endsWith('all.js'));
-      if (names.length) return names;
-    }
-    return [];
-  })('/node_modules/@htmlplus/ui/dist/elements/animation/names');
+  const files = (() => {
+    const local = glob
+      .sync('*/*.js', { cwd: '/node_modules/@htmlplus/ui/dist/elements/animation/names' })
+      .filter((file) => !file.endsWith('all.js'));
+
+    const root = glob
+      .sync('*/*.js', { cwd: '../../node_modules/@htmlplus/ui/dist/elements/animation/names' })
+      .filter((file) => !file.endsWith('all.js'));
+
+    if (local.length) return local;
+
+    return root;
+  })();
 
   for (const file of files) {
     const [directoryName, fileName] = file
