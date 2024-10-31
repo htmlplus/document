@@ -4,11 +4,11 @@
 
 export const statistics = {
   forks: 1,
-  stars: 31,
+  stars: 32,
   watchers: 6,
-  dowanloads: 21676,
-  downloadsLastWeek: 273,
-  downloadsLastMonth: 1902,
+  dowanloads: 2068,
+  downloadsLastWeek: 15,
+  downloadsLastMonth: 166,
   get elements(): number {
     return this.elementsPerFramework * this.frameworks;
   },

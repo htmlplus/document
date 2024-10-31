@@ -1,5 +1,3 @@
-'use client';
-
 // TODO
 import { AppLoadingBar } from '@/containers/app-loading-bar';
 import { Contributors } from '@/containers/contributors';
@@ -8,11 +6,7 @@ import { Navigation } from '@/containers/navigation';
 import { Sidebar } from '@/containers/sidebar';
 import { Toc } from '@/containers/toc';
 
-interface ILayout {
-  children: React.ReactNode;
-}
-
-export default function Layout({ children }: ILayout) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="layout-default">
       <div className="app-loading-bar">

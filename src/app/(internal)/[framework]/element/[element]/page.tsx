@@ -6,52 +6,46 @@ import { elements, examples, frameworks } from '@/data';
 import * as Examples from '@/examples';
 import { getPath } from '@/utils';
 
-interface IPage {
-  params: IParams;
-}
-
-interface IParams {
+interface Params {
   element: string;
   framework: string;
 }
 
-export function generateStaticParams() {
-  const params: IParams[] = [];
-
-  for (const framework of frameworks) {
-    for (const element of elements) {
-      params.push({
-        element: element.key,
-        framework: framework.key
-      });
-    }
-  }
-
-  return params;
+export function generateStaticParams(): Params[] {
+  return frameworks.flatMap((framework) =>
+    elements.map((element) => ({
+      element: element.key,
+      framework: framework.key,
+    }))
+  )
 }
 
-export default function Page({ params }: IPage) {
-  const element = elements.find((element) => element.key == params.element);
+export async function generateMetadata({ params } : { params: Params }) {
+  const { element: elementKey } = await params;
 
-  // TODO
-  if (!element) return null;
+  const element = elements.find((element) => element.key == elementKey)!;
+
+  return {
+      title: element.title,
+      description: element.description,
+      url: getPath(ROUTES.ELEMENT_DETAILS, params)
+  };
+}
+
+export default async function Page({ params }: { params: Params }) {
+  const { element: elementKey } = await params;
+
+  const element = elements.find((element) => element.key == elementKey)!;
 
   const example = {} as any;
 
-  // TODO
-  // const meta = {
-  //   title: element.title || null,
-  //   description: element.description || null,
-  //   url: getPath(ROUTES.ELEMENT_DETAILS, params) || null
-  // };
+  element.readmeContent ||= '';
 
   try {
     element.readmeContent = element.readmeContent
       .replace(/<Example src="examples\/(.*?)"/g, `<Example {...(example["$1"] || {})}`)
       .replace(/<LastModified/g, `<LastModified value="${element.lastModified}"`);
   } catch { }
-
-  element.readmeContent ||= '';
 
   for (const current of examples) {
     const [frameworkKey, elementKey, exampleKey] = current.key.split('/');
@@ -64,32 +58,30 @@ export default function Page({ params }: IPage) {
 
     const title = capitalCase(exampleKey);
 
-    const tabs: any[] = [];
-
-    const TABS = [
+    const tabs = [
       { key: 'template', language: 'html' },
       { key: 'script', language: 'jsx' },
       { key: 'style', language: 'css' },
       { key: 'config', language: 'js' }
-    ];
+    ]
+      .map((tab) => {
+        const { key, language } = tab;
 
-    for (const TAB of TABS) {
-      const { key, language } = TAB;
+        if (key == 'template' && params.framework.startsWith('react')) return;
 
-      if (key == 'template' && params.framework.startsWith('react')) continue;
+        const content = current[key as keyof typeof current] ?? null;
 
-      const content = current[key] ?? null;
+        if (key == 'config' && !content) return;
 
-      if (key == 'config' && !content) continue;
-
-      tabs.push({
-        key,
-        content,
-        disabled: !content,
-        language,
-        title: sentenceCase(key)
-      });
-    }
+        return {
+          key,
+          content,
+          disabled: !content,
+          language,
+          title: sentenceCase(key)
+        }
+      })
+      .filter((tab) => tab);
 
     const links = [
       {
@@ -112,15 +104,17 @@ export default function Page({ params }: IPage) {
       }
     ];
 
-    example[exampleKey] = {
-      element: element.key,
-      example: exampleKey,
-      ...(current.settings || {}), // TODO
-      links,
-      tabs,
-      title,
-      Preview
-    };
+    example[exampleKey] = Object.assign(
+      {
+        element: element.key,
+        example: exampleKey,
+        links,
+        tabs,
+        title,
+        Preview
+      },
+      current.settings,
+    );
   }
 
   return <Markup value={element.readmeContent} scope={{ example }}></Markup>;

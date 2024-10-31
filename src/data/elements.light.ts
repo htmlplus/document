@@ -181,6 +181,11 @@ export const elementsLight = [
     "title": "Progress Bar Stack"
   },
   {
+    "key": "relative-time",
+    "subset": false,
+    "title": "Relative Time"
+  },
+  {
     "key": "scroll-detector",
     "stable": true,
     "subset": false,

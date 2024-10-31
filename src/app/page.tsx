@@ -1,11 +1,9 @@
-'use client';
-
 import NextLink from 'next/link';
 
 import { FRAMEWORK_DEFAULT, ROUTES } from '@/constants';
 import { getPath } from '@/utils';
 
-export default function Page() {
+export default function Home() {
   return (
     <div
       style={{

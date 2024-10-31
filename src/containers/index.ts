@@ -9,7 +9,6 @@ export * from './global-config';
 export * from './last-modified';
 export * from './markup';
 export * from './navigation';
-export * from './parameter';
 export * from './sidebar';
 export * from './socials';
 export * from './toc';

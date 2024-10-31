@@ -1,0 +1,47 @@
+import { Categories } from './categories'
+
+# Animations
+
+A large range of animations for use in the `animation` element.
+
+## Usage
+
+Three ways to import a transition.
+
+### Specific
+
+Imports a transition from a category.
+
+```js
+/* Template */
+import '@htmlplus/ui/animation/names/[category]/[name].js';
+
+/* For example */
+import '@htmlplus/ui/animation/names/flippers/flip.js';
+```
+
+### Category
+
+Imports a category.
+
+```js
+/* Template */
+import '@htmlplus/ui/animation/names/[category]/all.js';
+
+/* For example */
+import '@htmlplus/ui/animation/names/fading-entrance/all.js';
+```
+
+### All
+
+Imports all categories.
+
+```js
+import '@htmlplus/ui/animation/names/transition/all.js';
+```
+
+## Categories
+
+All animations are based on the popular [Animate.css](https://animate.style) library.
+
+<Categories />

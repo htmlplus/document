@@ -11,6 +11,7 @@ export function Api() {
   const params = useParams<any>();
 
   if (!params) return null;
+  
   return (
     <>
       <h2>

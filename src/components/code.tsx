@@ -8,13 +8,13 @@ import 'prismjs/components/prism-jsx';
 
 import { Button } from '@/components';
 
-export interface ICode {
+export interface CodeProps {
   children?: React.ReactNode;
   copy?: boolean;
   language: 'html' | 'css' | 'js' | 'jsx' | 'shell';
 }
 
-export function Code({ children, copy = true, language }: ICode) {
+export function Code({ children, copy = true, language }: CodeProps) {
   const element = useRef<HTMLPreElement>(null);
 
   const content = useMemo(() => children?.toString(), [children]);

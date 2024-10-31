@@ -12,7 +12,9 @@ export function LastModified({ value }: ILastModified) {
       <h2>
         <TocItem level={2}>Last Modified</TocItem>
       </h2>
-      <p>{new Date(value).toDateString()}</p>
+      <p>
+        <plus-relative-time value={value}></plus-relative-time>
+      </p>
     </>
   );
 }

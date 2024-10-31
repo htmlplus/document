@@ -3,7 +3,7 @@ import NextLink from 'next/link';
 import { Colors } from '@/types';
 import { classes } from '@/utils';
 
-export interface IButton {
+export interface ButtonProps {
   block?: boolean;
   children: React.ReactNode;
   color?: Colors;
@@ -43,7 +43,7 @@ export function Button({
   size = 'md',
   text,
   ...args
-}: IButton) {
+}: ButtonProps) {
   const className = classes('button', { block, color, disabled, icon, link, loading, outlined, size, text });
   const Tag = args.to ? Link : ('button' as any);
   return (

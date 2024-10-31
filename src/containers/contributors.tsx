@@ -47,7 +47,7 @@ export function Contributors() {
 
     return getPath(ROUTES.GITHUB_COMMITS, {
       repository: 'document',
-      path: `src/content/en${pathname}.md`
+      path: `src/app/(internal)/${pathname}`
     });
   }, [params, pathname]);
 

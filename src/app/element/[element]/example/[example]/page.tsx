@@ -3,36 +3,24 @@ import { pascalCase } from 'change-case';
 import { examples } from '@/data';
 import * as Examples from '@/examples';
 
-interface IPage {
-  params: IParams;
-}
-
-interface IParams {
+interface Params {
   element: string;
   example: string;
 }
 
 export function generateStaticParams() {
-  const params: IParams[] = [];
-
-  for (const example of examples) {
-    if (!example.settings?.isolate) continue;
-
-    const [frameworkKey, elementKey, exampleKey] = example.key.split('/');
-
-    params.push({
-      element: elementKey,
-      example: exampleKey
-    });
-  }
-
-  return params;
+  return examples.map<Params>((example) => ({
+    element: example.key.split('/').at(1)!,
+    example: example.key.split('/').at(2)!,
+  }));
 }
 
-export default function Page({ params }: IPage) {
-  const name = pascalCase(params.element + ' ' + params.example);
+export default async function Page({ params }: { params: Params }) {
+  const { element, example } = await params;
+
+  const name = pascalCase(element + ' ' + example);
 
   const Preview = Examples[name as keyof typeof Examples];
 
-  return <Preview></Preview>;
+  return <Preview />;
 }

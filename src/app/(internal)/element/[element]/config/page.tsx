@@ -2,33 +2,34 @@ import { capitalCase } from 'change-case';
 
 import { Alert, Button, Code } from '@/components';
 import { ROUTES } from '@/constants';
-import { elements, frameworks } from '@/data';
+import { elements } from '@/data';
 import { getPath } from '@/utils';
-
-interface IPage {
-  params: IParams;
-}
-
-interface IParams {
+ 
+interface Params {
   element: string;
 }
 
 export function generateStaticParams() {
-  const params: IParams[] = [];
-
-  for (const framework of frameworks) {
-    for (const element of elements) {
-      params.push({
-        element: element.key
-      });
-    }
-  }
-
-  return params;
+  return elements.map<Params>((element) => ({ element: element.key }));
 }
 
-export default function Page({ params }: IPage) {
-  const element = elements.find((element) => element.key == params.element);
+export async function generateMetadata({ params } : { params: Params }) {
+  const { element: elementKey } = await params;
+
+  const element = elements.find((element) => element.key == elementKey)!;
+
+  return {
+      title: element.title,
+      description: element.description,
+      url: getPath(ROUTES.ELEMENT_CONFIG, params)
+  };
+}
+
+export default async function Page({ params }: { params: Params }) {
+  const { element: elementKey } = await params;
+
+  const element = elements.find((element) => element.key == elementKey)!;
+
   return (
     <>
       <h1>{capitalCase(element.key)} global config</h1>
@@ -51,8 +52,8 @@ export default function Page({ params }: IPage) {
           // TODO: remove plus
           `    'plus-${element.key}': {`,
           `      property: {`,
-          element.properties.map((property: any) => {
-            return `        ${property.name}: ${property.initializer},`;
+          element.properties.map((property) => {
+            return `        ${property.name}: ${'initializer' in property ? property.initializer : ''},`;
           }),
           `      }`,
           `    }`,

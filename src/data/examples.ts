@@ -2,7 +2,7 @@
  * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY
  **************************************************/
 
-export const examples: any[] = [
+export const examples = [
   {
     "key": "angular/accordion/async-content",
     "settings": {
