@@ -7,46 +7,34 @@ export function Navigation() {
   const sidebar = useSidebar();
   return (
     <p>
-      <plus-grid justify-content="between" align-items="center">
-        <plus-grid-item xs="auto">
+      <plus-stack justify="between">
+        <div>
           {!!sidebar.prev && (
             <Button link to={sidebar.prev.url}>
-              <plus-grid align-items="center" gutter-x="md" wrap="off">
-                <plus-grid-item>
-                  <plus-icon name="chevron-left" size="lg"></plus-icon>
-                </plus-grid-item>
-                <plus-grid-item>
-                  <plus-grid align-items="start" vertical>
-                    <plus-grid-item>
-                      <b>Prev</b>
-                    </plus-grid-item>
-                    <plus-grid-item>{sidebar.prev.title}</plus-grid-item>
-                  </plus-grid>
-                </plus-grid-item>
-              </plus-grid>
+              <plus-stack gap="1rem">
+                <plus-icon name="chevron-left" size="lg"></plus-icon>
+                <plus-stack items="start" vertical>
+                  <b>Prev</b>
+                  <div>{sidebar.prev.title}</div>
+                </plus-stack>
+              </plus-stack>
             </Button>
           )}
-        </plus-grid-item>
-        <plus-grid-item xs="auto">
+        </div>
+        <div>
           {!!sidebar.next && (
             <Button link to={sidebar.next.url}>
-              <plus-grid align-items="center" gutter-x="md" wrap="off">
-                <plus-grid-item>
-                  <plus-grid align-items="end" vertical>
-                    <plus-grid-item>
-                      <b>Next</b>
-                    </plus-grid-item>
-                    <plus-grid-item>{sidebar.next.title}</plus-grid-item>
-                  </plus-grid>
-                </plus-grid-item>
-                <plus-grid-item>
-                  <plus-icon name="chevron-right" size="lg"></plus-icon>
-                </plus-grid-item>
-              </plus-grid>
+              <plus-stack gap="1rem">
+                <plus-stack items="end" vertical>
+                  <b>Next</b>
+                  <div>{sidebar.next.title}</div>
+                </plus-stack>
+                <plus-icon name="chevron-right" size="lg"></plus-icon>
+              </plus-stack>
             </Button>
           )}
-        </plus-grid-item>
-      </plus-grid>
+        </div>
+      </plus-stack>
     </p>
   );
 }
