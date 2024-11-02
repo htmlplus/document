@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import { HTMLPLUS } from '@/components';
-import { GoogleAnalytics } from '@next/third-parties/google'
 
 // TODO
 import '@/styles/index.scss';
-import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'HTMLPLUS',
@@ -27,20 +26,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      {/* TODO */}
-      {/* <GoogleAnalytics gaId="G-TTTXW9HNLT" /> */}
-      <Script
-        strategy="lazyOnload"
-        src="https://www.googletagmanager.com/gtag/js?id=G-TTTXW9HNLT"
-      />
-      <Script id="google-analytics" strategy="lazyOnload">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-TTTXW9HNLT');
-        `}
-      </Script>
+      <GoogleAnalytics gaId="G-TTTXW9HNLT" />
       <body>
         {children}
         <HTMLPLUS />
