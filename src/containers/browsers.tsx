@@ -9,7 +9,6 @@ export function Browsers() {
     <plus-grid gutter-y="lg">
       {browsers.map((browser) => (
         <plus-grid-item xs="12" sm="grow" key={browser.key}>
-          {/* TODO */}
           <div style={{ textAlign: 'center', minWidth: 100 }}>
             <img
               width="64"

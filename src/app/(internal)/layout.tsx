@@ -1,17 +1,16 @@
-// TODO
-import { AppLoadingBar } from '@/containers/app-loading-bar';
-import { Contributors } from '@/containers/contributors';
-import { Frameworks } from '@/containers/frameworks';
-import { Navigation } from '@/containers/navigation';
-import { Sidebar } from '@/containers/sidebar';
-import { Toc } from '@/containers/toc';
+import {
+  AppLoadingBar,
+  Contributors,
+  Frameworks,
+  Navigation,
+  Sidebar,
+  Toc
+} from '@/containers';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="layout-default">
-      <div className="app-loading-bar">
-        <AppLoadingBar></AppLoadingBar>
-      </div>
+      <AppLoadingBar></AppLoadingBar>
       <plus-drawer open={false} animation backdrop={true} connector="main" floating="on-lg-down" size="300px">
         <plus-card class="drawer" tile elevation={10}>
           <Sidebar></Sidebar>

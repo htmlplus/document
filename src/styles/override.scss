@@ -20,15 +20,9 @@ a {
 }
 
 .layout-default {
-  .app-loading-bar plus-progress-bar {
-    position: fixed;
-    inset: 0 0 auto;
-    height: 2px;
-    &::part(indicator) {
-      background-color: $color-primary;
-    }
+  & > plus-app-progress-bar::part(bar) {
+    background-color: $color-primary;
   }
-
   .content {
     max-width: 768px;
     margin: auto;

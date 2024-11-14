@@ -135,9 +135,9 @@ const HEADER = [
 
   const lines = ["'use client';", '', ...HEADER, `import dynamic from 'next/dynamic';`, ''];
 
-  for (const item of db) {
-    if (!item.key.startsWith('react/')) continue;
+  const items = db.filter((item) => item.key.startsWith('react/')).sort((a, b) => (a > b ? +1 : -1));
 
+  for (const item of items) {
     const name = pascalCase(item.key.replace('react/', ''));
 
     const className = `ex-${kebabCase(name)}`;

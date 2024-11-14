@@ -21,7 +21,6 @@ function Option(props: any) {
 function SingleValue(props: any) {
   return (
     <components.Placeholder {...props}>
-      {/* TODO */}
       <img
         style={{ width: '1.25rem', height: '1.25rem', objectFit: 'contain', verticalAlign: 'middle', margin: '0' }}
         src={props.data.logo}

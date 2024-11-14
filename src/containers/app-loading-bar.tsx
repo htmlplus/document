@@ -1,45 +1,18 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 import { usePathname } from 'next/navigation';
 
 export function AppLoadingBar() {
-  const timeout = useRef<NodeJS.Timeout>();
+  const $ref = useRef<HTMLPlusAppProgressBarElement>();
 
-  const [progress, setProgress] = useState(0);
-
-  const pathname = usePathname();
-
-  function start() {
-    setProgress(30);
-
-    const increase = () => {
-      clearTimeout(timeout.current);
-
-      timeout.current = setTimeout(() => {
-        setProgress((progress) => progress + 1);
-        increase();
-      }, 50);
-    };
-
-    increase();
-  }
-
-  function stop() {
-    clearTimeout(timeout.current);
-
-    setProgress(100);
-
-    setTimeout(() => setProgress(0), 1000);
-  }
+  const pathname = usePathname(); 
 
   useEffect(() => {
-    stop();
-    return () => start();
+    $ref.current?.done?.();
+    return () => $ref.current?.start?.();
   }, [pathname]);
 
-  if (!progress) return null;
-
-  return <plus-progress-bar value={progress}></plus-progress-bar>;
+  return <plus-app-progress-bar ref={$ref}></plus-app-progress-bar>;
 }
