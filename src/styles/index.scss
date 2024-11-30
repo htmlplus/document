@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import './global';
 @import './override';
 @import './scrollbar';
+@import './home';
