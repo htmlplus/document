@@ -1,11 +1,56 @@
-import { Fragment } from 'react';
+'use client';
+
+import { Fragment, useEffect, useRef } from 'react';
 
 import NextLink from 'next/link';
 
 import PACKAGE from '@htmlplus/ui/package.json';
 
 import { FRAMEWORK_DEFAULT, ROUTES } from '@/constants';
+import { statistics } from '@/data';
 import { getPath } from '@/utils';
+
+interface FeatureProps {
+  description: string;
+  icon: string;
+  metric?: number;
+  more?: string;
+  title: string;
+}
+
+const Feature = ({ description, icon, metric, more, title }: FeatureProps) => {
+  const $counter = useRef<HTMLPlusCounterElement>();
+  const $intersection = useRef<HTMLPlusIntersectionElement>();
+  useEffect(() => {
+    const play = (event: any) => {
+      $counter.current!.play = event.detail.isIntersecting;
+    };
+    $intersection.current!.addEventListener('PlusChange', play);
+  }, []);
+  return (
+    <div className="feature">
+      <plus-avatar shape="circle" size="48">
+        <plus-icon name={icon} size="24"></plus-icon>
+      </plus-avatar>
+      {metric && (
+        <div className="metric">
+          <plus-intersection ref={$intersection}>
+            <plus-counter ref={$counter} to={metric} duration={2000}>
+              0
+            </plus-counter>
+          </plus-intersection>
+        </div>
+      )}
+      <div className="title">{title}</div>
+      <div className="description">{description}</div>
+      {more && (
+        <a href={more} className="link">
+          Learn more
+        </a>
+      )}
+    </div>
+  );
+};
 
 export default async function Home() {
   const promises = [
@@ -34,7 +79,7 @@ export default async function Home() {
             <NextLink href={getPath(ROUTES.ELEMENT_DETAILS, { framework: FRAMEWORK_DEFAULT, element: 'accordion' })!}>
               Elements
             </NextLink>
-            <NextLink href="TODO">Roadmap</NextLink>
+            <NextLink href={getPath(ROUTES.ROADMAP, {})!}>Roadmap</NextLink>
           </div>
           <div className="flex grow"></div>
           <div className="hidden tablet:flex items-center gap-3">
@@ -48,7 +93,7 @@ export default async function Home() {
           </div>
         </div>
       </header>
-      <main className="relative pt-12">
+      <main className="relative pt-12 main">
         <div className="container">
           <div className="flex flex-col items-center gap-8 tablet:flex-row">
             <div className="flex flex-col items-center gap-8 tablet:items-start basis-1/2">
@@ -72,7 +117,7 @@ export default async function Home() {
                 </p>
                 <div className="w-full @container">
                   <div className="flex flex-col gap-4 @[20rem]:flex-row justify-center tablet:justify-start">
-                    <div className="code-snippet ">
+                    <div className="code-snippet">
                       <div className="line">npm i {PACKAGE.name}</div>
                     </div>
                     <NextLink
@@ -107,7 +152,7 @@ export default async function Home() {
                         </Fragment>
                       ))}
                   </plus-avatar-group>
-                  <div className="font-2-400 TODO">
+                  <div className="top-developers">
                     Top Developers
                     {/* 632 joined today */}
                   </div>
@@ -148,6 +193,30 @@ export default async function Home() {
               </svg>
             </div>
           </div>
+        </div>
+      </main>
+      <main>
+        <div className="flex gap-8 justify-center my-24">
+          <Feature
+            title="Frameworks"
+            description="4pt allows you to work on multiple projects without the creative stress."
+            icon="TODO"
+            metric={statistics.frameworks}
+          />
+          <div className="divider"></div>
+          <Feature
+            title="Elements"
+            description="4pt allows you to work on multiple projects without the creative stress."
+            icon="TODO"
+            metric={statistics.elements}
+          />
+          <div className="divider"></div>
+          <Feature
+            title="Examples"
+            description="4pt allows you to work on multiple projects without the creative stress."
+            icon="TODO"
+            metric={statistics.examples}
+          />
         </div>
       </main>
     </div>

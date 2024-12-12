@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
 
 $primary-2: #f8f8f8;
+$primary-3: #f3f3f3;
 $primary-4: #ededed;
 $primary-8: #c7c7c7;
 $primary-9: #8f8f8f;
@@ -9,6 +10,7 @@ $primary-11: #6f6f6f;
 $primary-12: #171717;
 $alpha-black-2: #0000000d;
 $alpha-black-3: #00000014;
+$alpha-black-4: #00000029;
 $alpha-black-7: #0000007a;
 $alpha-black-12: #000000e5;
 $purple-7: #d3b4ed;
@@ -33,6 +35,15 @@ $box-shadow:
   font-weight: 500;
   line-height: 20px;
   letter-spacing: -0.006em;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+%font-5-500 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.017em;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
@@ -117,7 +128,7 @@ $box-shadow:
     @extend %font-3-500;
     justify-content: center;
     border: none;
-    padding: 7px 14px;
+    padding: 6px 13px;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -172,7 +183,7 @@ $box-shadow:
     }
   }
 
-  main::before {
+  .main::before {
     content: '';
     position: absolute;
     top: 0;
@@ -226,5 +237,46 @@ $box-shadow:
       content: '$ ';
       user-select: none;
     }
+  }
+
+  .top-developers {
+    color: $alpha-black-7;
+  }
+
+  .feature {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+    width: 384px;
+
+    .title {
+      @extend %font-5-500;
+    }
+
+    .description {
+      @extend %font-3-400;
+      color: $alpha-black-7;
+    }
+
+    .metric {
+      @extend %font-9-600;
+      color: $primary-11;
+    }
+
+    plus-avatar {
+      background-color: $primary-3;
+    }
+
+    plus-icon {
+      color: $primary-11;
+    }
+  }
+
+  .divider {
+    background: $alpha-black-4;
+    min-width: 1px;
+    min-height: 1px;
   }
 }
