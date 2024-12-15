@@ -34,7 +34,7 @@ const Feature = ({ description, icon, metric, more, title }: FeatureProps) => {
       </plus-avatar>
       {metric && (
         <div className="metric">
-          <plus-intersection ref={$intersection}>
+          <plus-intersection ref={$intersection} once>
             <plus-counter ref={$counter} to={metric} duration={2000}>
               0
             </plus-counter>
@@ -82,7 +82,7 @@ export default async function Home() {
             <NextLink href={getPath(ROUTES.ROADMAP, {})!}>Roadmap</NextLink>
           </div>
           <div className="flex grow"></div>
-          <div className="hidden tablet:flex items-center gap-3">
+          <div className="hidden laptop:flex items-center gap-3">
             <a className="btn tertiary" href="https://opencollective.com/htmlplus">
               Become a sponsor
             </a>
@@ -116,7 +116,7 @@ export default async function Home() {
                   {/* TODO: Join thousands of designers and agencies who kickstart design projects using 4pt. */}
                 </p>
                 <div className="w-full @container">
-                  <div className="flex flex-col gap-4 @[20rem]:flex-row justify-center tablet:justify-start">
+                  <div className="flex flex-col gap-4 @[20rem]:flex-row items-center justify-center tablet:justify-start">
                     <div className="code-snippet">
                       <div className="line">npm i {PACKAGE.name}</div>
                     </div>
@@ -125,6 +125,7 @@ export default async function Home() {
                       href={getPath(ROUTES.ELEMENT_DETAILS, { framework: FRAMEWORK_DEFAULT, element: 'accordion' })!}
                     >
                       Get Started
+                      <plus-icon name="arrow-right"></plus-icon>
                     </NextLink>
                   </div>
                 </div>
@@ -195,26 +196,26 @@ export default async function Home() {
           </div>
         </div>
       </main>
-      <main>
-        <div className="flex gap-8 justify-center my-24">
+      <main className="container">
+        <div className="flex flex-col gap-8 items-center justify-center my-24 tablet:flex-row">
           <Feature
             title="Frameworks"
             description="4pt allows you to work on multiple projects without the creative stress."
-            icon="TODO"
+            icon="puzzle"
             metric={statistics.frameworks}
           />
-          <div className="divider"></div>
+          <div className="divider mx-4 tablet:mx-0"></div>
           <Feature
             title="Elements"
             description="4pt allows you to work on multiple projects without the creative stress."
-            icon="TODO"
+            icon="puzzle"
             metric={statistics.elements}
           />
-          <div className="divider"></div>
+          <div className="divider mx-4 tablet:mx-0"></div>
           <Feature
             title="Examples"
             description="4pt allows you to work on multiple projects without the creative stress."
-            icon="TODO"
+            icon="puzzle"
             metric={statistics.examples}
           />
         </div>

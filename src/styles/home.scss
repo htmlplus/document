@@ -126,9 +126,10 @@ $box-shadow:
   a.btn,
   button {
     @extend %font-3-500;
+    height: 36px;
     justify-content: center;
     border: none;
-    padding: 6px 13px;
+    padding: 0 14px;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -278,5 +279,6 @@ $box-shadow:
     background: $alpha-black-4;
     min-width: 1px;
     min-height: 1px;
+    align-self: stretch;
   }
 }
