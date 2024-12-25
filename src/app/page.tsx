@@ -1,6 +1,6 @@
 'use client';
 
-import { Fragment, useEffect, useRef } from 'react';
+import { Fragment, useLayoutEffect, useRef } from 'react';
 
 import NextLink from 'next/link';
 
@@ -21,7 +21,7 @@ interface FeatureProps {
 const Feature = ({ description, icon, metric, more, title }: FeatureProps) => {
   const $counter = useRef<HTMLPlusCounterElement>();
   const $intersection = useRef<HTMLPlusIntersectionElement>();
-  useEffect(() => {
+  useLayoutEffect(() => {
     const play = (event: any) => {
       $counter.current!.play = event.detail.isIntersecting;
     };
@@ -95,8 +95,8 @@ export default async function Home() {
       </header>
       <main className="relative pt-12 main">
         <div className="container">
-          <div className="flex flex-col items-center gap-8 tablet:flex-row">
-            <div className="flex flex-col items-center gap-8 tablet:items-start basis-1/2">
+          <div className="flex flex-col items-center gap-8 laptop:flex-row">
+            <div className="flex flex-col items-center gap-8 laptop:items-start basis-1/2">
               <NextLink className="badge-group" href={getPath(ROUTES.CHANGELOG, {})!}>
                 <plus-stack gap="0.75rem">
                   <div className="badge">{PACKAGE.version}</div>
@@ -105,18 +105,14 @@ export default async function Home() {
                   <plus-icon name="arrow-right-short" size="1rem"></plus-icon>
                 </plus-stack>
               </NextLink>
-              <div className="flex flex-col items-center gap-6 tablet:items-start text-center tablet:text-start">
-                <h1>
-                  The Most Flexible Open Source Web UI Library!
-                  {/* TODO: The fastest UI kit and design system */}
-                </h1>
+              <div className="flex flex-col items-center gap-6 laptop:items-start text-center laptop:text-start">
+                <h1>The Most Flexible Open Source Web UI Library!</h1>
                 <p>
-                  HTMLPLUS is framework-less and lightweight. It's totally native and developed purely with javascript.
-                  All HTMLPLUS elements are customizable and configurable.
-                  {/* TODO: Join thousands of designers and agencies who kickstart design projects using 4pt. */}
+                  A pure JavaScript web UI library delivering lightweight, customizable, and fast elements for modern
+                  browsers and frameworks.
                 </p>
-                <div className="w-full @container">
-                  <div className="flex flex-col gap-4 @[20rem]:flex-row items-center justify-center tablet:justify-start">
+                <div className="w-full">
+                  <div className="flex flex-col gap-4 tablet:flex-row items-stretch justify-center laptop:justify-start laptop:items-center">
                     <div className="code-snippet">
                       <div className="line">npm i {PACKAGE.name}</div>
                     </div>
@@ -130,8 +126,8 @@ export default async function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-full @container">
-                <div className="flex flex-col items-center gap-6 @[20rem]:flex-row justify-center tablet:justify-start">
+              <div className="w-full">
+                <div className="flex flex-col items-center gap-6 tablet:flex-row justify-center laptop:justify-start">
                   <plus-avatar-group hoverable stacked>
                     {contributors
                       .slice(0, 5)
@@ -153,14 +149,11 @@ export default async function Home() {
                         </Fragment>
                       ))}
                   </plus-avatar-group>
-                  <div className="top-developers">
-                    Top Developers
-                    {/* 632 joined today */}
-                  </div>
+                  <div className="top-developers">Top Developers</div>
                 </div>
               </div>
             </div>
-            <div className="flex items-center basis-1/2 h-[547px]">
+            <div className="hidden laptop:flex items-center basis-1/2 h-[547px] ">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 502 493" fill="none">
                 <rect x="36" y="93.0001" width="64" height="64" rx="32" fill="#6F6F6F"></rect>
                 <rect x="401" y="341" width="64" height="64" rx="32" fill="rgb(217 217 217)"></rect>
@@ -197,21 +190,21 @@ export default async function Home() {
         </div>
       </main>
       <main className="container">
-        <div className="flex flex-col gap-8 items-center justify-center my-24 tablet:flex-row">
+        <div className="flex flex-col gap-8 items-center justify-center my-24 laptop:flex-row">
           <Feature
             title="Frameworks"
             description="4pt allows you to work on multiple projects without the creative stress."
             icon="puzzle"
             metric={statistics.frameworks}
           />
-          <div className="divider mx-4 tablet:mx-0"></div>
+          <div className="divider mx-4 laptop:mx-0"></div>
           <Feature
             title="Elements"
             description="4pt allows you to work on multiple projects without the creative stress."
             icon="puzzle"
             metric={statistics.elements}
           />
-          <div className="divider mx-4 tablet:mx-0"></div>
+          <div className="divider mx-4 laptop:mx-0"></div>
           <Feature
             title="Examples"
             description="4pt allows you to work on multiple projects without the creative stress."
