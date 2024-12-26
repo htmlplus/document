@@ -11,6 +11,7 @@ import { statistics } from '@/data';
 import { getPath } from '@/utils';
 
 interface FeatureProps {
+  className?: string;
   description: string;
   icon: string;
   metric?: number;
@@ -18,7 +19,7 @@ interface FeatureProps {
   title: string;
 }
 
-const Feature = ({ description, icon, metric, more, title }: FeatureProps) => {
+const Feature = ({ className, description, icon, metric, more, title }: FeatureProps) => {
   const $counter = useRef<HTMLPlusCounterElement>();
   const $intersection = useRef<HTMLPlusIntersectionElement>();
   useLayoutEffect(() => {
@@ -28,14 +29,14 @@ const Feature = ({ description, icon, metric, more, title }: FeatureProps) => {
     $intersection.current!.addEventListener('PlusChange', play);
   }, []);
   return (
-    <div className="feature">
+    <div className={`feature ${className}`}>
       <plus-avatar shape="circle" size="48">
         <plus-icon name={icon} size="24"></plus-icon>
       </plus-avatar>
       {metric && (
         <div className="metric">
           <plus-intersection ref={$intersection} once>
-            <plus-counter ref={$counter} to={metric} duration={2000}>
+            <plus-counter ref={$counter} to={metric} duration={2500}>
               0
             </plus-counter>
           </plus-intersection>
@@ -153,61 +154,34 @@ export default async function Home() {
                 </div>
               </div>
             </div>
-            <div className="hidden laptop:flex items-center basis-1/2 h-[547px] ">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 502 493" fill="none">
-                <rect x="36" y="93.0001" width="64" height="64" rx="32" fill="#6F6F6F"></rect>
-                <rect x="401" y="341" width="64" height="64" rx="32" fill="rgb(217 217 217)"></rect>
-                <rect
-                  x="67.8822"
-                  y="361.902"
-                  width="96"
-                  height="256"
-                  rx="48"
-                  transform="rotate(-135 67.8822 361.902)"
-                  fill="#C7C7C7"
-                ></rect>
-                <rect
-                  x="318.882"
-                  y="389.902"
-                  width="96"
-                  height="256"
-                  rx="48"
-                  transform="rotate(-135 318.882 389.902)"
-                  fill="#171717"
-                ></rect>
-                <rect
-                  x="76.8822"
-                  y="492.146"
-                  width="96"
-                  height="600"
-                  rx="48"
-                  transform="rotate(-135 76.8822 492.146)"
-                  fill="#e5e5e5"
-                ></rect>
-              </svg>
+            <div className="hidden laptop:flex items-center basis-1/2 h-[547px] justify-center">
+              <div className="gooey"></div>
             </div>
           </div>
         </div>
       </main>
       <main className="container">
-        <div className="flex flex-col gap-8 items-center justify-center my-24 laptop:flex-row">
+        <div className="flex flex-col gap-8 items-center justify-center my-24 laptop:flex-row laptop:items-start">
           <Feature
+            className="basis-1/3"
             title="Frameworks"
-            description="4pt allows you to work on multiple projects without the creative stress."
+            description="Supports a wide range of frameworks and libraries, with ongoing efforts to include more."
             icon="puzzle"
             metric={statistics.frameworks}
           />
           <div className="divider mx-4 laptop:mx-0"></div>
           <Feature
+            className="basis-1/3"
             title="Elements"
-            description="4pt allows you to work on multiple projects without the creative stress."
+            description="Powerful set of elements designed to integrate smoothly into any JavaScript project."
             icon="puzzle"
             metric={statistics.elements}
           />
           <div className="divider mx-4 laptop:mx-0"></div>
           <Feature
+            className="basis-1/3"
             title="Examples"
-            description="4pt allows you to work on multiple projects without the creative stress."
+            description="Simplified samples are provided to demonstrate the capabilities of the elements."
             icon="puzzle"
             metric={statistics.examples}
           />

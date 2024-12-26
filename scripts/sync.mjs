@@ -243,7 +243,7 @@ const document = await (async () => {
     `  downloadsLastMonth: ${third.downloads},`,
     `  elements: ${document.elements.length},`,
     `  examples: ${db.filter((item) => item.key.startsWith('javascript/')).length},`,
-    `  frameworks: ${6},`,
+    `  frameworks: ${new Set(db.map((item) => item.key.split('/').at(0))).size},`,
     '}'
   ];
 
