@@ -59,6 +59,22 @@ const HEADER = [
   ''
 ];
 
+const db = await (async () => {
+  const LOCAL = path.join(__dirname, '../../examples/dist/db.json');
+  const REMOTE = 'https://github.com/htmlplus/examples/raw/main/dist/db.json';
+
+  const db = JSON.parse(await load(LOCAL, REMOTE));
+
+  return JSON.parse(await load(LOCAL, REMOTE));
+})();
+
+const document = await (async () => {
+  const LOCAL = path.join(__dirname, '../../ui/dist/json/document.json');
+  const REMOTE = 'https://github.com/htmlplus/ui/raw/main/dist/json/document.json';
+
+  return JSON.parse(await load(LOCAL, REMOTE));
+})();
+
 // changelog
 (async () => {
   const DESTINATION = './src/app/(internal)/changelog/page.mdx';
@@ -73,10 +89,6 @@ const HEADER = [
 // elements light
 (async () => {
   const DESTINATION = './src/data/elements.light.ts';
-  const LOCAL = path.join(__dirname, '../../ui/dist/json/document.json');
-  const REMOTE = 'https://github.com/htmlplus/ui/raw/main/dist/json/document.json';
-
-  const document = JSON.parse(await load(LOCAL, REMOTE));
 
   const lines = [
     ...HEADER,
@@ -105,10 +117,6 @@ const HEADER = [
 // examples data
 (async () => {
   const FILE = './src/data/examples.ts';
-  const LOCAL = path.join(__dirname, '../../examples/dist/db.json');
-  const REMOTE = 'https://github.com/htmlplus/examples/raw/main/dist/db.json';
-
-  const db = JSON.parse(await load(LOCAL, REMOTE));
 
   fs.rmSync(FILE, { force: true, recursive: true });
 
@@ -124,10 +132,6 @@ const HEADER = [
 // examples element
 (async () => {
   const DIRECTORY = './src/examples';
-  const LOCAL = path.join(__dirname, '../../examples/dist/db.json');
-  const REMOTE = 'https://github.com/htmlplus/examples/raw/main/dist/db.json';
-
-  const db = JSON.parse(await load(LOCAL, REMOTE));
 
   fs.rmSync(DIRECTORY, { force: true, recursive: true });
 
@@ -202,6 +206,17 @@ const HEADER = [
   fs.writeFileSync(DESTINATION, content, 'utf8');
 })();
 
+// roadmap
+(async () => {
+  const DESTINATION = './src/app/(internal)/roadmap/page.mdx';
+  const LOCAL = path.join(__dirname, '../../ui/ROADMAP.md');
+  const REMOTE = 'https://github.com/htmlplus/ui/raw/main/ROADMAP.md';
+
+  const content = await load(LOCAL, REMOTE);
+
+  fs.writeFileSync(DESTINATION, content, 'utf8');
+})();
+
 // statistics
 (async () => {
   const DESTINATION = './src/data/statistics.ts';
@@ -226,15 +241,9 @@ const HEADER = [
     `  dowanloads: ${second.downloads},`,
     `  downloadsLastWeek: ${fourth.downloads},`,
     `  downloadsLastMonth: ${third.downloads},`,
-    '  get elements(): number {',
-    '    return this.elementsPerFramework * this.frameworks;',
-    '  },',
-    `  elementsPerFramework: ${10},`,
-    '  get examples(): number {',
-    '    return this.examplesPerFramework * this.frameworks;',
-    '  },',
-    `  examplesPerFramework: ${60},`,
-    `  frameworks: ${6},`,
+    `  elements: ${document.elements.length},`,
+    `  examples: ${db.filter((item) => item.key.startsWith('javascript/')).length},`,
+    `  frameworks: ${new Set(db.map((item) => item.key.split('/').at(0))).size},`,
     '}'
   ];
 

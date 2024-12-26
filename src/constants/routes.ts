@@ -9,6 +9,7 @@ export const ROUTES = {
   BIDIRECTIONALITY: '/bidirectionality',
   GLOBAL_CONFIG: '/global-config',
   OVERVIEW: '/overview',
+  ROADMAP: '/roadmap',
   INSTALLATION: '/installation',
   INSTALLATION_FRAMEWORK: '/[framework]/installation',
   BROWSERS: '/browsers',

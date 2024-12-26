@@ -14,7 +14,12 @@
     "^[.](.*)"
   ],
   "importOrderCaseInsensitive": true,
-  "importOrderParserPlugins" : [],
+  "importOrderParserPlugins" : [
+    "typescript", 
+    "jsx", 
+    "classProperties", 
+    "[\"decorators\", { \"decoratorsBeforeExport\": true }]"
+  ],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": false,
   "plugins": [
