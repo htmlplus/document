@@ -155,7 +155,7 @@ export default async function Home() {
               </div>
             </div>
             <div className="hidden laptop:flex items-center basis-1/2 h-[547px] justify-center">
-              <div className="gooey"></div>
+              <div className="gooey ml-20"></div>
             </div>
           </div>
         </div>
