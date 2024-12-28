@@ -73,6 +73,15 @@ $box-shadow:
   text-decoration-skip-ink: none;
 }
 
+%font-8-600 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 42px;
+  letter-spacing: -0.022em;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
 %font-9-600 {
   font-size: 48px;
   font-weight: 600;
@@ -311,6 +320,71 @@ $box-shadow:
       opacity: 0.21;
       animation-duration: 1.5s;
     }
+  }
+
+  .footer {
+
+    ul, li {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      list-style-type: none;
+    }
+
+    h6 {
+      @extend %font-3-500;
+      color: $alpha-black-7;
+    }
+
+    ul {
+      li {
+        @extend %font-3-500;
+        color: $black;
+      }
+    }
+
+
+
+  }
+
+  .quick-start {
+    .title {
+      @extend %font-8-600;
+    }
+
+    div > p {
+      @extend %font-4-400;
+      @media (max-width: 768px) {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: -0.013em;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+    }
+  }
+
+  .favourite-tools {
+    div {
+      h3 {
+        @extend %font-8-600;
+      }
+
+      p {
+        @extend %font-4-400;
+      }
+    }
+
+    .frameworks-title {
+      @extend %font-5-500;
+      color: $black;
+    }
+
+    .frameworks-des {
+      @extend %font-3-400;
+    }
+
   }
 }
 

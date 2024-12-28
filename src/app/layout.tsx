@@ -5,6 +5,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { HTMLPLUS } from '@/components';
 // TODO
 import '@/styles/index.scss';
+import Footer from "@/components/layouts/Footer";
 
 export const metadata: Metadata = {
   title: 'HTMLPLUS'
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         {children}
         <HTMLPLUS />
+      <Footer/>
       </body>
     </html>
   );
