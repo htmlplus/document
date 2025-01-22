@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
-import { GoogleAnalytics } from '@next/third-parties/google'
+
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 import { HTMLPLUS } from '@/components';
-
 // TODO
 import '@/styles/index.scss';
 
 export const metadata: Metadata = {
-  title: 'HTMLPLUS',
+  title: 'HTMLPLUS'
   // TODO
   // <meta name="description" content={meta?.description} />
   // <meta name="twitter:card" content="summary" />
@@ -26,6 +26,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <GoogleAnalytics gaId="G-TTTXW9HNLT" />
       <body>
         {children}
@@ -33,4 +41,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </body>
     </html>
   );
-} 
+}

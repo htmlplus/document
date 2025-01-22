@@ -54,22 +54,6 @@ const Feature = ({ className, description, icon, metric, more, title }: FeatureP
 };
 
 export default async function Home() {
-  const promises = [
-    getPath(ROUTES.GITHUB_COMMITS, { repository: 'ui', path: '/' }),
-    getPath(ROUTES.GITHUB_COMMITS, { repository: 'document', path: '/' })
-  ].map((path) => fetch(path));
-
-  const contributors = await Promise.all(promises)
-    .then((responses) => Promise.all(responses.map((response) => response.json())))
-    .then((responses) =>
-      responses
-        .flat()
-        .map((commit) => commit.author.login)
-        .filter((contributor, index, contributors) => {
-          return contributors?.indexOf(contributor) === index;
-        })
-    );
-
   return (
     <div className="home">
       <header className="flex items-center h-16">
@@ -130,25 +114,19 @@ export default async function Home() {
               <div className="w-full">
                 <div className="flex flex-col items-center gap-6 tablet:flex-row justify-center laptop:justify-start">
                   <plus-avatar-group hoverable stacked>
-                    {contributors
-                      .slice(0, 5)
-                      .reverse()
-                      .map((contributor) => (
-                        <Fragment key={contributor}>
-                          <plus-avatar shape="circle" size="2rem">
-                            <img
-                              src={getPath(ROUTES.CONTRIBUTOR, { contributor })}
-                              alt={`Contributor ${contributor}`}
-                            />
-                            <a
-                              rel="noopener"
-                              href={getPath(ROUTES.CONTRIBUTOR_GITHUB, { contributor })}
-                              target="_blank"
-                            ></a>
-                          </plus-avatar>
-                          <plus-tooltip>{contributor}</plus-tooltip>
-                        </Fragment>
-                      ))}
+                    {['hazhirmohammadi', 'mbpmohsen', 'abdolian'].map((contributor) => (
+                      <Fragment key={contributor}>
+                        <plus-avatar shape="circle" size="2rem">
+                          <img src={getPath(ROUTES.CONTRIBUTOR, { contributor })} alt={`Contributor ${contributor}`} />
+                          <a
+                            rel="noopener"
+                            href={getPath(ROUTES.CONTRIBUTOR_GITHUB, { contributor })}
+                            target="_blank"
+                          ></a>
+                        </plus-avatar>
+                        <plus-tooltip>{contributor}</plus-tooltip>
+                      </Fragment>
+                    ))}
                   </plus-avatar-group>
                   <div className="top-developers">Top Developers</div>
                 </div>
