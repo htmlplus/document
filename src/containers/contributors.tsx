@@ -20,34 +20,34 @@ export function Contributors() {
     if (pathname.match(/\/[^/]+\/api\/[^/]+/)) {
       return getPath(ROUTES.GITHUB_COMMITS, {
         repository: 'ui',
-        path: `src/elements/${params.element}`
+        path: `src/elements/${params.element}`,
       });
     }
 
     if (pathname.match(/\/[^/]+\/element\/[^/]+/)) {
       return getPath(ROUTES.GITHUB_COMMITS, {
         repository: 'ui',
-        path: `src/elements/${params.element}`
+        path: `src/elements/${params.element}`,
       });
     }
 
     if (pathname.match(/\/element\/[^/]+\/config/)) {
       return getPath(ROUTES.GITHUB_COMMITS, {
         repository: 'document',
-        path: `src/app/(internal)/element/[element]/config`
+        path: `src/app/(internal)/element/[element]/config`,
       });
     }
 
     if (pathname.match(/\/element\/animation\/names/)) {
       return getPath(ROUTES.GITHUB_COMMITS, {
         repository: 'document',
-        path: 'src/app/(internal)/element/animation/names'
+        path: 'src/app/(internal)/element/animation/names',
       });
     }
 
     return getPath(ROUTES.GITHUB_COMMITS, {
       repository: 'document',
-      path: `src/app/(internal)/${pathname}`
+      path: `src/app/(internal)/${pathname}`,
     });
   }, [params, pathname]);
 
@@ -68,7 +68,7 @@ export function Contributors() {
           .map((commit) => commit.author.login)
           .filter((contributor, index, contributors) => {
             return contributors?.indexOf(contributor) === index;
-          })
+          }),
       )
       .then(setContributors)
       .catch(() => {});

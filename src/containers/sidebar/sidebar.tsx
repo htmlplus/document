@@ -11,7 +11,7 @@ import { ROUTES } from '@/constants';
 import { useFrameworks } from '@/containers';
 import { classes, getPath } from '@/utils';
 
-import { ISidebarItem } from './sidebar.types';
+import { SidebarItem } from './sidebar.types';
 import { useSidebar } from './useSidebar';
 
 export function Sidebar() {
@@ -21,7 +21,7 @@ export function Sidebar() {
 
   const sidebar = useSidebar();
 
-  const menu = (items: ISidebarItem[], parents: ISidebarItem[] = []) => {
+  const menu = (items: SidebarItem[], parents: SidebarItem[] = []) => {
     return (
       <ul className="nav">
         {items.map((item) => (
@@ -30,7 +30,7 @@ export function Sidebar() {
             className={classes({
               active: item.active,
               expand: item.expand,
-              navItem: true
+              navItem: true,
             })}
           >
             <Button block text to={item.url || '#'} onClick={(event: MouseEvent) => toggle(event, item)}>
@@ -57,7 +57,7 @@ export function Sidebar() {
     );
   };
 
-  const toggle = (event: MouseEvent, item: ISidebarItem) => {
+  const toggle = (event: MouseEvent, item: SidebarItem) => {
     if (!item || item.url) return;
 
     event.preventDefault();

@@ -1,13 +1,8 @@
-import {
-  AppLoadingBar,
-  Contributors,
-  Frameworks,
-  Navigation,
-  Sidebar,
-  Toc
-} from '@/containers';
+import { PropsWithChildren } from 'react';
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+import { AppLoadingBar, Contributors, Frameworks, Navigation, Sidebar, Toc } from '@/containers';
+
+export default function Layout({ children }: PropsWithChildren) {
   return (
     <div className="layout-default">
       <AppLoadingBar></AppLoadingBar>

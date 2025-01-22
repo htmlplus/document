@@ -12,9 +12,9 @@ function App() {
   const appProgressBar1Ref = useRef();
   useEffect(() => {
     requestAnimationFrame(() => {
-      appProgressBar1Ref.current.start();
-      appProgressBar2Ref.current.start();
-      appProgressBar3Ref.current.start();
+      appProgressBar1Ref.current?.start();
+      appProgressBar2Ref.current?.start();
+      appProgressBar3Ref.current?.start();
     });
   }, []);
   return (

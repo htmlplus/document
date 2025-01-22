@@ -1,26 +1,26 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 
 import { kebabCase } from 'change-case';
 import { create } from 'zustand';
 
 import { classes } from '@/utils';
 
-export interface ITocItem {
-  children?: React.ReactNode;
+export interface TocItemProps {
+  children?: ReactNode;
   level?: number;
 }
 
-interface IUseToc {
-  items: IUseTocItem[];
-  add: (item: IUseTocItem) => void;
-  remove: (item: IUseTocItem) => void;
-  scrollTo: (item: IUseTocItem) => void;
-  update: (item: IUseTocItem, entry: IntersectionObserverEntry) => void;
+interface TocState {
+  items: TocItem[];
+  add: (item: TocItem) => void;
+  remove: (item: TocItem) => void;
+  scrollTo: (item: TocItem) => void;
+  update: (item: TocItem, entry: IntersectionObserverEntry) => void;
 }
 
-interface IUseTocItem {
+interface TocItem {
   isActive?: boolean;
   element?: HTMLElement;
   entry?: IntersectionObserverEntry;
@@ -32,9 +32,9 @@ interface IUseTocItem {
   top?: number;
 }
 
-const useToc = create<IUseToc>((set, get) => ({
+const useToc = create<TocState>((set, get) => ({
   items: [],
-  add: (item: IUseTocItem) => {
+  add: (item: TocItem) => {
     let items = get().items.concat(item);
 
     for (const item of items) {
@@ -49,27 +49,27 @@ const useToc = create<IUseToc>((set, get) => ({
 
     item.observer.observe(item.element!);
   },
-  remove: (item: IUseTocItem) => {
+  remove: (item: TocItem) => {
     item.observer?.disconnect();
     const items = get().items.filter((x) => x.key != item.key);
     set({ items });
   },
-  scrollTo: (item: IUseTocItem) => {
+  scrollTo: (item: TocItem) => {
     item.element?.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
-      inline: 'nearest'
+      inline: 'nearest',
     });
-    setTimeout(() => (window.location.hash = `#${item.id}`), 500);
+    window.setTimeout(() => (window.location.hash = `#${item.id}`), 500);
   },
-  update(item: IUseTocItem, entry: IntersectionObserverEntry) {
+  update(item: TocItem, entry: IntersectionObserverEntry) {
     item.entry = entry;
     const entries = get().items.filter((item) => item.entry?.isIntersecting);
     if (!entries.length) return;
     const items = get().items;
     items.forEach((item) => (item.isActive = item === entries[0]));
     set({ items: [...items] });
-  }
+  },
 }));
 
 export function Toc() {
@@ -78,7 +78,7 @@ export function Toc() {
     let clear: any;
     const timeout = () => {
       if (document.readyState != 'complete') {
-        clear = setTimeout(timeout, 250);
+        clear = window.setTimeout(timeout, 250);
         return;
       }
       const item = toc.items.find((item) => item.id && location.hash.endsWith(item.id));
@@ -96,7 +96,7 @@ export function Toc() {
         <a
           className={classes({
             ['active']: item.isActive,
-            [`level-${item.level}`]: true
+            [`level-${item.level}`]: true,
           })}
           key={item.key}
           onClick={() => toc.scrollTo(item)}
@@ -108,21 +108,21 @@ export function Toc() {
   );
 }
 
-export function TocItem({ children, level }: ITocItem) {
+export function TocItem({ children, level }: TocItemProps) {
   const element = useRef(null);
 
   const [isReady, setIsReady] = useState(false);
 
   const toc = useToc();
 
-  const item: IUseTocItem | undefined = useMemo(() => {
+  const item: TocItem | undefined = useMemo(() => {
     if (!isReady) return;
     return {
       element: element.current!,
       id: kebabCase(children?.toString() ?? ''),
       key: Math.random().toString(),
       level,
-      title: children?.toString()
+      title: children?.toString(),
     };
   }, [isReady]);
 

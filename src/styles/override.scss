@@ -19,6 +19,22 @@ a {
   color: $color-primary;
 }
 
+.scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: $color-main-lighten-3;
+  border-radius: 4px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 4px;
+}
+
 .layout-default {
   & > plus-app-progress-bar::part(bar) {
     background-color: $color-primary;

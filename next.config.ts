@@ -1,26 +1,27 @@
+import type { NextConfig } from 'next';
+
 import createMDX from '@next/mdx';
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: NextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   reactStrictMode: true,
   experimental: {
-    optimizePackageImports: ['@/components', '@/containers', '@/data', '@/examples', '@/utils']
+    optimizePackageImports: ['@/components', '@/containers', '@/data', '@/examples', '@/utils'],
   },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/i,
-      loader: 'raw-loader'
+      loader: 'raw-loader',
     });
     return config;
-  }
+  },
 };
 
 const withMDX = createMDX({
   options: {
     remarkPlugins: [],
-    rehypePlugins: []
-  }
+    rehypePlugins: [],
+  },
 });
 
 export default withMDX(nextConfig);

@@ -39,9 +39,9 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     },
     code({ children, className }: any) {
       const language = className?.split('-').pop();
-  
+
       if (!language) return <code>{children}</code>;
-  
+
       return <Code language={language}>{children}</Code>;
     },
     h1: Heading(1),
@@ -53,6 +53,6 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     pre({ children }: any) {
       return children;
     },
-    ...components
-  }
+    ...components,
+  };
 }

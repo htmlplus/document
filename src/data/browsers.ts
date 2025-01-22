@@ -2,21 +2,21 @@ export const browsers = [
   {
     key: 'chrome',
     logo: 'chrome.svg',
-    title: 'Chrome'
+    title: 'Chrome',
   },
   {
     key: 'safari',
     logo: 'safari.svg',
-    title: 'Safari'
+    title: 'Safari',
   },
   {
     key: 'firefox',
     logo: 'firefox.svg',
-    title: 'Firefox'
+    title: 'Firefox',
   },
   {
     key: 'edge',
     logo: 'edge.svg',
-    title: 'Edge'
-  }
+    title: 'Edge',
+  },
 ];

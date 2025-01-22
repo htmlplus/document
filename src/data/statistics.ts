@@ -6,10 +6,10 @@ export const statistics = {
   forks: 1,
   stars: 32,
   watchers: 6,
-  dowanloads: 2862,
-  downloadsLastWeek: 18,
-  downloadsLastMonth: 212,
+  dowanloads: 3004,
+  downloadsLastWeek: 82,
+  downloadsLastMonth: 153,
   elements: 46,
   examples: 239,
   frameworks: 5,
-}
+};

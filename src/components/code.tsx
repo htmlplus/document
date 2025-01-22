@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useRef } from 'react';
+import { ReactNode, useEffect, useMemo, useRef } from 'react';
 
 import 'prism-themes/themes/prism-nord.css';
 import Prism from 'prismjs';
@@ -9,7 +9,7 @@ import 'prismjs/components/prism-jsx';
 import { Button } from '@/components';
 
 export interface CodeProps {
-  children?: React.ReactNode;
+  children?: ReactNode;
   copy?: boolean;
   language: 'html' | 'css' | 'js' | 'jsx' | 'shell';
 }

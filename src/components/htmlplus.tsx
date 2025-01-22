@@ -1,11 +1,10 @@
-// TODO
-
 'use client';
 
 import { useEffect } from 'react';
 
-import { faker } from '@faker-js/faker/locale/en';
 import { setConfig } from '@htmlplus/ui/config.js';
+
+import { faker } from '@faker-js/faker/locale/en';
 
 export function HTMLPLUS() {
   useEffect(() => {
@@ -16,21 +15,21 @@ export function HTMLPLUS() {
             property: {
               // TODO: has conflict with examples
               // width: 'xs'
-            }
+            },
           },
           'plus-faker': {
             property: {
-              instance: faker
-            }
+              instance: faker,
+            },
           },
           'plus-icon': {
             property: {
-              async resolver(name: string) {
+              resolver(name: string) {
                 return import(`../../public/assets/icons/${name}.svg`).then((module) => module.default);
-              }
-            }
-          }
-        }
+              },
+            },
+          },
+        },
       });
     }
     import('@htmlplus/ui');

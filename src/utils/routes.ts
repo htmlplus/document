@@ -3,24 +3,23 @@ import { ROUTES } from '@/constants';
 type ExtractOptional<Key extends string> = Key extends `${infer Start}?`
   ? true
   : Key extends `${infer Start}?${infer End}`
-  ? true
-  : false;
+    ? true
+    : false;
 
-type ExtractParameter<Key extends string> = ExtractOptional<Key> extends true
-  ? Partial<ExtractRecord<Key>>
-  : ExtractRecord<Key>;
+type ExtractParameter<Key extends string> =
+  ExtractOptional<Key> extends true ? Partial<ExtractRecord<Key>> : ExtractRecord<Key>;
 
 type ExtractParameterKey<Key extends string> = Key extends `${infer Start}?${infer End}`
   ? Start
   : Key extends `${infer Start}:${infer End}`
-  ? Start
-  : Key;
+    ? Start
+    : Key;
 
 type ExtractParameterType<Key extends string> = Key extends `${infer Start}:boolean`
   ? boolean
   : Key extends `${infer Start}:number`
-  ? number
-  : string;
+    ? number
+    : string;
 
 type ExtractRecord<Key extends string> = Record<ExtractParameterKey<Key>, ExtractParameterType<Key>>;
 
