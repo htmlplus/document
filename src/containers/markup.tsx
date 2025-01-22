@@ -1,14 +1,15 @@
 'use client';
 
-import { serialize } from 'next-mdx-remote/serialize';
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { useEffect, useState } from 'react';
+
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
+import { serialize } from 'next-mdx-remote/serialize';
 
 import { useMDXComponents } from '@/mdx-components';
 
 export interface MarkupProps {
   scope?: any;
-  value: string;  
+  value: string;
 }
 
 export function Markup({ scope, value }: MarkupProps) {
@@ -22,5 +23,5 @@ export function Markup({ scope, value }: MarkupProps) {
 
   if (!source) return null;
 
-  return <MDXRemote {...source} components={components} scope={scope} />
+  return <MDXRemote {...source} components={components} scope={scope} />;
 }

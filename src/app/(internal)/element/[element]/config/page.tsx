@@ -4,7 +4,7 @@ import { Alert, Button, Code } from '@/components';
 import { ROUTES } from '@/constants';
 import { elements } from '@/data';
 import { getPath } from '@/utils';
- 
+
 interface Params {
   element: string;
 }
@@ -13,19 +13,19 @@ export function generateStaticParams() {
   return elements.map<Params>((element) => ({ element: element.key }));
 }
 
-export async function generateMetadata({ params } : { params: Params }) {
+export async function generateMetadata({ params }: { params: Promise<Params> }) {
   const { element: elementKey } = await params;
 
   const element = elements.find((element) => element.key == elementKey)!;
 
   return {
-      title: element.title,
-      description: element.description,
-      url: getPath(ROUTES.ELEMENT_CONFIG, params)
+    title: element.title,
+    description: element.description,
+    url: getPath(ROUTES.ELEMENT_CONFIG, await params),
   };
 }
 
-export default async function Page({ params }: { params: Params }) {
+export default async function Page({ params }: { params: Promise<Params> }) {
   const { element: elementKey } = await params;
 
   const element = elements.find((element) => element.key == elementKey)!;
@@ -58,7 +58,7 @@ export default async function Page({ params }: { params: Params }) {
           `      }`,
           `    }`,
           `  }`,
-          `});`
+          `});`,
         ]
           .flat()
           .join('\n')}

@@ -2,20 +2,11 @@ import { create } from 'zustand';
 
 import { sidebar } from '@/data';
 
-import { ISidebarItem } from './sidebar.types';
-
-export interface IUseSidebar {
-  items: ISidebarItem[];
-  prev?: ISidebarItem;
-  next?: ISidebarItem;
-  sync(path: string, framework: string): void;
-  toggle(item: ISidebarItem): void;
-  update(): void;
-}
+import { SidebarItem, SidebarState } from './sidebar.types';
 
 const expanded = new Set<string>();
 
-export const useSidebar = create<IUseSidebar>((set, get) => ({
+export const useSidebar = create<SidebarState>((set, get) => ({
   items: [],
   prev: undefined,
   next: undefined,
@@ -55,10 +46,10 @@ export const useSidebar = create<IUseSidebar>((set, get) => ({
     const next = items[index + 1];
 
     set({ prev, next });
-  }
+  },
 }));
 
-const flat = (items?: ISidebarItem[]) => {
+const flat = (items?: SidebarItem[]) => {
   if (!items) return [];
 
   const result = [...items];
@@ -70,7 +61,7 @@ const flat = (items?: ISidebarItem[]) => {
   return result;
 };
 
-const init = (path: string, parent?: ISidebarItem, items?: ISidebarItem[]) => {
+const init = (path: string, parent?: SidebarItem, items?: SidebarItem[]) => {
   if (!items) return;
 
   for (const item of items) {

@@ -18,23 +18,23 @@ export function generateStaticParams(): Params[] {
     elements.map((element) => ({
       element: element.key,
       framework: framework.key,
-    }))
-  )
+    })),
+  );
 }
 
-export async function generateMetadata({ params } : { params: Params }) {
+export async function generateMetadata({ params }: { params: Promise<Params> }) {
   const { element: elementKey } = await params;
 
   const element = elements.find((element) => element.key == elementKey)!;
 
   return {
-      title: element.title,
-      description: element.description,
-      url: getPath(ROUTES.API_DETAILS, params)
+    title: element.title,
+    description: element.description,
+    url: getPath(ROUTES.API_DETAILS, await params),
   };
 }
 
-export default async function Page({ params } : { params: Params }) {
+export default async function Page({ params }: { params: Promise<Params> }) {
   const { element: elementKey } = await params;
 
   const element = elements.find((element) => element.key == elementKey)!;
@@ -43,36 +43,36 @@ export default async function Page({ params } : { params: Params }) {
     {
       key: 'property',
       title: 'Properties',
-      items: element.properties || []
+      items: element.properties || [],
     },
     {
       key: 'slot',
       title: 'Slots',
-      items: element.slots || []
+      items: element.slots || [],
     },
     {
       key: 'event',
       title: 'Events',
       items: (element.events || []).map((event) => ({
         ...event,
-        name: kebabCase(event.name)
-      }))
+        name: kebabCase(event.name),
+      })),
     },
     {
       key: 'style',
       title: 'CSS Variables',
-      items: element.styles || []
+      items: element.styles || [],
     },
     {
       key: 'part',
       title: 'CSS Parts',
-      items: element.parts || []
+      items: element.parts || [],
     },
     {
       key: 'method',
       title: 'Methods',
-      items: element.methods || []
-    }
+      items: element.methods || [],
+    },
   ];
 
   return (
@@ -87,9 +87,7 @@ export default async function Page({ params } : { params: Params }) {
           <h2>
             <TocItem level={2}>{section.title}</TocItem>
           </h2>
-          {!section.items?.length && (
-            <p>There are no {section.title}.</p>
-          )}
+          {!section.items?.length && <p>There are no {section.title}.</p>}
           {section.items.map((item: any, index) => {
             item.kind ??= section.key;
 
@@ -97,7 +95,7 @@ export default async function Page({ params } : { params: Params }) {
 
             item.typeReference = (() => {
               let reference = '';
-          
+
               switch (item.kind) {
                 case 'event':
                   reference = item.detailReference;
@@ -109,9 +107,9 @@ export default async function Page({ params } : { params: Params }) {
                   reference = item.typeReference;
                   break;
               }
-          
+
               if (!reference) return '';
-          
+
               return getPath(ROUTES.TYPE_GITHUB_LINK, { element: element.key, fileName: `${reference.slice(2)}.ts` });
             })();
 
@@ -122,9 +120,7 @@ export default async function Page({ params } : { params: Params }) {
                     <b>Name</b>
                     <div>
                       {item.name}
-                      {item.experimental && (
-                        <span> (Experimental)</span>
-                      )}
+                      {item.experimental && <span> (Experimental)</span>}
                     </div>
                   </plus-grid-item>
                   {['event', 'method', 'property'].includes(item.kind) && (
@@ -146,9 +142,7 @@ export default async function Page({ params } : { params: Params }) {
                       </plus-grid-item>
                     </Fragment>
                   )}
-                  {['style'].includes(item.kind) && (
-                    <plus-grid-item xs="12" sm="grow" hide-sm-down></plus-grid-item>
-                  )}
+                  {['style'].includes(item.kind) && <plus-grid-item xs="12" sm="grow" hide-sm-down></plus-grid-item>}
                   {['property', 'style'].includes(item.kind) && (
                     <Fragment>
                       <plus-grid-item xs="12" sm="auto" hide-md-up>
@@ -199,11 +193,9 @@ export default async function Page({ params } : { params: Params }) {
                     </plus-grid-item>
                   )}
                 </plus-grid>
-                {section.items.length - 1 > index && (
-                  <plus-divider width="xs"></plus-divider>
-                )}
+                {section.items.length - 1 > index && <plus-divider width="xs"></plus-divider>}
               </Fragment>
-            )
+            );
           })}
         </Fragment>
       ))}

@@ -1,6 +1,4 @@
-'use client';
-
-import { Fragment, useLayoutEffect, useRef } from 'react';
+import { Fragment } from 'react';
 
 import NextLink from 'next/link';
 
@@ -10,48 +8,7 @@ import { FRAMEWORK_DEFAULT, ROUTES } from '@/constants';
 import { statistics } from '@/data';
 import { getPath } from '@/utils';
 
-interface FeatureProps {
-  className?: string;
-  description: string;
-  icon: string;
-  metric?: number;
-  more?: string;
-  title: string;
-}
-
-const Feature = ({ className, description, icon, metric, more, title }: FeatureProps) => {
-  const $counter = useRef<HTMLPlusCounterElement>();
-  const $intersection = useRef<HTMLPlusIntersectionElement>();
-  useLayoutEffect(() => {
-    const play = (event: any) => {
-      $counter.current!.play = event.detail.isIntersecting;
-    };
-    $intersection.current!.addEventListener('PlusChange', play);
-  }, []);
-  return (
-    <div className={`feature ${className}`}>
-      <plus-avatar shape="circle" size="48">
-        <plus-icon name={icon} size="24"></plus-icon>
-      </plus-avatar>
-      {metric && (
-        <div className="metric">
-          <plus-intersection ref={$intersection} once>
-            <plus-counter ref={$counter} to={metric} duration={2500}>
-              0
-            </plus-counter>
-          </plus-intersection>
-        </div>
-      )}
-      <div className="title">{title}</div>
-      <div className="description">{description}</div>
-      {more && (
-        <a href={more} className="link">
-          Learn more
-        </a>
-      )}
-    </div>
-  );
-};
+import { Feature } from './Feature';
 
 export default async function Home() {
   return (

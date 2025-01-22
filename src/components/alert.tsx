@@ -1,7 +1,9 @@
+import { ReactNode } from 'react';
+
 import { classes } from '@/utils';
 
 export interface AlertProps {
-  children?: React.ReactNode;
+  children?: ReactNode;
   type?: 'error' | 'info' | 'success' | 'warning';
 }
 

@@ -2,11 +2,11 @@
 
 import { TocItem } from '@/containers';
 
-export interface ILastModified {
+export interface LastModifiedProps {
   value: Date;
 }
 
-export function LastModified({ value }: ILastModified) {
+export function LastModified({ value }: LastModifiedProps) {
   return (
     <>
       <h2>

@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 import NextLink from 'next/link';
 
 import { Colors } from '@/types';
@@ -5,7 +7,7 @@ import { classes } from '@/utils';
 
 export interface ButtonProps {
   block?: boolean;
-  children: React.ReactNode;
+  children: ReactNode;
   color?: Colors;
   disabled?: boolean;
   icon?: boolean;

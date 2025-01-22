@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 // TODO: it's a large dependency
 import Select, { components } from 'react-select';
 
@@ -39,6 +39,12 @@ export function Frameworks() {
 
   const store = useFrameworks();
 
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const items = useMemo(
     () =>
       frameworks
@@ -46,9 +52,9 @@ export function Frameworks() {
         .map((framework) => ({
           value: framework.key,
           label: framework.title,
-          logo: framework.logo
+          logo: framework.logo,
         })),
-    [frameworks]
+    [frameworks],
   );
 
   // TODO
@@ -61,7 +67,7 @@ export function Frameworks() {
 
   const selected = useMemo(
     () => items.find((framework) => framework.value === store.framework),
-    [items, store.framework]
+    [items, store.framework],
   );
 
   useEffect(() => {
@@ -81,17 +87,19 @@ export function Frameworks() {
   return (
     <div className="frameworks">
       <p>Select Your Framework</p>
-      <Select
-        isSearchable={false}
-        isDisabled={!key}
-        components={{
-          Option,
-          SingleValue
-        }}
-        options={items}
-        value={selected}
-        onChange={change}
-      ></Select>
+      {isClient && (
+        <Select
+          isSearchable={false}
+          isDisabled={!key}
+          components={{
+            Option,
+            SingleValue,
+          }}
+          options={items}
+          value={selected}
+          onChange={change}
+        ></Select>
+      )}
     </div>
   );
 }

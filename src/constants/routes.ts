@@ -33,5 +33,5 @@ export const ROUTES = {
   EXAMPLE_GITHUB_LINK: 'https://github.com/htmlplus/examples/tree/main/dist/[framework]/[element]/[example]',
   EXAMPLE_DOWNLOAD_LINK:
     'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/htmlplus/examples/tree/main/dist/[framework]/[element]/[example]',
-  TYPE_GITHUB_LINK: 'https://github.com/htmlplus/ui/tree/main/src/elements/[element]/[fileName]'
+  TYPE_GITHUB_LINK: 'https://github.com/htmlplus/ui/tree/main/src/elements/[element]/[fileName]',
 } as const;

@@ -15,7 +15,7 @@ export function generateStaticParams() {
   }));
 }
 
-export default async function Page({ params }: { params: Params }) {
+export default async function Page({ params }: { params: Promise<Params> }) {
   const { element, example } = await params;
 
   const name = pascalCase(element + ' ' + example);

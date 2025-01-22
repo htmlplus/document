@@ -1,26 +1,28 @@
 'use client';
 
 import { Fragment, useEffect, useState } from 'react';
+
 import assets from '@htmlplus/ui/animation/assets.json';
 import '@htmlplus/ui/animation/names/all.js';
 
-import { TocItem } from '@/containers';
 import { capitalCase } from 'change-case';
+
+import { TocItem } from '@/containers';
 
 export type Category = {
   key: string;
   title: string;
   items: Array<Omit<Category, 'items'>>;
-}
+};
 
 export function Categories() {
   const [categories, setCategories] = useState<Category[]>([]);
 
   const [playing, setPlaying] = useState('');
-  
+
   useEffect(() => {
     const categories: Category[] = [];
-  
+
     for (const file of assets) {
       if (!file.startsWith('names') || file.endsWith('all.js') || file.endsWith('register.js')) continue;
 
@@ -32,19 +34,19 @@ export function Categories() {
         .join('.')
         .split('/')
         .filter((section) => !!section);
-  
+
       if (!categories.some((category) => category.key == directoryName))
         categories.push({
           key: directoryName,
           title: capitalCase(directoryName),
-          items: []
+          items: [],
         });
-  
+
       const category = categories.find((category) => category.key == directoryName);
-  
+
       category?.items.push({
         key: fileName,
-        title: capitalCase(fileName)
+        title: capitalCase(fileName),
       });
     }
 
@@ -71,5 +73,5 @@ export function Categories() {
         ))}
       </plus-grid>
     </Fragment>
-  ))
+  ));
 }

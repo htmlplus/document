@@ -5,9 +5,9 @@ import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
 export function AppLoadingBar() {
-  const $ref = useRef<HTMLPlusAppProgressBarElement>();
+  const $ref = useRef<HTMLPlusAppProgressBarElement>(null);
 
-  const pathname = usePathname(); 
+  const pathname = usePathname();
 
   useEffect(() => {
     $ref.current?.done?.();

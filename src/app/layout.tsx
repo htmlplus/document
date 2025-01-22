@@ -1,3 +1,5 @@
+import { PropsWithChildren } from 'react';
+
 import type { Metadata } from 'next';
 
 import { GoogleAnalytics } from '@next/third-parties/google';
@@ -7,7 +9,7 @@ import { HTMLPLUS } from '@/components';
 import '@/styles/index.scss';
 
 export const metadata: Metadata = {
-  title: 'HTMLPLUS'
+  title: 'HTMLPLUS',
   // TODO
   // <meta name="description" content={meta?.description} />
   // <meta name="twitter:card" content="summary" />
@@ -23,7 +25,7 @@ export const metadata: Metadata = {
   // <meta property="og:url" content={meta?.url} />
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <head>

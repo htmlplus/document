@@ -56,7 +56,7 @@ const HEADER = [
   '/**************************************************',
   ' * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY',
   ' **************************************************/',
-  ''
+  '',
 ];
 
 const db = await (async () => {
@@ -102,11 +102,11 @@ const document = await (async () => {
           dependencies: element.dependencies
             ?.split(',')
             ?.map((dependency) => dependency.trim())
-            ?.filter((dependency) => !!dependency)
+            ?.filter((dependency) => !!dependency),
         })),
         null,
-        2
-      )
+        2,
+      ),
   ];
 
   const content = lines.join('\n');
@@ -226,8 +226,8 @@ const document = await (async () => {
       'https://api.github.com/repos/htmlplus/ui',
       'https://api.npmjs.org/downloads/point/2021-02-10:2050-01-01/@htmlplus/ui',
       'https://api.npmjs.org/downloads/point/last-month/@htmlplus/ui',
-      'https://api.npmjs.org/downloads/point/last-week/@htmlplus/ui'
-    ].map((url) => fetch(url).then((response) => response.json()))
+      'https://api.npmjs.org/downloads/point/last-week/@htmlplus/ui',
+    ].map((url) => fetch(url).then((response) => response.json())),
   );
 
   const [first, second, third, fourth] = responses;
@@ -244,7 +244,8 @@ const document = await (async () => {
     `  elements: ${document.elements.length},`,
     `  examples: ${db.filter((item) => item.key.startsWith('javascript/')).length},`,
     `  frameworks: ${new Set(db.map((item) => item.key.split('/').at(0))).size},`,
-    '}'
+    '};',
+    '',
   ];
 
   const content = lines.join('\n');
