@@ -4,6 +4,10 @@ import NextLink from 'next/link';
 
 import PACKAGE from '@htmlplus/ui/package.json';
 
+import FavouriteTools from '@/app/(root)/Favourite-tools';
+import Footer from '@/app/(root)/Footer';
+import Frameworks from '@/app/(root)/Frameworks';
+import QuickStart from '@/app/(root)/quick-start';
 import { FRAMEWORK_DEFAULT, ROUTES } from '@/constants';
 import { statistics } from '@/data';
 import { getPath } from '@/utils';
@@ -121,7 +125,11 @@ export default async function Home() {
             metric={statistics.examples}
           />
         </div>
+        <Frameworks />
+        <FavouriteTools />
       </main>
+      <QuickStart />
+      <Footer />
     </div>
   );
 }
