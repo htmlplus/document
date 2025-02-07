@@ -2,7 +2,7 @@
 
 import { useParams } from 'next/navigation';
 
-import { Button, Code } from '@/components';
+import { Button } from '@/components';
 import { ROUTES } from '@/constants';
 import { TocItem } from '@/containers';
 import { elementsLight } from '@/data';
@@ -36,7 +36,7 @@ export function Usage() {
         <b>{params.framework?.toUpperCase()}</b>
         &nbsp; projects.
       </p>
-      <Code language="shell">{dependency}</Code>
+      <plus-prism language="markup">{dependency}</plus-prism>
     </>
   );
 }

@@ -24,7 +24,7 @@ function App() {
 
 const CardBorderColor = () => {
   return (
-    <div className="ex-card-border-color">
+    <div className="ex-preview ex-card-border-color">
       <App />
       <style>{`.ex-card-border-color plus-card {  height: 8rem;  width: 8rem;  margin: auto;}.ex-card-border-color plus-card.pink {  --plus-card-border-color: #ef9a9a;}.ex-card-border-color plus-card.yellow {  --plus-card-border-color: #fff59d;}.ex-card-border-color plus-card.blue {  --plus-card-border-color: #80cbc4;}`}</style>
     </div>

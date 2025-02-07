@@ -24,7 +24,7 @@ function App() {
 
 const AnimationButton = () => {
   return (
-    <div className="ex-animation-button">
+    <div className="ex-preview ex-animation-button">
       <App />
       <style>{`.ex-animation-button plus-animation {  display: inline-block;}`}</style>
     </div>

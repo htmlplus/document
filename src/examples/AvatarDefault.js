@@ -15,7 +15,7 @@ function App() {
 
 const AvatarDefault = () => {
   return (
-    <div className="ex-avatar-default">
+    <div className="ex-preview ex-avatar-default">
       <App />
     </div>
   )

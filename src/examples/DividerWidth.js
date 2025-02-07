@@ -22,7 +22,7 @@ function App() {
 
 const DividerWidth = () => {
   return (
-    <div className="ex-divider-width">
+    <div className="ex-preview ex-divider-width">
       <App />
     </div>
   )

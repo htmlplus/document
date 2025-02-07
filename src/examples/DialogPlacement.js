@@ -34,7 +34,7 @@ function App() {
 
 const DialogPlacement = () => {
   return (
-    <div className="ex-dialog-placement">
+    <div className="ex-preview ex-dialog-placement">
       <App />
     </div>
   )

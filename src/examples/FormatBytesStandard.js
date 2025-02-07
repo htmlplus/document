@@ -16,7 +16,7 @@ function App() {
 
 const FormatBytesStandard = () => {
   return (
-    <div className="ex-format-bytes-standard">
+    <div className="ex-preview ex-format-bytes-standard">
       <App />
     </div>
   )

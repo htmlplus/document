@@ -15,7 +15,7 @@ function App() {
 
 const AvatarText = () => {
   return (
-    <div className="ex-avatar-text">
+    <div className="ex-preview ex-avatar-text">
       <App />
     </div>
   )

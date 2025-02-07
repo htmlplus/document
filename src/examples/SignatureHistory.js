@@ -47,7 +47,7 @@ function App() {
 
 const SignatureHistory = () => {
   return (
-    <div className="ex-signature-history">
+    <div className="ex-preview ex-signature-history">
       <App />
     </div>
   )

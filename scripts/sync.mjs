@@ -160,7 +160,7 @@ const document = await (async () => {
       script += '  useEffect(() => setReady(true), []);\n';
     }
     script += '  return (\n';
-    script += `    <div className="${className}${settings?.dock ? ' dock' : ''}">\n`;
+    script += `    <div className="ex-preview ${className}${settings?.dock ? ' dock' : ''}">\n`;
     if (config) {
       script += `      {ready && <App />}\n`;
     } else {
@@ -183,9 +183,11 @@ const document = await (async () => {
       script = [react, script.slice(0, j), config, script.slice(j)].join('\n');
     }
 
-    lines.push(`export const ${name} = dynamic(() => import('./${name}'), { suspense: true });`);
+    lines.push(`export const ${name} = dynamic(() => import('./${name}'), { ssr: false, suspense: true });`);
 
-    const script1 = [...HEADER, script].join('\n');
+    const script1 = [...HEADER, script]
+      .join('\n')
+      .replace(/await import\((`|'|")https:\/\/esm\.run\//g, 'await import($1');
 
     fs.writeFileSync(`${DIRECTORY}/${name}.js`, script1);
   }

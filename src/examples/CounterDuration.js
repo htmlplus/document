@@ -15,7 +15,7 @@ function App() {
 
 const CounterDuration = () => {
   return (
-    <div className="ex-counter-duration">
+    <div className="ex-preview ex-counter-duration">
       <App />
     </div>
   )

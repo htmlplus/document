@@ -10,7 +10,7 @@ function App() {
 
 const FakerSeed = () => {
   return (
-    <div className="ex-faker-seed">
+    <div className="ex-preview ex-faker-seed">
       <App />
     </div>
   )

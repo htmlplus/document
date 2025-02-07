@@ -28,7 +28,7 @@ function App() {
 
 const CropperMode = () => {
   return (
-    <div className="ex-cropper-mode">
+    <div className="ex-preview ex-cropper-mode">
       <App />
       <style>{`.ex-cropper-mode plus-cropper {  height: 18rem;}`}</style>
     </div>

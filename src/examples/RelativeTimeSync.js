@@ -15,7 +15,7 @@ function App() {
 
 const RelativeTimeSync = () => {
   return (
-    <div className="ex-relative-time-sync">
+    <div className="ex-preview ex-relative-time-sync">
       <App />
     </div>
   )

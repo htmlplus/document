@@ -15,7 +15,7 @@ function App() {
 
 const FormatBytesDefault = () => {
   return (
-    <div className="ex-format-bytes-default">
+    <div className="ex-preview ex-format-bytes-default">
       <App />
     </div>
   )

@@ -54,7 +54,7 @@ function App() {
 
 const AccordionSlots = () => {
   return (
-    <div className="ex-accordion-slots">
+    <div className="ex-preview ex-accordion-slots">
       <App />
     </div>
   )

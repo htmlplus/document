@@ -121,6 +121,14 @@ h6 {
   }
 }
 
+plus-prism::part(pre) {
+  font-size: 0.85rem;
+}
+
+.ex-preview plus-prism::part(pre) {
+  font-size: 1rem;
+}
+
 // inline code
 code:not([class*='language-']) {
   padding: 0 4px;
@@ -180,17 +188,11 @@ pre {
 
 .example {
   line-height: initial;
-  & > plus-tabs-panels > plus-tabs-panel > * {
-    margin: 0;
-  }
   & > plus-tabs-panels > plus-tabs-panel:first-child {
     border: solid 1px $color-main-lighten-3;
     & > *:not(.dock) {
       padding: 1.5em;
     }
-  }
-  plus-tabs-panel > pre {
-    max-height: 360px;
   }
   iframe {
     border: none;

@@ -23,7 +23,7 @@ function App() {
 
 const AccordionPreventFromToggling = () => {
   return (
-    <div className="ex-accordion-prevent-from-toggling">
+    <div className="ex-preview ex-accordion-prevent-from-toggling">
       <App />
     </div>
   )

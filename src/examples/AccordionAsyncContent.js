@@ -36,7 +36,7 @@ function App() {
 
 const AccordionAsyncContent = () => {
   return (
-    <div className="ex-accordion-async-content">
+    <div className="ex-preview ex-accordion-async-content">
       <App />
     </div>
   )

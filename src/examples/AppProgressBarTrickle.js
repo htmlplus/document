@@ -42,7 +42,7 @@ function App() {
 
 const AppProgressBarTrickle = () => {
   return (
-    <div className="ex-app-progress-bar-trickle">
+    <div className="ex-preview ex-app-progress-bar-trickle">
       <App />
       <style>{`.ex-app-progress-bar-trickle plus-app-progress-bar {    position: static;}`}</style>
     </div>

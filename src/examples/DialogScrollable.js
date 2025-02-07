@@ -34,7 +34,7 @@ function App() {
 
 const DialogScrollable = () => {
   return (
-    <div className="ex-dialog-scrollable">
+    <div className="ex-preview ex-dialog-scrollable">
       <App />
     </div>
   )

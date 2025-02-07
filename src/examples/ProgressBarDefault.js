@@ -10,7 +10,7 @@ function App() {
 
 const ProgressBarDefault = () => {
   return (
-    <div className="ex-progress-bar-default">
+    <div className="ex-preview ex-progress-bar-default">
       <App />
     </div>
   )

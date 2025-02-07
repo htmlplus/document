@@ -47,7 +47,7 @@ function App() {
 
 const DialogPrevent = () => {
   return (
-    <div className="ex-dialog-prevent">
+    <div className="ex-preview ex-dialog-prevent">
       <App />
     </div>
   )

@@ -176,6 +176,14 @@ export const elementsLight = [
     "title": "Intersection"
   },
   {
+    "key": "prism",
+    "subset": false,
+    "title": "Prism",
+    "dependencies": [
+      "prismjs"
+    ]
+  },
+  {
     "key": "progress-bar",
     "subset": false,
     "title": "Progress Bar"
@@ -201,6 +209,11 @@ export const elementsLight = [
     "stable": true,
     "subset": false,
     "title": "Signature"
+  },
+  {
+    "key": "snippet",
+    "subset": false,
+    "title": "Snippet"
   },
   {
     "key": "spacer",

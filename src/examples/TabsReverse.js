@@ -40,7 +40,7 @@ function App() {
 
 const TabsReverse = () => {
   return (
-    <div className="ex-tabs-reverse">
+    <div className="ex-preview ex-tabs-reverse">
       <App />
     </div>
   )

@@ -18,7 +18,7 @@ function App() {
 
 const DividerVariant = () => {
   return (
-    <div className="ex-divider-variant">
+    <div className="ex-preview ex-divider-variant">
       <App />
     </div>
   )

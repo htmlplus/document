@@ -42,7 +42,7 @@ function App() {
 
 const AppProgressBarMinimum = () => {
   return (
-    <div className="ex-app-progress-bar-minimum">
+    <div className="ex-preview ex-app-progress-bar-minimum">
       <App />
       <style>{`.ex-app-progress-bar-minimum plus-app-progress-bar {    position: static;}`}</style>
     </div>

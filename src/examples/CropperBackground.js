@@ -28,7 +28,7 @@ function App() {
 
 const CropperBackground = () => {
   return (
-    <div className="ex-cropper-background">
+    <div className="ex-preview ex-cropper-background">
       <App />
     </div>
   )

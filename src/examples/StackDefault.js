@@ -24,7 +24,7 @@ function App() {
 
 const StackDefault = () => {
   return (
-    <div className="ex-stack-default">
+    <div className="ex-preview ex-stack-default">
       <App />
     </div>
   )

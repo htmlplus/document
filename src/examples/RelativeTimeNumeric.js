@@ -18,7 +18,7 @@ function App() {
 
 const RelativeTimeNumeric = () => {
   return (
-    <div className="ex-relative-time-numeric">
+    <div className="ex-preview ex-relative-time-numeric">
       <App />
     </div>
   )

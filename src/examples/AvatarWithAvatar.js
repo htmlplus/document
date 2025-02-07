@@ -20,7 +20,7 @@ function App() {
 
 const AvatarWithAvatar = () => {
   return (
-    <div className="ex-avatar-with-avatar">
+    <div className="ex-preview ex-avatar-with-avatar">
       <App />
     </div>
   )

@@ -10,7 +10,7 @@ function App() {
 
 const ProgressBarIndeterminate = () => {
   return (
-    <div className="ex-progress-bar-indeterminate">
+    <div className="ex-preview ex-progress-bar-indeterminate">
       <App />
     </div>
   )

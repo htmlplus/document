@@ -15,7 +15,7 @@ function App() {
 
 const SpinnerDefault = () => {
   return (
-    <div className="ex-spinner-default">
+    <div className="ex-preview ex-spinner-default">
       <App />
     </div>
   )

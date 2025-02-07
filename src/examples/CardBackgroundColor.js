@@ -24,7 +24,7 @@ function App() {
 
 const CardBackgroundColor = () => {
   return (
-    <div className="ex-card-background-color">
+    <div className="ex-preview ex-card-background-color">
       <App />
       <style>{`.ex-card-background-color plus-card {  height: 12rem;  width: 12rem;  margin: auto;}.ex-card-background-color plus-card.pink {  --plus-card-background-color: #ef9a9a;}.ex-card-background-color plus-card.yellow {  --plus-card-background-color: #fff59d;}.ex-card-background-color plus-card.blue {  --plus-card-background-color: #80cbc4;}`}</style>
     </div>

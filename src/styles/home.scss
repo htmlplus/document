@@ -224,20 +224,6 @@ $box-shadow:
     margin-inline-end: -0.75rem;
   }
 
-  .code-snippet {
-    border: 1px solid #a6a6a6;
-    background: #000;
-    border-radius: 7px;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    text-align: start;
-    .line::before {
-      color: $primary-9;
-      content: '$ ';
-      user-select: none;
-    }
-  }
-
   .top-developers {
     color: $alpha-black-7;
   }

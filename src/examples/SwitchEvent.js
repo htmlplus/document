@@ -18,7 +18,7 @@ function App() {
 
 const SwitchEvent = () => {
   return (
-    <div className="ex-switch-event">
+    <div className="ex-preview ex-switch-event">
       <App />
     </div>
   )

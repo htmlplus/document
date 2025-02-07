@@ -15,7 +15,7 @@ function App() {
 
 const SignatureWidth = () => {
   return (
-    <div className="ex-signature-width">
+    <div className="ex-preview ex-signature-width">
       <App />
     </div>
   )

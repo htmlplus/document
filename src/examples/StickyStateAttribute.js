@@ -19,7 +19,7 @@ function App() {
 
 const StickyStateAttribute = () => {
   return (
-    <div className="ex-sticky-state-attribute dock">
+    <div className="ex-preview ex-sticky-state-attribute dock">
       <App />
       <style>{`.ex-sticky-state-attribute .container {  height: 20rem;  overflow: auto;}.ex-sticky-state-attribute plus-faker {  display: block;  padding: 1rem;  text-align: justify;}.ex-sticky-state-attribute plus-sticky[state='normal'] {  background-color: gold;}.ex-sticky-state-attribute plus-sticky[state='stick'] {  background-color: greenyellow;}`}</style>
     </div>

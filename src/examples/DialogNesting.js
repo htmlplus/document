@@ -60,7 +60,7 @@ function App() {
 
 const DialogNesting = () => {
   return (
-    <div className="ex-dialog-nesting">
+    <div className="ex-preview ex-dialog-nesting">
       <App />
     </div>
   )

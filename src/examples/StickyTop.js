@@ -19,7 +19,7 @@ function App() {
 
 const StickyTop = () => {
   return (
-    <div className="ex-sticky-top dock">
+    <div className="ex-preview ex-sticky-top dock">
       <App />
       <style>{`.ex-sticky-top .container {  height: 20rem;  overflow: auto;}.ex-sticky-top plus-faker {  display: block;  padding: 1rem;  text-align: justify;}.ex-sticky-top plus-sticky {  background-color: gold;}`}</style>
     </div>

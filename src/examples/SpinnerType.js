@@ -20,7 +20,7 @@ function App() {
 
 const SpinnerType = () => {
   return (
-    <div className="ex-spinner-type">
+    <div className="ex-preview ex-spinner-type">
       <App />
     </div>
   )

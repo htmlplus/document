@@ -25,7 +25,7 @@ function App() {
 
 const BrowseMinAndMax = () => {
   return (
-    <div className="ex-browse-min-and-max">
+    <div className="ex-preview ex-browse-min-and-max">
       <App />
     </div>
   )

@@ -10,7 +10,7 @@ function App() {
 
 const SignatureClearOnResize = () => {
   return (
-    <div className="ex-signature-clear-on-resize dock">
+    <div className="ex-preview ex-signature-clear-on-resize dock">
       <App />
       <style>{`.ex-signature-clear-on-resize plus-signature {  height: 15rem;  width: 100%;}`}</style>
     </div>

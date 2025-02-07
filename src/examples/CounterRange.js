@@ -15,7 +15,7 @@ function App() {
 
 const CounterRange = () => {
   return (
-    <div className="ex-counter-range">
+    <div className="ex-preview ex-counter-range">
       <App />
     </div>
   )

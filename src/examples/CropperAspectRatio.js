@@ -15,7 +15,7 @@ function App() {
 
 const CropperAspectRatio = () => {
   return (
-    <div className="ex-cropper-aspect-ratio dock">
+    <div className="ex-preview ex-cropper-aspect-ratio dock">
       <App />
     </div>
   )

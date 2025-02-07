@@ -16,7 +16,7 @@ function App() {
 
 const ProgressBarMinAndMax = () => {
   return (
-    <div className="ex-progress-bar-min-and-max">
+    <div className="ex-preview ex-progress-bar-min-and-max">
       <App />
     </div>
   )

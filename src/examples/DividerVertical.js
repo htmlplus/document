@@ -18,7 +18,7 @@ function App() {
 
 const DividerVertical = () => {
   return (
-    <div className="ex-divider-vertical">
+    <div className="ex-preview ex-divider-vertical">
       <App />
       <style>{`.ex-divider-vertical plus-divider {  margin: 0 1rem;}`}</style>
     </div>

@@ -15,7 +15,7 @@ function App() {
 
 const AccordionDefault = () => {
   return (
-    <div className="ex-accordion-default">
+    <div className="ex-preview ex-accordion-default">
       <App />
     </div>
   )

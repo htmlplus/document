@@ -11,14 +11,13 @@ setConfig({
   element: {
     'plus-icon': {
       property: {
-        resolver: async (name, parser) => {
-          return fetch(`https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`)
-            .then((response) => response.text())
-            .then((raw) => parser(raw))
-            .then((svg) => {
-              svg.setAttribute('fill', 'currentColor');
-              return svg;
-            });
+        resolver: ({ name }) => {
+          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;
+          return fetch(url).then(async (response) => {
+            const body = await response.text();
+            if (!response.ok) throw new Error(body);
+            return body;
+          });
         }
       }
     }
@@ -39,7 +38,7 @@ const IconResolver = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
-    <div className="ex-icon-resolver">
+    <div className="ex-preview ex-icon-resolver">
       {ready && <App />}
     </div>
   )

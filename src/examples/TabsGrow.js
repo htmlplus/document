@@ -40,7 +40,7 @@ function App() {
 
 const TabsGrow = () => {
   return (
-    <div className="ex-tabs-grow">
+    <div className="ex-preview ex-tabs-grow">
       <App />
     </div>
   )

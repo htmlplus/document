@@ -15,7 +15,7 @@ function App() {
 
 const SignatureDimensions = () => {
   return (
-    <div className="ex-signature-dimensions">
+    <div className="ex-preview ex-signature-dimensions">
       <App />
       <style>{`.ex-signature-dimensions plus-signature {  height: 320px;  width: 480px;}`}</style>
     </div>

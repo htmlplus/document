@@ -22,7 +22,7 @@ function App() {
 
 const DividerColor = () => {
   return (
-    <div className="ex-divider-color">
+    <div className="ex-preview ex-divider-color">
       <App />
     </div>
   )

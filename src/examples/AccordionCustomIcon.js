@@ -18,7 +18,7 @@ function App() {
 
 const AccordionCustomIcon = () => {
   return (
-    <div className="ex-accordion-custom-icon">
+    <div className="ex-preview ex-accordion-custom-icon">
       <App />
     </div>
   )

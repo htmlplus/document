@@ -16,7 +16,7 @@ function App() {
 
 const CounterNumerals = () => {
   return (
-    <div className="ex-counter-numerals">
+    <div className="ex-preview ex-counter-numerals">
       <App />
     </div>
   )

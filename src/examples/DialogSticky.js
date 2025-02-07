@@ -28,7 +28,7 @@ function App() {
 
 const DialogSticky = () => {
   return (
-    <div className="ex-dialog-sticky">
+    <div className="ex-preview ex-dialog-sticky">
       <App />
     </div>
   )

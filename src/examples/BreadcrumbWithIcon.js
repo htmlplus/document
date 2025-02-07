@@ -33,7 +33,7 @@ function App() {
 
 const BreadcrumbWithIcon = () => {
   return (
-    <div className="ex-breadcrumb-with-icon">
+    <div className="ex-preview ex-breadcrumb-with-icon">
       <App />
       <style>{`.ex-breadcrumb-with-icon plus-breadcrumb a {  color: inherit;  text-decoration: none;  vertical-align: middle;}.ex-breadcrumb-with-icon plus-breadcrumb a:hover {  text-decoration: underline;}`}</style>
     </div>

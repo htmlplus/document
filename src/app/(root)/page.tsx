@@ -55,9 +55,7 @@ export default async function Home() {
                 </p>
                 <div className="w-full">
                   <div className="flex flex-col gap-4 tablet:flex-row items-stretch justify-center laptop:justify-start laptop:items-center">
-                    <div className="code-snippet">
-                      <div className="line">npm i {PACKAGE.name}</div>
-                    </div>
+                    <plus-snippet symbol="$">npm i {PACKAGE.name}</plus-snippet>
                     <NextLink
                       className="btn secondary"
                       href={getPath(ROUTES.ELEMENT_DETAILS, { framework: FRAMEWORK_DEFAULT, element: 'accordion' })!}

@@ -16,7 +16,7 @@ function App() {
 
 const FormatBytesLocale = () => {
   return (
-    <div className="ex-format-bytes-locale">
+    <div className="ex-preview ex-format-bytes-locale">
       <App />
     </div>
   )

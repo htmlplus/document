@@ -1,6 +1,6 @@
 import { capitalCase } from 'change-case';
 
-import { Alert, Button, Code } from '@/components';
+import { Alert, Button } from '@/components';
 import { ROUTES } from '@/constants';
 import { elements } from '@/data';
 import { getPath } from '@/utils';
@@ -42,7 +42,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
       </p>
       <Alert type="warning">Some of properties don't make sense in the global config.</Alert>
       <br />
-      <Code language="js">
+      <plus-prism>
         {[
           // TODO
           `import { setConfig } from '@htmlplus/ui/config.js';`,
@@ -62,7 +62,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
         ]
           .flat()
           .join('\n')}
-      </Code>
+      </plus-prism>
     </>
   );
 }

@@ -18,7 +18,7 @@ function App() {
 
 const DividerIcon = () => {
   return (
-    <div className="ex-divider-icon">
+    <div className="ex-preview ex-divider-icon">
       <App />
     </div>
   )

@@ -27,7 +27,7 @@ function App() {
 
 const DrawerDefault = () => {
   return (
-    <div className="ex-drawer-default">
+    <div className="ex-preview ex-drawer-default">
       <App />
       <style>{`.ex-drawer-default plus-card {  --plus-card-background-color: lightgray;  padding: 10rem 0;  text-align: center;}.ex-drawer-default plus-drawer plus-card {  --plus-card-background-color: lightblue;  margin-right: 0.5rem;}`}</style>
     </div>

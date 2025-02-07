@@ -39,7 +39,7 @@ function App() {
 
 const DividerSticky = () => {
   return (
-    <div className="ex-divider-sticky dock">
+    <div className="ex-preview ex-divider-sticky dock">
       <App />
       <style>{`.ex-divider-sticky .container {  height: 20rem;  overflow: auto;}.ex-divider-sticky span {  background-color: white;  padding: 0 0.5rem;}.ex-divider-sticky plus-divider {  gap: 0;}.ex-divider-sticky plus-sticky {  margin-bottom: 20rem;}`}</style>
     </div>

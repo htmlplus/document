@@ -32,7 +32,7 @@ function App() {
 
 const IconSize = () => {
   return (
-    <div className="ex-icon-size">
+    <div className="ex-preview ex-icon-size">
       <App />
     </div>
   )

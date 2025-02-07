@@ -23,7 +23,7 @@ function App() {
 
 const BreadcrumbCustomSeparator = () => {
   return (
-    <div className="ex-breadcrumb-custom-separator">
+    <div className="ex-preview ex-breadcrumb-custom-separator">
       <App />
       <style>{`.ex-breadcrumb-custom-separator plus-breadcrumb a {  color: inherit;  text-decoration: none;}.ex-breadcrumb-custom-separator plus-breadcrumb a:hover {  text-decoration: underline;}`}</style>
     </div>

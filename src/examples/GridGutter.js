@@ -32,7 +32,7 @@ function App() {
 
 const GridGutter = () => {
   return (
-    <div className="ex-grid-gutter">
+    <div className="ex-preview ex-grid-gutter">
       <App />
       <style>{`.ex-grid-gutter plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  padding: 0.5em;  text-align: center;}`}</style>
     </div>

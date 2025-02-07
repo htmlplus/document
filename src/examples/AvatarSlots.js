@@ -36,7 +36,7 @@ function App() {
 
 const AvatarSlots = () => {
   return (
-    <div className="ex-avatar-slots">
+    <div className="ex-preview ex-avatar-slots">
       <App />
       <style>{`.ex-avatar-slots plus-avatar > div {  background-color: gray;  color: white;  font-size: 10px;  padding: 0.125rem 0.25rem;  font-family: monospace;  line-height: 1;}`}</style>
     </div>

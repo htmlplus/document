@@ -24,7 +24,7 @@ function App() {
 
 const CropperTransparent = () => {
   return (
-    <div className="ex-cropper-transparent">
+    <div className="ex-preview ex-cropper-transparent">
       <App />
     </div>
   )

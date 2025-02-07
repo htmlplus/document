@@ -28,7 +28,7 @@ function App() {
 
 const DividerType = () => {
   return (
-    <div className="ex-divider-type">
+    <div className="ex-preview ex-divider-type">
       <App />
     </div>
   )

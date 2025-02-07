@@ -33,7 +33,7 @@ function App() {
 
 const AvatarGroupLinkWithTooltip = () => {
   return (
-    <div className="ex-avatar-group-link-with-tooltip">
+    <div className="ex-preview ex-avatar-group-link-with-tooltip">
       <App />
     </div>
   )

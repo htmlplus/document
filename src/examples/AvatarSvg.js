@@ -21,7 +21,7 @@ function App() {
 
 const AvatarSvg = () => {
   return (
-    <div className="ex-avatar-svg">
+    <div className="ex-preview ex-avatar-svg">
       <App />
     </div>
   )

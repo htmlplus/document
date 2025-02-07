@@ -24,7 +24,7 @@ function App() {
 
 const AccordionDisabled = () => {
   return (
-    <div className="ex-accordion-disabled">
+    <div className="ex-preview ex-accordion-disabled">
       <App />
     </div>
   )

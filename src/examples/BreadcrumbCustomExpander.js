@@ -22,7 +22,7 @@ function App() {
 
 const BreadcrumbCustomExpander = () => {
   return (
-    <div className="ex-breadcrumb-custom-expander">
+    <div className="ex-preview ex-breadcrumb-custom-expander">
       <App />
       <style>{`.ex-breadcrumb-custom-expander plus-breadcrumb a {  color: inherit;  text-decoration: none;}.ex-breadcrumb-custom-expander plus-breadcrumb a:hover {  text-decoration: underline;}`}</style>
     </div>

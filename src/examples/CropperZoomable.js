@@ -36,7 +36,7 @@ function App() {
 
 const CropperZoomable = () => {
   return (
-    <div className="ex-cropper-zoomable">
+    <div className="ex-preview ex-cropper-zoomable">
       <App />
     </div>
   )

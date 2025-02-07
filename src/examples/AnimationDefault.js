@@ -15,7 +15,7 @@ function App() {
 
 const AnimationDefault = () => {
   return (
-    <div className="ex-animation-default">
+    <div className="ex-preview ex-animation-default">
       <App />
       <style>{`.ex-animation-default plus-animation {  background: lightgray;  width: 100px;  height: 100px;}`}</style>
     </div>

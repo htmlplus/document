@@ -24,7 +24,7 @@ function App() {
 
 const AvatarSizeOverriding = () => {
   return (
-    <div className="ex-avatar-size-overriding">
+    <div className="ex-preview ex-avatar-size-overriding">
       <App />
       <style>{`.ex-avatar-size-overriding plus-avatar[size='xxs'] {  --plus-avatar-size: 1.5rem;}.ex-avatar-size-overriding plus-avatar[size='xs'] {  --plus-avatar-size: 2rem;}.ex-avatar-size-overriding plus-avatar[size='sm'] {  --plus-avatar-size: 2.5rem;}.ex-avatar-size-overriding plus-avatar[size='md'] {  --plus-avatar-size: 3rem;}.ex-avatar-size-overriding plus-avatar[size='lg'] {  --plus-avatar-size: 3.5rem;}.ex-avatar-size-overriding plus-avatar[size='xl'] {  --plus-avatar-size: 4rem;}.ex-avatar-size-overriding plus-avatar[size='xxl'] {  --plus-avatar-size: 4.5rem;}`}</style>
     </div>

@@ -21,7 +21,7 @@ function App() {
   function onPlusClickOutside() {
     const count = outside + 1;
     setOutside(count);
-    outsideRef.current.innerHTML = `${Number(outsideRef.current.innerHTML) + 1}`;
+    outsideRef.current.innerHTML = `${count}`;
   }
   return (
     <plus-click-outside onClick={onClick} onPlusClickOutside={onPlusClickOutside}>
@@ -38,7 +38,7 @@ function App() {
 
 const ClickOutsideDefault = () => {
   return (
-    <div className="ex-click-outside-default">
+    <div className="ex-preview ex-click-outside-default">
       <App />
     </div>
   )

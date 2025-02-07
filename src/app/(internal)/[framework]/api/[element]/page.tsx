@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 
 import { kebabCase } from 'change-case';
 
-import { Alert, Button, Code } from '@/components';
+import { Alert, Button } from '@/components';
 import { ROUTES } from '@/constants';
 import { Markup, TocItem } from '@/containers';
 import { elements, frameworks } from '@/data';
@@ -180,7 +180,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                         <plus-grid-item xs="12">
                           <b>Signature</b>
                           <div>
-                            <Code language="js">{item.signature}</Code>
+                            <plus-prism>{item.signature}</plus-prism>
                           </div>
                         </plus-grid-item>
                       )}

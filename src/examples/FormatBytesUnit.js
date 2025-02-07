@@ -21,7 +21,7 @@ function App() {
 
 const FormatBytesUnit = () => {
   return (
-    <div className="ex-format-bytes-unit">
+    <div className="ex-preview ex-format-bytes-unit">
       <App />
     </div>
   )

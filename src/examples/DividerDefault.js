@@ -10,7 +10,7 @@ function App() {
 
 const DividerDefault = () => {
   return (
-    <div className="ex-divider-default">
+    <div className="ex-preview ex-divider-default">
       <App />
     </div>
   )

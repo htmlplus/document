@@ -20,7 +20,7 @@ function App() {
 
 const AvatarGroupStacked = () => {
   return (
-    <div className="ex-avatar-group-stacked">
+    <div className="ex-preview ex-avatar-group-stacked">
       <App />
     </div>
   )

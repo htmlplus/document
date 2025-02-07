@@ -18,7 +18,7 @@ function App() {
 
 const BrowseDefault = () => {
   return (
-    <div className="ex-browse-default">
+    <div className="ex-preview ex-browse-default">
       <App />
     </div>
   )

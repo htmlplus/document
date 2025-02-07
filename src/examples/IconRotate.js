@@ -18,7 +18,7 @@ function App() {
 
 const IconRotate = () => {
   return (
-    <div className="ex-icon-rotate">
+    <div className="ex-preview ex-icon-rotate">
       <App />
     </div>
   )

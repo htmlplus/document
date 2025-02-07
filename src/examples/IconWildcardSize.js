@@ -17,7 +17,7 @@ function App() {
 
 const IconWildcardSize = () => {
   return (
-    <div className="ex-icon-wildcard-size">
+    <div className="ex-preview ex-icon-wildcard-size">
       <App />
     </div>
   )

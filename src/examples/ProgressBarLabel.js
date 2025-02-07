@@ -10,7 +10,7 @@ function App() {
 
 const ProgressBarLabel = () => {
   return (
-    <div className="ex-progress-bar-label">
+    <div className="ex-preview ex-progress-bar-label">
       <App />
     </div>
   )

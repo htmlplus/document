@@ -15,7 +15,7 @@ function App() {
 
 const SignatureDefault = () => {
   return (
-    <div className="ex-signature-default">
+    <div className="ex-preview ex-signature-default">
       <App />
     </div>
   )

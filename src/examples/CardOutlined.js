@@ -10,7 +10,7 @@ function App() {
 
 const CardOutlined = () => {
   return (
-    <div className="ex-card-outlined">
+    <div className="ex-preview ex-card-outlined">
       <App />
       <style>{`.ex-card-outlined plus-card {  height: 12rem;  width: 12rem;  margin: auto;}`}</style>
     </div>

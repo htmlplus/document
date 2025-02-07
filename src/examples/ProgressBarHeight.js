@@ -18,7 +18,7 @@ function App() {
 
 const ProgressBarHeight = () => {
   return (
-    <div className="ex-progress-bar-height">
+    <div className="ex-preview ex-progress-bar-height">
       <App />
       <style>{`.ex-progress-bar-height plus-progress-bar.thin {  height: 2px;}.ex-progress-bar-height plus-progress-bar.thick {  height: 1.5rem;}`}</style>
     </div>

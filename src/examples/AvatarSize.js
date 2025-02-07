@@ -24,7 +24,7 @@ function App() {
 
 const AvatarSize = () => {
   return (
-    <div className="ex-avatar-size">
+    <div className="ex-preview ex-avatar-size">
       <App />
     </div>
   )

@@ -30,7 +30,7 @@ function App() {
 
 const ProgressBarSync = () => {
   return (
-    <div className="ex-progress-bar-sync">
+    <div className="ex-preview ex-progress-bar-sync">
       <App />
     </div>
   )

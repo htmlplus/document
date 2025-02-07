@@ -24,7 +24,7 @@ function App() {
 
 const AccordionPersistent = () => {
   return (
-    <div className="ex-accordion-persistent">
+    <div className="ex-preview ex-accordion-persistent">
       <App />
     </div>
   )

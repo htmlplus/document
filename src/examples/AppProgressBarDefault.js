@@ -21,7 +21,7 @@ function App() {
 
 const AppProgressBarDefault = () => {
   return (
-    <div className="ex-app-progress-bar-default">
+    <div className="ex-preview ex-app-progress-bar-default">
       <App />
       <style>{`.ex-app-progress-bar-default plus-app-progress-bar {    position: static;}`}</style>
     </div>

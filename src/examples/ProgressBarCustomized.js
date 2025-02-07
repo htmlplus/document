@@ -10,7 +10,7 @@ function App() {
 
 const ProgressBarCustomized = () => {
   return (
-    <div className="ex-progress-bar-customized">
+    <div className="ex-preview ex-progress-bar-customized">
       <App />
       <style>{`.ex-progress-bar-customized plus-progress-bar {  border-radius: 1rem;  background-color: transparent;  border: solid 0.3rem transparent;  outline: solid 0.15rem gainsboro;}.ex-progress-bar-customized plus-progress-bar::part(buffer) {  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));}.ex-progress-bar-customized plus-progress-bar::part(indicator) {  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));}`}</style>
     </div>

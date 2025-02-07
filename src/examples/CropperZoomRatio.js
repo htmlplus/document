@@ -29,7 +29,7 @@ function App() {
 
 const CropperZoomRatio = () => {
   return (
-    <div className="ex-cropper-zoom-ratio">
+    <div className="ex-preview ex-cropper-zoom-ratio">
       <App />
     </div>
   )

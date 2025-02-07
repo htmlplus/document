@@ -20,7 +20,7 @@ function App() {
 
 const BrowseDisabled = () => {
   return (
-    <div className="ex-browse-disabled">
+    <div className="ex-preview ex-browse-disabled">
       <App />
     </div>
   )

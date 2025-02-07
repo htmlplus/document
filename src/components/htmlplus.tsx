@@ -24,8 +24,33 @@ export function HTMLPLUS() {
           },
           'plus-icon': {
             property: {
-              resolver(name: string) {
+              resolver({ name }: any) {
                 return import(`../../public/assets/icons/${name}.svg`).then((module) => module.default);
+              },
+            },
+          },
+          'plus-prism': {
+            property: {
+              theme: 'nord',
+              async resolver({ key, value }: any) {
+                switch (key) {
+                  case 'language': {
+                    return await import(`prismjs/components/prism-${value}`);
+                  }
+                  case 'plugin': {
+                    await import(`prismjs/plugins/${value}/prism-${value}`);
+                    try {
+                      return await import(`!!raw-loader!prismjs/plugins/${value}/prism-${value}.css`);
+                    } catch {}
+                  }
+                  case 'theme': {
+                    try {
+                      return await import(`!!raw-loader!prism-themes/themes/prism-${value}.css`);
+                    } catch {
+                      return await import(`!!raw-loader!prismjs/themes/prism-${value}.css`);
+                    }
+                  }
+                }
               },
             },
           },

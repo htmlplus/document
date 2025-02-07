@@ -15,7 +15,7 @@ function App() {
 
 const SwitchDisabled = () => {
   return (
-    <div className="ex-switch-disabled">
+    <div className="ex-preview ex-switch-disabled">
       <App />
     </div>
   )

@@ -15,7 +15,7 @@ function App() {
 
 const SignatureDisabled = () => {
   return (
-    <div className="ex-signature-disabled">
+    <div className="ex-preview ex-signature-disabled">
       <App />
     </div>
   )

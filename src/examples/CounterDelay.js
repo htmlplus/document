@@ -15,7 +15,7 @@ function App() {
 
 const CounterDelay = () => {
   return (
-    <div className="ex-counter-delay">
+    <div className="ex-preview ex-counter-delay">
       <App />
     </div>
   )

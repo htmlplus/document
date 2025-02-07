@@ -42,7 +42,7 @@ function App() {
 
 const TabsDisabled = () => {
   return (
-    <div className="ex-tabs-disabled">
+    <div className="ex-preview ex-tabs-disabled">
       <App />
     </div>
   )

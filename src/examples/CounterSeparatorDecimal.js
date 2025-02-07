@@ -15,7 +15,7 @@ function App() {
 
 const CounterSeparatorDecimal = () => {
   return (
-    <div className="ex-counter-separator-decimal">
+    <div className="ex-preview ex-counter-separator-decimal">
       <App />
     </div>
   )

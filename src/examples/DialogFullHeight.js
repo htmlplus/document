@@ -34,7 +34,7 @@ function App() {
 
 const DialogFullHeight = () => {
   return (
-    <div className="ex-dialog-full-height">
+    <div className="ex-preview ex-dialog-full-height">
       <App />
     </div>
   )

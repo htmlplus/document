@@ -20,7 +20,7 @@ function App() {
 
 const AvatarWildcardSize = () => {
   return (
-    <div className="ex-avatar-wildcard-size">
+    <div className="ex-preview ex-avatar-wildcard-size">
       <App />
     </div>
   )

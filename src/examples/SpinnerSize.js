@@ -17,7 +17,7 @@ function App() {
 
 const SpinnerSize = () => {
   return (
-    <div className="ex-spinner-size">
+    <div className="ex-preview ex-spinner-size">
       <App />
     </div>
   )

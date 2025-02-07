@@ -1,8 +1,8 @@
 'use client';
 
-import { FC, Suspense, useLayoutEffect, useRef, useState } from 'react';
+import { FC, Suspense, useEffect, useLayoutEffect, useRef, useState } from 'react';
 
-import { Alert, Button, Code } from '@/components';
+import { Alert, Button } from '@/components';
 import { ROUTES } from '@/constants';
 import { useFrameworks } from '@/containers';
 import { getPath } from '@/utils';
@@ -34,6 +34,8 @@ export function Example({ Preview, element, example, isolate, links, rtl, tabs, 
 
   const $preview = useRef<HTMLElement>(null);
 
+  const resizeObserver = useRef<ResizeObserver>(null);
+
   const [direction, setDirection] = useState('ltr');
 
   const [loaded, setLoaded] = useState(false);
@@ -52,20 +54,14 @@ export function Example({ Preview, element, example, isolate, links, rtl, tabs, 
 
     const body = iframe.contentWindow.document.body;
 
-    const onChange = () => {
-      if (!body.scrollHeight) {
-        window.setTimeout(onChange, 1000);
-        return;
-      }
+    resizeObserver.current?.disconnect();
+
+    resizeObserver.current = new ResizeObserver(() => {
       iframe.style.height = body.scrollHeight + 'px';
       setLoaded(true);
-    };
+    });
 
-    new MutationObserver(onChange).observe(body, { childList: true });
-
-    iframe.contentWindow.addEventListener('resize', onChange);
-
-    onChange();
+    resizeObserver.current.observe(body);
   };
 
   const onReload = (event?: MouseEvent) => {
@@ -77,6 +73,10 @@ export function Example({ Preview, element, example, isolate, links, rtl, tabs, 
   };
 
   useLayoutEffect(onReload, [frameworks.framework]);
+
+  useEffect(() => {
+    return () => resizeObserver.current?.disconnect();
+  }, []);
 
   return (
     <plus-tabs class="example" connector={`example:${title}`} value="preview">
@@ -137,7 +137,7 @@ export function Example({ Preview, element, example, isolate, links, rtl, tabs, 
           ?.filter((tab) => tab.key != 'preview')
           ?.map((tab) => (
             <plus-tabs-panel key={tab.key} value={tab.key}>
-              <Code language={tab.language as any}>{tab.content}</Code>
+              <plus-prism language={tab.language}>{tab.content}</plus-prism>
             </plus-tabs-panel>
           ))}
       </plus-tabs-panels>

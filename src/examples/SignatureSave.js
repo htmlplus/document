@@ -30,7 +30,7 @@ function App() {
 
 const SignatureSave = () => {
   return (
-    <div className="ex-signature-save">
+    <div className="ex-preview ex-signature-save">
       <App />
     </div>
   )

@@ -17,7 +17,7 @@ function App() {
 
 const BrowseAccept = () => {
   return (
-    <div className="ex-browse-accept">
+    <div className="ex-preview ex-browse-accept">
       <App />
     </div>
   )

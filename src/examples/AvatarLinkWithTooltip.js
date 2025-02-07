@@ -20,7 +20,7 @@ function App() {
 
 const AvatarLinkWithTooltip = () => {
   return (
-    <div className="ex-avatar-link-with-tooltip">
+    <div className="ex-preview ex-avatar-link-with-tooltip">
       <App />
     </div>
   )
