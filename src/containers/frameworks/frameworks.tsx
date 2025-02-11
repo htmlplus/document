@@ -1,105 +1,102 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
-// TODO: it's a large dependency
-import Select, { components } from 'react-select';
+import { useState, useRef, useEffect, useMemo } from 'react';
 
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname, useRouter, useSelectedLayoutSegment } from 'next/navigation';
 
 import { frameworks } from '@/data';
 
 import { useFrameworks } from './useFrameworks';
 
-function Option(props: any) {
-  return (
-    <components.Option {...props}>
-      <SingleValue {...props}></SingleValue>
-    </components.Option>
-  );
-}
-
-function SingleValue(props: any) {
-  return (
-    <components.Placeholder {...props}>
-      <img
-        style={{ width: '1.25rem', height: '1.25rem', objectFit: 'contain', verticalAlign: 'middle', margin: '0' }}
-        src={props.data.logo}
-        alt={`${props.data.label} logo`}
-      />
-      &nbsp;&nbsp;
-      {props.data.label}
-    </components.Placeholder>
-  );
-}
-
-export function Frameworks() {
+export const Frameworks = () => {
   const pathname = usePathname();
 
   const router = useRouter();
 
+  const segment = useSelectedLayoutSegment();
+
   const store = useFrameworks();
 
-  const [isClient, setIsClient] = useState(false);
+  const $select = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const items = useMemo(
-    () =>
-      frameworks
-        .filter((framework) => !framework.disabled)
-        .map((framework) => ({
-          value: framework.key,
-          label: framework.title,
-          logo: framework.logo,
-        })),
-    [frameworks],
-  );
-
-  // TODO
   const key = useMemo(() => {
-    const framework = pathname.split('/')?.[1];
-    if (!framework) return;
-    if (!frameworks.some((framework) => pathname.startsWith(`/${framework.key}`))) return;
-    return framework;
-  }, [pathname]);
+    if (!segment) return;
 
-  const selected = useMemo(
-    () => items.find((framework) => framework.value === store.framework),
-    [items, store.framework],
-  );
+    if (!frameworks.some((framework) => framework.key == segment)) return;
+
+    return segment;
+  }, [segment]);
+
+  const options = useMemo(() => {
+    return frameworks.filter((framework) => !framework.disabled);
+  }, [frameworks]);
+
+  const selected = useMemo(() => {
+    return options.find((framework) => framework.key === store.framework);
+  }, [options, store.framework]);
+
+  const handleSelect = (framework: any) => {
+    setIsOpen(false);
+
+    const prev = pathname;
+
+    const next = pathname.replace(`/${store.framework}/`, `/${framework.key}/`);
+
+    if (next == prev) return;
+
+    store.setFramework(framework.key);
+
+    router.replace(next);
+  };
 
   useEffect(() => {
     if (!key) return;
     store.setFramework(key);
   }, [key]);
 
-  // TODO
-  const change = (framework: any) => {
-    const prev = pathname;
-    const next = pathname.replace(`/${store.framework}/`, `/${framework.value}/`);
-    if (next == prev) return;
-    router.replace(next);
-    store.setFramework(framework.value);
-  };
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if ($select.current && !$select.current.contains(event.target as any)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
-    <div className="frameworks">
-      <p>Select Your Framework</p>
-      {isClient && (
-        <Select
-          isSearchable={false}
-          isDisabled={!key}
-          components={{
-            Option,
-            SingleValue,
-          }}
-          options={items}
-          value={selected}
-          onChange={change}
-        ></Select>
+    <div className="relative" ref={$select}>
+      <button
+        className="w-full flex items-center justify-between py-2 px-3 border border-solid border-gray-200 rounded-[4px] bg-white cursor-pointer focus:ring-2 focus:ring-blue-400"
+        disabled={!key}
+        onClick={() => setIsOpen((prev) => !prev)}
+      >
+        <div className="flex items-center gap-2">
+          <img src={selected?.logo} alt={selected?.title} className="w-5 h-5 m-0" />
+          <span className="text-gray-500">{selected?.title}</span>
+        </div>
+        <span className="text-gray-400">▼</span>
+      </button>
+      {isOpen && (
+        <ul className="absolute w-full mt-1 border border-solid border-gray-200 bg-white rounded-[4px] shadow-lg m-0">
+          {options.map((option) => (
+            <li
+              key={option.key}
+              className="flex items-center gap-2 py-2 px-3 cursor-pointer hover:bg-gray-200 m-0"
+              onClick={() => handleSelect(option)}
+            >
+              <img src={option.logo} alt={option.title} className="w-5 h-5 m-0" />
+              {option.title}
+            </li>
+          ))}
+        </ul>
       )}
     </div>
   );
-}
+};

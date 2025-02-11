@@ -35,13 +35,15 @@ export function HTMLPLUS() {
               async resolver({ key, value }: any) {
                 switch (key) {
                   case 'language': {
-                    return await import(`prismjs/components/prism-${value}`);
+                    await import(`prismjs/components/prism-${value}.js`);
+                    break;
                   }
                   case 'plugin': {
-                    await import(`prismjs/plugins/${value}/prism-${value}`);
+                    await import(`prismjs/plugins/${value}/prism-${value}.js`);
                     try {
                       return await import(`!!raw-loader!prismjs/plugins/${value}/prism-${value}.css`);
                     } catch {}
+                    break;
                   }
                   case 'theme': {
                     try {
