@@ -25,7 +25,7 @@ const GridOrder = () => {
   return (
     <div className="ex-preview ex-grid-order">
       <App />
-      <style>{`.ex-grid-order plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  padding: 0.5em;  text-align: center;}`}</style>
+      <style>{`.ex-grid-order { plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  padding: 0.5em;  text-align: center;} }`}</style>
     </div>
   )
 };

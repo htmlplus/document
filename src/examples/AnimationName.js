@@ -25,7 +25,7 @@ const AnimationName = () => {
   return (
     <div className="ex-preview ex-animation-name">
       <App />
-      <style>{`.ex-animation-name plus-animation {  background: lightgray;  width: 100px;  height: 100px;  margin: auto;}`}</style>
+      <style>{`.ex-animation-name { plus-animation {  background: lightgray;  width: 100px;  height: 100px;  margin: auto;} }`}</style>
     </div>
   )
 };

@@ -41,7 +41,7 @@ const AnimationMethods = () => {
   return (
     <div className="ex-preview ex-animation-methods">
       <App />
-      <style>{`.ex-animation-methods button {  margin: 0 0.5rem;}.ex-animation-methods plus-animation {  background: lightgray;  width: 100px;  height: 100px;}`}</style>
+      <style>{`.ex-animation-methods { button {  margin: 0 0.5rem;}plus-animation {  background: lightgray;  width: 100px;  height: 100px;} }`}</style>
     </div>
   )
 };

@@ -12,7 +12,7 @@ const SignatureResizable = () => {
   return (
     <div className="ex-preview ex-signature-resizable dock">
       <App />
-      <style>{`.ex-signature-resizable plus-signature {  height: 15rem;  width: 100%;}`}</style>
+      <style>{`.ex-signature-resizable { plus-signature {  height: 15rem;  width: 100%;} }`}</style>
     </div>
   )
 };

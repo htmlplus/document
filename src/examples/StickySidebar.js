@@ -30,7 +30,7 @@ const StickySidebar = () => {
   return (
     <div className="ex-preview ex-sticky-sidebar dock">
       <App />
-      <style>{`.ex-sticky-sidebar .container {  height: 20rem;  overflow: auto;}.ex-sticky-sidebar aside,.ex-sticky-sidebar header {  background: lightgray;  text-align: center;  padding: 1rem;}.ex-sticky-sidebar plus-faker {  display: block;  padding: 1rem;  text-align: justify;}`}</style>
+      <style>{`.ex-sticky-sidebar { .container {  height: 20rem;  overflow: auto;}aside,header {  background: lightgray;  text-align: center;  padding: 1rem;}plus-faker {  display: block;  padding: 1rem;  text-align: justify;} }`}</style>
     </div>
   )
 };

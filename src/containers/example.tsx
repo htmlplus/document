@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, Suspense, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { FC, Suspense, useLayoutEffect, useRef, useState } from 'react';
 
 import { Alert, Button } from '@/components';
 import { ROUTES } from '@/constants';
@@ -38,18 +38,18 @@ export function Example({ Preview, element, example, isolate, links, rtl, tabs, 
 
   const [direction, setDirection] = useState('ltr');
 
-  const [loaded, setLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  const [visible, setVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
 
   if (!element || !example) return <Alert type="error">NOT FOUND</Alert>;
 
-  const onDirection = (event?: MouseEvent) => {
-    event?.preventDefault();
+  const handleChangeDirection = (event: MouseEvent) => {
+    event.preventDefault();
     setDirection(direction == 'ltr' ? 'rtl' : 'ltr');
   };
 
-  const onIframeLoad = (event: any) => {
+  const handleIframeLoad = (event: any) => {
     const iframe = event.target;
 
     const body = iframe.contentWindow.document.body;
@@ -57,26 +57,28 @@ export function Example({ Preview, element, example, isolate, links, rtl, tabs, 
     resizeObserver.current?.disconnect();
 
     resizeObserver.current = new ResizeObserver(() => {
-      iframe.style.height = body.scrollHeight + 'px';
-      setLoaded(true);
+      requestAnimationFrame(() => {
+        iframe.style.height = body.scrollHeight + 'px';
+        setIsLoaded(true);
+      });
     });
 
-    resizeObserver.current.observe(body);
+    resizeObserver.current?.observe(body);
   };
 
-  const onReload = (event?: MouseEvent) => {
+  const handleReload = (event?: MouseEvent) => {
     event?.preventDefault();
     setDirection('ltr');
-    setVisible(false);
-    requestAnimationFrame(() => setVisible(true));
-    setLoaded(false);
+    setIsVisible(false);
+    requestAnimationFrame(() => setIsVisible(true));
+    setIsLoaded(false);
   };
 
-  useLayoutEffect(onReload, [frameworks.framework]);
+  useLayoutEffect(handleReload, [frameworks.framework]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     return () => resizeObserver.current?.disconnect();
-  }, []);
+  }, [isVisible]);
 
   return (
     <plus-tabs class="example" connector={`example:${title}`} value="preview">
@@ -94,14 +96,14 @@ export function Example({ Preview, element, example, isolate, links, rtl, tabs, 
         </plus-grid-item>
         {rtl && (
           <plus-grid-item xs="auto">
-            <Button icon text to="#" onClick={onDirection}>
+            <Button icon text to="#" onClick={handleChangeDirection}>
               <plus-icon name="sign-turn-left"></plus-icon>
             </Button>
             <plus-tooltip>Change Direction</plus-tooltip>
           </plus-grid-item>
         )}
         <plus-grid-item xs="auto">
-          <Button icon text to="#" onClick={onReload}>
+          <Button icon text to="#" onClick={handleReload}>
             <plus-icon name="arrow-clockwise"></plus-icon>
           </Button>
           <plus-tooltip>Reset</plus-tooltip>
@@ -117,19 +119,13 @@ export function Example({ Preview, element, example, isolate, links, rtl, tabs, 
       </plus-grid>
       <plus-tabs-panels>
         <plus-tabs-panel value="preview" dir={direction} ref={$preview}>
-          {!visible && <div style={{ height: $preview.current!.clientHeight + 'px' }}></div>}
-          {visible && isolate != true && (
-            <Suspense fallback={<div className="skeleton" />}>
-              {Preview && (
-                <>
-                  <Preview />
-                </>
-              )}
-            </Suspense>
+          {!isVisible && <div style={{ height: $preview.current!.clientHeight + 'px' }}></div>}
+          {isVisible && isolate != true && (
+            <Suspense fallback={<div className="skeleton" />}>{Preview && <Preview />}</Suspense>
           )}
-          {visible && isolate == true && (
-            <div className={loaded ? '' : 'skeleton'}>
-              <iframe src={getPath(ROUTES.ELEMENT_EXAMPLE, { element, example })} onLoad={onIframeLoad} />
+          {isVisible && isolate == true && (
+            <div className={isLoaded ? '' : 'skeleton'}>
+              <iframe src={getPath(ROUTES.ELEMENT_EXAMPLE, { element, example })} onLoad={handleIframeLoad} />
             </div>
           )}
         </plus-tabs-panel>

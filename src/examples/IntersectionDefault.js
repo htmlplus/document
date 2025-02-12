@@ -38,7 +38,7 @@ const IntersectionDefault = () => {
   return (
     <div className="ex-preview ex-intersection-default dock">
       <App />
-      <style>{`.ex-intersection-default .container {  background-color: whitesmoke;  height: 20rem;  overflow: auto;}.ex-intersection-default .status {  color: white;  background-color: black;  padding: 0.5rem 1rem;  border-radius: 2rem;}.ex-intersection-default plus-card {  width: 15rem;  margin: auto;}.ex-intersection-default plus-intersection {  display: block;  margin: 40rem auto;}`}</style>
+      <style>{`.ex-intersection-default { .container {  background-color: whitesmoke;  height: 20rem;  overflow: auto;}.status {  color: white;  background-color: black;  padding: 0.5rem 1rem;  border-radius: 2rem;}plus-card {  width: 15rem;  margin: auto;}plus-intersection {  display: block;  margin: 40rem auto;} }`}</style>
     </div>
   )
 };

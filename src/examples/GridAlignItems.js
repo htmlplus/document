@@ -34,7 +34,7 @@ const GridAlignItems = () => {
   return (
     <div className="ex-preview ex-grid-align-items">
       <App />
-      <style>{`.ex-grid-align-items plus-grid {  background-color: whitesmoke;  height: 8rem;}.ex-grid-align-items plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  padding: 0.5em;  text-align: center;}`}</style>
+      <style>{`.ex-grid-align-items { plus-grid {  background-color: whitesmoke;  height: 8rem;}plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  padding: 0.5em;  text-align: center;} }`}</style>
     </div>
   )
 };

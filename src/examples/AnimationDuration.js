@@ -17,7 +17,7 @@ const AnimationDuration = () => {
   return (
     <div className="ex-preview ex-animation-duration">
       <App />
-      <style>{`.ex-animation-duration plus-animation {  background: lightgray;  width: 100px;  height: 100px;}`}</style>
+      <style>{`.ex-animation-duration { plus-animation {  background: lightgray;  width: 100px;  height: 100px;} }`}</style>
     </div>
   )
 };

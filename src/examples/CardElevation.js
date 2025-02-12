@@ -24,7 +24,7 @@ const CardElevation = () => {
   return (
     <div className="ex-preview ex-card-elevation">
       <App />
-      <style>{`.ex-card-elevation plus-card {  height: 12rem;  width: 12rem;  margin: auto;}.ex-card-elevation input[type='range'] {  display: block;  width: 12rem;  margin: auto;}`}</style>
+      <style>{`.ex-card-elevation { plus-card {  height: 12rem;  width: 12rem;  margin: auto;}input[type='range'] {  display: block;  width: 12rem;  margin: auto;} }`}</style>
     </div>
   )
 };

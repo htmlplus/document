@@ -73,7 +73,7 @@ export const Frameworks = () => {
   return (
     <div className="relative" ref={$select}>
       <button
-        className="w-full flex items-center justify-between py-2 px-3 border border-solid border-gray-200 rounded-[4px] bg-white cursor-pointer focus:ring-2 focus:ring-blue-400"
+        className={`w-full flex items-center justify-between py-2 px-4 border border-solid border-gray-200 rounded-[4px] bg-white focus:ring-2 focus:ring-blue-400 ${key ? 'cursor-pointer' : 'opacity-50'}`}
         disabled={!key}
         onClick={() => setIsOpen((prev) => !prev)}
       >
@@ -81,14 +81,14 @@ export const Frameworks = () => {
           <img src={selected?.logo} alt={selected?.title} className="w-5 h-5 m-0" />
           <span className="text-gray-500">{selected?.title}</span>
         </div>
-        <span className="text-gray-400">▼</span>
+        <span className="text-gray-300">▼</span>
       </button>
       {isOpen && (
-        <ul className="absolute w-full mt-1 border border-solid border-gray-200 bg-white rounded-[4px] shadow-lg m-0">
+        <ul className="absolute w-full mt-1 py-1 border border-solid border-gray-200 bg-white rounded-[4px] shadow-lg m-0">
           {options.map((option) => (
             <li
               key={option.key}
-              className="flex items-center gap-2 py-2 px-3 cursor-pointer hover:bg-gray-200 m-0"
+              className="flex items-center gap-2 py-2 px-4 cursor-pointer hover:bg-gray-200 m-0"
               onClick={() => handleSelect(option)}
             >
               <img src={option.logo} alt={option.title} className="w-5 h-5 m-0" />

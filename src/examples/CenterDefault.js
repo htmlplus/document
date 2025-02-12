@@ -12,7 +12,7 @@ const CenterDefault = () => {
   return (
     <div className="ex-preview ex-center-default dock">
       <App />
-      <style>{`.ex-center-default plus-center {  height: 10rem;  background-color: whitesmoke;}`}</style>
+      <style>{`.ex-center-default { plus-center {  height: 10rem;  background-color: whitesmoke;} }`}</style>
     </div>
   )
 };

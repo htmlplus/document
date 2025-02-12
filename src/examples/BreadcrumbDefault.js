@@ -22,7 +22,7 @@ const BreadcrumbDefault = () => {
   return (
     <div className="ex-preview ex-breadcrumb-default">
       <App />
-      <style>{`.ex-breadcrumb-default plus-breadcrumb a {  color: inherit;  text-decoration: none;}.ex-breadcrumb-default plus-breadcrumb a:hover {  text-decoration: underline;}`}</style>
+      <style>{`.ex-breadcrumb-default { plus-breadcrumb a {  color: inherit;  text-decoration: none;}plus-breadcrumb a:hover {  text-decoration: underline;} }`}</style>
     </div>
   )
 };

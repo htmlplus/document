@@ -22,7 +22,7 @@ const StickySlots = () => {
   return (
     <div className="ex-preview ex-sticky-slots dock">
       <App />
-      <style>{`.ex-sticky-slots .container {  height: 20rem;  overflow: auto;}.ex-sticky-slots header {  background: lightgray;  text-align: center;  padding: 1rem;}.ex-sticky-slots plus-faker {  display: block;  padding: 1rem;  text-align: justify;}.ex-sticky-slots plus-sticky[state='normal'] header {  border-radius: 4px;  margin: 1rem;}`}</style>
+      <style>{`.ex-sticky-slots { .container {  height: 20rem;  overflow: auto;}header {  background: lightgray;  text-align: center;  padding: 1rem;}plus-faker {  display: block;  padding: 1rem;  text-align: justify;}plus-sticky[state='normal'] header {  border-radius: 4px;  margin: 1rem;} }`}</style>
     </div>
   )
 };

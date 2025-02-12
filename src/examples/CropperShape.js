@@ -41,7 +41,7 @@ const CropperShape = () => {
   return (
     <div className="ex-preview ex-cropper-shape">
       <App />
-      <style>{`.ex-cropper-shape plus-cropper.full-height {  height: 100%;}`}</style>
+      <style>{`.ex-cropper-shape { plus-cropper.full-height {  height: 100%;} }`}</style>
     </div>
   )
 };

@@ -26,7 +26,7 @@ const CardBorderWidth = () => {
   return (
     <div className="ex-preview ex-card-border-width">
       <App />
-      <style>{`.ex-card-border-width plus-card {  height: 8rem;  width: 8rem;  margin: auto;}.ex-card-border-width plus-card.size-1 {  --plus-card-border-width: 1px;}.ex-card-border-width plus-card.size-2 {  --plus-card-border-width: 2px;}.ex-card-border-width plus-card.size-3 {  --plus-card-border-width: 3px;}`}</style>
+      <style>{`.ex-card-border-width { plus-card {  height: 8rem;  width: 8rem;  margin: auto;}plus-card.size-1 {  --plus-card-border-width: 1px;}plus-card.size-2 {  --plus-card-border-width: 2px;}plus-card.size-3 {  --plus-card-border-width: 3px;} }`}</style>
     </div>
   )
 };

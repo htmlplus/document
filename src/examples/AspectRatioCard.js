@@ -27,7 +27,7 @@ const AspectRatioCard = () => {
   return (
     <div className="ex-preview ex-aspect-ratio-card">
       <App />
-      <style>{`.ex-aspect-ratio-card plus-card {  width: 300px;}.ex-aspect-ratio-card .placeholder {  background-color: lightgray;  border-radius: 4px;}`}</style>
+      <style>{`.ex-aspect-ratio-card { plus-card {  width: 300px;}.placeholder {  background-color: lightgray;  border-radius: 4px;} }`}</style>
     </div>
   )
 };

@@ -19,39 +19,6 @@ const load = (local, remote) => {
   });
 };
 
-const scoped = (styles, className) => {
-  try {
-    var classLen = className.length,
-      char,
-      nextChar,
-      isAt,
-      isIn;
-    className += ' ';
-    styles = styles.replace(/\/\*(?:(?!\*\/)[\s\S])*\*\/|[\r\n\t]+/g, '');
-    styles = styles.replace(/}(\s*)@/g, '}@');
-    styles = styles.replace(/}(\s*)}/g, '}}');
-    for (var i = 0; i < styles.length - 2; i++) {
-      char = styles[i];
-      nextChar = styles[i + 1];
-      if (char === '@') isAt = true;
-      if (!isAt && char === '{') isIn = true;
-      if (isIn && char === '}') isIn = false;
-      if (
-        !isIn &&
-        nextChar !== '@' &&
-        nextChar !== '}' &&
-        (char === '}' || char === ',' || ((char === '{' || char === ';') && isAt))
-      ) {
-        styles = styles.slice(0, i + 1) + className + styles.slice(i + 1);
-        i += classLen;
-        isAt = false;
-      }
-    }
-    if (styles.indexOf(className) !== 0 && styles.indexOf('@') !== 0) styles = className + styles;
-    return styles;
-  } catch {}
-};
-
 const HEADER = [
   '/**************************************************',
   ' * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY',
@@ -149,7 +116,7 @@ const document = await (async () => {
     let { config, script, settings, style } = item;
 
     if (style) {
-      style = scoped(style, `.${className}`);
+      style = `.${className} { ${style.replace(/\n/g, '')} }`;
     }
 
     script = script.split('export default ')[0].trim();

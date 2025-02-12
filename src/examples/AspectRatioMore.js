@@ -50,7 +50,7 @@ const AspectRatioMore = () => {
   return (
     <div className="ex-preview ex-aspect-ratio-more">
       <App />
-      <style>{`.ex-aspect-ratio-more .box {  color: white;  padding: 0.75rem;  margin: 0.25rem;}.ex-aspect-ratio-more .ratio-one {  width: 40.625%;  float: right;}.ex-aspect-ratio-more .one {  background: #08dfc8;}.ex-aspect-ratio-more .two {  background: #ff5449;}.ex-aspect-ratio-more .three {  background: #5f9ee9;}.ex-aspect-ratio-more .four {  background: #ffc903;}.ex-aspect-ratio-more .five {  background: #9073c1;}`}</style>
+      <style>{`.ex-aspect-ratio-more { .box {  color: white;  padding: 0.75rem;  margin: 0.25rem;}.ratio-one {  width: 40.625%;  float: right;}.one {  background: #08dfc8;}.two {  background: #ff5449;}.three {  background: #5f9ee9;}.four {  background: #ffc903;}.five {  background: #9073c1;} }`}</style>
     </div>
   )
 };
