@@ -4,7 +4,6 @@ import { useParams } from 'next/navigation';
 
 import { Button } from '@/components';
 import { ROUTES } from '@/constants';
-import { TocItem } from '@/containers';
 import { elementsLight } from '@/data';
 import { getPath } from '@/utils';
 
@@ -22,9 +21,7 @@ export function Usage() {
 
   return (
     <>
-      <h2>
-        <TocItem level={2}>Usage</TocItem>
-      </h2>
+      <h2 id="usage">Usage</h2>
       <p>
         Follow the tutorials &nbsp;
         <Button link="underline" to={getPath(ROUTES.INSTALLATION_FRAMEWORK, { framework: params.framework })}>

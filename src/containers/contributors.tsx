@@ -5,7 +5,6 @@ import { Fragment, useEffect, useMemo, useState } from 'react';
 import { useParams, usePathname } from 'next/navigation';
 
 import { ROUTES } from '@/constants';
-import { TocItem } from '@/containers';
 import { getPath } from '@/utils';
 
 export function Contributors() {
@@ -78,9 +77,7 @@ export function Contributors() {
 
   return (
     <>
-      <h2>
-        <TocItem level={2}>Contributors</TocItem>
-      </h2>
+      <h2 id="contributors">Contributors</h2>
       <p>
         <plus-avatar-group hoverable stacked>
           {contributors.reverse().map((contributor) => (

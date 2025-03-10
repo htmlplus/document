@@ -5,9 +5,7 @@ import { Fragment, useEffect, useState } from 'react';
 import assets from '@htmlplus/ui/animation/assets.json';
 import '@htmlplus/ui/animation/names/all.js';
 
-import { capitalCase } from 'change-case';
-
-import { TocItem } from '@/containers';
+import { capitalCase, kebabCase } from 'change-case';
 
 export type Category = {
   key: string;
@@ -55,9 +53,7 @@ export function Categories() {
 
   return categories.map((category) => (
     <Fragment key={category.key}>
-      <h3>
-        <TocItem level={3}>{category.title}</TocItem>
-      </h3>
+      <h3 id={kebabCase(category.title)}>{category.title}</h3>
       <plus-grid gutter="md">
         {category.items.map((item) => (
           <plus-grid-item class="animation" key={`${category.key}:${item.key}`}>

@@ -4,7 +4,7 @@ import { kebabCase } from 'change-case';
 
 import { Alert, Button } from '@/components';
 import { ROUTES } from '@/constants';
-import { Markup, TocItem } from '@/containers';
+import { Markup } from '@/containers';
 import { elements, frameworks } from '@/data';
 import { getPath } from '@/utils';
 
@@ -84,9 +84,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
       </Alert>
       {sections.map((section) => (
         <Fragment key={section.key}>
-          <h2>
-            <TocItem level={2}>{section.title}</TocItem>
-          </h2>
+          <h2 id={kebabCase(section.title)}>{section.title}</h2>
           {!section.items?.length && <p>There are no {section.title}.</p>}
           {section.items.map((item: any, index) => {
             item.kind ??= section.key;

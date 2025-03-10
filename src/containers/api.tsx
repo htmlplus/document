@@ -4,7 +4,6 @@ import { useParams } from 'next/navigation';
 
 import { Button } from '@/components';
 import { ROUTES } from '@/constants';
-import { TocItem } from '@/containers';
 import { getPath } from '@/utils';
 
 export function Api() {
@@ -14,9 +13,7 @@ export function Api() {
 
   return (
     <>
-      <h2>
-        <TocItem level={2}>Api</TocItem>
-      </h2>
+      <h2 id="api">Api</h2>
       <p>
         Click&nbsp;
         <Button

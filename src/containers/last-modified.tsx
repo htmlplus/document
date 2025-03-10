@@ -1,7 +1,5 @@
 'use client';
 
-import { TocItem } from '@/containers';
-
 export interface LastModifiedProps {
   value: Date;
 }
@@ -9,9 +7,7 @@ export interface LastModifiedProps {
 export function LastModified({ value }: LastModifiedProps) {
   return (
     <>
-      <h2>
-        <TocItem level={2}>Last Modified</TocItem>
-      </h2>
+      <h2 id="last-modified">Last Modified</h2>
       <p>
         <plus-relative-time value={value}></plus-relative-time>
       </p>

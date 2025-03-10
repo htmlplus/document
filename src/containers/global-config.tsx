@@ -4,7 +4,6 @@ import { useParams } from 'next/navigation';
 
 import { Button } from '@/components';
 import { ROUTES } from '@/constants';
-import { TocItem } from '@/containers';
 import { getPath } from '@/utils';
 
 export function GlobalConfig() {
@@ -14,9 +13,7 @@ export function GlobalConfig() {
 
   return (
     <>
-      <h2>
-        <TocItem level={2}>Global Config</TocItem>
-      </h2>
+      <h2 id="global-config">Global Config</h2>
       <p>
         See the animation's&nbsp;
         <Button link="underline" to={getPath(ROUTES.ELEMENT_CONFIG, { element: params.element })}>

@@ -1,7 +1,8 @@
+import { kebabCase } from 'change-case';
 import type { MDXComponents } from 'mdx/types';
 
 import { Alert, Button } from '@/components';
-import { Api, Browsers, Example, Examples, GlobalConfig, LastModified, TocItem, Usage } from '@/containers';
+import { Api, Browsers, Example, Examples, GlobalConfig, LastModified, Usage } from '@/containers';
 
 function Heading(level: number) {
   return function (props: any) {
@@ -9,11 +10,7 @@ function Heading(level: number) {
 
     if (level == 1) return <Tag>{props.children}</Tag>;
 
-    return (
-      <Tag>
-        <TocItem level={level}>{props.children}</TocItem>
-      </Tag>
-    );
+    return <Tag id={kebabCase(props.children)}>{props.children}</Tag>;
   };
 }
 
