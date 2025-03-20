@@ -73,6 +73,15 @@ $box-shadow:
   text-decoration-skip-ink: none;
 }
 
+%font-8-600 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 42px;
+  letter-spacing: -0.022em;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
 %font-9-600 {
   font-size: 48px;
   font-weight: 600;
@@ -296,6 +305,18 @@ $box-shadow:
       animation: morph 3s linear infinite;
       opacity: 0.21;
       animation-duration: 1.5s;
+    }
+  }
+
+  .framework {
+    div {
+      h3 {
+        @extend %font-8-600;
+      }
+
+      p {
+        @extend %font-4-400;
+      }
     }
   }
 }

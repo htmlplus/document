@@ -9,6 +9,7 @@ import { statistics } from '@/data';
 import { getPath } from '@/utils';
 
 import { Feature } from './Feature';
+import { Frameworks } from './Frameworks';
 
 export default async function Home() {
   return (
@@ -119,6 +120,7 @@ export default async function Home() {
             metric={statistics.examples}
           />
         </div>
+        <Frameworks />
       </main>
     </div>
   );
