@@ -42,6 +42,7 @@ export default function Layout({ children }: PropsWithChildren) {
                 <Frameworks></Frameworks>
                 <br />
                 <Toc></Toc>
+                <br />
               </plus-sticky>
             </plus-grid-item>
           </plus-grid>
