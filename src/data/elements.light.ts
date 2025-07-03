@@ -66,6 +66,41 @@ export const elementsLight = [
     "title": "Card Body"
   },
   {
+    "key": "carousel",
+    "subset": false,
+    "title": "Carousel"
+  },
+  {
+    "key": "carousel-button",
+    "subset": true,
+    "title": "Carousel Button"
+  },
+  {
+    "key": "carousel-counter",
+    "subset": true,
+    "title": "Carousel Counter"
+  },
+  {
+    "key": "carousel-indicators",
+    "subset": true,
+    "title": "Carousel Indicators"
+  },
+  {
+    "key": "carousel-progress",
+    "subset": true,
+    "title": "Carousel Progress"
+  },
+  {
+    "key": "carousel-slide",
+    "subset": true,
+    "title": "Carousel Slide"
+  },
+  {
+    "key": "carousel-slides",
+    "subset": true,
+    "title": "Carousel Slides"
+  },
+  {
     "key": "center",
     "stable": true,
     "subset": false,
@@ -208,7 +243,10 @@ export const elementsLight = [
     "key": "signature",
     "stable": true,
     "subset": false,
-    "title": "Signature"
+    "title": "Signature",
+    "dependencies": [
+      "signature_pad"
+    ]
   },
   {
     "key": "snippet",
