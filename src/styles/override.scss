@@ -188,11 +188,20 @@ pre {
 
 .example {
   line-height: initial;
-  & > plus-tabs-panels > plus-tabs-panel:first-child {
+  plus-tabs-panel.preview {
     border: solid 1px $color-main-lighten-3;
-    & > *:not(.dock) {
+    .ex-preview {
       padding: 1.5em;
     }
+    .ex-preview.dock {
+      padding: 0;
+    }
+  }
+  plus-splitter.preview > plus-splitter-bar {
+    min-width: 12px;
+  }
+  plus-splitter.preview > plus-splitter-bar:hover {
+    background-color: hsla(0, 0%, 0%, 0.07);
   }
   iframe {
     border: none;

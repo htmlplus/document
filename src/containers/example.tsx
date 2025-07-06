@@ -118,16 +118,22 @@ export function Example({ Preview, element, example, isolate, links, rtl, tabs, 
         ))}
       </plus-grid>
       <plus-tabs-panels>
-        <plus-tabs-panel value="preview" dir={direction} ref={$preview}>
-          {!isVisible && <div style={{ height: $preview.current!.clientHeight + 'px' }}></div>}
-          {isVisible && isolate != true && (
-            <Suspense fallback={<div className="skeleton" />}>{Preview && <Preview />}</Suspense>
-          )}
-          {isVisible && isolate == true && (
-            <div className={isLoaded ? '' : 'skeleton'}>
-              <iframe src={getPath(ROUTES.ELEMENT_EXAMPLE, { element, example })} onLoad={handleIframeLoad} />
-            </div>
-          )}
+        <plus-tabs-panel class="preview" value="preview" dir={direction} ref={$preview}>
+          <plus-splitter class="preview">
+            <plus-splitter-panel size={100}>
+              {!isVisible && <div style={{ height: $preview.current!.clientHeight + 'px' }}></div>}
+              {isVisible && isolate != true && (
+                <Suspense fallback={<div className="skeleton" />}>{Preview && <Preview />}</Suspense>
+              )}
+              {isVisible && isolate == true && (
+                <div className={`ex-preview ${isLoaded ? '' : 'skeleton'}`}>
+                  <iframe src={getPath(ROUTES.ELEMENT_EXAMPLE, { element, example })} onLoad={handleIframeLoad} />
+                </div>
+              )}
+            </plus-splitter-panel>
+            <plus-splitter-bar></plus-splitter-bar>
+            <plus-splitter-panel size={0}></plus-splitter-panel>
+          </plus-splitter>
         </plus-tabs-panel>
         {tabs
           ?.filter((tab) => tab.key != 'preview')
