@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, ReactNode } from 'react';
 
 import { kebabCase } from 'change-case';
 
@@ -12,6 +12,15 @@ interface Params {
   framework: string;
   element: string;
 }
+
+const Label = ({ children, value }: { children: ReactNode; value: string }) => {
+  return (
+    <div className="flex flex-col leading-normal">
+      <small className="text-main">{value}</small>
+      <div>{children}</div>
+    </div>
+  );
+};
 
 export function generateStaticParams(): Params[] {
   return frameworks.flatMap((framework) =>
@@ -115,85 +124,71 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
             return (
               <Fragment key={item.name}>
-                <plus-grid gutter-x="md">
-                  <plus-grid-item xs="12" sm="12" md="6">
-                    <b>Name</b>
-                    <div>
+                <div className="flex flex-wrap -mx-2 gap-y-2">
+                  <div className="w-full md:w-1/2 px-2">
+                    <Label value="Name">
                       {item.name}
                       {item.experimental && <span> (Experimental)</span>}
-                    </div>
-                  </plus-grid-item>
+                    </Label>
+                  </div>
                   {['event', 'method', 'property'].includes(item.kind) && (
                     <Fragment>
-                      <plus-grid-item xs="12" sm="6" md="grow">
+                      <div className="w-full sm:w-1/2 md:w-auto md:grow px-2">
                         {!!item.type && (
-                          <Fragment>
-                            <b>Type</b>
-                            <div>
-                              {!item.typeReference && <span>{item.type}</span>}
-                              {!!item.typeReference && (
-                                <Button link target="_blank" to={item.typeReference}>
-                                  {item.type}
-                                </Button>
-                              )}
-                            </div>
-                          </Fragment>
+                          <Label value="Type">
+                            {!item.typeReference && <span>{item.type}</span>}
+                            {!!item.typeReference && (
+                              <Button link target="_blank" to={item.typeReference}>
+                                {item.type}
+                              </Button>
+                            )}
+                          </Label>
                         )}
-                      </plus-grid-item>
+                      </div>
                     </Fragment>
                   )}
-                  {['style'].includes(item.kind) && <plus-grid-item xs="12" sm="grow" hide-sm-down></plus-grid-item>}
+                  {['style'].includes(item.kind) && <div className="hidden sm:block sm:grow"></div>}
                   {['property', 'style'].includes(item.kind) && (
-                    <Fragment>
-                      <plus-grid-item xs="12" sm="auto" hide-md-up>
-                        <b>Default</b>
-                        <div>{item.initializer || 'undefined'}</div>
-                      </plus-grid-item>
-                      <plus-grid-item xs="12" sm="auto" hide-sm-down style={{ textAlign: 'right' }}>
-                        <b>Default</b>
-                        <div>{item.initializer || 'undefined'}</div>
-                      </plus-grid-item>
-                    </Fragment>
+                    <div className="w-full sm:w-1/2 md:w-auto md:basis-auto md:text-right px-2">
+                      <Label value="Default">{item.initializer || 'undefined'}</Label>
+                    </div>
                   )}
-                  <plus-grid-item xs="12"></plus-grid-item>
+                  <div></div>
                   {['event'].includes(item.kind) && (
-                    <plus-grid-item xs="12">
-                      <b>Cancelable</b>
-                      <div>{`${!!item.cancelable}`}</div>
-                    </plus-grid-item>
+                    <div className="w-full px-2">
+                      <Label value="Cancelable">{`${!!item.cancelable}`}</Label>
+                    </div>
                   )}
                   {['property'].includes(item.kind) && (
                     <Fragment>
-                      <plus-grid-item xs="12" sm="6">
-                        <b>Attribute</b>
-                        <div>{item.attribute}</div>
-                      </plus-grid-item>
-                      <plus-grid-item xs="12" sm="grow">
-                        <b>Reflect</b>
-                        <div>{`${!!item.reflects}`}</div>
-                      </plus-grid-item>
+                      <div className="w-full sm:w-1/2 px-2">
+                        <Label value="Attribute">{item.attribute}</Label>
+                      </div>
+                      <div className="w-full sm:w-1/2 px-2">
+                        <Label value="Reflect">{`${!!item.reflects}`}</Label>
+                      </div>
                     </Fragment>
                   )}
                   {['method'].includes(item.kind) && (
                     <Fragment>
                       {!!item.signature && (
-                        <plus-grid-item xs="12">
-                          <b>Signature</b>
-                          <div>
-                            <plus-prism>{item.signature}</plus-prism>
-                          </div>
-                        </plus-grid-item>
+                        <div className="w-full px-2">
+                          <Label value="Signature">
+                            <plus-prism className="mt-1">{item.signature}</plus-prism>
+                          </Label>
+                        </div>
                       )}
                     </Fragment>
                   )}
                   {!!item.description && (
-                    <plus-grid-item xs="12">
-                      <b>Description</b>
-                      <Markup value={item.description}></Markup>
-                    </plus-grid-item>
+                    <div className="w-full px-2">
+                      <Label value="Description">
+                        <Markup value={item.description}></Markup>
+                      </Label>
+                    </div>
                   )}
-                </plus-grid>
-                {section.items.length - 1 > index && <plus-divider width="xs"></plus-divider>}
+                </div>
+                {section.items.length - 1 > index && <plus-divider className="mb-3" width="xs"></plus-divider>}
               </Fragment>
             );
           })}

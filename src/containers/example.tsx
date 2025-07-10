@@ -81,51 +81,68 @@ export function Example({ Preview, element, example, isolate, links, rtl, tabs, 
   }, [isVisible]);
 
   return (
-    <plus-tabs class="example" connector={`example:${title}`} value="preview">
-      {/* TODO: remove connector and example */}
-      <plus-grid align-items="center" gutter-x="sm">
-        <plus-grid-item xs="grow">
-          <plus-tabs-bar>
-            <plus-tabs-tab value="preview">Preview</plus-tabs-tab>
-            {tabs?.map((tab) => (
-              <plus-tabs-tab key={tab.key} disabled={tab.disabled} value={tab.key}>
-                {tab.title}
-              </plus-tabs-tab>
-            ))}
-          </plus-tabs-bar>
-        </plus-grid-item>
-        {rtl && (
-          <plus-grid-item xs="auto">
-            <Button icon text to="#" onClick={handleChangeDirection}>
-              <plus-icon name="sign-turn-left"></plus-icon>
+    <plus-tabs className="gap-2 leading-none" value="preview">
+      <div className="flex gap-2 flex-col sm:flex-row sm:items-center sm:justify-between">
+        <plus-tabs-bar
+          override={{
+            'sm-down': {
+              grow: true,
+            },
+            'sm-and-up': {
+              grow: false,
+            },
+          }}
+        >
+          <plus-tabs-tab value="preview">Preview</plus-tabs-tab>
+          {tabs?.map((tab) => (
+            <plus-tabs-tab key={tab.key} disabled={tab.disabled} value={tab.key}>
+              {tab.title}
+            </plus-tabs-tab>
+          ))}
+        </plus-tabs-bar>
+        <div className="flex gap-2 justify-center">
+          {rtl && (
+            <div>
+              <Button icon text to="#" onClick={handleChangeDirection}>
+                <plus-icon name="sign-turn-left"></plus-icon>
+              </Button>
+              <plus-tooltip>Change Direction</plus-tooltip>
+            </div>
+          )}
+          <div>
+            <Button icon text to="#" onClick={handleReload}>
+              <plus-icon name="arrow-clockwise"></plus-icon>
             </Button>
-            <plus-tooltip>Change Direction</plus-tooltip>
-          </plus-grid-item>
-        )}
-        <plus-grid-item xs="auto">
-          <Button icon text to="#" onClick={handleReload}>
-            <plus-icon name="arrow-clockwise"></plus-icon>
-          </Button>
-          <plus-tooltip>Reset</plus-tooltip>
-        </plus-grid-item>
-        {links?.map((link) => (
-          <plus-grid-item key={link.key} xs="auto">
-            <Button icon text to={link.url} target="_blank">
-              <plus-icon name={link.icon}></plus-icon>
-            </Button>
-            <plus-tooltip>{link.title}</plus-tooltip>
-          </plus-grid-item>
-        ))}
-      </plus-grid>
+            <plus-tooltip>Reset</plus-tooltip>
+          </div>
+          {links?.map((link) => (
+            <div key={link.key}>
+              <Button icon text to={link.url} target="_blank">
+                <plus-icon name={link.icon}></plus-icon>
+              </Button>
+              <plus-tooltip>{link.title}</plus-tooltip>
+            </div>
+          ))}
+        </div>
+      </div>
       <plus-tabs-panels>
-        <plus-tabs-panel value="preview" dir={direction} ref={$preview}>
+        <plus-tabs-panel
+          className="border border-main-lighten-3 border-solid"
+          value="preview"
+          dir={direction}
+          ref={$preview}
+        >
           {!isVisible && <div style={{ height: $preview.current!.clientHeight + 'px' }}></div>}
           {isVisible && isolate != true && (
             <Suspense fallback={<div className="skeleton" />}>{Preview && <Preview />}</Suspense>
           )}
           {isVisible && isolate == true && (
             <div className={isLoaded ? '' : 'skeleton'}>
-              <iframe src={getPath(ROUTES.ELEMENT_EXAMPLE, { element, example })} onLoad={handleIframeLoad} />
+              <iframe
+                className="border-none block m-0 w-full h-0"
+                src={getPath(ROUTES.ELEMENT_EXAMPLE, { element, example })}
+                onLoad={handleIframeLoad}
+              />
             </div>
           )}
         </plus-tabs-panel>

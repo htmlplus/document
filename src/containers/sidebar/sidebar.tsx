@@ -70,16 +70,16 @@ export function Sidebar() {
   }, [pathname, frameworks.framework]);
 
   return (
-    <div className="sidebar">
+    <div className="sidebar w-[300px] h-full overflow-y-auto px-4 relative">
       <br />
       <plus-stack gap="1rem" items="stretch" vertical>
-        <plus-center>
+        <plus-center className="text-[20px]">
           <Button block link to={getPath(ROUTES.HOME, {})}>
             <plus-stack gap="1rem">
               <plus-icon name="htmlplus" size="44px"></plus-icon>
               <plus-stack items="end" vertical>
                 <div>HTMLPLUS</div>
-                <div className="version">Version {PACKAGE.version}</div>
+                <div className="text-[60%] text-main-lighten-1">Version {PACKAGE.version}</div>
               </plus-stack>
             </plus-stack>
           </Button>

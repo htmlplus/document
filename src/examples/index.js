@@ -31,12 +31,6 @@ export const AppProgressBarDefault = dynamic(() => import('./AppProgressBarDefau
 export const AppProgressBarMethods = dynamic(() => import('./AppProgressBarMethods'), { ssr: false, suspense: true });
 export const AppProgressBarMinimum = dynamic(() => import('./AppProgressBarMinimum'), { ssr: false, suspense: true });
 export const AppProgressBarTrickle = dynamic(() => import('./AppProgressBarTrickle'), { ssr: false, suspense: true });
-export const AspectRatioCard = dynamic(() => import('./AspectRatioCard'), { ssr: false, suspense: true });
-export const AspectRatioDefault = dynamic(() => import('./AspectRatioDefault'), { ssr: false, suspense: true });
-export const AspectRatioImage = dynamic(() => import('./AspectRatioImage'), { ssr: false, suspense: true });
-export const AspectRatioMap = dynamic(() => import('./AspectRatioMap'), { ssr: false, suspense: true });
-export const AspectRatioMore = dynamic(() => import('./AspectRatioMore'), { ssr: false, suspense: true });
-export const AspectRatioVideo = dynamic(() => import('./AspectRatioVideo'), { ssr: false, suspense: true });
 export const AvatarColor = dynamic(() => import('./AvatarColor'), { ssr: false, suspense: true });
 export const AvatarDefault = dynamic(() => import('./AvatarDefault'), { ssr: false, suspense: true });
 export const AvatarGroupGutter = dynamic(() => import('./AvatarGroupGutter'), { ssr: false, suspense: true });

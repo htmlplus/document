@@ -7,47 +7,37 @@ export default function Layout({ children }: PropsWithChildren) {
     <div className="layout-default">
       <AppLoadingBar></AppLoadingBar>
       <plus-drawer open={false} animation backdrop={true} connector="main" floating="on-lg-down" size="300px">
-        <plus-card class="drawer" tile elevation={10}>
+        <plus-card className="h-full" tile elevation={10}>
           <Sidebar></Sidebar>
         </plus-card>
       </plus-drawer>
-      <plus-grid>
-        <plus-grid-item hide-xl-up>
-          <plus-drawer-toggler connector="main">
-            <plus-center>
-              <plus-icon name="list" size="2x"></plus-icon>
-            </plus-center>
-          </plus-drawer-toggler>
-        </plus-grid-item>
-      </plus-grid>
-      <plus-grid>
-        <plus-grid-item xs="auto" hide-lg-down>
-          <plus-sticky class="sidebar-start">
-            <Sidebar></Sidebar>
-          </plus-sticky>
-        </plus-grid-item>
-        <plus-divider width="xs" vertical></plus-divider>
-        <plus-grid-item xs="grow">
-          <plus-grid>
-            <plus-grid-item xs="12" md="grow">
-              <div className="content">
-                {children}
-                <Contributors></Contributors>
-                <Navigation></Navigation>
-              </div>
-            </plus-grid-item>
-            <plus-grid-item xs="12" md="auto" hide-md-down>
-              <plus-sticky class="sidebar-end">
-                <br />
-                <Frameworks></Frameworks>
-                <br />
-                <Toc></Toc>
-                <br />
-              </plus-sticky>
-            </plus-grid-item>
-          </plus-grid>
-        </plus-grid-item>
-      </plus-grid>
+      <plus-drawer-toggler className="p-2 fixed top-0 left-0 block xl:hidden" connector="main">
+        <plus-center>
+          <plus-icon className="text-primary" name="list" size="2x"></plus-icon>
+        </plus-center>
+      </plus-drawer-toggler>
+      <div className="flex">
+        <plus-sticky className="h-screen flex-initial hidden xl:block">
+          <Sidebar></Sidebar>
+        </plus-sticky>
+        <plus-divider className="hidden xl:flex" width="xs" vertical></plus-divider>
+        <div className="grow flex min-w-0">
+          <div className="max-w-[768px] mx-auto px-8 min-w-0">
+            {children}
+            <Contributors></Contributors>
+            <Navigation></Navigation>
+          </div>
+          <div className="hidden lg:block">
+            <plus-sticky className="pr-4 w-[272px]">
+              <br />
+              <Frameworks></Frameworks>
+              <br />
+              <Toc></Toc>
+              <br />
+            </plus-sticky>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -58,20 +58,26 @@ export function Categories() {
       <h3>
         <TocItem level={3}>{category.title}</TocItem>
       </h3>
-      <plus-grid gutter="md">
+      <div className="flex flex-wrap gap-4">
         {category.items.map((item) => (
-          <plus-grid-item class="animation" key={`${category.key}:${item.key}`}>
+          <div className="animation text-center" key={`${category.key}:${item.key}`}>
             <div
-              className={playing == item.key ? '' : 'stop'}
+              className={playing == item.key ? '' : 'w-[110px] h-[110px] bg-[lightgray] mx-auto'}
               onMouseEnter={() => setPlaying(item.key)}
               onMouseLeave={() => setPlaying('')}
             >
-              {playing == item.key && <plus-animation name={item.key} run></plus-animation>}
+              {playing == item.key && (
+                <plus-animation
+                  className="w-[110px] h-[110px] bg-[lightgray] mx-auto"
+                  name={item.key}
+                  run
+                ></plus-animation>
+              )}
             </div>
-            <small>{item.title}</small>
-          </plus-grid-item>
+            <small className="text-xs">{item.title}</small>
+          </div>
         ))}
-      </plus-grid>
+      </div>
     </Fragment>
   ));
 }
