@@ -30,7 +30,7 @@ export default function Layout({ children }: PropsWithChildren) {
             },
           }}
         >
-          <plus-sticky>
+          <plus-sticky className="h-screen">
             <plus-card className="h-full" tile elevation={1}>
               <Sidebar></Sidebar>
             </plus-card>
