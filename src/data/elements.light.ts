@@ -26,6 +26,12 @@ export const elementsLight = [
     "title": "App Progress Bar"
   },
   {
+    "key": "aspect-ratio",
+    "stable": true,
+    "subset": false,
+    "title": "Aspect Ratio"
+  },
+  {
     "key": "avatar",
     "stable": true,
     "subset": false,

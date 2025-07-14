@@ -3,34 +3,26 @@
  **************************************************/
 
 import '@htmlplus/ui/cropper.js';
-import '@htmlplus/ui/grid-item.js';
-import '@htmlplus/ui/grid.js';
 
 function App() {
   return (
-    <plus-grid gutter="md">
-      <plus-grid-item xs="12" sm="6">
+    <div className="container">
+      <div className="grid">
         <plus-cropper src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"></plus-cropper>
-      </plus-grid-item>
-      <plus-grid-item xs="12" sm="6">
         <plus-cropper
           zoomable
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
         ></plus-cropper>
-      </plus-grid-item>
-      <plus-grid-item xs="12" sm="6">
         <plus-cropper
           zoomable="touch"
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
         ></plus-cropper>
-      </plus-grid-item>
-      <plus-grid-item xs="12" sm="6">
         <plus-cropper
           zoomable="wheel"
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
         ></plus-cropper>
-      </plus-grid-item>
-    </plus-grid>
+      </div>
+    </div>
   );
 }
 
@@ -38,6 +30,7 @@ const CropperZoomable = () => {
   return (
     <div className="ex-preview ex-cropper-zoomable">
       <App />
+      <style>{`.ex-cropper-zoomable { .container {  container-type: inline-size;}.grid {  display: grid;  align-items: start;  grid-template: auto auto / 1fr 1fr;  gap: 1rem;}plus-cropper {  min-width: 0;}@container (max-width: 500px) {  .grid {    grid-template: auto auto auto auto / 1fr;  }} }`}</style>
     </div>
   )
 };

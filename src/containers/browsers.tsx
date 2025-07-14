@@ -6,19 +6,7 @@ import { getPath } from '@/utils';
 
 export function Browsers() {
   return (
-    <plus-stack
-      justify="around"
-      override={{
-        'sm-down': {
-          gap: '1rem',
-          vertical: true,
-        },
-        'sm-and-up': {
-          gap: '0',
-          vertical: false,
-        },
-      }}
-    >
+    <div className="flex flex-col justify-around gap-4 sm:gap-0 sm:flex-row">
       {browsers.map((browser) => (
         <plus-stack key={browser.key} vertical>
           <img
@@ -30,6 +18,6 @@ export function Browsers() {
           <p>{browser.title}</p>
         </plus-stack>
       ))}
-    </plus-stack>
+    </div>
   );
 }
