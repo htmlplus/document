@@ -18,7 +18,7 @@ function App() {
 
 const ProgressBarColor = () => {
   return (
-    <div className="ex-preview ex-progress-bar-color">
+    <div className="progress-bar-color">
       <App />
     </div>
   )

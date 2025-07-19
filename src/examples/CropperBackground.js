@@ -24,9 +24,9 @@ function App() {
 
 const CropperBackground = () => {
   return (
-    <div className="ex-preview ex-cropper-background">
+    <div className="cropper-background">
       <App />
-      <style>{`.ex-cropper-background { .container {  container-type: inline-size;}.grid {  display: grid;  align-items: start;  grid-template: auto / 1fr 1fr;  gap: 1rem;}plus-cropper {  min-width: 0;}@container (max-width: 500px) {  .grid {    grid-template: auto auto / 1fr;  }} }`}</style>
+      <style>{`.cropper-background { .container {  container-type: inline-size;}.grid {  display: grid;  align-items: start;  grid-template: auto / 1fr 1fr;  gap: 1rem;}plus-cropper {  min-width: 0;}@container (max-width: 500px) {  .grid {    grid-template: auto auto / 1fr;  }} }`}</style>
     </div>
   )
 };

@@ -10,7 +10,7 @@ function App() {
 
 const ProgressBarBuffer = () => {
   return (
-    <div className="ex-preview ex-progress-bar-buffer">
+    <div className="progress-bar-buffer">
       <App />
     </div>
   )

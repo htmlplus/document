@@ -15,7 +15,7 @@ function App() {
 
 const IconDefault = () => {
   return (
-    <div className="ex-preview ex-icon-default">
+    <div className="icon-default">
       <App />
     </div>
   )

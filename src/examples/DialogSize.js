@@ -44,7 +44,7 @@ function App() {
 
 const DialogSize = () => {
   return (
-    <div className="ex-preview ex-dialog-size">
+    <div className="dialog-size">
       <App />
     </div>
   )

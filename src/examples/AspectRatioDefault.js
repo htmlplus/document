@@ -20,9 +20,9 @@ function App() {
 
 const AspectRatioDefault = () => {
   return (
-    <div className="ex-preview ex-aspect-ratio-default">
+    <div className="aspect-ratio-default">
       <App />
-      <style>{`.ex-aspect-ratio-default { plus-card {  --plus-card-background-color: lightgray;} }`}</style>
+      <style>{`.aspect-ratio-default { plus-card {  --plus-card-background-color: lightgray;} }`}</style>
     </div>
   )
 };

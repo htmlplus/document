@@ -15,7 +15,7 @@ function App() {
 
 const CounterReverse = () => {
   return (
-    <div className="ex-preview ex-counter-reverse">
+    <div className="counter-reverse">
       <App />
     </div>
   )

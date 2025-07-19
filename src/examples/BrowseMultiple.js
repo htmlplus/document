@@ -20,7 +20,7 @@ function App() {
 
 const BrowseMultiple = () => {
   return (
-    <div className="ex-preview ex-browse-multiple">
+    <div className="browse-multiple">
       <App />
     </div>
   )

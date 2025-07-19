@@ -20,7 +20,7 @@ function App() {
 
 const FormatBytesDecimals = () => {
   return (
-    <div className="ex-preview ex-format-bytes-decimals">
+    <div className="format-bytes-decimals">
       <App />
     </div>
   )

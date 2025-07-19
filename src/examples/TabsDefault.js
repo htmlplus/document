@@ -40,7 +40,7 @@ function App() {
 
 const TabsDefault = () => {
   return (
-    <div className="ex-preview ex-tabs-default">
+    <div className="tabs-default">
       <App />
     </div>
   )

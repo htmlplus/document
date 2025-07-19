@@ -30,7 +30,7 @@ function App() {
 
 const PrismSync = () => {
   return (
-    <div className="ex-preview ex-prism-sync">
+    <div className="prism-sync">
       <App />
     </div>
   )

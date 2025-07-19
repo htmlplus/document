@@ -28,7 +28,7 @@ const FakerLocalization = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
-    <div className="ex-preview ex-faker-localization">
+    <div className="faker-localization">
       {ready && <App />}
     </div>
   )

@@ -27,7 +27,7 @@ function App() {
 
 const CarouselIndicators = () => {
   return (
-    <div className="ex-preview ex-carousel-indicators">
+    <div className="carousel-indicators">
       <App />
     </div>
   )

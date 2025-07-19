@@ -19,9 +19,9 @@ function App() {
 
 const SpinnerColor = () => {
   return (
-    <div className="ex-preview ex-spinner-color">
+    <div className="spinner-color">
       <App />
-      <style>{`.ex-spinner-color { .spinner-1 {  color: #08dfc8;}.spinner-2 {  color: #ff5449;}.spinner-3 {  color: #5f9ee9;}.spinner-4 {  color: #ffc903;}.spinner-5 {  color: #9073c1;} }`}</style>
+      <style>{`.spinner-color { .spinner-1 {  color: #08dfc8;}.spinner-2 {  color: #ff5449;}.spinner-3 {  color: #5f9ee9;}.spinner-4 {  color: #ffc903;}.spinner-5 {  color: #9073c1;} }`}</style>
     </div>
   )
 };

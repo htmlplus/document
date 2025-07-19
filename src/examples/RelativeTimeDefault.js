@@ -15,7 +15,7 @@ function App() {
 
 const RelativeTimeDefault = () => {
   return (
-    <div className="ex-preview ex-relative-time-default">
+    <div className="relative-time-default">
       <App />
     </div>
   )

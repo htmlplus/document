@@ -15,7 +15,7 @@ function App() {
 
 const SignatureColor = () => {
   return (
-    <div className="ex-preview ex-signature-color">
+    <div className="signature-color">
       <App />
     </div>
   )

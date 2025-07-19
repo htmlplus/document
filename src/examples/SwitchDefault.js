@@ -15,7 +15,7 @@ function App() {
 
 const SwitchDefault = () => {
   return (
-    <div className="ex-preview ex-switch-default">
+    <div className="switch-default">
       <App />
     </div>
   )

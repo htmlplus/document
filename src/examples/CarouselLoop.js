@@ -25,9 +25,9 @@ function App() {
 
 const CarouselLoop = () => {
   return (
-    <div className="ex-preview ex-carousel-loop">
+    <div className="carousel-loop">
       <App />
-      <style>{`.ex-carousel-loop { plus-carousel-slide {  flex-basis: 70% !important;} }`}</style>
+      <style>{`.carousel-loop { plus-carousel-slide {  flex-basis: 70% !important;} }`}</style>
     </div>
   )
 };

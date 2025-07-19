@@ -27,7 +27,7 @@ function App() {
 
 const CarouselProgress = () => {
   return (
-    <div className="ex-preview ex-carousel-progress">
+    <div className="carousel-progress">
       <App />
     </div>
   )

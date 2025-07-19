@@ -43,7 +43,7 @@ function App() {
 
 const CarouselEvents = () => {
   return (
-    <div className="ex-preview ex-carousel-events">
+    <div className="carousel-events">
       <App />
     </div>
   )

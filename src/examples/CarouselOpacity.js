@@ -25,9 +25,9 @@ function App() {
 
 const CarouselOpacity = () => {
   return (
-    <div className="ex-preview ex-carousel-opacity">
+    <div className="carousel-opacity">
       <App />
-      <style>{`.ex-carousel-opacity { plus-carousel-slide {  flex-basis: 70% !important;  opacity: var(--plus-carousel-factor-2);} }`}</style>
+      <style>{`.carousel-opacity { plus-carousel-slide {  flex-basis: 70% !important;  opacity: var(--plus-carousel-factor-2);} }`}</style>
     </div>
   )
 };

@@ -20,9 +20,9 @@ function App() {
 
 const CropperTransparent = () => {
   return (
-    <div className="ex-preview ex-cropper-transparent">
+    <div className="cropper-transparent">
       <App />
-      <style>{`.ex-cropper-transparent { .container {  container-type: inline-size;}.grid {  display: grid;  align-items: start;  grid-template: auto / 1fr 1fr;  gap: 1rem;}plus-cropper {  min-width: 0;}@container (max-width: 500px) {  .grid {    grid-template: auto auto / 1fr;  }} }`}</style>
+      <style>{`.cropper-transparent { .container {  container-type: inline-size;}.grid {  display: grid;  align-items: start;  grid-template: auto / 1fr 1fr;  gap: 1rem;}plus-cropper {  min-width: 0;}@container (max-width: 500px) {  .grid {    grid-template: auto auto / 1fr;  }} }`}</style>
     </div>
   )
 };

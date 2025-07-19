@@ -12,7 +12,7 @@ function App() {
 
 const CropperDefault = () => {
   return (
-    <div className="ex-preview ex-cropper-default dock">
+    <div className="cropper-default">
       <App />
     </div>
   )

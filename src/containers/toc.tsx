@@ -94,10 +94,10 @@ export function Toc() {
       <p>Contents</p>
       {toc.items.map((item) => (
         <a
-          className={classes({
-            ['active']: item.isActive,
-            [`level-${item.level}`]: true,
-          })}
+          className={`border-0 border-l-2 border-solid block cursor-pointer no-underline text-[#a7a7a7] text-[90%] leading-[1.6] hover:no-underline hover:border-main hover:text-main ${item.isActive ? 'border-primary text-primary' : 'border-l-main-lighten-3'}`}
+          style={{
+            paddingLeft: `${item.level! > 1 ? (item.level! - 1) * 20 : 0}px`,
+          }}
           key={item.key}
           onClick={() => toc.scrollTo(item)}
         >
@@ -141,8 +141,13 @@ export function TocItem({ children, level }: TocItemProps) {
 
   return (
     <>
-      <a className="toc-item" aria-hidden="true" ref={element} onClick={onClick}>
-        <div>#</div>
+      <a
+        className="float-left pr-[4px] ml-[-18px] no-underline cursor-pointer text-inherit after:clear-both"
+        aria-hidden="true"
+        ref={element}
+        onClick={onClick}
+      >
+        <div className="inline-block overflow-visible align-text-bottom fill-current invisible">#</div>
       </a>
       {children}
     </>

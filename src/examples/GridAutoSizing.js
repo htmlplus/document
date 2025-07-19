@@ -36,9 +36,9 @@ function App() {
 
 const GridAutoSizing = () => {
   return (
-    <div className="ex-preview ex-grid-auto-sizing">
+    <div className="grid-auto-sizing">
       <App />
-      <style>{`.ex-grid-auto-sizing { plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  padding: 0.5em;  text-align: center;} }`}</style>
+      <style>{`.grid-auto-sizing { plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  padding: 0.5em;  text-align: center;} }`}</style>
     </div>
   )
 };

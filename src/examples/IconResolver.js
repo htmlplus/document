@@ -38,7 +38,7 @@ const IconResolver = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
-    <div className="ex-preview ex-icon-resolver">
+    <div className="icon-resolver">
       {ready && <App />}
     </div>
   )

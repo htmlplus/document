@@ -24,9 +24,9 @@ function App() {
 
 const CropperMode = () => {
   return (
-    <div className="ex-preview ex-cropper-mode">
+    <div className="cropper-mode">
       <App />
-      <style>{`.ex-cropper-mode { .container {  container-type: inline-size;}.grid {  display: grid;  align-items: start;  grid-template: auto / 1fr 1fr;  gap: 1rem;}plus-cropper {  min-width: 0;}@container (max-width: 500px) {  .grid {    grid-template: auto auto / 1fr;  }} }`}</style>
+      <style>{`.cropper-mode { .container {  container-type: inline-size;}.grid {  display: grid;  align-items: start;  grid-template: auto / 1fr 1fr;  gap: 1rem;}plus-cropper {  min-width: 0;}@container (max-width: 500px) {  .grid {    grid-template: auto auto / 1fr;  }} }`}</style>
     </div>
   )
 };

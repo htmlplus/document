@@ -15,7 +15,7 @@ function App() {
 
 const CounterDefault = () => {
   return (
-    <div className="ex-preview ex-counter-default">
+    <div className="counter-default">
       <App />
     </div>
   )

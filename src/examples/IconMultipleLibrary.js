@@ -46,7 +46,7 @@ const IconMultipleLibrary = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
-    <div className="ex-preview ex-icon-multiple-library">
+    <div className="icon-multiple-library">
       {ready && <App />}
     </div>
   )

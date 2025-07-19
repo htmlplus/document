@@ -33,7 +33,7 @@ const IconRegisterACustomName = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
-    <div className="ex-preview ex-icon-register-a-custom-name">
+    <div className="icon-register-a-custom-name">
       {ready && <App />}
     </div>
   )

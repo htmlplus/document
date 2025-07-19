@@ -23,9 +23,9 @@ function App() {
 
 const GridVertical = () => {
   return (
-    <div className="ex-preview ex-grid-vertical">
+    <div className="grid-vertical">
       <App />
-      <style>{`.ex-grid-vertical { plus-grid {  height: 12rem;}plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  height: 100%;  padding: 0.5em;  text-align: center;} }`}</style>
+      <style>{`.grid-vertical { plus-grid {  height: 12rem;}plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  height: 100%;  padding: 0.5em;  text-align: center;} }`}</style>
     </div>
   )
 };

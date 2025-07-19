@@ -19,7 +19,7 @@ function App() {
 
 const AspectRatioImage = () => {
   return (
-    <div className="ex-preview ex-aspect-ratio-image">
+    <div className="aspect-ratio-image">
       <App />
     </div>
   )

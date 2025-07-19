@@ -1,15 +1,16 @@
 'use client';
 
-import { useEffect } from 'react';
+import { MouseEvent, useEffect } from 'react';
 
+import NextLink from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import PACKAGE from '@htmlplus/ui/package.json';
 
-import { Button } from '@/components';
+import { Badge, Button } from '@/components';
 import { ROUTES } from '@/constants';
 import { useFrameworks } from '@/containers';
-import { classes, getPath } from '@/utils';
+import { getPath } from '@/utils';
 
 import { SidebarItem } from './sidebar.types';
 import { useSidebar } from './useSidebar';
@@ -21,43 +22,43 @@ export function Sidebar() {
 
   const sidebar = useSidebar();
 
-  const menu = (items: SidebarItem[], parents: SidebarItem[] = []) => {
+  const menu = (items: SidebarItem[], parents: SidebarItem[] = [], expand?: boolean) => {
     return (
-      <ul className="nav">
+      <ul
+        className={`nav flex flex-col flex-nowrap pl-0 list-none m-0 ${parents.length ? 'border-0 border-l border-solid border-l-main-lighten-3 ml-[1.25rem] pl-[0.5rem]' : ''} ${parents.length && !expand ? 'hidden' : ''}`}
+      >
         {items.map((item) => (
-          <li
-            key={item.title + item.url}
-            className={classes({
-              active: item.active,
-              expand: item.expand,
-              navItem: true,
-            })}
-          >
-            <Button block text to={item.url || '#'} onClick={(event: MouseEvent) => toggle(event, item)}>
-              <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between ' }}>
-                {/* TODO */}
-                {/* {item.icon && (
-                  <>
-                    <Icon name={item.icon as any}></Icon> &nbsp;
-                  </>
-                )} */}
-                {item.title}
-                {!!item.items?.length && <span className="nav-link-toggle"></span>}
-                {item.stable && (
-                  <code>
-                    <small>Stable</small>
-                  </code>
-                )}
-              </div>
-            </Button>
-            {!!item.items?.length && menu(item.items, [item, ...parents])}
+          <li key={item.title + item.url} className="m-0">
+            <NextLink
+              className={`flex items-center justify-between border-0 rounded-[4px] px-[0.75rem] py-[0.4rem] text-inherit transition-colors duration-300 hover:no-underline hover:text-primary focus:text-primary ${!item.expand && item.active ? 'bg-primary-lighten-5 text-primary font-semibold' : ''}`}
+              href={item.url || '#'}
+              onClick={(event) => toggle(event, item)}
+            >
+              {item.title}
+              {item.stable && (
+                <Badge className={item.active ? 'bg-transparent' : ''}>
+                  <small>Stable</small>
+                </Badge>
+              )}
+              {!!item.items?.length && (
+                <plus-icon
+                  name="chevron-left"
+                  size="0.75rem"
+                  style={{
+                    transition: 'rotate 0.3s',
+                    rotate: item.expand ? '-270deg' : '-90deg',
+                  }}
+                ></plus-icon>
+              )}
+            </NextLink>
+            {!!item.items?.length && menu(item.items, [item, ...parents], item.expand)}
           </li>
         ))}
       </ul>
     );
   };
 
-  const toggle = (event: MouseEvent, item: SidebarItem) => {
+  const toggle = (event: MouseEvent<HTMLAnchorElement>, item: SidebarItem) => {
     if (!item || item.url) return;
 
     event.preventDefault();
@@ -70,7 +71,7 @@ export function Sidebar() {
   }, [pathname, frameworks.framework]);
 
   return (
-    <div className="sidebar w-[300px] h-full overflow-y-auto px-4 relative">
+    <div className="w-[300px] h-full overflow-y-auto px-4 relative" style={{ scrollbarGutter: 'stable' }}>
       <br />
       <plus-stack gap="1rem" items="stretch" vertical>
         <plus-center className="text-[20px]">

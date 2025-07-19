@@ -49,9 +49,9 @@ function App() {
 
 const AnimationEasing = () => {
   return (
-    <div className="ex-preview ex-animation-easing">
+    <div className="animation-easing">
       <App />
-      <style>{`.ex-animation-easing { plus-animation {  background: lightgray;  width: 100px;  height: 100px;} }`}</style>
+      <style>{`.animation-easing { plus-animation {  background: lightgray;  width: 100px;  height: 100px;} }`}</style>
     </div>
   )
 };

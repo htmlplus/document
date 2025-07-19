@@ -31,7 +31,7 @@ function App() {
 
 const CarouselIndicatorsInfinity = () => {
   return (
-    <div className="ex-preview ex-carousel-indicators-infinity">
+    <div className="carousel-indicators-infinity">
       <App />
     </div>
   )

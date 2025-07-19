@@ -38,7 +38,7 @@ function App() {
 
 const TabsJustify = () => {
   return (
-    <div className="ex-preview ex-tabs-justify">
+    <div className="tabs-justify">
       <App />
     </div>
   )

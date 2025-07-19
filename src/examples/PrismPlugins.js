@@ -55,7 +55,7 @@ const PrismPlugins = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
-    <div className="ex-preview ex-prism-plugins">
+    <div className="prism-plugins">
       {ready && <App />}
     </div>
   )

@@ -32,9 +32,9 @@ function App() {
 
 const GridAlignContent = () => {
   return (
-    <div className="ex-preview ex-grid-align-content">
+    <div className="grid-align-content">
       <App />
-      <style>{`.ex-grid-align-content { plus-grid {  background-color: whitesmoke;  height: 8rem;}plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  padding: 0.5em;  text-align: center;} }`}</style>
+      <style>{`.grid-align-content { plus-grid {  background-color: whitesmoke;  height: 8rem;}plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  padding: 0.5em;  text-align: center;} }`}</style>
     </div>
   )
 };

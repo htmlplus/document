@@ -44,7 +44,7 @@ const IconFontAwesome = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
-    <div className="ex-preview ex-icon-font-awesome">
+    <div className="icon-font-awesome">
       {ready && <App />}
     </div>
   )

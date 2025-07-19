@@ -41,7 +41,7 @@ const IconMaterial = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
-    <div className="ex-preview ex-icon-material">
+    <div className="icon-material">
       {ready && <App />}
     </div>
   )

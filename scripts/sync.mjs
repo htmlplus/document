@@ -60,20 +60,20 @@ const document = await (async () => {
   const lines = [
     ...HEADER,
     'export const elementsLight = ' +
-      JSON.stringify(
-        document.elements.map((element) => ({
-          key: element.key,
-          stable: element.stable,
-          subset: !!element.subset,
-          title: element.title,
-          dependencies: element.dependencies
-            ?.split(',')
-            ?.map((dependency) => dependency.trim())
-            ?.filter((dependency) => !!dependency),
-        })),
-        null,
-        2,
-      ),
+    JSON.stringify(
+      document.elements.map((element) => ({
+        key: element.key,
+        stable: element.stable,
+        subset: !!element.subset,
+        title: element.title,
+        dependencies: element.dependencies
+          ?.split(',')
+          ?.map((dependency) => dependency.trim())
+          ?.filter((dependency) => !!dependency),
+      })),
+      null,
+      2,
+    ),
   ];
 
   const content = lines.join('\n');
@@ -111,7 +111,7 @@ const document = await (async () => {
   for (const item of items) {
     const name = pascalCase(item.key.replace('react/', ''));
 
-    const className = `ex-${kebabCase(name)}`;
+    const className = `${kebabCase(name)}`;
 
     let { config, script, settings, style } = item;
 
@@ -127,7 +127,7 @@ const document = await (async () => {
       script += '  useEffect(() => setReady(true), []);\n';
     }
     script += '  return (\n';
-    script += `    <div className="ex-preview ${className}${settings?.dock ? ' dock' : ''}">\n`;
+    script += `    <div className="${className}">\n`;
     if (config) {
       script += `      {ready && <App />}\n`;
     } else {

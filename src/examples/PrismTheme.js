@@ -44,7 +44,7 @@ const PrismTheme = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
-    <div className="ex-preview ex-prism-theme">
+    <div className="prism-theme">
       {ready && <App />}
     </div>
   )

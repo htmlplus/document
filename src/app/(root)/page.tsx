@@ -14,10 +14,10 @@ import { Frameworks } from './Frameworks';
 export default async function Home() {
   return (
     <div className="home">
-      <header className="flex items-center h-16">
+      <header className="flex items-center h-16 bg-primary-2">
         <div className="container flex items-center gap-8">
           <plus-icon name="htmlplus" size="2rem"></plus-icon>
-          <div className="hidden tablet:flex items-center gap-6">
+          <div className="hidden sm:flex items-center gap-6">
             <NextLink href={getPath(ROUTES.OVERVIEW, {})!}>Document</NextLink>
             <NextLink href={getPath(ROUTES.ELEMENT_DETAILS, { framework: FRAMEWORK_DEFAULT, element: 'accordion' })!}>
               Elements
@@ -25,7 +25,7 @@ export default async function Home() {
             <NextLink href={getPath(ROUTES.ROADMAP, {})!}>Roadmap</NextLink>
           </div>
           <div className="flex grow"></div>
-          <div className="hidden laptop:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3">
             <a className="btn tertiary" href="https://opencollective.com/htmlplus">
               Become a sponsor
             </a>
@@ -36,26 +36,29 @@ export default async function Home() {
           </div>
         </div>
       </header>
-      <main className="relative pt-12 main">
+      <main className="relative pt-12 main ">
         <div className="container">
-          <div className="flex flex-col items-center gap-8 laptop:flex-row">
-            <div className="flex flex-col items-center gap-8 laptop:items-start basis-1/2">
-              <NextLink className="badge-group" href={getPath(ROUTES.CHANGELOG, {})!}>
+          <div className="flex flex-col items-center gap-8 lg:flex-row">
+            <div className="flex flex-col items-center gap-8 lg:items-start basis-1/2">
+              <NextLink
+                className="badge-group inline-flex text-primary-11 bg-white p-1 rounded-full whitespace-nowrap"
+                href={getPath(ROUTES.CHANGELOG, {})!}
+              >
                 <plus-stack gap="0.75rem">
-                  <div className="badge">{PACKAGE.version}</div>
+                  <div className="badge px-2 py-[2px] rounded-full text-primary-11 bg-primary-4">{PACKAGE.version}</div>
                   <div>A new version of HTMLPLUS is out</div>
                   {/* TODO: svg is thin */}
                   <plus-icon name="arrow-right-short" size="1rem"></plus-icon>
                 </plus-stack>
               </NextLink>
-              <div className="flex flex-col items-center gap-6 laptop:items-start text-center laptop:text-start">
+              <div className="flex flex-col items-center gap-6 lg:items-start text-center lg:text-start">
                 <h1>The Most Flexible Open Source Web UI Library!</h1>
                 <p>
                   A pure JavaScript web UI library delivering lightweight, customizable, and fast elements for modern
                   browsers and frameworks.
                 </p>
                 <div className="w-full">
-                  <div className="flex flex-col gap-4 tablet:flex-row items-stretch justify-center laptop:justify-start laptop:items-center">
+                  <div className="flex flex-col gap-4 sm:flex-row items-stretch justify-center lg:justify-start lg:items-center">
                     <plus-snippet symbol="$">npm i {PACKAGE.name}</plus-snippet>
                     <NextLink
                       className="btn secondary"
@@ -68,11 +71,11 @@ export default async function Home() {
                 </div>
               </div>
               <div className="w-full">
-                <div className="flex flex-col items-center gap-6 tablet:flex-row justify-center laptop:justify-start">
+                <div className="flex flex-col items-center gap-6 sm:flex-row justify-center lg:justify-start">
                   <plus-avatar-group hoverable stacked>
                     {['hazhirmohammadi', 'mbpmohsen', 'abdolian'].map((contributor) => (
                       <Fragment key={contributor}>
-                        <plus-avatar shape="circle" size="2rem">
+                        <plus-avatar className="-me-3" shape="circle" size="2rem">
                           <img src={getPath(ROUTES.CONTRIBUTOR, { contributor })} alt={`Contributor ${contributor}`} />
                           <a
                             rel="noopener"
@@ -84,18 +87,18 @@ export default async function Home() {
                       </Fragment>
                     ))}
                   </plus-avatar-group>
-                  <div className="top-developers">Top Developers</div>
+                  <div className="text-alpha-black-7">Top Developers</div>
                 </div>
               </div>
             </div>
-            <div className="hidden laptop:flex items-center basis-1/2 h-[547px] justify-center">
+            <div className="hidden lg:flex items-center basis-1/2 h-[547px] justify-center">
               <img className="w-96" src="/assets/shape.png" />
             </div>
           </div>
         </div>
       </main>
       <main className="container">
-        <div className="flex flex-col gap-8 items-center justify-center my-24 laptop:flex-row laptop:items-start">
+        <div className="flex flex-col gap-8 items-center justify-center my-24 lg:flex-row lg:items-start">
           <Feature
             className="basis-1/3"
             title="Frameworks"
@@ -103,7 +106,7 @@ export default async function Home() {
             icon="puzzle"
             metric={statistics.frameworks}
           />
-          <div className="divider mx-4 laptop:mx-0"></div>
+          <div className="divider mx-4 lg:mx-0"></div>
           <Feature
             className="basis-1/3"
             title="Elements"
@@ -111,7 +114,7 @@ export default async function Home() {
             icon="puzzle"
             metric={statistics.elements}
           />
-          <div className="divider mx-4 laptop:mx-0"></div>
+          <div className="divider mx-4 lg:mx-0"></div>
           <Feature
             className="basis-1/3"
             title="Examples"

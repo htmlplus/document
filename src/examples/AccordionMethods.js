@@ -36,7 +36,7 @@ function App() {
 
 const AccordionMethods = () => {
   return (
-    <div className="ex-preview ex-accordion-methods">
+    <div className="accordion-methods">
       <App />
     </div>
   )

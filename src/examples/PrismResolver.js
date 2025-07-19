@@ -57,7 +57,7 @@ const PrismResolver = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
-    <div className="ex-preview ex-prism-resolver">
+    <div className="prism-resolver">
       {ready && <App />}
     </div>
   )

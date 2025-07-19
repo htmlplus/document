@@ -22,7 +22,7 @@ function App() {
 
 const FakerMore = () => {
   return (
-    <div className="ex-preview ex-faker-more">
+    <div className="faker-more">
       <App />
     </div>
   )

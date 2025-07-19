@@ -57,9 +57,9 @@ const AnimationRegisterACustomName = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
-    <div className="ex-preview ex-animation-register-a-custom-name">
+    <div className="animation-register-a-custom-name">
       {ready && <App />}
-      <style>{`.ex-animation-register-a-custom-name { plus-avatar {  margin: 1.5rem;}plus-animation {  border: solid 3px black;  display: inline-block;  position: absolute;  inset: 0;  border-radius: 50%;  z-index: -1;} }`}</style>
+      <style>{`.animation-register-a-custom-name { plus-avatar {  margin: 1.5rem;}plus-animation {  border: solid 3px black;  display: inline-block;  position: absolute;  inset: 0;  border-radius: 50%;  z-index: -1;} }`}</style>
     </div>
   )
 };

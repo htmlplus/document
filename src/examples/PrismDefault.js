@@ -10,7 +10,7 @@ function App() {
 
 const PrismDefault = () => {
   return (
-    <div className="ex-preview ex-prism-default">
+    <div className="prism-default">
       <App />
     </div>
   )

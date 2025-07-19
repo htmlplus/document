@@ -25,9 +25,9 @@ function App() {
 
 const CarouselResizable = () => {
   return (
-    <div className="ex-preview ex-carousel-resizable">
+    <div className="carousel-resizable">
       <App />
-      <style>{`.ex-carousel-resizable { plus-carousel-slide {  flex-basis: 70% !important;} }`}</style>
+      <style>{`.carousel-resizable { plus-carousel-slide {  flex-basis: 70% !important;} }`}</style>
     </div>
   )
 };

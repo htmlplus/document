@@ -37,7 +37,7 @@ const PrismLanguage = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
-    <div className="ex-preview ex-prism-language">
+    <div className="prism-language">
       {ready && <App />}
     </div>
   )

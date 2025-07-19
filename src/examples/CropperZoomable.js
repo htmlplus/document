@@ -28,9 +28,9 @@ function App() {
 
 const CropperZoomable = () => {
   return (
-    <div className="ex-preview ex-cropper-zoomable">
+    <div className="cropper-zoomable">
       <App />
-      <style>{`.ex-cropper-zoomable { .container {  container-type: inline-size;}.grid {  display: grid;  align-items: start;  grid-template: auto auto / 1fr 1fr;  gap: 1rem;}plus-cropper {  min-width: 0;}@container (max-width: 500px) {  .grid {    grid-template: auto auto auto auto / 1fr;  }} }`}</style>
+      <style>{`.cropper-zoomable { .container {  container-type: inline-size;}.grid {  display: grid;  align-items: start;  grid-template: auto auto / 1fr 1fr;  gap: 1rem;}plus-cropper {  min-width: 0;}@container (max-width: 500px) {  .grid {    grid-template: auto auto auto auto / 1fr;  }} }`}</style>
     </div>
   )
 };

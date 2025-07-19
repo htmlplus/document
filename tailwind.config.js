@@ -2,7 +2,11 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
+    container: {},
     extend: {
+      animation: {
+        shimmer: 'shimmer 2s infinite'
+      },
       colors: {
         main: {
           'DEFAULT': 'gray',
@@ -15,19 +19,37 @@ module.exports = {
           'lighten-1': '#f8a6a6',
           'lighten-3': '#f9dbdb',
           'lighten-5': '#ee6e721e',
+
+          '2': '#f8f8f8',
+          '3': '#f3f3f3',
+          '4': '#ededed',
+          '8': '#c7c7c7',
+          '9': '#8f8f8f',
+          '10': '#858585',
+          '11': '#6f6f6f',
+          '12': '#171717',
         },
-      }
+        alpha: {
+          'black-2': '#0000000d',
+          'black-3': '#00000014',
+          'black-4': '#00000029',
+          'black-7': '#0000007a',
+          'black-12': '#000000e5',
+        }
+      },
+      keyframes: {
+        shimmer: {
+          '100%': { transform: 'translateX(100%)' }
+        }
+      },
     },
     screens: {
-      'xs': { 'min': '0px' },
-      'sm': { 'min': '576px' },
-      'md': { 'min': '768px' },
-      'lg': { 'min': '992px' },
-      'xl': { 'min': '1200px' },
-      'xxl': { 'min': '1400px' },
-      tablet: '640px',
-      laptop: '1024px',
-      desktop: '1280px',
+      'xs': '0px',
+      'sm': '576px',
+      'md': '768px',
+      'lg': '992px',
+      'xl': '1200px',
+      'xxl': '1400px',
     },
   },
   plugins: [require('@tailwindcss/container-queries')],

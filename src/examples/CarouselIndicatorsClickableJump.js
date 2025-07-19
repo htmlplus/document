@@ -27,7 +27,7 @@ function App() {
 
 const CarouselIndicatorsClickableJump = () => {
   return (
-    <div className="ex-preview ex-carousel-indicators-clickable-jump">
+    <div className="carousel-indicators-clickable-jump">
       <App />
     </div>
   )

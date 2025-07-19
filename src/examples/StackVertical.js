@@ -24,7 +24,7 @@ function App() {
 
 const StackVertical = () => {
   return (
-    <div className="ex-preview ex-stack-vertical">
+    <div className="stack-vertical">
       <App />
     </div>
   )

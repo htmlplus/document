@@ -18,7 +18,7 @@ function App() {
 
 const IconFlip = () => {
   return (
-    <div className="ex-preview ex-icon-flip">
+    <div className="icon-flip">
       <App />
     </div>
   )

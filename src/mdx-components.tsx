@@ -1,6 +1,6 @@
 import type { MDXComponents } from 'mdx/types';
 
-import { Alert, Button } from '@/components';
+import { Alert, Badge, Button } from '@/components';
 import { Api, Browsers, Example, Examples, GlobalConfig, LastModified, TocItem, Usage } from '@/containers';
 
 function Heading(level: number) {
@@ -40,7 +40,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     code({ children, className }: any) {
       const language = className?.split('-').pop();
 
-      if (!language) return <code>{children}</code>;
+      if (!language) return <Badge>{children}</Badge>;
 
       return <plus-prism language={language}>{children}</plus-prism>;
     },

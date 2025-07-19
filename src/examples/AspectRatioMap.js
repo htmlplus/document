@@ -14,7 +14,7 @@ function App() {
 
 const AspectRatioMap = () => {
   return (
-    <div className="ex-preview ex-aspect-ratio-map">
+    <div className="aspect-ratio-map">
       <App />
     </div>
   )

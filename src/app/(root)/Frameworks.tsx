@@ -15,15 +15,15 @@ export const Frameworks: React.FC = () => {
           <p> Seamlessly supporting all your favorite frameworks in one powerful library.</p>
         </div>
       </div>
-      <div className=" flex flex-wrap justify-center gap-6 tablet:gap-2 tablet:flex-row tablet:justify-between items-center">
+      <div className=" flex flex-wrap justify-center gap-6 sm:gap-2 sm:flex-row sm:justify-between items-center">
         {frameworks.map((framework) => (
           <a
             key={framework.key}
-            className="flex flex-row gap-x-2 tablet:gap-x-4 items-center justify-center"
+            className="flex flex-row gap-x-2 sm:gap-x-4 items-center justify-center"
             href={getPath(ROUTES.INSTALLATION_FRAMEWORK, { framework: framework.key })}
           >
             <img className="w-12 h-12 m-0" src={framework.logo} />
-            <div className="text-lg tablet:text-2xl font-semibold capitalize">{framework.title}</div>
+            <div className="text-lg sm:text-2xl font-semibold capitalize">{framework.title}</div>
           </a>
         ))}
       </div>

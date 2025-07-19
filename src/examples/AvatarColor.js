@@ -19,7 +19,7 @@ function App() {
 
 const AvatarColor = () => {
   return (
-    <div className="ex-preview ex-avatar-color">
+    <div className="avatar-color">
       <App />
     </div>
   )

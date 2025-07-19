@@ -27,9 +27,10 @@ export interface ExampleProps {
     title?: string;
   }>;
   title?: string;
+  dock?: boolean;
 }
 
-export function Example({ Preview, element, example, isolate, links, rtl, tabs, title }: ExampleProps) {
+export function Example({ Preview, dock, element, example, isolate, links, rtl, tabs, title }: ExampleProps) {
   const frameworks = useFrameworks();
 
   const $preview = useRef<HTMLElement>(null);
@@ -134,10 +135,16 @@ export function Example({ Preview, element, example, isolate, links, rtl, tabs, 
         >
           {!isVisible && <div style={{ height: $preview.current!.clientHeight + 'px' }}></div>}
           {isVisible && isolate != true && (
-            <Suspense fallback={<div className="skeleton" />}>{Preview && <Preview />}</Suspense>
+            <Suspense fallback={<div className="skeleton" />}>
+              {Preview && (
+                <div className={`${dock ? '' : 'p-[1.5rem]'}`}>
+                  <Preview />
+                </div>
+              )}
+            </Suspense>
           )}
           {isVisible && isolate == true && (
-            <div className={isLoaded ? '' : 'skeleton'}>
+            <div className={`p-[1.5rem] ${isLoaded ? '' : 'skeleton'}`}>
               <iframe
                 className="border-none block m-0 w-full h-0"
                 src={getPath(ROUTES.ELEMENT_EXAMPLE, { element, example })}

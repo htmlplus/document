@@ -20,7 +20,7 @@ function App() {
 
 const CenterInline = () => {
   return (
-    <div className="ex-preview ex-center-inline">
+    <div className="center-inline">
       <App />
     </div>
   )

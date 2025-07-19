@@ -13,12 +13,12 @@ interface FeatureProps {
 
 export const Feature = ({ className, description, icon, metric, more, title }: FeatureProps) => {
   return (
-    <div className={`feature ${className}`}>
-      <plus-avatar shape="circle" size="48">
-        <plus-icon name={icon} size="24"></plus-icon>
+    <div className={`feature flex flex-col gap-4 items-center text-center ${className}`}>
+      <plus-avatar className="bg-primary-3" shape="circle" size="48">
+        <plus-icon className="text-primary-11" name={icon} size="24"></plus-icon>
       </plus-avatar>
       {metric && (
-        <div className="metric">
+        <div className="metric text-primary-11">
           <NoSSR>
             <plus-intersection
               once
@@ -34,7 +34,7 @@ export const Feature = ({ className, description, icon, metric, more, title }: F
         </div>
       )}
       <div className="title">{title}</div>
-      <div className="description">{description}</div>
+      <div className="description text-alpha-black-7">{description}</div>
       {more && (
         <a href={more} className="link">
           Learn more

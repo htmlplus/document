@@ -25,9 +25,9 @@ function App() {
 
 const StickyContacts = () => {
   return (
-    <div className="ex-preview ex-sticky-contacts dock">
+    <div className="sticky-contacts">
       <App />
-      <style>{`.ex-sticky-contacts { .container {  height: 20rem;  overflow: auto;}p {  color: lightgray;  font-size: 10rem;  line-height: 2;  text-align: center;}plus-sticky {  background-color: lightgray;  padding: 0.5rem 1rem;} }`}</style>
+      <style>{`.sticky-contacts { .container {  height: 20rem;  overflow: auto;}p {  color: lightgray;  font-size: 10rem;  line-height: 2;  text-align: center;}plus-sticky {  background-color: lightgray;  padding: 0.5rem 1rem;} }`}</style>
     </div>
   )
 };

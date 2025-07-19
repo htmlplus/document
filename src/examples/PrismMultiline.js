@@ -19,7 +19,7 @@ function App() {
 
 const PrismMultiline = () => {
   return (
-    <div className="ex-preview ex-prism-multiline">
+    <div className="prism-multiline">
       <App />
     </div>
   )

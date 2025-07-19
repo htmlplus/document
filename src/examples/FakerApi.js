@@ -10,7 +10,7 @@ function App() {
 
 const FakerApi = () => {
   return (
-    <div className="ex-preview ex-faker-api">
+    <div className="faker-api">
       <App />
     </div>
   )

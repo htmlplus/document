@@ -17,9 +17,9 @@ function App() {
 
 const CardTile = () => {
   return (
-    <div className="ex-preview ex-card-tile dock">
+    <div className="card-tile">
       <App />
-      <style>{`.ex-card-tile { .container {  padding: 2rem 0;  background-color: whitesmoke;}plus-card {  height: 8rem;  width: 8rem;} }`}</style>
+      <style>{`.card-tile { .container {  padding: 2rem 0;  background-color: whitesmoke;}plus-card {  height: 8rem;  width: 8rem;} }`}</style>
     </div>
   )
 };

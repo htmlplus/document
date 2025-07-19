@@ -24,9 +24,9 @@ function App() {
 
 const AccordionCustomized = () => {
   return (
-    <div className="ex-preview ex-accordion-customized">
+    <div className="accordion-customized">
       <App />
-      <style>{`.ex-accordion-customized { plus-accordion {  border: 2px solid whitesmoke;  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);}plus-accordion:not(:last-of-type) {  margin-bottom: 0.5rem;}plus-accordion::part(body),plus-accordion::part(svg) {  transition: all 0.5s ease-out;}plus-accordion::part(header) {  column-gap: 0.5rem;  flex-direction: row-reverse;  padding: 0.75rem;}plus-accordion[state^='expand']::part(header) {  font-weight: bold;}plus-accordion[state^='expand']::part(svg) {  fill: gray;  transform: rotate(90deg);}plus-accordion[state^='collap']::part(svg) {  fill: gray;  transform: rotate(0deg);} }`}</style>
+      <style>{`.accordion-customized { plus-accordion {  border: 2px solid whitesmoke;  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);}plus-accordion:not(:last-of-type) {  margin-bottom: 0.5rem;}plus-accordion::part(body),plus-accordion::part(svg) {  transition: all 0.5s ease-out;}plus-accordion::part(header) {  column-gap: 0.5rem;  flex-direction: row-reverse;  padding: 0.75rem;}plus-accordion[state^='expand']::part(header) {  font-weight: bold;}plus-accordion[state^='expand']::part(svg) {  fill: gray;  transform: rotate(90deg);}plus-accordion[state^='collap']::part(svg) {  fill: gray;  transform: rotate(0deg);} }`}</style>
     </div>
   )
 };

@@ -19,7 +19,7 @@ function App() {
 
 const IconColor = () => {
   return (
-    <div className="ex-preview ex-icon-color">
+    <div className="icon-color">
       <App />
     </div>
   )

@@ -83,7 +83,7 @@ function App() {
 
 const CarouselVariableWidths = () => {
   return (
-    <div className="ex-preview ex-carousel-variable-widths">
+    <div className="carousel-variable-widths">
       <App />
     </div>
   )

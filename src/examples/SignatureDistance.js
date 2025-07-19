@@ -15,7 +15,7 @@ function App() {
 
 const SignatureDistance = () => {
   return (
-    <div className="ex-preview ex-signature-distance">
+    <div className="signature-distance">
       <App />
     </div>
   )

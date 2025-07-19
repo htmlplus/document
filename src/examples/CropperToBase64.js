@@ -35,7 +35,7 @@ function App() {
 
 const CropperToBase64 = () => {
   return (
-    <div className="ex-preview ex-cropper-to-base64">
+    <div className="cropper-to-base64">
       <App />
     </div>
   )

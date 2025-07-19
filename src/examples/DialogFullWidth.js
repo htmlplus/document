@@ -28,7 +28,7 @@ function App() {
 
 const DialogFullWidth = () => {
   return (
-    <div className="ex-preview ex-dialog-full-width">
+    <div className="dialog-full-width">
       <App />
     </div>
   )

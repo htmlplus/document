@@ -45,9 +45,9 @@ function App() {
 
 const AppProgressBarMethods = () => {
   return (
-    <div className="ex-preview ex-app-progress-bar-methods">
+    <div className="app-progress-bar-methods">
       <App />
-      <style>{`.ex-app-progress-bar-methods { plus-app-progress-bar {  /* This style is for demonstration purposes only and not for actual projects */  position: static;} }`}</style>
+      <style>{`.app-progress-bar-methods { plus-app-progress-bar {  /* This style is for demonstration purposes only and not for actual projects */  position: static;} }`}</style>
     </div>
   )
 };

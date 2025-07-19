@@ -34,7 +34,7 @@ function App() {
 
 const DialogDefault = () => {
   return (
-    <div className="ex-preview ex-dialog-default">
+    <div className="dialog-default">
       <App />
     </div>
   )

@@ -40,7 +40,7 @@ function App() {
 
 const TabsBelow = () => {
   return (
-    <div className="ex-preview ex-tabs-below">
+    <div className="tabs-below">
       <App />
     </div>
   )

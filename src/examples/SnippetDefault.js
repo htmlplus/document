@@ -10,7 +10,7 @@ function App() {
 
 const SnippetDefault = () => {
   return (
-    <div className="ex-preview ex-snippet-default">
+    <div className="snippet-default">
       <App />
     </div>
   )

@@ -32,7 +32,7 @@ function App() {
 
 const CropperToBlob = () => {
   return (
-    <div className="ex-preview ex-cropper-to-blob">
+    <div className="cropper-to-blob">
       <App />
     </div>
   )

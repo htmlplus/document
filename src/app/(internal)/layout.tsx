@@ -4,7 +4,7 @@ import { AppLoadingBar, Contributors, Frameworks, Navigation, Sidebar, Toc } fro
 
 export default function Layout({ children }: PropsWithChildren) {
   return (
-    <div className="layout-default">
+    <div>
       <AppLoadingBar></AppLoadingBar>
       <plus-drawer-toggler className="p-2 fixed top-0 left-0 block xl:hidden" connector="main">
         <plus-center>

@@ -34,7 +34,7 @@ function App() {
 
 const DialogTransparent = () => {
   return (
-    <div className="ex-preview ex-dialog-transparent">
+    <div className="dialog-transparent">
       <App />
     </div>
   )

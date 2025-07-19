@@ -16,7 +16,7 @@ function App() {
 
 const FormatBytesSeparator = () => {
   return (
-    <div className="ex-preview ex-format-bytes-separator">
+    <div className="format-bytes-separator">
       <App />
     </div>
   )

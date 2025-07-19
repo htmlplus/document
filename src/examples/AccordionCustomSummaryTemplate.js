@@ -20,9 +20,9 @@ function App() {
 
 const AccordionCustomSummaryTemplate = () => {
   return (
-    <div className="ex-preview ex-accordion-custom-summary-template">
+    <div className="accordion-custom-summary-template">
       <App />
-      <style>{`.ex-accordion-custom-summary-template { plus-stack[slot='summary'] {  flex-grow: 1;  margin-inline-end: 1rem;} }`}</style>
+      <style>{`.accordion-custom-summary-template { plus-stack[slot='summary'] {  flex-grow: 1;  margin-inline-end: 1rem;} }`}</style>
     </div>
   )
 };

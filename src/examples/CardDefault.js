@@ -14,9 +14,9 @@ function App() {
 
 const CardDefault = () => {
   return (
-    <div className="ex-preview ex-card-default dock">
+    <div className="card-default">
       <App />
-      <style>{`.ex-card-default { .container {  padding: 2rem 0;  background-color: whitesmoke;}plus-card {  height: 12rem;  width: 12rem;  margin: auto;} }`}</style>
+      <style>{`.card-default { .container {  padding: 2rem 0;  background-color: whitesmoke;}plus-card {  height: 12rem;  width: 12rem;  margin: auto;} }`}</style>
     </div>
   )
 };

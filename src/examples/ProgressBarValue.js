@@ -10,7 +10,7 @@ function App() {
 
 const ProgressBarValue = () => {
   return (
-    <div className="ex-preview ex-progress-bar-value">
+    <div className="progress-bar-value">
       <App />
     </div>
   )
