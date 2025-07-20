@@ -22,17 +22,6 @@ a {
   @apply text-primary;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  &:hover > a > div {
-    visibility: visible;
-  }
-}
-
 plus-app-progress-bar.main::part(bar) {
   @apply bg-primary;
 }
@@ -73,30 +62,6 @@ plus-prism::part(pre) {
   &.type-warning {
     color: #ffb74d;
     background: #fff8e1;
-  }
-}
-
-.skeleton {
-  @apply relative overflow-hidden;
-  background-color: lightgray;
-
-  & > * {
-    @apply opacity-0;
-  }
-
-  &::after {
-    @apply animate-shimmer;
-    content: '';
-    position: absolute;
-    inset: 0;
-    transform: translateX(-100%);
-    background-image: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0) 0,
-      rgba(255, 255, 255, 0.2) 20%,
-      rgba(255, 255, 255, 0.5) 60%,
-      rgba(255, 255, 255, 0)
-    );
   }
 }
 

@@ -147,7 +147,9 @@ export function TocItem({ children, level }: TocItemProps) {
         ref={element}
         onClick={onClick}
       >
-        <div className="inline-block overflow-visible align-text-bottom fill-current invisible">#</div>
+        <div className="inline-block overflow-visible align-text-bottom fill-current invisible group-hover:visible">
+          #
+        </div>
       </a>
       {children}
     </>

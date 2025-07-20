@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, Suspense, useLayoutEffect, useRef, useState } from 'react';
+import { FC, useLayoutEffect, useRef, useState } from 'react';
 
 import { Alert, Button } from '@/components';
 import { ROUTES } from '@/constants';
@@ -82,7 +82,7 @@ export function Example({ Preview, dock, element, example, isolate, links, rtl, 
   }, [isVisible]);
 
   return (
-    <plus-tabs className="gap-2 leading-none" value="preview">
+    <plus-tabs className="gap-2 leading-normal" value="preview">
       <div className="flex gap-2 flex-col sm:flex-row sm:items-center sm:justify-between">
         <plus-tabs-bar
           override={{
@@ -128,29 +128,22 @@ export function Example({ Preview, dock, element, example, isolate, links, rtl, 
       </div>
       <plus-tabs-panels>
         <plus-tabs-panel
-          className="border border-main-lighten-3 border-solid"
+          className={`relative border border-main-lighten-3 border-solid ${dock ? '' : 'p-[1.5rem]'}`}
           value="preview"
           dir={direction}
           ref={$preview}
+          style={{
+            height: isVisible ? 'auto' : `${$preview.current!.clientHeight}px`,
+          }}
         >
-          {!isVisible && <div style={{ height: $preview.current!.clientHeight + 'px' }}></div>}
-          {isVisible && isolate != true && (
-            <Suspense fallback={<div className="skeleton" />}>
-              {Preview && (
-                <div className={`${dock ? '' : 'p-[1.5rem]'}`}>
-                  <Preview />
-                </div>
-              )}
-            </Suspense>
-          )}
-          {isVisible && isolate == true && (
-            <div className={`p-[1.5rem] ${isLoaded ? '' : 'skeleton'}`}>
-              <iframe
-                className="border-none block m-0 w-full h-0"
-                src={getPath(ROUTES.ELEMENT_EXAMPLE, { element, example })}
-                onLoad={handleIframeLoad}
-              />
-            </div>
+          {isolate && !isLoaded && <div className="absolute inset-0 animate-shimmer bg-primary-4" />}
+          {isVisible && !isolate && Preview && <Preview />}
+          {isVisible && isolate && (
+            <iframe
+              className={`border-none block m-0 w-full h-0 ${isLoaded ? '' : 'opacity-0'}`}
+              src={getPath(ROUTES.ELEMENT_EXAMPLE, { element, example })}
+              onLoad={handleIframeLoad}
+            />
           )}
         </plus-tabs-panel>
         {tabs

@@ -5,7 +5,7 @@ module.exports = {
     container: {},
     extend: {
       animation: {
-        shimmer: 'shimmer 2s infinite'
+        shimmer: 'pulse 1.5s infinite ease-in-out'
       },
       colors: {
         main: {
@@ -38,8 +38,10 @@ module.exports = {
         }
       },
       keyframes: {
-        shimmer: {
-          '100%': { transform: 'translateX(100%)' }
+        pulse: {
+          '0%': { opacity: 1 },
+          '50%': { opacity: 0.4 },
+          '100%': { opacity: 1 }
         }
       },
     },

@@ -10,7 +10,7 @@ function Heading(level: number) {
     if (level == 1) return <Tag>{props.children}</Tag>;
 
     return (
-      <Tag>
+      <Tag className="group">
         <TocItem level={level}>{props.children}</TocItem>
       </Tag>
     );
