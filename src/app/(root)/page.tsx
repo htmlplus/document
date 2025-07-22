@@ -14,7 +14,7 @@ import { Frameworks } from './Frameworks';
 export default async function Home() {
   return (
     <div className="home">
-      <header className="flex items-center h-16 bg-primary-2">
+      <header className="flex items-center h-16 bg-main-2">
         <div className="container flex items-center gap-8">
           <plus-icon name="htmlplus" size="2rem"></plus-icon>
           <div className="hidden sm:flex items-center gap-6">
@@ -41,11 +41,11 @@ export default async function Home() {
           <div className="flex flex-col items-center gap-8 lg:flex-row">
             <div className="flex flex-col items-center gap-8 lg:items-start basis-1/2">
               <NextLink
-                className="badge-group inline-flex text-primary-11 bg-white p-1 rounded-full whitespace-nowrap"
+                className="badge-group inline-flex text-main-11 bg-white p-1 rounded-full whitespace-nowrap"
                 href={getPath(ROUTES.CHANGELOG, {})!}
               >
                 <plus-stack gap="0.75rem">
-                  <div className="badge px-2 py-[2px] rounded-full text-primary-11 bg-primary-4">{PACKAGE.version}</div>
+                  <div className="badge px-2 py-[2px] rounded-full text-main-11 bg-main-4">{PACKAGE.version}</div>
                   <div>A new version of HTMLPLUS is out</div>
                   {/* TODO: svg is thin */}
                   <plus-icon name="arrow-right-short" size="1rem"></plus-icon>

@@ -8,34 +8,47 @@ module.exports = {
         shimmer: 'pulse 1.5s infinite ease-in-out'
       },
       colors: {
-        main: {
-          'DEFAULT': 'gray',
-          'lighten-1': 'hsla(0deg, 0%, 0%, 0.35)',
-          'lighten-2': 'hsla(0deg, 0%, 0%, 0.2)',
-          'lighten-3': 'hsla(0deg, 0%, 0%, 0.07)'
+        alpha: {
+          'black-1': '#00000005',
+          'black-2': '#0000000D',
+          'black-3': '#00000014',
+          'black-4': '#00000029',
+          'black-6': '#0000003D',
+          'black-7': '#0000007a',
+          'black-8': '#000000A3',
+          'black-9': '#000000B8',
+          'black-10': '#000000CC',
+          'black-11': '#000000EB',
+          'black-12': '#000000E5',
         },
-        primary: {
-          DEFAULT: '#ee6e73',
-          'lighten-1': '#f8a6a6',
-          'lighten-3': '#f9dbdb',
-          'lighten-5': '#ee6e721e',
-
+        main: {
+          '1': '#FCFCFC',
           '2': '#f8f8f8',
           '3': '#f3f3f3',
           '4': '#ededed',
+          '5': '#E8E8E8',
+          '6': '#E2E2E2',
+          '7': '#DBDBDB',
           '8': '#c7c7c7',
           '9': '#8f8f8f',
           '10': '#858585',
           '11': '#6f6f6f',
           '12': '#171717',
         },
-        alpha: {
-          'black-2': '#0000000d',
-          'black-3': '#00000014',
-          'black-4': '#00000029',
-          'black-7': '#0000007a',
-          'black-12': '#000000e5',
-        }
+        primary: {
+          '1': '#FFF9F9',
+          '2': '#FFECEC',
+          '3': '#FFDEDE',
+          '4': '#FFCFCF',
+          '5': '#FFBEBE',
+          '6': '#FFACAC',
+          '7': '#FF9999',
+          '8': '#F57D81',
+          '9': '#EE6E73',
+          '10': '#D46267',
+          '11': '#A34D50',
+          '12': '#3D1819',
+        },
       },
       keyframes: {
         pulse: {

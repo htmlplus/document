@@ -16,7 +16,7 @@ interface Params {
 const Label = ({ children, value }: { children: ReactNode; value: string }) => {
   return (
     <div className="flex flex-col leading-normal">
-      <small className="text-main">{value}</small>
+      <small className="text-main-10">{value}</small>
       <div>{children}</div>
     </div>
   );

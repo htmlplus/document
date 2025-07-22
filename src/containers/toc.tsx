@@ -94,7 +94,7 @@ export function Toc() {
       <p>Contents</p>
       {toc.items.map((item) => (
         <a
-          className={`border-0 border-l-2 border-solid block cursor-pointer no-underline text-[#a7a7a7] text-[90%] leading-[1.6] hover:no-underline hover:border-main hover:text-main ${item.isActive ? 'border-primary text-primary' : 'border-l-main-lighten-3'}`}
+          className={`border-0 border-l-2 border-solid block cursor-pointer no-underline text-[#a7a7a7] text-[90%] leading-[1.6] hover:no-underline hover:border-main-10 hover:text-main-10 ${item.isActive ? 'border-primary-9 text-primary-9' : 'border-l-main-4'}`}
           style={{
             paddingLeft: `${item.level! > 1 ? (item.level! - 1) * 20 : 0}px`,
           }}

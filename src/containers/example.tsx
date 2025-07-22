@@ -128,7 +128,7 @@ export function Example({ Preview, dock, element, example, isolate, links, rtl, 
       </div>
       <plus-tabs-panels>
         <plus-tabs-panel
-          className={`relative border border-main-lighten-3 border-solid ${dock ? '' : 'p-[1.5rem]'}`}
+          className={`relative border border-main-4 border-solid ${dock ? '' : 'p-[1.5rem]'}`}
           value="preview"
           dir={direction}
           ref={$preview}
@@ -136,7 +136,7 @@ export function Example({ Preview, dock, element, example, isolate, links, rtl, 
             height: isVisible ? 'auto' : `${$preview.current!.clientHeight}px`,
           }}
         >
-          {isolate && !isLoaded && <div className="absolute inset-0 animate-shimmer bg-primary-4" />}
+          {isolate && !isLoaded && <div className="absolute inset-0 animate-shimmer bg-main-4" />}
           {isVisible && !isolate && Preview && <Preview />}
           {isVisible && isolate && (
             <iframe

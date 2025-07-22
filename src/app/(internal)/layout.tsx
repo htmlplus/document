@@ -8,7 +8,7 @@ export default function Layout({ children }: PropsWithChildren) {
       <AppLoadingBar></AppLoadingBar>
       <plus-drawer-toggler className="p-2 fixed top-0 left-0 block xl:hidden" connector="main">
         <plus-center>
-          <plus-icon className="text-primary" name="list" size="2x"></plus-icon>
+          <plus-icon className="text-primary-9" name="list" size="2x"></plus-icon>
         </plus-center>
       </plus-drawer-toggler>
       <div className="flex">

@@ -25,12 +25,12 @@ export function Sidebar() {
   const menu = (items: SidebarItem[], parents: SidebarItem[] = [], expand?: boolean) => {
     return (
       <ul
-        className={`nav flex flex-col flex-nowrap pl-0 list-none m-0 ${parents.length ? 'border-0 border-l border-solid border-l-main-lighten-3 ml-[1.25rem] pl-[0.5rem]' : ''} ${parents.length && !expand ? 'hidden' : ''}`}
+        className={`nav flex flex-col flex-nowrap pl-0 list-none m-0 ${parents.length ? 'border-0 border-l border-solid border-l-main-4 ml-[1.25rem] pl-[0.5rem]' : ''} ${parents.length && !expand ? 'hidden' : ''}`}
       >
         {items.map((item) => (
           <li key={item.title + item.url} className="m-0">
             <NextLink
-              className={`flex items-center justify-between border-0 rounded-[4px] px-[0.75rem] py-[0.4rem] text-inherit transition-colors duration-300 hover:no-underline hover:text-primary focus:text-primary ${!item.expand && item.active ? 'bg-primary-lighten-5 text-primary font-semibold' : ''}`}
+              className={`flex items-center justify-between border-0 rounded-[4px] px-[0.75rem] py-[0.4rem] text-inherit transition-colors duration-300 hover:no-underline hover:text-primary-9 focus:text-primary-9 ${!item.expand && item.active ? 'bg-primary-2 text-primary-9 font-semibold' : ''}`}
               href={item.url || '#'}
               onClick={(event) => toggle(event, item)}
             >
@@ -80,7 +80,7 @@ export function Sidebar() {
               <plus-icon name="htmlplus" size="44px"></plus-icon>
               <plus-stack items="end" vertical>
                 <div>HTMLPLUS</div>
-                <div className="text-[60%] text-main-lighten-1">Version {PACKAGE.version}</div>
+                <div className="text-[60%] text-main-9">Version {PACKAGE.version}</div>
               </plus-stack>
             </plus-stack>
           </Button>

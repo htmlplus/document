@@ -14,11 +14,11 @@ interface FeatureProps {
 export const Feature = ({ className, description, icon, metric, more, title }: FeatureProps) => {
   return (
     <div className={`feature flex flex-col gap-4 items-center text-center ${className}`}>
-      <plus-avatar className="bg-primary-3" shape="circle" size="48">
-        <plus-icon className="text-primary-11" name={icon} size="24"></plus-icon>
+      <plus-avatar className="bg-main-3" shape="circle" size="48">
+        <plus-icon className="text-main-11" name={icon} size="24"></plus-icon>
       </plus-avatar>
       {metric && (
-        <div className="metric text-primary-11">
+        <div className="metric text-main-11">
           <NoSSR>
             <plus-intersection
               once
