@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useLayoutEffect, useRef, useState } from 'react';
+import { FC, useEffect, useLayoutEffect, useRef, useState } from 'react';
 
 import { Alert, Button } from '@/components';
 import { ROUTES } from '@/constants';
@@ -69,13 +69,39 @@ export function Example({ Preview, dock, element, example, isolate, links, rtl, 
 
   const handleReload = (event?: MouseEvent) => {
     event?.preventDefault();
+
     setDirection('ltr');
+
     setIsVisible(false);
+
     requestAnimationFrame(() => setIsVisible(true));
+
     setIsLoaded(false);
+
+    if (!$preview.current?.offsetHeight) return;
+
+    $preview.current.style.height = `${$preview.current!.offsetHeight}px`;
+
+    if (!isolate) return;
+
+    $preview.current!.classList.add('animate-shimmer', 'bg-main-4');
   };
 
   useLayoutEffect(handleReload, [frameworks.framework]);
+
+  useEffect(() => {
+    if (!$preview.current) return;
+
+    if (isolate && !isLoaded) return;
+
+    if (!isolate && !isVisible) return;
+
+    setTimeout(() => {
+      $preview.current!.classList.remove('animate-shimmer', 'bg-main-4');
+
+      $preview.current!.style.height = 'auto';
+    }, 250);
+  }, [isLoaded, isolate, isVisible]);
 
   useLayoutEffect(() => {
     return () => resizeObserver.current?.disconnect();
@@ -128,16 +154,16 @@ export function Example({ Preview, dock, element, example, isolate, links, rtl, 
       </div>
       <plus-tabs-panels>
         <plus-tabs-panel
-          className={`relative border border-main-4 border-solid ${dock ? '' : 'p-[1.5rem]'}`}
+          className={`animate-shimmer bg-main-4 relative border border-main-4 border-solid ${dock ? '' : 'p-[1.5rem]'}`}
           value="preview"
           dir={direction}
           ref={$preview}
-          style={{
-            height: isVisible ? 'auto' : `${$preview.current!.clientHeight}px`,
-          }}
         >
-          {isolate && !isLoaded && <div className="absolute inset-0 animate-shimmer bg-main-4" />}
-          {isVisible && !isolate && Preview && <Preview />}
+          {isVisible && !isolate && Preview && (
+            <div className="preview">
+              <Preview />
+            </div>
+          )}
           {isVisible && isolate && (
             <iframe
               className={`border-none block m-0 w-full h-0 ${isLoaded ? '' : 'opacity-0'}`}

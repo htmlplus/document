@@ -74,21 +74,30 @@ const useToc = create<TocState>((set, get) => ({
 
 export function Toc() {
   const toc = useToc();
+
   useEffect(() => {
     let clear: any;
+
     const timeout = () => {
       if (document.readyState != 'complete') {
         clear = window.setTimeout(timeout, 250);
         return;
       }
+
       const item = toc.items.find((item) => item.id && location.hash.endsWith(item.id));
+
       if (!item) return;
+
       toc.scrollTo(item);
     };
+
     timeout();
+
     return () => clearTimeout(clear);
   }, []);
+
   if (!toc.items.length) return null;
+
   return (
     <div className="toc">
       <p>Contents</p>
@@ -117,12 +126,19 @@ export function TocItem({ children, level }: TocItemProps) {
 
   const item: TocItem | undefined = useMemo(() => {
     if (!isReady) return;
+
+    const key = [children]
+      .flat()
+      .map((child: any) => child?.props?.children || child)
+      .flat()
+      .join();
+
     return {
       element: element.current!,
-      id: kebabCase(children?.toString() ?? ''),
+      id: kebabCase(key),
       key: Math.random().toString(),
       level,
-      title: children?.toString(),
+      title: key,
     };
   }, [isReady]);
 
@@ -135,7 +151,9 @@ export function TocItem({ children, level }: TocItemProps) {
 
   useEffect(() => {
     if (!item) return;
+
     toc.add(item);
+
     return () => toc.remove(item);
   }, [item]);
 

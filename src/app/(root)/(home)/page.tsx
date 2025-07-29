@@ -15,7 +15,7 @@ export default async function Home() {
   return (
     <div className="home">
       <header className="flex items-center h-16 bg-main-2">
-        <div className="container flex items-center gap-8">
+        <div className="container mx-auto px-4 flex items-center gap-8">
           <plus-icon name="htmlplus" size="2rem"></plus-icon>
           <div className="hidden sm:flex items-center gap-6">
             <NextLink href={getPath(ROUTES.OVERVIEW, {})!}>Document</NextLink>
@@ -36,23 +36,23 @@ export default async function Home() {
           </div>
         </div>
       </header>
-      <main className="relative pt-12 main ">
-        <div className="container">
+      <main className="relative pt-12 main">
+        <div className="container mx-auto px-4">
           <div className="flex flex-col items-center gap-8 lg:flex-row">
             <div className="flex flex-col items-center gap-8 lg:items-start basis-1/2">
               <NextLink
-                className="badge-group inline-flex text-main-11 bg-white p-1 rounded-full whitespace-nowrap"
+                className="font-2-500 shadow-custom inline-flex text-main-11 bg-white p-[4px] rounded-full whitespace-nowrap"
                 href={getPath(ROUTES.CHANGELOG, {})!}
               >
                 <plus-stack gap="0.75rem">
-                  <div className="badge px-2 py-[2px] rounded-full text-main-11 bg-main-4">{PACKAGE.version}</div>
+                  <div className="font-2-500 px-2 py-[2px] rounded-full text-main-11 bg-main-4">{PACKAGE.version}</div>
                   <div>A new version of HTMLPLUS is out</div>
                   {/* TODO: svg is thin */}
                   <plus-icon name="arrow-right-short" size="1rem"></plus-icon>
                 </plus-stack>
               </NextLink>
               <div className="flex flex-col items-center gap-6 lg:items-start text-center lg:text-start">
-                <h1>The Most Flexible Open Source Web UI Library!</h1>
+                <h1 className="font-9-600">The Most Flexible Open Source Web UI Library!</h1>
                 <p>
                   A pure JavaScript web UI library delivering lightweight, customizable, and fast elements for modern
                   browsers and frameworks.
@@ -97,7 +97,7 @@ export default async function Home() {
           </div>
         </div>
       </main>
-      <main className="container">
+      <main className="container mx-auto px-4">
         <div className="flex flex-col gap-8 items-center justify-center my-24 lg:flex-row lg:items-start">
           <Feature
             className="basis-1/3"
@@ -106,7 +106,20 @@ export default async function Home() {
             icon="puzzle"
             metric={statistics.frameworks}
           />
-          <div className="divider mx-4 lg:mx-0"></div>
+          <plus-divider
+            className="self-stretch"
+            width="xs"
+            override={{
+              'lg-before': {
+                variant: 'middle',
+                vertical: false,
+              },
+              'lg-up': {
+                variant: 'full',
+                vertical: true,
+              },
+            }}
+          />
           <Feature
             className="basis-1/3"
             title="Elements"
@@ -114,7 +127,20 @@ export default async function Home() {
             icon="puzzle"
             metric={statistics.elements}
           />
-          <div className="divider mx-4 lg:mx-0"></div>
+          <plus-divider
+            className="self-stretch"
+            width="xs"
+            override={{
+              'lg-before': {
+                variant: 'middle',
+                vertical: false,
+              },
+              'lg-up': {
+                variant: 'full',
+                vertical: true,
+              },
+            }}
+          />
           <Feature
             className="basis-1/3"
             title="Examples"

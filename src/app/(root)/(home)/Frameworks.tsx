@@ -6,16 +6,16 @@ import { getPath } from '@/utils';
 
 export const Frameworks: React.FC = () => {
   return (
-    <div className="py-20 framework">
+    <div className="py-20">
       <div>
         <div className="mb-6">
-          <h3 className="text-[28px] text-center title">All Frameworks, One Place</h3>
+          <h3 className="font-8-600 text-[28px] text-center">All Frameworks, One Place</h3>
         </div>
         <div className="text-sm text-center max-w-[600px] mx-auto mb-6">
-          <p> Seamlessly supporting all your favorite frameworks in one powerful library.</p>
+          <p className="font-4-400"> Seamlessly supporting all your favorite frameworks in one powerful library.</p>
         </div>
       </div>
-      <div className=" flex flex-wrap justify-center gap-6 sm:gap-2 sm:flex-row sm:justify-between items-center">
+      <div className="flex flex-wrap justify-center gap-6 sm:gap-2 sm:flex-row sm:justify-between items-center">
         {frameworks.map((framework) => (
           <a
             key={framework.key}

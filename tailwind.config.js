@@ -2,10 +2,16 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
-    container: {},
     extend: {
       animation: {
         shimmer: 'pulse 1.5s infinite ease-in-out'
+      },
+      boxShadow: {
+        'custom': `
+          0px 1px 1px 0px #0000001f,
+          0px 0px 4px 0px #0000000a,
+          0px 4px 8px 0px #00000014
+        `
       },
       colors: {
         alpha: {
@@ -59,12 +65,12 @@ module.exports = {
       },
     },
     screens: {
-      'xs': '0px',
-      'sm': '576px',
-      'md': '768px',
-      'lg': '992px',
-      'xl': '1200px',
-      'xxl': '1400px',
+      xs: { max: '575px' },
+      sm: '576px',
+      md: '768px',
+      lg: '992px',
+      xl: '1200px',
+      xxl: '1400px',
     },
   },
   plugins: [require('@tailwindcss/container-queries')],
