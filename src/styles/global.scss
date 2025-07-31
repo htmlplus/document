@@ -43,7 +43,7 @@ plus-app-progress-bar.main::part(bar) {
 }
 
 plus-avatar img {
-  @apply m-0;
+  margin: 0 !important;
 }
 
 plus-divider:not([color]) {

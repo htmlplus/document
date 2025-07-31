@@ -13,7 +13,7 @@ interface FeatureProps {
 
 export const Feature = ({ className, description, icon, metric, more, title }: FeatureProps) => {
   return (
-    <div className={`flex flex-col gap-4 items-center text-center ${className}`}>
+    <plus-stack className={className} gap="1rem" vertical>
       <plus-avatar className="bg-main-3" shape="circle" size="48">
         <plus-icon className="text-main-11" name={icon} size="24"></plus-icon>
       </plus-avatar>
@@ -34,12 +34,12 @@ export const Feature = ({ className, description, icon, metric, more, title }: F
         </div>
       )}
       <div className="font-5-500">{title}</div>
-      <div className="font-3-400 text-alpha-black-7">{description}</div>
+      <div className="font-3-400 text-alpha-black-7 text-center">{description}</div>
       {more && (
         <a href={more} className="link">
           Learn more
         </a>
       )}
-    </div>
+    </plus-stack>
   );
 };
