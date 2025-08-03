@@ -111,7 +111,7 @@ export function Example({ Preview, dock, element, example, isolate, links, rtl, 
     <plus-tabs className="gap-2 leading-normal" value="preview">
       <div className="flex gap-2 flex-col sm:flex-row sm:items-center sm:justify-between">
         <plus-tabs-bar
-          override={{
+          overrides={{
             'sm-before': {
               grow: true,
             },

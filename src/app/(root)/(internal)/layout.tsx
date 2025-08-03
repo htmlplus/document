@@ -17,7 +17,7 @@ export default function Layout({ children }: PropsWithChildren) {
           backdrop
           connector="main"
           size="300px"
-          override={{
+          overrides={{
             'xl-before': {
               backdrop: true,
               floating: true,

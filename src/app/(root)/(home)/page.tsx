@@ -109,7 +109,7 @@ export default async function Home() {
           <plus-divider
             className="self-stretch"
             width="xs"
-            override={{
+            overrides={{
               'lg-before': {
                 variant: 'middle',
                 vertical: false,
@@ -130,7 +130,7 @@ export default async function Home() {
           <plus-divider
             className="self-stretch"
             width="xs"
-            override={{
+            overrides={{
               'lg-before': {
                 variant: 'middle',
                 vertical: false,
