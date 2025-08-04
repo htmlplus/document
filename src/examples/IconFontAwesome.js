@@ -8,9 +8,9 @@ import '@htmlplus/ui/stack.js';
 import { setConfig } from '@htmlplus/ui/config.js';
 
 setConfig({
-  element: {
+  elements: {
     'plus-icon': {
-      property: {
+      properties: {
         resolver: ({ name }) => {
           let category = 'regular';
           if (name.startsWith('fas-')) category = 'solid';

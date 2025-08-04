@@ -8,9 +8,9 @@ import '@htmlplus/ui/stack.js';
 import { setConfig } from '@htmlplus/ui/config.js';
 
 setConfig({
-  element: {
+  elements: {
     'plus-icon': {
-      property: {
+      properties: {
         resolver: ({ name }) => {
           const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);
           const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;

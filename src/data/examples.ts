@@ -3393,7 +3393,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'theme') {\n            const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n            const styles = await fetch(url).then((response) => response.text());\n            return styles;\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'theme') {\n            const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n            const styles = await fetch(url).then((response) => response.text());\n            return styles;\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism theme=\"default\">const theme = 'default';</plus-prism>\n  <plus-prism theme=\"coy\">const theme = 'coy';</plus-prism>\n  <plus-prism theme=\"dark\">const theme = 'dark';</plus-prism>\n  <plus-prism theme=\"funky\">const theme = 'funky';</plus-prism>\n  <plus-prism theme=\"okaidia\">const theme = 'okaidia';</plus-prism>\n  <plus-prism theme=\"solarizedlight\">const theme = 'solarizedlight';</plus-prism>\n  <plus-prism theme=\"tomorrow\">const theme = 'tomorrow';</plus-prism>\n  <plus-prism theme=\"twilight\">const theme = 'twilight';</plus-prism>\n</plus-stack>\n"
   },
@@ -3404,7 +3404,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'theme') {\n            const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n            const styles = await fetch(url).then((response) => response.text());\n            return styles;\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'theme') {\n            const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n            const styles = await fetch(url).then((response) => response.text());\n            return styles;\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism theme=\"default\">const theme = 'default';</plus-prism>\n  <plus-prism theme=\"coy\">const theme = 'coy';</plus-prism>\n  <plus-prism theme=\"dark\">const theme = 'dark';</plus-prism>\n  <plus-prism theme=\"funky\">const theme = 'funky';</plus-prism>\n  <plus-prism theme=\"okaidia\">const theme = 'okaidia';</plus-prism>\n  <plus-prism theme=\"solarizedlight\">const theme = 'solarizedlight';</plus-prism>\n  <plus-prism theme=\"tomorrow\">const theme = 'tomorrow';</plus-prism>\n  <plus-prism theme=\"twilight\">const theme = 'twilight';</plus-prism>\n</plus-stack>\n"
   },
@@ -3415,7 +3415,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'theme') {\n            const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n            const styles = await fetch(url).then((response) => response.text());\n            return styles;\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'theme') {\n            const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n            const styles = await fetch(url).then((response) => response.text());\n            return styles;\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n      <plus-prism theme=\"default\">const theme = 'default';</plus-prism>\n      <plus-prism theme=\"coy\">const theme = 'coy';</plus-prism>\n      <plus-prism theme=\"dark\">const theme = 'dark';</plus-prism>\n      <plus-prism theme=\"funky\">const theme = 'funky';</plus-prism>\n      <plus-prism theme=\"okaidia\">const theme = 'okaidia';</plus-prism>\n      <plus-prism theme=\"solarizedlight\">const theme = 'solarizedlight';</plus-prism>\n      <plus-prism theme=\"tomorrow\">const theme = 'tomorrow';</plus-prism>\n      <plus-prism theme=\"twilight\">const theme = 'twilight';</plus-prism>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
@@ -3425,7 +3425,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'theme') {\n            const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n            const styles = await fetch(url).then((response) => response.text());\n            return styles;\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'theme') {\n            const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n            const styles = await fetch(url).then((response) => response.text());\n            return styles;\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism theme=\"default\">const theme = 'default';</plus-prism>\n  <plus-prism theme=\"coy\">const theme = 'coy';</plus-prism>\n  <plus-prism theme=\"dark\">const theme = 'dark';</plus-prism>\n  <plus-prism theme=\"funky\">const theme = 'funky';</plus-prism>\n  <plus-prism theme=\"okaidia\">const theme = 'okaidia';</plus-prism>\n  <plus-prism theme=\"solarizedlight\">const theme = 'solarizedlight';</plus-prism>\n  <plus-prism theme=\"tomorrow\">const theme = 'tomorrow';</plus-prism>\n  <plus-prism theme=\"twilight\">const theme = 'twilight';</plus-prism>\n</plus-stack>\n"
   },
@@ -3436,7 +3436,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'theme') {\n            const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n            const styles = await fetch(url).then((response) => response.text());\n            return styles;\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'theme') {\n            const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n            const styles = await fetch(url).then((response) => response.text());\n            return styles;\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism theme=\"default\">const theme = 'default';</plus-prism>\n  <plus-prism theme=\"coy\">const theme = 'coy';</plus-prism>\n  <plus-prism theme=\"dark\">const theme = 'dark';</plus-prism>\n  <plus-prism theme=\"funky\">const theme = 'funky';</plus-prism>\n  <plus-prism theme=\"okaidia\">const theme = 'okaidia';</plus-prism>\n  <plus-prism theme=\"solarizedlight\">const theme = 'solarizedlight';</plus-prism>\n  <plus-prism theme=\"tomorrow\">const theme = 'tomorrow';</plus-prism>\n  <plus-prism theme=\"twilight\">const theme = 'twilight';</plus-prism>\n</plus-stack>\n"
   },
@@ -3496,7 +3496,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          switch (key) {\n            case 'language': {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n              break;\n            }\n            case 'plugin': {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n              break;\n            }\n            case 'theme': {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          switch (key) {\n            case 'language': {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n              break;\n            }\n            case 'plugin': {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n              break;\n            }\n            case 'theme': {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-prism language=\"python\" theme=\"solarizedlight\" [plugins]='{\"line-numbers\":true}'\n  >print(\"Hello, World!\")</plus-prism\n>\n"
   },
@@ -3507,7 +3507,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          switch (key) {\n            case 'language': {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n              break;\n            }\n            case 'plugin': {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n              break;\n            }\n            case 'theme': {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          switch (key) {\n            case 'language': {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n              break;\n            }\n            case 'plugin': {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n              break;\n            }\n            case 'theme': {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\n",
     "template": "<plus-prism language=\"python\" theme=\"solarizedlight\" plugins='{\"line-numbers\":true}'\n  >print(\"Hello, World!\")</plus-prism\n>\n"
   },
@@ -3518,7 +3518,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          switch (key) {\n            case 'language': {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n              break;\n            }\n            case 'plugin': {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n              break;\n            }\n            case 'theme': {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          switch (key) {\n            case 'language': {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n              break;\n            }\n            case 'plugin': {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n              break;\n            }\n            case 'theme': {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\n\nfunction App() {\n  return (\n    <plus-prism\n      language=\"python\"\n      theme=\"solarizedlight\"\n      plugins={{\n        'line-numbers': true\n      }}\n    >\n      print(\"Hello, World!\")\n    </plus-prism>\n  );\n}\nexport default App;\n"
   },
   {
@@ -3528,7 +3528,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          switch (key) {\n            case 'language': {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n              break;\n            }\n            case 'plugin': {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n              break;\n            }\n            case 'theme': {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          switch (key) {\n            case 'language': {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n              break;\n            }\n            case 'plugin': {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n              break;\n            }\n            case 'theme': {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\n",
     "template": "<plus-prism\n  language=\"python\"\n  theme=\"solarizedlight\"\n  plugins={{\n    'line-numbers': true\n  }}>print(\"Hello, World!\")</plus-prism\n>\n"
   },
@@ -3539,7 +3539,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          switch (key) {\n            case 'language': {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n              break;\n            }\n            case 'plugin': {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n              break;\n            }\n            case 'theme': {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          switch (key) {\n            case 'language': {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n              break;\n            }\n            case 'plugin': {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n              break;\n            }\n            case 'theme': {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\n",
     "template": "<plus-prism language=\"python\" theme=\"solarizedlight\" :plugins='{\"line-numbers\":true}'\n  >print(\"Hello, World!\")</plus-prism\n>\n"
   },
@@ -3550,7 +3550,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'plugin') {\n            await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n            try {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            } catch {}\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'plugin') {\n            await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n            try {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            } catch {}\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism [plugins]='{\"line-numbers\":true}'>const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism [plugins]='{\"line-numbers\":{\"start\":5}}'>const name = '@htmlplus/ui';</plus-prism>\n</plus-stack>\n"
   },
@@ -3561,7 +3561,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'plugin') {\n            await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n            try {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            } catch {}\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'plugin') {\n            await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n            try {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            } catch {}\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism plugins='{\"line-numbers\":true}'>const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism plugins='{\"line-numbers\":{\"start\":5}}'>const name = '@htmlplus/ui';</plus-prism>\n</plus-stack>\n"
   },
@@ -3572,7 +3572,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'plugin') {\n            await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n            try {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            } catch {}\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'plugin') {\n            await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n            try {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            } catch {}\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n      <plus-prism\n        plugins={{\n          'line-numbers': true\n        }}\n      >\n        const name = '@htmlplus/ui';\n      </plus-prism>\n      <plus-prism\n        plugins={{\n          'line-numbers': {\n            start: 5\n          }\n        }}\n      >\n        const name = '@htmlplus/ui';\n      </plus-prism>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
@@ -3582,7 +3582,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'plugin') {\n            await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n            try {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            } catch {}\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'plugin') {\n            await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n            try {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            } catch {}\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism\n    plugins={{\n      'line-numbers': true\n    }}>const name = '@htmlplus/ui';</plus-prism\n  >\n  <plus-prism\n    plugins={{\n      'line-numbers': {\n        start: 5\n      }\n    }}>const name = '@htmlplus/ui';</plus-prism\n  >\n</plus-stack>\n"
   },
@@ -3593,7 +3593,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'plugin') {\n            await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n            try {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            } catch {}\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'plugin') {\n            await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n            try {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            } catch {}\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism :plugins='{\"line-numbers\":true}'>const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism :plugins='{\"line-numbers\":{\"start\":5}}'>const name = '@htmlplus/ui';</plus-prism>\n</plus-stack>\n"
   },
@@ -3653,7 +3653,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'language') {\n            await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'language') {\n            await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism language=\"javascript\">const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism language=\"csharp\">string text = \"Hello World!\";</plus-prism>\n  <plus-prism language=\"rust\">let arr: [i32; 4] = [10, 20, 30, 40];</plus-prism>\n</plus-stack>\n"
   },
@@ -3664,7 +3664,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'language') {\n            await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'language') {\n            await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism language=\"javascript\">const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism language=\"csharp\">string text = \"Hello World!\";</plus-prism>\n  <plus-prism language=\"rust\">let arr: [i32; 4] = [10, 20, 30, 40];</plus-prism>\n</plus-stack>\n"
   },
@@ -3675,7 +3675,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'language') {\n            await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'language') {\n            await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n      <plus-prism language=\"javascript\">const name = '@htmlplus/ui';</plus-prism>\n      <plus-prism language=\"csharp\">string text = \"Hello World!\";</plus-prism>\n      <plus-prism language=\"rust\">let arr: [i32; 4] = [10, 20, 30, 40];</plus-prism>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
@@ -3685,7 +3685,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'language') {\n            await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'language') {\n            await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism language=\"javascript\">const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism language=\"csharp\">string text = \"Hello World!\";</plus-prism>\n  <plus-prism language=\"rust\">let arr: [i32; 4] = [10, 20, 30, 40];</plus-prism>\n</plus-stack>\n"
   },
@@ -3696,7 +3696,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-prism': {\n      property: {\n        async resolver({ key, value }) {\n          if (key == 'language') {\n            await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'language') {\n            await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism language=\"javascript\">const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism language=\"csharp\">string text = \"Hello World!\";</plus-prism>\n  <plus-prism language=\"rust\">let arr: [i32; 4] = [10, 20, 30, 40];</plus-prism>\n</plus-stack>\n"
   },
@@ -4114,7 +4114,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-center>\n  <plus-icon name=\"heart\"></plus-icon>\n</plus-center>\n"
   },
@@ -4125,7 +4125,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"heart\"></plus-icon>\n</plus-center>\n"
   },
@@ -4136,7 +4136,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-icon name=\"heart\"></plus-icon>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
@@ -4146,7 +4146,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"heart\"></plus-icon>\n</plus-center>\n"
   },
@@ -4157,7 +4157,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"heart\"></plus-icon>\n</plus-center>\n"
   },
@@ -4168,7 +4168,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  asset: {\n    icon: {\n      'custom-logo': `\n              <svg viewBox=\"0 0 1000 1000\">\n                <path d=\"M980.8,521.1L783.2,718.5c-12.2,12.2-32,12.2-44.2,0c-12.2-12.2-12.2-31.9,0-44.1L914.6,499L739,323.7c-12.2-12.2-12.2-31.9,0-44.1c12.2-12.2,32-12.2,44.2,0L980.8,477C993.1,489.2,993.1,508.9,980.8,521.1z M332.9,906.5c-9,15.7-28.9,21.1-44.5,12c-15.6-9-20.9-29.1-11.9-44.8L667.1,93.5c9-15.7,28.9-21.1,44.5-12c15.6,9.1,20.9,29.1,11.9,44.8L332.9,906.5z M261,718.5c-12.2,12.2-32,12.2-44.2,0L19.1,521.1C7,508.9,7,489.2,19.1,477l197.7-197.4c12.2-12.2,32-12.2,44.2,0c12.2,12.2,12.2,31.9,0,44.1L85.4,499L261,674.4C273.2,686.6,273.2,706.3,261,718.5z\" />\n              </svg>\n            `\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  assets: {\n    icons: {\n      'custom-logo': `\n              <svg viewBox=\"0 0 1000 1000\">\n                <path d=\"M980.8,521.1L783.2,718.5c-12.2,12.2-32,12.2-44.2,0c-12.2-12.2-12.2-31.9,0-44.1L914.6,499L739,323.7c-12.2-12.2-12.2-31.9,0-44.1c12.2-12.2,32-12.2,44.2,0L980.8,477C993.1,489.2,993.1,508.9,980.8,521.1z M332.9,906.5c-9,15.7-28.9,21.1-44.5,12c-15.6-9-20.9-29.1-11.9-44.8L667.1,93.5c9-15.7,28.9-21.1,44.5-12c15.6,9.1,20.9,29.1,11.9,44.8L332.9,906.5z M261,718.5c-12.2,12.2-32,12.2-44.2,0L19.1,521.1C7,508.9,7,489.2,19.1,477l197.7-197.4c12.2-12.2,32-12.2,44.2,0c12.2,12.2,12.2,31.9,0,44.1L85.4,499L261,674.4C273.2,686.6,273.2,706.3,261,718.5z\" />\n              </svg>\n            `\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-center>\n  <plus-icon name=\"custom-logo\" size=\"5x\"></plus-icon>\n</plus-center>\n"
   },
@@ -4179,7 +4179,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  asset: {\n    icon: {\n      'custom-logo': `\n              <svg viewBox=\"0 0 1000 1000\">\n                <path d=\"M980.8,521.1L783.2,718.5c-12.2,12.2-32,12.2-44.2,0c-12.2-12.2-12.2-31.9,0-44.1L914.6,499L739,323.7c-12.2-12.2-12.2-31.9,0-44.1c12.2-12.2,32-12.2,44.2,0L980.8,477C993.1,489.2,993.1,508.9,980.8,521.1z M332.9,906.5c-9,15.7-28.9,21.1-44.5,12c-15.6-9-20.9-29.1-11.9-44.8L667.1,93.5c9-15.7,28.9-21.1,44.5-12c15.6,9.1,20.9,29.1,11.9,44.8L332.9,906.5z M261,718.5c-12.2,12.2-32,12.2-44.2,0L19.1,521.1C7,508.9,7,489.2,19.1,477l197.7-197.4c12.2-12.2,32-12.2,44.2,0c12.2,12.2,12.2,31.9,0,44.1L85.4,499L261,674.4C273.2,686.6,273.2,706.3,261,718.5z\" />\n              </svg>\n            `\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  assets: {\n    icons: {\n      'custom-logo': `\n              <svg viewBox=\"0 0 1000 1000\">\n                <path d=\"M980.8,521.1L783.2,718.5c-12.2,12.2-32,12.2-44.2,0c-12.2-12.2-12.2-31.9,0-44.1L914.6,499L739,323.7c-12.2-12.2-12.2-31.9,0-44.1c12.2-12.2,32-12.2,44.2,0L980.8,477C993.1,489.2,993.1,508.9,980.8,521.1z M332.9,906.5c-9,15.7-28.9,21.1-44.5,12c-15.6-9-20.9-29.1-11.9-44.8L667.1,93.5c9-15.7,28.9-21.1,44.5-12c15.6,9.1,20.9,29.1,11.9,44.8L332.9,906.5z M261,718.5c-12.2,12.2-32,12.2-44.2,0L19.1,521.1C7,508.9,7,489.2,19.1,477l197.7-197.4c12.2-12.2,32-12.2,44.2,0c12.2,12.2,12.2,31.9,0,44.1L85.4,499L261,674.4C273.2,686.6,273.2,706.3,261,718.5z\" />\n              </svg>\n            `\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"custom-logo\" size=\"5x\"></plus-icon>\n</plus-center>\n"
   },
@@ -4190,7 +4190,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  asset: {\n    icon: {\n      'custom-logo': `\n              <svg viewBox=\"0 0 1000 1000\">\n                <path d=\"M980.8,521.1L783.2,718.5c-12.2,12.2-32,12.2-44.2,0c-12.2-12.2-12.2-31.9,0-44.1L914.6,499L739,323.7c-12.2-12.2-12.2-31.9,0-44.1c12.2-12.2,32-12.2,44.2,0L980.8,477C993.1,489.2,993.1,508.9,980.8,521.1z M332.9,906.5c-9,15.7-28.9,21.1-44.5,12c-15.6-9-20.9-29.1-11.9-44.8L667.1,93.5c9-15.7,28.9-21.1,44.5-12c15.6,9.1,20.9,29.1,11.9,44.8L332.9,906.5z M261,718.5c-12.2,12.2-32,12.2-44.2,0L19.1,521.1C7,508.9,7,489.2,19.1,477l197.7-197.4c12.2-12.2,32-12.2,44.2,0c12.2,12.2,12.2,31.9,0,44.1L85.4,499L261,674.4C273.2,686.6,273.2,706.3,261,718.5z\" />\n              </svg>\n            `\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  assets: {\n    icons: {\n      'custom-logo': `\n              <svg viewBox=\"0 0 1000 1000\">\n                <path d=\"M980.8,521.1L783.2,718.5c-12.2,12.2-32,12.2-44.2,0c-12.2-12.2-12.2-31.9,0-44.1L914.6,499L739,323.7c-12.2-12.2-12.2-31.9,0-44.1c12.2-12.2,32-12.2,44.2,0L980.8,477C993.1,489.2,993.1,508.9,980.8,521.1z M332.9,906.5c-9,15.7-28.9,21.1-44.5,12c-15.6-9-20.9-29.1-11.9-44.8L667.1,93.5c9-15.7,28.9-21.1,44.5-12c15.6,9.1,20.9,29.1,11.9,44.8L332.9,906.5z M261,718.5c-12.2,12.2-32,12.2-44.2,0L19.1,521.1C7,508.9,7,489.2,19.1,477l197.7-197.4c12.2-12.2,32-12.2,44.2,0c12.2,12.2,12.2,31.9,0,44.1L85.4,499L261,674.4C273.2,686.6,273.2,706.3,261,718.5z\" />\n              </svg>\n            `\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-icon name=\"custom-logo\" size=\"5x\"></plus-icon>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
@@ -4200,7 +4200,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  asset: {\n    icon: {\n      'custom-logo': `\n              <svg viewBox=\"0 0 1000 1000\">\n                <path d=\"M980.8,521.1L783.2,718.5c-12.2,12.2-32,12.2-44.2,0c-12.2-12.2-12.2-31.9,0-44.1L914.6,499L739,323.7c-12.2-12.2-12.2-31.9,0-44.1c12.2-12.2,32-12.2,44.2,0L980.8,477C993.1,489.2,993.1,508.9,980.8,521.1z M332.9,906.5c-9,15.7-28.9,21.1-44.5,12c-15.6-9-20.9-29.1-11.9-44.8L667.1,93.5c9-15.7,28.9-21.1,44.5-12c15.6,9.1,20.9,29.1,11.9,44.8L332.9,906.5z M261,718.5c-12.2,12.2-32,12.2-44.2,0L19.1,521.1C7,508.9,7,489.2,19.1,477l197.7-197.4c12.2-12.2,32-12.2,44.2,0c12.2,12.2,12.2,31.9,0,44.1L85.4,499L261,674.4C273.2,686.6,273.2,706.3,261,718.5z\" />\n              </svg>\n            `\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  assets: {\n    icons: {\n      'custom-logo': `\n              <svg viewBox=\"0 0 1000 1000\">\n                <path d=\"M980.8,521.1L783.2,718.5c-12.2,12.2-32,12.2-44.2,0c-12.2-12.2-12.2-31.9,0-44.1L914.6,499L739,323.7c-12.2-12.2-12.2-31.9,0-44.1c12.2-12.2,32-12.2,44.2,0L980.8,477C993.1,489.2,993.1,508.9,980.8,521.1z M332.9,906.5c-9,15.7-28.9,21.1-44.5,12c-15.6-9-20.9-29.1-11.9-44.8L667.1,93.5c9-15.7,28.9-21.1,44.5-12c15.6,9.1,20.9,29.1,11.9,44.8L332.9,906.5z M261,718.5c-12.2,12.2-32,12.2-44.2,0L19.1,521.1C7,508.9,7,489.2,19.1,477l197.7-197.4c12.2-12.2,32-12.2,44.2,0c12.2,12.2,12.2,31.9,0,44.1L85.4,499L261,674.4C273.2,686.6,273.2,706.3,261,718.5z\" />\n              </svg>\n            `\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"custom-logo\" size=\"5x\"></plus-icon>\n</plus-center>\n"
   },
@@ -4211,7 +4211,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  asset: {\n    icon: {\n      'custom-logo': `\n              <svg viewBox=\"0 0 1000 1000\">\n                <path d=\"M980.8,521.1L783.2,718.5c-12.2,12.2-32,12.2-44.2,0c-12.2-12.2-12.2-31.9,0-44.1L914.6,499L739,323.7c-12.2-12.2-12.2-31.9,0-44.1c12.2-12.2,32-12.2,44.2,0L980.8,477C993.1,489.2,993.1,508.9,980.8,521.1z M332.9,906.5c-9,15.7-28.9,21.1-44.5,12c-15.6-9-20.9-29.1-11.9-44.8L667.1,93.5c9-15.7,28.9-21.1,44.5-12c15.6,9.1,20.9,29.1,11.9,44.8L332.9,906.5z M261,718.5c-12.2,12.2-32,12.2-44.2,0L19.1,521.1C7,508.9,7,489.2,19.1,477l197.7-197.4c12.2-12.2,32-12.2,44.2,0c12.2,12.2,12.2,31.9,0,44.1L85.4,499L261,674.4C273.2,686.6,273.2,706.3,261,718.5z\" />\n              </svg>\n            `\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  assets: {\n    icons: {\n      'custom-logo': `\n              <svg viewBox=\"0 0 1000 1000\">\n                <path d=\"M980.8,521.1L783.2,718.5c-12.2,12.2-32,12.2-44.2,0c-12.2-12.2-12.2-31.9,0-44.1L914.6,499L739,323.7c-12.2-12.2-12.2-31.9,0-44.1c12.2-12.2,32-12.2,44.2,0L980.8,477C993.1,489.2,993.1,508.9,980.8,521.1z M332.9,906.5c-9,15.7-28.9,21.1-44.5,12c-15.6-9-20.9-29.1-11.9-44.8L667.1,93.5c9-15.7,28.9-21.1,44.5-12c15.6,9.1,20.9,29.1,11.9,44.8L332.9,906.5z M261,718.5c-12.2,12.2-32,12.2-44.2,0L19.1,521.1C7,508.9,7,489.2,19.1,477l197.7-197.4c12.2-12.2,32-12.2,44.2,0c12.2,12.2,12.2,31.9,0,44.1L85.4,499L261,674.4C273.2,686.6,273.2,706.3,261,718.5z\" />\n              </svg>\n            `\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"custom-logo\" size=\"5x\"></plus-icon>\n</plus-center>\n"
   },
@@ -4271,7 +4271,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"carbon/user\"></plus-icon>\n  <plus-icon name=\"lucide/user\"></plus-icon>\n  <plus-icon name=\"tabler/user\"></plus-icon>\n</plus-stack>\n"
   },
@@ -4282,7 +4282,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"carbon/user\"></plus-icon>\n  <plus-icon name=\"lucide/user\"></plus-icon>\n  <plus-icon name=\"tabler/user\"></plus-icon>\n</plus-stack>\n"
   },
@@ -4293,7 +4293,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"carbon/user\"></plus-icon>\n      <plus-icon name=\"lucide/user\"></plus-icon>\n      <plus-icon name=\"tabler/user\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
@@ -4303,7 +4303,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"carbon/user\"></plus-icon>\n  <plus-icon name=\"lucide/user\"></plus-icon>\n  <plus-icon name=\"tabler/user\"></plus-icon>\n</plus-stack>\n"
   },
@@ -4314,7 +4314,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const [library, icon] = name.split('/');\n          const references = {\n            carbon: `https://cdn.jsdelivr.net/npm/carbon-icons/dist/svg/${icon}.svg`,\n            lucide: `https://cdn.jsdelivr.net/npm/lucide-static/icons/${icon}.svg`,\n            tabler: `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${icon}.svg`\n          };\n          const url = references[library];\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"carbon/user\"></plus-icon>\n  <plus-icon name=\"lucide/user\"></plus-icon>\n  <plus-icon name=\"tabler/user\"></plus-icon>\n</plus-stack>\n"
   },
@@ -4325,7 +4325,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
   },
@@ -4336,7 +4336,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
   },
@@ -4347,7 +4347,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"home_outline\"></plus-icon>\n      <plus-icon name=\"home_round\"></plus-icon>\n      <plus-icon name=\"home_sharp\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
@@ -4357,7 +4357,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
   },
@@ -4368,7 +4368,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
   },
@@ -4428,7 +4428,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-stack>\n"
   },
@@ -4439,7 +4439,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-stack>\n"
   },
@@ -4450,7 +4450,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"far-user\"></plus-icon>\n      <plus-icon name=\"fas-user\"></plus-icon>\n      <plus-icon name=\"fab-apple\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
@@ -4460,7 +4460,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-stack>\n"
   },
@@ -4471,7 +4471,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-icon': {\n      property: {\n        resolver: ({ name }) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-stack>\n"
   },
@@ -6081,7 +6081,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-faker': {\n      property: {\n        instance: faker\n      }\n    }\n  }\n});\n",
+    "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-faker': {\n      properties: {\n        instance: faker\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-faker></plus-faker>\n"
   },
@@ -6092,7 +6092,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-faker': {\n      property: {\n        instance: faker\n      }\n    }\n  }\n});\n",
+    "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-faker': {\n      properties: {\n        instance: faker\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/faker.js';\n",
     "template": "<plus-faker></plus-faker>\n"
   },
@@ -6103,7 +6103,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-faker': {\n      property: {\n        instance: faker\n      }\n    }\n  }\n});\n",
+    "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-faker': {\n      properties: {\n        instance: faker\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return <plus-faker></plus-faker>;\n}\nexport default App;\n"
   },
   {
@@ -6113,7 +6113,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-faker': {\n      property: {\n        instance: faker\n      }\n    }\n  }\n});\n",
+    "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-faker': {\n      properties: {\n        instance: faker\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/faker.js';\n",
     "template": "<plus-faker></plus-faker>\n"
   },
@@ -6124,7 +6124,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  element: {\n    'plus-faker': {\n      property: {\n        instance: faker\n      }\n    }\n  }\n});\n",
+    "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-faker': {\n      properties: {\n        instance: faker\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/faker.js';\n",
     "template": "<plus-faker></plus-faker>\n"
   },
@@ -7582,8 +7582,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/cropper.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto auto auto / 1fr;\n  }\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n    <plus-cropper\n      zoomable\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      zoomable=\"touch\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      zoomable=\"wheel\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-grow: 1;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n",
+    "template": "<div class=\"container\">\n  <div class=\"container\">\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n    <plus-cropper\n      zoomable\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n  <div class=\"container\">\n    <plus-cropper\n      zoomable=\"touch\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      zoomable=\"wheel\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
   },
   {
     "key": "javascript/cropper/zoomable",
@@ -7593,8 +7593,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto auto auto / 1fr;\n  }\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n    <plus-cropper\n      zoomable\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      zoomable=\"touch\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      zoomable=\"wheel\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-grow: 1;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n",
+    "template": "<div class=\"container\">\n  <div class=\"container\">\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n    <plus-cropper\n      zoomable\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n  <div class=\"container\">\n    <plus-cropper\n      zoomable=\"touch\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      zoomable=\"wheel\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
   },
   {
     "key": "react/cropper/zoomable",
@@ -7603,8 +7603,8 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <div className=\"grid\">\n        <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n        <plus-cropper\n          zoomable\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n        <plus-cropper\n          zoomable=\"touch\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n        <plus-cropper\n          zoomable=\"wheel\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </div>\n    </div>\n  );\n}\nexport default App;\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto auto auto / 1fr;\n  }\n}\n"
+    "script": "import '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <div className=\"container\">\n        <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n        <plus-cropper\n          zoomable\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </div>\n      <div className=\"container\">\n        <plus-cropper\n          zoomable=\"touch\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n        <plus-cropper\n          zoomable=\"wheel\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </div>\n    </div>\n  );\n}\nexport default App;\n",
+    "style": ".container {\n  display: flex;\n  flex-grow: 1;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n"
   },
   {
     "key": "svelte/cropper/zoomable",
@@ -7614,8 +7614,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto auto auto / 1fr;\n  }\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n    <plus-cropper zoomable src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper zoomable=\"touch\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper zoomable=\"wheel\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-grow: 1;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n",
+    "template": "<div class=\"container\">\n  <div class=\"container\">\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n    <plus-cropper zoomable src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n  <div class=\"container\">\n    <plus-cropper zoomable=\"touch\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper zoomable=\"wheel\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
   },
   {
     "key": "vue/cropper/zoomable",
@@ -7625,8 +7625,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto auto auto / 1fr;\n  }\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n    <plus-cropper\n      zoomable\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      zoomable=\"touch\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      zoomable=\"wheel\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-grow: 1;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n",
+    "template": "<div class=\"container\">\n  <div class=\"container\">\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n    <plus-cropper\n      zoomable\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n  <div class=\"container\">\n    <plus-cropper\n      zoomable=\"touch\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      zoomable=\"wheel\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
   },
   {
     "key": "angular/cropper/zoom-ratio",
@@ -7636,8 +7636,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/cropper.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper\n      zoomable\n      [zoom-ratio]=\"0.1\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      zoomable\n      [zoom-ratio]=\"1.0\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n",
+    "template": "<div class=\"container\">\n  <plus-cropper\n    zoomable\n    [zoom-ratio]=\"0.1\"\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n  <plus-cropper\n    zoomable\n    [zoom-ratio]=\"1.0\"\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n</div>\n"
   },
   {
     "key": "javascript/cropper/zoom-ratio",
@@ -7647,8 +7647,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper\n      zoomable\n      zoom-ratio=\"0.1\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      zoomable\n      zoom-ratio=\"1.0\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n",
+    "template": "<div class=\"container\">\n  <plus-cropper\n    zoomable\n    zoom-ratio=\"0.1\"\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n  <plus-cropper\n    zoomable\n    zoom-ratio=\"1.0\"\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n</div>\n"
   },
   {
     "key": "react/cropper/zoom-ratio",
@@ -7657,8 +7657,8 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <div className=\"grid\">\n        <plus-cropper\n          zoomable\n          zoom-ratio={0.1}\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n        <plus-cropper\n          zoomable\n          zoom-ratio={1}\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </div>\n    </div>\n  );\n}\nexport default App;\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n"
+    "script": "import '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <plus-cropper\n        zoomable\n        zoom-ratio={0.1}\n        src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ></plus-cropper>\n      <plus-cropper\n        zoomable\n        zoom-ratio={1}\n        src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ></plus-cropper>\n    </div>\n  );\n}\nexport default App;\n",
+    "style": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n"
   },
   {
     "key": "svelte/cropper/zoom-ratio",
@@ -7668,8 +7668,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper\n      zoomable\n      zoom-ratio={0.1}\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      zoomable\n      zoom-ratio={1}\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n",
+    "template": "<div class=\"container\">\n  <plus-cropper\n    zoomable\n    zoom-ratio={0.1}\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n  <plus-cropper\n    zoomable\n    zoom-ratio={1}\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n</div>\n"
   },
   {
     "key": "vue/cropper/zoom-ratio",
@@ -7679,8 +7679,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper\n      zoomable\n      :zoom-ratio=\"0.1\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      zoomable\n      :zoom-ratio=\"1.0\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n",
+    "template": "<div class=\"container\">\n  <plus-cropper\n    zoomable\n    :zoom-ratio=\"0.1\"\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n  <plus-cropper\n    zoomable\n    :zoom-ratio=\"1.0\"\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n</div>\n"
   },
   {
     "key": "angular/cropper/transparent",
@@ -7690,8 +7690,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/cropper.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n    <plus-cropper\n      transparent\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n",
+    "template": "<div class=\"container\">\n  <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n  <plus-cropper\n    transparent\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n</div>\n"
   },
   {
     "key": "javascript/cropper/transparent",
@@ -7701,8 +7701,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n    <plus-cropper\n      transparent\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n",
+    "template": "<div class=\"container\">\n  <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n  <plus-cropper\n    transparent\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n</div>\n"
   },
   {
     "key": "react/cropper/transparent",
@@ -7711,8 +7711,8 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <div className=\"grid\">\n        <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n        <plus-cropper\n          transparent\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </div>\n    </div>\n  );\n}\nexport default App;\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n"
+    "script": "import '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n      <plus-cropper\n        transparent\n        src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ></plus-cropper>\n    </div>\n  );\n}\nexport default App;\n",
+    "style": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n"
   },
   {
     "key": "svelte/cropper/transparent",
@@ -7722,8 +7722,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n    <plus-cropper transparent src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n",
+    "template": "<div class=\"container\">\n  <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n  <plus-cropper transparent src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n</div>\n"
   },
   {
     "key": "vue/cropper/transparent",
@@ -7733,8 +7733,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n    <plus-cropper\n      transparent\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n",
+    "template": "<div class=\"container\">\n  <plus-cropper src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"></plus-cropper>\n  <plus-cropper\n    transparent\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n</div>\n"
   },
   {
     "key": "angular/cropper/to-url",
@@ -7891,8 +7891,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n\nplus-cropper.style-1 {\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\nplus-cropper.style-2 {\n  --plus-cropper-indicator-color: #e6f018;\n  --plus-cropper-indicator-size: 15px;\n  --plus-cropper-indicator-weight: 2px;\n  --plus-cropper-resizer-color: black;\n  --plus-cropper-resizer-offset: -27px;\n  --plus-cropper-resizer-size: 21px;\n  --plus-cropper-viewport-color: #e6f018;\n}\nplus-cropper.style-3 {\n  --plus-cropper-indicator-color: #5499c7;\n  --plus-cropper-guides-color: black;\n  --plus-cropper-resizer-color: #5499c7;\n  --plus-cropper-resizer-size: 15px;\n  --plus-cropper-viewport-color: #5499c7;\n  --plus-cropper-viewport-weight: 2px;\n}\nplus-cropper.style-4 {\n  --plus-cropper-guides-weight: 2px;\n  --plus-cropper-resizer-size: 22px;\n  --plus-cropper-resizer-weight: 2px;\n  --plus-cropper-viewport-style: dashed;\n  --plus-cropper-viewport-weight: 2px;\n}\nplus-cropper.style-5 {\n  --plus-cropper-backdrop-color: white;\n  --plus-cropper-backdrop-opacity: 0.7;\n  --plus-cropper-resizer-color: #a93226;\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-resizer-weight: 3px;\n}\nplus-cropper.style-6 {\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper\n      class=\"style-1\"\n      indicator\n      mode=\"crop\"\n      shape=\"circle\"\n      resizer=\"main\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-2\"\n      indicator\n      mode=\"crop\"\n      resizer=\"both\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-3\"\n      guides\n      indicator\n      mode=\"crop\"\n      resizer=\"main\"\n      resizer-shape=\"circle\"\n      shape=\"circle\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-4\"\n      guides\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-5\"\n      backdrop\n      background\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-6\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-grow: 1;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\n\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n\nplus-cropper.style-1 {\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n\nplus-cropper.style-2 {\n  --plus-cropper-indicator-color: #e6f018;\n  --plus-cropper-indicator-size: 15px;\n  --plus-cropper-indicator-weight: 2px;\n  --plus-cropper-resizer-color: black;\n  --plus-cropper-resizer-offset: -27px;\n  --plus-cropper-resizer-size: 21px;\n  --plus-cropper-viewport-color: #e6f018;\n}\n\nplus-cropper.style-3 {\n  --plus-cropper-indicator-color: #5499c7;\n  --plus-cropper-guides-color: black;\n  --plus-cropper-resizer-color: #5499c7;\n  --plus-cropper-resizer-size: 15px;\n  --plus-cropper-viewport-color: #5499c7;\n  --plus-cropper-viewport-weight: 2px;\n}\n\nplus-cropper.style-4 {\n  --plus-cropper-guides-weight: 2px;\n  --plus-cropper-resizer-size: 22px;\n  --plus-cropper-resizer-weight: 2px;\n  --plus-cropper-viewport-style: dashed;\n  --plus-cropper-viewport-weight: 2px;\n}\n\nplus-cropper.style-5 {\n  --plus-cropper-backdrop-color: white;\n  --plus-cropper-backdrop-opacity: 0.7;\n  --plus-cropper-resizer-color: #a93226;\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-resizer-weight: 3px;\n}\n\nplus-cropper.style-6 {\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n",
+    "template": "<div class=\"container\">\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-1\"\n      indicator\n      mode=\"crop\"\n      shape=\"circle\"\n      resizer=\"main\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-2\"\n      indicator\n      mode=\"crop\"\n      resizer=\"both\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-3\"\n      guides\n      indicator\n      mode=\"crop\"\n      resizer=\"main\"\n      resizer-shape=\"circle\"\n      shape=\"circle\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-4\"\n      guides\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-5\"\n      backdrop\n      background\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-6\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
   },
   {
     "key": "javascript/cropper/styles",
@@ -7902,8 +7902,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n\nplus-cropper.style-1 {\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\nplus-cropper.style-2 {\n  --plus-cropper-indicator-color: #e6f018;\n  --plus-cropper-indicator-size: 15px;\n  --plus-cropper-indicator-weight: 2px;\n  --plus-cropper-resizer-color: black;\n  --plus-cropper-resizer-offset: -27px;\n  --plus-cropper-resizer-size: 21px;\n  --plus-cropper-viewport-color: #e6f018;\n}\nplus-cropper.style-3 {\n  --plus-cropper-indicator-color: #5499c7;\n  --plus-cropper-guides-color: black;\n  --plus-cropper-resizer-color: #5499c7;\n  --plus-cropper-resizer-size: 15px;\n  --plus-cropper-viewport-color: #5499c7;\n  --plus-cropper-viewport-weight: 2px;\n}\nplus-cropper.style-4 {\n  --plus-cropper-guides-weight: 2px;\n  --plus-cropper-resizer-size: 22px;\n  --plus-cropper-resizer-weight: 2px;\n  --plus-cropper-viewport-style: dashed;\n  --plus-cropper-viewport-weight: 2px;\n}\nplus-cropper.style-5 {\n  --plus-cropper-backdrop-color: white;\n  --plus-cropper-backdrop-opacity: 0.7;\n  --plus-cropper-resizer-color: #a93226;\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-resizer-weight: 3px;\n}\nplus-cropper.style-6 {\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper\n      class=\"style-1\"\n      indicator\n      mode=\"crop\"\n      shape=\"circle\"\n      resizer=\"main\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-2\"\n      indicator\n      mode=\"crop\"\n      resizer=\"both\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-3\"\n      guides\n      indicator\n      mode=\"crop\"\n      resizer=\"main\"\n      resizer-shape=\"circle\"\n      shape=\"circle\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-4\"\n      guides\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-5\"\n      backdrop\n      background\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-6\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-grow: 1;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\n\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n\nplus-cropper.style-1 {\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n\nplus-cropper.style-2 {\n  --plus-cropper-indicator-color: #e6f018;\n  --plus-cropper-indicator-size: 15px;\n  --plus-cropper-indicator-weight: 2px;\n  --plus-cropper-resizer-color: black;\n  --plus-cropper-resizer-offset: -27px;\n  --plus-cropper-resizer-size: 21px;\n  --plus-cropper-viewport-color: #e6f018;\n}\n\nplus-cropper.style-3 {\n  --plus-cropper-indicator-color: #5499c7;\n  --plus-cropper-guides-color: black;\n  --plus-cropper-resizer-color: #5499c7;\n  --plus-cropper-resizer-size: 15px;\n  --plus-cropper-viewport-color: #5499c7;\n  --plus-cropper-viewport-weight: 2px;\n}\n\nplus-cropper.style-4 {\n  --plus-cropper-guides-weight: 2px;\n  --plus-cropper-resizer-size: 22px;\n  --plus-cropper-resizer-weight: 2px;\n  --plus-cropper-viewport-style: dashed;\n  --plus-cropper-viewport-weight: 2px;\n}\n\nplus-cropper.style-5 {\n  --plus-cropper-backdrop-color: white;\n  --plus-cropper-backdrop-opacity: 0.7;\n  --plus-cropper-resizer-color: #a93226;\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-resizer-weight: 3px;\n}\n\nplus-cropper.style-6 {\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n",
+    "template": "<div class=\"container\">\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-1\"\n      indicator\n      mode=\"crop\"\n      shape=\"circle\"\n      resizer=\"main\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-2\"\n      indicator\n      mode=\"crop\"\n      resizer=\"both\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-3\"\n      guides\n      indicator\n      mode=\"crop\"\n      resizer=\"main\"\n      resizer-shape=\"circle\"\n      shape=\"circle\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-4\"\n      guides\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-5\"\n      backdrop\n      background\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-6\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
   },
   {
     "key": "react/cropper/styles",
@@ -7912,8 +7912,8 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <div className=\"grid\">\n        <plus-cropper\n          class=\"style-1\"\n          indicator\n          mode=\"crop\"\n          shape=\"circle\"\n          resizer=\"main\"\n          resizer-shape=\"line\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n        <plus-cropper\n          class=\"style-2\"\n          indicator\n          mode=\"crop\"\n          resizer=\"both\"\n          resizer-shape=\"line\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n        <plus-cropper\n          class=\"style-3\"\n          guides\n          indicator\n          mode=\"crop\"\n          resizer=\"main\"\n          resizer-shape=\"circle\"\n          shape=\"circle\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n        <plus-cropper\n          class=\"style-4\"\n          guides\n          mode=\"crop\"\n          resizer=\"edge\"\n          resizer-shape=\"line\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n        <plus-cropper\n          class=\"style-5\"\n          backdrop\n          background\n          mode=\"crop\"\n          resizer=\"edge\"\n          resizer-shape=\"line\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n        <plus-cropper\n          class=\"style-6\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </div>\n    </div>\n  );\n}\nexport default App;\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n\nplus-cropper.style-1 {\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\nplus-cropper.style-2 {\n  --plus-cropper-indicator-color: #e6f018;\n  --plus-cropper-indicator-size: 15px;\n  --plus-cropper-indicator-weight: 2px;\n  --plus-cropper-resizer-color: black;\n  --plus-cropper-resizer-offset: -27px;\n  --plus-cropper-resizer-size: 21px;\n  --plus-cropper-viewport-color: #e6f018;\n}\nplus-cropper.style-3 {\n  --plus-cropper-indicator-color: #5499c7;\n  --plus-cropper-guides-color: black;\n  --plus-cropper-resizer-color: #5499c7;\n  --plus-cropper-resizer-size: 15px;\n  --plus-cropper-viewport-color: #5499c7;\n  --plus-cropper-viewport-weight: 2px;\n}\nplus-cropper.style-4 {\n  --plus-cropper-guides-weight: 2px;\n  --plus-cropper-resizer-size: 22px;\n  --plus-cropper-resizer-weight: 2px;\n  --plus-cropper-viewport-style: dashed;\n  --plus-cropper-viewport-weight: 2px;\n}\nplus-cropper.style-5 {\n  --plus-cropper-backdrop-color: white;\n  --plus-cropper-backdrop-opacity: 0.7;\n  --plus-cropper-resizer-color: #a93226;\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-resizer-weight: 3px;\n}\nplus-cropper.style-6 {\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n"
+    "script": "import '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <div className=\"container\">\n        <plus-cropper\n          class=\"style-1\"\n          indicator\n          mode=\"crop\"\n          shape=\"circle\"\n          resizer=\"main\"\n          resizer-shape=\"line\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n        <plus-cropper\n          class=\"style-2\"\n          indicator\n          mode=\"crop\"\n          resizer=\"both\"\n          resizer-shape=\"line\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </div>\n      <div className=\"container\">\n        <plus-cropper\n          class=\"style-3\"\n          guides\n          indicator\n          mode=\"crop\"\n          resizer=\"main\"\n          resizer-shape=\"circle\"\n          shape=\"circle\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n        <plus-cropper\n          class=\"style-4\"\n          guides\n          mode=\"crop\"\n          resizer=\"edge\"\n          resizer-shape=\"line\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </div>\n      <div className=\"container\">\n        <plus-cropper\n          class=\"style-5\"\n          backdrop\n          background\n          mode=\"crop\"\n          resizer=\"edge\"\n          resizer-shape=\"line\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n        <plus-cropper\n          class=\"style-6\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </div>\n    </div>\n  );\n}\nexport default App;\n",
+    "style": ".container {\n  display: flex;\n  flex-grow: 1;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\n\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n\nplus-cropper.style-1 {\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n\nplus-cropper.style-2 {\n  --plus-cropper-indicator-color: #e6f018;\n  --plus-cropper-indicator-size: 15px;\n  --plus-cropper-indicator-weight: 2px;\n  --plus-cropper-resizer-color: black;\n  --plus-cropper-resizer-offset: -27px;\n  --plus-cropper-resizer-size: 21px;\n  --plus-cropper-viewport-color: #e6f018;\n}\n\nplus-cropper.style-3 {\n  --plus-cropper-indicator-color: #5499c7;\n  --plus-cropper-guides-color: black;\n  --plus-cropper-resizer-color: #5499c7;\n  --plus-cropper-resizer-size: 15px;\n  --plus-cropper-viewport-color: #5499c7;\n  --plus-cropper-viewport-weight: 2px;\n}\n\nplus-cropper.style-4 {\n  --plus-cropper-guides-weight: 2px;\n  --plus-cropper-resizer-size: 22px;\n  --plus-cropper-resizer-weight: 2px;\n  --plus-cropper-viewport-style: dashed;\n  --plus-cropper-viewport-weight: 2px;\n}\n\nplus-cropper.style-5 {\n  --plus-cropper-backdrop-color: white;\n  --plus-cropper-backdrop-opacity: 0.7;\n  --plus-cropper-resizer-color: #a93226;\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-resizer-weight: 3px;\n}\n\nplus-cropper.style-6 {\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n"
   },
   {
     "key": "svelte/cropper/styles",
@@ -7923,8 +7923,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n\nplus-cropper.style-1 {\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\nplus-cropper.style-2 {\n  --plus-cropper-indicator-color: #e6f018;\n  --plus-cropper-indicator-size: 15px;\n  --plus-cropper-indicator-weight: 2px;\n  --plus-cropper-resizer-color: black;\n  --plus-cropper-resizer-offset: -27px;\n  --plus-cropper-resizer-size: 21px;\n  --plus-cropper-viewport-color: #e6f018;\n}\nplus-cropper.style-3 {\n  --plus-cropper-indicator-color: #5499c7;\n  --plus-cropper-guides-color: black;\n  --plus-cropper-resizer-color: #5499c7;\n  --plus-cropper-resizer-size: 15px;\n  --plus-cropper-viewport-color: #5499c7;\n  --plus-cropper-viewport-weight: 2px;\n}\nplus-cropper.style-4 {\n  --plus-cropper-guides-weight: 2px;\n  --plus-cropper-resizer-size: 22px;\n  --plus-cropper-resizer-weight: 2px;\n  --plus-cropper-viewport-style: dashed;\n  --plus-cropper-viewport-weight: 2px;\n}\nplus-cropper.style-5 {\n  --plus-cropper-backdrop-color: white;\n  --plus-cropper-backdrop-opacity: 0.7;\n  --plus-cropper-resizer-color: #a93226;\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-resizer-weight: 3px;\n}\nplus-cropper.style-6 {\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper\n      class=\"style-1\"\n      indicator\n      mode=\"crop\"\n      shape=\"circle\"\n      resizer=\"main\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-2\"\n      indicator\n      mode=\"crop\"\n      resizer=\"both\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-3\"\n      guides\n      indicator\n      mode=\"crop\"\n      resizer=\"main\"\n      resizer-shape=\"circle\"\n      shape=\"circle\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-4\"\n      guides\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-5\"\n      backdrop\n      background\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper class=\"style-6\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-grow: 1;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\n\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n\nplus-cropper.style-1 {\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n\nplus-cropper.style-2 {\n  --plus-cropper-indicator-color: #e6f018;\n  --plus-cropper-indicator-size: 15px;\n  --plus-cropper-indicator-weight: 2px;\n  --plus-cropper-resizer-color: black;\n  --plus-cropper-resizer-offset: -27px;\n  --plus-cropper-resizer-size: 21px;\n  --plus-cropper-viewport-color: #e6f018;\n}\n\nplus-cropper.style-3 {\n  --plus-cropper-indicator-color: #5499c7;\n  --plus-cropper-guides-color: black;\n  --plus-cropper-resizer-color: #5499c7;\n  --plus-cropper-resizer-size: 15px;\n  --plus-cropper-viewport-color: #5499c7;\n  --plus-cropper-viewport-weight: 2px;\n}\n\nplus-cropper.style-4 {\n  --plus-cropper-guides-weight: 2px;\n  --plus-cropper-resizer-size: 22px;\n  --plus-cropper-resizer-weight: 2px;\n  --plus-cropper-viewport-style: dashed;\n  --plus-cropper-viewport-weight: 2px;\n}\n\nplus-cropper.style-5 {\n  --plus-cropper-backdrop-color: white;\n  --plus-cropper-backdrop-opacity: 0.7;\n  --plus-cropper-resizer-color: #a93226;\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-resizer-weight: 3px;\n}\n\nplus-cropper.style-6 {\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n",
+    "template": "<div class=\"container\">\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-1\"\n      indicator\n      mode=\"crop\"\n      shape=\"circle\"\n      resizer=\"main\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-2\"\n      indicator\n      mode=\"crop\"\n      resizer=\"both\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-3\"\n      guides\n      indicator\n      mode=\"crop\"\n      resizer=\"main\"\n      resizer-shape=\"circle\"\n      shape=\"circle\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-4\"\n      guides\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-5\"\n      backdrop\n      background\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper class=\"style-6\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
   },
   {
     "key": "vue/cropper/styles",
@@ -7934,8 +7934,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\nimport '@htmlplus/ui/grid-item.js';\nimport '@htmlplus/ui/grid.js';\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n\nplus-cropper.style-1 {\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\nplus-cropper.style-2 {\n  --plus-cropper-indicator-color: #e6f018;\n  --plus-cropper-indicator-size: 15px;\n  --plus-cropper-indicator-weight: 2px;\n  --plus-cropper-resizer-color: black;\n  --plus-cropper-resizer-offset: -27px;\n  --plus-cropper-resizer-size: 21px;\n  --plus-cropper-viewport-color: #e6f018;\n}\nplus-cropper.style-3 {\n  --plus-cropper-indicator-color: #5499c7;\n  --plus-cropper-guides-color: black;\n  --plus-cropper-resizer-color: #5499c7;\n  --plus-cropper-resizer-size: 15px;\n  --plus-cropper-viewport-color: #5499c7;\n  --plus-cropper-viewport-weight: 2px;\n}\nplus-cropper.style-4 {\n  --plus-cropper-guides-weight: 2px;\n  --plus-cropper-resizer-size: 22px;\n  --plus-cropper-resizer-weight: 2px;\n  --plus-cropper-viewport-style: dashed;\n  --plus-cropper-viewport-weight: 2px;\n}\nplus-cropper.style-5 {\n  --plus-cropper-backdrop-color: white;\n  --plus-cropper-backdrop-opacity: 0.7;\n  --plus-cropper-resizer-color: #a93226;\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-resizer-weight: 3px;\n}\nplus-cropper.style-6 {\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper\n      class=\"style-1\"\n      indicator\n      mode=\"crop\"\n      shape=\"circle\"\n      resizer=\"main\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-2\"\n      indicator\n      mode=\"crop\"\n      resizer=\"both\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-3\"\n      guides\n      indicator\n      mode=\"crop\"\n      resizer=\"main\"\n      resizer-shape=\"circle\"\n      shape=\"circle\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-4\"\n      guides\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-5\"\n      backdrop\n      background\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-6\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-grow: 1;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\n\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n\nplus-cropper.style-1 {\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n\nplus-cropper.style-2 {\n  --plus-cropper-indicator-color: #e6f018;\n  --plus-cropper-indicator-size: 15px;\n  --plus-cropper-indicator-weight: 2px;\n  --plus-cropper-resizer-color: black;\n  --plus-cropper-resizer-offset: -27px;\n  --plus-cropper-resizer-size: 21px;\n  --plus-cropper-viewport-color: #e6f018;\n}\n\nplus-cropper.style-3 {\n  --plus-cropper-indicator-color: #5499c7;\n  --plus-cropper-guides-color: black;\n  --plus-cropper-resizer-color: #5499c7;\n  --plus-cropper-resizer-size: 15px;\n  --plus-cropper-viewport-color: #5499c7;\n  --plus-cropper-viewport-weight: 2px;\n}\n\nplus-cropper.style-4 {\n  --plus-cropper-guides-weight: 2px;\n  --plus-cropper-resizer-size: 22px;\n  --plus-cropper-resizer-weight: 2px;\n  --plus-cropper-viewport-style: dashed;\n  --plus-cropper-viewport-weight: 2px;\n}\n\nplus-cropper.style-5 {\n  --plus-cropper-backdrop-color: white;\n  --plus-cropper-backdrop-opacity: 0.7;\n  --plus-cropper-resizer-color: #a93226;\n  --plus-cropper-resizer-size: 20px;\n  --plus-cropper-resizer-weight: 3px;\n}\n\nplus-cropper.style-6 {\n  --plus-cropper-viewport-opacity: 0;\n  --plus-cropper-viewport-style: dashed;\n}\n",
+    "template": "<div class=\"container\">\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-1\"\n      indicator\n      mode=\"crop\"\n      shape=\"circle\"\n      resizer=\"main\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-2\"\n      indicator\n      mode=\"crop\"\n      resizer=\"both\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-3\"\n      guides\n      indicator\n      mode=\"crop\"\n      resizer=\"main\"\n      resizer-shape=\"circle\"\n      shape=\"circle\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-4\"\n      guides\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n  <div class=\"container\">\n    <plus-cropper\n      class=\"style-5\"\n      backdrop\n      background\n      mode=\"crop\"\n      resizer=\"edge\"\n      resizer-shape=\"line\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      class=\"style-6\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
   },
   {
     "key": "angular/cropper/shape",
@@ -7999,8 +7999,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/cropper.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper\n      mode=\"move\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      view=\"none\"\n    ></plus-cropper>\n    <plus-cropper\n      mode=\"crop\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n",
+    "template": "<div class=\"container\">\n  <plus-cropper\n    mode=\"move\"\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    view=\"none\"\n  ></plus-cropper>\n  <plus-cropper\n    mode=\"crop\"\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n</div>\n"
   },
   {
     "key": "javascript/cropper/mode",
@@ -8010,8 +8010,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper\n      mode=\"move\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      view=\"none\"\n    ></plus-cropper>\n    <plus-cropper\n      mode=\"crop\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n",
+    "template": "<div class=\"container\">\n  <plus-cropper\n    mode=\"move\"\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    view=\"none\"\n  ></plus-cropper>\n  <plus-cropper\n    mode=\"crop\"\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n</div>\n"
   },
   {
     "key": "react/cropper/mode",
@@ -8020,8 +8020,8 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <div className=\"grid\">\n        <plus-cropper\n          mode=\"move\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          view=\"none\"\n        ></plus-cropper>\n        <plus-cropper\n          mode=\"crop\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </div>\n    </div>\n  );\n}\nexport default App;\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n"
+    "script": "import '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <plus-cropper\n        mode=\"move\"\n        src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        view=\"none\"\n      ></plus-cropper>\n      <plus-cropper\n        mode=\"crop\"\n        src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ></plus-cropper>\n    </div>\n  );\n}\nexport default App;\n",
+    "style": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n"
   },
   {
     "key": "svelte/cropper/mode",
@@ -8031,8 +8031,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper\n      mode=\"move\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      view=\"none\"\n    ></plus-cropper>\n    <plus-cropper mode=\"crop\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n",
+    "template": "<div class=\"container\">\n  <plus-cropper\n    mode=\"move\"\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    view=\"none\"\n  ></plus-cropper>\n  <plus-cropper mode=\"crop\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n</div>\n"
   },
   {
     "key": "vue/cropper/mode",
@@ -8042,8 +8042,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper\n      mode=\"move\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      view=\"none\"\n    ></plus-cropper>\n    <plus-cropper\n      mode=\"crop\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n",
+    "template": "<div class=\"container\">\n  <plus-cropper\n    mode=\"move\"\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    view=\"none\"\n  ></plus-cropper>\n  <plus-cropper\n    mode=\"crop\"\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n</div>\n"
   },
   {
     "key": "angular/cropper/indicator",
@@ -8298,8 +8298,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/cropper.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      background\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n",
+    "template": "<div class=\"container\">\n  <plus-cropper\n    view=\"none\"\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n  <plus-cropper\n    background\n    view=\"none\"\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n</div>\n"
   },
   {
     "key": "javascript/cropper/background",
@@ -8309,8 +8309,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      background\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n",
+    "template": "<div class=\"container\">\n  <plus-cropper\n    view=\"none\"\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n  <plus-cropper\n    background\n    view=\"none\"\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n</div>\n"
   },
   {
     "key": "react/cropper/background",
@@ -8319,8 +8319,8 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <div className=\"grid\">\n        <plus-cropper\n          view=\"none\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n        <plus-cropper\n          background\n          view=\"none\"\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n        ></plus-cropper>\n      </div>\n    </div>\n  );\n}\nexport default App;\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n"
+    "script": "import '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  return (\n    <div className=\"container\">\n      <plus-cropper\n        view=\"none\"\n        src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ></plus-cropper>\n      <plus-cropper\n        background\n        view=\"none\"\n        src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ></plus-cropper>\n    </div>\n  );\n}\nexport default App;\n",
+    "style": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n"
   },
   {
     "key": "svelte/cropper/background",
@@ -8330,8 +8330,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper view=\"none\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      background\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n",
+    "template": "<div class=\"container\">\n  <plus-cropper view=\"none\" src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n  <plus-cropper\n    background\n    view=\"none\"\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n</div>\n"
   },
   {
     "key": "vue/cropper/background",
@@ -8341,8 +8341,8 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/cropper.js';\n",
-    "style": ".container {\n  container-type: inline-size;\n}\n\n.grid {\n  display: grid;\n  align-items: start;\n  grid-template: auto / 1fr 1fr;\n  gap: 1rem;\n}\n\nplus-cropper {\n  min-width: 0;\n}\n\n@container (max-width: 500px) {\n  .grid {\n    grid-template: auto auto / 1fr;\n  }\n}\n",
-    "template": "<div class=\"container\">\n  <div class=\"grid\">\n    <plus-cropper\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n    <plus-cropper\n      background\n      view=\"none\"\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    ></plus-cropper>\n  </div>\n</div>\n"
+    "style": ".container {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 1rem;\n}\nplus-cropper {\n  flex: 1;\n  min-width: 15rem;\n}\n",
+    "template": "<div class=\"container\">\n  <plus-cropper\n    view=\"none\"\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n  <plus-cropper\n    background\n    view=\"none\"\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n  ></plus-cropper>\n</div>\n"
   },
   {
     "key": "angular/cropper/aspect-ratio",
@@ -13118,7 +13118,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  asset: {\n    animation: {\n      'custom-pulse': [\n        {\n          offset: 0,\n          opacity: '0.6',\n          transform: 'scale(1.00)'\n        },\n        {\n          offset: 1,\n          opacity: '0.0',\n          transform: 'scale(1.60)'\n        }\n      ]\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  assets: {\n    animations: {\n      'custom-pulse': [\n        {\n          offset: 0,\n          opacity: '0.6',\n          transform: 'scale(1.00)'\n        },\n        {\n          offset: 1,\n          opacity: '0.0',\n          transform: 'scale(1.60)'\n        }\n      ]\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
     "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      [delay]=\"0000\"\n      [duration]=\"2000\"\n      [iterations]=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      [delay]=\"1000\"\n      [duration]=\"2000\"\n      [iterations]=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"https://picsum.photos/id/64/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
@@ -13130,7 +13130,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  asset: {\n    animation: {\n      'custom-pulse': [\n        {\n          offset: 0,\n          opacity: '0.6',\n          transform: 'scale(1.00)'\n        },\n        {\n          offset: 1,\n          opacity: '0.0',\n          transform: 'scale(1.60)'\n        }\n      ]\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  assets: {\n    animations: {\n      'custom-pulse': [\n        {\n          offset: 0,\n          opacity: '0.6',\n          transform: 'scale(1.00)'\n        },\n        {\n          offset: 1,\n          opacity: '0.0',\n          transform: 'scale(1.60)'\n        }\n      ]\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
     "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
     "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"https://picsum.photos/id/64/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
@@ -13142,7 +13142,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  asset: {\n    animation: {\n      'custom-pulse': [\n        {\n          offset: 0,\n          opacity: '0.6',\n          transform: 'scale(1.00)'\n        },\n        {\n          offset: 1,\n          opacity: '0.0',\n          transform: 'scale(1.60)'\n        }\n      ]\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  assets: {\n    animations: {\n      'custom-pulse': [\n        {\n          offset: 0,\n          opacity: '0.6',\n          transform: 'scale(1.00)'\n        },\n        {\n          offset: 1,\n          opacity: '0.0',\n          transform: 'scale(1.60)'\n        }\n      ]\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar shape=\"circle\">\n        <plus-animation\n          delay={0}\n          duration={2000}\n          iterations={Infinity}\n          name=\"custom-pulse\"\n          run\n        ></plus-animation>\n        <plus-animation\n          delay={1000}\n          duration={2000}\n          iterations={Infinity}\n          name=\"custom-pulse\"\n          run\n        ></plus-animation>\n        <img src=\"https://picsum.photos/id/64/90/90\" />\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n",
     "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n"
   },
@@ -13153,7 +13153,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  asset: {\n    animation: {\n      'custom-pulse': [\n        {\n          offset: 0,\n          opacity: '0.6',\n          transform: 'scale(1.00)'\n        },\n        {\n          offset: 1,\n          opacity: '0.0',\n          transform: 'scale(1.60)'\n        }\n      ]\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  assets: {\n    animations: {\n      'custom-pulse': [\n        {\n          offset: 0,\n          opacity: '0.6',\n          transform: 'scale(1.00)'\n        },\n        {\n          offset: 1,\n          opacity: '0.0',\n          transform: 'scale(1.60)'\n        }\n      ]\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
     "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
     "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation delay={0} duration={2000} iterations={Infinity} name=\"custom-pulse\" run\n    ></plus-animation>\n    <plus-animation delay={1000} duration={2000} iterations={Infinity} name=\"custom-pulse\" run\n    ></plus-animation>\n    <img src=\"https://picsum.photos/id/64/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
@@ -13165,7 +13165,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  asset: {\n    animation: {\n      'custom-pulse': [\n        {\n          offset: 0,\n          opacity: '0.6',\n          transform: 'scale(1.00)'\n        },\n        {\n          offset: 1,\n          opacity: '0.0',\n          transform: 'scale(1.60)'\n        }\n      ]\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  assets: {\n    animations: {\n      'custom-pulse': [\n        {\n          offset: 0,\n          opacity: '0.6',\n          transform: 'scale(1.00)'\n        },\n        {\n          offset: 1,\n          opacity: '0.0',\n          transform: 'scale(1.60)'\n        }\n      ]\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
     "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
     "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      :delay=\"0000\"\n      :duration=\"2000\"\n      :iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      :delay=\"1000\"\n      :duration=\"2000\"\n      :iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"https://picsum.photos/id/64/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
@@ -13179,7 +13179,7 @@ export const examples = [
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-x.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-y.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  [override]='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n>\n  <plus-animation [iterations]=\"Infinity\" name=\"flip-in-x\" run></plus-animation>\n  <plus-animation [iterations]=\"Infinity\" name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
+    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  [overrides]='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n>\n  <plus-animation [iterations]=\"Infinity\" name=\"flip-in-x\" run></plus-animation>\n  <plus-animation [iterations]=\"Infinity\" name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
   },
   {
     "key": "javascript/animation/name",
@@ -13190,7 +13190,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-x.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-y.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  override='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n>\n  <plus-animation iterations=\"Infinity\" name=\"flip-in-x\" run></plus-animation>\n  <plus-animation iterations=\"Infinity\" name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
+    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  overrides='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n>\n  <plus-animation iterations=\"Infinity\" name=\"flip-in-x\" run></plus-animation>\n  <plus-animation iterations=\"Infinity\" name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
   },
   {
     "key": "react/animation/name",
@@ -13199,7 +13199,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-x.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-y.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack\n      gap=\"1rem\"\n      justify=\"evenly\"\n      override={{\n        'sm-before': {\n          vertical: true\n        },\n        'sm-up': {\n          vertical: false\n        }\n      }}\n    >\n      <plus-animation iterations={Infinity} name=\"flip-in-x\" run></plus-animation>\n      <plus-animation iterations={Infinity} name=\"flip-in-y\" run></plus-animation>\n    </plus-stack>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-x.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-y.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack\n      gap=\"1rem\"\n      justify=\"evenly\"\n      overrides={{\n        'sm-before': {\n          vertical: true\n        },\n        'sm-up': {\n          vertical: false\n        }\n      }}\n    >\n      <plus-animation iterations={Infinity} name=\"flip-in-x\" run></plus-animation>\n      <plus-animation iterations={Infinity} name=\"flip-in-y\" run></plus-animation>\n    </plus-stack>\n  );\n}\nexport default App;\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n"
   },
   {
@@ -13211,7 +13211,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-x.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-y.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  override={{\n    'sm-before': {\n      vertical: true\n    },\n    'sm-up': {\n      vertical: false\n    }\n  }}\n>\n  <plus-animation iterations={Infinity} name=\"flip-in-x\" run></plus-animation>\n  <plus-animation iterations={Infinity} name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
+    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  overrides={{\n    'sm-before': {\n      vertical: true\n    },\n    'sm-up': {\n      vertical: false\n    }\n  }}\n>\n  <plus-animation iterations={Infinity} name=\"flip-in-x\" run></plus-animation>\n  <plus-animation iterations={Infinity} name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
   },
   {
     "key": "vue/animation/name",
@@ -13222,7 +13222,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-x.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-y.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  :override='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n>\n  <plus-animation :iterations=\"Infinity\" name=\"flip-in-x\" run></plus-animation>\n  <plus-animation :iterations=\"Infinity\" name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
+    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  :overrides='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n>\n  <plus-animation :iterations=\"Infinity\" name=\"flip-in-x\" run></plus-animation>\n  <plus-animation :iterations=\"Infinity\" name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
   },
   {
     "key": "angular/animation/methods",
@@ -13395,7 +13395,7 @@ export const examples = [
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/fading-exits/fade-out-down.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  [override]='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n>\n  <plus-animation easing=\"linear\" [iterations]=\"Infinity\" name=\"fade-out-down\" run></plus-animation>\n  <plus-animation\n    easing=\"ease-in\"\n    [iterations]=\"Infinity\"\n    name=\"fade-out-down\"\n    run\n  ></plus-animation>\n  <plus-animation\n    easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n    [iterations]=\"Infinity\"\n    name=\"fade-out-down\"\n    run\n  ></plus-animation>\n</plus-stack>\n<br />\n<br />\n<br />\n"
+    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  [overrides]='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n>\n  <plus-animation easing=\"linear\" [iterations]=\"Infinity\" name=\"fade-out-down\" run></plus-animation>\n  <plus-animation\n    easing=\"ease-in\"\n    [iterations]=\"Infinity\"\n    name=\"fade-out-down\"\n    run\n  ></plus-animation>\n  <plus-animation\n    easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n    [iterations]=\"Infinity\"\n    name=\"fade-out-down\"\n    run\n  ></plus-animation>\n</plus-stack>\n<br />\n<br />\n<br />\n"
   },
   {
     "key": "javascript/animation/easing",
@@ -13406,7 +13406,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/fading-exits/fade-out-down.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  override='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n>\n  <plus-animation easing=\"linear\" iterations=\"Infinity\" name=\"fade-out-down\" run></plus-animation>\n  <plus-animation easing=\"ease-in\" iterations=\"Infinity\" name=\"fade-out-down\" run></plus-animation>\n  <plus-animation\n    easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n    iterations=\"Infinity\"\n    name=\"fade-out-down\"\n    run\n  ></plus-animation>\n</plus-stack>\n<br />\n<br />\n<br />\n"
+    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  overrides='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n>\n  <plus-animation easing=\"linear\" iterations=\"Infinity\" name=\"fade-out-down\" run></plus-animation>\n  <plus-animation easing=\"ease-in\" iterations=\"Infinity\" name=\"fade-out-down\" run></plus-animation>\n  <plus-animation\n    easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n    iterations=\"Infinity\"\n    name=\"fade-out-down\"\n    run\n  ></plus-animation>\n</plus-stack>\n<br />\n<br />\n<br />\n"
   },
   {
     "key": "react/animation/easing",
@@ -13415,7 +13415,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/fading-exits/fade-out-down.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-stack\n        gap=\"1rem\"\n        justify=\"evenly\"\n        override={{\n          'sm-before': {\n            vertical: true\n          },\n          'sm-up': {\n            vertical: false\n          }\n        }}\n      >\n        <plus-animation\n          easing=\"linear\"\n          iterations={Infinity}\n          name=\"fade-out-down\"\n          run\n        ></plus-animation>\n        <plus-animation\n          easing=\"ease-in\"\n          iterations={Infinity}\n          name=\"fade-out-down\"\n          run\n        ></plus-animation>\n        <plus-animation\n          easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n          iterations={Infinity}\n          name=\"fade-out-down\"\n          run\n        ></plus-animation>\n      </plus-stack>\n      <br />\n      <br />\n      <br />\n    </>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/fading-exits/fade-out-down.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-stack\n        gap=\"1rem\"\n        justify=\"evenly\"\n        overrides={{\n          'sm-before': {\n            vertical: true\n          },\n          'sm-up': {\n            vertical: false\n          }\n        }}\n      >\n        <plus-animation\n          easing=\"linear\"\n          iterations={Infinity}\n          name=\"fade-out-down\"\n          run\n        ></plus-animation>\n        <plus-animation\n          easing=\"ease-in\"\n          iterations={Infinity}\n          name=\"fade-out-down\"\n          run\n        ></plus-animation>\n        <plus-animation\n          easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n          iterations={Infinity}\n          name=\"fade-out-down\"\n          run\n        ></plus-animation>\n      </plus-stack>\n      <br />\n      <br />\n      <br />\n    </>\n  );\n}\nexport default App;\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n"
   },
   {
@@ -13427,7 +13427,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/fading-exits/fade-out-down.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  override={{\n    'sm-before': {\n      vertical: true\n    },\n    'sm-up': {\n      vertical: false\n    }\n  }}\n>\n  <plus-animation easing=\"linear\" iterations={Infinity} name=\"fade-out-down\" run></plus-animation>\n  <plus-animation easing=\"ease-in\" iterations={Infinity} name=\"fade-out-down\" run></plus-animation>\n  <plus-animation\n    easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n    iterations={Infinity}\n    name=\"fade-out-down\"\n    run\n  ></plus-animation>\n</plus-stack>\n<br />\n<br />\n<br />\n"
+    "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  overrides={{\n    'sm-before': {\n      vertical: true\n    },\n    'sm-up': {\n      vertical: false\n    }\n  }}\n>\n  <plus-animation easing=\"linear\" iterations={Infinity} name=\"fade-out-down\" run></plus-animation>\n  <plus-animation easing=\"ease-in\" iterations={Infinity} name=\"fade-out-down\" run></plus-animation>\n  <plus-animation\n    easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n    iterations={Infinity}\n    name=\"fade-out-down\"\n    run\n  ></plus-animation>\n</plus-stack>\n<br />\n<br />\n<br />\n"
   },
   {
     "key": "vue/animation/easing",
@@ -13438,7 +13438,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/fading-exits/fade-out-down.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-    "template": "<div>\n  <plus-stack\n    gap=\"1rem\"\n    justify=\"evenly\"\n    :override='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n  >\n    <plus-animation\n      easing=\"linear\"\n      :iterations=\"Infinity\"\n      name=\"fade-out-down\"\n      run\n    ></plus-animation>\n    <plus-animation\n      easing=\"ease-in\"\n      :iterations=\"Infinity\"\n      name=\"fade-out-down\"\n      run\n    ></plus-animation>\n    <plus-animation\n      easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n      :iterations=\"Infinity\"\n      name=\"fade-out-down\"\n      run\n    ></plus-animation>\n  </plus-stack>\n  <br />\n  <br />\n  <br />\n</div>\n"
+    "template": "<div>\n  <plus-stack\n    gap=\"1rem\"\n    justify=\"evenly\"\n    :overrides='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n  >\n    <plus-animation\n      easing=\"linear\"\n      :iterations=\"Infinity\"\n      name=\"fade-out-down\"\n      run\n    ></plus-animation>\n    <plus-animation\n      easing=\"ease-in\"\n      :iterations=\"Infinity\"\n      name=\"fade-out-down\"\n      run\n    ></plus-animation>\n    <plus-animation\n      easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n      :iterations=\"Infinity\"\n      name=\"fade-out-down\"\n      run\n    ></plus-animation>\n  </plus-stack>\n  <br />\n  <br />\n  <br />\n</div>\n"
   },
   {
     "key": "angular/animation/duration",

@@ -8,9 +8,9 @@ import '@htmlplus/ui/stack.js';
 import { setConfig } from '@htmlplus/ui/config.js';
 
 setConfig({
-  element: {
+  elements: {
     'plus-prism': {
-      property: {
+      properties: {
         async resolver({ key, value }) {
           if (key == 'plugin') {
             await import(`prismjs/plugins/${value}/prism-${value}.js`);

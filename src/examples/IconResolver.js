@@ -8,9 +8,9 @@ import '@htmlplus/ui/icon.js';
 import { setConfig } from '@htmlplus/ui/config.js';
 
 setConfig({
-  element: {
+  elements: {
     'plus-icon': {
-      property: {
+      properties: {
         resolver: ({ name }) => {
           const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;
           return fetch(url).then(async (response) => {

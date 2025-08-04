@@ -9,21 +9,21 @@ import { faker } from '@faker-js/faker/locale/en';
 export function HTMLPLUS() {
   useEffect(() => {
     setConfig({
-      element: {
+      elements: {
         'plus-faker': {
-          property: {
+          properties: {
             instance: faker,
           },
         },
         'plus-icon': {
-          property: {
+          properties: {
             resolver({ name }: any) {
               return import(`../../public/assets/icons/${name}.svg`).then((module) => module.default);
             },
           },
         },
         'plus-prism': {
-          property: {
+          properties: {
             theme: 'nord',
             async resolver({ key, value }: any) {
               switch (key) {

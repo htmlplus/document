@@ -48,10 +48,10 @@ export default async function Page({ params }: { params: Promise<Params> }) {
           `import { setConfig } from '@htmlplus/ui/config.js';`,
           ``,
           `setConfig({`,
-          `  element: {`,
+          `  elements: {`,
           // TODO: remove plus
           `    'plus-${element.key}': {`,
-          `      property: {`,
+          `      properties: {`,
           element.properties.map((property) => {
             return `        ${property.name}: ${'initializer' in property ? property.initializer : ''},`;
           }),

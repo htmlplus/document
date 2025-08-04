@@ -7,12 +7,14 @@ import '@htmlplus/ui/cropper.js';
 function App() {
   return (
     <div className="container">
-      <div className="grid">
+      <div className="container">
         <plus-cropper src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"></plus-cropper>
         <plus-cropper
           zoomable
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
         ></plus-cropper>
+      </div>
+      <div className="container">
         <plus-cropper
           zoomable="touch"
           src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
@@ -30,7 +32,7 @@ const CropperZoomable = () => {
   return (
     <div className="cropper-zoomable">
       <App />
-      <style>{`.cropper-zoomable { .container {  container-type: inline-size;}.grid {  display: grid;  align-items: start;  grid-template: auto auto / 1fr 1fr;  gap: 1rem;}plus-cropper {  min-width: 0;}@container (max-width: 500px) {  .grid {    grid-template: auto auto auto auto / 1fr;  }} }`}</style>
+      <style>{`.cropper-zoomable { .container {  display: flex;  flex-grow: 1;  flex-wrap: wrap;  align-items: center;  gap: 1rem;}plus-cropper {  flex: 1;  min-width: 15rem;} }`}</style>
     </div>
   )
 };

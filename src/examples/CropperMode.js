@@ -7,17 +7,15 @@ import '@htmlplus/ui/cropper.js';
 function App() {
   return (
     <div className="container">
-      <div className="grid">
-        <plus-cropper
-          mode="move"
-          src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-          view="none"
-        ></plus-cropper>
-        <plus-cropper
-          mode="crop"
-          src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-        ></plus-cropper>
-      </div>
+      <plus-cropper
+        mode="move"
+        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+        view="none"
+      ></plus-cropper>
+      <plus-cropper
+        mode="crop"
+        src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+      ></plus-cropper>
     </div>
   );
 }
@@ -26,7 +24,7 @@ const CropperMode = () => {
   return (
     <div className="cropper-mode">
       <App />
-      <style>{`.cropper-mode { .container {  container-type: inline-size;}.grid {  display: grid;  align-items: start;  grid-template: auto / 1fr 1fr;  gap: 1rem;}plus-cropper {  min-width: 0;}@container (max-width: 500px) {  .grid {    grid-template: auto auto / 1fr;  }} }`}</style>
+      <style>{`.cropper-mode { .container {  display: flex;  flex-wrap: wrap;  align-items: center;  gap: 1rem;}plus-cropper {  flex: 1;  min-width: 15rem;} }`}</style>
     </div>
   )
 };
