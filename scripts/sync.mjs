@@ -30,8 +30,6 @@ const db = await (async () => {
   const LOCAL = path.join(__dirname, '../../examples/dist/db.json');
   const REMOTE = 'https://github.com/htmlplus/examples/raw/main/dist/db.json';
 
-  const db = JSON.parse(await load(LOCAL, REMOTE));
-
   return JSON.parse(await load(LOCAL, REMOTE));
 })();
 
