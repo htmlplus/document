@@ -42,7 +42,7 @@ const document = await (async () => {
 
 // changelog
 (async () => {
-  const DESTINATION = './src/app/(internal)/changelog/page.mdx';
+  const DESTINATION = './src/app/(root)/(internal)/changelog/page.mdx';
   const LOCAL = path.join(__dirname, '../../ui/CHANGELOG.md');
   const REMOTE = 'https://github.com/htmlplus/ui/raw/main/CHANGELOG.md';
 
@@ -164,7 +164,7 @@ const document = await (async () => {
 
 // vision
 (async () => {
-  const DESTINATION = './src/app/(internal)/vision/page.mdx';
+  const DESTINATION = './src/app/(root)/(internal)/vision/page.mdx';
   const LOCAL = path.join(__dirname, '../../ui/VISION.md');
   const REMOTE = 'https://github.com/htmlplus/ui/raw/main/VISION.md';
 
@@ -175,7 +175,7 @@ const document = await (async () => {
 
 // roadmap
 (async () => {
-  const DESTINATION = './src/app/(internal)/roadmap/page.mdx';
+  const DESTINATION = './src/app/(root)/(internal)/roadmap/page.mdx';
   const LOCAL = path.join(__dirname, '../../ui/ROADMAP.md');
   const REMOTE = 'https://github.com/htmlplus/ui/raw/main/ROADMAP.md';
 

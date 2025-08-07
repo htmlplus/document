@@ -1,4 +1,4 @@
-import { capitalCase, pascalCase, sentenceCase } from 'change-case';
+import { camelCase, capitalCase, pascalCase, sentenceCase } from 'change-case';
 
 import { ROUTES } from '@/constants';
 import { Markup } from '@/containers';
@@ -37,15 +37,21 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
   const element = elements.find((element) => element.key == elementKey)!;
 
-  const example = {} as any;
+  const scope = {} as any;
 
-  element.readmeContent ||= '';
+  const sections = [];
 
-  try {
-    element.readmeContent = element.readmeContent
-      .replace(/<Example src="examples\/(.*?)"/g, `<Example {...(example["$1"] || {})}`)
-      .replace(/<LastModified/g, `<LastModified value="${element.lastModified}"`);
-  } catch {}
+  sections.push(`# ${element.title}`);
+
+  sections.push(element.description);
+
+  sections.push('<Usage />');
+
+  sections.push('<Api />');
+
+  sections.push('<GlobalConfig />');
+
+  sections.push('<Examples />');
 
   for (const current of examples) {
     const [frameworkKey, elementKey, exampleKey] = current.key.split('/');
@@ -104,7 +110,21 @@ export default async function Page({ params }: { params: Promise<Params> }) {
       },
     ];
 
-    example[exampleKey] = Object.assign(
+    sections.push(`### ${title}`);
+
+    sections.push(
+      (current.description || '')
+        .replaceAll('<code>', '<Badge>')
+        .replaceAll('</code>', '</Badge>')
+        .replaceAll('<p>', '')
+        .replaceAll('</p>', ''),
+    );
+
+    const key = camelCase(`example_${exampleKey}`);
+
+    sections.push(`<Example {...${key}} />`);
+
+    scope[key] = Object.assign(
       {
         element: element.key,
         example: exampleKey,
@@ -117,5 +137,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
     );
   }
 
-  return <Markup value={element.readmeContent} scope={{ example }}></Markup>;
+  sections.push(`<LastModified value="${element.lastModified}" />`);
+
+  return <Markup value={sections.join('\n\n')} scope={scope}></Markup>;
 }

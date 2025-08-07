@@ -2344,6 +2344,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/scroll-detector.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange(event) {\n    console.log(event.detail);\n  }\n}\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
     "template": "<div class=\"container\">\n  <div class=\"scrollable reference1\">\n    <plus-faker api=\"lorem.paragraphs\" [arguments]='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\".reference1\"\n    vertical\n    (plus-change)=\"onPlusChange($event)\"\n  ></plus-scroll-detector>\n</div>\n"
@@ -2355,6 +2356,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/scroll-detector.js';\n\n$detector.addEventListener('plus-change', (event) => {\n  console.log(event.detail);\n});\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
     "template": "<div class=\"container\">\n  <div class=\"scrollable reference1\">\n    <plus-faker api=\"lorem.paragraphs\" arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector id=\"$detector\" reference=\".reference1\" vertical></plus-scroll-detector>\n</div>\n"
@@ -2366,6 +2368,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/scroll-detector.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    console.log(event.detail);\n  }\n  return (\n    <div className=\"container\">\n      <div className=\"scrollable reference1\">\n        <plus-faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></plus-faker>\n      </div>\n      <plus-scroll-detector\n        reference=\".reference1\"\n        vertical\n        onPlusChange={onPlusChange}\n      ></plus-scroll-detector>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n"
   },
@@ -2376,6 +2379,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/scroll-detector.js';\n\nfunction onPlusChange(event) {\n  console.log(event.detail);\n}\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
     "template": "<div class=\"container\">\n  <div class=\"scrollable reference1\">\n    <plus-faker api=\"lorem.paragraphs\" arguments={[20, '\\n\\n']}></plus-faker>\n  </div>\n  <plus-scroll-detector reference=\".reference1\" vertical on:plus-change={onPlusChange}\n  ></plus-scroll-detector>\n</div>\n"
@@ -2387,6 +2391,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/scroll-detector.js';\n\nfunction onPlusChange(event) {\n  console.log(event.detail);\n}\n",
     "style": ".container {\n  position: relative;\n}\n.scrollable {\n  padding: 1rem;\n  height: 20em;\n  overflow-y: auto;\n}\n",
     "template": "<div class=\"container\">\n  <div class=\"scrollable reference1\">\n    <plus-faker api=\"lorem.paragraphs\" :arguments='[20, \"\\n\\n\"]'></plus-faker>\n  </div>\n  <plus-scroll-detector\n    reference=\".reference1\"\n    vertical\n    @plus-change=\"onPlusChange\"\n  ></plus-scroll-detector>\n</div>\n"
@@ -3393,6 +3398,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      The default theme is supported by default. If other themes are required, the\n      <code>resolver</code>\n      property should be configured to return a raw CSS style.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'theme') {\n            const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n            const styles = await fetch(url).then((response) => response.text());\n            return styles;\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism theme=\"default\">const theme = 'default';</plus-prism>\n  <plus-prism theme=\"coy\">const theme = 'coy';</plus-prism>\n  <plus-prism theme=\"dark\">const theme = 'dark';</plus-prism>\n  <plus-prism theme=\"funky\">const theme = 'funky';</plus-prism>\n  <plus-prism theme=\"okaidia\">const theme = 'okaidia';</plus-prism>\n  <plus-prism theme=\"solarizedlight\">const theme = 'solarizedlight';</plus-prism>\n  <plus-prism theme=\"tomorrow\">const theme = 'tomorrow';</plus-prism>\n  <plus-prism theme=\"twilight\">const theme = 'twilight';</plus-prism>\n</plus-stack>\n"
@@ -3404,6 +3410,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      The default theme is supported by default. If other themes are required, the\n      <code>resolver</code>\n      property should be configured to return a raw CSS style.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'theme') {\n            const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n            const styles = await fetch(url).then((response) => response.text());\n            return styles;\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism theme=\"default\">const theme = 'default';</plus-prism>\n  <plus-prism theme=\"coy\">const theme = 'coy';</plus-prism>\n  <plus-prism theme=\"dark\">const theme = 'dark';</plus-prism>\n  <plus-prism theme=\"funky\">const theme = 'funky';</plus-prism>\n  <plus-prism theme=\"okaidia\">const theme = 'okaidia';</plus-prism>\n  <plus-prism theme=\"solarizedlight\">const theme = 'solarizedlight';</plus-prism>\n  <plus-prism theme=\"tomorrow\">const theme = 'tomorrow';</plus-prism>\n  <plus-prism theme=\"twilight\">const theme = 'twilight';</plus-prism>\n</plus-stack>\n"
@@ -3415,6 +3422,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      The default theme is supported by default. If other themes are required, the\n      <code>resolver</code>\n      property should be configured to return a raw CSS style.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'theme') {\n            const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n            const styles = await fetch(url).then((response) => response.text());\n            return styles;\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n      <plus-prism theme=\"default\">const theme = 'default';</plus-prism>\n      <plus-prism theme=\"coy\">const theme = 'coy';</plus-prism>\n      <plus-prism theme=\"dark\">const theme = 'dark';</plus-prism>\n      <plus-prism theme=\"funky\">const theme = 'funky';</plus-prism>\n      <plus-prism theme=\"okaidia\">const theme = 'okaidia';</plus-prism>\n      <plus-prism theme=\"solarizedlight\">const theme = 'solarizedlight';</plus-prism>\n      <plus-prism theme=\"tomorrow\">const theme = 'tomorrow';</plus-prism>\n      <plus-prism theme=\"twilight\">const theme = 'twilight';</plus-prism>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
@@ -3425,6 +3433,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      The default theme is supported by default. If other themes are required, the\n      <code>resolver</code>\n      property should be configured to return a raw CSS style.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'theme') {\n            const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n            const styles = await fetch(url).then((response) => response.text());\n            return styles;\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism theme=\"default\">const theme = 'default';</plus-prism>\n  <plus-prism theme=\"coy\">const theme = 'coy';</plus-prism>\n  <plus-prism theme=\"dark\">const theme = 'dark';</plus-prism>\n  <plus-prism theme=\"funky\">const theme = 'funky';</plus-prism>\n  <plus-prism theme=\"okaidia\">const theme = 'okaidia';</plus-prism>\n  <plus-prism theme=\"solarizedlight\">const theme = 'solarizedlight';</plus-prism>\n  <plus-prism theme=\"tomorrow\">const theme = 'tomorrow';</plus-prism>\n  <plus-prism theme=\"twilight\">const theme = 'twilight';</plus-prism>\n</plus-stack>\n"
@@ -3436,6 +3445,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      The default theme is supported by default. If other themes are required, the\n      <code>resolver</code>\n      property should be configured to return a raw CSS style.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'theme') {\n            const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n            const styles = await fetch(url).then((response) => response.text());\n            return styles;\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism theme=\"default\">const theme = 'default';</plus-prism>\n  <plus-prism theme=\"coy\">const theme = 'coy';</plus-prism>\n  <plus-prism theme=\"dark\">const theme = 'dark';</plus-prism>\n  <plus-prism theme=\"funky\">const theme = 'funky';</plus-prism>\n  <plus-prism theme=\"okaidia\">const theme = 'okaidia';</plus-prism>\n  <plus-prism theme=\"solarizedlight\">const theme = 'solarizedlight';</plus-prism>\n  <plus-prism theme=\"tomorrow\">const theme = 'tomorrow';</plus-prism>\n  <plus-prism theme=\"twilight\">const theme = 'twilight';</plus-prism>\n</plus-stack>\n"
@@ -3496,6 +3506,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      The basic configuration for the <code>resolver</code> property are shown here, this\n      configuration support all <code>themes</code>, <code>plugins</code>, and\n      <code>languages</code> of the <code>PrismJS</code>.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          switch (key) {\n            case 'language': {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n              break;\n            }\n            case 'plugin': {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n              break;\n            }\n            case 'theme': {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-prism language=\"python\" theme=\"solarizedlight\" [plugins]='{\"line-numbers\":true}'\n  >print(\"Hello, World!\")</plus-prism\n>\n"
@@ -3507,6 +3518,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      The basic configuration for the <code>resolver</code> property are shown here, this\n      configuration support all <code>themes</code>, <code>plugins</code>, and\n      <code>languages</code> of the <code>PrismJS</code>.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          switch (key) {\n            case 'language': {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n              break;\n            }\n            case 'plugin': {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n              break;\n            }\n            case 'theme': {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\n",
     "template": "<plus-prism language=\"python\" theme=\"solarizedlight\" plugins='{\"line-numbers\":true}'\n  >print(\"Hello, World!\")</plus-prism\n>\n"
@@ -3518,6 +3530,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      The basic configuration for the <code>resolver</code> property are shown here, this\n      configuration support all <code>themes</code>, <code>plugins</code>, and\n      <code>languages</code> of the <code>PrismJS</code>.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          switch (key) {\n            case 'language': {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n              break;\n            }\n            case 'plugin': {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n              break;\n            }\n            case 'theme': {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\n\nfunction App() {\n  return (\n    <plus-prism\n      language=\"python\"\n      theme=\"solarizedlight\"\n      plugins={{\n        'line-numbers': true\n      }}\n    >\n      print(\"Hello, World!\")\n    </plus-prism>\n  );\n}\nexport default App;\n"
   },
@@ -3528,6 +3541,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      The basic configuration for the <code>resolver</code> property are shown here, this\n      configuration support all <code>themes</code>, <code>plugins</code>, and\n      <code>languages</code> of the <code>PrismJS</code>.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          switch (key) {\n            case 'language': {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n              break;\n            }\n            case 'plugin': {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n              break;\n            }\n            case 'theme': {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\n",
     "template": "<plus-prism\n  language=\"python\"\n  theme=\"solarizedlight\"\n  plugins={{\n    'line-numbers': true\n  }}>print(\"Hello, World!\")</plus-prism\n>\n"
@@ -3539,6 +3553,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      The basic configuration for the <code>resolver</code> property are shown here, this\n      configuration support all <code>themes</code>, <code>plugins</code>, and\n      <code>languages</code> of the <code>PrismJS</code>.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          switch (key) {\n            case 'language': {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n              break;\n            }\n            case 'plugin': {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n              break;\n            }\n            case 'theme': {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\n",
     "template": "<plus-prism language=\"python\" theme=\"solarizedlight\" :plugins='{\"line-numbers\":true}'\n  >print(\"Hello, World!\")</plus-prism\n>\n"
@@ -3550,6 +3565,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      To use <code>PrismJS</code> plugins, the <code>plugins</code> property should be configured.\n      All parameters required for plugin configuration are derived from\n      <code>data-*</code> attributes. For instance, the <code>line-numbers</code> plugin has a\n      configuration parameter named <code>data-start</code>, which is mapped to\n      <code>start</code> with a valid value specified in the official\n      <code>PrismJS</code> documentation.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'plugin') {\n            await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n            try {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            } catch {}\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism [plugins]='{\"line-numbers\":true}'>const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism [plugins]='{\"line-numbers\":{\"start\":5}}'>const name = '@htmlplus/ui';</plus-prism>\n</plus-stack>\n"
@@ -3561,6 +3577,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      To use <code>PrismJS</code> plugins, the <code>plugins</code> property should be configured.\n      All parameters required for plugin configuration are derived from\n      <code>data-*</code> attributes. For instance, the <code>line-numbers</code> plugin has a\n      configuration parameter named <code>data-start</code>, which is mapped to\n      <code>start</code> with a valid value specified in the official\n      <code>PrismJS</code> documentation.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'plugin') {\n            await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n            try {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            } catch {}\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism plugins='{\"line-numbers\":true}'>const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism plugins='{\"line-numbers\":{\"start\":5}}'>const name = '@htmlplus/ui';</plus-prism>\n</plus-stack>\n"
@@ -3572,6 +3589,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      To use <code>PrismJS</code> plugins, the <code>plugins</code> property should be configured.\n      All parameters required for plugin configuration are derived from\n      <code>data-*</code> attributes. For instance, the <code>line-numbers</code> plugin has a\n      configuration parameter named <code>data-start</code>, which is mapped to\n      <code>start</code> with a valid value specified in the official\n      <code>PrismJS</code> documentation.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'plugin') {\n            await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n            try {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            } catch {}\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n      <plus-prism\n        plugins={{\n          'line-numbers': true\n        }}\n      >\n        const name = '@htmlplus/ui';\n      </plus-prism>\n      <plus-prism\n        plugins={{\n          'line-numbers': {\n            start: 5\n          }\n        }}\n      >\n        const name = '@htmlplus/ui';\n      </plus-prism>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
@@ -3582,6 +3600,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      To use <code>PrismJS</code> plugins, the <code>plugins</code> property should be configured.\n      All parameters required for plugin configuration are derived from\n      <code>data-*</code> attributes. For instance, the <code>line-numbers</code> plugin has a\n      configuration parameter named <code>data-start</code>, which is mapped to\n      <code>start</code> with a valid value specified in the official\n      <code>PrismJS</code> documentation.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'plugin') {\n            await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n            try {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            } catch {}\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism\n    plugins={{\n      'line-numbers': true\n    }}>const name = '@htmlplus/ui';</plus-prism\n  >\n  <plus-prism\n    plugins={{\n      'line-numbers': {\n        start: 5\n      }\n    }}>const name = '@htmlplus/ui';</plus-prism\n  >\n</plus-stack>\n"
@@ -3593,6 +3612,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      To use <code>PrismJS</code> plugins, the <code>plugins</code> property should be configured.\n      All parameters required for plugin configuration are derived from\n      <code>data-*</code> attributes. For instance, the <code>line-numbers</code> plugin has a\n      configuration parameter named <code>data-start</code>, which is mapped to\n      <code>start</code> with a valid value specified in the official\n      <code>PrismJS</code> documentation.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'plugin') {\n            await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n            try {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            } catch {}\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism :plugins='{\"line-numbers\":true}'>const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism :plugins='{\"line-numbers\":{\"start\":5}}'>const name = '@htmlplus/ui';</plus-prism>\n</plus-stack>\n"
@@ -3653,6 +3673,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      Many languages are supported by <code>PrismJS</code>, though only a few are loaded by default.\n      These can be checked in <code>window.Prism.languages</code>. To use other languages, the\n      <code>resolver</code> property should be configured.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'language') {\n            await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism language=\"javascript\">const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism language=\"csharp\">string text = \"Hello World!\";</plus-prism>\n  <plus-prism language=\"rust\">let arr: [i32; 4] = [10, 20, 30, 40];</plus-prism>\n</plus-stack>\n"
@@ -3664,6 +3685,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      Many languages are supported by <code>PrismJS</code>, though only a few are loaded by default.\n      These can be checked in <code>window.Prism.languages</code>. To use other languages, the\n      <code>resolver</code> property should be configured.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'language') {\n            await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism language=\"javascript\">const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism language=\"csharp\">string text = \"Hello World!\";</plus-prism>\n  <plus-prism language=\"rust\">let arr: [i32; 4] = [10, 20, 30, 40];</plus-prism>\n</plus-stack>\n"
@@ -3675,6 +3697,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      Many languages are supported by <code>PrismJS</code>, though only a few are loaded by default.\n      These can be checked in <code>window.Prism.languages</code>. To use other languages, the\n      <code>resolver</code> property should be configured.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'language') {\n            await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n      <plus-prism language=\"javascript\">const name = '@htmlplus/ui';</plus-prism>\n      <plus-prism language=\"csharp\">string text = \"Hello World!\";</plus-prism>\n      <plus-prism language=\"rust\">let arr: [i32; 4] = [10, 20, 30, 40];</plus-prism>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
@@ -3685,6 +3708,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      Many languages are supported by <code>PrismJS</code>, though only a few are loaded by default.\n      These can be checked in <code>window.Prism.languages</code>. To use other languages, the\n      <code>resolver</code> property should be configured.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'language') {\n            await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism language=\"javascript\">const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism language=\"csharp\">string text = \"Hello World!\";</plus-prism>\n  <plus-prism language=\"rust\">let arr: [i32; 4] = [10, 20, 30, 40];</plus-prism>\n</plus-stack>\n"
@@ -3696,6 +3720,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      Many languages are supported by <code>PrismJS</code>, though only a few are loaded by default.\n      These can be checked in <code>window.Prism.languages</code>. To use other languages, the\n      <code>resolver</code> property should be configured.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        async resolver({ key, value }) {\n          if (key == 'language') {\n            await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism language=\"javascript\">const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism language=\"csharp\">string text = \"Hello World!\";</plus-prism>\n  <plus-prism language=\"rust\">let arr: [i32; 4] = [10, 20, 30, 40];</plus-prism>\n</plus-stack>\n"
@@ -3805,6 +3830,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Loads the image after appearing in the user's viewport.</p>",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/spinner.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange(event) {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  }\n}\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
     "template": "<div class=\"container\">\n  <plus-intersection once (plus-change)=\"onPlusChange($event)\">\n    <plus-card [elevation]=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://picsum.photos/id/25/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
@@ -3816,6 +3842,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Loads the image after appearing in the user's viewport.</p>",
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/spinner.js';\n\n$intersection.addEventListener('plus-change', (event) => {\n  if (!event.detail.isIntersecting) return;\n  setTimeout(() => {\n    const image = event.target.querySelector('img');\n    const spinner = event.target.querySelector('plus-spinner');\n    const src = image.getAttribute('data-src');\n    image.setAttribute('src', src);\n    image.hidden = false;\n    spinner.hidden = true;\n  }, 1000);\n});\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
     "template": "<div class=\"container\">\n  <plus-intersection id=\"$intersection\" once>\n    <plus-card elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://picsum.photos/id/25/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
@@ -3827,6 +3854,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Loads the image after appearing in the user's viewport.</p>",
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/spinner.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  }\n  return (\n    <div className=\"container\">\n      <plus-intersection once onPlusChange={onPlusChange}>\n        <plus-card elevation={10}>\n          <plus-spinner></plus-spinner>\n          <img alt=\"Lazy Image\" hidden data-src=\"https://picsum.photos/id/25/200/200\" />\n        </plus-card>\n      </plus-intersection>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n"
   },
@@ -3837,6 +3865,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Loads the image after appearing in the user's viewport.</p>",
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/spinner.js';\n\nfunction onPlusChange(event) {\n  if (!event.detail.isIntersecting) return;\n  setTimeout(() => {\n    const image = event.target.querySelector('img');\n    const spinner = event.target.querySelector('plus-spinner');\n    const src = image.getAttribute('data-src');\n    image.setAttribute('src', src);\n    image.hidden = false;\n    spinner.hidden = true;\n  }, 1000);\n}\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
     "template": "<div class=\"container\">\n  <plus-intersection once on:plus-change={onPlusChange}>\n    <plus-card elevation={10}>\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://picsum.photos/id/25/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
@@ -3848,6 +3877,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Loads the image after appearing in the user's viewport.</p>",
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/spinner.js';\n\nfunction onPlusChange(event) {\n  if (!event.detail.isIntersecting) return;\n  setTimeout(() => {\n    const image = event.target.querySelector('img');\n    const spinner = event.target.querySelector('plus-spinner');\n    const src = image.getAttribute('data-src');\n    image.setAttribute('src', src);\n    image.hidden = false;\n    spinner.hidden = true;\n  }, 1000);\n}\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
     "template": "<div class=\"container\">\n  <plus-intersection once @plus-change=\"onPlusChange\">\n    <plus-card :elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://picsum.photos/id/25/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
@@ -3859,6 +3889,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Observes the user's viewport to detect the visibility of the Card.</p>",
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/sticky.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('status')\n  statusRef!: ElementRef;\n  onPlusChange(event) {\n    this.statusRef.nativeElement.innerHTML = event.detail.isIntersecting\n      ? 'In Viewport'\n      : 'Out of Viewport';\n  }\n}\n",
     "style": ".container {\n  background-color: whitesmoke;\n  height: 20rem;\n  overflow: auto;\n}\n\n.status {\n  color: white;\n  background-color: black;\n  padding: 0.5rem 1rem;\n  border-radius: 2rem;\n}\n\nplus-card {\n  width: 15rem;\n  margin: auto;\n}\n\nplus-intersection {\n  display: block;\n  margin: 40rem auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-sticky top=\"1rem\" [z-index]=\"1\">\n    <plus-center>\n      <div class=\"status\" #status></div>\n    </plus-center>\n  </plus-sticky>\n  <plus-intersection (plus-change)=\"onPlusChange($event)\">\n    <plus-card [elevation]=\"10\">\n      <plus-card-body>\n        <plus-faker></plus-faker>\n      </plus-card-body>\n    </plus-card>\n  </plus-intersection>\n</div>\n"
@@ -3870,6 +3901,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Observes the user's viewport to detect the visibility of the Card.</p>",
     "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/sticky.js';\n\n$intersection.addEventListener('plus-change', (event) => {\n  $status.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';\n});\n",
     "style": ".container {\n  background-color: whitesmoke;\n  height: 20rem;\n  overflow: auto;\n}\n\n.status {\n  color: white;\n  background-color: black;\n  padding: 0.5rem 1rem;\n  border-radius: 2rem;\n}\n\nplus-card {\n  width: 15rem;\n  margin: auto;\n}\n\nplus-intersection {\n  display: block;\n  margin: 40rem auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-sticky top=\"1rem\" z-index=\"1\">\n    <plus-center>\n      <div id=\"$status\" class=\"status\"></div>\n    </plus-center>\n  </plus-sticky>\n  <plus-intersection id=\"$intersection\">\n    <plus-card elevation=\"10\">\n      <plus-card-body>\n        <plus-faker></plus-faker>\n      </plus-card-body>\n    </plus-card>\n  </plus-intersection>\n</div>\n"
@@ -3881,6 +3913,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Observes the user's viewport to detect the visibility of the Card.</p>",
     "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/sticky.js';\n\nfunction App() {\n  const statusRef = useRef();\n  function onPlusChange(event) {\n    statusRef.current.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';\n  }\n  return (\n    <div className=\"container\">\n      <plus-sticky top=\"1rem\" z-index={1}>\n        <plus-center>\n          <div className=\"status\" ref={statusRef}></div>\n        </plus-center>\n      </plus-sticky>\n      <plus-intersection onPlusChange={onPlusChange}>\n        <plus-card elevation={10}>\n          <plus-card-body>\n            <plus-faker></plus-faker>\n          </plus-card-body>\n        </plus-card>\n      </plus-intersection>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  background-color: whitesmoke;\n  height: 20rem;\n  overflow: auto;\n}\n\n.status {\n  color: white;\n  background-color: black;\n  padding: 0.5rem 1rem;\n  border-radius: 2rem;\n}\n\nplus-card {\n  width: 15rem;\n  margin: auto;\n}\n\nplus-intersection {\n  display: block;\n  margin: 40rem auto;\n}\n"
   },
@@ -3891,6 +3924,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Observes the user's viewport to detect the visibility of the Card.</p>",
     "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/sticky.js';\n\nlet statusRef;\nfunction onPlusChange(event) {\n  statusRef.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';\n}\n",
     "style": ".container {\n  background-color: whitesmoke;\n  height: 20rem;\n  overflow: auto;\n}\n\n.status {\n  color: white;\n  background-color: black;\n  padding: 0.5rem 1rem;\n  border-radius: 2rem;\n}\n\nplus-card {\n  width: 15rem;\n  margin: auto;\n}\n\nplus-intersection {\n  display: block;\n  margin: 40rem auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-sticky top=\"1rem\" z-index={1}>\n    <plus-center>\n      <div class=\"status\" bind:this={statusRef}></div>\n    </plus-center>\n  </plus-sticky>\n  <plus-intersection on:plus-change={onPlusChange}>\n    <plus-card elevation={10}>\n      <plus-card-body>\n        <plus-faker></plus-faker>\n      </plus-card-body>\n    </plus-card>\n  </plus-intersection>\n</div>\n"
@@ -3902,6 +3936,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Observes the user's viewport to detect the visibility of the Card.</p>",
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/sticky.js';\n\nconst statusRef = ref();\nfunction onPlusChange(event) {\n  statusRef.value.innerHTML = event.detail.isIntersecting ? 'In Viewport' : 'Out of Viewport';\n}\n",
     "style": ".container {\n  background-color: whitesmoke;\n  height: 20rem;\n  overflow: auto;\n}\n\n.status {\n  color: white;\n  background-color: black;\n  padding: 0.5rem 1rem;\n  border-radius: 2rem;\n}\n\nplus-card {\n  width: 15rem;\n  margin: auto;\n}\n\nplus-intersection {\n  display: block;\n  margin: 40rem auto;\n}\n",
     "template": "<div class=\"container\">\n  <plus-sticky top=\"1rem\" :z-index=\"1\">\n    <plus-center>\n      <div class=\"status\" ref=\"statusRef\"></div>\n    </plus-center>\n  </plus-sticky>\n  <plus-intersection @plus-change=\"onPlusChange\">\n    <plus-card :elevation=\"10\">\n      <plus-card-body>\n        <plus-faker></plus-faker>\n      </plus-card-body>\n    </plus-card>\n  </plus-intersection>\n</div>\n"
@@ -4114,6 +4149,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      Use <code>import</code>, <code>fetch</code> or any asynchronous function to load SVG files.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-center>\n  <plus-icon name=\"heart\"></plus-icon>\n</plus-center>\n"
@@ -4125,6 +4161,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      Use <code>import</code>, <code>fetch</code> or any asynchronous function to load SVG files.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"heart\"></plus-icon>\n</plus-center>\n"
@@ -4136,6 +4173,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      Use <code>import</code>, <code>fetch</code> or any asynchronous function to load SVG files.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-icon name=\"heart\"></plus-icon>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
@@ -4146,6 +4184,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      Use <code>import</code>, <code>fetch</code> or any asynchronous function to load SVG files.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"heart\"></plus-icon>\n</plus-center>\n"
@@ -4157,6 +4196,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      Use <code>import</code>, <code>fetch</code> or any asynchronous function to load SVG files.\n    </p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"heart\"></plus-icon>\n</plus-center>\n"
@@ -4222,6 +4262,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>To see all names click <a href=\"https://icons.getbootstrap.com\">here</a>.</p>",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-center>\n  <plus-icon name=\"house\"></plus-icon>\n</plus-center>\n"
   },
@@ -4232,6 +4273,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>To see all names click <a href=\"https://icons.getbootstrap.com\">here</a>.</p>",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"house\"></plus-icon>\n</plus-center>\n"
   },
@@ -4242,6 +4284,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>To see all names click <a href=\"https://icons.getbootstrap.com\">here</a>.</p>",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-icon name=\"house\"></plus-icon>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
@@ -4251,6 +4294,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>To see all names click <a href=\"https://icons.getbootstrap.com\">here</a>.</p>",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"house\"></plus-icon>\n</plus-center>\n"
   },
@@ -4261,6 +4305,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>To see all names click <a href=\"https://icons.getbootstrap.com\">here</a>.</p>",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
     "template": "<plus-center>\n  <plus-icon name=\"house\"></plus-icon>\n</plus-center>\n"
   },
@@ -4325,6 +4370,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>For more information click <a href=\"https://fonts.google.com/icons\">here</a>.</p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
@@ -4336,6 +4382,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>For more information click <a href=\"https://fonts.google.com/icons\">here</a>.</p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
@@ -4347,6 +4394,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>For more information click <a href=\"https://fonts.google.com/icons\">here</a>.</p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"home_outline\"></plus-icon>\n      <plus-icon name=\"home_round\"></plus-icon>\n      <plus-icon name=\"home_sharp\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
@@ -4357,6 +4405,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>For more information click <a href=\"https://fonts.google.com/icons\">here</a>.</p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
@@ -4368,6 +4417,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>For more information click <a href=\"https://fonts.google.com/icons\">here</a>.</p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n          const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
@@ -4428,6 +4478,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>For more information click <a href=\"https://fontawesome.com\">here</a>.</p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-stack>\n"
@@ -4439,6 +4490,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>For more information click <a href=\"https://fontawesome.com\">here</a>.</p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-stack>\n"
@@ -4450,6 +4502,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>For more information click <a href=\"https://fontawesome.com\">here</a>.</p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"far-user\"></plus-icon>\n      <plus-icon name=\"fas-user\"></plus-icon>\n      <plus-icon name=\"fab-apple\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
@@ -4460,6 +4513,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>For more information click <a href=\"https://fontawesome.com\">here</a>.</p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-stack>\n"
@@ -4471,6 +4525,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>For more information click <a href=\"https://fontawesome.com\">here</a>.</p>",
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: ({ name }) => {\n          let category = 'regular';\n          if (name.startsWith('fas-')) category = 'solid';\n          if (name.startsWith('fab-')) category = 'brands';\n          name = name.replace(/^fa[rbs]-/, '');\n          const url = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/${category}/${name}.svg`;\n          return fetch(url).then(async (response) => {\n            const body = await response.text();\n            if (!response.ok) throw new Error(body);\n            return body;\n          });\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"far-user\"></plus-icon>\n  <plus-icon name=\"fas-user\"></plus-icon>\n  <plus-icon name=\"fab-apple\"></plus-icon>\n</plus-stack>\n"
@@ -5690,7 +5745,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/format-bytes.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-stack vertical>\n  <plus-format-bytes [value]=\"1000\" separator=\"\"></plus-format-bytes>\n  <plus-format-bytes [value]=\"1000\" separator=\" \"></plus-format-bytes>\n</plus-stack>\n"
+    "template": "<plus-stack vertical>\n  <plus-format-bytes [value]=\"1000\" separator=\" \"></plus-format-bytes>\n  <plus-format-bytes [value]=\"1000\" separator=\"_\"></plus-format-bytes>\n</plus-stack>\n"
   },
   {
     "key": "javascript/format-bytes/separator",
@@ -5700,7 +5755,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/format-bytes.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack vertical>\n  <plus-format-bytes value=\"1000\" separator=\"\"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" separator=\" \"></plus-format-bytes>\n</plus-stack>\n"
+    "template": "<plus-stack vertical>\n  <plus-format-bytes value=\"1000\" separator=\" \"></plus-format-bytes>\n  <plus-format-bytes value=\"1000\" separator=\"_\"></plus-format-bytes>\n</plus-stack>\n"
   },
   {
     "key": "react/format-bytes/separator",
@@ -5709,7 +5764,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/format-bytes.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack vertical>\n      <plus-format-bytes value={1000} separator=\"\"></plus-format-bytes>\n      <plus-format-bytes value={1000} separator=\" \"></plus-format-bytes>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/format-bytes.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack vertical>\n      <plus-format-bytes value={1000} separator=\" \"></plus-format-bytes>\n      <plus-format-bytes value={1000} separator=\"_\"></plus-format-bytes>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/format-bytes/separator",
@@ -5719,7 +5774,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/format-bytes.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack vertical>\n  <plus-format-bytes value={1000} separator=\"\"></plus-format-bytes>\n  <plus-format-bytes value={1000} separator=\" \"></plus-format-bytes>\n</plus-stack>\n"
+    "template": "<plus-stack vertical>\n  <plus-format-bytes value={1000} separator=\" \"></plus-format-bytes>\n  <plus-format-bytes value={1000} separator=\"_\"></plus-format-bytes>\n</plus-stack>\n"
   },
   {
     "key": "vue/format-bytes/separator",
@@ -5729,7 +5784,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/format-bytes.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<plus-stack vertical>\n  <plus-format-bytes :value=\"1000\" separator=\"\"></plus-format-bytes>\n  <plus-format-bytes :value=\"1000\" separator=\" \"></plus-format-bytes>\n</plus-stack>\n"
+    "template": "<plus-stack vertical>\n  <plus-format-bytes :value=\"1000\" separator=\" \"></plus-format-bytes>\n  <plus-format-bytes :value=\"1000\" separator=\"_\"></plus-format-bytes>\n</plus-stack>\n"
   },
   {
     "key": "angular/format-bytes/locale",
@@ -6081,6 +6136,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      Makes the result localized. Consider that localization configure globally.\n      <a href=\"https://fakerjs.dev/guide/localization.html\">More</a>.\n    </p>",
     "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-faker': {\n      properties: {\n        instance: faker\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-faker></plus-faker>\n"
@@ -6092,6 +6148,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      Makes the result localized. Consider that localization configure globally.\n      <a href=\"https://fakerjs.dev/guide/localization.html\">More</a>.\n    </p>",
     "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-faker': {\n      properties: {\n        instance: faker\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/faker.js';\n",
     "template": "<plus-faker></plus-faker>\n"
@@ -6103,6 +6160,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      Makes the result localized. Consider that localization configure globally.\n      <a href=\"https://fakerjs.dev/guide/localization.html\">More</a>.\n    </p>",
     "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-faker': {\n      properties: {\n        instance: faker\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return <plus-faker></plus-faker>;\n}\nexport default App;\n"
   },
@@ -6113,6 +6171,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      Makes the result localized. Consider that localization configure globally.\n      <a href=\"https://fakerjs.dev/guide/localization.html\">More</a>.\n    </p>",
     "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-faker': {\n      properties: {\n        instance: faker\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/faker.js';\n",
     "template": "<plus-faker></plus-faker>\n"
@@ -6124,6 +6183,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
+    "description": "<p>\n      Makes the result localized. Consider that localization configure globally.\n      <a href=\"https://fakerjs.dev/guide/localization.html\">More</a>.\n    </p>",
     "config": "import { faker } from '@faker-js/faker/locale/ja';\n\nimport { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-faker': {\n      properties: {\n        instance: faker\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/faker.js';\n",
     "template": "<plus-faker></plus-faker>\n"
@@ -6233,6 +6293,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>To see all APIs click <a href=\"https://fakerjs.dev/api\">here</a>.</p>",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/faker.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-faker api=\"lorem.paragraphs\"></plus-faker>\n"
   },
@@ -6243,6 +6304,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>To see all APIs click <a href=\"https://fakerjs.dev/api\">here</a>.</p>",
     "script": "import '@htmlplus/ui/faker.js';\n",
     "template": "<plus-faker api=\"lorem.paragraphs\"></plus-faker>\n"
   },
@@ -6253,6 +6315,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>To see all APIs click <a href=\"https://fakerjs.dev/api\">here</a>.</p>",
     "script": "import '@htmlplus/ui/faker.js';\n\nfunction App() {\n  return <plus-faker api=\"lorem.paragraphs\"></plus-faker>;\n}\nexport default App;\n"
   },
   {
@@ -6262,6 +6325,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>To see all APIs click <a href=\"https://fakerjs.dev/api\">here</a>.</p>",
     "script": "import '@htmlplus/ui/faker.js';\n",
     "template": "<plus-faker api=\"lorem.paragraphs\"></plus-faker>\n"
   },
@@ -6272,6 +6336,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>To see all APIs click <a href=\"https://fakerjs.dev/api\">here</a>.</p>",
     "script": "import '@htmlplus/ui/faker.js';\n",
     "template": "<plus-faker api=\"lorem.paragraphs\"></plus-faker>\n"
   },
@@ -7792,6 +7857,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('cropper')\n  cropperRef!: ElementRef;\n  onClick() {\n    this.cropperRef.nativeElement.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  }\n}\n",
     "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    #cropper\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"onClick()\">To Blob</button>\n</plus-center>\n"
   },
@@ -7802,6 +7868,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\n$button.addEventListener('click', () => {\n  $cropper.toCanvas().toBlob((blob) => {\n    console.log(blob);\n  });\n});\n",
     "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"$cropper\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button id=\"$button\">To Blob</button>\n</plus-center>\n"
   },
@@ -7812,6 +7879,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  const cropperRef = useRef();\n  function onClick() {\n    cropperRef.current.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          ref={cropperRef}\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={onClick}>To Blob</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
@@ -7821,6 +7889,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nlet cropperRef;\nfunction onClick() {\n  cropperRef.toCanvas().toBlob((blob) => {\n    console.log(blob);\n  });\n}\n",
     "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    bind:this={cropperRef}\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click={onClick}>To Blob</button>\n</plus-center>\n"
   },
@@ -7831,6 +7900,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nconst cropperRef = ref();\nfunction onClick() {\n  cropperRef.value.toCanvas().toBlob((blob) => {\n    console.log(blob);\n  });\n}\n",
     "template": "<div>\n  <plus-center>\n    <plus-cropper\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ref=\"cropperRef\"\n    ></plus-cropper>\n  </plus-center>\n  <br />\n  <plus-center>\n    <button @click=\"onClick\">To Blob</button>\n  </plus-center>\n</div>\n"
   },
@@ -9974,6 +10044,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-carousel\n  variant=\"presentation\"\n  draggable=\"free\"\n  focusable\n  resizable\n  (plus-destroy)=\"console.log('destroy')\"\n  (plus-init)=\"console.log('init')\"\n  (plus-pointer-down)=\"console.log('pointer-down')\"\n  (plus-pointer-up)=\"console.log('pointer-up')\"\n  (plus-re-init)=\"console.log('re-init')\"\n  (plus-resize)=\"console.log('resize')\"\n  (plus-scroll)=\"console.log('scroll')\"\n  (plus-select)=\"console.log('select')\"\n  (plus-settle)=\"console.log('settle')\"\n  (plus-slide-focus)=\"console.log('slide-focus')\"\n  (plus-slide-focus-start)=\"console.log('slide-focus-start')\"\n  (plus-slides-changed)=\"console.log('slides-changed')\"\n  (plus-slides-in-view)=\"console.log('slides-in-view')\"\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
@@ -9984,6 +10055,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n$carousel.addEventListener('plus-destroy', () => console.log('destroy'));\n$carousel.addEventListener('plus-init', () => console.log('init'));\n$carousel.addEventListener('plus-pointer-down', () => console.log('pointer-down'));\n$carousel.addEventListener('plus-pointer-up', () => console.log('pointer-up'));\n$carousel.addEventListener('plus-re-init', () => console.log('re-init'));\n$carousel.addEventListener('plus-resize', () => console.log('resize'));\n$carousel.addEventListener('plus-scroll', () => console.log('scroll'));\n$carousel.addEventListener('plus-select', () => console.log('select'));\n$carousel.addEventListener('plus-settle', () => console.log('settle'));\n$carousel.addEventListener('plus-slide-focus', () => console.log('slide-focus'));\n$carousel.addEventListener('plus-slide-focus-start', () => console.log('slide-focus-start'));\n$carousel.addEventListener('plus-slides-changed', () => console.log('slides-changed'));\n$carousel.addEventListener('plus-slides-in-view', () => console.log('slides-in-view'));\n",
     "template": "<plus-carousel id=\"$carousel\" variant=\"presentation\" draggable=\"free\" focusable resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
@@ -9994,6 +10066,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel\n      variant=\"presentation\"\n      draggable=\"free\"\n      focusable\n      resizable\n      onPlusDestroy={() => console.log('destroy')}\n      onPlusInit={() => console.log('init')}\n      onPlusPointerDown={() => console.log('pointer-down')}\n      onPlusPointerUp={() => console.log('pointer-up')}\n      onPlusReInit={() => console.log('re-init')}\n      onPlusResize={() => console.log('resize')}\n      onPlusScroll={() => console.log('scroll')}\n      onPlusSelect={() => console.log('select')}\n      onPlusSettle={() => console.log('settle')}\n      onPlusSlideFocus={() => console.log('slide-focus')}\n      onPlusSlideFocusStart={() => console.log('slide-focus-start')}\n      onPlusSlidesChanged={() => console.log('slides-changed')}\n      onPlusSlidesInView={() => console.log('slides-in-view')}\n    >\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
   },
   {
@@ -10003,6 +10076,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "template": "<plus-carousel\n  variant=\"presentation\"\n  draggable=\"free\"\n  focusable\n  resizable\n  on:plus-destroy={() => console.log('destroy')}\n  on:plus-init={() => console.log('init')}\n  on:plus-pointer-down={() => console.log('pointer-down')}\n  on:plus-pointer-up={() => console.log('pointer-up')}\n  on:plus-re-init={() => console.log('re-init')}\n  on:plus-resize={() => console.log('resize')}\n  on:plus-scroll={() => console.log('scroll')}\n  on:plus-select={() => console.log('select')}\n  on:plus-settle={() => console.log('settle')}\n  on:plus-slide-focus={() => console.log('slide-focus')}\n  on:plus-slide-focus-start={() => console.log('slide-focus-start')}\n  on:plus-slides-changed={() => console.log('slides-changed')}\n  on:plus-slides-in-view={() => console.log('slides-in-view')}\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
@@ -10013,6 +10087,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "template": "<plus-carousel\n  variant=\"presentation\"\n  draggable=\"free\"\n  focusable\n  resizable\n  @plus-destroy=\"console.log('destroy')\"\n  @plus-init=\"console.log('init')\"\n  @plus-pointer-down=\"console.log('pointer-down')\"\n  @plus-pointer-up=\"console.log('pointer-up')\"\n  @plus-re-init=\"console.log('re-init')\"\n  @plus-resize=\"console.log('resize')\"\n  @plus-scroll=\"console.log('scroll')\"\n  @plus-select=\"console.log('select')\"\n  @plus-settle=\"console.log('settle')\"\n  @plus-slide-focus=\"console.log('slide-focus')\"\n  @plus-slide-focus-start=\"console.log('slide-focus-start')\"\n  @plus-slides-changed=\"console.log('slides-changed')\"\n  @plus-slides-in-view=\"console.log('slides-in-view')\"\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
@@ -10538,6 +10613,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      By default, the card element has border-radius. The tile property neutralizes border-radius.\n    </p>",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": ".container {\n  padding: 2rem 0;\n  background-color: whitesmoke;\n}\nplus-card {\n  height: 8rem;\n  width: 8rem;\n}\n",
     "template": "<plus-stack gap=\"1rem\" justify=\"evenly\" wrap>\n  <plus-card tile></plus-card>\n  <plus-card tile outlined></plus-card>\n  <plus-card tile [elevation]=\"5\"></plus-card>\n</plus-stack>\n"
@@ -10549,6 +10625,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      By default, the card element has border-radius. The tile property neutralizes border-radius.\n    </p>",
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": ".container {\n  padding: 2rem 0;\n  background-color: whitesmoke;\n}\nplus-card {\n  height: 8rem;\n  width: 8rem;\n}\n",
     "template": "<plus-stack gap=\"1rem\" justify=\"evenly\" wrap>\n  <plus-card tile></plus-card>\n  <plus-card tile outlined></plus-card>\n  <plus-card tile elevation=\"5\"></plus-card>\n</plus-stack>\n"
@@ -10560,6 +10637,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      By default, the card element has border-radius. The tile property neutralizes border-radius.\n    </p>",
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"1rem\" justify=\"evenly\" wrap>\n      <plus-card tile></plus-card>\n      <plus-card tile outlined></plus-card>\n      <plus-card tile elevation={5}></plus-card>\n    </plus-stack>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  padding: 2rem 0;\n  background-color: whitesmoke;\n}\nplus-card {\n  height: 8rem;\n  width: 8rem;\n}\n"
   },
@@ -10570,6 +10648,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      By default, the card element has border-radius. The tile property neutralizes border-radius.\n    </p>",
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": ".container {\n  padding: 2rem 0;\n  background-color: whitesmoke;\n}\nplus-card {\n  height: 8rem;\n  width: 8rem;\n}\n",
     "template": "<plus-stack gap=\"1rem\" justify=\"evenly\" wrap>\n  <plus-card tile></plus-card>\n  <plus-card tile outlined></plus-card>\n  <plus-card tile elevation={5}></plus-card>\n</plus-stack>\n"
@@ -10581,6 +10660,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      By default, the card element has border-radius. The tile property neutralizes border-radius.\n    </p>",
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": ".container {\n  padding: 2rem 0;\n  background-color: whitesmoke;\n}\nplus-card {\n  height: 8rem;\n  width: 8rem;\n}\n",
     "template": "<plus-stack gap=\"1rem\" justify=\"evenly\" wrap>\n  <plus-card tile></plus-card>\n  <plus-card tile outlined></plus-card>\n  <plus-card tile :elevation=\"5\"></plus-card>\n</plus-stack>\n"
@@ -10592,6 +10672,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>By default, the card element has no border. outlined property Adds border.</p>",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/card.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\n",
     "template": "<plus-card outlined></plus-card>\n"
@@ -10603,6 +10684,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>By default, the card element has no border. outlined property Adds border.</p>",
     "script": "import '@htmlplus/ui/card.js';\n",
     "style": "plus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\n",
     "template": "<plus-card outlined></plus-card>\n"
@@ -10614,6 +10696,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>By default, the card element has no border. outlined property Adds border.</p>",
     "script": "import '@htmlplus/ui/card.js';\n\nfunction App() {\n  return <plus-card outlined></plus-card>;\n}\nexport default App;\n",
     "style": "plus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\n"
   },
@@ -10624,6 +10707,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>By default, the card element has no border. outlined property Adds border.</p>",
     "script": "import '@htmlplus/ui/card.js';\n",
     "style": "plus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\n",
     "template": "<plus-card outlined></plus-card>\n"
@@ -10635,6 +10719,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>By default, the card element has no border. outlined property Adds border.</p>",
     "script": "import '@htmlplus/ui/card.js';\n",
     "style": "plus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\n",
     "template": "<plus-card outlined></plus-card>\n"
@@ -10646,6 +10731,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      The card element accepts a custom elevation between <code>1</code> and <code>24</code>. The\n      elevation property specifies the value of the box-shodow property.\n    </p>",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/card.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  elevation = 24;\n  onChange(event) {\n    this.elevation = event.target.value;\n  }\n}\n",
     "style": "plus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\ninput[type='range'] {\n  display: block;\n  width: 12rem;\n  margin: auto;\n}\n",
     "template": "<plus-card [elevation]=\"elevation\"></plus-card>\n<br />\n<input type=\"range\" min=\"1\" max=\"24\" (change)=\"onChange($event)\" />\n"
@@ -10657,6 +10743,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      The card element accepts a custom elevation between <code>1</code> and <code>24</code>. The\n      elevation property specifies the value of the box-shodow property.\n    </p>",
     "script": "import '@htmlplus/ui/card.js';\n\n$input.addEventListener('change', (event) => {\n  $card.elevation = event.target.value;\n});\n",
     "style": "plus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\ninput[type='range'] {\n  display: block;\n  width: 12rem;\n  margin: auto;\n}\n",
     "template": "<plus-card id=\"$card\" elevation=\"24\"></plus-card>\n<br />\n<input id=\"$input\" type=\"range\" min=\"1\" max=\"24\" />\n"
@@ -10668,6 +10755,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      The card element accepts a custom elevation between <code>1</code> and <code>24</code>. The\n      elevation property specifies the value of the box-shodow property.\n    </p>",
     "script": "import { useState } from 'react';\n\nimport '@htmlplus/ui/card.js';\n\nfunction App() {\n  const [elevation, setElevation] = useState(24);\n  function onChange(event) {\n    setElevation(event.target.value);\n  }\n  return (\n    <>\n      <plus-card elevation={elevation}></plus-card>\n      <br />\n      <input type=\"range\" min=\"1\" max=\"24\" onChange={onChange} />\n    </>\n  );\n}\nexport default App;\n",
     "style": "plus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\ninput[type='range'] {\n  display: block;\n  width: 12rem;\n  margin: auto;\n}\n"
   },
@@ -10678,6 +10766,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      The card element accepts a custom elevation between <code>1</code> and <code>24</code>. The\n      elevation property specifies the value of the box-shodow property.\n    </p>",
     "script": "import '@htmlplus/ui/card.js';\n\nlet elevation = 24;\nfunction onChange(event) {\n  elevation = event.target.value;\n}\n",
     "style": "plus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\ninput[type='range'] {\n  display: block;\n  width: 12rem;\n  margin: auto;\n}\n",
     "template": "<plus-card {elevation}></plus-card>\n<br />\n<input type=\"range\" min=\"1\" max=\"24\" on:change={onChange} />\n"
@@ -10689,6 +10778,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      The card element accepts a custom elevation between <code>1</code> and <code>24</code>. The\n      elevation property specifies the value of the box-shodow property.\n    </p>",
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/card.js';\n\nconst elevation = ref(24);\nfunction onChange(event) {\n  elevation.value = event.target.value;\n}\n",
     "style": "plus-card {\n  height: 12rem;\n  width: 12rem;\n  margin: auto;\n}\ninput[type='range'] {\n  display: block;\n  width: 12rem;\n  margin: auto;\n}\n",
     "template": "<div>\n  <plus-card :elevation=\"elevation\"></plus-card>\n  <br />\n  <input type=\"range\" min=\"1\" max=\"24\" @change=\"onChange\" />\n</div>\n"
@@ -10808,6 +10898,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>By default, the card element has no border. outlined property Adds border.</p>",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-card {\n  height: 8rem;\n  width: 8rem;\n}\nplus-card.size-1 {\n  --plus-card-border-width: 1px;\n}\nplus-card.size-2 {\n  --plus-card-border-width: 2px;\n}\nplus-card.size-3 {\n  --plus-card-border-width: 3px;\n}\n",
     "template": "<plus-stack gap=\"1rem\" justify=\"evenly\" wrap>\n  <plus-card class=\"size-1\" outlined></plus-card>\n  <plus-card class=\"size-2\" outlined></plus-card>\n  <plus-card class=\"size-3\" outlined></plus-card>\n</plus-stack>\n"
@@ -10819,6 +10910,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>By default, the card element has no border. outlined property Adds border.</p>",
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-card {\n  height: 8rem;\n  width: 8rem;\n}\nplus-card.size-1 {\n  --plus-card-border-width: 1px;\n}\nplus-card.size-2 {\n  --plus-card-border-width: 2px;\n}\nplus-card.size-3 {\n  --plus-card-border-width: 3px;\n}\n",
     "template": "<plus-stack gap=\"1rem\" justify=\"evenly\" wrap>\n  <plus-card class=\"size-1\" outlined></plus-card>\n  <plus-card class=\"size-2\" outlined></plus-card>\n  <plus-card class=\"size-3\" outlined></plus-card>\n</plus-stack>\n"
@@ -10830,6 +10922,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>By default, the card element has no border. outlined property Adds border.</p>",
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"1rem\" justify=\"evenly\" wrap>\n      <plus-card class=\"size-1\" outlined></plus-card>\n      <plus-card class=\"size-2\" outlined></plus-card>\n      <plus-card class=\"size-3\" outlined></plus-card>\n    </plus-stack>\n  );\n}\nexport default App;\n",
     "style": "plus-card {\n  height: 8rem;\n  width: 8rem;\n}\nplus-card.size-1 {\n  --plus-card-border-width: 1px;\n}\nplus-card.size-2 {\n  --plus-card-border-width: 2px;\n}\nplus-card.size-3 {\n  --plus-card-border-width: 3px;\n}\n"
   },
@@ -10840,6 +10933,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>By default, the card element has no border. outlined property Adds border.</p>",
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-card {\n  height: 8rem;\n  width: 8rem;\n}\nplus-card.size-1 {\n  --plus-card-border-width: 1px;\n}\nplus-card.size-2 {\n  --plus-card-border-width: 2px;\n}\nplus-card.size-3 {\n  --plus-card-border-width: 3px;\n}\n",
     "template": "<plus-stack gap=\"1rem\" justify=\"evenly\" wrap>\n  <plus-card class=\"size-1\" outlined></plus-card>\n  <plus-card class=\"size-2\" outlined></plus-card>\n  <plus-card class=\"size-3\" outlined></plus-card>\n</plus-stack>\n"
@@ -10851,6 +10945,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>By default, the card element has no border. outlined property Adds border.</p>",
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-card {\n  height: 8rem;\n  width: 8rem;\n}\nplus-card.size-1 {\n  --plus-card-border-width: 1px;\n}\nplus-card.size-2 {\n  --plus-card-border-width: 2px;\n}\nplus-card.size-3 {\n  --plus-card-border-width: 3px;\n}\n",
     "template": "<plus-stack gap=\"1rem\" justify=\"evenly\" wrap>\n  <plus-card class=\"size-1\" outlined></plus-card>\n  <plus-card class=\"size-2\" outlined></plus-card>\n  <plus-card class=\"size-3\" outlined></plus-card>\n</plus-stack>\n"
@@ -11019,6 +11114,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Choose between 3 and 5 files.</p>",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange(event) {\n    if (event.detail.error) {\n      alert(event.detail.error.message);\n    } else {\n      alert(`${event.detail.files.length} file(s) are selected.`);\n    }\n  }\n}\n",
     "template": "<plus-center>\n  <plus-browse [min]=\"3\" [max]=\"5\" multiple (plus-change)=\"onPlusChange($event)\">\n    Click Here\n  </plus-browse>\n</plus-center>\n"
   },
@@ -11029,6 +11125,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Choose between 3 and 5 files.</p>",
     "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\n$browse.addEventListener('plus-change', (event) => {\n  if (event.detail.error) {\n    alert(event.detail.error.message);\n  } else {\n    alert(`${event.detail.files.length} file(s) are selected.`);\n  }\n});\n",
     "template": "<plus-center>\n  <plus-browse id=\"$browse\" min=\"3\" max=\"5\" multiple> Click Here </plus-browse>\n</plus-center>\n"
   },
@@ -11039,6 +11136,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Choose between 3 and 5 files.</p>",
     "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    if (event.detail.error) {\n      alert(event.detail.error.message);\n    } else {\n      alert(`${event.detail.files.length} file(s) are selected.`);\n    }\n  }\n  return (\n    <plus-center>\n      <plus-browse min={3} max={5} multiple onPlusChange={onPlusChange}>\n        {' '}\n        Click Here{' '}\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
@@ -11048,6 +11146,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Choose between 3 and 5 files.</p>",
     "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction onPlusChange(event) {\n  if (event.detail.error) {\n    alert(event.detail.error.message);\n  } else {\n    alert(`${event.detail.files.length} file(s) are selected.`);\n  }\n}\n",
     "template": "<plus-center>\n  <plus-browse min={3} max={5} multiple on:plus-change={onPlusChange}> Click Here </plus-browse>\n</plus-center>\n"
   },
@@ -11058,6 +11157,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Choose between 3 and 5 files.</p>",
     "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction onPlusChange(event) {\n  if (event.detail.error) {\n    alert(event.detail.error.message);\n  } else {\n    alert(`${event.detail.files.length} file(s) are selected.`);\n  }\n}\n",
     "template": "<plus-center>\n  <plus-browse :min=\"3\" :max=\"5\" multiple @plus-change=\"onPlusChange\"> Click Here </plus-browse>\n</plus-center>\n"
   },
@@ -11068,6 +11168,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Select a file with a size between 1MB and 5MB.</p>",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange(event) {\n    const { errors, file } = event.detail.files[0];\n    if (errors?.length) {\n      alert(errors[0].message);\n    } else {\n      alert(`File '${file.name}' selected.`);\n    }\n  }\n}\n",
     "template": "<plus-center>\n  <plus-browse [min-size]=\"1000000\" [max-size]=\"5000000\" (plus-change)=\"onPlusChange($event)\">\n    Click Here\n  </plus-browse>\n</plus-center>\n"
   },
@@ -11078,6 +11179,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Select a file with a size between 1MB and 5MB.</p>",
     "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\n$browse.addEventListener('plus-change', (event) => {\n  const { errors, file } = event.detail.files[0];\n  if (errors?.length) {\n    alert(errors[0].message);\n  } else {\n    alert(`File '${file.name}' selected.`);\n  }\n});\n",
     "template": "<plus-center>\n  <plus-browse id=\"$browse\" min-size=\"1000000\" max-size=\"5000000\"> Click Here </plus-browse>\n</plus-center>\n"
   },
@@ -11088,6 +11190,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Select a file with a size between 1MB and 5MB.</p>",
     "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    const { errors, file } = event.detail.files[0];\n    if (errors?.length) {\n      alert(errors[0].message);\n    } else {\n      alert(`File '${file.name}' selected.`);\n    }\n  }\n  return (\n    <plus-center>\n      <plus-browse min-size={1000000} max-size={5000000} onPlusChange={onPlusChange}>\n        {' '}\n        Click Here{' '}\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
@@ -11097,6 +11200,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Select a file with a size between 1MB and 5MB.</p>",
     "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction onPlusChange(event) {\n  const { errors, file } = event.detail.files[0];\n  if (errors?.length) {\n    alert(errors[0].message);\n  } else {\n    alert(`File '${file.name}' selected.`);\n  }\n}\n",
     "template": "<plus-center>\n  <plus-browse min-size={1000000} max-size={5000000} on:plus-change={onPlusChange}>\n    Click Here\n  </plus-browse>\n</plus-center>\n"
   },
@@ -11107,6 +11211,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Select a file with a size between 1MB and 5MB.</p>",
     "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction onPlusChange(event) {\n  const { errors, file } = event.detail.files[0];\n  if (errors?.length) {\n    alert(errors[0].message);\n  } else {\n    alert(`File '${file.name}' selected.`);\n  }\n}\n",
     "template": "<plus-center>\n  <plus-browse :min-size=\"1000000\" :max-size=\"5000000\" @plus-change=\"onPlusChange\">\n    Click Here\n  </plus-browse>\n</plus-center>\n"
   },
@@ -11220,6 +11325,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange(event) {\n    console.log(event.detail);\n  }\n}\n",
     "template": "<plus-center>\n  <plus-browse (plus-change)=\"onPlusChange($event)\">Click Here</plus-browse>\n</plus-center>\n"
   },
@@ -11230,6 +11336,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\n$browse.addEventListener('plus-change', (event) => {\n  console.log(event.detail);\n});\n",
     "template": "<plus-center>\n  <plus-browse id=\"$browse\">Click Here</plus-browse>\n</plus-center>\n"
   },
@@ -11240,6 +11347,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    console.log(event.detail);\n  }\n  return (\n    <plus-center>\n      <plus-browse onPlusChange={onPlusChange}>Click Here</plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
@@ -11249,6 +11357,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction onPlusChange(event) {\n  console.log(event.detail);\n}\n",
     "template": "<plus-center>\n  <plus-browse on:plus-change={onPlusChange}>Click Here</plus-browse>\n</plus-center>\n"
   },
@@ -11259,6 +11368,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction onPlusChange(event) {\n  console.log(event.detail);\n}\n",
     "template": "<plus-center>\n  <plus-browse @plus-change=\"onPlusChange\">Click Here</plus-browse>\n</plus-center>\n"
   },
@@ -11269,6 +11379,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      One or more\n      <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#unique_file_type_specifiers\">unique file type specifiers</a>.\n    </p>",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-center>\n  <plus-browse accept=\".jpg, .pdf, video/*\">\n    Click here to select a <b>jpg</b>, <b>pdf</b> or <b>video</b> file\n  </plus-browse>\n</plus-center>\n"
   },
@@ -11279,6 +11390,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      One or more\n      <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#unique_file_type_specifiers\">unique file type specifiers</a>.\n    </p>",
     "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n",
     "template": "<plus-center>\n  <plus-browse id=\"$browse\" accept=\".jpg, .pdf, video/*\">\n    Click here to select a <b>jpg</b>, <b>pdf</b> or <b>video</b> file\n  </plus-browse>\n</plus-center>\n"
   },
@@ -11289,6 +11401,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      One or more\n      <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#unique_file_type_specifiers\">unique file type specifiers</a>.\n    </p>",
     "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-browse accept=\".jpg, .pdf, video/*\">\n        Click here to select a <b>jpg</b>, <b>pdf</b> or <b>video</b> file\n      </plus-browse>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
@@ -11298,6 +11411,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      One or more\n      <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#unique_file_type_specifiers\">unique file type specifiers</a>.\n    </p>",
     "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n",
     "template": "<plus-center>\n  <plus-browse accept=\".jpg, .pdf, video/*\">\n    Click here to select a <b>jpg</b>, <b>pdf</b> or <b>video</b> file\n  </plus-browse>\n</plus-center>\n"
   },
@@ -11308,6 +11422,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      One or more\n      <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#unique_file_type_specifiers\">unique file type specifiers</a>.\n    </p>",
     "script": "import '@htmlplus/ui/browse.js';\nimport '@htmlplus/ui/center.js';\n",
     "template": "<plus-center>\n  <plus-browse accept=\".jpg, .pdf, video/*\">\n    Click here to select a <b>jpg</b>, <b>pdf</b> or <b>video</b> file\n  </plus-browse>\n</plus-center>\n"
   },
@@ -13177,6 +13292,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      To see all names click <a href=\"https://www.htmlplus.io/element/animation/names\">here</a>.\n    </p>",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-x.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-y.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
     "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  [overrides]='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n>\n  <plus-animation [iterations]=\"Infinity\" name=\"flip-in-x\" run></plus-animation>\n  <plus-animation [iterations]=\"Infinity\" name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
@@ -13188,6 +13304,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      To see all names click <a href=\"https://www.htmlplus.io/element/animation/names\">here</a>.\n    </p>",
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-x.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-y.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
     "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  overrides='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n>\n  <plus-animation iterations=\"Infinity\" name=\"flip-in-x\" run></plus-animation>\n  <plus-animation iterations=\"Infinity\" name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
@@ -13199,6 +13316,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      To see all names click <a href=\"https://www.htmlplus.io/element/animation/names\">here</a>.\n    </p>",
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-x.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-y.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack\n      gap=\"1rem\"\n      justify=\"evenly\"\n      overrides={{\n        'sm-before': {\n          vertical: true\n        },\n        'sm-up': {\n          vertical: false\n        }\n      }}\n    >\n      <plus-animation iterations={Infinity} name=\"flip-in-x\" run></plus-animation>\n      <plus-animation iterations={Infinity} name=\"flip-in-y\" run></plus-animation>\n    </plus-stack>\n  );\n}\nexport default App;\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n"
   },
@@ -13209,6 +13327,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      To see all names click <a href=\"https://www.htmlplus.io/element/animation/names\">here</a>.\n    </p>",
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-x.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-y.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
     "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  overrides={{\n    'sm-before': {\n      vertical: true\n    },\n    'sm-up': {\n      vertical: false\n    }\n  }}\n>\n  <plus-animation iterations={Infinity} name=\"flip-in-x\" run></plus-animation>\n  <plus-animation iterations={Infinity} name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
@@ -13220,6 +13339,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      To see all names click <a href=\"https://www.htmlplus.io/element/animation/names\">here</a>.\n    </p>",
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-x.js';\nimport '@htmlplus/ui/animation/names/flippers/flip-in-y.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
     "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  :overrides='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n>\n  <plus-animation :iterations=\"Infinity\" name=\"flip-in-x\" run></plus-animation>\n  <plus-animation :iterations=\"Infinity\" name=\"flip-in-y\" run></plus-animation>\n</plus-stack>\n"
@@ -13393,6 +13513,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      To see all easings click\n      <a href=\"https://github.com/htmlplus/ui/blob/main/src/elements/animation/animation.constants.ts\">here</a>.\n    </p>",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/fading-exits/fade-out-down.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
     "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  [overrides]='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n>\n  <plus-animation easing=\"linear\" [iterations]=\"Infinity\" name=\"fade-out-down\" run></plus-animation>\n  <plus-animation\n    easing=\"ease-in\"\n    [iterations]=\"Infinity\"\n    name=\"fade-out-down\"\n    run\n  ></plus-animation>\n  <plus-animation\n    easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n    [iterations]=\"Infinity\"\n    name=\"fade-out-down\"\n    run\n  ></plus-animation>\n</plus-stack>\n<br />\n<br />\n<br />\n"
@@ -13404,6 +13525,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      To see all easings click\n      <a href=\"https://github.com/htmlplus/ui/blob/main/src/elements/animation/animation.constants.ts\">here</a>.\n    </p>",
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/fading-exits/fade-out-down.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
     "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  overrides='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n>\n  <plus-animation easing=\"linear\" iterations=\"Infinity\" name=\"fade-out-down\" run></plus-animation>\n  <plus-animation easing=\"ease-in\" iterations=\"Infinity\" name=\"fade-out-down\" run></plus-animation>\n  <plus-animation\n    easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n    iterations=\"Infinity\"\n    name=\"fade-out-down\"\n    run\n  ></plus-animation>\n</plus-stack>\n<br />\n<br />\n<br />\n"
@@ -13415,6 +13537,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      To see all easings click\n      <a href=\"https://github.com/htmlplus/ui/blob/main/src/elements/animation/animation.constants.ts\">here</a>.\n    </p>",
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/fading-exits/fade-out-down.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-stack\n        gap=\"1rem\"\n        justify=\"evenly\"\n        overrides={{\n          'sm-before': {\n            vertical: true\n          },\n          'sm-up': {\n            vertical: false\n          }\n        }}\n      >\n        <plus-animation\n          easing=\"linear\"\n          iterations={Infinity}\n          name=\"fade-out-down\"\n          run\n        ></plus-animation>\n        <plus-animation\n          easing=\"ease-in\"\n          iterations={Infinity}\n          name=\"fade-out-down\"\n          run\n        ></plus-animation>\n        <plus-animation\n          easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n          iterations={Infinity}\n          name=\"fade-out-down\"\n          run\n        ></plus-animation>\n      </plus-stack>\n      <br />\n      <br />\n      <br />\n    </>\n  );\n}\nexport default App;\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n"
   },
@@ -13425,6 +13548,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      To see all easings click\n      <a href=\"https://github.com/htmlplus/ui/blob/main/src/elements/animation/animation.constants.ts\">here</a>.\n    </p>",
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/fading-exits/fade-out-down.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
     "template": "<plus-stack\n  gap=\"1rem\"\n  justify=\"evenly\"\n  overrides={{\n    'sm-before': {\n      vertical: true\n    },\n    'sm-up': {\n      vertical: false\n    }\n  }}\n>\n  <plus-animation easing=\"linear\" iterations={Infinity} name=\"fade-out-down\" run></plus-animation>\n  <plus-animation easing=\"ease-in\" iterations={Infinity} name=\"fade-out-down\" run></plus-animation>\n  <plus-animation\n    easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n    iterations={Infinity}\n    name=\"fade-out-down\"\n    run\n  ></plus-animation>\n</plus-stack>\n<br />\n<br />\n<br />\n"
@@ -13436,6 +13560,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "<p>\n      To see all easings click\n      <a href=\"https://github.com/htmlplus/ui/blob/main/src/elements/animation/animation.constants.ts\">here</a>.\n    </p>",
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/fading-exits/fade-out-down.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
     "template": "<div>\n  <plus-stack\n    gap=\"1rem\"\n    justify=\"evenly\"\n    :overrides='{\"sm-before\":{\"vertical\":true},\"sm-up\":{\"vertical\":false}}'\n  >\n    <plus-animation\n      easing=\"linear\"\n      :iterations=\"Infinity\"\n      name=\"fade-out-down\"\n      run\n    ></plus-animation>\n    <plus-animation\n      easing=\"ease-in\"\n      :iterations=\"Infinity\"\n      name=\"fade-out-down\"\n      run\n    ></plus-animation>\n    <plus-animation\n      easing=\"cubic-bezier(0.25, 0.50, 0.25, 0.50)\"\n      :iterations=\"Infinity\"\n      name=\"fade-out-down\"\n      run\n    ></plus-animation>\n  </plus-stack>\n  <br />\n  <br />\n  <br />\n</div>\n"
@@ -13805,6 +13930,7 @@ export const examples = [
       "isolate": false,
       "rtl": true
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('accordion')\n  accordionRef!: ElementRef;\n  onClick1() {\n    this.accordionRef.nativeElement.collapse();\n  }\n  onClick2() {\n    this.accordionRef.nativeElement.expand();\n  }\n  onClick3() {\n    this.accordionRef.nativeElement.toggle();\n  }\n}\n",
     "template": "<plus-stack gap=\"1rem\">\n  <button (click)=\"onClick1()\">Collapse</button>\n  <button (click)=\"onClick2()\">Expand</button>\n  <button (click)=\"onClick3()\">Toggle</button>\n</plus-stack>\n<br />\n<plus-accordion summary=\"Summary\" #accordion>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
@@ -13815,6 +13941,7 @@ export const examples = [
       "isolate": false,
       "rtl": true
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\n$collapse.addEventListener('click', () => {\n  $accordion.collapse();\n});\n$expand.addEventListener('click', () => {\n  $accordion.expand();\n});\n$toggle.addEventListener('click', () => {\n  $accordion.toggle();\n});\n",
     "template": "<plus-stack gap=\"1rem\">\n  <button id=\"$collapse\">Collapse</button>\n  <button id=\"$expand\">Expand</button>\n  <button id=\"$toggle\">Toggle</button>\n</plus-stack>\n<br />\n<plus-accordion id=\"$accordion\" summary=\"Summary\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
@@ -13825,6 +13952,7 @@ export const examples = [
       "isolate": false,
       "rtl": true
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const accordionRef = useRef();\n  function onClick1() {\n    accordionRef.current.collapse();\n  }\n  function onClick2() {\n    accordionRef.current.expand();\n  }\n  function onClick3() {\n    accordionRef.current.toggle();\n  }\n  return (\n    <>\n      <plus-stack gap=\"1rem\">\n        <button onClick={onClick1}>Collapse</button>\n        <button onClick={onClick2}>Expand</button>\n        <button onClick={onClick3}>Toggle</button>\n      </plus-stack>\n      <br />\n      <plus-accordion summary=\"Summary\" ref={accordionRef}>\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
@@ -13834,6 +13962,7 @@ export const examples = [
       "isolate": false,
       "rtl": true
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nlet accordionRef;\nfunction onClick1() {\n  accordionRef.collapse();\n}\nfunction onClick2() {\n  accordionRef.expand();\n}\nfunction onClick3() {\n  accordionRef.toggle();\n}\n",
     "template": "<plus-stack gap=\"1rem\">\n  <button on:click={onClick1}>Collapse</button>\n  <button on:click={onClick2}>Expand</button>\n  <button on:click={onClick3}>Toggle</button>\n</plus-stack>\n<br />\n<plus-accordion summary=\"Summary\" bind:this={accordionRef}>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
@@ -13844,6 +13973,7 @@ export const examples = [
       "isolate": false,
       "rtl": true
     },
+    "description": "<p>Open the developer console.</p>",
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nconst accordionRef = ref();\nfunction onClick1() {\n  accordionRef.value.collapse();\n}\nfunction onClick2() {\n  accordionRef.value.expand();\n}\nfunction onClick3() {\n  accordionRef.value.toggle();\n}\n",
     "template": "<div>\n  <plus-stack gap=\"1rem\">\n    <button @click=\"onClick1\">Collapse</button>\n    <button @click=\"onClick2\">Expand</button>\n    <button @click=\"onClick3\">Toggle</button>\n  </plus-stack>\n  <br />\n  <plus-accordion summary=\"Summary\" ref=\"accordionRef\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
   },

@@ -21,6 +21,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     Alert,
     Api,
+    Badge,
     Browsers,
     Example,
     Examples,
