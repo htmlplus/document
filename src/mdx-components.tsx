@@ -1,7 +1,7 @@
 import type { MDXComponents } from 'mdx/types';
 
 import { Alert, Badge, Button } from '@/components';
-import { Api, Browsers, Example, Examples, GlobalConfig, LastModified, TocItem, Usage } from '@/containers';
+import { Browsers, Example, TocItem } from '@/containers';
 
 function Heading(level: number) {
   return function (props: any) {
@@ -20,17 +20,8 @@ function Heading(level: number) {
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     Alert,
-    Api,
-    Badge,
     Browsers,
     Example,
-    Examples,
-    GlobalConfig,
-    LastModified,
-    Playground() {
-      return null;
-    },
-    Usage,
     a({ children, href }: any) {
       return (
         <Button to={href} link="underline">

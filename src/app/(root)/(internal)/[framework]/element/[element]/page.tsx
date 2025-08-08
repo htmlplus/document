@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }) 
 }
 
 export default async function Page({ params }: { params: Promise<Params> }) {
-  const { element: elementKey } = await params;
+  const { framework: frameworkKey, element: elementKey } = await params;
 
   const element = elements.find((element) => element.key == elementKey)!;
 
@@ -45,13 +45,23 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
   sections.push(element.description);
 
-  sections.push('<Usage />');
+  sections.push(
+    '## Usage',
+    `Follow the tutorials [here](${getPath(ROUTES.INSTALLATION_FRAMEWORK, { framework: frameworkKey })}) to use the **HTMLPLUS** library on **${frameworkKey.toUpperCase()}** projects.`,
+    `<plus-prism language="markup">npm install @htmlplus/ui ${element.dependencies || ''}</plus-prism>`,
+  );
 
-  sections.push('<Api />');
+  sections.push(
+    '## Api',
+    `Click [here](${getPath(ROUTES.API_DETAILS, { framework: frameworkKey, element: elementKey })}) to learn more about the **Properties**, **Slots**, **Events**, **CSS Variables**, **CSS Parts**, and **Methods**.`,
+  );
 
-  sections.push('<GlobalConfig />');
+  sections.push(
+    '## Global Config',
+    `See the animation's [config](${getPath(ROUTES.ELEMENT_CONFIG, { element: elementKey })}). Full [documentation](${getPath(ROUTES.GLOBAL_CONFIG, {})}) is available.`,
+  );
 
-  sections.push('<Examples />');
+  sections.push('## Examples', 'Below is a collection of simple to complex examples.');
 
   for (const current of examples) {
     const [frameworkKey, elementKey, exampleKey] = current.key.split('/');
@@ -112,13 +122,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
     sections.push(`### ${title}`);
 
-    sections.push(
-      (current.description || '')
-        .replaceAll('<code>', '<Badge>')
-        .replaceAll('</code>', '</Badge>')
-        .replaceAll('<p>', '')
-        .replaceAll('</p>', ''),
-    );
+    sections.push(current.description || '');
 
     const key = camelCase(`example_${exampleKey}`);
 
@@ -137,7 +141,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
     );
   }
 
-  sections.push(`<LastModified value="${element.lastModified}" />`);
+  sections.push('## Last Modified', `<plus-relative-time value="${element.lastModified}"></plus-relative-time>`);
 
   return <Markup value={sections.join('\n\n')} scope={scope}></Markup>;
 }

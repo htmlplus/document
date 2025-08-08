@@ -8,7 +8,7 @@ export const statistics = {
   watchers: 5,
   dowanloads: 4221,
   downloadsLastWeek: 9,
-  downloadsLastMonth: 100,
+  downloadsLastMonth: 85,
   elements: 55,
   examples: 277,
   frameworks: 5,
