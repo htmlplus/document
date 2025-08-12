@@ -18,12 +18,12 @@ export default function Layout({ children }: PropsWithChildren) {
           connector="main"
           size="300px"
           overrides={{
-            'xl-before': {
+            xs: {
               backdrop: true,
               floating: true,
               open: false,
             },
-            'xl-up': {
+            xl: {
               backdrop: false,
               floating: false,
               open: true,

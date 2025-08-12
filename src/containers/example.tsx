@@ -112,10 +112,10 @@ export function Example({ Preview, dock, element, example, isolate, links, rtl, 
       <div className="flex gap-2 flex-col sm:flex-row sm:items-center sm:justify-between">
         <plus-tabs-bar
           overrides={{
-            'sm-before': {
+            xs: {
               grow: true,
             },
-            'sm-up': {
+            sm: {
               grow: false,
             },
           }}

@@ -110,11 +110,11 @@ export default async function Home() {
             className="self-stretch"
             width="xs"
             overrides={{
-              'lg-before': {
+              xs: {
                 variant: 'middle',
                 vertical: false,
               },
-              'lg-up': {
+              lg: {
                 variant: 'full',
                 vertical: true,
               },
@@ -131,11 +131,11 @@ export default async function Home() {
             className="self-stretch"
             width="xs"
             overrides={{
-              'lg-before': {
+              xs: {
                 variant: 'middle',
                 vertical: false,
               },
-              'lg-up': {
+              lg: {
                 variant: 'full',
                 vertical: true,
               },
