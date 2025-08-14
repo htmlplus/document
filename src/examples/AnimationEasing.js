@@ -13,10 +13,10 @@ function App() {
         gap="1rem"
         justify="evenly"
         overrides={{
-          xs: {
+          '@xs': {
             vertical: true
           },
-          sm: {
+          '@sm': {
             vertical: false
           }
         }}

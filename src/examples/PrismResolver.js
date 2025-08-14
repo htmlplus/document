@@ -10,25 +10,27 @@ setConfig({
   elements: {
     'plus-prism': {
       properties: {
-        async resolver({ key, value }) {
-          switch (key) {
-            case 'language': {
-              await import(`prismjs/components/prism-${value}.js`);
-              break;
-            }
-            case 'plugin': {
-              await import(`prismjs/plugins/${value}/prism-${value}.js`);
-              try {
-                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;
+        resolver: {
+          default: async ({ key, value }) => {
+            switch (key) {
+              case 'language': {
+                await import(`prismjs/components/prism-${value}.js`);
+                break;
+              }
+              case 'plugin': {
+                await import(`prismjs/plugins/${value}/prism-${value}.js`);
+                try {
+                  const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;
+                  const styles = await fetch(url).then((response) => response.text());
+                  return styles;
+                } catch {}
+                break;
+              }
+              case 'theme': {
+                const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;
                 const styles = await fetch(url).then((response) => response.text());
                 return styles;
-              } catch {}
-              break;
-            }
-            case 'theme': {
-              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;
-              const styles = await fetch(url).then((response) => response.text());
-              return styles;
+              }
             }
           }
         }

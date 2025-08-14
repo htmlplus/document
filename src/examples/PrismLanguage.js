@@ -11,9 +11,11 @@ setConfig({
   elements: {
     'plus-prism': {
       properties: {
-        async resolver({ key, value }) {
-          if (key == 'language') {
-            await import(`prismjs/components/prism-${value}.js`);
+        resolver: {
+          default: async ({ key, value }) => {
+            if (key == 'language') {
+              await import(`prismjs/components/prism-${value}.js`);
+            }
           }
         }
       }

@@ -12,7 +12,9 @@ setConfig({
   elements: {
     'plus-faker': {
       properties: {
-        instance: faker
+        instance: {
+          default: faker
+        }
       }
     }
   }
