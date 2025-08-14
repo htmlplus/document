@@ -30,9 +30,9 @@ function App() {
 
 const AvatarGroupGutter = () => {
   return (
-    <div className="ex-preview ex-avatar-group-gutter">
+    <div className="avatar-group-gutter">
       <App />
-      <style>{`.ex-avatar-group-gutter { plus-avatar-group plus-avatar {  margin-inline-end: 2rem;}plus-avatar-group[stacked] plus-avatar {  margin-inline-end: -2rem;} }`}</style>
+      <style>{`.avatar-group-gutter { plus-avatar-group plus-avatar {  margin-inline-end: 2rem;}plus-avatar-group[stacked] plus-avatar {  margin-inline-end: -2rem;} }`}</style>
     </div>
   )
 };

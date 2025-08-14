@@ -38,7 +38,7 @@ function App() {
 
 const ClickOutsideDefault = () => {
   return (
-    <div className="ex-preview ex-click-outside-default">
+    <div className="click-outside-default">
       <App />
     </div>
   )

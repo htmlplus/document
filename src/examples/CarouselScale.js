@@ -35,9 +35,9 @@ function App() {
 
 const CarouselScale = () => {
   return (
-    <div className="ex-preview ex-carousel-scale">
+    <div className="carousel-scale">
       <App />
-      <style>{`.ex-carousel-scale { plus-carousel-slide {  flex-basis: 55% !important;  background-color: transparent !important;}plus-carousel-slide div {  background-color: whitesmoke;  border-radius: 0.5rem;  display: flex;  align-items: center;  justify-content: center;  height: 100%;  width: 100%;  transform: scale(var(--plus-carousel-factor-2));} }`}</style>
+      <style>{`.carousel-scale { plus-carousel-slide {  flex-basis: 55% !important;  background-color: transparent !important;}plus-carousel-slide div {  background-color: whitesmoke;  border-radius: 0.5rem;  display: flex;  align-items: center;  justify-content: center;  height: 100%;  width: 100%;  transform: scale(var(--plus-carousel-factor-2));} }`}</style>
     </div>
   )
 };

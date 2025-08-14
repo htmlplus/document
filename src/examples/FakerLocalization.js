@@ -9,10 +9,12 @@ import { faker } from '@faker-js/faker/locale/ja';
 import { setConfig } from '@htmlplus/ui/config.js';
 
 setConfig({
-  element: {
+  elements: {
     'plus-faker': {
-      property: {
-        instance: faker
+      properties: {
+        instance: {
+          default: faker
+        }
       }
     }
   }
@@ -28,7 +30,7 @@ const FakerLocalization = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
-    <div className="ex-preview ex-faker-localization">
+    <div className="faker-localization">
       {ready && <App />}
     </div>
   )

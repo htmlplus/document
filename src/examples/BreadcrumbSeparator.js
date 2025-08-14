@@ -21,9 +21,9 @@ function App() {
 
 const BreadcrumbSeparator = () => {
   return (
-    <div className="ex-preview ex-breadcrumb-separator">
+    <div className="breadcrumb-separator">
       <App />
-      <style>{`.ex-breadcrumb-separator { plus-breadcrumb a {  color: inherit;  text-decoration: none;}plus-breadcrumb a:hover {  text-decoration: underline;} }`}</style>
+      <style>{`.breadcrumb-separator { plus-breadcrumb a {  color: inherit;  text-decoration: none;}plus-breadcrumb a:hover {  text-decoration: underline;} }`}</style>
     </div>
   )
 };

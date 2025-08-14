@@ -51,9 +51,9 @@ function App() {
 
 const CarouselAlign = () => {
   return (
-    <div className="ex-preview ex-carousel-align">
+    <div className="carousel-align">
       <App />
-      <style>{`.ex-carousel-align { plus-carousel-slide {  flex-basis: 70% !important;} }`}</style>
+      <style>{`.carousel-align { plus-carousel-slide {  flex-basis: 70% !important;} }`}</style>
     </div>
   )
 };

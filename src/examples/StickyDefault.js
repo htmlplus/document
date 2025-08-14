@@ -19,9 +19,9 @@ function App() {
 
 const StickyDefault = () => {
   return (
-    <div className="ex-preview ex-sticky-default dock">
+    <div className="sticky-default">
       <App />
-      <style>{`.ex-sticky-default { .container {  height: 20rem;  overflow: auto;}plus-faker {  display: block;  padding: 1rem;  text-align: justify;}plus-sticky {  background-color: gold;} }`}</style>
+      <style>{`.sticky-default { .container {  height: 20rem;  overflow: auto;}plus-faker {  display: block;  padding: 1rem;  text-align: justify;}plus-sticky {  background-color: gold;} }`}</style>
     </div>
   )
 };

@@ -28,7 +28,7 @@ function App() {
       <br />
       <plus-carousel
         variant="presentation"
-        class="mirror"
+        className="mirror"
         draggable="free"
         mirror="my-carousel"
         mirror-type="click-smooth"
@@ -51,9 +51,9 @@ function App() {
 
 const CarouselThumbnails = () => {
   return (
-    <div className="ex-preview ex-carousel-thumbnails">
+    <div className="carousel-thumbnails">
       <App />
-      <style>{`.ex-carousel-thumbnails { plus-carousel.mirror plus-carousel-slide {  flex-basis: 6rem !important;  height: 6rem !important;} }`}</style>
+      <style>{`.carousel-thumbnails { plus-carousel.mirror plus-carousel-slide {  flex-basis: 6rem !important;  height: 6rem !important;} }`}</style>
     </div>
   )
 };

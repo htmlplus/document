@@ -27,7 +27,7 @@ function App() {
 
 const StackDivider = () => {
   return (
-    <div className="ex-preview ex-stack-divider">
+    <div className="stack-divider">
       <App />
     </div>
   )

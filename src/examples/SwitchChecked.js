@@ -15,7 +15,7 @@ function App() {
 
 const SwitchChecked = () => {
   return (
-    <div className="ex-preview ex-switch-checked">
+    <div className="switch-checked">
       <App />
     </div>
   )

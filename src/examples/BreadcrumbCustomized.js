@@ -19,9 +19,9 @@ function App() {
 
 const BreadcrumbCustomized = () => {
   return (
-    <div className="ex-preview ex-breadcrumb-customized">
+    <div className="breadcrumb-customized">
       <App />
-      <style>{`.ex-breadcrumb-customized { plus-breadcrumb {  gap: 0.75em;  background-color: lightgray;  border-radius: 0.25em;  padding: 0.75em;}plus-breadcrumb a {  text-decoration: none;  color: black;}plus-breadcrumb::part(expander) {  background-color: transparent;  color: black;  height: 1em;  width: 1em;}plus-breadcrumb::part(separator) {  color: black;  height: 0.75em;  width: 0.75em;} }`}</style>
+      <style>{`.breadcrumb-customized { plus-breadcrumb {  gap: 0.75em;  background-color: lightgray;  border-radius: 0.25em;  padding: 0.75em;}plus-breadcrumb a {  text-decoration: none;  color: black;}plus-breadcrumb::part(expander) {  background-color: transparent;  color: black;  height: 1em;  width: 1em;}plus-breadcrumb::part(separator) {  color: black;  height: 0.75em;  width: 0.75em;} }`}</style>
     </div>
   )
 };

@@ -34,7 +34,7 @@ function App() {
 
 const DialogPersistent = () => {
   return (
-    <div className="ex-preview ex-dialog-persistent">
+    <div className="dialog-persistent">
       <App />
     </div>
   )

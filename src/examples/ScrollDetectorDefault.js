@@ -25,9 +25,9 @@ function App() {
 
 const ScrollDetectorDefault = () => {
   return (
-    <div className="ex-preview ex-scroll-detector-default dock">
+    <div className="scroll-detector-default">
       <App />
-      <style>{`.ex-scroll-detector-default { .container {  position: relative;}.scrollable {  padding: 1rem;  height: 20em;  overflow-y: auto;} }`}</style>
+      <style>{`.scroll-detector-default { .container {  position: relative;}.scrollable {  padding: 1rem;  height: 20em;  overflow-y: auto;} }`}</style>
     </div>
   )
 };

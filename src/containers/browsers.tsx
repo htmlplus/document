@@ -6,21 +6,18 @@ import { getPath } from '@/utils';
 
 export function Browsers() {
   return (
-    <plus-grid gutter-y="lg">
+    <div className="flex flex-col justify-around gap-4 sm:gap-0 sm:flex-row">
       {browsers.map((browser) => (
-        <plus-grid-item xs="12" sm="grow" key={browser.key}>
-          <div style={{ textAlign: 'center', minWidth: 100 }}>
-            <img
-              width="64"
-              height="64"
-              alt={browser.title}
-              src={getPath(ROUTES.ASSETS, { filepath: `browsers/${browser.logo}` })}
-            />
-            <br />
-            <p>{browser.title}</p>
-          </div>
-        </plus-grid-item>
+        <plus-stack key={browser.key} vertical>
+          <img
+            width="64"
+            height="64"
+            alt={browser.title}
+            src={getPath(ROUTES.ASSETS, { filepath: `browsers/${browser.logo}` })}
+          />
+          <p>{browser.title}</p>
+        </plus-stack>
       ))}
-    </plus-grid>
+    </div>
   );
 }

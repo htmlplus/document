@@ -10,7 +10,7 @@ function App() {
 
 const SnippetSymbol = () => {
   return (
-    <div className="ex-preview ex-snippet-symbol">
+    <div className="snippet-symbol">
       <App />
     </div>
   )

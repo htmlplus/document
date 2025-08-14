@@ -14,7 +14,7 @@ function App() {
 
 const AspectRatioVideo = () => {
   return (
-    <div className="ex-preview ex-aspect-ratio-video">
+    <div className="aspect-ratio-video">
       <App />
     </div>
   )

@@ -26,7 +26,7 @@ function App() {
 
 const BrowseMinAndMaxSize = () => {
   return (
-    <div className="ex-preview ex-browse-min-and-max-size">
+    <div className="browse-min-and-max-size">
       <App />
     </div>
   )

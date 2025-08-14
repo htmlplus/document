@@ -25,9 +25,9 @@ function App() {
 
 const CarouselDraggableFree = () => {
   return (
-    <div className="ex-preview ex-carousel-draggable-free">
+    <div className="carousel-draggable-free">
       <App />
-      <style>{`.ex-carousel-draggable-free { plus-carousel-slide {  flex-basis: 50% !important;} }`}</style>
+      <style>{`.carousel-draggable-free { plus-carousel-slide {  flex-basis: 50% !important;} }`}</style>
     </div>
   )
 };

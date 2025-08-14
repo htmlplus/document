@@ -35,7 +35,6 @@ export const AspectRatioCard = dynamic(() => import('./AspectRatioCard'), { ssr:
 export const AspectRatioDefault = dynamic(() => import('./AspectRatioDefault'), { ssr: false, suspense: true });
 export const AspectRatioImage = dynamic(() => import('./AspectRatioImage'), { ssr: false, suspense: true });
 export const AspectRatioMap = dynamic(() => import('./AspectRatioMap'), { ssr: false, suspense: true });
-export const AspectRatioMore = dynamic(() => import('./AspectRatioMore'), { ssr: false, suspense: true });
 export const AspectRatioVideo = dynamic(() => import('./AspectRatioVideo'), { ssr: false, suspense: true });
 export const AvatarColor = dynamic(() => import('./AvatarColor'), { ssr: false, suspense: true });
 export const AvatarDefault = dynamic(() => import('./AvatarDefault'), { ssr: false, suspense: true });

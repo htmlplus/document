@@ -44,9 +44,9 @@ function App() {
 
 const BreadcrumbLimitation = () => {
   return (
-    <div className="ex-preview ex-breadcrumb-limitation">
+    <div className="breadcrumb-limitation">
       <App />
-      <style>{`.ex-breadcrumb-limitation { plus-breadcrumb a {  color: inherit;  text-decoration: none;}plus-breadcrumb a:hover {  text-decoration: underline;} }`}</style>
+      <style>{`.breadcrumb-limitation { plus-breadcrumb a {  color: inherit;  text-decoration: none;}plus-breadcrumb a:hover {  text-decoration: underline;} }`}</style>
     </div>
   )
 };

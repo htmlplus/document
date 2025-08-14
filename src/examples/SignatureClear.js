@@ -27,7 +27,7 @@ function App() {
 
 const SignatureClear = () => {
   return (
-    <div className="ex-preview ex-signature-clear">
+    <div className="signature-clear">
       <App />
     </div>
   )

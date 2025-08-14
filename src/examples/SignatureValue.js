@@ -16,7 +16,7 @@ function App() {
 
 const SignatureValue = () => {
   return (
-    <div className="ex-preview ex-signature-value">
+    <div className="signature-value">
       <App />
     </div>
   )

@@ -25,9 +25,9 @@ function App() {
 
 const CarouselStartIndex = () => {
   return (
-    <div className="ex-preview ex-carousel-start-index">
+    <div className="carousel-start-index">
       <App />
-      <style>{`.ex-carousel-start-index { plus-carousel-slide {  flex-basis: 70% !important;} }`}</style>
+      <style>{`.carousel-start-index { plus-carousel-slide {  flex-basis: 70% !important;} }`}</style>
     </div>
   )
 };

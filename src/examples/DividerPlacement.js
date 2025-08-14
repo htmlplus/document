@@ -18,7 +18,7 @@ function App() {
 
 const DividerPlacement = () => {
   return (
-    <div className="ex-preview ex-divider-placement">
+    <div className="divider-placement">
       <App />
     </div>
   )

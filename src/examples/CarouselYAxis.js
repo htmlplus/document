@@ -25,7 +25,7 @@ function App() {
 
 const CarouselYAxis = () => {
   return (
-    <div className="ex-preview ex-carousel-y-axis">
+    <div className="carousel-y-axis">
       <App />
     </div>
   )

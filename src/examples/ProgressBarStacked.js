@@ -17,7 +17,7 @@ function App() {
 
 const ProgressBarStacked = () => {
   return (
-    <div className="ex-preview ex-progress-bar-stacked">
+    <div className="progress-bar-stacked">
       <App />
     </div>
   )

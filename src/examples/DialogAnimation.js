@@ -34,7 +34,7 @@ function App() {
 
 const DialogAnimation = () => {
   return (
-    <div className="ex-preview ex-dialog-animation">
+    <div className="dialog-animation">
       <App />
     </div>
   )

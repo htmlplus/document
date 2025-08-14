@@ -17,7 +17,7 @@ function App() {
 
 const RelativeTimeFormat = () => {
   return (
-    <div className="ex-preview ex-relative-time-format">
+    <div className="relative-time-format">
       <App />
     </div>
   )

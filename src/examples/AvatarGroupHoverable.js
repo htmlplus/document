@@ -30,7 +30,7 @@ function App() {
 
 const AvatarGroupHoverable = () => {
   return (
-    <div className="ex-preview ex-avatar-group-hoverable">
+    <div className="avatar-group-hoverable">
       <App />
     </div>
   )

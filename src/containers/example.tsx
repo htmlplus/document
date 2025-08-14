@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, Suspense, useLayoutEffect, useRef, useState } from 'react';
+import { FC, useEffect, useLayoutEffect, useRef, useState } from 'react';
 
 import { Alert, Button } from '@/components';
 import { ROUTES } from '@/constants';
@@ -27,9 +27,10 @@ export interface ExampleProps {
     title?: string;
   }>;
   title?: string;
+  dock?: boolean;
 }
 
-export function Example({ Preview, element, example, isolate, links, rtl, tabs, title }: ExampleProps) {
+export function Example({ Preview, dock, element, example, isolate, links, rtl, tabs, title }: ExampleProps) {
   const frameworks = useFrameworks();
 
   const $preview = useRef<HTMLElement>(null);
@@ -68,65 +69,107 @@ export function Example({ Preview, element, example, isolate, links, rtl, tabs, 
 
   const handleReload = (event?: MouseEvent) => {
     event?.preventDefault();
+
     setDirection('ltr');
+
     setIsVisible(false);
+
     requestAnimationFrame(() => setIsVisible(true));
+
     setIsLoaded(false);
+
+    if (!$preview.current?.offsetHeight) return;
+
+    $preview.current.style.height = `${$preview.current!.offsetHeight}px`;
+
+    if (!isolate) return;
+
+    $preview.current!.classList.add('animate-shimmer', 'bg-main-4');
   };
 
   useLayoutEffect(handleReload, [frameworks.framework]);
+
+  useEffect(() => {
+    if (!$preview.current) return;
+
+    if (isolate && !isLoaded) return;
+
+    if (!isolate && !isVisible) return;
+
+    setTimeout(() => {
+      $preview.current!.classList.remove('animate-shimmer', 'bg-main-4');
+
+      $preview.current!.style.height = 'auto';
+    }, 250);
+  }, [isLoaded, isolate, isVisible]);
 
   useLayoutEffect(() => {
     return () => resizeObserver.current?.disconnect();
   }, [isVisible]);
 
   return (
-    <plus-tabs class="example" connector={`example:${title}`} value="preview">
-      {/* TODO: remove connector and example */}
-      <plus-grid align-items="center" gutter-x="sm">
-        <plus-grid-item xs="grow">
-          <plus-tabs-bar>
-            <plus-tabs-tab value="preview">Preview</plus-tabs-tab>
-            {tabs?.map((tab) => (
-              <plus-tabs-tab key={tab.key} disabled={tab.disabled} value={tab.key}>
-                {tab.title}
-              </plus-tabs-tab>
-            ))}
-          </plus-tabs-bar>
-        </plus-grid-item>
-        {rtl && (
-          <plus-grid-item xs="auto">
-            <Button icon text to="#" onClick={handleChangeDirection}>
-              <plus-icon name="sign-turn-left"></plus-icon>
-            </Button>
-            <plus-tooltip>Change Direction</plus-tooltip>
-          </plus-grid-item>
-        )}
-        <plus-grid-item xs="auto">
-          <Button icon text to="#" onClick={handleReload}>
-            <plus-icon name="arrow-clockwise"></plus-icon>
-          </Button>
-          <plus-tooltip>Reset</plus-tooltip>
-        </plus-grid-item>
-        {links?.map((link) => (
-          <plus-grid-item key={link.key} xs="auto">
-            <Button icon text to={link.url} target="_blank">
-              <plus-icon name={link.icon}></plus-icon>
-            </Button>
-            <plus-tooltip>{link.title}</plus-tooltip>
-          </plus-grid-item>
-        ))}
-      </plus-grid>
-      <plus-tabs-panels>
-        <plus-tabs-panel value="preview" dir={direction} ref={$preview}>
-          {!isVisible && <div style={{ height: $preview.current!.clientHeight + 'px' }}></div>}
-          {isVisible && isolate != true && (
-            <Suspense fallback={<div className="skeleton" />}>{Preview && <Preview />}</Suspense>
-          )}
-          {isVisible && isolate == true && (
-            <div className={isLoaded ? '' : 'skeleton'}>
-              <iframe src={getPath(ROUTES.ELEMENT_EXAMPLE, { element, example })} onLoad={handleIframeLoad} />
+    <plus-tabs className="gap-2 leading-normal" value="preview">
+      <div className="flex gap-2 flex-col sm:flex-row sm:items-center sm:justify-between">
+        <plus-tabs-bar
+          overrides={{
+            xs: {
+              grow: true,
+            },
+            sm: {
+              grow: false,
+            },
+          }}
+        >
+          <plus-tabs-tab value="preview">Preview</plus-tabs-tab>
+          {tabs?.map((tab) => (
+            <plus-tabs-tab key={tab.key} disabled={tab.disabled} value={tab.key}>
+              {tab.title}
+            </plus-tabs-tab>
+          ))}
+        </plus-tabs-bar>
+        <div className="flex gap-2 justify-center">
+          {rtl && (
+            <div>
+              <Button icon text to="#" onClick={handleChangeDirection}>
+                <plus-icon name="sign-turn-left"></plus-icon>
+              </Button>
+              <plus-tooltip>Change Direction</plus-tooltip>
             </div>
+          )}
+          <div>
+            <Button icon text to="#" onClick={handleReload}>
+              <plus-icon name="arrow-clockwise"></plus-icon>
+            </Button>
+            <plus-tooltip>Reset</plus-tooltip>
+          </div>
+          {links?.map((link) => (
+            <div key={link.key}>
+              <Button icon text to={link.url} target="_blank">
+                <plus-icon name={link.icon}></plus-icon>
+              </Button>
+              <plus-tooltip>{link.title}</plus-tooltip>
+            </div>
+          ))}
+        </div>
+      </div>
+      <plus-tabs-panels>
+        <plus-tabs-panel
+          className={`animate-shimmer bg-main-4 relative border border-main-4 border-solid ${dock ? '' : 'p-[1.5rem]'}`}
+          value="preview"
+          dir={direction}
+          ref={$preview}
+        >
+          {isVisible && !isolate && Preview && (
+            <div className="preview">
+              <Preview />
+            </div>
+          )}
+          {isVisible && isolate && (
+            <iframe
+              className={`border-none block m-0 w-full h-0 ${isLoaded ? '' : 'opacity-0'}`}
+              src={getPath(ROUTES.ELEMENT_EXAMPLE, { element, example })}
+              onLoad={handleIframeLoad}
+            />
           )}
         </plus-tabs-panel>
         {tabs

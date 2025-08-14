@@ -23,9 +23,9 @@ function App() {
 
 const SnippetCustomColor = () => {
   return (
-    <div className="ex-preview ex-snippet-custom-color">
+    <div className="snippet-custom-color">
       <App />
-      <style>{`.ex-snippet-custom-color { plus-snippet[color='primary'] {  --plus-snippet-color: #ff5449;}plus-snippet[color='secondary'] {  --plus-snippet-color: #08dfc8;}plus-snippet[color='tertiary'] {  --plus-snippet-color: #5f9ee9;} }`}</style>
+      <style>{`.snippet-custom-color { plus-snippet[color='primary'] {  --plus-snippet-color: #ff5449;}plus-snippet[color='secondary'] {  --plus-snippet-color: #08dfc8;}plus-snippet[color='tertiary'] {  --plus-snippet-color: #5f9ee9;} }`}</style>
     </div>
   )
 };

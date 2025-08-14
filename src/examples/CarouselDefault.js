@@ -25,7 +25,7 @@ function App() {
 
 const CarouselDefault = () => {
   return (
-    <div className="ex-preview ex-carousel-default">
+    <div className="carousel-default">
       <App />
     </div>
   )

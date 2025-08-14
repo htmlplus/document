@@ -30,8 +30,6 @@ const db = await (async () => {
   const LOCAL = path.join(__dirname, '../../examples/dist/db.json');
   const REMOTE = 'https://github.com/htmlplus/examples/raw/main/dist/db.json';
 
-  const db = JSON.parse(await load(LOCAL, REMOTE));
-
   return JSON.parse(await load(LOCAL, REMOTE));
 })();
 
@@ -44,7 +42,7 @@ const document = await (async () => {
 
 // changelog
 (async () => {
-  const DESTINATION = './src/app/(internal)/changelog/page.mdx';
+  const DESTINATION = './src/app/(root)/(internal)/changelog/page.mdx';
   const LOCAL = path.join(__dirname, '../../ui/CHANGELOG.md');
   const REMOTE = 'https://github.com/htmlplus/ui/raw/main/CHANGELOG.md';
 
@@ -60,20 +58,20 @@ const document = await (async () => {
   const lines = [
     ...HEADER,
     'export const elementsLight = ' +
-      JSON.stringify(
-        document.elements.map((element) => ({
-          key: element.key,
-          stable: element.stable,
-          subset: !!element.subset,
-          title: element.title,
-          dependencies: element.dependencies
-            ?.split(',')
-            ?.map((dependency) => dependency.trim())
-            ?.filter((dependency) => !!dependency),
-        })),
-        null,
-        2,
-      ),
+    JSON.stringify(
+      document.elements.map((element) => ({
+        key: element.key,
+        stable: element.stable,
+        subset: !!element.subset,
+        title: element.title,
+        dependencies: element.dependencies
+          ?.split(',')
+          ?.map((dependency) => dependency.trim())
+          ?.filter((dependency) => !!dependency),
+      })),
+      null,
+      2,
+    ),
   ];
 
   const content = lines.join('\n');
@@ -111,7 +109,7 @@ const document = await (async () => {
   for (const item of items) {
     const name = pascalCase(item.key.replace('react/', ''));
 
-    const className = `ex-${kebabCase(name)}`;
+    const className = `${kebabCase(name)}`;
 
     let { config, script, settings, style } = item;
 
@@ -127,7 +125,7 @@ const document = await (async () => {
       script += '  useEffect(() => setReady(true), []);\n';
     }
     script += '  return (\n';
-    script += `    <div className="ex-preview ${className}${settings?.dock ? ' dock' : ''}">\n`;
+    script += `    <div className="${className}">\n`;
     if (config) {
       script += `      {ready && <App />}\n`;
     } else {
@@ -166,7 +164,7 @@ const document = await (async () => {
 
 // vision
 (async () => {
-  const DESTINATION = './src/app/(internal)/vision/page.mdx';
+  const DESTINATION = './src/app/(root)/(internal)/vision/page.mdx';
   const LOCAL = path.join(__dirname, '../../ui/VISION.md');
   const REMOTE = 'https://github.com/htmlplus/ui/raw/main/VISION.md';
 
@@ -177,7 +175,7 @@ const document = await (async () => {
 
 // roadmap
 (async () => {
-  const DESTINATION = './src/app/(internal)/roadmap/page.mdx';
+  const DESTINATION = './src/app/(root)/(internal)/roadmap/page.mdx';
   const LOCAL = path.join(__dirname, '../../ui/ROADMAP.md');
   const REMOTE = 'https://github.com/htmlplus/ui/raw/main/ROADMAP.md';
 

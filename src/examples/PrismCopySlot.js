@@ -14,7 +14,7 @@ function App() {
 
 const PrismCopySlot = () => {
   return (
-    <div className="ex-preview ex-prism-copy-slot">
+    <div className="prism-copy-slot">
       <App />
     </div>
   )

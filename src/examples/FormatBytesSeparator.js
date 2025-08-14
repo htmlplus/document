@@ -8,15 +8,15 @@ import '@htmlplus/ui/stack.js';
 function App() {
   return (
     <plus-stack vertical>
-      <plus-format-bytes value={1000} separator=""></plus-format-bytes>
       <plus-format-bytes value={1000} separator=" "></plus-format-bytes>
+      <plus-format-bytes value={1000} separator="_"></plus-format-bytes>
     </plus-stack>
   );
 }
 
 const FormatBytesSeparator = () => {
   return (
-    <div className="ex-preview ex-format-bytes-separator">
+    <div className="format-bytes-separator">
       <App />
     </div>
   )

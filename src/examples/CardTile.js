@@ -3,32 +3,23 @@
  **************************************************/
 
 import '@htmlplus/ui/card.js';
-import '@htmlplus/ui/grid-item.js';
-import '@htmlplus/ui/grid.js';
+import '@htmlplus/ui/stack.js';
 
 function App() {
   return (
-    <div className="container">
-      <plus-grid justify-content="evenly" gutter="md">
-        <plus-grid-item xs="12" sm="auto">
-          <plus-card tile></plus-card>
-        </plus-grid-item>
-        <plus-grid-item xs="12" sm="auto">
-          <plus-card tile outlined></plus-card>
-        </plus-grid-item>
-        <plus-grid-item xs="12" sm="auto">
-          <plus-card tile elevation={5}></plus-card>
-        </plus-grid-item>
-      </plus-grid>
-    </div>
+    <plus-stack gap="1rem" justify="evenly" wrap>
+      <plus-card tile></plus-card>
+      <plus-card tile outlined></plus-card>
+      <plus-card tile elevation={5}></plus-card>
+    </plus-stack>
   );
 }
 
 const CardTile = () => {
   return (
-    <div className="ex-preview ex-card-tile dock">
+    <div className="card-tile">
       <App />
-      <style>{`.ex-card-tile { .container {  padding: 2rem 0;  background-color: whitesmoke;}plus-card {  height: 8rem;  width: 8rem;  margin: auto;} }`}</style>
+      <style>{`.card-tile { .container {  padding: 2rem 0;  background-color: whitesmoke;}plus-card {  height: 8rem;  width: 8rem;} }`}</style>
     </div>
   )
 };

@@ -32,9 +32,9 @@ function App() {
 
 const CarouselParallax = () => {
   return (
-    <div className="ex-preview ex-carousel-parallax">
+    <div className="carousel-parallax">
       <App />
-      <style>{`.ex-carousel-parallax { plus-carousel-slide {  flex-basis: 80% !important;  overflow: hidden;}img {  display: block;  height: 100%;  width: 100%;  max-width: none;  flex: 0 0 calc(115% + (1rem * 2));  object-fit: cover;  transform: translateX(calc(var(--plus-carousel-factor-1) * -80%));} }`}</style>
+      <style>{`.carousel-parallax { plus-carousel-slide {  flex-basis: 80% !important;  overflow: hidden;}img {  display: block;  height: 100%;  width: 100%;  max-width: none;  flex: 0 0 calc(115% + (1rem * 2));  object-fit: cover;  transform: translateX(calc(var(--plus-carousel-factor-1) * -80%));} }`}</style>
     </div>
   )
 };

@@ -1,7 +1,7 @@
 import type { MDXComponents } from 'mdx/types';
 
-import { Alert, Button } from '@/components';
-import { Api, Browsers, Example, Examples, GlobalConfig, LastModified, TocItem, Usage } from '@/containers';
+import { Alert, Badge, Button } from '@/components';
+import { Browsers, Example, TocItem } from '@/containers';
 
 function Heading(level: number) {
   return function (props: any) {
@@ -10,7 +10,7 @@ function Heading(level: number) {
     if (level == 1) return <Tag>{props.children}</Tag>;
 
     return (
-      <Tag>
+      <Tag className="group">
         <TocItem level={level}>{props.children}</TocItem>
       </Tag>
     );
@@ -20,16 +20,8 @@ function Heading(level: number) {
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     Alert,
-    Api,
     Browsers,
     Example,
-    Examples,
-    GlobalConfig,
-    LastModified,
-    Playground() {
-      return null;
-    },
-    Usage,
     a({ children, href }: any) {
       return (
         <Button to={href} link="underline">
@@ -40,7 +32,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     code({ children, className }: any) {
       const language = className?.split('-').pop();
 
-      if (!language) return <code>{children}</code>;
+      if (!language) return <Badge>{children}</Badge>;
 
       return <plus-prism language={language}>{children}</plus-prism>;
     },

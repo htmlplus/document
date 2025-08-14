@@ -24,9 +24,9 @@ function App() {
 
 const AnimationIntersection = () => {
   return (
-    <div className="ex-preview ex-animation-intersection dock">
+    <div className="animation-intersection">
       <App />
-      <style>{`.ex-animation-intersection { plus-animation {  background: lightgray;  width: 100px;  height: 100px;  margin: auto;}plus-intersection {  display: block;  text-align: center;  margin: 1000px auto;}.container {  position: relative;  height: 20rem;  overflow: auto;  background-color: whitesmoke;} }`}</style>
+      <style>{`.animation-intersection { plus-animation {  background: lightgray;  width: 100px;  height: 100px;  margin: auto;}plus-intersection {  display: block;  text-align: center;  margin: 1000px auto;}.container {  position: relative;  height: 20rem;  overflow: auto;  background-color: whitesmoke;} }`}</style>
     </div>
   )
 };

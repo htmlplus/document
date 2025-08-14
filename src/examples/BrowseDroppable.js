@@ -19,9 +19,9 @@ function App() {
 
 const BrowseDroppable = () => {
   return (
-    <div className="ex-preview ex-browse-droppable">
+    <div className="browse-droppable">
       <App />
-      <style>{`.ex-browse-droppable { plus-browse {  background: white;  border: 2px dashed lightgray;  border-radius: 4px;  display: block;  padding: 3rem;  text-align: center;}plus-browse[dragging] {  border-color: darkgray;} }`}</style>
+      <style>{`.browse-droppable { plus-browse {  background: white;  border: 2px dashed lightgray;  border-radius: 4px;  display: block;  padding: 3rem;  text-align: center;}plus-browse[dragging] {  border-color: darkgray;} }`}</style>
     </div>
   )
 };

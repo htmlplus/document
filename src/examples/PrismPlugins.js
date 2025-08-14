@@ -8,17 +8,19 @@ import '@htmlplus/ui/stack.js';
 import { setConfig } from '@htmlplus/ui/config.js';
 
 setConfig({
-  element: {
+  elements: {
     'plus-prism': {
-      property: {
-        async resolver({ key, value }) {
-          if (key == 'plugin') {
-            await import(`prismjs/plugins/${value}/prism-${value}.js`);
-            try {
-              const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;
-              const styles = await fetch(url).then((response) => response.text());
-              return styles;
-            } catch {}
+      properties: {
+        resolver: {
+          default: async ({ key, value }) => {
+            if (key == 'plugin') {
+              await import(`prismjs/plugins/${value}/prism-${value}.js`);
+              try {
+                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;
+                const styles = await fetch(url).then((response) => response.text());
+                return styles;
+              } catch {}
+            }
           }
         }
       }
@@ -55,7 +57,7 @@ const PrismPlugins = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
-    <div className="ex-preview ex-prism-plugins">
+    <div className="prism-plugins">
       {ready && <App />}
     </div>
   )

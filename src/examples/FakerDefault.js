@@ -10,7 +10,7 @@ function App() {
 
 const FakerDefault = () => {
   return (
-    <div className="ex-preview ex-faker-default">
+    <div className="faker-default">
       <App />
     </div>
   )

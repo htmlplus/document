@@ -29,7 +29,7 @@ function App() {
 
 const SnippetColor = () => {
   return (
-    <div className="ex-preview ex-snippet-color">
+    <div className="snippet-color">
       <App />
     </div>
   )

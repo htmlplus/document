@@ -8,31 +8,31 @@ import { faker } from '@faker-js/faker/locale/en';
 
 export function HTMLPLUS() {
   useEffect(() => {
-    if (!location.pathname.match(/\/element\/(.*)\/example\/(.*)/)) {
-      setConfig({
-        element: {
-          'plus-divider': {
-            property: {
-              // TODO: has conflict with examples
-              // width: 'xs'
+    setConfig({
+      elements: {
+        'plus-faker': {
+          properties: {
+            instance: {
+              default: faker,
             },
           },
-          'plus-faker': {
-            property: {
-              instance: faker,
-            },
-          },
-          'plus-icon': {
-            property: {
-              resolver({ name }: any) {
+        },
+        'plus-icon': {
+          properties: {
+            resolver: {
+              default: ({ name }: any) => {
                 return import(`../../public/assets/icons/${name}.svg`).then((module) => module.default);
               },
             },
           },
-          'plus-prism': {
-            property: {
-              theme: 'nord',
-              async resolver({ key, value }: any) {
+        },
+        'plus-prism': {
+          properties: {
+            theme: {
+              default: 'nord',
+            },
+            resolver: {
+              default: async ({ key, value }: any) => {
                 switch (key) {
                   case 'language': {
                     await import(`prismjs/components/prism-${value}.js`);
@@ -57,8 +57,8 @@ export function HTMLPLUS() {
             },
           },
         },
-      });
-    }
+      },
+    });
     import('@htmlplus/ui');
   }, []);
 

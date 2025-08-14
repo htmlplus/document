@@ -17,7 +17,7 @@ function App() {
 
 const RelativeTimeLocalization = () => {
   return (
-    <div className="ex-preview ex-relative-time-localization">
+    <div className="relative-time-localization">
       <App />
     </div>
   )

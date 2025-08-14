@@ -30,9 +30,9 @@ function App() {
 
 const ScrollDetectorScrollIndicator = () => {
   return (
-    <div className="ex-preview ex-scroll-detector-scroll-indicator dock">
+    <div className="scroll-detector-scroll-indicator">
       <App />
-      <style>{`.ex-scroll-detector-scroll-indicator { .container {  position: relative;}.scrollable {  padding: 1rem;  height: 20em;  overflow-y: auto;} }`}</style>
+      <style>{`.scroll-detector-scroll-indicator { .container {  position: relative;}.scrollable {  padding: 1rem;  height: 20em;  overflow-y: auto;} }`}</style>
     </div>
   )
 };

@@ -8,12 +8,14 @@ import '@htmlplus/ui/stack.js';
 import { setConfig } from '@htmlplus/ui/config.js';
 
 setConfig({
-  element: {
+  elements: {
     'plus-prism': {
-      property: {
-        async resolver({ key, value }) {
-          if (key == 'language') {
-            await import(`prismjs/components/prism-${value}.js`);
+      properties: {
+        resolver: {
+          default: async ({ key, value }) => {
+            if (key == 'language') {
+              await import(`prismjs/components/prism-${value}.js`);
+            }
           }
         }
       }
@@ -37,7 +39,7 @@ const PrismLanguage = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
-    <div className="ex-preview ex-prism-language">
+    <div className="prism-language">
       {ready && <App />}
     </div>
   )

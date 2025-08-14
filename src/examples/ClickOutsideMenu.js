@@ -31,9 +31,9 @@ function App() {
 
 const ClickOutsideMenu = () => {
   return (
-    <div className="ex-preview ex-click-outside-menu">
+    <div className="click-outside-menu">
       <App />
-      <style>{`.ex-click-outside-menu { plus-card {  position: absolute;  top: calc(100% + 0.25rem);}plus-click-outside {  display: inline-block;  position: relative;} }`}</style>
+      <style>{`.click-outside-menu { plus-card {  position: absolute;  top: calc(100% + 0.25rem);}plus-click-outside {  display: inline-block;  position: relative;} }`}</style>
     </div>
   )
 };

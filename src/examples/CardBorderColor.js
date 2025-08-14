@@ -3,30 +3,23 @@
  **************************************************/
 
 import '@htmlplus/ui/card.js';
-import '@htmlplus/ui/grid-item.js';
-import '@htmlplus/ui/grid.js';
+import '@htmlplus/ui/stack.js';
 
 function App() {
   return (
-    <plus-grid justify-content="evenly" gutter="md">
-      <plus-grid-item xs="12" sm="auto">
-        <plus-card class="pink" outlined></plus-card>
-      </plus-grid-item>
-      <plus-grid-item xs="12" sm="auto">
-        <plus-card class="yellow" outlined></plus-card>
-      </plus-grid-item>
-      <plus-grid-item xs="12" sm="auto">
-        <plus-card class="blue" outlined></plus-card>
-      </plus-grid-item>
-    </plus-grid>
+    <plus-stack gap="1rem" justify="evenly" wrap>
+      <plus-card className="pink" outlined></plus-card>
+      <plus-card className="yellow" outlined></plus-card>
+      <plus-card className="blue" outlined></plus-card>
+    </plus-stack>
   );
 }
 
 const CardBorderColor = () => {
   return (
-    <div className="ex-preview ex-card-border-color">
+    <div className="card-border-color">
       <App />
-      <style>{`.ex-card-border-color { plus-card {  height: 8rem;  width: 8rem;  margin: auto;}plus-card.pink {  --plus-card-border-color: #ef9a9a;}plus-card.yellow {  --plus-card-border-color: #fff59d;}plus-card.blue {  --plus-card-border-color: #80cbc4;} }`}</style>
+      <style>{`.card-border-color { plus-card {  height: 8rem;  width: 8rem;}plus-card.pink {  --plus-card-border-color: #ef9a9a;}plus-card.yellow {  --plus-card-border-color: #fff59d;}plus-card.blue {  --plus-card-border-color: #80cbc4;} }`}</style>
     </div>
   )
 };

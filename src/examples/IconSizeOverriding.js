@@ -19,9 +19,9 @@ function App() {
 
 const IconSizeOverriding = () => {
   return (
-    <div className="ex-preview ex-icon-size-overriding">
+    <div className="icon-size-overriding">
       <App />
-      <style>{`.ex-icon-size-overriding { plus-icon[size='xs'] {  height: 1em;  width: 1em;}plus-icon[size='sm'] {  height: 1.25em;  width: 1.25em;}plus-icon[size='md'] {  height: 1.5em;  width: 1.5em;}plus-icon[size='lg'] {  height: 1.75em;  width: 1.75em;}plus-icon[size='xl'] {  height: 2em;  width: 2em;} }`}</style>
+      <style>{`.icon-size-overriding { plus-icon[size='xs'] {  height: 1em;  width: 1em;}plus-icon[size='sm'] {  height: 1.25em;  width: 1.25em;}plus-icon[size='md'] {  height: 1.5em;  width: 1.5em;}plus-icon[size='lg'] {  height: 1.75em;  width: 1.75em;}plus-icon[size='xl'] {  height: 2em;  width: 2em;} }`}</style>
     </div>
   )
 };

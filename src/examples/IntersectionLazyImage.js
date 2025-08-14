@@ -32,9 +32,9 @@ function App() {
 
 const IntersectionLazyImage = () => {
   return (
-    <div className="ex-preview ex-intersection-lazy-image dock">
+    <div className="intersection-lazy-image">
       <App />
-      <style>{`.ex-intersection-lazy-image { .container {  position: relative;  height: 20rem;  overflow: auto;  background-color: whitesmoke;}img {  width: 12rem;  height: 12rem;  object-fit: cover;  margin: 0;}img:not([hidden]) {  display: block;}plus-card {  display: inline-block;}plus-intersection {  display: block;  text-align: center;  margin: 50rem auto;}plus-spinner {  margin: 1rem;} }`}</style>
+      <style>{`.intersection-lazy-image { .container {  position: relative;  height: 20rem;  overflow: auto;  background-color: whitesmoke;}img {  width: 12rem;  height: 12rem;  object-fit: cover;  margin: 0;}img:not([hidden]) {  display: block;}plus-card {  display: inline-block;}plus-intersection {  display: block;  text-align: center;  margin: 50rem auto;}plus-spinner {  margin: 1rem;} }`}</style>
     </div>
   )
 };

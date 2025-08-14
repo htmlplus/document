@@ -74,30 +74,39 @@ const useToc = create<TocState>((set, get) => ({
 
 export function Toc() {
   const toc = useToc();
+
   useEffect(() => {
     let clear: any;
+
     const timeout = () => {
       if (document.readyState != 'complete') {
         clear = window.setTimeout(timeout, 250);
         return;
       }
+
       const item = toc.items.find((item) => item.id && location.hash.endsWith(item.id));
+
       if (!item) return;
+
       toc.scrollTo(item);
     };
+
     timeout();
+
     return () => clearTimeout(clear);
   }, []);
+
   if (!toc.items.length) return null;
+
   return (
     <div className="toc">
       <p>Contents</p>
       {toc.items.map((item) => (
         <a
-          className={classes({
-            ['active']: item.isActive,
-            [`level-${item.level}`]: true,
-          })}
+          className={`border-0 border-l-2 border-solid block cursor-pointer no-underline text-[#a7a7a7] text-[90%] leading-[1.6] hover:no-underline hover:border-main-10 hover:text-main-10 ${item.isActive ? 'border-primary-9 text-primary-9' : 'border-l-main-4'}`}
+          style={{
+            paddingLeft: `${item.level! > 1 ? (item.level! - 1) * 20 : 0}px`,
+          }}
           key={item.key}
           onClick={() => toc.scrollTo(item)}
         >
@@ -117,12 +126,19 @@ export function TocItem({ children, level }: TocItemProps) {
 
   const item: TocItem | undefined = useMemo(() => {
     if (!isReady) return;
+
+    const key = [children]
+      .flat()
+      .map((child: any) => child?.props?.children || child)
+      .flat()
+      .join();
+
     return {
       element: element.current!,
-      id: kebabCase(children?.toString() ?? ''),
+      id: kebabCase(key),
       key: Math.random().toString(),
       level,
-      title: children?.toString(),
+      title: key,
     };
   }, [isReady]);
 
@@ -135,14 +151,23 @@ export function TocItem({ children, level }: TocItemProps) {
 
   useEffect(() => {
     if (!item) return;
+
     toc.add(item);
+
     return () => toc.remove(item);
   }, [item]);
 
   return (
     <>
-      <a className="toc-item" aria-hidden="true" ref={element} onClick={onClick}>
-        <div>#</div>
+      <a
+        className="float-left pr-[4px] ml-[-18px] no-underline cursor-pointer text-inherit after:clear-both"
+        aria-hidden="true"
+        ref={element}
+        onClick={onClick}
+      >
+        <div className="inline-block overflow-visible align-text-bottom fill-current invisible group-hover:visible">
+          #
+        </div>
       </a>
       {children}
     </>

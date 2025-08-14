@@ -8,16 +8,18 @@ import '@htmlplus/ui/icon.js';
 import { setConfig } from '@htmlplus/ui/config.js';
 
 setConfig({
-  element: {
+  elements: {
     'plus-icon': {
-      property: {
-        resolver: ({ name }) => {
-          const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;
-          return fetch(url).then(async (response) => {
-            const body = await response.text();
-            if (!response.ok) throw new Error(body);
-            return body;
-          });
+      properties: {
+        resolver: {
+          default: ({ name }) => {
+            const url = `https://cdn.jsdelivr.net/npm/@tabler/icons/icons/${name}.svg`;
+            return fetch(url).then(async (response) => {
+              const body = await response.text();
+              if (!response.ok) throw new Error(body);
+              return body;
+            });
+          }
         }
       }
     }
@@ -38,7 +40,7 @@ const IconResolver = () => {
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
   return (
-    <div className="ex-preview ex-icon-resolver">
+    <div className="icon-resolver">
       {ready && <App />}
     </div>
   )

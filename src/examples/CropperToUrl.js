@@ -32,7 +32,7 @@ function App() {
 
 const CropperToUrl = () => {
   return (
-    <div className="ex-preview ex-cropper-to-url">
+    <div className="cropper-to-url">
       <App />
     </div>
   )

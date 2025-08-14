@@ -29,9 +29,9 @@ function App() {
 
 const CarouselSlidesPerView = () => {
   return (
-    <div className="ex-preview ex-carousel-slides-per-view">
+    <div className="carousel-slides-per-view">
       <App />
-      <style>{`.ex-carousel-slides-per-view { @media (min-width: 0px) {  plus-carousel-slide {    flex-basis: 100% !important;  }}@media (min-width: 750px) {  plus-carousel-slide {    flex-basis: 50% !important;  }}@media (min-width: 1200px) {  plus-carousel-slide {    flex-basis: calc(100% / 3) !important;  }} }`}</style>
+      <style>{`.carousel-slides-per-view { @media (min-width: 0px) {  plus-carousel-slide {    flex-basis: 100% !important;  }}@media (min-width: 750px) {  plus-carousel-slide {    flex-basis: 50% !important;  }}@media (min-width: 1200px) {  plus-carousel-slide {    flex-basis: calc(100% / 3) !important;  }} }`}</style>
     </div>
   )
 };

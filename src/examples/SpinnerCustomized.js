@@ -15,9 +15,9 @@ function App() {
 
 const SpinnerCustomized = () => {
   return (
-    <div className="ex-preview ex-spinner-customized">
+    <div className="spinner-customized">
       <App />
-      <style>{`.ex-spinner-customized { plus-spinner {  color: purple;  width: 5rem;  height: 5rem;  font-size: 0.8rem;} }`}</style>
+      <style>{`.spinner-customized { plus-spinner {  color: purple;  width: 5rem;  height: 5rem;  font-size: 0.8rem;} }`}</style>
     </div>
   )
 };

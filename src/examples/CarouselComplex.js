@@ -31,7 +31,7 @@ function App() {
 
 const CarouselComplex = () => {
   return (
-    <div className="ex-preview ex-carousel-complex">
+    <div className="carousel-complex">
       <App />
     </div>
   )

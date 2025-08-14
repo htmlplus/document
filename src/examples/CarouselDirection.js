@@ -25,9 +25,9 @@ function App() {
 
 const CarouselDirection = () => {
   return (
-    <div className="ex-preview ex-carousel-direction">
+    <div className="carousel-direction">
       <App />
-      <style>{`.ex-carousel-direction { plus-carousel-slide {  flex-basis: 70% !important;} }`}</style>
+      <style>{`.carousel-direction { plus-carousel-slide {  flex-basis: 70% !important;} }`}</style>
     </div>
   )
 };

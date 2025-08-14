@@ -21,9 +21,9 @@ function App() {
 
 const AppProgressBarDefault = () => {
   return (
-    <div className="ex-preview ex-app-progress-bar-default">
+    <div className="app-progress-bar-default">
       <App />
-      <style>{`.ex-app-progress-bar-default { plus-app-progress-bar {  /* This style is for demonstration purposes only and not for actual projects */  position: static;} }`}</style>
+      <style>{`.app-progress-bar-default { plus-app-progress-bar {  /* This style is for demonstration purposes only and not for actual projects */  position: static;} }`}</style>
     </div>
   )
 };

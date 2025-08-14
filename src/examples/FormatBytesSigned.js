@@ -20,7 +20,7 @@ function App() {
 
 const FormatBytesSigned = () => {
   return (
-    <div className="ex-preview ex-format-bytes-signed">
+    <div className="format-bytes-signed">
       <App />
     </div>
   )

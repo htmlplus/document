@@ -29,9 +29,9 @@ function App() {
 
 const AnimationKeyframes = () => {
   return (
-    <div className="ex-preview ex-animation-keyframes">
+    <div className="animation-keyframes">
       <App />
-      <style>{`.ex-animation-keyframes { .root {  padding: 5rem 0;  position: relative;}plus-animation {  position: absolute;  top: 50%;  left: 50%;  width: 1rem;  height: 1rem;  border: solid 1px red;  transform-origin: top left;} }`}</style>
+      <style>{`.animation-keyframes { .root {  padding: 5rem 0;  position: relative;}plus-animation {  position: absolute;  top: 50%;  left: 50%;  width: 1rem;  height: 1rem;  border: solid 1px red;  transform-origin: top left;} }`}</style>
     </div>
   )
 };

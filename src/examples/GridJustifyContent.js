@@ -23,9 +23,9 @@ function App() {
 
 const GridJustifyContent = () => {
   return (
-    <div className="ex-preview ex-grid-justify-content">
+    <div className="grid-justify-content">
       <App />
-      <style>{`.ex-grid-justify-content { plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  padding: 0.5em;  text-align: center;} }`}</style>
+      <style>{`.grid-justify-content { plus-grid div {  color: #00bcd4;  border: 1px solid #ffffff;  background-color: #e0f7fa;  padding: 0.5em;  text-align: center;} }`}</style>
     </div>
   )
 };

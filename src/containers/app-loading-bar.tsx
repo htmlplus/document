@@ -34,5 +34,5 @@ export function AppLoadingBar() {
     };
   }, []);
 
-  return <plus-app-progress-bar ref={$ref}></plus-app-progress-bar>;
+  return <plus-app-progress-bar className="main" ref={$ref}></plus-app-progress-bar>;
 }

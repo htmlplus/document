@@ -25,9 +25,9 @@ function App() {
 
 const CarouselDraggableSnap = () => {
   return (
-    <div className="ex-preview ex-carousel-draggable-snap">
+    <div className="carousel-draggable-snap">
       <App />
-      <style>{`.ex-carousel-draggable-snap { plus-carousel-slide {  flex-basis: 70% !important;} }`}</style>
+      <style>{`.carousel-draggable-snap { plus-carousel-slide {  flex-basis: 70% !important;} }`}</style>
     </div>
   )
 };

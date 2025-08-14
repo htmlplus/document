@@ -27,7 +27,7 @@ function App() {
 
 const CarouselCounterTemplate = () => {
   return (
-    <div className="ex-preview ex-carousel-counter-template">
+    <div className="carousel-counter-template">
       <App />
     </div>
   )

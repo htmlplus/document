@@ -1,0 +1,53 @@
+# Global Config
+
+Defines the properties of elements as global. For instance `placement` property of the `dialog` element has a `top` value as default. By global config can apply a value like `center` to all `dialog` elements. Consider this config can be overridden by setting the value to each element.
+
+## Signature
+
+A simple template for defining a collection of configs.
+
+```js
+import { setConfig } from '@htmlplus/ui/config.js';
+
+setConfig({
+  elements: {
+    'ELEMENT-A': {
+      properties: {
+        'PROPERTY-1': {
+          default: 'VALUE'
+        }
+      }
+    },
+    'ELEMENT-B': {
+      properties: {
+        'PROPERTY-1': {
+          default: 'VALUE'
+        },
+        'PROPERTY-2': {
+          default: 'VALUE'
+        }
+      }
+    }
+  }
+});
+```
+
+## Example
+
+A real example of a definition.
+
+```js
+import { setConfig } from '@htmlplus/ui/config.js';
+
+setConfig({
+  elements: {
+    'plus-spinner': {
+      properties: {
+        size: {
+          default: 'lg'
+        },
+      }
+    }
+  }
+});
+```

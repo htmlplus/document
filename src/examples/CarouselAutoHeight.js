@@ -55,7 +55,7 @@ function App() {
 
 const CarouselAutoHeight = () => {
   return (
-    <div className="ex-preview ex-carousel-auto-height">
+    <div className="carousel-auto-height">
       <App />
     </div>
   )

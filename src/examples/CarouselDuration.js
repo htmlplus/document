@@ -25,7 +25,7 @@ function App() {
 
 const CarouselDuration = () => {
   return (
-    <div className="ex-preview ex-carousel-duration">
+    <div className="carousel-duration">
       <App />
     </div>
   )

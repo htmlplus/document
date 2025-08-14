@@ -34,7 +34,7 @@ function App() {
 
 const DialogFullscreen = () => {
   return (
-    <div className="ex-preview ex-dialog-fullscreen">
+    <div className="dialog-fullscreen">
       <App />
     </div>
   )
