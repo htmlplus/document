@@ -63,7 +63,15 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
   sections.push('## Examples', 'Below is a collection of simple to complex examples.');
 
-  for (const current of examples) {
+  const sorted = element.examples
+    .map((key) => {
+      return examples.find((example) => {
+        return example.key === `${frameworkKey}/${elementKey}/${key}`;
+      });
+    })
+    .filter((example) => !!example);
+
+  for (const current of sorted) {
     const [frameworkKey, elementKey, exampleKey] = current.key.split('/');
 
     const parameters = Object.assign({}, await params, { example: exampleKey });
