@@ -6,19 +6,19 @@ import '@htmlplus/ui/center.js';
 import '@htmlplus/ui/switch.js';
 
 function App() {
-  return (
-    <plus-center>
-      <plus-switch disabled></plus-switch>
-    </plus-center>
-  );
+	return (
+		<plus-center>
+			<plus-switch disabled></plus-switch>
+		</plus-center>
+	);
 }
 
 const SwitchDisabled = () => {
-  return (
-    <div className="switch-disabled">
-      <App />
-    </div>
-  )
+	return (
+		<div className="switch-disabled">
+			<App />
+		</div>
+	);
 };
 
 export default SwitchDisabled;

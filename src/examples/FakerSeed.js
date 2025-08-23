@@ -5,15 +5,15 @@
 import '@htmlplus/ui/faker.js';
 
 function App() {
-  return <plus-faker seed={12345}></plus-faker>;
+	return <plus-faker seed={12345}></plus-faker>;
 }
 
 const FakerSeed = () => {
-  return (
-    <div className="faker-seed">
-      <App />
-    </div>
-  )
+	return (
+		<div className="faker-seed">
+			<App />
+		</div>
+	);
 };
 
 export default FakerSeed;

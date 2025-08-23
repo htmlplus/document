@@ -5,20 +5,20 @@
 import '@htmlplus/ui/cropper.js';
 
 function App() {
-  return (
-    <plus-cropper
-      aspect-ratio="3/4"
-      src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-    ></plus-cropper>
-  );
+	return (
+		<plus-cropper
+			aspect-ratio="3/4"
+			src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+		></plus-cropper>
+	);
 }
 
 const CropperAspectRatio = () => {
-  return (
-    <div className="cropper-aspect-ratio">
-      <App />
-    </div>
-  )
+	return (
+		<div className="cropper-aspect-ratio">
+			<App />
+		</div>
+	);
 };
 
 export default CropperAspectRatio;

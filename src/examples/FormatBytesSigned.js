@@ -6,24 +6,24 @@ import '@htmlplus/ui/format-bytes.js';
 import '@htmlplus/ui/stack.js';
 
 function App() {
-  return (
-    <plus-stack vertical>
-      <plus-format-bytes value={-1000}></plus-format-bytes>
-      <plus-format-bytes value={-1000} signed></plus-format-bytes>
-      <plus-format-bytes value={0}></plus-format-bytes>
-      <plus-format-bytes value={0} signed></plus-format-bytes>
-      <plus-format-bytes value={1000}></plus-format-bytes>
-      <plus-format-bytes value={1000} signed></plus-format-bytes>
-    </plus-stack>
-  );
+	return (
+		<plus-stack vertical>
+			<plus-format-bytes value={-1000}></plus-format-bytes>
+			<plus-format-bytes value={-1000} signed></plus-format-bytes>
+			<plus-format-bytes value={0}></plus-format-bytes>
+			<plus-format-bytes value={0} signed></plus-format-bytes>
+			<plus-format-bytes value={1000}></plus-format-bytes>
+			<plus-format-bytes value={1000} signed></plus-format-bytes>
+		</plus-stack>
+	);
 }
 
 const FormatBytesSigned = () => {
-  return (
-    <div className="format-bytes-signed">
-      <App />
-    </div>
-  )
+	return (
+		<div className="format-bytes-signed">
+			<App />
+		</div>
+	);
 };
 
 export default FormatBytesSigned;

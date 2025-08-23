@@ -10,27 +10,27 @@ import '@htmlplus/ui/icon.js';
 import '@htmlplus/ui/stack.js';
 
 function App() {
-  return (
-    <plus-stack gap="2rem">
-      <plus-animation duration={1000} iterations={Infinity} name="pulse" run>
-        <plus-icon name="heart"></plus-icon>
-      </plus-animation>
-      <plus-animation duration={1000} iterations={Infinity} name="swing" run>
-        <plus-icon name="telephone"></plus-icon>
-      </plus-animation>
-      <plus-animation duration={2000} iterations={Infinity} name="tada" run>
-        <plus-icon name="bell"></plus-icon>
-      </plus-animation>
-    </plus-stack>
-  );
+	return (
+		<plus-stack gap="2rem">
+			<plus-animation duration={1000} iterations={Infinity} name="pulse" run>
+				<plus-icon name="heart"></plus-icon>
+			</plus-animation>
+			<plus-animation duration={1000} iterations={Infinity} name="swing" run>
+				<plus-icon name="telephone"></plus-icon>
+			</plus-animation>
+			<plus-animation duration={2000} iterations={Infinity} name="tada" run>
+				<plus-icon name="bell"></plus-icon>
+			</plus-animation>
+		</plus-stack>
+	);
 }
 
 const IconAnimation = () => {
-  return (
-    <div className="icon-animation">
-      <App />
-    </div>
-  )
+	return (
+		<div className="icon-animation">
+			<App />
+		</div>
+	);
 };
 
 export default IconAnimation;

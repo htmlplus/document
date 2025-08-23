@@ -7,24 +7,24 @@ import '@htmlplus/ui/faker.js';
 import '@htmlplus/ui/stack.js';
 
 function App() {
-  return (
-    <plus-accordion>
-      <plus-stack slot="summary" justify="between">
-        <b>Summary</b>
-        <button>Action</button>
-      </plus-stack>
-      <plus-faker></plus-faker>
-    </plus-accordion>
-  );
+	return (
+		<plus-accordion>
+			<plus-stack slot="summary" justify="between">
+				<b>Summary</b>
+				<button>Action</button>
+			</plus-stack>
+			<plus-faker></plus-faker>
+		</plus-accordion>
+	);
 }
 
 const AccordionCustomSummaryTemplate = () => {
-  return (
-    <div className="accordion-custom-summary-template">
-      <App />
-      <style>{`.accordion-custom-summary-template { plus-stack[slot='summary'] {  flex-grow: 1;  margin-inline-end: 1rem;} }`}</style>
-    </div>
-  )
+	return (
+		<div className="accordion-custom-summary-template">
+			<App />
+			<style>{`.accordion-custom-summary-template { plus-stack[slot='summary'] {  flex-grow: 1;  margin-inline-end: 1rem;} }`}</style>
+		</div>
+	);
 };
 
 export default AccordionCustomSummaryTemplate;

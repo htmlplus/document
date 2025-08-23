@@ -5,19 +5,19 @@
 import '@htmlplus/ui/aspect-ratio.js';
 
 function App() {
-  return (
-    <plus-aspect-ratio value="16/9">
-      <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-    </plus-aspect-ratio>
-  );
+	return (
+		<plus-aspect-ratio value="16/9">
+			<iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+		</plus-aspect-ratio>
+	);
 }
 
 const AspectRatioVideo = () => {
-  return (
-    <div className="aspect-ratio-video">
-      <App />
-    </div>
-  )
+	return (
+		<div className="aspect-ratio-video">
+			<App />
+		</div>
+	);
 };
 
 export default AspectRatioVideo;

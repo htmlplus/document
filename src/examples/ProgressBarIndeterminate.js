@@ -5,15 +5,15 @@
 import '@htmlplus/ui/progress-bar.js';
 
 function App() {
-  return <plus-progress-bar variant="indeterminate"></plus-progress-bar>;
+	return <plus-progress-bar variant="indeterminate"></plus-progress-bar>;
 }
 
 const ProgressBarIndeterminate = () => {
-  return (
-    <div className="progress-bar-indeterminate">
-      <App />
-    </div>
-  )
+	return (
+		<div className="progress-bar-indeterminate">
+			<App />
+		</div>
+	);
 };
 
 export default ProgressBarIndeterminate;

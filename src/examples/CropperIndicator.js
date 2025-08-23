@@ -5,20 +5,20 @@
 import '@htmlplus/ui/cropper.js';
 
 function App() {
-  return (
-    <plus-cropper
-      indicator
-      src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-    ></plus-cropper>
-  );
+	return (
+		<plus-cropper
+			indicator
+			src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+		></plus-cropper>
+	);
 }
 
 const CropperIndicator = () => {
-  return (
-    <div className="cropper-indicator">
-      <App />
-    </div>
-  )
+	return (
+		<div className="cropper-indicator">
+			<App />
+		</div>
+	);
 };
 
 export default CropperIndicator;

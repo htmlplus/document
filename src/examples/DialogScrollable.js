@@ -12,32 +12,32 @@ import '@htmlplus/ui/dialog.js';
 import '@htmlplus/ui/faker.js';
 
 function App() {
-  return (
-    <>
-      <plus-center>
-        <plus-dialog-toggler connector="dialog-scrollable">Open</plus-dialog-toggler>
-      </plus-center>
-      <plus-dialog animation connector="dialog-scrollable" scrollable>
-        <plus-dialog-content>
-          <plus-dialog-header>Dialog Title</plus-dialog-header>
-          <plus-dialog-body>
-            <plus-faker api="lorem.paragraphs" arguments={[15, '\n\n']}></plus-faker>
-          </plus-dialog-body>
-          <plus-dialog-footer>
-            <plus-dialog-toggler>Close</plus-dialog-toggler>
-          </plus-dialog-footer>
-        </plus-dialog-content>
-      </plus-dialog>
-    </>
-  );
+	return (
+		<>
+			<plus-center>
+				<plus-dialog-toggler connector="dialog-scrollable">Open</plus-dialog-toggler>
+			</plus-center>
+			<plus-dialog animation connector="dialog-scrollable" scrollable>
+				<plus-dialog-content>
+					<plus-dialog-header>Dialog Title</plus-dialog-header>
+					<plus-dialog-body>
+						<plus-faker api="lorem.paragraphs" arguments={[15, '\n\n']}></plus-faker>
+					</plus-dialog-body>
+					<plus-dialog-footer>
+						<plus-dialog-toggler>Close</plus-dialog-toggler>
+					</plus-dialog-footer>
+				</plus-dialog-content>
+			</plus-dialog>
+		</>
+	);
 }
 
 const DialogScrollable = () => {
-  return (
-    <div className="dialog-scrollable">
-      <App />
-    </div>
-  )
+	return (
+		<div className="dialog-scrollable">
+			<App />
+		</div>
+	);
 };
 
 export default DialogScrollable;

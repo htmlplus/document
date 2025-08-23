@@ -6,26 +6,26 @@ import '@htmlplus/ui/breadcrumb.js';
 import '@htmlplus/ui/center.js';
 
 function App() {
-  return (
-    <plus-center>
-      <plus-breadcrumb separator="-">
-        <a href="#">First</a>
-        <a href="#">Second</a>
-        <a href="#">Third</a>
-        <a href="#">Fourth</a>
-        <a href="#">Fifth</a>
-      </plus-breadcrumb>
-    </plus-center>
-  );
+	return (
+		<plus-center>
+			<plus-breadcrumb separator="-">
+				<a href="#">First</a>
+				<a href="#">Second</a>
+				<a href="#">Third</a>
+				<a href="#">Fourth</a>
+				<a href="#">Fifth</a>
+			</plus-breadcrumb>
+		</plus-center>
+	);
 }
 
 const BreadcrumbSeparator = () => {
-  return (
-    <div className="breadcrumb-separator">
-      <App />
-      <style>{`.breadcrumb-separator { plus-breadcrumb a {  color: inherit;  text-decoration: none;}plus-breadcrumb a:hover {  text-decoration: underline;} }`}</style>
-    </div>
-  )
+	return (
+		<div className="breadcrumb-separator">
+			<App />
+			<style>{`.breadcrumb-separator { plus-breadcrumb a {  color: inherit;  text-decoration: none;}plus-breadcrumb a:hover {  text-decoration: underline;} }`}</style>
+		</div>
+	);
 };
 
 export default BreadcrumbSeparator;

@@ -5,15 +5,15 @@
 import '@htmlplus/ui/snippet.js';
 
 function App() {
-  return <plus-snippet>npm i @htmlplus/ui</plus-snippet>;
+	return <plus-snippet>npm i @htmlplus/ui</plus-snippet>;
 }
 
 const SnippetDefault = () => {
-  return (
-    <div className="snippet-default">
-      <App />
-    </div>
-  )
+	return (
+		<div className="snippet-default">
+			<App />
+		</div>
+	);
 };
 
 export default SnippetDefault;

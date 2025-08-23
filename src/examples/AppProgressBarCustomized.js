@@ -7,25 +7,25 @@ import { useEffect, useRef } from 'react';
 import '@htmlplus/ui/app-progress-bar.js';
 
 function App() {
-  const appProgressBarRef = useRef();
-  useEffect(() => {
-    requestAnimationFrame(() => {
-      appProgressBarRef.current?.start();
-    });
-    setTimeout(() => {
-      appProgressBarRef.current?.done();
-    }, 5000);
-  }, []);
-  return <plus-app-progress-bar ref={appProgressBarRef}></plus-app-progress-bar>;
+	const appProgressBarRef = useRef();
+	useEffect(() => {
+		requestAnimationFrame(() => {
+			appProgressBarRef.current?.start();
+		});
+		setTimeout(() => {
+			appProgressBarRef.current?.done();
+		}, 5000);
+	}, []);
+	return <plus-app-progress-bar ref={appProgressBarRef}></plus-app-progress-bar>;
 }
 
 const AppProgressBarCustomized = () => {
-  return (
-    <div className="app-progress-bar-customized">
-      <App />
-      <style>{`.app-progress-bar-customized { plus-app-progress-bar {  /* This style is for demonstration purposes only and not for actual projects */  position: static;  height: 4px;  transition: 2500ms ease;  z-index: 1500;}plus-app-progress-bar::part(bar) {  background-color: #d63939;  transition: 500ms ease-in-out;} }`}</style>
-    </div>
-  )
+	return (
+		<div className="app-progress-bar-customized">
+			<App />
+			<style>{`.app-progress-bar-customized { plus-app-progress-bar {  /* This style is for demonstration purposes only and not for actual projects */  position: static;  height: 4px;  transition: 2500ms ease;  z-index: 1500;}plus-app-progress-bar::part(bar) {  background-color: #d63939;  transition: 500ms ease-in-out;} }`}</style>
+		</div>
+	);
 };
 
 export default AppProgressBarCustomized;

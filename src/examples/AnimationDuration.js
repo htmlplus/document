@@ -6,20 +6,20 @@ import '@htmlplus/ui/animation.js';
 import '@htmlplus/ui/center.js';
 
 function App() {
-  return (
-    <plus-center>
-      <plus-animation duration={2500} iterations={Infinity} name="fade-in" run></plus-animation>
-    </plus-center>
-  );
+	return (
+		<plus-center>
+			<plus-animation duration={2500} iterations={Infinity} name="fade-in" run></plus-animation>
+		</plus-center>
+	);
 }
 
 const AnimationDuration = () => {
-  return (
-    <div className="animation-duration">
-      <App />
-      <style>{`.animation-duration { plus-animation {  background: lightgray;  width: 100px;  height: 100px;} }`}</style>
-    </div>
-  )
+	return (
+		<div className="animation-duration">
+			<App />
+			<style>{`.animation-duration { plus-animation {  background: lightgray;  width: 100px;  height: 100px;} }`}</style>
+		</div>
+	);
 };
 
 export default AnimationDuration;

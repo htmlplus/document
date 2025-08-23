@@ -5,34 +5,37 @@ import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
 export function AppLoadingBar() {
-  const $ref = useRef<HTMLPlusAppProgressBarElement>(null);
+	const $ref = useRef<HTMLPlusAppProgressBarElement>(null);
 
-  const pathname = usePathname();
+	const pathname = usePathname();
 
-  useEffect(() => {
-    $ref.current?.done?.();
-    return () => $ref.current?.start?.();
-  }, [pathname]);
+	useEffect(() => {
+		pathname;
+		$ref.current?.done?.();
+		return () => $ref.current?.start?.();
+	}, [pathname]);
 
-  useEffect(() => {
-    const handleClick = (event: MouseEvent) => {
-      const anchor = Array.from(event.composedPath()).find((element) => element instanceof HTMLAnchorElement);
+	useEffect(() => {
+		const handleClick = (event: MouseEvent) => {
+			const anchor = Array.from(event.composedPath()).find(
+				(element) => element instanceof HTMLAnchorElement
+			);
 
-      if (!anchor) return;
+			if (!anchor) return;
 
-      const href = (anchor as HTMLAnchorElement).getAttribute('href');
+			const href = (anchor as HTMLAnchorElement).getAttribute('href');
 
-      if (!href?.startsWith('/')) return;
+			if (!href?.startsWith('/')) return;
 
-      $ref.current?.start?.();
-    };
+			$ref.current?.start?.();
+		};
 
-    document.addEventListener('click', handleClick);
+		document.addEventListener('click', handleClick);
 
-    return () => {
-      document.removeEventListener('click', handleClick);
-    };
-  }, []);
+		return () => {
+			document.removeEventListener('click', handleClick);
+		};
+	}, []);
 
-  return <plus-app-progress-bar className="main" ref={$ref}></plus-app-progress-bar>;
+	return <plus-app-progress-bar className="main" ref={$ref}></plus-app-progress-bar>;
 }

@@ -5,15 +5,15 @@
 import '@htmlplus/ui/faker.js';
 
 function App() {
-  return <plus-faker api="lorem.paragraphs"></plus-faker>;
+	return <plus-faker api="lorem.paragraphs"></plus-faker>;
 }
 
 const FakerApi = () => {
-  return (
-    <div className="faker-api">
-      <App />
-    </div>
-  )
+	return (
+		<div className="faker-api">
+			<App />
+		</div>
+	);
 };
 
 export default FakerApi;

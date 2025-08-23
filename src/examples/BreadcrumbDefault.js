@@ -6,25 +6,25 @@ import '@htmlplus/ui/breadcrumb.js';
 import '@htmlplus/ui/center.js';
 
 function App() {
-  return (
-    <plus-center>
-      <plus-breadcrumb separator="/">
-        <a href="#">HTMLPLUS</a>
-        <a href="#">UI</a>
-        <a href="#">Elements</a>
-        <span>Breadcrumb</span>
-      </plus-breadcrumb>
-    </plus-center>
-  );
+	return (
+		<plus-center>
+			<plus-breadcrumb separator="/">
+				<a href="#">HTMLPLUS</a>
+				<a href="#">UI</a>
+				<a href="#">Elements</a>
+				<span>Breadcrumb</span>
+			</plus-breadcrumb>
+		</plus-center>
+	);
 }
 
 const BreadcrumbDefault = () => {
-  return (
-    <div className="breadcrumb-default">
-      <App />
-      <style>{`.breadcrumb-default { plus-breadcrumb a {  color: inherit;  text-decoration: none;}plus-breadcrumb a:hover {  text-decoration: underline;} }`}</style>
-    </div>
-  )
+	return (
+		<div className="breadcrumb-default">
+			<App />
+			<style>{`.breadcrumb-default { plus-breadcrumb a {  color: inherit;  text-decoration: none;}plus-breadcrumb a:hover {  text-decoration: underline;} }`}</style>
+		</div>
+	);
 };
 
 export default BreadcrumbDefault;

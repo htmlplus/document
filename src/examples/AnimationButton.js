@@ -9,26 +9,26 @@ import '@htmlplus/ui/animation/names/attention-seekers/tada.js';
 import '@htmlplus/ui/center.js';
 
 function App() {
-  const animationRef = useRef();
-  function onClick() {
-    animationRef.current.run = true;
-  }
-  return (
-    <plus-center>
-      <plus-animation name="tada" ref={animationRef}>
-        <button onClick={onClick}>Click Me</button>
-      </plus-animation>
-    </plus-center>
-  );
+	const animationRef = useRef();
+	function onClick() {
+		animationRef.current.run = true;
+	}
+	return (
+		<plus-center>
+			<plus-animation name="tada" ref={animationRef}>
+				<button onClick={onClick}>Click Me</button>
+			</plus-animation>
+		</plus-center>
+	);
 }
 
 const AnimationButton = () => {
-  return (
-    <div className="animation-button">
-      <App />
-      <style>{`.animation-button { plus-animation {  display: inline-block;} }`}</style>
-    </div>
-  )
+	return (
+		<div className="animation-button">
+			<App />
+			<style>{`.animation-button { plus-animation {  display: inline-block;} }`}</style>
+		</div>
+	);
 };
 
 export default AnimationButton;

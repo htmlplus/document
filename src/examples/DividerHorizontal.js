@@ -6,22 +6,22 @@ import '@htmlplus/ui/divider.js';
 import '@htmlplus/ui/faker.js';
 
 function App() {
-  return (
-    <>
-      <plus-faker></plus-faker>
-      <plus-divider>OR</plus-divider>
-      <plus-faker></plus-faker>
-    </>
-  );
+	return (
+		<>
+			<plus-faker></plus-faker>
+			<plus-divider>OR</plus-divider>
+			<plus-faker></plus-faker>
+		</>
+	);
 }
 
 const DividerHorizontal = () => {
-  return (
-    <div className="divider-horizontal">
-      <App />
-      <style>{`.divider-horizontal { plus-divider {  margin: 1rem 0;} }`}</style>
-    </div>
-  )
+	return (
+		<div className="divider-horizontal">
+			<App />
+			<style>{`.divider-horizontal { plus-divider {  margin: 1rem 0;} }`}</style>
+		</div>
+	);
 };
 
 export default DividerHorizontal;

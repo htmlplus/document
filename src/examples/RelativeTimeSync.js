@@ -6,19 +6,19 @@ import '@htmlplus/ui/center.js';
 import '@htmlplus/ui/relative-time.js';
 
 function App() {
-  return (
-    <plus-center>
-      <plus-relative-time sync></plus-relative-time>
-    </plus-center>
-  );
+	return (
+		<plus-center>
+			<plus-relative-time sync></plus-relative-time>
+		</plus-center>
+	);
 }
 
 const RelativeTimeSync = () => {
-  return (
-    <div className="relative-time-sync">
-      <App />
-    </div>
-  )
+	return (
+		<div className="relative-time-sync">
+			<App />
+		</div>
+	);
 };
 
 export default RelativeTimeSync;

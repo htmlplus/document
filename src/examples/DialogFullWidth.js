@@ -10,28 +10,28 @@ import '@htmlplus/ui/dialog.js';
 import '@htmlplus/ui/faker.js';
 
 function App() {
-  return (
-    <>
-      <plus-center>
-        <plus-dialog-toggler connector="dialog-full-width">Open</plus-dialog-toggler>
-      </plus-center>
-      <plus-dialog animation connector="dialog-full-width" full-width>
-        <plus-dialog-content>
-          <plus-dialog-body>
-            <plus-faker></plus-faker>
-          </plus-dialog-body>
-        </plus-dialog-content>
-      </plus-dialog>
-    </>
-  );
+	return (
+		<>
+			<plus-center>
+				<plus-dialog-toggler connector="dialog-full-width">Open</plus-dialog-toggler>
+			</plus-center>
+			<plus-dialog animation connector="dialog-full-width" full-width>
+				<plus-dialog-content>
+					<plus-dialog-body>
+						<plus-faker></plus-faker>
+					</plus-dialog-body>
+				</plus-dialog-content>
+			</plus-dialog>
+		</>
+	);
 }
 
 const DialogFullWidth = () => {
-  return (
-    <div className="dialog-full-width">
-      <App />
-    </div>
-  )
+	return (
+		<div className="dialog-full-width">
+			<App />
+		</div>
+	);
 };
 
 export default DialogFullWidth;

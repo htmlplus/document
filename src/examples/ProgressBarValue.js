@@ -5,15 +5,15 @@
 import '@htmlplus/ui/progress-bar.js';
 
 function App() {
-  return <plus-progress-bar value={25}></plus-progress-bar>;
+	return <plus-progress-bar value={25}></plus-progress-bar>;
 }
 
 const ProgressBarValue = () => {
-  return (
-    <div className="progress-bar-value">
-      <App />
-    </div>
-  )
+	return (
+		<div className="progress-bar-value">
+			<App />
+		</div>
+	);
 };
 
 export default ProgressBarValue;

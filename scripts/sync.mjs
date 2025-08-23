@@ -1,221 +1,226 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import * as url from 'node:url';
+
 import { kebabCase, pascalCase } from 'change-case';
-import fs from 'fs';
-import path from 'path';
-import * as url from 'url';
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 const load = (local, remote) => {
-  return new Promise((resolve, reject) => {
-    const has = fs.existsSync(local);
-    if (has) {
-      resolve(fs.readFileSync(local, 'utf8'));
-    } else {
-      fetch(remote)
-        .then((response) => response.text())
-        .then(resolve)
-        .catch(reject);
-    }
-  });
+	return new Promise((resolve, reject) => {
+		const has = fs.existsSync(local);
+		if (has) {
+			resolve(fs.readFileSync(local, 'utf8'));
+		} else {
+			fetch(remote)
+				.then((response) => response.text())
+				.then(resolve)
+				.catch(reject);
+		}
+	});
 };
 
 const HEADER = [
-  '/**************************************************',
-  ' * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY',
-  ' **************************************************/',
-  '',
+	'/**************************************************',
+	' * THIS FILE IS AUTO-GENERATED, DO NOT EDIT MANUALY',
+	' **************************************************/',
+	''
 ];
 
 const db = await (async () => {
-  const LOCAL = path.join(__dirname, '../../examples/dist/db.json');
-  const REMOTE = 'https://github.com/htmlplus/examples/raw/main/dist/db.json';
+	const LOCAL = path.join(__dirname, '../../examples/dist/db.json');
+	const REMOTE = 'https://github.com/htmlplus/examples/raw/main/dist/db.json';
 
-  return JSON.parse(await load(LOCAL, REMOTE));
+	return JSON.parse(await load(LOCAL, REMOTE));
 })();
 
 const document = await (async () => {
-  const LOCAL = path.join(__dirname, '../../ui/dist/json/document.json');
-  const REMOTE = 'https://github.com/htmlplus/ui/raw/main/dist/json/document.json';
+	const LOCAL = path.join(__dirname, '../../ui/dist/json/document.json');
+	const REMOTE = 'https://github.com/htmlplus/ui/raw/main/dist/json/document.json';
 
-  return JSON.parse(await load(LOCAL, REMOTE));
+	return JSON.parse(await load(LOCAL, REMOTE));
 })();
 
 // changelog
 (async () => {
-  const DESTINATION = './src/app/(root)/(internal)/changelog/page.mdx';
-  const LOCAL = path.join(__dirname, '../../ui/CHANGELOG.md');
-  const REMOTE = 'https://github.com/htmlplus/ui/raw/main/CHANGELOG.md';
+	const DESTINATION = './src/app/(root)/(internal)/changelog/page.mdx';
+	const LOCAL = path.join(__dirname, '../../ui/CHANGELOG.md');
+	const REMOTE = 'https://github.com/htmlplus/ui/raw/main/CHANGELOG.md';
 
-  const content = await load(LOCAL, REMOTE);
+	const content = await load(LOCAL, REMOTE);
 
-  fs.writeFileSync(DESTINATION, content, 'utf8');
+	fs.writeFileSync(DESTINATION, content, 'utf8');
 })();
 
 // elements light
 (async () => {
-  const DESTINATION = './src/data/elements.light.ts';
+	const DESTINATION = './src/data/elements.light.ts';
 
-  const lines = [
-    ...HEADER,
-    'export const elementsLight = ' +
-    JSON.stringify(
-      document.elements.map((element) => ({
-        key: element.key,
-        stable: element.stable,
-        subset: !!element.subset,
-        title: element.title,
-        dependencies: element.dependencies
-          ?.split(',')
-          ?.map((dependency) => dependency.trim())
-          ?.filter((dependency) => !!dependency),
-      })),
-      null,
-      2,
-    ),
-  ];
+	const lines = [
+		...HEADER,
+		'export const elementsLight = ' +
+			JSON.stringify(
+				document.elements.map((element) => ({
+					key: element.key,
+					stable: element.stable,
+					subset: !!element.subset,
+					title: element.title,
+					dependencies: element.dependencies
+						?.split(',')
+						?.map((dependency) => dependency.trim())
+						?.filter((dependency) => !!dependency)
+				})),
+				null,
+				2
+			)
+	];
 
-  const content = lines.join('\n');
+	const content = lines.join('\n');
 
-  fs.writeFileSync(DESTINATION, content, 'utf8');
+	fs.writeFileSync(DESTINATION, content, 'utf8');
 })();
 
 // examples data
 (async () => {
-  const FILE = './src/data/examples.ts';
+	const FILE = './src/data/examples.ts';
 
-  fs.rmSync(FILE, { force: true, recursive: true });
+	fs.rmSync(FILE, { force: true, recursive: true });
 
-  fs.mkdirSync(path.dirname(FILE), { recursive: true });
+	fs.mkdirSync(path.dirname(FILE), { recursive: true });
 
-  const lines = [...HEADER, `export const examples = ${JSON.stringify(db, null, 2)};`];
+	const lines = [...HEADER, `export const examples = ${JSON.stringify(db, null, 2)};`];
 
-  const content = lines.join('\n');
+	const content = lines.join('\n');
 
-  fs.writeFileSync(FILE, content, 'utf8');
+	fs.writeFileSync(FILE, content, 'utf8');
 })();
 
 // examples element
 (async () => {
-  const DIRECTORY = './src/examples';
+	const DIRECTORY = './src/examples';
 
-  fs.rmSync(DIRECTORY, { force: true, recursive: true });
+	fs.rmSync(DIRECTORY, { force: true, recursive: true });
 
-  fs.mkdirSync(DIRECTORY, { recursive: true });
+	fs.mkdirSync(DIRECTORY, { recursive: true });
 
-  const lines = ["'use client';", '', ...HEADER, `import dynamic from 'next/dynamic';`, ''];
+	const lines = ["'use client';", '', ...HEADER, `import dynamic from 'next/dynamic';`, ''];
 
-  const items = db.filter((item) => item.key.startsWith('react/')).sort((a, b) => (a > b ? +1 : -1));
+	const items = db
+		.filter((item) => item.key.startsWith('react/'))
+		.sort((a, b) => (a > b ? +1 : -1));
 
-  for (const item of items) {
-    const name = pascalCase(item.key.replace('react/', ''));
+	for (const item of items) {
+		const name = pascalCase(item.key.replace('react/', ''));
 
-    const className = `${kebabCase(name)}`;
+		const className = `${kebabCase(name)}`;
 
-    let { config, script, settings, style } = item;
+		let { config, script, style } = item;
 
-    if (style) {
-      style = `.${className} { ${style.replace(/\n/g, '')} }`;
-    }
+		if (style) {
+			style = `.${className} { ${style.replace(/\n/g, '')} }`;
+		}
 
-    script = script.split('export default ')[0].trim();
-    script += '\n\n';
-    script += `const ${name} = () => {\n`;
-    if (config) {
-      script += '  const [ready, setReady] = useState(false);\n';
-      script += '  useEffect(() => setReady(true), []);\n';
-    }
-    script += '  return (\n';
-    script += `    <div className="${className}">\n`;
-    if (config) {
-      script += `      {ready && <App />}\n`;
-    } else {
-      script += `      <App />\n`;
-    }
-    script += style ? `      <style>{\`${style}\`}</style>\n` : '';
-    script += '    </div>\n';
-    script += '  )\n';
-    script += '};\n';
-    script += '\n';
-    script += `export default ${name};\n`;
+		script = script.split('export default ')[0].trim();
+		script += '\n\n';
+		script += `const ${name} = () => {\n`;
+		if (config) {
+			script += '  const [ready, setReady] = useState(false);\n';
+			script += '  useEffect(() => setReady(true), []);\n';
+		}
+		script += '  return (\n';
+		script += `    <div className="${className}">\n`;
+		if (config) {
+			script += `      {ready && <App />}\n`;
+		} else {
+			script += `      <App />\n`;
+		}
+		script += style ? `      <style>{\`${style}\`}</style>\n` : '';
+		script += '    </div>\n';
+		script += '  )\n';
+		script += '};\n';
+		script += '\n';
+		script += `export default ${name};\n`;
 
-    if (config) {
-      const i = script.lastIndexOf('import');
+		if (config) {
+			const i = script.lastIndexOf('import');
 
-      const j = script.indexOf('\n', i);
+			const j = script.indexOf('\n', i);
 
-      const react = `import { useEffect, useState } from 'react';`;
+			const react = `import { useEffect, useState } from 'react';`;
 
-      script = [react, script.slice(0, j), config, script.slice(j)].join('\n');
-    }
+			script = [react, script.slice(0, j), config, script.slice(j)].join('\n');
+		}
 
-    lines.push(`export const ${name} = dynamic(() => import('./${name}'), { ssr: false, suspense: true });`);
+		lines.push(
+			`export const ${name} = dynamic(() => import('./${name}'), { ssr: false, suspense: true });`
+		);
 
-    const script1 = [...HEADER, script]
-      .join('\n')
-      .replace(/await import\((`|'|")https:\/\/esm\.run\//g, 'await import($1');
+		const script1 = [...HEADER, script]
+			.join('\n')
+			.replace(/await import\((`|'|")https:\/\/esm\.run\//g, 'await import($1');
 
-    fs.writeFileSync(`${DIRECTORY}/${name}.js`, script1);
-  }
+		fs.writeFileSync(`${DIRECTORY}/${name}.js`, script1);
+	}
 
-  const content = lines.join('\n');
+	const content = lines.join('\n');
 
-  fs.writeFileSync(`${DIRECTORY}/index.js`, content);
+	fs.writeFileSync(`${DIRECTORY}/index.js`, content);
 })();
 
 // vision
 (async () => {
-  const DESTINATION = './src/app/(root)/(internal)/vision/page.mdx';
-  const LOCAL = path.join(__dirname, '../../ui/VISION.md');
-  const REMOTE = 'https://github.com/htmlplus/ui/raw/main/VISION.md';
+	const DESTINATION = './src/app/(root)/(internal)/vision/page.mdx';
+	const LOCAL = path.join(__dirname, '../../ui/VISION.md');
+	const REMOTE = 'https://github.com/htmlplus/ui/raw/main/VISION.md';
 
-  const content = await load(LOCAL, REMOTE);
+	const content = await load(LOCAL, REMOTE);
 
-  fs.writeFileSync(DESTINATION, content, 'utf8');
+	fs.writeFileSync(DESTINATION, content, 'utf8');
 })();
 
 // roadmap
 (async () => {
-  const DESTINATION = './src/app/(root)/(internal)/roadmap/page.mdx';
-  const LOCAL = path.join(__dirname, '../../ui/ROADMAP.md');
-  const REMOTE = 'https://github.com/htmlplus/ui/raw/main/ROADMAP.md';
+	const DESTINATION = './src/app/(root)/(internal)/roadmap/page.mdx';
+	const LOCAL = path.join(__dirname, '../../ui/ROADMAP.md');
+	const REMOTE = 'https://github.com/htmlplus/ui/raw/main/ROADMAP.md';
 
-  const content = await load(LOCAL, REMOTE);
+	const content = await load(LOCAL, REMOTE);
 
-  fs.writeFileSync(DESTINATION, content, 'utf8');
+	fs.writeFileSync(DESTINATION, content, 'utf8');
 })();
 
 // statistics
 (async () => {
-  const DESTINATION = './src/data/statistics.ts';
+	const DESTINATION = './src/data/statistics.ts';
 
-  const responses = await Promise.all(
-    [
-      'https://api.github.com/repos/htmlplus/ui',
-      'https://api.npmjs.org/downloads/point/2021-02-10:2050-01-01/@htmlplus/ui',
-      'https://api.npmjs.org/downloads/point/last-month/@htmlplus/ui',
-      'https://api.npmjs.org/downloads/point/last-week/@htmlplus/ui',
-    ].map((url) => fetch(url).then((response) => response.json())),
-  );
+	const responses = await Promise.all(
+		[
+			'https://api.github.com/repos/htmlplus/ui',
+			'https://api.npmjs.org/downloads/point/2021-02-10:2050-01-01/@htmlplus/ui',
+			'https://api.npmjs.org/downloads/point/last-month/@htmlplus/ui',
+			'https://api.npmjs.org/downloads/point/last-week/@htmlplus/ui'
+		].map((url) => fetch(url).then((response) => response.json()))
+	);
 
-  const [first, second, third, fourth] = responses;
+	const [first, second, third, fourth] = responses;
 
-  const lines = [
-    ...HEADER,
-    'export const statistics = {',
-    `  forks: ${first.forks},`,
-    `  stars: ${first.stargazers_count},`,
-    `  watchers: ${first.subscribers_count},`,
-    `  dowanloads: ${second.downloads},`,
-    `  downloadsLastWeek: ${fourth.downloads},`,
-    `  downloadsLastMonth: ${third.downloads},`,
-    `  elements: ${document.elements.length},`,
-    `  examples: ${db.filter((item) => item.key.startsWith('javascript/')).length},`,
-    `  frameworks: ${new Set(db.map((item) => item.key.split('/').at(0))).size},`,
-    '};',
-    '',
-  ];
+	const lines = [
+		...HEADER,
+		'export const statistics = {',
+		`  forks: ${first.forks},`,
+		`  stars: ${first.stargazers_count},`,
+		`  watchers: ${first.subscribers_count},`,
+		`  dowanloads: ${second.downloads},`,
+		`  downloadsLastWeek: ${fourth.downloads},`,
+		`  downloadsLastMonth: ${third.downloads},`,
+		`  elements: ${document.elements.length},`,
+		`  examples: ${db.filter((item) => item.key.startsWith('javascript/')).length},`,
+		`  frameworks: ${new Set(db.map((item) => item.key.split('/').at(0))).size},`,
+		'};',
+		''
+	];
 
-  const content = lines.join('\n');
+	const content = lines.join('\n');
 
-  fs.writeFileSync(DESTINATION, content, 'utf8');
+	fs.writeFileSync(DESTINATION, content, 'utf8');
 })();

@@ -5,24 +5,24 @@
 import '@htmlplus/ui/progress-bar.js';
 
 function App() {
-  return (
-    <>
-      <plus-progress-bar value={50} color="primary"></plus-progress-bar>
-      <br />
-      <plus-progress-bar value={30} color="secondary"></plus-progress-bar>
-      <br />
-      <plus-progress-bar value={70} color="tertiary"></plus-progress-bar>
-    </>
-  );
+	return (
+		<>
+			<plus-progress-bar value={50} color="primary"></plus-progress-bar>
+			<br />
+			<plus-progress-bar value={30} color="secondary"></plus-progress-bar>
+			<br />
+			<plus-progress-bar value={70} color="tertiary"></plus-progress-bar>
+		</>
+	);
 }
 
 const ProgressBarCustomColor = () => {
-  return (
-    <div className="progress-bar-custom-color">
-      <App />
-      <style>{`.progress-bar-custom-color { plus-progress-bar[color='primary'] {  --plus-progress-bar-indicator-background-color: #00bfff;}plus-progress-bar[color='secondary'] {  --plus-progress-bar-indicator-background-color: #7cfc00;}plus-progress-bar[color='tertiary'] {  --plus-progress-bar-indicator-background-color: #ff1493;} }`}</style>
-    </div>
-  )
+	return (
+		<div className="progress-bar-custom-color">
+			<App />
+			<style>{`.progress-bar-custom-color { plus-progress-bar[color='primary'] {  --plus-progress-bar-indicator-background-color: #00bfff;}plus-progress-bar[color='secondary'] {  --plus-progress-bar-indicator-background-color: #7cfc00;}plus-progress-bar[color='tertiary'] {  --plus-progress-bar-indicator-background-color: #ff1493;} }`}</style>
+		</div>
+	);
 };
 
 export default ProgressBarCustomColor;

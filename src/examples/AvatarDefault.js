@@ -6,19 +6,19 @@ import '@htmlplus/ui/avatar.js';
 import '@htmlplus/ui/center.js';
 
 function App() {
-  return (
-    <plus-center>
-      <plus-avatar></plus-avatar>
-    </plus-center>
-  );
+	return (
+		<plus-center>
+			<plus-avatar></plus-avatar>
+		</plus-center>
+	);
 }
 
 const AvatarDefault = () => {
-  return (
-    <div className="avatar-default">
-      <App />
-    </div>
-  )
+	return (
+		<div className="avatar-default">
+			<App />
+		</div>
+	);
 };
 
 export default AvatarDefault;

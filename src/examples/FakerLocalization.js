@@ -9,31 +9,25 @@ import { faker } from '@faker-js/faker/locale/ja';
 import { setConfig } from '@htmlplus/ui/config.js';
 
 setConfig({
-  elements: {
-    'plus-faker': {
-      properties: {
-        instance: {
-          default: faker
-        }
-      }
-    }
-  }
+	elements: {
+		'plus-faker': {
+			properties: {
+				instance: {
+					default: faker
+				}
+			}
+		}
+	}
 });
 
-
-
 function App() {
-  return <plus-faker></plus-faker>;
+	return <plus-faker></plus-faker>;
 }
 
 const FakerLocalization = () => {
-  const [ready, setReady] = useState(false);
-  useEffect(() => setReady(true), []);
-  return (
-    <div className="faker-localization">
-      {ready && <App />}
-    </div>
-  )
+	const [ready, setReady] = useState(false);
+	useEffect(() => setReady(true), []);
+	return <div className="faker-localization">{ready && <App />}</div>;
 };
 
 export default FakerLocalization;

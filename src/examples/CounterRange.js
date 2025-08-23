@@ -6,19 +6,19 @@ import '@htmlplus/ui/center.js';
 import '@htmlplus/ui/counter.js';
 
 function App() {
-  return (
-    <plus-center>
-      <plus-counter from={10} to={1000} play></plus-counter>
-    </plus-center>
-  );
+	return (
+		<plus-center>
+			<plus-counter from={10} to={1000} play></plus-counter>
+		</plus-center>
+	);
 }
 
 const CounterRange = () => {
-  return (
-    <div className="counter-range">
-      <App />
-    </div>
-  )
+	return (
+		<div className="counter-range">
+			<App />
+		</div>
+	);
 };
 
 export default CounterRange;

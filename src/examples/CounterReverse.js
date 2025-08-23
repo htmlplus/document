@@ -6,19 +6,19 @@ import '@htmlplus/ui/center.js';
 import '@htmlplus/ui/counter.js';
 
 function App() {
-  return (
-    <plus-center>
-      <plus-counter from={1000} to={10} play></plus-counter>
-    </plus-center>
-  );
+	return (
+		<plus-center>
+			<plus-counter from={1000} to={10} play></plus-counter>
+		</plus-center>
+	);
 }
 
 const CounterReverse = () => {
-  return (
-    <div className="counter-reverse">
-      <App />
-    </div>
-  )
+	return (
+		<div className="counter-reverse">
+			<App />
+		</div>
+	);
 };
 
 export default CounterReverse;

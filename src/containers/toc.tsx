@@ -1,175 +1,178 @@
+// biome-ignore-all lint: TODO
+
 'use client';
 
-import { ReactNode, useEffect, useMemo, useRef, useState } from 'react';
+import { type ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 
 import { kebabCase } from 'change-case';
 import { create } from 'zustand';
 
-import { classes } from '@/utils';
-
 export interface TocItemProps {
-  children?: ReactNode;
-  level?: number;
+	children?: ReactNode;
+	level?: number;
 }
 
 interface TocState {
-  items: TocItem[];
-  add: (item: TocItem) => void;
-  remove: (item: TocItem) => void;
-  scrollTo: (item: TocItem) => void;
-  update: (item: TocItem, entry: IntersectionObserverEntry) => void;
+	items: TocItem[];
+	add: (item: TocItem) => void;
+	remove: (item: TocItem) => void;
+	scrollTo: (item: TocItem) => void;
+	update: (item: TocItem, entry: IntersectionObserverEntry) => void;
 }
 
 interface TocItem {
-  isActive?: boolean;
-  element?: HTMLElement;
-  entry?: IntersectionObserverEntry;
-  id?: string;
-  key?: string;
-  level?: number;
-  observer?: IntersectionObserver;
-  title?: string;
-  top?: number;
+	isActive?: boolean;
+	element?: HTMLElement;
+	entry?: IntersectionObserverEntry;
+	id?: string;
+	key?: string;
+	level?: number;
+	observer?: IntersectionObserver;
+	title?: string;
+	top?: number;
 }
 
 const useToc = create<TocState>((set, get) => ({
-  items: [],
-  add: (item: TocItem) => {
-    let items = get().items.concat(item);
+	items: [],
+	add: (item: TocItem) => {
+		let items = get().items.concat(item);
 
-    for (const item of items) {
-      item.top = item.element?.getBoundingClientRect().top;
-    }
+		for (const item of items) {
+			item.top = item.element?.getBoundingClientRect().top;
+		}
 
-    items = items.sort((a, b) => ((a.top ?? 0) < (b.top ?? 0) ? -1 : 0));
+		items = items.sort((a, b) => ((a.top ?? 0) < (b.top ?? 0) ? -1 : 0));
 
-    set({ items });
+		set({ items });
 
-    item.observer = new IntersectionObserver(([entry]) => get().update(item, entry));
+		item.observer = new IntersectionObserver(([entry]) => get().update(item, entry));
 
-    item.observer.observe(item.element!);
-  },
-  remove: (item: TocItem) => {
-    item.observer?.disconnect();
-    const items = get().items.filter((x) => x.key != item.key);
-    set({ items });
-  },
-  scrollTo: (item: TocItem) => {
-    item.element?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest',
-    });
-    window.setTimeout(() => (window.location.hash = `#${item.id}`), 500);
-  },
-  update(item: TocItem, entry: IntersectionObserverEntry) {
-    item.entry = entry;
-    const entries = get().items.filter((item) => item.entry?.isIntersecting);
-    if (!entries.length) return;
-    const items = get().items;
-    items.forEach((item) => (item.isActive = item === entries[0]));
-    set({ items: [...items] });
-  },
+		item.observer.observe(item.element!);
+	},
+	remove: (item: TocItem) => {
+		item.observer?.disconnect();
+		const items = get().items.filter((x) => x.key !== item.key);
+		set({ items });
+	},
+	scrollTo: (item: TocItem) => {
+		item.element?.scrollIntoView({
+			behavior: 'smooth',
+			block: 'start',
+			inline: 'nearest'
+		});
+		window.setTimeout(() => {
+			window.location.hash = `#${item.id}`;
+		}, 500);
+	},
+	update(item: TocItem, entry: IntersectionObserverEntry) {
+		item.entry = entry;
+		const entries = get().items.filter((item) => item.entry?.isIntersecting);
+		if (!entries.length) return;
+		const items = get().items;
+		items.forEach((item) => {
+			item.isActive = item === entries[0];
+		});
+		set({ items: [...items] });
+	}
 }));
 
 export function Toc() {
-  const toc = useToc();
+	const toc = useToc();
 
-  useEffect(() => {
-    let clear: any;
+	useEffect(() => {
+		let clear: number;
 
-    const timeout = () => {
-      if (document.readyState != 'complete') {
-        clear = window.setTimeout(timeout, 250);
-        return;
-      }
+		const timeout = () => {
+			if (document.readyState !== 'complete') {
+				clear = window.setTimeout(timeout, 250);
+				return;
+			}
 
-      const item = toc.items.find((item) => item.id && location.hash.endsWith(item.id));
+			const item = toc.items.find((item) => item.id && location.hash.endsWith(item.id));
 
-      if (!item) return;
+			if (!item) return;
 
-      toc.scrollTo(item);
-    };
+			toc.scrollTo(item);
+		};
 
-    timeout();
+		timeout();
 
-    return () => clearTimeout(clear);
-  }, []);
+		return () => clearTimeout(clear);
+	}, [toc.items, toc.scrollTo]);
 
-  if (!toc.items.length) return null;
+	if (!toc.items.length) return null;
 
-  return (
-    <div className="toc">
-      <p>Contents</p>
-      {toc.items.map((item) => (
-        <a
-          className={`border-0 border-l-2 border-solid block cursor-pointer no-underline text-[#a7a7a7] text-[90%] leading-[1.6] hover:no-underline hover:border-main-10 hover:text-main-10 ${item.isActive ? 'border-primary-9 text-primary-9' : 'border-l-main-4'}`}
-          style={{
-            paddingLeft: `${item.level! > 1 ? (item.level! - 1) * 20 : 0}px`,
-          }}
-          key={item.key}
-          onClick={() => toc.scrollTo(item)}
-        >
-          {item.title}
-        </a>
-      ))}
-    </div>
-  );
+	return (
+		<div className="toc">
+			<p>Contents</p>
+			{toc.items.map((item) => (
+				<a
+					key={item.key}
+					className={`border-0 border-l-2 border-solid block cursor-pointer no-underline text-[#a7a7a7] text-[90%] leading-[1.6] hover:no-underline hover:border-main-10 hover:text-main-10 ${item.isActive ? 'border-primary-9 text-primary-9' : 'border-l-main-4'}`}
+					style={{
+						paddingLeft: `${item.level! > 1 ? (item.level! - 1) * 20 : 0}px`
+					}}
+					onClick={() => toc.scrollTo(item)}
+				>
+					{item.title}
+				</a>
+			))}
+		</div>
+	);
 }
 
 export function TocItem({ children, level }: TocItemProps) {
-  const element = useRef(null);
+	const element = useRef(null);
 
-  const [isReady, setIsReady] = useState(false);
+	const [isReady, setIsReady] = useState(false);
 
-  const toc = useToc();
+	const toc = useToc();
 
-  const item: TocItem | undefined = useMemo(() => {
-    if (!isReady) return;
+	const item: TocItem | undefined = useMemo(() => {
+		if (!isReady) return;
 
-    const key = [children]
-      .flat()
-      .map((child: any) => child?.props?.children || child)
-      .flat()
-      .join();
+		const key = [children]
+			.flat()
+			.flatMap((child: any) => child?.props?.children || child)
+			.join();
 
-    return {
-      element: element.current!,
-      id: kebabCase(key),
-      key: Math.random().toString(),
-      level,
-      title: key,
-    };
-  }, [isReady]);
+		return {
+			element: element.current!,
+			id: kebabCase(key),
+			key: Math.random().toString(),
+			level,
+			title: key
+		};
+	}, [isReady]);
 
-  const onClick = (event: any) => {
-    event.preventDefault();
-    if (item) toc.scrollTo(item);
-  };
+	const onClick = (event: any) => {
+		event.preventDefault();
+		if (item) toc.scrollTo(item);
+	};
 
-  useEffect(() => setIsReady(!!element.current));
+	useEffect(() => setIsReady(!!element.current));
 
-  useEffect(() => {
-    if (!item) return;
+	useEffect(() => {
+		if (!item) return;
 
-    toc.add(item);
+		toc.add(item);
 
-    return () => toc.remove(item);
-  }, [item]);
+		return () => toc.remove(item);
+	}, [item]);
 
-  return (
-    <>
-      <a
-        className="float-left pr-[4px] ml-[-18px] no-underline cursor-pointer text-inherit after:clear-both"
-        aria-hidden="true"
-        ref={element}
-        onClick={onClick}
-      >
-        <div className="inline-block overflow-visible align-text-bottom fill-current invisible group-hover:visible">
-          #
-        </div>
-      </a>
-      {children}
-    </>
-  );
+	return (
+		<>
+			<a
+				className="float-left pr-[4px] ml-[-18px] no-underline cursor-pointer text-inherit after:clear-both"
+				aria-hidden="true"
+				ref={element}
+				onClick={onClick}
+			>
+				<div className="inline-block overflow-visible align-text-bottom fill-current invisible group-hover:visible">
+					#
+				</div>
+			</a>
+			{children}
+		</>
+	);
 }

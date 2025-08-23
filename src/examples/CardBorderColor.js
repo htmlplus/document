@@ -6,22 +6,22 @@ import '@htmlplus/ui/card.js';
 import '@htmlplus/ui/stack.js';
 
 function App() {
-  return (
-    <plus-stack gap="1rem" justify="evenly" wrap>
-      <plus-card className="pink" outlined></plus-card>
-      <plus-card className="yellow" outlined></plus-card>
-      <plus-card className="blue" outlined></plus-card>
-    </plus-stack>
-  );
+	return (
+		<plus-stack gap="1rem" justify="evenly" wrap>
+			<plus-card className="pink" outlined></plus-card>
+			<plus-card className="yellow" outlined></plus-card>
+			<plus-card className="blue" outlined></plus-card>
+		</plus-stack>
+	);
 }
 
 const CardBorderColor = () => {
-  return (
-    <div className="card-border-color">
-      <App />
-      <style>{`.card-border-color { plus-card {  height: 8rem;  width: 8rem;}plus-card.pink {  --plus-card-border-color: #ef9a9a;}plus-card.yellow {  --plus-card-border-color: #fff59d;}plus-card.blue {  --plus-card-border-color: #80cbc4;} }`}</style>
-    </div>
-  )
+	return (
+		<div className="card-border-color">
+			<App />
+			<style>{`.card-border-color { plus-card {  height: 8rem;  width: 8rem;}plus-card.pink {  --plus-card-border-color: #ef9a9a;}plus-card.yellow {  --plus-card-border-color: #fff59d;}plus-card.blue {  --plus-card-border-color: #80cbc4;} }`}</style>
+		</div>
+	);
 };
 
 export default CardBorderColor;

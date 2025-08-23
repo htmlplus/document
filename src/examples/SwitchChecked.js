@@ -6,19 +6,19 @@ import '@htmlplus/ui/center.js';
 import '@htmlplus/ui/switch.js';
 
 function App() {
-  return (
-    <plus-center>
-      <plus-switch checked></plus-switch>
-    </plus-center>
-  );
+	return (
+		<plus-center>
+			<plus-switch checked></plus-switch>
+		</plus-center>
+	);
 }
 
 const SwitchChecked = () => {
-  return (
-    <div className="switch-checked">
-      <App />
-    </div>
-  )
+	return (
+		<div className="switch-checked">
+			<App />
+		</div>
+	);
 };
 
 export default SwitchChecked;

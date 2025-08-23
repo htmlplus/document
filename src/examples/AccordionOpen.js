@@ -6,19 +6,19 @@ import '@htmlplus/ui/accordion.js';
 import '@htmlplus/ui/faker.js';
 
 function App() {
-  return (
-    <plus-accordion summary="Summary" open>
-      <plus-faker></plus-faker>
-    </plus-accordion>
-  );
+	return (
+		<plus-accordion summary="Summary" open>
+			<plus-faker></plus-faker>
+		</plus-accordion>
+	);
 }
 
 const AccordionOpen = () => {
-  return (
-    <div className="accordion-open">
-      <App />
-    </div>
-  )
+	return (
+		<div className="accordion-open">
+			<App />
+		</div>
+	);
 };
 
 export default AccordionOpen;

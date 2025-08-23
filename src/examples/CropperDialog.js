@@ -14,47 +14,47 @@ import '@htmlplus/ui/dialog-toggler.js';
 import '@htmlplus/ui/dialog.js';
 
 function App() {
-  const [disabled, setDisabled] = useState(true);
-  function onPlusOpened() {
-    setDisabled(false);
-  }
-  function onPlusClosed() {
-    setDisabled(true);
-  }
-  return (
-    <>
-      <plus-center>
-        <plus-dialog-toggler connector="dialog-cropper">Open</plus-dialog-toggler>
-      </plus-center>
-      <plus-dialog
-        animation
-        connector="dialog-cropper"
-        onPlusOpened={onPlusOpened}
-        onPlusClosed={onPlusClosed}
-      >
-        <plus-dialog-content>
-          <plus-dialog-header>Cropper</plus-dialog-header>
-          <plus-dialog-body>
-            <plus-cropper
-              disabled={disabled}
-              src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-            ></plus-cropper>
-          </plus-dialog-body>
-          <plus-dialog-footer>
-            <plus-dialog-toggler>Close</plus-dialog-toggler>
-          </plus-dialog-footer>
-        </plus-dialog-content>
-      </plus-dialog>
-    </>
-  );
+	const [disabled, setDisabled] = useState(true);
+	function onPlusOpened() {
+		setDisabled(false);
+	}
+	function onPlusClosed() {
+		setDisabled(true);
+	}
+	return (
+		<>
+			<plus-center>
+				<plus-dialog-toggler connector="dialog-cropper">Open</plus-dialog-toggler>
+			</plus-center>
+			<plus-dialog
+				animation
+				connector="dialog-cropper"
+				onPlusOpened={onPlusOpened}
+				onPlusClosed={onPlusClosed}
+			>
+				<plus-dialog-content>
+					<plus-dialog-header>Cropper</plus-dialog-header>
+					<plus-dialog-body>
+						<plus-cropper
+							disabled={disabled}
+							src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+						></plus-cropper>
+					</plus-dialog-body>
+					<plus-dialog-footer>
+						<plus-dialog-toggler>Close</plus-dialog-toggler>
+					</plus-dialog-footer>
+				</plus-dialog-content>
+			</plus-dialog>
+		</>
+	);
 }
 
 const CropperDialog = () => {
-  return (
-    <div className="cropper-dialog">
-      <App />
-    </div>
-  )
+	return (
+		<div className="cropper-dialog">
+			<App />
+		</div>
+	);
 };
 
 export default CropperDialog;

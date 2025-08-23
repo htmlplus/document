@@ -8,35 +8,35 @@ import '@htmlplus/ui/center.js';
 import '@htmlplus/ui/tooltip.js';
 
 function App() {
-  return (
-    <plus-center>
-      <plus-avatar-group>
-        <plus-avatar>
-          <img src="https://picsum.photos/id/177/90/90" />
-          <a href="https://picsum.photos/id/177/90/90" target="_blank"></a>
-        </plus-avatar>
-        <plus-tooltip>Tooltip 1</plus-tooltip>
-        <plus-avatar>
-          <img src="https://picsum.photos/id/177/90/90" />
-          <a href="https://picsum.photos/id/177/90/90" target="_blank"></a>
-        </plus-avatar>
-        <plus-tooltip>Tooltip 2</plus-tooltip>
-        <plus-avatar>
-          <img src="https://picsum.photos/id/177/90/90" />
-          <a href="https://picsum.photos/id/177/90/90" target="_blank"></a>
-        </plus-avatar>
-        <plus-tooltip>Tooltip 3</plus-tooltip>
-      </plus-avatar-group>
-    </plus-center>
-  );
+	return (
+		<plus-center>
+			<plus-avatar-group>
+				<plus-avatar>
+					<img src="https://picsum.photos/id/177/90/90" />
+					<a href="https://picsum.photos/id/177/90/90" target="_blank" rel="noopener"></a>
+				</plus-avatar>
+				<plus-tooltip>Tooltip 1</plus-tooltip>
+				<plus-avatar>
+					<img src="https://picsum.photos/id/177/90/90" />
+					<a href="https://picsum.photos/id/177/90/90" target="_blank" rel="noopener"></a>
+				</plus-avatar>
+				<plus-tooltip>Tooltip 2</plus-tooltip>
+				<plus-avatar>
+					<img src="https://picsum.photos/id/177/90/90" />
+					<a href="https://picsum.photos/id/177/90/90" target="_blank" rel="noopener"></a>
+				</plus-avatar>
+				<plus-tooltip>Tooltip 3</plus-tooltip>
+			</plus-avatar-group>
+		</plus-center>
+	);
 }
 
 const AvatarGroupLinkWithTooltip = () => {
-  return (
-    <div className="avatar-group-link-with-tooltip">
-      <App />
-    </div>
-  )
+	return (
+		<div className="avatar-group-link-with-tooltip">
+			<App />
+		</div>
+	);
 };
 
 export default AvatarGroupLinkWithTooltip;

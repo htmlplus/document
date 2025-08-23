@@ -7,34 +7,34 @@ import '@htmlplus/ui/avatar.js';
 import '@htmlplus/ui/center.js';
 
 function App() {
-  return (
-    <>
-      <plus-center>
-        <plus-avatar-group>
-          <plus-avatar></plus-avatar>
-          <plus-avatar></plus-avatar>
-          <plus-avatar></plus-avatar>
-        </plus-avatar-group>
-      </plus-center>
-      <br />
-      <plus-center>
-        <plus-avatar-group stacked>
-          <plus-avatar></plus-avatar>
-          <plus-avatar></plus-avatar>
-          <plus-avatar></plus-avatar>
-        </plus-avatar-group>
-      </plus-center>
-    </>
-  );
+	return (
+		<>
+			<plus-center>
+				<plus-avatar-group>
+					<plus-avatar></plus-avatar>
+					<plus-avatar></plus-avatar>
+					<plus-avatar></plus-avatar>
+				</plus-avatar-group>
+			</plus-center>
+			<br />
+			<plus-center>
+				<plus-avatar-group stacked>
+					<plus-avatar></plus-avatar>
+					<plus-avatar></plus-avatar>
+					<plus-avatar></plus-avatar>
+				</plus-avatar-group>
+			</plus-center>
+		</>
+	);
 }
 
 const AvatarGroupGutter = () => {
-  return (
-    <div className="avatar-group-gutter">
-      <App />
-      <style>{`.avatar-group-gutter { plus-avatar-group plus-avatar {  margin-inline-end: 2rem;}plus-avatar-group[stacked] plus-avatar {  margin-inline-end: -2rem;} }`}</style>
-    </div>
-  )
+	return (
+		<div className="avatar-group-gutter">
+			<App />
+			<style>{`.avatar-group-gutter { plus-avatar-group plus-avatar {  margin-inline-end: 2rem;}plus-avatar-group[stacked] plus-avatar {  margin-inline-end: -2rem;} }`}</style>
+		</div>
+	);
 };
 
 export default AvatarGroupGutter;

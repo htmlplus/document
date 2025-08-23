@@ -7,23 +7,23 @@ import '@htmlplus/ui/avatar.js';
 import '@htmlplus/ui/center.js';
 
 function App() {
-  return (
-    <plus-center>
-      <plus-avatar-group>
-        <plus-avatar></plus-avatar>
-        <plus-avatar></plus-avatar>
-        <plus-avatar></plus-avatar>
-      </plus-avatar-group>
-    </plus-center>
-  );
+	return (
+		<plus-center>
+			<plus-avatar-group>
+				<plus-avatar></plus-avatar>
+				<plus-avatar></plus-avatar>
+				<plus-avatar></plus-avatar>
+			</plus-avatar-group>
+		</plus-center>
+	);
 }
 
 const AvatarGroup = () => {
-  return (
-    <div className="avatar-group">
-      <App />
-    </div>
-  )
+	return (
+		<div className="avatar-group">
+			<App />
+		</div>
+	);
 };
 
 export default AvatarGroup;

@@ -5,15 +5,15 @@
 import '@htmlplus/ui/faker.js';
 
 function App() {
-  return <plus-faker api="lorem.paragraphs" arguments={[5, '\n\n']}></plus-faker>;
+	return <plus-faker api="lorem.paragraphs" arguments={[5, '\n\n']}></plus-faker>;
 }
 
 const FakerArguments = () => {
-  return (
-    <div className="faker-arguments">
-      <App />
-    </div>
-  )
+	return (
+		<div className="faker-arguments">
+			<App />
+		</div>
+	);
 };
 
 export default FakerArguments;

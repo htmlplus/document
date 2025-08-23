@@ -6,19 +6,19 @@ import '@htmlplus/ui/center.js';
 import '@htmlplus/ui/format-bytes.js';
 
 function App() {
-  return (
-    <plus-center>
-      <plus-format-bytes value={1000}></plus-format-bytes>
-    </plus-center>
-  );
+	return (
+		<plus-center>
+			<plus-format-bytes value={1000}></plus-format-bytes>
+		</plus-center>
+	);
 }
 
 const FormatBytesDefault = () => {
-  return (
-    <div className="format-bytes-default">
-      <App />
-    </div>
-  )
+	return (
+		<div className="format-bytes-default">
+			<App />
+		</div>
+	);
 };
 
 export default FormatBytesDefault;

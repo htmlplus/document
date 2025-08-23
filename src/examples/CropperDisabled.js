@@ -5,20 +5,20 @@
 import '@htmlplus/ui/cropper.js';
 
 function App() {
-  return (
-    <plus-cropper
-      src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-      disabled
-    ></plus-cropper>
-  );
+	return (
+		<plus-cropper
+			src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+			disabled
+		></plus-cropper>
+	);
 }
 
 const CropperDisabled = () => {
-  return (
-    <div className="cropper-disabled">
-      <App />
-    </div>
-  )
+	return (
+		<div className="cropper-disabled">
+			<App />
+		</div>
+	);
 };
 
 export default CropperDisabled;

@@ -12,32 +12,32 @@ import '@htmlplus/ui/dialog.js';
 import '@htmlplus/ui/faker.js';
 
 function App() {
-  return (
-    <>
-      <plus-center>
-        <plus-dialog-toggler connector="dialog-persistent">Open</plus-dialog-toggler>
-      </plus-center>
-      <plus-dialog animation connector="dialog-persistent" persistent>
-        <plus-dialog-content>
-          <plus-dialog-header>Dialog Title</plus-dialog-header>
-          <plus-dialog-body>
-            <plus-faker></plus-faker>
-          </plus-dialog-body>
-          <plus-dialog-footer>
-            <plus-dialog-toggler>Close</plus-dialog-toggler>
-          </plus-dialog-footer>
-        </plus-dialog-content>
-      </plus-dialog>
-    </>
-  );
+	return (
+		<>
+			<plus-center>
+				<plus-dialog-toggler connector="dialog-persistent">Open</plus-dialog-toggler>
+			</plus-center>
+			<plus-dialog animation connector="dialog-persistent" persistent>
+				<plus-dialog-content>
+					<plus-dialog-header>Dialog Title</plus-dialog-header>
+					<plus-dialog-body>
+						<plus-faker></plus-faker>
+					</plus-dialog-body>
+					<plus-dialog-footer>
+						<plus-dialog-toggler>Close</plus-dialog-toggler>
+					</plus-dialog-footer>
+				</plus-dialog-content>
+			</plus-dialog>
+		</>
+	);
 }
 
 const DialogPersistent = () => {
-  return (
-    <div className="dialog-persistent">
-      <App />
-    </div>
-  )
+	return (
+		<div className="dialog-persistent">
+			<App />
+		</div>
+	);
 };
 
 export default DialogPersistent;

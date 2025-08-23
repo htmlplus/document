@@ -7,22 +7,22 @@ import '@htmlplus/ui/faker.js';
 import '@htmlplus/ui/stack.js';
 
 function App() {
-  return (
-    <plus-stack>
-      <plus-faker></plus-faker>
-      <plus-divider vertical>OR</plus-divider>
-      <plus-faker></plus-faker>
-    </plus-stack>
-  );
+	return (
+		<plus-stack>
+			<plus-faker></plus-faker>
+			<plus-divider vertical>OR</plus-divider>
+			<plus-faker></plus-faker>
+		</plus-stack>
+	);
 }
 
 const DividerVertical = () => {
-  return (
-    <div className="divider-vertical">
-      <App />
-      <style>{`.divider-vertical { plus-divider {  margin: 0 1rem;} }`}</style>
-    </div>
-  )
+	return (
+		<div className="divider-vertical">
+			<App />
+			<style>{`.divider-vertical { plus-divider {  margin: 0 1rem;} }`}</style>
+		</div>
+	);
 };
 
 export default DividerVertical;

@@ -8,34 +8,34 @@ import '@htmlplus/ui/center.js';
 import '@htmlplus/ui/cropper.js';
 
 function App() {
-  const cropperRef = useRef();
-  function onClick() {
-    cropperRef.current.toCanvas().toBlob((blob) => {
-      open(URL.createObjectURL(blob), '_blank');
-    });
-  }
-  return (
-    <>
-      <plus-center>
-        <plus-cropper
-          src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
-          ref={cropperRef}
-        ></plus-cropper>
-      </plus-center>
-      <br />
-      <plus-center>
-        <button onClick={onClick}>To URL</button>
-      </plus-center>
-    </>
-  );
+	const cropperRef = useRef();
+	function onClick() {
+		cropperRef.current.toCanvas().toBlob((blob) => {
+			open(URL.createObjectURL(blob), '_blank');
+		});
+	}
+	return (
+		<>
+			<plus-center>
+				<plus-cropper
+					src="https://fengyuanchen.github.io/cropperjs/images/picture.jpg"
+					ref={cropperRef}
+				></plus-cropper>
+			</plus-center>
+			<br />
+			<plus-center>
+				<button onClick={onClick}>To URL</button>
+			</plus-center>
+		</>
+	);
 }
 
 const CropperToUrl = () => {
-  return (
-    <div className="cropper-to-url">
-      <App />
-    </div>
-  )
+	return (
+		<div className="cropper-to-url">
+			<App />
+		</div>
+	);
 };
 
 export default CropperToUrl;
