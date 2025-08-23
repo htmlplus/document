@@ -28,14 +28,18 @@ export function Categories() {
 				continue;
 			}
 
-			const [directoryName, fileName] = file
-				.split('names/')
-				.at(1)
-				.split('.')
-				.slice(0, -1)
-				.join('.')
-				.split('/')
-				.filter((section) => !!section);
+			const sections = file
+				?.split('names/')
+				?.at(1)
+				?.split('.')
+				?.slice(0, -1)
+				?.join('.')
+				?.split('/')
+				?.filter((section) => !!section);
+
+			if (!sections) continue;
+
+			const [directoryName, fileName] = sections;
 
 			if (!categories.some((category) => category.key === directoryName)) {
 				categories.push({
