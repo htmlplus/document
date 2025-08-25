@@ -8,7 +8,7 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"includes": ["**", "!.next", "!build", "!src/data/examples.ts", "!src/examples"]
+		"includes": ["**", "!.next", "!build", "!src/data/examples.ts"]
 	},
 	"formatter": {
 		"enabled": true,

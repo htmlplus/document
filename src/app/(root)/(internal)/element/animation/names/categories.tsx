@@ -73,9 +73,9 @@ export function Categories() {
 			>
 				{category.items.map((item) => (
 					<div className="flex flex-col items-center gap-2" key={`${category.key}:${item.key}`}>
-						{/** biome-ignore lint: TODO */}
-						<div
+						<button
 							className={playing === item.key ? '' : 'w-[110px] h-[110px] bg-[lightgray]'}
+							type="button"
 							onMouseEnter={() => setPlaying(item.key)}
 							onMouseLeave={() => setPlaying('')}
 						>
@@ -86,7 +86,7 @@ export function Categories() {
 									run
 								></plus-animation>
 							)}
-						</div>
+						</button>
 						<small className="text-xs">{item.title}</small>
 					</div>
 				))}

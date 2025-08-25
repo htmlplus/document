@@ -96,13 +96,12 @@ export const Frameworks = () => {
 			{isOpen && (
 				<ul className="absolute w-full mt-1 py-1 border border-solid border-gray-200 bg-white rounded-[4px] shadow-lg m-0">
 					{options.map((option) => (
-						// biome-ignore lint: TODO
-						<li
-							key={option.key}
-							className="flex items-center gap-2 py-2 px-4 cursor-pointer hover:bg-gray-200 m-0"
-							onClick={() => handleSelect(option)}
-						>
-							{
+						<li key={option.key}>
+							<button
+								className="flex items-center gap-2 py-2 px-4 w-full text-left hover:bg-gray-200"
+								type="button"
+								onClick={() => handleSelect(option)}
+							>
 								<Image
 									alt={option.title}
 									className="w-5 h-5 m-0"
@@ -110,8 +109,9 @@ export const Frameworks = () => {
 									width="20"
 									height="20"
 								/>
-							}
-							{option.title}
+
+								{option.title}
+							</button>
 						</li>
 					))}
 				</ul>

@@ -1,11 +1,11 @@
-// biome-ignore-all lint: TODO
-
 'use client';
 
 import {
 	type FC,
-	MouseEvent,
-	MouseEventHandler,
+	type MouseEvent,
+	type MouseEventHandler,
+	type SyntheticEvent,
+	useCallback,
 	useEffect,
 	useLayoutEffect,
 	useRef,
@@ -62,15 +62,18 @@ export function Example({
 
 	const [isVisible, setIsVisible] = useState(true);
 
-	if (!element || !example) return <Alert type="error">NOT FOUND</Alert>;
+	const handleChangeDirection = useCallback(
+		(event: MouseEvent<HTMLButtonElement>) => {
+			event.preventDefault();
+			setDirection(direction === 'ltr' ? 'rtl' : 'ltr');
+		},
+		[direction]
+	);
 
-	const handleChangeDirection = (event: MouseEvent<HTMLButtonElement>) => {
-		event.preventDefault();
-		setDirection(direction === 'ltr' ? 'rtl' : 'ltr');
-	};
+	const handleIframeLoad = useCallback((event: SyntheticEvent<HTMLIFrameElement, Event>) => {
+		const iframe = event.currentTarget;
 
-	const handleIframeLoad = (event: any) => {
-		const iframe = event.target;
+		if (!iframe.contentWindow) return;
 
 		const body = iframe.contentWindow.document.body;
 
@@ -84,29 +87,43 @@ export function Example({
 		});
 
 		resizeObserver.current?.observe(body);
-	};
+	}, []);
 
-	const handleReload = (event?: MouseEvent<HTMLButtonElement>) => {
-		event?.preventDefault();
+	const handleReload = useCallback(
+		(event?: MouseEvent<HTMLButtonElement>) => {
+			event?.preventDefault();
 
-		setDirection('ltr');
+			setDirection('ltr');
 
-		setIsVisible(false);
+			setIsVisible(false);
 
-		requestAnimationFrame(() => setIsVisible(true));
+			requestAnimationFrame(() => setIsVisible(true));
 
-		setIsLoaded(false);
+			setIsLoaded(false);
 
-		if (!$preview.current?.offsetHeight) return;
+			if (!$preview.current?.offsetHeight) return;
 
-		$preview.current.style.height = `${$preview.current.offsetHeight}px`;
+			$preview.current.style.height = `${$preview.current.offsetHeight}px`;
 
-		if (!isolate) return;
+			if (!isolate) return;
 
-		$preview.current.classList.add('animate-shimmer', 'bg-main-4');
-	};
+			$preview.current.classList.add('animate-shimmer', 'bg-main-4');
+		},
+		[isolate]
+	);
 
-	useLayoutEffect(handleReload, [frameworks.framework]);
+	useLayoutEffect(() => {
+		if (frameworks.framework) {
+			handleReload();
+		}
+	}, [frameworks.framework, handleReload]);
+
+	useLayoutEffect(() => {
+		isVisible;
+		return () => {
+			resizeObserver.current?.disconnect();
+		};
+	}, [isVisible]);
 
 	useEffect(() => {
 		if (!$preview.current) return;
@@ -124,9 +141,7 @@ export function Example({
 		}, 250);
 	}, [isLoaded, isolate, isVisible]);
 
-	useLayoutEffect(() => {
-		return () => resizeObserver.current?.disconnect();
-	}, [isVisible]);
+	if (!element || !example) return <Alert type="error">NOT FOUND</Alert>;
 
 	return (
 		<plus-tabs className="gap-2 leading-normal" value="preview">

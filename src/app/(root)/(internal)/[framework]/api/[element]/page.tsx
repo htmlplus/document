@@ -1,4 +1,4 @@
-import { Fragment, type ReactNode, useMemo } from 'react';
+import { Fragment, type ReactNode } from 'react';
 
 import { notFound } from 'next/navigation';
 
@@ -58,44 +58,41 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 		notFound();
 	}
 
-	const sections = useMemo(
-		() => [
-			{
-				key: 'property',
-				title: 'Properties',
-				items: element.properties || []
-			},
-			{
-				key: 'slot',
-				title: 'Slots',
-				items: element.slots || []
-			},
-			{
-				key: 'event',
-				title: 'Events',
-				items: (element.events || []).map((event) => ({
-					...event,
-					name: kebabCase(event.name)
-				}))
-			},
-			{
-				key: 'style',
-				title: 'CSS Variables',
-				items: element.styles || []
-			},
-			{
-				key: 'part',
-				title: 'CSS Parts',
-				items: element.parts || []
-			},
-			{
-				key: 'method',
-				title: 'Methods',
-				items: element.methods || []
-			}
-		],
-		[element]
-	);
+	const sections = [
+		{
+			key: 'property',
+			title: 'Properties',
+			items: element.properties || []
+		},
+		{
+			key: 'slot',
+			title: 'Slots',
+			items: element.slots || []
+		},
+		{
+			key: 'event',
+			title: 'Events',
+			items: (element.events || []).map((event) => ({
+				...event,
+				name: kebabCase(event.name)
+			}))
+		},
+		{
+			key: 'style',
+			title: 'CSS Variables',
+			items: element.styles || []
+		},
+		{
+			key: 'part',
+			title: 'CSS Parts',
+			items: element.parts || []
+		},
+		{
+			key: 'method',
+			title: 'Methods',
+			items: element.methods || []
+		}
+	];
 
 	return (
 		<Fragment>

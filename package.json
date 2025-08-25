@@ -9,7 +9,7 @@
 		"format": "biome format --write",
 		"lint": "biome lint --write",
 		"start": "next start",
-		"sync": "node ./scripts/sync.mjs",
+		"sync": "node ./scripts/sync.mjs & npm run format",
 		"type-check": "tsc --noEmit"
 	},
 	"dependencies": {
