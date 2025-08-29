@@ -1,6 +1,6 @@
 export * from './browsers';
-export * from './elements.light';
 export * from './elements';
+export * from './elements.light';
 export * from './examples';
 export * from './features';
 export * from './frameworks';

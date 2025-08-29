@@ -6,4 +6,4 @@ export * from './frameworks';
 export * from './markup';
 export * from './navigation';
 export * from './sidebar';
-export * from './toc'; 
+export * from './toc';

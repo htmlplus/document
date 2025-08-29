@@ -2,44 +2,50 @@
 
 import { NoSSR } from '@/NoSSR';
 
-interface FeatureProps {
-  className?: string;
-  description: string;
-  icon: string;
-  metric?: number;
-  more?: string;
-  title: string;
-}
+type FeatureProps = {
+	className?: string;
+	description: string;
+	icon: string;
+	metric?: number;
+	more?: string;
+	title: string;
+};
 
 export const Feature = ({ className, description, icon, metric, more, title }: FeatureProps) => {
-  return (
-    <plus-stack className={className} gap="1rem" vertical>
-      <plus-avatar className="bg-main-3" shape="circle" size="48">
-        <plus-icon className="text-main-11" name={icon} size="24"></plus-icon>
-      </plus-avatar>
-      {metric && (
-        <div className="font-9-600 text-main-11">
-          <NoSSR>
-            <plus-intersection
-              once
-              onPlusChange={(event) => {
-                (event.target as any).children.item(0).play = event.detail.isIntersecting;
-              }}
-            >
-              <plus-counter to={metric} duration={2500}>
-                0
-              </plus-counter>
-            </plus-intersection>
-          </NoSSR>
-        </div>
-      )}
-      <div className="font-5-500">{title}</div>
-      <div className="font-3-400 text-alpha-black-7 text-center">{description}</div>
-      {more && (
-        <a href={more} className="link">
-          Learn more
-        </a>
-      )}
-    </plus-stack>
-  );
+	return (
+		<plus-stack className={className} gap="1rem" vertical>
+			<plus-avatar className="bg-main-3" shape="circle" size="48">
+				<plus-icon className="text-main-11" name={icon} size="24"></plus-icon>
+			</plus-avatar>
+			{metric && (
+				<div className="font-9-600 text-main-11">
+					<NoSSR>
+						<plus-intersection
+							once
+							onPlusChange={(event) => {
+								const host = event.currentTarget as HTMLElement;
+
+								const counter = host.querySelector('plus-counter');
+
+								if (!counter) return;
+
+								counter.play = event.detail.isIntersecting;
+							}}
+						>
+							<plus-counter to={metric} duration={2500}>
+								0
+							</plus-counter>
+						</plus-intersection>
+					</NoSSR>
+				</div>
+			)}
+			<div className="font-5-500">{title}</div>
+			<div className="font-3-400 text-alpha-black-7 text-center">{description}</div>
+			{more && (
+				<a href={more} className="link">
+					Learn more
+				</a>
+			)}
+		</plus-stack>
+	);
 };

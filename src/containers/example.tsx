@@ -1,6 +1,16 @@
 'use client';
 
-import { FC, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import {
+	type FC,
+	type MouseEvent,
+	type MouseEventHandler,
+	type SyntheticEvent,
+	useCallback,
+	useEffect,
+	useLayoutEffect,
+	useRef,
+	useState
+} from 'react';
 
 import { Alert, Button } from '@/components';
 import { ROUTES } from '@/constants';
@@ -8,178 +18,205 @@ import { useFrameworks } from '@/containers';
 import { getPath } from '@/utils';
 
 export interface ExampleProps {
-  Preview?: FC;
-  element?: string;
-  example?: string;
-  isolate?: boolean;
-  links?: Array<{
-    icon?: string;
-    key?: string;
-    title?: string;
-    url?: string;
-  }>;
-  rtl?: boolean;
-  tabs?: Array<{
-    content?: string;
-    disabled?: boolean;
-    key?: string;
-    language?: string;
-    title?: string;
-  }>;
-  title?: string;
-  dock?: boolean;
+	Preview?: FC;
+	element?: string;
+	example?: string;
+	isolate?: boolean;
+	links?: Array<{
+		icon?: string;
+		key?: string;
+		title?: string;
+		url?: string;
+	}>;
+	rtl?: boolean;
+	tabs?: Array<{
+		content?: string;
+		disabled?: boolean;
+		key?: string;
+		language?: string;
+		title?: string;
+	}>;
+	title?: string;
+	dock?: boolean;
 }
 
-export function Example({ Preview, dock, element, example, isolate, links, rtl, tabs, title }: ExampleProps) {
-  const frameworks = useFrameworks();
+export function Example({
+	Preview,
+	dock,
+	element,
+	example,
+	isolate,
+	links,
+	rtl,
+	tabs
+}: ExampleProps) {
+	const frameworks = useFrameworks();
 
-  const $preview = useRef<HTMLElement>(null);
+	const $preview = useRef<HTMLElement>(null);
 
-  const resizeObserver = useRef<ResizeObserver>(null);
+	const resizeObserver = useRef<ResizeObserver>(null);
 
-  const [direction, setDirection] = useState('ltr');
+	const [direction, setDirection] = useState('ltr');
 
-  const [isLoaded, setIsLoaded] = useState(false);
+	const [isLoaded, setIsLoaded] = useState(false);
 
-  const [isVisible, setIsVisible] = useState(true);
+	const [isVisible, setIsVisible] = useState(true);
 
-  if (!element || !example) return <Alert type="error">NOT FOUND</Alert>;
+	const handleChangeDirection = useCallback(
+		(event: MouseEvent<HTMLButtonElement>) => {
+			event.preventDefault();
+			setDirection(direction === 'ltr' ? 'rtl' : 'ltr');
+		},
+		[direction]
+	);
 
-  const handleChangeDirection = (event: MouseEvent) => {
-    event.preventDefault();
-    setDirection(direction == 'ltr' ? 'rtl' : 'ltr');
-  };
+	const handleIframeLoad = useCallback((event: SyntheticEvent<HTMLIFrameElement, Event>) => {
+		const iframe = event.currentTarget;
 
-  const handleIframeLoad = (event: any) => {
-    const iframe = event.target;
+		if (!iframe.contentWindow) return;
 
-    const body = iframe.contentWindow.document.body;
+		const body = iframe.contentWindow.document.body;
 
-    resizeObserver.current?.disconnect();
+		resizeObserver.current?.disconnect();
 
-    resizeObserver.current = new ResizeObserver(() => {
-      requestAnimationFrame(() => {
-        iframe.style.height = body.scrollHeight + 'px';
-        setIsLoaded(true);
-      });
-    });
+		resizeObserver.current = new ResizeObserver(() => {
+			requestAnimationFrame(() => {
+				iframe.style.height = `${body.scrollHeight}px`;
+				setIsLoaded(true);
+			});
+		});
 
-    resizeObserver.current?.observe(body);
-  };
+		resizeObserver.current?.observe(body);
+	}, []);
 
-  const handleReload = (event?: MouseEvent) => {
-    event?.preventDefault();
+	const handleReload = useCallback(
+		(event?: MouseEvent<HTMLButtonElement>) => {
+			event?.preventDefault();
 
-    setDirection('ltr');
+			setDirection('ltr');
 
-    setIsVisible(false);
+			setIsVisible(false);
 
-    requestAnimationFrame(() => setIsVisible(true));
+			requestAnimationFrame(() => setIsVisible(true));
 
-    setIsLoaded(false);
+			setIsLoaded(false);
 
-    if (!$preview.current?.offsetHeight) return;
+			if (!$preview.current?.offsetHeight) return;
 
-    $preview.current.style.height = `${$preview.current!.offsetHeight}px`;
+			$preview.current.style.height = `${$preview.current.offsetHeight}px`;
 
-    if (!isolate) return;
+			if (!isolate) return;
 
-    $preview.current!.classList.add('animate-shimmer', 'bg-main-4');
-  };
+			$preview.current.classList.add('animate-shimmer', 'bg-main-4');
+		},
+		[isolate]
+	);
 
-  useLayoutEffect(handleReload, [frameworks.framework]);
+	useLayoutEffect(() => {
+		if (frameworks.framework) {
+			handleReload();
+		}
+	}, [frameworks.framework, handleReload]);
 
-  useEffect(() => {
-    if (!$preview.current) return;
+	useLayoutEffect(() => {
+		isVisible;
+		return () => {
+			resizeObserver.current?.disconnect();
+		};
+	}, [isVisible]);
 
-    if (isolate && !isLoaded) return;
+	useEffect(() => {
+		if (!$preview.current) return;
 
-    if (!isolate && !isVisible) return;
+		if (isolate && !isLoaded) return;
 
-    setTimeout(() => {
-      $preview.current!.classList.remove('animate-shimmer', 'bg-main-4');
+		if (!isolate && !isVisible) return;
 
-      $preview.current!.style.height = 'auto';
-    }, 250);
-  }, [isLoaded, isolate, isVisible]);
+		setTimeout(() => {
+			if (!$preview.current) return;
 
-  useLayoutEffect(() => {
-    return () => resizeObserver.current?.disconnect();
-  }, [isVisible]);
+			$preview.current.classList.remove('animate-shimmer', 'bg-main-4');
 
-  return (
-    <plus-tabs className="gap-2 leading-normal" value="preview">
-      <div className="flex gap-2 flex-col sm:flex-row sm:items-center sm:justify-between">
-        <plus-tabs-bar
-          overrides={{
-            xs: {
-              grow: true,
-            },
-            sm: {
-              grow: false,
-            },
-          }}
-        >
-          <plus-tabs-tab value="preview">Preview</plus-tabs-tab>
-          {tabs?.map((tab) => (
-            <plus-tabs-tab key={tab.key} disabled={tab.disabled} value={tab.key}>
-              {tab.title}
-            </plus-tabs-tab>
-          ))}
-        </plus-tabs-bar>
-        <div className="flex gap-2 justify-center">
-          {rtl && (
-            <div>
-              <Button icon text to="#" onClick={handleChangeDirection}>
-                <plus-icon name="sign-turn-left"></plus-icon>
-              </Button>
-              <plus-tooltip>Change Direction</plus-tooltip>
-            </div>
-          )}
-          <div>
-            <Button icon text to="#" onClick={handleReload}>
-              <plus-icon name="arrow-clockwise"></plus-icon>
-            </Button>
-            <plus-tooltip>Reset</plus-tooltip>
-          </div>
-          {links?.map((link) => (
-            <div key={link.key}>
-              <Button icon text to={link.url} target="_blank">
-                <plus-icon name={link.icon}></plus-icon>
-              </Button>
-              <plus-tooltip>{link.title}</plus-tooltip>
-            </div>
-          ))}
-        </div>
-      </div>
-      <plus-tabs-panels>
-        <plus-tabs-panel
-          className={`animate-shimmer bg-main-4 relative border border-main-4 border-solid ${dock ? '' : 'p-[1.5rem]'}`}
-          value="preview"
-          dir={direction}
-          ref={$preview}
-        >
-          {isVisible && !isolate && Preview && (
-            <div className="preview">
-              <Preview />
-            </div>
-          )}
-          {isVisible && isolate && (
-            <iframe
-              className={`border-none block m-0 w-full h-0 ${isLoaded ? '' : 'opacity-0'}`}
-              src={getPath(ROUTES.ELEMENT_EXAMPLE, { element, example })}
-              onLoad={handleIframeLoad}
-            />
-          )}
-        </plus-tabs-panel>
-        {tabs
-          ?.filter((tab) => tab.key != 'preview')
-          ?.map((tab) => (
-            <plus-tabs-panel key={tab.key} value={tab.key}>
-              <plus-prism language={tab.language}>{tab.content}</plus-prism>
-            </plus-tabs-panel>
-          ))}
-      </plus-tabs-panels>
-    </plus-tabs>
-  );
+			$preview.current.style.height = 'auto';
+		}, 250);
+	}, [isLoaded, isolate, isVisible]);
+
+	if (!element || !example) return <Alert type="error">NOT FOUND</Alert>;
+
+	return (
+		<plus-tabs className="gap-2 leading-normal" value="preview">
+			<div className="flex gap-2 flex-col sm:flex-row sm:items-center sm:justify-between">
+				<plus-tabs-bar
+					overrides={{
+						xs: {
+							grow: true
+						},
+						sm: {
+							grow: false
+						}
+					}}
+				>
+					<plus-tabs-tab value="preview">Preview</plus-tabs-tab>
+					{tabs?.map((tab) => (
+						<plus-tabs-tab key={tab.key} disabled={tab.disabled} value={tab.key}>
+							{tab.title}
+						</plus-tabs-tab>
+					))}
+				</plus-tabs-bar>
+				<div className="flex gap-2 justify-center">
+					{rtl && (
+						<div>
+							<Button icon text to="#" onClick={handleChangeDirection}>
+								<plus-icon name="sign-turn-left"></plus-icon>
+							</Button>
+							<plus-tooltip>Change Direction</plus-tooltip>
+						</div>
+					)}
+					<div>
+						<Button icon text to="#" onClick={handleReload as MouseEventHandler<HTMLButtonElement>}>
+							<plus-icon name="arrow-clockwise"></plus-icon>
+						</Button>
+						<plus-tooltip>Reset</plus-tooltip>
+					</div>
+					{links?.map((link) => (
+						<div key={link.key}>
+							<Button icon text to={link.url} target="_blank">
+								<plus-icon name={link.icon}></plus-icon>
+							</Button>
+							<plus-tooltip>{link.title}</plus-tooltip>
+						</div>
+					))}
+				</div>
+			</div>
+			<plus-tabs-panels>
+				<plus-tabs-panel
+					className={`animate-shimmer bg-main-4 relative border border-main-4 border-solid ${dock ? '' : 'p-[1.5rem]'}`}
+					value="preview"
+					dir={direction}
+					ref={$preview}
+				>
+					{isVisible && !isolate && Preview && (
+						<div className="preview">
+							<Preview />
+						</div>
+					)}
+					{isVisible && isolate && (
+						<iframe
+							title="TODO"
+							className={`border-none block m-0 w-full h-0 ${isLoaded ? '' : 'opacity-0'}`}
+							src={getPath(ROUTES.ELEMENT_EXAMPLE, { element, example })}
+							onLoad={handleIframeLoad}
+						/>
+					)}
+				</plus-tabs-panel>
+				{tabs
+					?.filter((tab) => tab.key !== 'preview')
+					?.map((tab) => (
+						<plus-tabs-panel key={tab.key} value={tab.key}>
+							<plus-prism language={tab.language}>{tab.content}</plus-prism>
+						</plus-tabs-panel>
+					))}
+			</plus-tabs-panels>
+		</plus-tabs>
+	);
 }
