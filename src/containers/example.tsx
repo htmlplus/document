@@ -146,16 +146,7 @@ export function Example({
 	return (
 		<plus-tabs className="gap-2 leading-normal" value="preview">
 			<div className="flex gap-2 flex-col sm:flex-row sm:items-center sm:justify-between">
-				<plus-tabs-bar
-					overrides={{
-						xs: {
-							grow: true
-						},
-						sm: {
-							grow: false
-						}
-					}}
-				>
+				<plus-tabs-bar grow overrides={{ sm: { grow: false } }}>
 					<plus-tabs-tab value="preview">Preview</plus-tabs-tab>
 					{tabs?.map((tab) => (
 						<plus-tabs-tab key={tab.key} disabled={tab.disabled} value={tab.key}>
