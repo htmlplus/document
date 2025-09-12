@@ -66,6 +66,10 @@ export const sidebar = (framework: string) => [
 		]
 	},
 	{
+		title: 'Overrides Property',
+		url: getPath(ROUTES.OVERRIDES_PROPERTY, {})
+	},
+	{
 		title: 'Assets',
 		items: [
 			{

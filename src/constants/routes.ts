@@ -8,6 +8,7 @@ export const ROUTES = {
 	ICONS: 'https://icons.getbootstrap.com',
 	BIDIRECTIONALITY: '/bidirectionality',
 	GLOBAL_CONFIG: '/global-config',
+	OVERRIDES_PROPERTY: '/overrides-property',
 	OVERVIEW: '/overview',
 	ROADMAP: '/roadmap',
 	INSTALLATION: '/installation',

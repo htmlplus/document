@@ -1,0 +1,91 @@
+# Overrides Property
+
+The `overrides` property allows an element’s properties to be changed dynamically based on active **media** or **container** queries. When a **query** is active, these **values** take precedence over **defaults**, enabling responsive behavior without JavaScript.
+
+## Usage with Default Breakpoints
+
+The `overrides` property can be mapped directly to the built-in breakpoints provided by the library. Each **key** corresponds to a breakpoint, and the **value** defines the properties applied when that breakpoint becomes active.
+
+```html
+<plus-element
+  overrides='{
+    "sm":  { "prop1": "value1" },
+    "md":  { "prop1": "value2" },
+    "@lg": { "prop2": "value3" },
+    "@xl": { "prop3": "value4" },
+  }'
+></plus-element>
+```
+
+## Default Breakpoints
+
+The following breakpoints are available by default
+
+```js
+{
+  'xs':  { type: 'media',     min: 0    },
+  'sm':  { type: 'media',     min: 600  },
+  'md':  { type: 'media',     min: 900  },
+  'lg':  { type: 'media',     min: 1200 },
+  'xl':  { type: 'media',     min: 1536 },
+  '@xs': { type: 'container', min: 0    },
+  '@sm': { type: 'container', min: 384  },
+  '@md': { type: 'container', min: 640  },
+  '@lg': { type: 'container', min: 768  },
+  '@xl': { type: 'container', min: 1024 },
+}
+```
+
+## Media vs. Container Queries
+
+Two types of breakpoints are supported:
+
+- **Media queries** – triggered by the viewport width, allowing elements to be adapted globally across different screen sizes.
+- **Container queries** – triggered by the size of the parent container, enabling elements to be adjusted independently within flexible layouts.
+
+
+## Configuring Custom Breakpoints
+
+Custom breakpoints can be created to replace or extend the default ones. This allows elements using the `overrides` property to respond to project-specific viewport or container sizes.
+
+### 1. Define Typing
+
+New breakpoints are registered with the type system by extending `BreakpointOverrides`. Default breakpoints can be disabled here.
+
+```js
+declare module '@htmlplus/ui' {
+  interface BreakpointOverrides {
+    // Default breakpoints are disabled
+    xs: false;
+    sm: false;
+    md: false;
+    lg: false;
+    xl: false;
+
+    // Custom breakpoints are enabled
+    mobile: true;
+    tablet: true;
+    laptop: true;
+  }
+}
+```
+
+### 2. Update Values
+
+The actual breakpoint sizes are configured using `setConfig` in the application entry file.
+
+```js
+import { setConfig } from '@htmlplus/ui/config.js';
+
+setConfig({
+  breakpoints: {
+    // Custom breakpoints
+    mobile:  { type: 'media', min: 0,   max: 599  },
+    tablet:  { type: 'media', min: 600, max: 899  },
+    laptop:  { type: 'media', min: 900 },
+  }
+});
+
+```
+
+Once configured, these breakpoints are automatically applied to all elements using the `overrides` property.
