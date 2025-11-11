@@ -23,7 +23,7 @@ export default function Layout({ children }: PropsWithChildren) {
 							floating: true,
 							open: false
 						},
-						xl: {
+						lg: {
 							backdrop: false,
 							floating: false,
 							open: true
@@ -42,7 +42,7 @@ export default function Layout({ children }: PropsWithChildren) {
 						<Contributors></Contributors>
 						<Navigation></Navigation>
 					</div>
-					<div className="hidden lg:block">
+					<div className="hidden md:block">
 						<plus-sticky className="pr-4 w-[272px]">
 							<br />
 							<Frameworks></Frameworks>
