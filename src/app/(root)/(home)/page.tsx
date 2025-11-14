@@ -127,12 +127,12 @@ export default async function Home() {
 					/>
 					<plus-divider
 						className="self-stretch"
-						width="xs"
-						variant="middle"
+						size="xs"
+						inset="both"
 						overrides={{
 							lg: {
-								variant: 'full',
-								vertical: true
+								inset: 'none',
+								orientation: 'vertical'
 							}
 						}}
 					/>
@@ -145,12 +145,12 @@ export default async function Home() {
 					/>
 					<plus-divider
 						className="self-stretch"
-						width="xs"
-						variant="middle"
+						size="xs"
+						inset="both"
 						overrides={{
 							lg: {
-								variant: 'full',
-								vertical: true
+								inset: 'none',
+								orientation: 'vertical'
 							}
 						}}
 					/>

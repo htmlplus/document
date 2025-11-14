@@ -7,21 +7,23 @@ import '@htmlplus/ui/divider.js';
 function App() {
   return (
     <>
-      <plus-divider variant="middle"></plus-divider>
+      <plus-divider inset="none"></plus-divider>
       <br />
-      <plus-divider variant="inset"></plus-divider>
+      <plus-divider inset="start"></plus-divider>
       <br />
-      <plus-divider variant="full"></plus-divider>
+      <plus-divider inset="end"></plus-divider>
+      <br />
+      <plus-divider inset="both"></plus-divider>
     </>
   );
 }
 
-const DividerVariant = () => {
+const DividerInset = () => {
   return (
-    <div className="divider-variant">
+    <div className="divider-inset">
       <App />
     </div>
   )
 };
 
-export default DividerVariant;
+export default DividerInset;

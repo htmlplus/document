@@ -148,12 +148,12 @@ export const DividerCustomized = dynamic(() => import('./DividerCustomized'), { 
 export const DividerDefault = dynamic(() => import('./DividerDefault'), { ssr: false, suspense: true });
 export const DividerHorizontal = dynamic(() => import('./DividerHorizontal'), { ssr: false, suspense: true });
 export const DividerIcon = dynamic(() => import('./DividerIcon'), { ssr: false, suspense: true });
+export const DividerInset = dynamic(() => import('./DividerInset'), { ssr: false, suspense: true });
 export const DividerPlacement = dynamic(() => import('./DividerPlacement'), { ssr: false, suspense: true });
+export const DividerSize = dynamic(() => import('./DividerSize'), { ssr: false, suspense: true });
 export const DividerSticky = dynamic(() => import('./DividerSticky'), { ssr: false, suspense: true });
-export const DividerType = dynamic(() => import('./DividerType'), { ssr: false, suspense: true });
-export const DividerVariant = dynamic(() => import('./DividerVariant'), { ssr: false, suspense: true });
+export const DividerStroke = dynamic(() => import('./DividerStroke'), { ssr: false, suspense: true });
 export const DividerVertical = dynamic(() => import('./DividerVertical'), { ssr: false, suspense: true });
-export const DividerWidth = dynamic(() => import('./DividerWidth'), { ssr: false, suspense: true });
 export const DrawerDefault = dynamic(() => import('./DrawerDefault'), { ssr: false, suspense: true });
 export const FakerApi = dynamic(() => import('./FakerApi'), { ssr: false, suspense: true });
 export const FakerArguments = dynamic(() => import('./FakerArguments'), { ssr: false, suspense: true });
@@ -214,6 +214,7 @@ export const RelativeTimeDefault = dynamic(() => import('./RelativeTimeDefault')
 export const RelativeTimeFormat = dynamic(() => import('./RelativeTimeFormat'), { ssr: false, suspense: true });
 export const RelativeTimeLocalization = dynamic(() => import('./RelativeTimeLocalization'), { ssr: false, suspense: true });
 export const RelativeTimeNumeric = dynamic(() => import('./RelativeTimeNumeric'), { ssr: false, suspense: true });
+export const RelativeTimeParts = dynamic(() => import('./RelativeTimeParts'), { ssr: false, suspense: true });
 export const RelativeTimeSync = dynamic(() => import('./RelativeTimeSync'), { ssr: false, suspense: true });
 export const RelativeTimeValue = dynamic(() => import('./RelativeTimeValue'), { ssr: false, suspense: true });
 export const ScrollDetectorDefault = dynamic(() => import('./ScrollDetectorDefault'), { ssr: false, suspense: true });

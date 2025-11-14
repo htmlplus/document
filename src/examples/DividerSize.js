@@ -7,25 +7,25 @@ import '@htmlplus/ui/divider.js';
 function App() {
   return (
     <>
-      <plus-divider width="xs"></plus-divider>
+      <plus-divider size="xs"></plus-divider>
       <br />
-      <plus-divider width="sm"></plus-divider>
+      <plus-divider size="sm"></plus-divider>
       <br />
-      <plus-divider width="md"></plus-divider>
+      <plus-divider size="md"></plus-divider>
       <br />
-      <plus-divider width="lg"></plus-divider>
+      <plus-divider size="lg"></plus-divider>
       <br />
-      <plus-divider width="xl"></plus-divider>
+      <plus-divider size="xl"></plus-divider>
     </>
   );
 }
 
-const DividerWidth = () => {
+const DividerSize = () => {
   return (
-    <div className="divider-width">
+    <div className="divider-size">
       <App />
     </div>
   )
 };
 
-export default DividerWidth;
+export default DividerSize;

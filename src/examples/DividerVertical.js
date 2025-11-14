@@ -10,7 +10,7 @@ function App() {
   return (
     <plus-stack>
       <plus-faker></plus-faker>
-      <plus-divider vertical>OR</plus-divider>
+      <plus-divider orientation="vertical">OR</plus-divider>
       <plus-faker></plus-faker>
     </plus-stack>
   );
