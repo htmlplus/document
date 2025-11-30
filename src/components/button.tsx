@@ -2,13 +2,12 @@ import type { MouseEventHandler, ReactNode } from 'react';
 
 import NextLink, { type LinkProps as NextLinkProps } from 'next/link';
 
-import type { Colors } from '@/types';
 import { classes } from '@/utils';
 
 export interface ButtonProps {
 	block?: boolean;
 	children: ReactNode;
-	color?: Colors;
+	color?: string;
 	disabled?: boolean;
 	icon?: boolean;
 	link?: boolean | 'underline';

@@ -92,7 +92,7 @@ export function Sidebar() {
 					<plus-icon name="github"></plus-icon>
 					Github
 				</Button>
-				<plus-divider size="xs"></plus-divider>
+				<plus-divider color="main-10" size="xs"></plus-divider>
 				{menu(sidebar.items)}
 			</plus-stack>
 		</div>

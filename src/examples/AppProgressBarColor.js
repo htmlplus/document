@@ -16,16 +16,16 @@ function App() {
       appProgressBarRef.current?.done();
     }, 5000);
   }, []);
-  return <plus-app-progress-bar ref={appProgressBarRef}></plus-app-progress-bar>;
+  return <plus-app-progress-bar color="#d63939" ref={appProgressBarRef}></plus-app-progress-bar>;
 }
 
-const AppProgressBarCustomized = () => {
+const AppProgressBarColor = () => {
   return (
-    <div className="app-progress-bar-customized">
+    <div className="app-progress-bar-color">
       <App />
-      <style>{`.app-progress-bar-customized { plus-app-progress-bar {  /* This style is for demonstration purposes only and not for actual projects */  position: static;  height: 4px;  transition: 2500ms ease;  z-index: 1500;}plus-app-progress-bar::part(bar) {  transition: 500ms ease-in-out;} }`}</style>
+      <style>{`.app-progress-bar-color { plus-app-progress-bar {  /* This style is for demonstration purposes only and not for actual projects */  position: static;} }`}</style>
     </div>
   )
 };
 
-export default AppProgressBarCustomized;
+export default AppProgressBarColor;

@@ -202,7 +202,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 									)}
 								</div>
 								{section.items.length - 1 > index && (
-									<plus-divider className="mb-3" size="xs"></plus-divider>
+									<plus-divider className="mb-3" color="main-10" size="xs"></plus-divider>
 								)}
 							</Fragment>
 						);

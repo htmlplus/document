@@ -26,6 +26,7 @@ export const AnimationKeyframes = dynamic(() => import('./AnimationKeyframes'), 
 export const AnimationMethods = dynamic(() => import('./AnimationMethods'), { ssr: false, suspense: true });
 export const AnimationName = dynamic(() => import('./AnimationName'), { ssr: false, suspense: true });
 export const AnimationRegisterACustomName = dynamic(() => import('./AnimationRegisterACustomName'), { ssr: false, suspense: true });
+export const AppProgressBarColor = dynamic(() => import('./AppProgressBarColor'), { ssr: false, suspense: true });
 export const AppProgressBarCustomized = dynamic(() => import('./AppProgressBarCustomized'), { ssr: false, suspense: true });
 export const AppProgressBarDefault = dynamic(() => import('./AppProgressBarDefault'), { ssr: false, suspense: true });
 export const AppProgressBarMethods = dynamic(() => import('./AppProgressBarMethods'), { ssr: false, suspense: true });

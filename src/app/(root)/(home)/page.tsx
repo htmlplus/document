@@ -127,6 +127,7 @@ export default async function Home() {
 					/>
 					<plus-divider
 						className="self-stretch"
+						color="main-10"
 						size="xs"
 						inset="both"
 						overrides={{
@@ -145,6 +146,7 @@ export default async function Home() {
 					/>
 					<plus-divider
 						className="self-stretch"
+						color="main-10"
 						size="xs"
 						inset="both"
 						overrides={{

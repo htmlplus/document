@@ -37,5 +37,5 @@ export function AppLoadingBar() {
 		};
 	}, []);
 
-	return <plus-app-progress-bar className="main" ref={$ref}></plus-app-progress-bar>;
+	return <plus-app-progress-bar color="primary-9" ref={$ref}></plus-app-progress-bar>;
 }

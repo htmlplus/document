@@ -1,3 +1,43 @@
+:root {
+  --plus-color-alpha-black-1: theme('colors.alpha.black-1');
+  --plus-color-alpha-black-2: theme('colors.alpha.black-2');
+  --plus-color-alpha-black-3: theme('colors.alpha.black-3');
+  --plus-color-alpha-black-4: theme('colors.alpha.black-4');
+  --plus-color-alpha-black-6: theme('colors.alpha.black-6');
+  --plus-color-alpha-black-7: theme('colors.alpha.black-7');
+  --plus-color-alpha-black-8: theme('colors.alpha.black-8');
+  --plus-color-alpha-black-9: theme('colors.alpha.black-9');
+  --plus-color-alpha-black-10: theme('colors.alpha.black-10');
+  --plus-color-alpha-black-11: theme('colors.alpha.black-11');
+  --plus-color-alpha-black-12: theme('colors.alpha.black-12');
+
+  --plus-color-main-1: theme('colors.main.1');
+  --plus-color-main-2: theme('colors.main.2');
+  --plus-color-main-3: theme('colors.main.3');
+  --plus-color-main-4: theme('colors.main.4');
+  --plus-color-main-5: theme('colors.main.5');
+  --plus-color-main-6: theme('colors.main.6');
+  --plus-color-main-7: theme('colors.main.7');
+  --plus-color-main-8: theme('colors.main.8');
+  --plus-color-main-9: theme('colors.main.9');
+  --plus-color-main-10: theme('colors.main.10');
+  --plus-color-main-11: theme('colors.main.11');
+  --plus-color-main-12: theme('colors.main.12');
+
+  --plus-color-primary-1: theme('colors.primary.1');
+  --plus-color-primary-2: theme('colors.primary.2');
+  --plus-color-primary-3: theme('colors.primary.3');
+  --plus-color-primary-4: theme('colors.primary.4');
+  --plus-color-primary-5: theme('colors.primary.5');
+  --plus-color-primary-6: theme('colors.primary.6');
+  --plus-color-primary-7: theme('colors.primary.7');
+  --plus-color-primary-8: theme('colors.primary.8');
+  --plus-color-primary-9: theme('colors.primary.9');
+  --plus-color-primary-10: theme('colors.primary.10');
+  --plus-color-primary-11: theme('colors.primary.11');
+  --plus-color-primary-12: theme('colors.primary.12');
+}
+
 * {
   @apply border-main-4;
 }
@@ -35,16 +75,8 @@ a:hover {
   text-decoration: none;
 }
 
-plus-app-progress-bar.main::part(bar) {
-  @apply bg-primary-9;
-}
-
 plus-avatar img {
   margin: 0 !important;
-}
-
-plus-divider:not([color]) {
-  --plus-divider-color: theme('colors.main.10');
 }
 
 .preview * {
