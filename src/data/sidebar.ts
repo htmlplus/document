@@ -30,10 +30,12 @@ export const sidebar = (framework: string) => [
 	},
 	{
 		title: 'Frameworks',
-		items: frameworks.map((framework) => ({
-			title: framework.title,
-			url: getPath(ROUTES.INSTALLATION_FRAMEWORK, { framework: framework.key })
-		}))
+		items: frameworks
+			.filter((framework) => !framework.disabled)
+			.map((framework) => ({
+				title: framework.title,
+				url: getPath(ROUTES.INSTALLATION_FRAMEWORK, { framework: framework.key })
+			}))
 	},
 	{
 		title: 'UI Elements',
@@ -59,10 +61,12 @@ export const sidebar = (framework: string) => [
 				title: 'Overview',
 				url: getPath(ROUTES.GLOBAL_CONFIG, {})
 			},
-			...frameworks.map((framework) => ({
-				title: framework.title,
-				url: `/${framework.key}${getPath(ROUTES.GLOBAL_CONFIG, {})}`
-			}))
+			...frameworks
+				.filter((framework) => !framework.disabled)
+				.map((framework) => ({
+					title: framework.title,
+					url: `/${framework.key}${getPath(ROUTES.GLOBAL_CONFIG, {})}`
+				}))
 		]
 	},
 	{

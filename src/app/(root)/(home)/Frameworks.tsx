@@ -1,4 +1,8 @@
+'use client';
+
 import Image from 'next/image';
+
+import AutoScroll from 'embla-carousel-auto-scroll';
 
 import { ROUTES } from '@/constants';
 import { frameworks } from '@/data';
@@ -18,24 +22,40 @@ export const Frameworks = () => {
 					</p>
 				</div>
 			</div>
-			<div className="flex flex-wrap justify-center gap-6 sm:gap-2 sm:flex-row sm:justify-between items-center">
-				{frameworks.map((framework) => (
-					<a
-						key={framework.key}
-						className="flex flex-row gap-x-2 sm:gap-x-4 items-center justify-center"
-						href={getPath(ROUTES.INSTALLATION_FRAMEWORK, { framework: framework.key })}
-					>
-						<Image
-							alt="TODO"
-							className="w-12 h-12 m-0"
-							src={framework.logo}
-							width="48"
-							height="48"
-						/>
-						<div className="text-lg sm:text-2xl font-semibold capitalize">{framework.title}</div>
-					</a>
-				))}
-			</div>
+			<plus-carousel
+				draggable="free"
+				loop
+				resizable
+				plugins={[
+					AutoScroll({ stopOnInteraction: false, stopOnMouseEnter: true, stopOnFocusIn: false })
+				]}
+			>
+				<plus-carousel-slides>
+					{frameworks.map((framework) => (
+						<plus-carousel-slide className="mx-8" key={framework.key}>
+							<a
+								className={`select-none flex flex-row gap-x-2 items-center justify-center ${framework.disabled ? 'opacity-25' : ''}`}
+								href={
+									framework.disabled
+										? ''
+										: getPath(ROUTES.INSTALLATION_FRAMEWORK, { framework: framework.key })
+								}
+							>
+								<Image
+									alt="TODO"
+									className="w-12 h-12 m-0"
+									src={framework.logo}
+									width="48"
+									height="48"
+								/>
+								<div className="text-lg sm:text-2xl font-semibold capitalize">
+									{framework.title}
+								</div>
+							</a>
+						</plus-carousel-slide>
+					))}
+				</plus-carousel-slides>
+			</plus-carousel>
 		</div>
 	);
 };

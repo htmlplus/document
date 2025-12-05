@@ -25,12 +25,14 @@ const Label = ({ children, value }: { children: ReactNode; value: string }) => {
 };
 
 export function generateStaticParams(): Params[] {
-	return frameworks.flatMap((framework) =>
-		elements.map((element) => ({
-			element: element.key,
-			framework: framework.key
-		}))
-	);
+	return frameworks
+		.filter((framework) => !framework.disabled)
+		.flatMap((framework) =>
+			elements.map((element) => ({
+				element: element.key,
+				framework: framework.key
+			}))
+		);
 }
 
 export async function generateMetadata({ params }: { params: Promise<Params> }) {
