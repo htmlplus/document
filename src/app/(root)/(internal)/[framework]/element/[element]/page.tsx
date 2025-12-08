@@ -70,7 +70,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
 	sections.push(
 		'## Global Config',
-		`See the animation's [config](${getPath(ROUTES.ELEMENT_CONFIG, { element: elementKey })}). Full [documentation](${getPath(ROUTES.GLOBAL_CONFIG, {})}) is available.`
+		`See the animation's [config](${getPath(ROUTES.ELEMENT_CONFIG, { element: elementKey })}). Full [documentation](${getPath(ROUTES.GLOBAL_CONFIG)}) is available.`
 	);
 
 	sections.push('## Examples', 'Below is a collection of simple to complex examples.');

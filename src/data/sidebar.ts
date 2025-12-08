@@ -8,23 +8,23 @@ export const sidebar = (framework: string) => [
 		items: [
 			{
 				title: 'Overview',
-				url: getPath(ROUTES.OVERVIEW, {})
+				url: getPath(ROUTES.OVERVIEW)
 			},
 			{
 				title: 'Installation',
-				url: getPath(ROUTES.INSTALLATION, {})
+				url: getPath(ROUTES.INSTALLATION)
 			},
 			{
 				title: 'Browser support',
-				url: getPath(ROUTES.BROWSERS, {})
+				url: getPath(ROUTES.BROWSERS)
 			},
 			{
 				title: 'Code Completion',
-				url: getPath(ROUTES.CODE_COMPLETION, {})
+				url: getPath(ROUTES.CODE_COMPLETION)
 			},
 			{
 				title: 'Vision',
-				url: getPath(ROUTES.VISION, {})
+				url: getPath(ROUTES.VISION)
 			}
 		]
 	},
@@ -59,35 +59,35 @@ export const sidebar = (framework: string) => [
 		items: [
 			{
 				title: 'Overview',
-				url: getPath(ROUTES.GLOBAL_CONFIG, {})
+				url: getPath(ROUTES.GLOBAL_CONFIG)
 			},
 			...frameworks
 				.filter((framework) => !framework.disabled)
 				.map((framework) => ({
 					title: framework.title,
-					url: `/${framework.key}${getPath(ROUTES.GLOBAL_CONFIG, {})}`
+					url: getPath(ROUTES.GLOBAL_CONFIG_PER_FRAMEWORK, { framework: framework.key })
 				}))
 		]
 	},
 	{
 		title: 'Overrides Property',
-		url: getPath(ROUTES.OVERRIDES_PROPERTY, {})
+		url: getPath(ROUTES.OVERRIDES_PROPERTY)
 	},
 	{
 		title: 'Assets',
 		items: [
 			{
 				title: 'Animations',
-				url: getPath(ROUTES.ANIMATIONS, {})
+				url: getPath(ROUTES.ANIMATIONS)
 			},
 			{
 				title: 'Icons',
-				url: getPath(ROUTES.ICONS, {})
+				url: getPath(ROUTES.ICONS)
 			}
 		]
 	},
 	{
 		title: 'Changelog',
-		url: getPath(ROUTES.CHANGELOG, {})
+		url: getPath(ROUTES.CHANGELOG)
 	}
 ];

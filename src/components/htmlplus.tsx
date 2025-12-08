@@ -8,6 +8,8 @@ import { faker } from '@faker-js/faker/locale/en';
 
 declare module '@htmlplus/ui' {
 	interface ColorOverrides {
+		UNLISTED: false;
+
 		'alpha-black-1': true;
 		'alpha-black-2': true;
 		'alpha-black-3': true;

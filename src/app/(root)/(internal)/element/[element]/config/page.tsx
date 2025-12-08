@@ -45,7 +45,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 			<h1>{capitalCase(element.key)} global config</h1>
 			<p>
 				All of the element's APIs are configurable as below. Full&nbsp;
-				<Button link="underline" to={getPath(ROUTES.GLOBAL_CONFIG, {})}>
+				<Button link="underline" to={getPath(ROUTES.GLOBAL_CONFIG)}>
 					documentation
 				</Button>
 				&nbsp;is available.

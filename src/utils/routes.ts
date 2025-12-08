@@ -36,16 +36,21 @@ type ExtractParameters<Input extends string> =
 
 type ExtractRouteKey<T extends Routes> = T[keyof T];
 
+type IsEmptyObject<T> = keyof T extends never ? true : false;
+
+type ParamArg<Path extends string> = IsEmptyObject<ExtractParameters<Path>> extends true
+	? []
+	: [parameter: ExtractParameters<Path>];
+
 type Routes = {
 	readonly [key: string]: string;
 };
 
 const getPathCore =
 	<R extends Routes>() =>
-	<Path extends ExtractRouteKey<R>, Parameter extends ExtractParameters<Path>>(
-		path: Path,
-		parameter: Parameter
-	) => {
+	<Path extends ExtractRouteKey<R>>(path: Path, ...args: ParamArg<Path>) => {
+		const parameter = args[0];
+
 		let result = path as string;
 
 		result = result.replace(/\[(\w+)(\?)?(:)?(\w+)?\]/g, '[$1$2]');

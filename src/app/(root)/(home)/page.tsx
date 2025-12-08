@@ -19,7 +19,7 @@ export default async function Home() {
 				<div className="max-w-screen-lg mx-auto px-4 flex grow items-center gap-8">
 					<plus-icon name="htmlplus" size="2rem"></plus-icon>
 					<div className="hidden sm:flex items-center gap-6">
-						<NextLink href={getPath(ROUTES.OVERVIEW, {})}>Document</NextLink>
+						<NextLink href={getPath(ROUTES.OVERVIEW)}>Document</NextLink>
 						<NextLink
 							href={getPath(ROUTES.ELEMENT_DETAILS, {
 								framework: FRAMEWORK_DEFAULT,
@@ -28,14 +28,14 @@ export default async function Home() {
 						>
 							Elements
 						</NextLink>
-						<NextLink href={getPath(ROUTES.ROADMAP, {})}>Roadmap</NextLink>
+						<NextLink href={getPath(ROUTES.ROADMAP)}>Roadmap</NextLink>
 					</div>
 					<div className="flex grow"></div>
 					<div className="hidden lg:flex items-center gap-3">
 						<a className="btn tertiary" href="https://opencollective.com/htmlplus">
 							Become a sponsor
 						</a>
-						<a className="btn primary" href={getPath(ROUTES.GITHUB_URL, {})} target="_blank">
+						<a className="btn primary" href={getPath(ROUTES.GITHUB_URL)} target="_blank">
 							<plus-icon name="github"></plus-icon>
 							Github
 						</a>
@@ -48,7 +48,7 @@ export default async function Home() {
 						<div className="flex flex-col items-center gap-8 lg:items-start basis-1/2">
 							<NextLink
 								className="font-2-500 shadow-custom inline-flex text-main-11 bg-white p-[4px] rounded-full whitespace-nowrap"
-								href={getPath(ROUTES.CHANGELOG, {})}
+								href={getPath(ROUTES.CHANGELOG)}
 							>
 								<plus-stack gap="0.75rem">
 									<div className="font-2-500 px-2 py-[2px] rounded-full text-main-11 bg-main-4">
