@@ -8,6 +8,12 @@ import { ROUTES } from '@/constants';
 import { frameworks } from '@/data';
 import { getPath } from '@/utils';
 
+const autoScroll = AutoScroll({
+	stopOnInteraction: false,
+	stopOnMouseEnter: true,
+	stopOnFocusIn: false
+});
+
 export const Frameworks = () => {
 	return (
 		<div className="py-20">
@@ -22,14 +28,7 @@ export const Frameworks = () => {
 					</p>
 				</div>
 			</div>
-			<plus-carousel
-				draggable="free"
-				loop
-				resizable
-				plugins={[
-					AutoScroll({ stopOnInteraction: false, stopOnMouseEnter: true, stopOnFocusIn: false })
-				]}
-			>
+			<plus-carousel draggable="free" loop resizable plugins={[autoScroll]}>
 				<plus-carousel-slides>
 					{frameworks.map((framework) => (
 						<plus-carousel-slide className="mx-8" key={framework.key}>

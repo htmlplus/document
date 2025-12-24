@@ -45,9 +45,9 @@ const useToc = create<TocState>((set, get) => ({
 
 		set({ items });
 
-		item.observer = new IntersectionObserver(([entry]) => get().update(item, entry));
+		// item.observer = new IntersectionObserver(([entry]) => get().update(item, entry));
 
-		item.observer.observe(item.element!);
+		// item.observer.observe(item.element!);
 	},
 	remove: (item: TocItem) => {
 		item.observer?.disconnect();

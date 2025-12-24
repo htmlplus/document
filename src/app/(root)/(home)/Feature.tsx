@@ -1,11 +1,13 @@
 'use client';
 
+import type { IconProperties } from '@htmlplus/ui';
+
 import { NoSSR } from '@/NoSSR';
 
 type FeatureProps = {
 	className?: string;
 	description: string;
-	icon: string;
+	icon: IconProperties['name'];
 	metric?: number;
 	more?: string;
 	title: string;

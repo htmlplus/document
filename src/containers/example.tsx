@@ -12,6 +12,8 @@ import {
 	useState
 } from 'react';
 
+import type { IconProperties } from '@htmlplus/ui';
+
 import { Alert, Button } from '@/components';
 import { ROUTES } from '@/constants';
 import { useFrameworks } from '@/containers';
@@ -23,7 +25,7 @@ export interface ExampleProps {
 	example?: string;
 	isolate?: boolean;
 	links?: Array<{
-		icon?: string;
+		icon?: IconProperties['name'];
 		key?: string;
 		title?: string;
 		url?: string;
