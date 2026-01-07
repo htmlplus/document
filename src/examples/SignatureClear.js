@@ -10,7 +10,7 @@ import '@htmlplus/ui/signature.js';
 function App() {
   const signatureRef = useRef();
   function onClick() {
-    signatureRef.current.value = '';
+    signatureRef.current.clear();
   }
   return (
     <>

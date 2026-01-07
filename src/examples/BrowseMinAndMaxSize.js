@@ -8,7 +8,7 @@ import '@htmlplus/ui/center.js';
 function App() {
   function onPlusChange(event) {
     const { errors, file } = event.detail.files[0];
-    if (errors?.length) {
+    if (errors.length) {
       alert(errors[0].message);
     } else {
       alert(`File '${file.name}' selected.`);

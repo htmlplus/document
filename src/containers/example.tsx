@@ -12,7 +12,7 @@ import {
 	useState
 } from 'react';
 
-import type { IconProperties } from '@htmlplus/ui';
+import type { PlusIconProperties } from '@htmlplus/ui';
 
 import { Alert, Button } from '@/components';
 import { ROUTES } from '@/constants';
@@ -25,7 +25,7 @@ export interface ExampleProps {
 	example?: string;
 	isolate?: boolean;
 	links?: Array<{
-		icon?: IconProperties['name'];
+		icon?: PlusIconProperties['name'];
 		key?: string;
 		title?: string;
 		url?: string;
@@ -54,7 +54,7 @@ export function Example({
 }: ExampleProps) {
 	const frameworks = useFrameworks();
 
-	const $preview = useRef<HTMLElement>(null);
+	const $preview = useRef<HTMLPlusTabsPanelElement>(null);
 
 	const resizeObserver = useRef<ResizeObserver>(null);
 

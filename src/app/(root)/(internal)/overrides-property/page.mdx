@@ -50,11 +50,11 @@ Custom breakpoints can be created to replace or extend the default ones. This al
 
 ### 1. Define Typing
 
-New breakpoints are registered with the type system by extending `BreakpointOverrides`. Default breakpoints can be disabled here.
+New breakpoints are registered with the type system by extending `PlusBreakpointOverrides`. Default breakpoints can be disabled here.
 
 ```js
 declare module '@htmlplus/ui' {
-  interface BreakpointOverrides {
+  interface PlusBreakpointOverrides {
     // Default breakpoints are disabled
     xs: false;
     sm: false;

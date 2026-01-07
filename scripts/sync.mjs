@@ -61,10 +61,10 @@ const document = await (async () => {
 		'export const elementsLight = ' +
 			JSON.stringify(
 				document.elements.map((element) => ({
-					key: element.key,
+					key: element.key.replace('plus-', ''),
 					stable: element.stable,
 					subset: !!element.subset,
-					title: element.title,
+					title: element.title.replace('Plus ', ''),
 					dependencies: element.dependencies
 						?.split(',')
 						?.map((dependency) => dependency.trim())

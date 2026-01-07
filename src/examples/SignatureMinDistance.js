@@ -8,17 +8,17 @@ import '@htmlplus/ui/signature.js';
 function App() {
   return (
     <plus-center>
-      <plus-signature distance={10}></plus-signature>
+      <plus-signature min-distance={10}></plus-signature>
     </plus-center>
   );
 }
 
-const SignatureDistance = () => {
+const SignatureMinDistance = () => {
   return (
-    <div className="signature-distance">
+    <div className="signature-min-distance">
       <App />
     </div>
   )
 };
 
-export default SignatureDistance;
+export default SignatureMinDistance;

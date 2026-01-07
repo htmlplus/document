@@ -1,5 +1,5 @@
 declare module '@htmlplus/ui' {
-	interface ColorOverrides {
+	interface PlusColorOverrides {
 		UNLISTED: false;
 
 		'alpha-black-1': true;
@@ -40,7 +40,7 @@ declare module '@htmlplus/ui' {
 		'primary-11': true;
 		'primary-12': true;
 	}
-	interface IconNameOverrides {
+	interface PlusIconNameOverrides {
 		UNLISTED: false;
 
 		'arrow-clockwise': true;
