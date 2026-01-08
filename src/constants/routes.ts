@@ -10,6 +10,7 @@ export const ROUTES = {
 	GLOBAL_CONFIG: '/global-config',
 	GLOBAL_CONFIG_PER_FRAMEWORK: '/[framework]/global-config',
 	OVERRIDES_PROPERTY: '/overrides-property',
+	COLOR_PROPERTIES: '/color-properties',
 	OVERVIEW: '/overview',
 	ROADMAP: '/roadmap',
 	INSTALLATION: '/installation',

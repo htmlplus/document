@@ -1,0 +1,155 @@
+# Color Properties
+
+Some HTMLPLUS elements provide properties of the `color` type. These properties are used to customize visual parts such as background, border, or any area that accepts a color value.
+
+The following elements support color-type properties:
+
+- plus-app-progress-bar
+- plus-avatar
+- plus-card
+- plus-divider
+- plus-icon
+- plus-progress-bar
+- plus-signature
+- plus-snippet
+- plus-spinner
+
+Color values can be provided in multiple formats, as described below.
+
+## Direct color names
+
+Standard CSS named colors are supported and can be used directly, following the CSS specification described in the MDN documentation for [color values](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value).
+
+```jsx
+<plus-avatar color="blue"></plus-avatar>
+```
+
+## Color systems 
+
+Common color formats such as HEX, RGB, HSL, and similar CSS color systems are supported, with a full list available in the MDN documentation for [CSS color values](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value).
+
+```jsx
+<plus-avatar color="#ff00ff"></plus-avatar>
+```
+
+## Predefined color palette
+
+In most projects, design teams provide a predefined color palette with project-specific color names. To ensure visual consistency and to fully benefit from TypeScript type safety and IDE autocomplete, these custom color names can be declared explicitly.
+
+Once declared, only valid and recognized color names will be suggested by the IDE.
+
+```jsx
+<plus-avatar color="my-primary"></plus-avatar>
+```
+
+### 1. Create a TypeScript declaration file
+
+A TypeScript declaration file should be created to define custom color names. This file can be named `plus.d.ts` (or any descriptive name).
+
+The file must be placed in a location that is included in the TypeScript compilation. Ensure it is not excluded and is listed in the `include` array of your `tsconfig.json`.
+
+
+### 2. Define a color interface
+
+Inside the declaration file, the `PlusColorOverrides` interface should be extended with your custom color names.
+
+```typescript
+declare module '@htmlplus/ui' {
+  interface PlusColorOverrides {
+    'my-primary': true;
+    'my-secondary': true;
+    'my-tertiary': true
+  }
+}
+
+// This statement ensures the file is treated as a module by TypeScript.
+export {}
+```
+
+After this interface is defined, supported color names will be suggested automatically by the IDE for all elements that accept color-type properties.
+
+#### Before Interface Definition
+
+Any string can be used as a color, and no suggestions or validation are provided by the IDE.
+
+```jsx
+<plus-avatar color="❌ Any String Is Accepted"></plus-avatar>
+```
+
+#### After Interface Definition
+
+Only declared colors are suggested by the IDE, providing type safety and autocomplete.
+
+```jsx
+<plus-avatar color="my-primary"></plus-avatar>
+```
+
+### 3. Assign color values using CSS variables
+
+Map each declared color name to a CSS variable using the pattern:
+
+```css
+--plus-color-{color-name}
+```
+
+Replace `{color-name}` with the declared color key.
+
+```css
+:root {
+  --plus-color-my-primary: #1264df;
+  --plus-color-my-secondary: #9836b1;
+  --plus-color-my-tertiary: #d4c712;
+}
+```
+
+When a color name is used (for example, `color="my-primary"`), the corresponding CSS variable is resolved automatically.
+
+### 4. Color Prop Type Safety Modes
+
+HTMLPLUS allows configurable type safety for color properties via the `PlusColorOverrides` interface, controlled by the optional `UNLISTED` flag. Two modes are supported:
+
+#### Permissive mode (default)
+
+When `UNLISTED` is set to `true`, the color property accepts any valid CSS color (HEX, RGB, RGBA, HSL, named colors, etc.), while still providing full type safety for declared colors.
+
+```typescript
+declare module '@htmlplus/ui' {
+  interface PlusColorOverrides {
+    UNLISTED: true;
+  }
+}
+```
+
+<br/>
+
+```jsx
+// ✅ Declared colors
+<plus-avatar color="my-primary"></plus-avatar>
+<plus-avatar color="my-secondary"></plus-avatar>
+
+// ✅ Any valid CSS color
+<plus-avatar color="#fff"></plus-avatar>
+```
+
+#### Strict mode
+
+When `UNLISTED` is set to `false`, only declared colors are allowed. Any undefined color triggers a TypeScript error.
+
+```typescript
+declare module '@htmlplus/ui' {
+  interface PlusColorOverrides {
+    UNLISTED: false;
+  }
+}
+```
+
+<br/>
+
+```jsx
+// ✅ Declared colors
+<plus-avatar color="my-primary"></plus-avatar>
+<plus-avatar color="my-secondary"></plus-avatar>
+
+// ❌ Any valid CSS color
+<plus-avatar color="#fff"></plus-avatar>
+```

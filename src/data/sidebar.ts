@@ -74,6 +74,10 @@ export const sidebar = (framework: string) => [
 		url: getPath(ROUTES.OVERRIDES_PROPERTY)
 	},
 	{
+		title: 'Color Properties',
+		url: getPath(ROUTES.COLOR_PROPERTIES)
+	},
+	{
 		title: 'Assets',
 		items: [
 			{
