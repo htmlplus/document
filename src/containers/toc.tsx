@@ -7,20 +7,20 @@ import { type ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import { kebabCase } from 'change-case';
 import { create } from 'zustand';
 
-export interface TocItemProps {
+export type TocItemProps = {
 	children?: ReactNode;
 	level?: number;
-}
+};
 
-interface TocState {
+type TocState = {
 	items: TocItem[];
 	add: (item: TocItem) => void;
 	remove: (item: TocItem) => void;
 	scrollTo: (item: TocItem) => void;
 	update: (item: TocItem, entry: IntersectionObserverEntry) => void;
-}
+};
 
-interface TocItem {
+type TocItem = {
 	isActive?: boolean;
 	element?: HTMLElement;
 	entry?: IntersectionObserverEntry;
@@ -30,7 +30,7 @@ interface TocItem {
 	observer?: IntersectionObserver;
 	title?: string;
 	top?: number;
-}
+};
 
 const useToc = create<TocState>((set, get) => ({
 	items: [],

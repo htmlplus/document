@@ -3,7 +3,7 @@ import type { ComponentProps, JSX, ReactNode } from 'react';
 import type { MDXComponents } from 'mdx/types';
 
 import { Alert, Badge, Button } from '@/components';
-import { Browsers, Example, TocItem } from '@/containers';
+import { TocItem } from '@/containers';
 
 function Heading(level: 1 | 2 | 3 | 4 | 5 | 6) {
 	const Tag = `h${level}` as keyof JSX.IntrinsicElements;
@@ -21,11 +21,9 @@ function Heading(level: 1 | 2 | 3 | 4 | 5 | 6) {
 	};
 }
 
-export function useMDXComponents(components: MDXComponents): MDXComponents {
+export function useMDXComponents(components: MDXComponents = {}): MDXComponents {
 	return {
 		Alert,
-		Browsers,
-		Example,
 		a: ({ children, href }: ComponentProps<'a'>) => (
 			<Button to={href ?? '#'} link="underline">
 				{children}

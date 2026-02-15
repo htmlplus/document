@@ -55,3 +55,21 @@ To handle event's callback.
 
 <plus-switch on:plus-change={onChange} />
 ```
+
+## Global Config
+
+```js
+import App from './App.svelte';
+
+// Setup the global config.
+import { setConfig } from '@htmlplus/ui/config.js';
+setConfig({
+  // ...
+});
+
+const app = new App({
+  target: document.body
+});
+
+export default app;
+```

@@ -1,0 +1,49 @@
+# Global Configuration
+
+The Global Configuration is used as the central engine for setting the default behavior, appearance, and systemic constraints of all elements. 
+It allows universal standards to be defined from a single source, ensuring consistency across UI elements.
+
+
+<Alert type="error">
+  The global configuration must be applied before the js framework is bootstrapped.
+</Alert>
+
+## Signature
+
+A standard structure is provided for defining element-specific defaults.
+
+```js
+import { setConfig } from '@htmlplus/ui/config.js';
+
+setConfig({
+  elements: {
+    'ELEMENT-NAME': {
+      properties: {
+        'PROPERTY-NAME': {
+          default: 'VALUE'
+        }
+      }
+    }
+  }
+});
+```
+
+## Example
+
+A real example overrides the default `placement` of the`plus-dialog` element. All **dialogs** are centered unless an explicit **placement** is set.
+
+```js
+import { setConfig } from '@htmlplus/ui/config.js';
+
+setConfig({
+  elements: {
+    'plus-dialog': {
+      properties: {
+        placement: {
+          default: 'center'
+        },
+      }
+    }
+  }
+});
+```

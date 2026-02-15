@@ -1,0 +1,79 @@
+# Breakpoints
+
+A flexible breakpoint system is provided to support responsive interfaces based on changes in **viewport** and **container** sizes.
+
+Breakpoints are used internally by various elements to enable responsive behavior. 
+Additionally, all elements support the [overrides](/overrides-property) property, which allows any property to be conditionally overridden based on the active breakpoint.
+
+## Media vs. Container Queries
+
+Two types of breakpoints are supported:
+
+- **Media queries** – triggered by the viewport width, allowing elements to be adapted globally across different screen sizes.
+- **Container queries** – triggered by the size of the parent container, enabling elements to be adjusted independently within flexible layouts.
+
+## Default Values
+
+The following breakpoints are enabled by default:
+
+```js
+{
+  // media breakpoints
+  'xs':  { type: 'media',     min: 0    },
+  'sm':  { type: 'media',     min: 600  },
+  'md':  { type: 'media',     min: 900  },
+  'lg':  { type: 'media',     min: 1200 },
+  'xl':  { type: 'media',     min: 1536 },
+
+  // container breakpoints
+  '@xs': { type: 'container', min: 0    },
+  '@sm': { type: 'container', min: 384  },
+  '@md': { type: 'container', min: 640  },
+  '@lg': { type: 'container', min: 768  },
+  '@xl': { type: 'container', min: 1024 },
+}
+```
+
+## Custom Breakpoints
+
+Default breakpoints can be replaced or extended in two steps.
+
+### 1. Type Configuration
+
+Custom breakpoints are registered by extending `PlusBreakpointOverrides`. Default breakpoints can also be disabled at this stage.
+
+```js
+declare module '@htmlplus/ui' {
+  interface PlusBreakpointOverrides {
+    // Default breakpoints are disabled
+    xs: false;
+    sm: false;
+    md: false;
+    lg: false;
+    xl: false;
+
+    // Custom breakpoints are enabled
+    mobile: true;
+    tablet: true;
+    laptop: true;
+  }
+}
+```
+
+### 2. Value Configuration
+
+Breakpoint ranges are configured using `setConfig` in the application entry file.
+
+```js
+import { setConfig } from '@htmlplus/ui/config.js';
+
+setConfig({
+  breakpoints: {
+    // Custom breakpoints
+    mobile:  { type: 'media', min: 0,   max: 599  },
+    tablet:  { type: 'media', min: 600, max: 899  },
+    laptop:  { type: 'media', min: 900 },
+  }
+});
+
+```

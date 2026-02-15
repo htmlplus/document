@@ -14,6 +14,10 @@ export const sidebar = (framework: string) => [
 				title: 'Installation',
 				url: getPath(ROUTES.INSTALLATION)
 			},
+			// {
+			// 	title: 'Setup',
+			// 	url: getPath(ROUTES.SETUP)
+			// },
 			{
 				title: 'Browser support',
 				url: getPath(ROUTES.BROWSERS)
@@ -25,6 +29,10 @@ export const sidebar = (framework: string) => [
 			{
 				title: 'Vision',
 				url: getPath(ROUTES.VISION)
+			},
+			{
+				title: 'Changelog',
+				url: getPath(ROUTES.CHANGELOG)
 			}
 		]
 	},
@@ -38,7 +46,7 @@ export const sidebar = (framework: string) => [
 			}))
 	},
 	{
-		title: 'UI Elements',
+		title: 'Elements',
 		items: elementsLight
 			.filter((element) => !element.subset)
 			.map((element) => ({
@@ -48,34 +56,40 @@ export const sidebar = (framework: string) => [
 			}))
 	},
 	{
-		title: 'UI Elements API',
+		title: 'Element APIs',
 		items: elementsLight.map((element) => ({
 			title: element.title,
 			url: getPath(ROUTES.API_DETAILS, { framework, element: element.key })
 		}))
 	},
 	{
-		title: 'Global Config',
+		title: 'Customization',
 		items: [
 			{
-				title: 'Overview',
-				url: getPath(ROUTES.GLOBAL_CONFIG)
+				title: 'Breakpoints',
+				url: getPath(ROUTES.BREAKPOINTS)
 			},
-			...frameworks
-				.filter((framework) => !framework.disabled)
-				.map((framework) => ({
-					title: framework.title,
-					url: getPath(ROUTES.GLOBAL_CONFIG_PER_FRAMEWORK, { framework: framework.key })
-				}))
+			{
+				title: 'Global Configuration',
+				url: getPath(ROUTES.GLOBAL_CONFIGURATION)
+			},
+			{
+				title: 'Overrides Property',
+				url: getPath(ROUTES.OVERRIDES_PROPERTY)
+			},
+			// {
+			// 	title: 'Variant Property',
+			// 	url: getPath(ROUTES.VARIANT_PROPERTY)
+			// },
+			// {
+			// 	title: 'Disable APIs',
+			// 	url: getPath(ROUTES.DISABLE_APIS)
+			// },
+			{
+				title: 'Color Properties',
+				url: getPath(ROUTES.COLOR_PROPERTIES)
+			}
 		]
-	},
-	{
-		title: 'Overrides Property',
-		url: getPath(ROUTES.OVERRIDES_PROPERTY)
-	},
-	{
-		title: 'Color Properties',
-		url: getPath(ROUTES.COLOR_PROPERTIES)
 	},
 	{
 		title: 'Assets',
@@ -89,9 +103,5 @@ export const sidebar = (framework: string) => [
 				url: getPath(ROUTES.ICONS)
 			}
 		]
-	},
-	{
-		title: 'Changelog',
-		url: getPath(ROUTES.CHANGELOG)
 	}
 ];

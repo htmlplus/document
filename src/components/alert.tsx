@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react';
 
-export interface AlertProps {
+export type AlertProps = {
 	children?: ReactNode;
 	type?: 'error' | 'info' | 'success' | 'warning';
-}
+};
 
 const colors = {
 	error: 'border-[#ef5350] text-[#ef5350] bg-[#ffebee]',

@@ -3,15 +3,15 @@ import { notFound } from 'next/navigation';
 import { camelCase, capitalCase, pascalCase, sentenceCase } from 'change-case';
 
 import { ROUTES } from '@/constants';
-import { Markup } from '@/containers';
+import { Example, Markup } from '@/containers';
 import { elements, examples, frameworks } from '@/data';
 import * as Examples from '@/examples';
 import { getPath } from '@/utils';
 
-interface Params {
+type Params = {
 	element: string;
 	framework: string;
-}
+};
 
 export function generateStaticParams(): Params[] {
 	return frameworks
@@ -29,9 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }) 
 
 	const element = elements.find((element) => element.key === elementKey);
 
-	if (!element) {
-		notFound();
-	}
+	if (!element) notFound();
 
 	return {
 		title: element.title,
@@ -45,9 +43,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
 	const element = elements.find((element) => element.key === elementKey);
 
-	if (!element) {
-		notFound();
-	}
+	if (!element) notFound();
 
 	const scope: Record<string, unknown> = {};
 
@@ -64,13 +60,13 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 	);
 
 	sections.push(
-		'## Api',
+		'## APIs',
 		`Click [here](${getPath(ROUTES.API_DETAILS, { framework: frameworkKey, element: elementKey })}) to learn more about the **Properties**, **Slots**, **Events**, **CSS Variables**, **CSS Parts**, and **Methods**.`
 	);
 
 	sections.push(
 		'## Global Config',
-		`See the animation's [config](${getPath(ROUTES.ELEMENT_CONFIG, { element: elementKey })}). Full [documentation](${getPath(ROUTES.GLOBAL_CONFIG)}) is available.`
+		`See the elements's [config](${getPath(ROUTES.ELEMENT_CONFIG, { element: elementKey })}). Full [documentation](${getPath(ROUTES.GLOBAL_CONFIGURATION)}) is available.`
 	);
 
 	sections.push('## Examples', 'Below is a collection of simple to complex examples.');
@@ -167,5 +163,5 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 		`<plus-relative-time value="${element.lastModified}"></plus-relative-time>`
 	);
 
-	return <Markup value={sections.join('\n\n')} scope={scope}></Markup>;
+	return <Markup components={{ Example }} scope={scope} value={sections.join('\n\n')}></Markup>;
 }

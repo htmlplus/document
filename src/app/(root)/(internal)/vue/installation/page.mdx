@@ -99,3 +99,18 @@ To handle event's callback.
   }
 </script>
 ```
+
+## Global Config
+
+```js
+import { createApp } from 'vue';
+import App from './App.vue';
+
+// Setup the global config.
+import { setConfig } from '@htmlplus/ui/config.js';
+setConfig({
+  // ...
+});
+
+createApp(App).mount('#app');
+```

@@ -10,10 +10,10 @@ import { Markup, TocItem } from '@/containers';
 import { elements, frameworks } from '@/data';
 import { getPath } from '@/utils';
 
-interface Params {
+type Params = {
 	framework: string;
 	element: string;
-}
+};
 
 const Label = ({ children, value }: { children: ReactNode; value: string }) => {
 	return (
@@ -40,15 +40,9 @@ export async function generateMetadata({ params }: { params: Promise<Params> }) 
 
 	const element = elements.find((element) => element.key === elementKey);
 
-	if (!element) {
-		notFound();
-	}
+	if (!element) notFound();
 
-	return {
-		title: element.title,
-		description: element.description,
-		url: getPath(ROUTES.API_DETAILS, await params)
-	};
+	return {};
 }
 
 export default async function Page({ params }: { params: Promise<Params> }) {
@@ -56,9 +50,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
 	const element = elements.find((element) => element.key === elementKey);
 
-	if (!element) {
-		notFound();
-	}
+	if (!element) notFound();
 
 	const sections = [
 		{
@@ -98,7 +90,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
 	return (
 		<Fragment>
-			<h1>{element.title}</h1>
+			<h1>{element.title} APIs</h1>
 			<p>
 				See below to learn more about properties, slots, events, style variables, CSS parts, and
 				methods.

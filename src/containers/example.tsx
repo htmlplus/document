@@ -19,7 +19,7 @@ import { ROUTES } from '@/constants';
 import { useFrameworks } from '@/containers';
 import { getPath } from '@/utils';
 
-export interface ExampleProps {
+export type ExampleProps = {
 	Preview?: FC;
 	element?: string;
 	example?: string;
@@ -40,7 +40,7 @@ export interface ExampleProps {
 	}>;
 	title?: string;
 	dock?: boolean;
-}
+};
 
 export function Example({
 	Preview,

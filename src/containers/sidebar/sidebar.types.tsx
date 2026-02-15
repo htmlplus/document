@@ -1,4 +1,4 @@
-export interface SidebarItem {
+export type SidebarItem = {
 	active?: boolean;
 	expand?: boolean;
 	icon?: string;
@@ -7,13 +7,13 @@ export interface SidebarItem {
 	parent?: SidebarItem;
 	stable?: boolean;
 	url?: string;
-}
+};
 
-export interface SidebarState {
+export type SidebarState = {
 	items: SidebarItem[];
 	prev?: SidebarItem;
 	next?: SidebarItem;
 	sync(path: string, framework: string): void;
 	toggle(item: SidebarItem): void;
 	update(): void;
-}
+};

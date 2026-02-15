@@ -40,35 +40,34 @@ declare module '@htmlplus/ui' {
 		'primary-11': true;
 		'primary-12': true;
 	}
-	interface PlusIconNameOverrides {
-		UNLISTED: false;
-
-		'arrow-clockwise': true;
-		'arrow-right-short': true;
-		'arrow-right': true;
-		bell: true;
-		brush: true;
-		'caret-right-fill': true;
-		'chevron-compact-right': true;
-		'chevron-left': true;
-		'chevron-right': true;
-		'circle-fill': true;
-		clipboard: true;
-		dash: true;
-		download: true;
-		gear: true;
-		github: true;
-		heart: true;
-		house: true;
-		htmlplus: true;
-		list: true;
-		person: true;
-		plus: true;
-		puzzle: true;
-		'sign-turn-left': true;
-		stackblitz: true;
-		tag: true;
-		telephone: true;
+	interface PlusIconOverrides {
+		name:
+			| 'arrow-clockwise'
+			| 'arrow-right-short'
+			| 'arrow-right'
+			| 'bell'
+			| 'brush'
+			| 'caret-right-fill'
+			| 'chevron-compact-right'
+			| 'chevron-left'
+			| 'chevron-right'
+			| 'circle-fill'
+			| 'clipboard'
+			| 'dash'
+			| 'download'
+			| 'gear'
+			| 'github'
+			| 'heart'
+			| 'house'
+			| 'htmlplus'
+			| 'list'
+			| 'person'
+			| 'plus'
+			| 'puzzle'
+			| 'sign-turn-left'
+			| 'stackblitz'
+			| 'tag'
+			| 'telephone';
 	}
 }
 

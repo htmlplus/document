@@ -88,3 +88,21 @@ export class AppComponent {
 ```html
 <plus-switch (plus-change)="onChange()" />
 ```
+
+## Global Config
+
+```js
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { AppModule } from './app/app.module';
+
+// Setup the global config.
+import { setConfig } from '@htmlplus/ui/config.js';
+setConfig({
+  // ...
+});
+
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
+  .catch((error) => console.error(error));
+```

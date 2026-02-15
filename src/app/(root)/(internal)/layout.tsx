@@ -40,6 +40,7 @@ export default function Layout({ children }: PropsWithChildren) {
 					<div className="typography max-w-[768px] mx-auto px-8 min-w-0 w-full">
 						{children}
 						<Contributors></Contributors>
+						<br />
 						<Navigation></Navigation>
 					</div>
 					<div className="hidden md:block">

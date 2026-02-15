@@ -41,17 +41,6 @@ const document = await (async () => {
 	return JSON.parse(await load(LOCAL, REMOTE));
 })();
 
-// changelog
-(async () => {
-	const DESTINATION = './src/app/(root)/(internal)/changelog/page.mdx';
-	const LOCAL = path.join(__dirname, '../../ui/CHANGELOG.md');
-	const REMOTE = 'https://github.com/htmlplus/ui/raw/main/CHANGELOG.md';
-
-	const content = await load(LOCAL, REMOTE);
-
-	fs.writeFileSync(DESTINATION, content, 'utf8');
-})();
-
 // elements light
 (async () => {
 	const DESTINATION = './src/data/elements.light.ts';

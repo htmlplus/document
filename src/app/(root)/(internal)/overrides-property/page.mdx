@@ -1,10 +1,17 @@
 # Overrides Property
 
-The `overrides` property allows an element’s properties to be changed dynamically based on active **media** or **container** queries. When a **query** is active, these **values** take precedence over **defaults**, enabling responsive behavior without JavaScript.
+The property allows an element’s properties to be updated automatically based on active **media** or **container** breakpoints. 
 
-## Usage with Default Breakpoints
+When a breakpoint becomes active, the values defined in `overrides` override the element’s **default** values, enabling responsive behavior without JavaScript.
 
-The `overrides` property can be mapped directly to the built-in breakpoints provided by the library. Each **key** corresponds to a breakpoint, and the **value** defines the properties applied when that breakpoint becomes active.
+## How It Works
+
+- Each **key** in the `overrides` object represents a **breakpoint**. See [Breakpoints](/breakpoints) for details.
+- The corresponding **value** is an object containing the properties that will be applied when that breakpoint is active.
+
+## Syntax
+
+A general example of how the property can be used.
 
 ```html
 <plus-element
@@ -17,75 +24,19 @@ The `overrides` property can be mapped directly to the built-in breakpoints prov
 ></plus-element>
 ```
 
-## Default Breakpoints
+## Example
 
-The following breakpoints are available by default
+This example shows a `plus-stack` that is **vertical** by default and is automatically changed to **horizontal** when the container is small.
 
-```js
-{
-  'xs':  { type: 'media',     min: 0    },
-  'sm':  { type: 'media',     min: 600  },
-  'md':  { type: 'media',     min: 900  },
-  'lg':  { type: 'media',     min: 1200 },
-  'xl':  { type: 'media',     min: 1536 },
-  '@xs': { type: 'container', min: 0    },
-  '@sm': { type: 'container', min: 384  },
-  '@md': { type: 'container', min: 640  },
-  '@lg': { type: 'container', min: 768  },
-  '@xl': { type: 'container', min: 1024 },
-}
+```html
+<plus-stack 
+  vertical
+  overrides='{
+    "@sm": { "vertical": false }
+  }'
+>
+  <div>1</div>
+  <div>2</div>
+</plus-stack>
 ```
-
-## Media vs. Container Queries
-
-Two types of breakpoints are supported:
-
-- **Media queries** – triggered by the viewport width, allowing elements to be adapted globally across different screen sizes.
-- **Container queries** – triggered by the size of the parent container, enabling elements to be adjusted independently within flexible layouts.
-
-
-## Configuring Custom Breakpoints
-
-Custom breakpoints can be created to replace or extend the default ones. This allows elements using the `overrides` property to respond to project-specific viewport or container sizes.
-
-### 1. Define Typing
-
-New breakpoints are registered with the type system by extending `PlusBreakpointOverrides`. Default breakpoints can be disabled here.
-
-```js
-declare module '@htmlplus/ui' {
-  interface PlusBreakpointOverrides {
-    // Default breakpoints are disabled
-    xs: false;
-    sm: false;
-    md: false;
-    lg: false;
-    xl: false;
-
-    // Custom breakpoints are enabled
-    mobile: true;
-    tablet: true;
-    laptop: true;
-  }
-}
-```
-
-### 2. Update Values
-
-The actual breakpoint sizes are configured using `setConfig` in the application entry file.
-
-```js
-import { setConfig } from '@htmlplus/ui/config.js';
-
-setConfig({
-  breakpoints: {
-    // Custom breakpoints
-    mobile:  { type: 'media', min: 0,   max: 599  },
-    tablet:  { type: 'media', min: 600, max: 899  },
-    laptop:  { type: 'media', min: 900 },
-  }
-});
-
-```
-
-Once configured, these breakpoints are automatically applied to all elements using the `overrides` property.
+ 

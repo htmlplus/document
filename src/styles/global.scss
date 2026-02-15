@@ -89,7 +89,7 @@ plus-avatar img {
 }
 
 plus-prism::part(pre) {
-  @apply p-[0.85em] text-[0.85rem];
+  @apply p-[0.85em] text-[0.85rem] max-h-96;
 }
 
 //////////////////////////////////////////////////////////////

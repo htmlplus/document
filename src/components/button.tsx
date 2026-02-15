@@ -4,7 +4,7 @@ import NextLink, { type LinkProps as NextLinkProps } from 'next/link';
 
 import { classes } from '@/utils';
 
-export interface ButtonProps {
+export type ButtonProps = {
 	block?: boolean;
 	children: ReactNode;
 	color?: string;
@@ -19,15 +19,15 @@ export interface ButtonProps {
 	title?: string;
 	to?: string;
 	onClick?: MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
-}
+};
 
-interface CustomLinkProps extends Omit<NextLinkProps, 'href'> {
+type CustomLinkProps = Omit<NextLinkProps, 'href'> & {
 	to: string;
 	children: ReactNode;
 	target?: string;
 	rel?: string;
 	className?: string;
-}
+};
 
 function Link({ children, to, target, rel, ...rest }: CustomLinkProps) {
 	const linkRel = target === '_blank' && !rel ? 'noopener noreferrer' : rel;

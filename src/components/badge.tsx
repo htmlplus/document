@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react';
 
-export interface BadgeProps {
+export type BadgeProps = {
 	children?: ReactNode;
 	className?: string;
-}
+};
 
 export function Badge({ children, className }: BadgeProps) {
 	return (
