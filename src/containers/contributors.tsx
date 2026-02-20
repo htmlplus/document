@@ -5,6 +5,7 @@ import { Fragment, useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import { useParams, usePathname } from 'next/navigation';
 
+import { Button } from '@/components';
 import { ROUTES } from '@/constants';
 import { TocItem } from '@/containers';
 import { getPath } from '@/utils';
@@ -55,8 +56,7 @@ export function Contributors() {
 	useEffect(() => {
 		if (!paths) return;
 
-		// TODO
-		// if (process && process.env.NODE_ENV === 'development') return;
+		if (process && process.env.NODE_ENV === 'development') return;
 
 		// TODO: make it smaller
 		const promises = [paths].flat().map((path) => fetch(path));
@@ -82,31 +82,29 @@ export function Contributors() {
 			<h2>
 				<TocItem level={2}>Contributors</TocItem>
 			</h2>
-			<p>
-				<plus-avatar-group hoverable stacked>
-					{contributors.reverse().map((contributor) => (
-						<Fragment key={contributor}>
-							<plus-avatar shape="circle" size="sm">
-								<Image
-									alt={`Contributor ${contributor}`}
-									src={getPath(ROUTES.CONTRIBUTOR, { contributor, size: 32 })}
-									width="32"
-									height="32"
-									unoptimized
-								/>
-								<a
-									rel="noopener"
-									href={getPath(ROUTES.CONTRIBUTOR_GITHUB, { contributor })}
-									target="_blank"
-								>
-									&nbsp;
-								</a>
-							</plus-avatar>
-							<plus-tooltip>{contributor}</plus-tooltip>
-						</Fragment>
-					))}
-				</plus-avatar-group>
-			</p>
+			<plus-avatar-group hoverable stacked>
+				{contributors.reverse().map((contributor) => (
+					<Fragment key={contributor}>
+						<plus-avatar shape="circle" size="sm">
+							<Image
+								alt={`Contributor ${contributor}`}
+								src={getPath(ROUTES.CONTRIBUTOR, { contributor, size: 32 })}
+								width="32"
+								height="32"
+								unoptimized
+							/>
+							<Button
+								href={getPath(ROUTES.CONTRIBUTOR_GITHUB, { contributor })}
+								target="_blank"
+								variant="raw"
+							>
+								&nbsp;
+							</Button>
+						</plus-avatar>
+						<plus-tooltip>{contributor}</plus-tooltip>
+					</Fragment>
+				))}
+			</plus-avatar-group>
 		</>
 	);
 }

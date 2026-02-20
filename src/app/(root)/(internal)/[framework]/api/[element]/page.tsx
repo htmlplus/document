@@ -6,7 +6,7 @@ import { kebabCase } from 'change-case';
 
 import { Alert, Button } from '@/components';
 import { ROUTES } from '@/constants';
-import { Markup, TocItem } from '@/containers';
+import { Markdown, TocItem } from '@/containers';
 import { elements, frameworks } from '@/data';
 import { getPath } from '@/utils';
 
@@ -150,7 +150,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 												<Label value="Type">
 													{!item.typeReference && <span>{item.type}</span>}
 													{!!item.typeReference && (
-														<Button link target="_blank" to={item.typeReference}>
+														<Button href={item.typeReference} target="_blank" variant="link">
 															{item.type}
 														</Button>
 													)}
@@ -190,7 +190,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 									{!!item.description && (
 										<div className="w-full px-2">
 											<Label value="Description">
-												<Markup value={item.description}></Markup>
+												<Markdown value={item.description}></Markdown>
 											</Label>
 										</div>
 									)}

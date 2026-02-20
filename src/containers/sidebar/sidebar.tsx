@@ -77,18 +77,18 @@ export function Sidebar() {
 		>
 			<br />
 			<plus-stack gap="1rem" items="stretch" vertical>
-				<plus-center className="text-[20px]">
-					<Button block link to={getPath(ROUTES.HOME)}>
+				<plus-center>
+					<Button block href={getPath(ROUTES.HOME)} variant="primary">
 						<plus-stack gap="1rem">
 							<plus-icon name="htmlplus" size="44px"></plus-icon>
 							<plus-stack items="end" vertical>
-								<div>HTMLPLUS</div>
-								<div className="text-[60%] text-main-9">Version {PACKAGE.version}</div>
+								<div className="text-[20px]">HTMLPLUS</div>
+								<div className="text-[80%] text-main-9">Version {PACKAGE.version}</div>
 							</plus-stack>
 						</plus-stack>
 					</Button>
 				</plus-center>
-				<Button block outlined to={getPath(ROUTES.GITHUB_URL)} target="_blank">
+				<Button block href={getPath(ROUTES.GITHUB_URL)} target="_blank" variant="outline">
 					<plus-icon name="github"></plus-icon>
 					Github
 				</Button>

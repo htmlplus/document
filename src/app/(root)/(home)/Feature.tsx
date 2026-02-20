@@ -2,6 +2,7 @@
 
 import type { PlusIconProperties } from '@htmlplus/ui';
 
+import { Button } from '@/components';
 import { NoSSR } from '@/NoSSR';
 
 type FeatureProps = {
@@ -44,9 +45,9 @@ export const Feature = ({ className, description, icon, metric, more, title }: F
 			<div className="font-5-500">{title}</div>
 			<div className="font-3-400 text-alpha-black-7 text-center">{description}</div>
 			{more && (
-				<a href={more} className="link">
+				<Button href={more} variant="link">
 					Learn more
-				</a>
+				</Button>
 			)}
 		</plus-stack>
 	);

@@ -1,10 +1,10 @@
 import { Fragment } from 'react';
 
 import Image from 'next/image';
-import NextLink from 'next/link';
 
 import PACKAGE from '@htmlplus/ui/package.json';
 
+import { Button } from '@/components';
 import { FRAMEWORK_DEFAULT, ROUTES } from '@/constants';
 import { statistics } from '@/data';
 import { getPath } from '@/utils';
@@ -16,39 +16,46 @@ export default async function Home() {
 	return (
 		<div className="home">
 			<header className="flex items-center h-16 bg-main-2">
-				<div className="max-w-screen-lg mx-auto px-4 flex grow items-center gap-8">
+				<div className="max-w-screen-lg mx-auto px-4 flex grow items-center gap-4">
 					<plus-icon name="htmlplus" size="2rem"></plus-icon>
-					<div className="hidden sm:flex items-center gap-6">
-						<NextLink href={getPath(ROUTES.OVERVIEW)}>Document</NextLink>
-						<NextLink
+					<div className="hidden sm:flex items-center">
+						<Button href={getPath(ROUTES.OVERVIEW)} variant="ghost">
+							Document
+						</Button>
+						<Button
 							href={getPath(ROUTES.ELEMENT_DETAILS, {
 								framework: FRAMEWORK_DEFAULT,
 								element: 'accordion'
 							})}
+							variant="ghost"
 						>
 							Elements
-						</NextLink>
-						<NextLink href={getPath(ROUTES.ROADMAP)}>Roadmap</NextLink>
+						</Button>
+						<Button href={getPath(ROUTES.ROADMAP)} variant="ghost">
+							Roadmap
+						</Button>
 					</div>
 					<div className="flex grow"></div>
 					<div className="hidden lg:flex items-center gap-3">
-						<a className="btn tertiary" href="https://opencollective.com/htmlplus">
+						<Button href="https://opencollective.com/htmlplus" variant="secondary">
 							Become a sponsor
-						</a>
-						<a className="btn primary" href={getPath(ROUTES.GITHUB_URL)} target="_blank">
+						</Button>
+						<Button href={getPath(ROUTES.GITHUB_URL)} target="_blank" variant="main">
 							<plus-icon name="github"></plus-icon>
 							Github
-						</a>
+						</Button>
 					</div>
 				</div>
 			</header>
-			<main className="relative pt-12 main">
+			<main className="relative pt-12">
+				<div className="absolute top-0 left-0 right-0 -z-10 h-[calc(100%+4rem)] bg-main-2 [clip-path:polygon(0_0%,100%_0%,100%_82%,0%_100%)]" />
 				<div className="max-w-screen-lg mx-auto px-4">
 					<div className="flex flex-col items-center gap-8 lg:flex-row">
 						<div className="flex flex-col items-center gap-8 lg:items-start basis-1/2">
-							<NextLink
-								className="font-2-500 shadow-custom inline-flex text-main-11 bg-white p-[4px] rounded-full whitespace-nowrap"
+							<Button
+								className="font-2-500 text-main-11 !h-8 !p-[4px] !rounded-full"
 								href={getPath(ROUTES.CHANGELOG)}
+								variant="invert"
 							>
 								<plus-stack gap="0.75rem">
 									<div className="font-2-500 px-2 py-[2px] rounded-full text-main-11 bg-main-4">
@@ -58,26 +65,26 @@ export default async function Home() {
 									{/* TODO: svg is thin */}
 									<plus-icon name="arrow-right-short" size="1rem"></plus-icon>
 								</plus-stack>
-							</NextLink>
+							</Button>
 							<div className="flex flex-col items-center gap-6 lg:items-start text-center lg:text-start">
 								<h1 className="font-9-600">The Most Flexible Open Source Web UI Library!</h1>
-								<p>
+								<p className="font-4-400 text-alpha-black-7">
 									A pure JavaScript web UI library delivering lightweight, customizable, and fast
 									elements for modern browsers and frameworks.
 								</p>
 								<div className="w-full">
 									<div className="flex flex-col gap-4 sm:flex-row items-stretch justify-center lg:justify-start lg:items-center">
 										<plus-snippet symbol="$">npm i {PACKAGE.name}</plus-snippet>
-										<NextLink
-											className="btn secondary"
+										<Button
 											href={getPath(ROUTES.ELEMENT_DETAILS, {
 												framework: FRAMEWORK_DEFAULT,
 												element: 'accordion'
 											})}
+											variant="invert"
 										>
 											Get Started
 											<plus-icon name="arrow-right"></plus-icon>
-										</NextLink>
+										</Button>
 									</div>
 								</div>
 							</div>
@@ -94,13 +101,13 @@ export default async function Home() {
 														height="32"
 														unoptimized
 													/>
-													<a
-														rel="noopener"
+													<Button
 														href={getPath(ROUTES.CONTRIBUTOR_GITHUB, { contributor })}
 														target="_blank"
+														variant="raw"
 													>
 														&nbsp;
-													</a>
+													</Button>
 												</plus-avatar>
 												<plus-tooltip>{contributor}</plus-tooltip>
 											</Fragment>
@@ -111,7 +118,7 @@ export default async function Home() {
 							</div>
 						</div>
 						<div className="hidden lg:flex items-center basis-1/2 h-[547px] justify-center">
-							<Image alt="TODO" src="/assets/shape.png" width="384" height="384" />
+							<Image alt="" src="/assets/shape.png" width="384" height="384" />
 						</div>
 					</div>
 				</div>

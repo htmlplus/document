@@ -21,7 +21,7 @@ export function HTMLPLUS() {
 					properties: {
 						resolver: {
 							default: ({ name }: { name: string }) => {
-								return import(`../../public/assets/icons/${name}.svg`).then(
+								return import(`../../../public/assets/icons/${name}.svg`).then(
 									(module) => module.default
 								);
 							}

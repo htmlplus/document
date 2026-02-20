@@ -156,30 +156,35 @@ export function Example({
 						</plus-tabs-tab>
 					))}
 				</plus-tabs-bar>
-				<div className="flex gap-2 justify-center">
+				<plus-stack>
 					{rtl && (
 						<div>
-							<Button icon text to="#" onClick={handleChangeDirection}>
+							<Button href="#" icon variant="primary" onClick={handleChangeDirection}>
 								<plus-icon name="sign-turn-left"></plus-icon>
 							</Button>
 							<plus-tooltip>Change Direction</plus-tooltip>
 						</div>
 					)}
 					<div>
-						<Button icon text to="#" onClick={handleReload as MouseEventHandler<HTMLButtonElement>}>
+						<Button
+							href="#"
+							icon
+							variant="primary"
+							onClick={handleReload as MouseEventHandler<HTMLButtonElement>}
+						>
 							<plus-icon name="arrow-clockwise"></plus-icon>
 						</Button>
 						<plus-tooltip>Reset</plus-tooltip>
 					</div>
 					{links?.map((link) => (
 						<div key={link.key}>
-							<Button icon text to={link.url} target="_blank">
+							<Button href={link.url} icon target="_blank" variant="primary">
 								<plus-icon name={link.icon}></plus-icon>
 							</Button>
 							<plus-tooltip>{link.title}</plus-tooltip>
 						</div>
 					))}
-				</div>
+				</plus-stack>
 			</div>
 			<plus-tabs-panels>
 				<plus-tabs-panel

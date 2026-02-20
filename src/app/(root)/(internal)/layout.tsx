@@ -37,11 +37,14 @@ export default function Layout({ children }: PropsWithChildren) {
 					</plus-sticky>
 				</plus-drawer>
 				<div className="grow flex min-w-0">
-					<div className="typography max-w-[768px] mx-auto px-8 min-w-0 w-full">
+					<div className="markdown max-w-[768px] mx-auto px-8 min-w-0 w-full">
 						{children}
-						<Contributors></Contributors>
+						<Contributors />
 						<br />
-						<Navigation></Navigation>
+						<br />
+						<br />
+						<Navigation />
+						<br />
 					</div>
 					<div className="hidden md:block">
 						<plus-sticky className="pr-4 w-[272px]">

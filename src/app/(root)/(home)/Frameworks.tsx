@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import AutoScroll from 'embla-carousel-auto-scroll';
 
+import { Button } from '@/components';
 import { ROUTES } from '@/constants';
 import { frameworks } from '@/data';
 import { getPath } from '@/utils';
@@ -22,8 +23,7 @@ export const Frameworks = () => {
 					<h3 className="font-8-600 text-[28px] text-center">All Frameworks, One Place</h3>
 				</div>
 				<div className="text-sm text-center max-w-[600px] mx-auto mb-6">
-					<p className="font-4-400">
-						{' '}
+					<p className="font-4-400 text-alpha-black-7">
 						Seamlessly supporting all your favorite frameworks in one powerful library.
 					</p>
 				</div>
@@ -32,16 +32,17 @@ export const Frameworks = () => {
 				<plus-carousel-slides>
 					{frameworks.map((framework) => (
 						<plus-carousel-slide className="mx-8" key={framework.key}>
-							<a
-								className={`select-none flex flex-row gap-x-2 items-center justify-center ${framework.disabled ? 'opacity-25' : ''}`}
+							<Button
+								disabled={framework.disabled}
 								href={
 									framework.disabled
 										? ''
 										: getPath(ROUTES.INSTALLATION_FRAMEWORK, { framework: framework.key })
 								}
+								variant="raw"
 							>
 								<Image
-									alt="TODO"
+									alt={framework.title}
 									className="w-12 h-12 m-0"
 									src={framework.logo}
 									width="48"
@@ -50,7 +51,7 @@ export const Frameworks = () => {
 								<div className="text-lg sm:text-2xl font-semibold capitalize">
 									{framework.title}
 								</div>
-							</a>
+							</Button>
 						</plus-carousel-slide>
 					))}
 				</plus-carousel-slides>

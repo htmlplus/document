@@ -1,0 +1,148 @@
+@layer base {
+	* {
+		@apply border-main-4;
+	}
+
+	:root {
+		--plus-color-alpha-black-1: var(--color-alpha-black-1);
+		--plus-color-alpha-black-2: var(--color-alpha-black-2);
+		--plus-color-alpha-black-3: var(--color-alpha-black-3);
+		--plus-color-alpha-black-4: var(--color-alpha-black-4);
+		--plus-color-alpha-black-6: var(--color-alpha-black-6);
+		--plus-color-alpha-black-7: var(--color-alpha-black-7);
+		--plus-color-alpha-black-8: var(--color-alpha-black-8);
+		--plus-color-alpha-black-9: var(--color-alpha-black-9);
+		--plus-color-alpha-black-10: var(--color-alpha-black-10);
+		--plus-color-alpha-black-11: var(--color-alpha-black-11);
+		--plus-color-alpha-black-12: var(--color-alpha-black-12);
+
+		--plus-color-main-1: var(--color-main-1);
+		--plus-color-main-2: var(--color-main-2);
+		--plus-color-main-3: var(--color-main-3);
+		--plus-color-main-4: var(--color-main-4);
+		--plus-color-main-5: var(--color-main-5);
+		--plus-color-main-6: var(--color-main-6);
+		--plus-color-main-7: var(--color-main-7);
+		--plus-color-main-8: var(--color-main-8);
+		--plus-color-main-9: var(--color-main-9);
+		--plus-color-main-10: var(--color-main-10);
+		--plus-color-main-11: var(--color-main-11);
+		--plus-color-main-12: var(--color-main-12);
+
+		--plus-color-primary-1: var(--color-primary-1);
+		--plus-color-primary-2: var(--color-primary-2);
+		--plus-color-primary-3: var(--color-primary-3);
+		--plus-color-primary-4: var(--color-primary-4);
+		--plus-color-primary-5: var(--color-primary-5);
+		--plus-color-primary-6: var(--color-primary-6);
+		--plus-color-primary-7: var(--color-primary-7);
+		--plus-color-primary-8: var(--color-primary-8);
+		--plus-color-primary-9: var(--color-primary-9);
+		--plus-color-primary-10: var(--color-primary-10);
+		--plus-color-primary-11: var(--color-primary-11);
+		--plus-color-primary-12: var(--color-primary-12);
+	}
+
+	html {
+		@apply text-[16px] font-[400] leading-[22px] tracking-[-0.013em] overflow-y-visible;
+		/* TODO */
+		line-height: 1.625em;
+		font-family: "Inter", sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	:not(:defined) {
+		@apply invisible;
+	}
+
+	body ::-webkit-scrollbar {
+		@apply bg-transparent w-2 h-2;
+	}
+
+	body ::-webkit-scrollbar-thumb {
+		@apply bg-main-4 rounded-[0.25rem];
+	}
+
+	body ::-webkit-scrollbar-track {
+		@apply bg-transparent rounded-[0.25rem];
+	}
+
+	ol,
+	ul {
+		list-style: initial;
+	}
+
+	.preview * {
+		all: revert-layer;
+	}
+
+	plus-avatar img {
+		@apply !m-0;
+	}
+
+	plus-prism {
+		margin-bottom: 0.8125rem;
+	}
+
+	plus-prism::part(pre) {
+		@apply p-[0.85em] text-[0.85rem] max-h-96;
+	}
+
+	/* TODO */
+	plus-accordion,
+	plus-accordions,
+	plus-animation,
+	plus-app-progress-bar,
+	plus-avatar,
+	plus-avatar-group,
+	plus-breadcrumb,
+	plus-browse,
+	plus-card,
+	plus-card-body,
+	plus-carousel,
+	plus-carousel-button,
+	plus-carousel-counter,
+	plus-carousel-indicators,
+	plus-carousel-progress,
+	plus-carousel-slide,
+	plus-carousel-slides,
+	plus-center,
+	plus-click-outside,
+	plus-counter,
+	plus-cropper,
+	plus-dialog,
+	plus-dialog-body,
+	plus-dialog-content,
+	plus-dialog-footer,
+	plus-dialog-header,
+	plus-dialog-toggler,
+	plus-divider,
+	plus-drawer,
+	plus-drawer-toggler,
+	plus-faker,
+	plus-format-bytes,
+	plus-icon,
+	plus-intersection,
+	plus-prism,
+	plus-progress-bar,
+	plus-progress-bar-stack,
+	plus-relative-time,
+	plus-scroll-detector,
+	plus-signature,
+	plus-snippet,
+	plus-spacer,
+	plus-spinner,
+	plus-stack,
+	plus-sticky,
+	plus-switch,
+	plus-tabs,
+	plus-tabs-bar,
+	plus-tabs-panel,
+	plus-tabs-panels,
+	plus-tabs-tab,
+	plus-tooltip {
+		padding: revert-layer;
+		margin: revert-layer;
+	}
+}

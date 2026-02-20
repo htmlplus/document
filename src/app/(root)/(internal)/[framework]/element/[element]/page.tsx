@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { camelCase, capitalCase, pascalCase, sentenceCase } from 'change-case';
 
 import { ROUTES } from '@/constants';
-import { Example, Markup } from '@/containers';
+import { Example, Markdown } from '@/containers';
 import { elements, examples, frameworks } from '@/data';
 import * as Examples from '@/examples';
 import { getPath } from '@/utils';
@@ -163,5 +163,5 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 		`<plus-relative-time value="${element.lastModified}"></plus-relative-time>`
 	);
 
-	return <Markup components={{ Example }} scope={scope} value={sections.join('\n\n')}></Markup>;
+	return <Markdown components={{ Example }} scope={scope} value={sections.join('\n\n')}></Markdown>;
 }

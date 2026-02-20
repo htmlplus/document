@@ -3,9 +3,9 @@ import type { PropsWithChildren } from 'react';
 import type { Metadata } from 'next';
 import { GoogleAnalytics } from '@next/third-parties/google';
 
-import { HTMLPLUS } from '@/components';
+import { HTMLPLUS } from './htmlplus';
 // TODO
-import '@/styles/index.scss';
+import '@/styles/index.css';
 
 export const metadata: Metadata = {
 	title: 'HTMLPLUS'

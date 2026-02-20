@@ -25,7 +25,7 @@ export function useMDXComponents(components: MDXComponents = {}): MDXComponents 
 	return {
 		Alert,
 		a: ({ children, href }: ComponentProps<'a'>) => (
-			<Button to={href ?? '#'} link="underline">
+			<Button href={href ?? '#'} variant="link">
 				{children}
 			</Button>
 		),
