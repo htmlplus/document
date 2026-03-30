@@ -95,7 +95,8 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 			{ key: 'template', language: 'html' },
 			{ key: 'script', language: 'jsx' },
 			{ key: 'style', language: 'css' },
-			{ key: 'config', language: 'js' }
+			{ key: 'config', language: 'js' },
+			{ key: 'declaration', language: 'js' }
 		]
 			.map((tab) => {
 				const { key, language } = tab;
@@ -104,7 +105,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
 				const content = current[key as keyof typeof current] ?? null;
 
-				if (key === 'config' && !content) return null;
+				if ((key === 'config' || key === 'declaration') && !content) return null;
 
 				return {
 					key,

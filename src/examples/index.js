@@ -24,6 +24,7 @@ export const AnimationEasing = dynamic(() => import('./AnimationEasing'), { ssr:
 export const AnimationIntersection = dynamic(() => import('./AnimationIntersection'), { ssr: false, suspense: true });
 export const AnimationKeyframes = dynamic(() => import('./AnimationKeyframes'), { ssr: false, suspense: true });
 export const AnimationMethods = dynamic(() => import('./AnimationMethods'), { ssr: false, suspense: true });
+export const AnimationNameTypeSafe = dynamic(() => import('./AnimationNameTypeSafe'), { ssr: false, suspense: true });
 export const AnimationName = dynamic(() => import('./AnimationName'), { ssr: false, suspense: true });
 export const AnimationRegisterACustomName = dynamic(() => import('./AnimationRegisterACustomName'), { ssr: false, suspense: true });
 export const AppProgressBarColor = dynamic(() => import('./AppProgressBarColor'), { ssr: false, suspense: true });
