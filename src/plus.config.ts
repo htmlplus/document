@@ -1,6 +1,8 @@
+import type { Config } from '@htmlplus/ui/config.js';
+
 import { faker } from '@faker-js/faker/locale/en';
 
-export const config = {
+export const config: Config = {
 	elements: {
 		'plus-faker': {
 			properties: {
@@ -12,7 +14,7 @@ export const config = {
 		'plus-icon': {
 			properties: {
 				resolver: {
-					default: ({ name }: { name: string }) => {
+					default: ({ name }) => {
 						return import(`../public/assets/icons/${name}.svg`).then((module) => module.default);
 					}
 				}

@@ -1,44 +1,41 @@
 declare module '@htmlplus/ui' {
-	interface PlusColorOverrides {
-		UNLISTED: false;
-
-		'alpha-black-1': true;
-		'alpha-black-2': true;
-		'alpha-black-3': true;
-		'alpha-black-4': true;
-		'alpha-black-6': true;
-		'alpha-black-7': true;
-		'alpha-black-8': true;
-		'alpha-black-9': true;
-		'alpha-black-10': true;
-		'alpha-black-11': true;
-		'alpha-black-12': true;
-
-		'main-1': true;
-		'main-2': true;
-		'main-3': true;
-		'main-4': true;
-		'main-5': true;
-		'main-6': true;
-		'main-7': true;
-		'main-8': true;
-		'main-9': true;
-		'main-10': true;
-		'main-11': true;
-		'main-12': true;
-
-		'primary-1': true;
-		'primary-2': true;
-		'primary-3': true;
-		'primary-4': true;
-		'primary-5': true;
-		'primary-6': true;
-		'primary-7': true;
-		'primary-8': true;
-		'primary-9': true;
-		'primary-10': true;
-		'primary-11': true;
-		'primary-12': true;
+	interface PlusConfigOverrides {
+		color:
+			| 'alpha-black-1'
+			| 'alpha-black-2'
+			| 'alpha-black-3'
+			| 'alpha-black-4'
+			| 'alpha-black-6'
+			| 'alpha-black-7'
+			| 'alpha-black-8'
+			| 'alpha-black-9'
+			| 'alpha-black-10'
+			| 'alpha-black-11'
+			| 'alpha-black-12'
+			| 'main-1'
+			| 'main-2'
+			| 'main-3'
+			| 'main-4'
+			| 'main-5'
+			| 'main-6'
+			| 'main-7'
+			| 'main-8'
+			| 'main-9'
+			| 'main-10'
+			| 'main-11'
+			| 'main-12'
+			| 'primary-1'
+			| 'primary-2'
+			| 'primary-3'
+			| 'primary-4'
+			| 'primary-5'
+			| 'primary-6'
+			| 'primary-7'
+			| 'primary-8'
+			| 'primary-9'
+			| 'primary-10'
+			| 'primary-11'
+			| 'primary-12';
 	}
 	interface PlusIconOverrides {
 		name:

@@ -12502,6 +12502,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "The `name` property accepts any string by default. Extending the `PlusAnimationOverrides` interface refines it to `'fade-in'` and `'fade-out'`, improving type safety and IntelliSense.",
     "declaration": "declare module '@htmlplus/ui' {\n  interface PlusAnimationOverrides {\n    name: 'fade-in' | 'fade-out';\n  }\n}\nexport {};\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
@@ -12514,6 +12515,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "The `name` property accepts any string by default. Extending the `PlusAnimationOverrides` interface refines it to `'fade-in'` and `'fade-out'`, improving type safety and IntelliSense.",
     "declaration": "declare module '@htmlplus/ui' {\n  interface PlusAnimationOverrides {\n    name: 'fade-in' | 'fade-out';\n  }\n}\nexport {};\n",
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/center.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
@@ -12526,6 +12528,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "The `name` property accepts any string by default. Extending the `PlusAnimationOverrides` interface refines it to `'fade-in'` and `'fade-out'`, improving type safety and IntelliSense.",
     "declaration": "declare module '@htmlplus/ui' {\n  interface PlusAnimationOverrides {\n    name: 'fade-in' | 'fade-out';\n  }\n}\nexport {};\n",
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-animation iterations={Infinity} name=\"fade-in\" run></plus-animation>\n    </plus-center>\n  );\n}\nexport default App;\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n"
@@ -12537,6 +12540,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "The `name` property accepts any string by default. Extending the `PlusAnimationOverrides` interface refines it to `'fade-in'` and `'fade-out'`, improving type safety and IntelliSense.",
     "declaration": "declare module '@htmlplus/ui' {\n  interface PlusAnimationOverrides {\n    name: 'fade-in' | 'fade-out';\n  }\n}\nexport {};\n",
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/center.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
@@ -12549,6 +12553,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
+    "description": "The `name` property accepts any string by default. Extending the `PlusAnimationOverrides` interface refines it to `'fade-in'` and `'fade-out'`, improving type safety and IntelliSense.",
     "declaration": "declare module '@htmlplus/ui' {\n  interface PlusAnimationOverrides {\n    name: 'fade-in' | 'fade-out';\n  }\n}\nexport {};\n",
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/center.js';\n",
     "style": "plus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
