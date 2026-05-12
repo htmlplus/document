@@ -1,4 +1,4 @@
-import type { ComponentProps, JSX, ReactNode } from 'react';
+import type { ComponentProps, ReactNode } from 'react';
 
 import type { MDXComponents } from 'mdx/types';
 
@@ -6,7 +6,7 @@ import { Alert, Badge, Button } from '@/components';
 import { TocItem } from '@/containers';
 
 function Heading(level: 1 | 2 | 3 | 4 | 5 | 6) {
-	const Tag = `h${level}` as keyof JSX.IntrinsicElements;
+	const Tag = `h${level}` as const;
 
 	return ({ children }: { children: ReactNode }) => {
 		if (level === 1) {
