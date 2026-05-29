@@ -5,15 +5,16 @@ const nextConfig: NextConfig = {
 	outputFileTracingRoot: __dirname,
 	pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 	reactStrictMode: true,
+	turbopack: {
+		rules: {
+			'./src/assets/icons/*.svg': {
+				loaders: ['raw-loader'],
+				as: '*.js'
+			}
+		}
+	},
 	experimental: {
 		optimizePackageImports: ['@/components', '@/containers', '@/data', '@/examples', '@/utils']
-	},
-	webpack(config) {
-		config.module.rules.push({
-			test: /\.svg$/i,
-			loader: 'raw-loader'
-		});
-		return config;
 	}
 };
 

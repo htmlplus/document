@@ -14,8 +14,8 @@ export const config: Config = {
 		'plus-icon': {
 			properties: {
 				resolver: {
-					default: ({ name }) => {
-						return import(`../public/assets/icons/${name}.svg`).then((module) => module.default);
+					default: ({ name }: { name: string }) => {
+						return import(`./assets/icons/${name}.svg`).then((module) => module.default);
 					}
 				}
 			}

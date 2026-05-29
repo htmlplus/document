@@ -71,6 +71,5 @@ module.exports = {
 			lg: '1200px',
 			xl: '1536px'
 		}
-	},
-	plugins: [require('@tailwindcss/container-queries')]
+	}
 };
