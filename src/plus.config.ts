@@ -26,28 +26,19 @@ export const config: Config = {
 					default: 'nord'
 				},
 				resolver: {
-					default: async ({ key, value }: { key: string; value: string }) => {
-						switch (key) {
-							case 'language': {
-								await import(`prismjs/components/prism-${value}.js`);
-								break;
-							}
-							case 'plugin': {
-								await import(`prismjs/plugins/${value}/prism-${value}.js`);
-								try {
-									return await import(`!!raw-loader!prismjs/plugins/${value}/prism-${value}.css`);
-								} catch {}
-								break;
-							}
-							case 'theme': {
-								try {
-									return await import(`!!raw-loader!prism-themes/themes/prism-${value}.css`);
-								} catch {
-									return await import(`!!raw-loader!prismjs/themes/prism-${value}.css`);
-								}
-							}
-						}
-					}
+					// default: async ({ key, value }: { key: string; value: string }) => {
+					// 	switch (key) {
+					// 		case 'language': {
+					// 			await import(`prismjs/components/prism-${value}.js`);
+					// 			break;
+					// 		}
+					// 		case 'theme': {
+					// 			return await import(`prism-themes/themes/prism-${value}.css`).then(
+					// 				(module) => module.default
+					// 			);
+					// 		}
+					// 	}
+					// }
 				}
 			}
 		}

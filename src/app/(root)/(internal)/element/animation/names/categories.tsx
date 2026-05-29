@@ -3,7 +3,6 @@
 import { Fragment, useEffect, useState } from 'react';
 
 import assets from '@htmlplus/ui/animation/assets.json';
-import '@htmlplus/ui/animation/names/all.js';
 
 import { capitalCase } from 'change-case';
 

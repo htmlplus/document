@@ -56,7 +56,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 	sections.push(
 		'## Usage',
 		`Follow the tutorials [here](${getPath(ROUTES.INSTALLATION_FRAMEWORK, { framework: frameworkKey })}) to use the **HTMLPLUS** library on **${frameworkKey.toUpperCase()}** projects.`,
-		`<plus-prism language="markup">npm install @htmlplus/ui ${element.dependencies || ''}</plus-prism>`
+		`<plus-prism language="bash">npm install @htmlplus/ui ${element.dependencies || ''}</plus-prism>`
 	);
 
 	sections.push(

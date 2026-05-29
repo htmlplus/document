@@ -10,11 +10,12 @@ const nextConfig: NextConfig = {
 			'./src/assets/icons/*.svg': {
 				loaders: ['raw-loader'],
 				as: '*.js'
+			},
+			'./node_modules/prism-themes/themes/*.css': {
+				loaders: ['raw-loader'],
+				as: '*.js'
 			}
 		}
-	},
-	experimental: {
-		optimizePackageImports: ['@/components', '@/containers', '@/data', '@/examples', '@/utils']
 	}
 };
 

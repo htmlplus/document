@@ -118,7 +118,7 @@ export default async function Home() {
 							</div>
 						</div>
 						<div className="hidden lg:flex items-center basis-1/2 h-[547px] justify-center">
-							<Image alt="" src="/assets/shape.png" width="384" height="384" />
+							<Image alt="" src="/assets/shape.png" width="384" height="384" loading="eager" />
 						</div>
 					</div>
 				</div>
