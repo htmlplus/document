@@ -40,22 +40,12 @@ Default breakpoints can be replaced or extended in two steps.
 
 ### 1. Type Configuration
 
-Custom breakpoints are registered by extending `PlusBreakpointOverrides`. Default breakpoints can also be disabled at this stage.
+Custom breakpoints should be defined by extending `PlusConfigOverrides`. New values override the defaults; any previous values must be explicitly redefined if they are still needed.
 
 ```js
 declare module '@htmlplus/ui' {
-  interface PlusBreakpointOverrides {
-    // Default breakpoints are disabled
-    xs: false;
-    sm: false;
-    md: false;
-    lg: false;
-    xl: false;
-
-    // Custom breakpoints are enabled
-    mobile: true;
-    tablet: true;
-    laptop: true;
+  interface PlusConfigOverrides {
+    breakpoint: 'mobile' | 'tablet' | 'laptop';
   }
 }
 ```

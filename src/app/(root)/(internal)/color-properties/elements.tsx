@@ -2,7 +2,7 @@ import { elements } from '@/data';
 
 export function Elements() {
 	const filtered = elements.filter((element) =>
-		element.properties.some((property) => property.type.includes('PlusColorOverrides'))
+		element.properties.some((property) => property.type.includes('OverridableValue<PlusColor>'))
 	);
 	return (
 		<ul>
