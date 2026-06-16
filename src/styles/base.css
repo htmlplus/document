@@ -82,7 +82,8 @@
 	}
 
 	plus-prism {
-		margin-bottom: 0.8125rem;
+		/* biome-ignore lint/complexity/noImportantStyles: TODO */
+		margin-bottom: 0.8125rem !important;
 	}
 
 	plus-prism::part(pre) {

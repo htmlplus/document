@@ -10,6 +10,7 @@ export const ROUTES = {
 	SETUP: '/setup',
 	BREAKPOINTS: '/breakpoints',
 	GLOBAL_CONFIGURATION: '/global-configuration',
+	OVERRIDABLE_PROPERTIES: '/overridable-properties',
 	OVERRIDES_PROPERTY: '/overrides-property',
 	VARIANT_PROPERTY: '/variant-property',
 	COLOR_PROPERTIES: '/color-properties',

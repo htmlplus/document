@@ -1,0 +1,57 @@
+# Overridable Properties
+
+Some properties exposed by elements are marked as **overridable**. These properties typically represent design-system values such as **colors**, **sizes**, **spacing**, or **variants**.
+
+Default values are provided by the library, but allowed values can be **extended** or **replaced** through TypeScript module augmentation without modifying the source code.
+
+Overridable properties are listed in each element's API documentation.
+
+## Example
+
+An overridable property may look like this:
+
+```typescript
+class PlusAvatar {
+  @Property({ reflect: true })
+  size: OverridableValue<'sm' | 'md' | 'lg'> = 'md';
+}
+```
+
+And can be used as follows:
+
+```html
+<plus-avatar size="md"></plus-avatar>
+```
+
+## Customizing Values
+
+A TypeScript declaration file (for example, `plus.d.ts`) should be created and included in `tsconfig.json`.
+
+Allowed values can then be replaced or extended using module augmentation:
+
+```typescript
+declare module '@htmlplus/ui' {
+  interface PlusAvatarOverrides {
+    size: 'small' | 'medium' | 'large';
+  }
+}
+
+// This statement ensures the file is treated as a module by TypeScript.
+export {}
+```
+
+After augmentation, the new values are enforced by TypeScript:
+
+```html
+<plus-avatar size="medium"></plus-avatar>
+```
+
+## CSS Synchronization
+
+When an overridable property is also `reflected`, CSS selectors are not updated automatically. Styles must be kept in sync with the customized values and their CSS implementation.
+
+```css
+plus-avatar[size="small"] {}
+plus-avatar[size="medium"] {}
+plus-avatar[size="large"] {}
+```
