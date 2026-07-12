@@ -8,9 +8,8 @@ type ExtractOptional<Key extends string> = Key extends `${infer Start}?`
 		? true
 		: false;
 
-type ExtractParameter<Key extends string> = ExtractOptional<Key> extends true
-	? Partial<ExtractRecord<Key>>
-	: ExtractRecord<Key>;
+type ExtractParameter<Key extends string> =
+	ExtractOptional<Key> extends true ? Partial<ExtractRecord<Key>> : ExtractRecord<Key>;
 
 type ExtractParameterKey<Key extends string> = Key extends `${infer Start}?${infer End}`
 	? Start
@@ -38,9 +37,8 @@ type ExtractRouteKey<T extends Routes> = T[keyof T];
 
 type IsEmptyObject<T> = keyof T extends never ? true : false;
 
-type ParamArg<Path extends string> = IsEmptyObject<ExtractParameters<Path>> extends true
-	? []
-	: [parameter: ExtractParameters<Path>];
+type ParamArg<Path extends string> =
+	IsEmptyObject<ExtractParameters<Path>> extends true ? [] : [parameter: ExtractParameters<Path>];
 
 type Routes = {
 	readonly [key: string]: string;
