@@ -14,8 +14,8 @@ export const config: Config = {
 		'plus-icon': {
 			properties: {
 				resolver: {
-					default: ({ name }) => {
-						return import(`../public/assets/icons/${name}.svg`).then((module) => module.default);
+					default: ({ name }: { name: string }) => {
+						return import(`./assets/icons/${name}.svg`).then((module) => module.default);
 					}
 				}
 			}
@@ -35,15 +35,15 @@ export const config: Config = {
 							case 'plugin': {
 								await import(`prismjs/plugins/${value}/prism-${value}.js`);
 								try {
-									return await import(`!!raw-loader!prismjs/plugins/${value}/prism-${value}.css`);
+									return await import(`prismjs/plugins/${value}/prism-${value}.css`);
 								} catch {}
 								break;
 							}
 							case 'theme': {
 								try {
-									return await import(`!!raw-loader!prism-themes/themes/prism-${value}.css`);
+									return await import(`prism-themes/themes/prism-${value}.css`);
 								} catch {
-									return await import(`!!raw-loader!prismjs/themes/prism-${value}.css`);
+									return await import(`prismjs/themes/prism-${value}.css`);
 								}
 							}
 						}
