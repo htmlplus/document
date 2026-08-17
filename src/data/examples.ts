@@ -1689,7 +1689,7 @@ export const examples = [
     },
     "description": "Open the developer console.",
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('signature')\n  signatureRef!: ElementRef;\n  onClick1() {\n    console.log(this.signatureRef.nativeElement.toDataURL());\n  }\n  onClick2() {\n    console.log(this.signatureRef.nativeElement.toSVG());\n  }\n  onClick3() {\n    console.log(this.signatureRef.nativeElement.value);\n  }\n}\n",
-    "template": "<plus-center>\n  <plus-signature #signature></plus-signature>\n</plus-center>\n<br />\n<plus-stack gap=\"0.5rem\">\n  <button (click)=\"onClick1()\">To Data URL</button>\n  <button (click)=\"onClick2()\">To SVG</button>\n  <button (click)=\"onClick3()\">Get Value</button>\n</plus-stack>\n"
+    "template": "<plus-center>\n  <plus-signature #signature></plus-signature>\n</plus-center>\n<br />\n<plus-stack gap=\"0.5rem\">\n  <button type=\"button\" (click)=\"onClick1()\">To Data URL</button>\n  <button type=\"button\" (click)=\"onClick2()\">To SVG</button>\n  <button type=\"button\" (click)=\"onClick3()\">Get Value</button>\n</plus-stack>\n"
   },
   {
     "key": "javascript/signature/save",
@@ -1700,7 +1700,7 @@ export const examples = [
     },
     "description": "Open the developer console.",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\nimport '@htmlplus/ui/stack.js';\n\n$toDataURL.addEventListener('click', () => {\n  console.log($signature.toDataURL());\n});\n$toSVG.addEventListener('click', () => {\n  console.log($signature.toSVG());\n});\n$getValue.addEventListener('click', () => {\n  console.log($signature.value);\n});\n",
-    "template": "<plus-center>\n  <plus-signature id=\"$signature\"></plus-signature>\n</plus-center>\n<br />\n<plus-stack gap=\"0.5rem\">\n  <button id=\"$toDataURL\">To Data URL</button>\n  <button id=\"$toSVG\">To SVG</button>\n  <button id=\"$getValue\">Get Value</button>\n</plus-stack>\n"
+    "template": "<plus-center>\n  <plus-signature id=\"$signature\"></plus-signature>\n</plus-center>\n<br />\n<plus-stack gap=\"0.5rem\">\n  <button type=\"button\" id=\"$toDataURL\">To Data URL</button>\n  <button type=\"button\" id=\"$toSVG\">To SVG</button>\n  <button type=\"button\" id=\"$getValue\">Get Value</button>\n</plus-stack>\n"
   },
   {
     "key": "react/signature/save",
@@ -1710,7 +1710,7 @@ export const examples = [
       "rtl": false
     },
     "description": "Open the developer console.",
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const signatureRef = useRef();\n  function onClick1() {\n    console.log(signatureRef.current.toDataURL());\n  }\n  function onClick2() {\n    console.log(signatureRef.current.toSVG());\n  }\n  function onClick3() {\n    console.log(signatureRef.current.value);\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-signature ref={signatureRef}></plus-signature>\n      </plus-center>\n      <br />\n      <plus-stack gap=\"0.5rem\">\n        <button onClick={onClick1}>To Data URL</button>\n        <button onClick={onClick2}>To SVG</button>\n        <button onClick={onClick3}>Get Value</button>\n      </plus-stack>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const signatureRef = useRef();\n  function onClick1() {\n    console.log(signatureRef.current.toDataURL());\n  }\n  function onClick2() {\n    console.log(signatureRef.current.toSVG());\n  }\n  function onClick3() {\n    console.log(signatureRef.current.value);\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-signature ref={signatureRef}></plus-signature>\n      </plus-center>\n      <br />\n      <plus-stack gap=\"0.5rem\">\n        <button type=\"button\" onClick={onClick1}>\n          To Data URL\n        </button>\n        <button type=\"button\" onClick={onClick2}>\n          To SVG\n        </button>\n        <button type=\"button\" onClick={onClick3}>\n          Get Value\n        </button>\n      </plus-stack>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/signature/save",
@@ -1721,7 +1721,7 @@ export const examples = [
     },
     "description": "Open the developer console.",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\nimport '@htmlplus/ui/stack.js';\n\nlet signatureRef;\nfunction onClick1() {\n  console.log(signatureRef.toDataURL());\n}\nfunction onClick2() {\n  console.log(signatureRef.toSVG());\n}\nfunction onClick3() {\n  console.log(signatureRef.value);\n}\n",
-    "template": "<plus-center>\n  <plus-signature bind:this={signatureRef}></plus-signature>\n</plus-center>\n<br />\n<plus-stack gap=\"0.5rem\">\n  <button on:click={onClick1}>To Data URL</button>\n  <button on:click={onClick2}>To SVG</button>\n  <button on:click={onClick3}>Get Value</button>\n</plus-stack>\n"
+    "template": "<plus-center>\n  <plus-signature bind:this={signatureRef}></plus-signature>\n</plus-center>\n<br />\n<plus-stack gap=\"0.5rem\">\n  <button type=\"button\" on:click={onClick1}>To Data URL</button>\n  <button type=\"button\" on:click={onClick2}>To SVG</button>\n  <button type=\"button\" on:click={onClick3}>Get Value</button>\n</plus-stack>\n"
   },
   {
     "key": "vue/signature/save",
@@ -1732,7 +1732,7 @@ export const examples = [
     },
     "description": "Open the developer console.",
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\nimport '@htmlplus/ui/stack.js';\n\nconst signatureRef = ref();\nfunction onClick1() {\n  console.log(signatureRef.value.toDataURL());\n}\nfunction onClick2() {\n  console.log(signatureRef.value.toSVG());\n}\nfunction onClick3() {\n  console.log(signatureRef.value.value);\n}\n",
-    "template": "<div>\n  <plus-center>\n    <plus-signature ref=\"signatureRef\"></plus-signature>\n  </plus-center>\n  <br />\n  <plus-stack gap=\"0.5rem\">\n    <button @click=\"onClick1\">To Data URL</button>\n    <button @click=\"onClick2\">To SVG</button>\n    <button @click=\"onClick3\">Get Value</button>\n  </plus-stack>\n</div>\n"
+    "template": "<div>\n  <plus-center>\n    <plus-signature ref=\"signatureRef\"></plus-signature>\n  </plus-center>\n  <br />\n  <plus-stack gap=\"0.5rem\">\n    <button type=\"button\" @click=\"onClick1\">To Data URL</button>\n    <button type=\"button\" @click=\"onClick2\">To SVG</button>\n    <button type=\"button\" @click=\"onClick3\">Get Value</button>\n  </plus-stack>\n</div>\n"
   },
   {
     "key": "angular/signature/resizable",
@@ -1894,7 +1894,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('signature')\n  signatureRef!: ElementRef;\n  onClick() {\n    this.signatureRef.nativeElement.value = [\n      {\n        penColor: 'black',\n        dotSize: 0,\n        minWidth: 0.5,\n        maxWidth: 2.5,\n        velocityFilterWeight: 0.7,\n        compositeOperation: 'source-over',\n        points: [\n          {\n            time: 1765999675208,\n            x: 103.33203125,\n            y: 101.4375,\n            pressure: 0.5\n          },\n          {\n            time: 1765999675347,\n            x: 111.4140625,\n            y: 94.11328125,\n            pressure: 0.5\n          },\n          {\n            time: 1765999675364,\n            x: 123.234375,\n            y: 84.05078125,\n            pressure: 0.5\n          },\n          {\n            time: 1765999675379,\n            x: 151.421875,\n            y: 63.6484375,\n            pressure: 0.5\n          },\n          {\n            time: 1765999675396,\n            x: 174.16015625,\n            y: 48.421875,\n            pressure: 0.5\n          },\n          {\n            time: 1765999675413,\n            x: 186.0390625,\n            y: 41.5390625,\n            pressure: 0.5\n          },\n          {\n            time: 1765999675430,\n            x: 191.99609375,\n            y: 38.26953125,\n            pressure: 0.5\n          }\n        ]\n      }\n    ];\n  }\n}\n",
-    "template": "<plus-center>\n  <plus-signature #signature></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"onClick()\">Load</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-signature #signature></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button type=\"button\" (click)=\"onClick()\">Load</button>\n</plus-center>\n"
   },
   {
     "key": "javascript/signature/load",
@@ -1904,7 +1904,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\n\n$button.addEventListener('click', () => {\n  $signature.value = [\n    {\n      penColor: 'black',\n      dotSize: 0,\n      minWidth: 0.5,\n      maxWidth: 2.5,\n      velocityFilterWeight: 0.7,\n      compositeOperation: 'source-over',\n      points: [\n        {\n          time: 1765999675208,\n          x: 103.33203125,\n          y: 101.4375,\n          pressure: 0.5\n        },\n        {\n          time: 1765999675347,\n          x: 111.4140625,\n          y: 94.11328125,\n          pressure: 0.5\n        },\n        {\n          time: 1765999675364,\n          x: 123.234375,\n          y: 84.05078125,\n          pressure: 0.5\n        },\n        {\n          time: 1765999675379,\n          x: 151.421875,\n          y: 63.6484375,\n          pressure: 0.5\n        },\n        {\n          time: 1765999675396,\n          x: 174.16015625,\n          y: 48.421875,\n          pressure: 0.5\n        },\n        {\n          time: 1765999675413,\n          x: 186.0390625,\n          y: 41.5390625,\n          pressure: 0.5\n        },\n        {\n          time: 1765999675430,\n          x: 191.99609375,\n          y: 38.26953125,\n          pressure: 0.5\n        }\n      ]\n    }\n  ];\n});\n",
-    "template": "<plus-center>\n  <plus-signature id=\"$signature\"></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button id=\"$button\">Load</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-signature id=\"$signature\"></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button type=\"button\" id=\"$button\">Load</button>\n</plus-center>\n"
   },
   {
     "key": "react/signature/load",
@@ -1913,7 +1913,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\n\nfunction App() {\n  const signatureRef = useRef();\n  function onClick() {\n    signatureRef.current.value = [\n      {\n        penColor: 'black',\n        dotSize: 0,\n        minWidth: 0.5,\n        maxWidth: 2.5,\n        velocityFilterWeight: 0.7,\n        compositeOperation: 'source-over',\n        points: [\n          {\n            time: 1765999675208,\n            x: 103.33203125,\n            y: 101.4375,\n            pressure: 0.5\n          },\n          {\n            time: 1765999675347,\n            x: 111.4140625,\n            y: 94.11328125,\n            pressure: 0.5\n          },\n          {\n            time: 1765999675364,\n            x: 123.234375,\n            y: 84.05078125,\n            pressure: 0.5\n          },\n          {\n            time: 1765999675379,\n            x: 151.421875,\n            y: 63.6484375,\n            pressure: 0.5\n          },\n          {\n            time: 1765999675396,\n            x: 174.16015625,\n            y: 48.421875,\n            pressure: 0.5\n          },\n          {\n            time: 1765999675413,\n            x: 186.0390625,\n            y: 41.5390625,\n            pressure: 0.5\n          },\n          {\n            time: 1765999675430,\n            x: 191.99609375,\n            y: 38.26953125,\n            pressure: 0.5\n          }\n        ]\n      }\n    ];\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-signature ref={signatureRef}></plus-signature>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={onClick}>Load</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\n\nfunction App() {\n  const signatureRef = useRef();\n  function onClick() {\n    signatureRef.current.value = [\n      {\n        penColor: 'black',\n        dotSize: 0,\n        minWidth: 0.5,\n        maxWidth: 2.5,\n        velocityFilterWeight: 0.7,\n        compositeOperation: 'source-over',\n        points: [\n          {\n            time: 1765999675208,\n            x: 103.33203125,\n            y: 101.4375,\n            pressure: 0.5\n          },\n          {\n            time: 1765999675347,\n            x: 111.4140625,\n            y: 94.11328125,\n            pressure: 0.5\n          },\n          {\n            time: 1765999675364,\n            x: 123.234375,\n            y: 84.05078125,\n            pressure: 0.5\n          },\n          {\n            time: 1765999675379,\n            x: 151.421875,\n            y: 63.6484375,\n            pressure: 0.5\n          },\n          {\n            time: 1765999675396,\n            x: 174.16015625,\n            y: 48.421875,\n            pressure: 0.5\n          },\n          {\n            time: 1765999675413,\n            x: 186.0390625,\n            y: 41.5390625,\n            pressure: 0.5\n          },\n          {\n            time: 1765999675430,\n            x: 191.99609375,\n            y: 38.26953125,\n            pressure: 0.5\n          }\n        ]\n      }\n    ];\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-signature ref={signatureRef}></plus-signature>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button type=\"button\" onClick={onClick}>\n          Load\n        </button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/signature/load",
@@ -1923,7 +1923,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\n\nlet signatureRef;\nfunction onClick() {\n  signatureRef.value = [\n    {\n      penColor: 'black',\n      dotSize: 0,\n      minWidth: 0.5,\n      maxWidth: 2.5,\n      velocityFilterWeight: 0.7,\n      compositeOperation: 'source-over',\n      points: [\n        {\n          time: 1765999675208,\n          x: 103.33203125,\n          y: 101.4375,\n          pressure: 0.5\n        },\n        {\n          time: 1765999675347,\n          x: 111.4140625,\n          y: 94.11328125,\n          pressure: 0.5\n        },\n        {\n          time: 1765999675364,\n          x: 123.234375,\n          y: 84.05078125,\n          pressure: 0.5\n        },\n        {\n          time: 1765999675379,\n          x: 151.421875,\n          y: 63.6484375,\n          pressure: 0.5\n        },\n        {\n          time: 1765999675396,\n          x: 174.16015625,\n          y: 48.421875,\n          pressure: 0.5\n        },\n        {\n          time: 1765999675413,\n          x: 186.0390625,\n          y: 41.5390625,\n          pressure: 0.5\n        },\n        {\n          time: 1765999675430,\n          x: 191.99609375,\n          y: 38.26953125,\n          pressure: 0.5\n        }\n      ]\n    }\n  ];\n}\n",
-    "template": "<plus-center>\n  <plus-signature bind:this={signatureRef}></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click={onClick}>Load</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-signature bind:this={signatureRef}></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button type=\"button\" on:click={onClick}>Load</button>\n</plus-center>\n"
   },
   {
     "key": "vue/signature/load",
@@ -1933,7 +1933,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\n\nconst signatureRef = ref();\nfunction onClick() {\n  signatureRef.value.value = [\n    {\n      penColor: 'black',\n      dotSize: 0,\n      minWidth: 0.5,\n      maxWidth: 2.5,\n      velocityFilterWeight: 0.7,\n      compositeOperation: 'source-over',\n      points: [\n        {\n          time: 1765999675208,\n          x: 103.33203125,\n          y: 101.4375,\n          pressure: 0.5\n        },\n        {\n          time: 1765999675347,\n          x: 111.4140625,\n          y: 94.11328125,\n          pressure: 0.5\n        },\n        {\n          time: 1765999675364,\n          x: 123.234375,\n          y: 84.05078125,\n          pressure: 0.5\n        },\n        {\n          time: 1765999675379,\n          x: 151.421875,\n          y: 63.6484375,\n          pressure: 0.5\n        },\n        {\n          time: 1765999675396,\n          x: 174.16015625,\n          y: 48.421875,\n          pressure: 0.5\n        },\n        {\n          time: 1765999675413,\n          x: 186.0390625,\n          y: 41.5390625,\n          pressure: 0.5\n        },\n        {\n          time: 1765999675430,\n          x: 191.99609375,\n          y: 38.26953125,\n          pressure: 0.5\n        }\n      ]\n    }\n  ];\n}\n",
-    "template": "<div>\n  <plus-center>\n    <plus-signature ref=\"signatureRef\"></plus-signature>\n  </plus-center>\n  <br />\n  <plus-center>\n    <button @click=\"onClick\">Load</button>\n  </plus-center>\n</div>\n"
+    "template": "<div>\n  <plus-center>\n    <plus-signature ref=\"signatureRef\"></plus-signature>\n  </plus-center>\n  <br />\n  <plus-center>\n    <button type=\"button\" @click=\"onClick\">Load</button>\n  </plus-center>\n</div>\n"
   },
   {
     "key": "angular/signature/history",
@@ -1943,7 +1943,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('signature')\n  signatureRef!: ElementRef;\n  disabled2 = true;\n  disabled1 = true;\n  sync() {\n    this.disabled1 = !this.signatureRef.nativeElement.undoable;\n    this.disabled2 = !this.signatureRef.nativeElement.redoable;\n  }\n  onClick1() {\n    this.signatureRef.nativeElement.undo();\n    this.sync();\n  }\n  onClick2() {\n    this.signatureRef.nativeElement.redo();\n    this.sync();\n  }\n  onPlusEnd() {\n    this.sync();\n  }\n}\n",
-    "template": "<plus-center>\n  <plus-signature (plus-end)=\"onPlusEnd()\" #signature></plus-signature>\n</plus-center>\n<br />\n<plus-stack gap=\"1rem\">\n  <button (click)=\"onClick1()\" [disabled]=\"disabled1\">Undo</button>\n  <button (click)=\"onClick2()\" [disabled]=\"disabled2\">Redo</button>\n</plus-stack>\n"
+    "template": "<plus-center>\n  <plus-signature (plus-end)=\"onPlusEnd()\" #signature></plus-signature>\n</plus-center>\n<br />\n<plus-stack gap=\"1rem\">\n  <button type=\"button\" (click)=\"onClick1()\" [disabled]=\"disabled1\">Undo</button>\n  <button type=\"button\" (click)=\"onClick2()\" [disabled]=\"disabled2\">Redo</button>\n</plus-stack>\n"
   },
   {
     "key": "javascript/signature/history",
@@ -1953,7 +1953,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\nimport '@htmlplus/ui/stack.js';\n\nconst sync = () => {\n  $undo.disabled = !$signature.undoable;\n  $redo.disabled = !$signature.redoable;\n};\n$undo.addEventListener('click', () => {\n  $signature.undo();\n  sync();\n});\n$redo.addEventListener('click', () => {\n  $signature.redo();\n  sync();\n});\n$signature.addEventListener('plus-end', () => {\n  sync();\n});\n",
-    "template": "<plus-center>\n  <plus-signature id=\"$signature\"></plus-signature>\n</plus-center>\n<br />\n<plus-stack gap=\"1rem\">\n  <button id=\"$undo\" disabled>Undo</button>\n  <button id=\"$redo\" disabled>Redo</button>\n</plus-stack>\n"
+    "template": "<plus-center>\n  <plus-signature id=\"$signature\"></plus-signature>\n</plus-center>\n<br />\n<plus-stack gap=\"1rem\">\n  <button type=\"button\" id=\"$undo\" disabled>Undo</button>\n  <button type=\"button\" id=\"$redo\" disabled>Redo</button>\n</plus-stack>\n"
   },
   {
     "key": "react/signature/history",
@@ -1962,7 +1962,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useRef, useState } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const signatureRef = useRef();\n  const [disabled2, setDisabled2] = useState(true);\n  const [disabled1, setDisabled1] = useState(true);\n  const sync = () => {\n    setDisabled1(!signatureRef.current.undoable);\n    setDisabled2(!signatureRef.current.redoable);\n  };\n  function onClick1() {\n    signatureRef.current.undo();\n    sync();\n  }\n  function onClick2() {\n    signatureRef.current.redo();\n    sync();\n  }\n  function onPlusEnd() {\n    sync();\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-signature onPlusEnd={onPlusEnd} ref={signatureRef}></plus-signature>\n      </plus-center>\n      <br />\n      <plus-stack gap=\"1rem\">\n        <button disabled={disabled1} onClick={onClick1}>\n          Undo\n        </button>\n        <button disabled={disabled2} onClick={onClick2}>\n          Redo\n        </button>\n      </plus-stack>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef, useState } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const signatureRef = useRef();\n  const [disabled2, setDisabled2] = useState(true);\n  const [disabled1, setDisabled1] = useState(true);\n  const sync = () => {\n    setDisabled1(!signatureRef.current.undoable);\n    setDisabled2(!signatureRef.current.redoable);\n  };\n  function onClick1() {\n    signatureRef.current.undo();\n    sync();\n  }\n  function onClick2() {\n    signatureRef.current.redo();\n    sync();\n  }\n  function onPlusEnd() {\n    sync();\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-signature onPlusEnd={onPlusEnd} ref={signatureRef}></plus-signature>\n      </plus-center>\n      <br />\n      <plus-stack gap=\"1rem\">\n        <button type=\"button\" disabled={disabled1} onClick={onClick1}>\n          Undo\n        </button>\n        <button type=\"button\" disabled={disabled2} onClick={onClick2}>\n          Redo\n        </button>\n      </plus-stack>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/signature/history",
@@ -1972,7 +1972,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\nimport '@htmlplus/ui/stack.js';\n\nlet signatureRef;\nlet disabled2 = true;\nlet disabled1 = true;\nconst sync = () => {\n  disabled1 = !signatureRef.undoable;\n  disabled2 = !signatureRef.redoable;\n};\nfunction onClick1() {\n  signatureRef.undo();\n  sync();\n}\nfunction onClick2() {\n  signatureRef.redo();\n  sync();\n}\nfunction onPlusEnd() {\n  sync();\n}\n",
-    "template": "<plus-center>\n  <plus-signature on:plus-end={onPlusEnd} bind:this={signatureRef}></plus-signature>\n</plus-center>\n<br />\n<plus-stack gap=\"1rem\">\n  <button disabled={disabled1} on:click={onClick1}>Undo</button>\n  <button disabled={disabled2} on:click={onClick2}>Redo</button>\n</plus-stack>\n"
+    "template": "<plus-center>\n  <plus-signature on:plus-end={onPlusEnd} bind:this={signatureRef}></plus-signature>\n</plus-center>\n<br />\n<plus-stack gap=\"1rem\">\n  <button type=\"button\" disabled={disabled1} on:click={onClick1}>Undo</button>\n  <button type=\"button\" disabled={disabled2} on:click={onClick2}>Redo</button>\n</plus-stack>\n"
   },
   {
     "key": "vue/signature/history",
@@ -1982,7 +1982,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\nimport '@htmlplus/ui/stack.js';\n\nconst signatureRef = ref();\nconst disabled2 = ref(true);\nconst disabled1 = ref(true);\nconst sync = () => {\n  disabled1.value = !signatureRef.value.undoable;\n  disabled2.value = !signatureRef.value.redoable;\n};\nfunction onClick1() {\n  signatureRef.value.undo();\n  sync();\n}\nfunction onClick2() {\n  signatureRef.value.redo();\n  sync();\n}\nfunction onPlusEnd() {\n  sync();\n}\n",
-    "template": "<div>\n  <plus-center>\n    <plus-signature @plus-end=\"onPlusEnd\" ref=\"signatureRef\"></plus-signature>\n  </plus-center>\n  <br />\n  <plus-stack gap=\"1rem\">\n    <button @click=\"onClick1\" :disabled=\"disabled1\">Undo</button>\n    <button @click=\"onClick2\" :disabled=\"disabled2\">Redo</button>\n  </plus-stack>\n</div>\n"
+    "template": "<div>\n  <plus-center>\n    <plus-signature @plus-end=\"onPlusEnd\" ref=\"signatureRef\"></plus-signature>\n  </plus-center>\n  <br />\n  <plus-stack gap=\"1rem\">\n    <button type=\"button\" @click=\"onClick1\" :disabled=\"disabled1\">Undo</button>\n    <button type=\"button\" @click=\"onClick2\" :disabled=\"disabled2\">Redo</button>\n  </plus-stack>\n</div>\n"
   },
   {
     "key": "angular/signature/events",
@@ -2247,7 +2247,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('signature')\n  signatureRef!: ElementRef;\n  onClick() {\n    this.signatureRef.nativeElement.clear();\n  }\n}\n",
-    "template": "<plus-center>\n  <plus-signature #signature></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"onClick()\">Clear</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-signature #signature></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button type=\"button\" (click)=\"onClick()\">Clear</button>\n</plus-center>\n"
   },
   {
     "key": "javascript/signature/clear",
@@ -2257,7 +2257,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\n\n$button.addEventListener('click', () => {\n  $signature.clear();\n});\n",
-    "template": "<plus-center>\n  <plus-signature id=\"$signature\"></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button id=\"$button\">Clear</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-signature id=\"$signature\"></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button type=\"button\" id=\"$button\">Clear</button>\n</plus-center>\n"
   },
   {
     "key": "react/signature/clear",
@@ -2266,7 +2266,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\n\nfunction App() {\n  const signatureRef = useRef();\n  function onClick() {\n    signatureRef.current.clear();\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-signature ref={signatureRef}></plus-signature>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={onClick}>Clear</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\n\nfunction App() {\n  const signatureRef = useRef();\n  function onClick() {\n    signatureRef.current.clear();\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-signature ref={signatureRef}></plus-signature>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button type=\"button\" onClick={onClick}>\n          Clear\n        </button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/signature/clear",
@@ -2276,7 +2276,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\n\nlet signatureRef;\nfunction onClick() {\n  signatureRef.clear();\n}\n",
-    "template": "<plus-center>\n  <plus-signature bind:this={signatureRef}></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click={onClick}>Clear</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-signature bind:this={signatureRef}></plus-signature>\n</plus-center>\n<br />\n<plus-center>\n  <button type=\"button\" on:click={onClick}>Clear</button>\n</plus-center>\n"
   },
   {
     "key": "vue/signature/clear",
@@ -2286,7 +2286,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/signature.js';\n\nconst signatureRef = ref();\nfunction onClick() {\n  signatureRef.value.clear();\n}\n",
-    "template": "<div>\n  <plus-center>\n    <plus-signature ref=\"signatureRef\"></plus-signature>\n  </plus-center>\n  <br />\n  <plus-center>\n    <button @click=\"onClick\">Clear</button>\n  </plus-center>\n</div>\n"
+    "template": "<div>\n  <plus-center>\n    <plus-signature ref=\"signatureRef\"></plus-signature>\n  </plus-center>\n  <br />\n  <plus-center>\n    <button type=\"button\" @click=\"onClick\">Clear</button>\n  </plus-center>\n</div>\n"
   },
   {
     "key": "angular/signature/clear-on-resize",
@@ -3105,7 +3105,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/progress-bar.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-progress-bar variant=\"indeterminate\"></plus-progress-bar>\n"
+    "template": "<plus-progress-bar indeterminate></plus-progress-bar>\n"
   },
   {
     "key": "javascript/progress-bar/indeterminate",
@@ -3115,7 +3115,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/progress-bar.js';\n",
-    "template": "<plus-progress-bar variant=\"indeterminate\"></plus-progress-bar>\n"
+    "template": "<plus-progress-bar indeterminate></plus-progress-bar>\n"
   },
   {
     "key": "react/progress-bar/indeterminate",
@@ -3124,7 +3124,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/progress-bar.js';\n\nfunction App() {\n  return <plus-progress-bar variant=\"indeterminate\"></plus-progress-bar>;\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/progress-bar.js';\n\nfunction App() {\n  return <plus-progress-bar indeterminate></plus-progress-bar>;\n}\nexport default App;\n"
   },
   {
     "key": "svelte/progress-bar/indeterminate",
@@ -3134,7 +3134,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/progress-bar.js';\n",
-    "template": "<plus-progress-bar variant=\"indeterminate\"></plus-progress-bar>\n"
+    "template": "<plus-progress-bar indeterminate></plus-progress-bar>\n"
   },
   {
     "key": "vue/progress-bar/indeterminate",
@@ -3144,7 +3144,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/progress-bar.js';\n",
-    "template": "<plus-progress-bar variant=\"indeterminate\"></plus-progress-bar>\n"
+    "template": "<plus-progress-bar indeterminate></plus-progress-bar>\n"
   },
   {
     "key": "angular/progress-bar/height",
@@ -3561,7 +3561,7 @@ export const examples = [
       "rtl": false
     },
     "description": "The default theme is supported by default. If other themes are required, the `resolver` property should be configured to return a raw CSS style.",
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key == 'theme') {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key === 'theme') {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism theme=\"default\">const theme = 'default';</plus-prism>\n  <plus-prism theme=\"coy\">const theme = 'coy';</plus-prism>\n  <plus-prism theme=\"dark\">const theme = 'dark';</plus-prism>\n  <plus-prism theme=\"funky\">const theme = 'funky';</plus-prism>\n  <plus-prism theme=\"okaidia\">const theme = 'okaidia';</plus-prism>\n  <plus-prism theme=\"solarizedlight\">const theme = 'solarizedlight';</plus-prism>\n  <plus-prism theme=\"tomorrow\">const theme = 'tomorrow';</plus-prism>\n  <plus-prism theme=\"twilight\">const theme = 'twilight';</plus-prism>\n</plus-stack>\n"
   },
@@ -3573,7 +3573,7 @@ export const examples = [
       "rtl": false
     },
     "description": "The default theme is supported by default. If other themes are required, the `resolver` property should be configured to return a raw CSS style.",
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key == 'theme') {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key === 'theme') {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism theme=\"default\">const theme = 'default';</plus-prism>\n  <plus-prism theme=\"coy\">const theme = 'coy';</plus-prism>\n  <plus-prism theme=\"dark\">const theme = 'dark';</plus-prism>\n  <plus-prism theme=\"funky\">const theme = 'funky';</plus-prism>\n  <plus-prism theme=\"okaidia\">const theme = 'okaidia';</plus-prism>\n  <plus-prism theme=\"solarizedlight\">const theme = 'solarizedlight';</plus-prism>\n  <plus-prism theme=\"tomorrow\">const theme = 'tomorrow';</plus-prism>\n  <plus-prism theme=\"twilight\">const theme = 'twilight';</plus-prism>\n</plus-stack>\n"
   },
@@ -3585,7 +3585,7 @@ export const examples = [
       "rtl": false
     },
     "description": "The default theme is supported by default. If other themes are required, the `resolver` property should be configured to return a raw CSS style.",
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key == 'theme') {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key === 'theme') {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n      <plus-prism theme=\"default\">const theme = 'default';</plus-prism>\n      <plus-prism theme=\"coy\">const theme = 'coy';</plus-prism>\n      <plus-prism theme=\"dark\">const theme = 'dark';</plus-prism>\n      <plus-prism theme=\"funky\">const theme = 'funky';</plus-prism>\n      <plus-prism theme=\"okaidia\">const theme = 'okaidia';</plus-prism>\n      <plus-prism theme=\"solarizedlight\">const theme = 'solarizedlight';</plus-prism>\n      <plus-prism theme=\"tomorrow\">const theme = 'tomorrow';</plus-prism>\n      <plus-prism theme=\"twilight\">const theme = 'twilight';</plus-prism>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
@@ -3596,7 +3596,7 @@ export const examples = [
       "rtl": false
     },
     "description": "The default theme is supported by default. If other themes are required, the `resolver` property should be configured to return a raw CSS style.",
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key == 'theme') {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key === 'theme') {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism theme=\"default\">const theme = 'default';</plus-prism>\n  <plus-prism theme=\"coy\">const theme = 'coy';</plus-prism>\n  <plus-prism theme=\"dark\">const theme = 'dark';</plus-prism>\n  <plus-prism theme=\"funky\">const theme = 'funky';</plus-prism>\n  <plus-prism theme=\"okaidia\">const theme = 'okaidia';</plus-prism>\n  <plus-prism theme=\"solarizedlight\">const theme = 'solarizedlight';</plus-prism>\n  <plus-prism theme=\"tomorrow\">const theme = 'tomorrow';</plus-prism>\n  <plus-prism theme=\"twilight\">const theme = 'twilight';</plus-prism>\n</plus-stack>\n"
   },
@@ -3608,7 +3608,7 @@ export const examples = [
       "rtl": false
     },
     "description": "The default theme is supported by default. If other themes are required, the `resolver` property should be configured to return a raw CSS style.",
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key == 'theme') {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key === 'theme') {\n              const url = `https://cdn.jsdelivr.net/npm/prismjs/themes/prism-${value}.css`;\n              const styles = await fetch(url).then((response) => response.text());\n              return styles;\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism theme=\"default\">const theme = 'default';</plus-prism>\n  <plus-prism theme=\"coy\">const theme = 'coy';</plus-prism>\n  <plus-prism theme=\"dark\">const theme = 'dark';</plus-prism>\n  <plus-prism theme=\"funky\">const theme = 'funky';</plus-prism>\n  <plus-prism theme=\"okaidia\">const theme = 'okaidia';</plus-prism>\n  <plus-prism theme=\"solarizedlight\">const theme = 'solarizedlight';</plus-prism>\n  <plus-prism theme=\"tomorrow\">const theme = 'tomorrow';</plus-prism>\n  <plus-prism theme=\"twilight\">const theme = 'twilight';</plus-prism>\n</plus-stack>\n"
   },
@@ -3620,7 +3620,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('prism2')\n  prism2Ref!: ElementRef;\n  @ViewChild('prism1')\n  prism1Ref!: ElementRef;\n  onClick() {\n    this.prism1Ref.nativeElement.innerHTML = `const now = ${Date.now()};`;\n    this.prism2Ref.nativeElement.innerHTML = `const now = ${Date.now()};`;\n  }\n}\n",
-    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism #prism1>const now = 0;</plus-prism>\n  <plus-prism sync #prism2>const now = 0;</plus-prism>\n  <plus-center>\n    <button (click)=\"onClick()\">Change</button>\n  </plus-center>\n</plus-stack>\n"
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism #prism1>const now = 0;</plus-prism>\n  <plus-prism sync #prism2>const now = 0;</plus-prism>\n  <plus-center>\n    <button type=\"button\" (click)=\"onClick()\">Change</button>\n  </plus-center>\n</plus-stack>\n"
   },
   {
     "key": "javascript/prism/sync",
@@ -3630,7 +3630,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\n$change.addEventListener('click', () => {\n  $prism1.innerHTML = `const now = ${Date.now()};`;\n  $prism2.innerHTML = `const now = ${Date.now()};`;\n});\n",
-    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism id=\"$prism1\">const now = 0;</plus-prism>\n  <plus-prism id=\"$prism2\" sync>const now = 0;</plus-prism>\n  <plus-center>\n    <button id=\"$change\">Change</button>\n  </plus-center>\n</plus-stack>\n"
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism id=\"$prism1\">const now = 0;</plus-prism>\n  <plus-prism id=\"$prism2\" sync>const now = 0;</plus-prism>\n  <plus-center>\n    <button type=\"button\" id=\"$change\">Change</button>\n  </plus-center>\n</plus-stack>\n"
   },
   {
     "key": "react/prism/sync",
@@ -3639,7 +3639,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const prism2Ref = useRef();\n  const prism1Ref = useRef();\n  function onClick() {\n    prism1Ref.current.innerHTML = `const now = ${Date.now()};`;\n    prism2Ref.current.innerHTML = `const now = ${Date.now()};`;\n  }\n  return (\n    <plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n      <plus-prism ref={prism1Ref}>const now = 0;</plus-prism>\n      <plus-prism sync ref={prism2Ref}>\n        const now = 0;\n      </plus-prism>\n      <plus-center>\n        <button onClick={onClick}>Change</button>\n      </plus-center>\n    </plus-stack>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const prism2Ref = useRef();\n  const prism1Ref = useRef();\n  function onClick() {\n    prism1Ref.current.innerHTML = `const now = ${Date.now()};`;\n    prism2Ref.current.innerHTML = `const now = ${Date.now()};`;\n  }\n  return (\n    <plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n      <plus-prism ref={prism1Ref}>const now = 0;</plus-prism>\n      <plus-prism sync ref={prism2Ref}>\n        const now = 0;\n      </plus-prism>\n      <plus-center>\n        <button type=\"button\" onClick={onClick}>\n          Change\n        </button>\n      </plus-center>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/prism/sync",
@@ -3649,7 +3649,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\nlet prism2Ref;\nlet prism1Ref;\nfunction onClick() {\n  prism1Ref.innerHTML = `const now = ${Date.now()};`;\n  prism2Ref.innerHTML = `const now = ${Date.now()};`;\n}\n",
-    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism bind:this={prism1Ref}>const now = 0;</plus-prism>\n  <plus-prism sync bind:this={prism2Ref}>const now = 0;</plus-prism>\n  <plus-center>\n    <button on:click={onClick}>Change</button>\n  </plus-center>\n</plus-stack>\n"
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism bind:this={prism1Ref}>const now = 0;</plus-prism>\n  <plus-prism sync bind:this={prism2Ref}>const now = 0;</plus-prism>\n  <plus-center>\n    <button type=\"button\" on:click={onClick}>Change</button>\n  </plus-center>\n</plus-stack>\n"
   },
   {
     "key": "vue/prism/sync",
@@ -3659,7 +3659,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\nconst prism2Ref = ref();\nconst prism1Ref = ref();\nfunction onClick() {\n  prism1Ref.value.innerHTML = `const now = ${Date.now()};`;\n  prism2Ref.value.innerHTML = `const now = ${Date.now()};`;\n}\n",
-    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism ref=\"prism1Ref\">const now = 0;</plus-prism>\n  <plus-prism sync ref=\"prism2Ref\">const now = 0;</plus-prism>\n  <plus-center>\n    <button @click=\"onClick\">Change</button>\n  </plus-center>\n</plus-stack>\n"
+    "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism ref=\"prism1Ref\">const now = 0;</plus-prism>\n  <plus-prism sync ref=\"prism2Ref\">const now = 0;</plus-prism>\n  <plus-center>\n    <button type=\"button\" @click=\"onClick\">Change</button>\n  </plus-center>\n</plus-stack>\n"
   },
   {
     "key": "angular/prism/resolver",
@@ -3728,7 +3728,7 @@ export const examples = [
       "rtl": false
     },
     "description": "To use `PrismJS` plugins, the `plugins` property should be configured. All parameters required for plugin configuration are derived from `data-*` attributes. For instance, the `line-numbers` plugin has a configuration parameter named `data-start`, which is mapped to `start` with a valid value specified in the official `PrismJS` documentation.",
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key == 'plugin') {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key === 'plugin') {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism [plugins]='{\"line-numbers\":true}'>const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism [plugins]='{\"line-numbers\":{\"start\":5}}'>const name = '@htmlplus/ui';</plus-prism>\n</plus-stack>\n"
   },
@@ -3740,7 +3740,7 @@ export const examples = [
       "rtl": false
     },
     "description": "To use `PrismJS` plugins, the `plugins` property should be configured. All parameters required for plugin configuration are derived from `data-*` attributes. For instance, the `line-numbers` plugin has a configuration parameter named `data-start`, which is mapped to `start` with a valid value specified in the official `PrismJS` documentation.",
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key == 'plugin') {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key === 'plugin') {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism plugins='{\"line-numbers\":true}'>const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism plugins='{\"line-numbers\":{\"start\":5}}'>const name = '@htmlplus/ui';</plus-prism>\n</plus-stack>\n"
   },
@@ -3752,7 +3752,7 @@ export const examples = [
       "rtl": false
     },
     "description": "To use `PrismJS` plugins, the `plugins` property should be configured. All parameters required for plugin configuration are derived from `data-*` attributes. For instance, the `line-numbers` plugin has a configuration parameter named `data-start`, which is mapped to `start` with a valid value specified in the official `PrismJS` documentation.",
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key == 'plugin') {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key === 'plugin') {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n      <plus-prism\n        plugins={{\n          'line-numbers': true\n        }}\n      >\n        const name = '@htmlplus/ui';\n      </plus-prism>\n      <plus-prism\n        plugins={{\n          'line-numbers': {\n            start: 5\n          }\n        }}\n      >\n        const name = '@htmlplus/ui';\n      </plus-prism>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
@@ -3763,7 +3763,7 @@ export const examples = [
       "rtl": false
     },
     "description": "To use `PrismJS` plugins, the `plugins` property should be configured. All parameters required for plugin configuration are derived from `data-*` attributes. For instance, the `line-numbers` plugin has a configuration parameter named `data-start`, which is mapped to `start` with a valid value specified in the official `PrismJS` documentation.",
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key == 'plugin') {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key === 'plugin') {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism\n    plugins={{\n      'line-numbers': true\n    }}>const name = '@htmlplus/ui';</plus-prism\n  >\n  <plus-prism\n    plugins={{\n      'line-numbers': {\n        start: 5\n      }\n    }}>const name = '@htmlplus/ui';</plus-prism\n  >\n</plus-stack>\n"
   },
@@ -3775,7 +3775,7 @@ export const examples = [
       "rtl": false
     },
     "description": "To use `PrismJS` plugins, the `plugins` property should be configured. All parameters required for plugin configuration are derived from `data-*` attributes. For instance, the `line-numbers` plugin has a configuration parameter named `data-start`, which is mapped to `start` with a valid value specified in the official `PrismJS` documentation.",
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key == 'plugin') {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key === 'plugin') {\n              await import(`https://esm.run/prismjs/plugins/${value}/prism-${value}.js`);\n              try {\n                const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;\n                const styles = await fetch(url).then((response) => response.text());\n                return styles;\n              } catch {}\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism :plugins='{\"line-numbers\":true}'>const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism :plugins='{\"line-numbers\":{\"start\":5}}'>const name = '@htmlplus/ui';</plus-prism>\n</plus-stack>\n"
   },
@@ -3786,7 +3786,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('prism')\n  prismRef!: ElementRef;\n  ngAfterViewInit() {\n    requestAnimationFrame(() => {\n      this.prismRef.nativeElement.innerHTML =\n        'class Person {\\n  constructor(name) {\\n    this.name = name;\\n  }\\n  sayHello() {\\n    console.log(`Hello, my name is ${this.name}`);\\n  }\\n}';\n    });\n  }\n}\n",
+    "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('prism')\n  prismRef!: ElementRef;\n  ngAfterViewInit() {\n    requestAnimationFrame(() => {\n      this.prismRef.nativeElement.innerHTML =\n        'class Person {\\n  constructor(name) {\\n    this.name = name;\\n  }\\n  sayHello() {\\n    console.log(`Hello, my name is ` + this.name);\\n  }\\n}';\n    });\n  }\n}\n",
     "template": "<plus-prism sync #prism></plus-prism>\n"
   },
   {
@@ -3796,7 +3796,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/prism.js';\n\nrequestAnimationFrame(() => {\n  $prism.innerHTML =\n    'class Person {\\n  constructor(name) {\\n    this.name = name;\\n  }\\n  sayHello() {\\n    console.log(`Hello, my name is ${this.name}`);\\n  }\\n}';\n});\n",
+    "script": "import '@htmlplus/ui/prism.js';\n\nrequestAnimationFrame(() => {\n  $prism.innerHTML =\n    'class Person {\\n  constructor(name) {\\n    this.name = name;\\n  }\\n  sayHello() {\\n    console.log(`Hello, my name is ` + this.name);\\n  }\\n}';\n});\n",
     "template": "<plus-prism id=\"$prism\" sync></plus-prism>\n"
   },
   {
@@ -3806,7 +3806,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/ui/prism.js';\n\nfunction App() {\n  const prismRef = useRef();\n  useEffect(() => {\n    requestAnimationFrame(() => {\n      prismRef.current.innerHTML =\n        'class Person {\\n  constructor(name) {\\n    this.name = name;\\n  }\\n  sayHello() {\\n    console.log(`Hello, my name is ${this.name}`);\\n  }\\n}';\n    });\n  }, []);\n  return <plus-prism sync ref={prismRef}></plus-prism>;\n}\nexport default App;\n"
+    "script": "import { useEffect, useRef } from 'react';\n\nimport '@htmlplus/ui/prism.js';\n\nfunction App() {\n  const prismRef = useRef();\n  useEffect(() => {\n    requestAnimationFrame(() => {\n      prismRef.current.innerHTML =\n        'class Person {\\n  constructor(name) {\\n    this.name = name;\\n  }\\n  sayHello() {\\n    console.log(`Hello, my name is ` + this.name);\\n  }\\n}';\n    });\n  }, []);\n  return <plus-prism sync ref={prismRef}></plus-prism>;\n}\nexport default App;\n"
   },
   {
     "key": "svelte/prism/multiline",
@@ -3815,7 +3815,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "script": "import { onMount } from 'svelte';\n\nimport '@htmlplus/ui/prism.js';\n\nlet prismRef;\nonMount(() => {\n  requestAnimationFrame(() => {\n    prismRef.innerHTML =\n      'class Person {\\n  constructor(name) {\\n    this.name = name;\\n  }\\n  sayHello() {\\n    console.log(`Hello, my name is ${this.name}`);\\n  }\\n}';\n  });\n});\n",
+    "script": "import { onMount } from 'svelte';\n\nimport '@htmlplus/ui/prism.js';\n\nlet prismRef;\nonMount(() => {\n  requestAnimationFrame(() => {\n    prismRef.innerHTML =\n      'class Person {\\n  constructor(name) {\\n    this.name = name;\\n  }\\n  sayHello() {\\n    console.log(`Hello, my name is ` + this.name);\\n  }\\n}';\n  });\n});\n",
     "template": "<plus-prism sync bind:this={prismRef}></plus-prism>\n"
   },
   {
@@ -3825,7 +3825,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "script": "import { onMounted, ref } from 'vue';\n\nimport '@htmlplus/ui/prism.js';\n\nconst prismRef = ref();\nonMounted(() => {\n  requestAnimationFrame(() => {\n    prismRef.value.innerHTML =\n      'class Person {\\n  constructor(name) {\\n    this.name = name;\\n  }\\n  sayHello() {\\n    console.log(`Hello, my name is ${this.name}`);\\n  }\\n}';\n  });\n});\n",
+    "script": "import { onMounted, ref } from 'vue';\n\nimport '@htmlplus/ui/prism.js';\n\nconst prismRef = ref();\nonMounted(() => {\n  requestAnimationFrame(() => {\n    prismRef.value.innerHTML =\n      'class Person {\\n  constructor(name) {\\n    this.name = name;\\n  }\\n  sayHello() {\\n    console.log(`Hello, my name is ` + this.name);\\n  }\\n}';\n  });\n});\n",
     "template": "<plus-prism sync ref=\"prismRef\"></plus-prism>\n"
   },
   {
@@ -3836,7 +3836,7 @@ export const examples = [
       "rtl": false
     },
     "description": "Many languages are supported by `PrismJS`, though only a few are loaded by default. These can be checked in `window.Prism.languages`. To use other languages, the `resolver` property should be configured.",
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key == 'language') {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key === 'language') {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism language=\"javascript\">const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism language=\"csharp\">string text = \"Hello World!\";</plus-prism>\n  <plus-prism language=\"rust\">let arr: [i32; 4] = [10, 20, 30, 40];</plus-prism>\n</plus-stack>\n"
   },
@@ -3848,7 +3848,7 @@ export const examples = [
       "rtl": false
     },
     "description": "Many languages are supported by `PrismJS`, though only a few are loaded by default. These can be checked in `window.Prism.languages`. To use other languages, the `resolver` property should be configured.",
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key == 'language') {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key === 'language') {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism language=\"javascript\">const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism language=\"csharp\">string text = \"Hello World!\";</plus-prism>\n  <plus-prism language=\"rust\">let arr: [i32; 4] = [10, 20, 30, 40];</plus-prism>\n</plus-stack>\n"
   },
@@ -3860,7 +3860,7 @@ export const examples = [
       "rtl": false
     },
     "description": "Many languages are supported by `PrismJS`, though only a few are loaded by default. These can be checked in `window.Prism.languages`. To use other languages, the `resolver` property should be configured.",
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key == 'language') {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key === 'language') {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n      <plus-prism language=\"javascript\">const name = '@htmlplus/ui';</plus-prism>\n      <plus-prism language=\"csharp\">string text = \"Hello World!\";</plus-prism>\n      <plus-prism language=\"rust\">let arr: [i32; 4] = [10, 20, 30, 40];</plus-prism>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
@@ -3871,7 +3871,7 @@ export const examples = [
       "rtl": false
     },
     "description": "Many languages are supported by `PrismJS`, though only a few are loaded by default. These can be checked in `window.Prism.languages`. To use other languages, the `resolver` property should be configured.",
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key == 'language') {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key === 'language') {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism language=\"javascript\">const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism language=\"csharp\">string text = \"Hello World!\";</plus-prism>\n  <plus-prism language=\"rust\">let arr: [i32; 4] = [10, 20, 30, 40];</plus-prism>\n</plus-stack>\n"
   },
@@ -3883,7 +3883,7 @@ export const examples = [
       "rtl": false
     },
     "description": "Many languages are supported by `PrismJS`, though only a few are loaded by default. These can be checked in `window.Prism.languages`. To use other languages, the `resolver` property should be configured.",
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key == 'language') {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-prism': {\n      properties: {\n        resolver: {\n          default: async ({ key, value }) => {\n            if (key === 'language') {\n              await import(`https://esm.run/prismjs/components/prism-${value}.js`);\n            }\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/prism.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"0.5rem\" items=\"stretch\" vertical>\n  <plus-prism language=\"javascript\">const name = '@htmlplus/ui';</plus-prism>\n  <plus-prism language=\"csharp\">string text = \"Hello World!\";</plus-prism>\n  <plus-prism language=\"rust\">let arr: [i32; 4] = [10, 20, 30, 40];</plus-prism>\n</plus-stack>\n"
   },
@@ -3944,7 +3944,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/prism.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-prism>const name = '@htmlplus/ui';<button slot=\"copy\">Copy</button></plus-prism>\n"
+    "template": "<plus-prism>const name = '@htmlplus/ui';<button type=\"button\" slot=\"copy\">Copy</button></plus-prism>\n"
   },
   {
     "key": "javascript/prism/copy-slot",
@@ -3954,7 +3954,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/prism.js';\n",
-    "template": "<plus-prism>const name = '@htmlplus/ui';<button slot=\"copy\">Copy</button></plus-prism>\n"
+    "template": "<plus-prism>const name = '@htmlplus/ui';<button type=\"button\" slot=\"copy\">Copy</button></plus-prism>\n"
   },
   {
     "key": "react/prism/copy-slot",
@@ -3963,7 +3963,7 @@ export const examples = [
       "isolate": true,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/prism.js';\n\nfunction App() {\n  return (\n    <plus-prism>\n      const name = '@htmlplus/ui';<button slot=\"copy\">Copy</button>\n    </plus-prism>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/prism.js';\n\nfunction App() {\n  return (\n    <plus-prism>\n      const name = '@htmlplus/ui';\n      <button type=\"button\" slot=\"copy\">\n        Copy\n      </button>\n    </plus-prism>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/prism/copy-slot",
@@ -3973,7 +3973,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/prism.js';\n",
-    "template": "<plus-prism>const name = '@htmlplus/ui';<button slot=\"copy\">Copy</button></plus-prism>\n"
+    "template": "<plus-prism>const name = '@htmlplus/ui';<button type=\"button\" slot=\"copy\">Copy</button></plus-prism>\n"
   },
   {
     "key": "vue/prism/copy-slot",
@@ -3983,7 +3983,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/prism.js';\n",
-    "template": "<plus-prism>const name = '@htmlplus/ui';<button slot=\"copy\">Copy</button></plus-prism>\n"
+    "template": "<plus-prism>const name = '@htmlplus/ui';<button type=\"button\" slot=\"copy\">Copy</button></plus-prism>\n"
   },
   {
     "key": "angular/intersection/lazy-image",
@@ -3995,7 +3995,7 @@ export const examples = [
     "description": "Loads the image after appearing in the user's viewport.",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/spinner.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  onPlusChange(event) {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  }\n}\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
-    "template": "<div class=\"container\">\n  <plus-intersection once (plus-change)=\"onPlusChange($event)\">\n    <plus-card [elevation]=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://picsum.photos/id/25/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
+    "template": "<div class=\"container\">\n  <plus-intersection once (plus-change)=\"onPlusChange($event)\">\n    <plus-card [elevation]=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy\" hidden data-src=\"https://picsum.photos/id/25/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "javascript/intersection/lazy-image",
@@ -4007,7 +4007,7 @@ export const examples = [
     "description": "Loads the image after appearing in the user's viewport.",
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/spinner.js';\n\n$intersection.addEventListener('plus-change', (event) => {\n  if (!event.detail.isIntersecting) return;\n  setTimeout(() => {\n    const image = event.target.querySelector('img');\n    const spinner = event.target.querySelector('plus-spinner');\n    const src = image.getAttribute('data-src');\n    image.setAttribute('src', src);\n    image.hidden = false;\n    spinner.hidden = true;\n  }, 1000);\n});\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
-    "template": "<div class=\"container\">\n  <plus-intersection id=\"$intersection\" once>\n    <plus-card elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://picsum.photos/id/25/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
+    "template": "<div class=\"container\">\n  <plus-intersection id=\"$intersection\" once>\n    <plus-card elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy\" hidden data-src=\"https://picsum.photos/id/25/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "react/intersection/lazy-image",
@@ -4017,7 +4017,7 @@ export const examples = [
       "rtl": false
     },
     "description": "Loads the image after appearing in the user's viewport.",
-    "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/spinner.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  }\n  return (\n    <div className=\"container\">\n      <plus-intersection once onPlusChange={onPlusChange}>\n        <plus-card elevation={10}>\n          <plus-spinner></plus-spinner>\n          <img alt=\"Lazy Image\" hidden data-src=\"https://picsum.photos/id/25/200/200\" />\n        </plus-card>\n      </plus-intersection>\n    </div>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/spinner.js';\n\nfunction App() {\n  function onPlusChange(event) {\n    if (!event.detail.isIntersecting) return;\n    setTimeout(() => {\n      const image = event.target.querySelector('img');\n      const spinner = event.target.querySelector('plus-spinner');\n      const src = image.getAttribute('data-src');\n      image.setAttribute('src', src);\n      image.hidden = false;\n      spinner.hidden = true;\n    }, 1000);\n  }\n  return (\n    <div className=\"container\">\n      <plus-intersection once onPlusChange={onPlusChange}>\n        <plus-card elevation={10}>\n          <plus-spinner></plus-spinner>\n          <img alt=\"Lazy\" hidden data-src=\"https://picsum.photos/id/25/200/200\" />\n        </plus-card>\n      </plus-intersection>\n    </div>\n  );\n}\nexport default App;\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n"
   },
   {
@@ -4030,7 +4030,7 @@ export const examples = [
     "description": "Loads the image after appearing in the user's viewport.",
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/spinner.js';\n\nfunction onPlusChange(event) {\n  if (!event.detail.isIntersecting) return;\n  setTimeout(() => {\n    const image = event.target.querySelector('img');\n    const spinner = event.target.querySelector('plus-spinner');\n    const src = image.getAttribute('data-src');\n    image.setAttribute('src', src);\n    image.hidden = false;\n    spinner.hidden = true;\n  }, 1000);\n}\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
-    "template": "<div class=\"container\">\n  <plus-intersection once on:plus-change={onPlusChange}>\n    <plus-card elevation={10}>\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://picsum.photos/id/25/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
+    "template": "<div class=\"container\">\n  <plus-intersection once on:plus-change={onPlusChange}>\n    <plus-card elevation={10}>\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy\" hidden data-src=\"https://picsum.photos/id/25/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "vue/intersection/lazy-image",
@@ -4042,7 +4042,7 @@ export const examples = [
     "description": "Loads the image after appearing in the user's viewport.",
     "script": "import '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/intersection.js';\nimport '@htmlplus/ui/spinner.js';\n\nfunction onPlusChange(event) {\n  if (!event.detail.isIntersecting) return;\n  setTimeout(() => {\n    const image = event.target.querySelector('img');\n    const spinner = event.target.querySelector('plus-spinner');\n    const src = image.getAttribute('data-src');\n    image.setAttribute('src', src);\n    image.hidden = false;\n    spinner.hidden = true;\n  }, 1000);\n}\n",
     "style": ".container {\n  position: relative;\n  height: 20rem;\n  overflow: auto;\n  background-color: whitesmoke;\n}\n\nimg {\n  width: 12rem;\n  height: 12rem;\n  object-fit: cover;\n  margin: 0;\n}\n\nimg:not([hidden]) {\n  display: block;\n}\n\nplus-card {\n  display: inline-block;\n}\n\nplus-intersection {\n  display: block;\n  text-align: center;\n  margin: 50rem auto;\n}\n\nplus-spinner {\n  margin: 1rem;\n}\n",
-    "template": "<div class=\"container\">\n  <plus-intersection once @plus-change=\"onPlusChange\">\n    <plus-card :elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy Image\" hidden data-src=\"https://picsum.photos/id/25/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
+    "template": "<div class=\"container\">\n  <plus-intersection once @plus-change=\"onPlusChange\">\n    <plus-card :elevation=\"10\">\n      <plus-spinner></plus-spinner>\n      <img alt=\"Lazy\" hidden data-src=\"https://picsum.photos/id/25/200/200\" />\n    </plus-card>\n  </plus-intersection>\n</div>\n"
   },
   {
     "key": "angular/intersection/default",
@@ -4533,7 +4533,7 @@ export const examples = [
       "rtl": false
     },
     "description": "For more information click [here](https://fonts.google.com/icons).",
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: {\n          default: ({ name }) => {\n            const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n            const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n            return fetch(url).then(async (response) => {\n              const body = await response.text();\n              if (!response.ok) throw new Error(body);\n              return body;\n            });\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: {\n          default: ({ name }) => {\n            const [, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n            const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n            return fetch(url).then(async (response) => {\n              const body = await response.text();\n              if (!response.ok) throw new Error(body);\n              return body;\n            });\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
   },
@@ -4545,7 +4545,7 @@ export const examples = [
       "rtl": false
     },
     "description": "For more information click [here](https://fonts.google.com/icons).",
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: {\n          default: ({ name }) => {\n            const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n            const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n            return fetch(url).then(async (response) => {\n              const body = await response.text();\n              if (!response.ok) throw new Error(body);\n              return body;\n            });\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: {\n          default: ({ name }) => {\n            const [, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n            const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n            return fetch(url).then(async (response) => {\n              const body = await response.text();\n              if (!response.ok) throw new Error(body);\n              return body;\n            });\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
   },
@@ -4557,7 +4557,7 @@ export const examples = [
       "rtl": false
     },
     "description": "For more information click [here](https://fonts.google.com/icons).",
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: {\n          default: ({ name }) => {\n            const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n            const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n            return fetch(url).then(async (response) => {\n              const body = await response.text();\n              if (!response.ok) throw new Error(body);\n              return body;\n            });\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: {\n          default: ({ name }) => {\n            const [, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n            const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n            return fetch(url).then(async (response) => {\n              const body = await response.text();\n              if (!response.ok) throw new Error(body);\n              return body;\n            });\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-stack gap=\"2rem\">\n      <plus-icon name=\"home_outline\"></plus-icon>\n      <plus-icon name=\"home_round\"></plus-icon>\n      <plus-icon name=\"home_sharp\"></plus-icon>\n    </plus-stack>\n  );\n}\nexport default App;\n"
   },
   {
@@ -4568,7 +4568,7 @@ export const examples = [
       "rtl": false
     },
     "description": "For more information click [here](https://fonts.google.com/icons).",
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: {\n          default: ({ name }) => {\n            const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n            const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n            return fetch(url).then(async (response) => {\n              const body = await response.text();\n              if (!response.ok) throw new Error(body);\n              return body;\n            });\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: {\n          default: ({ name }) => {\n            const [, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n            const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n            return fetch(url).then(async (response) => {\n              const body = await response.text();\n              if (!response.ok) throw new Error(body);\n              return body;\n            });\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
   },
@@ -4580,7 +4580,7 @@ export const examples = [
       "rtl": false
     },
     "description": "For more information click [here](https://fonts.google.com/icons).",
-    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: {\n          default: ({ name }) => {\n            const [all, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n            const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n            return fetch(url).then(async (response) => {\n              const body = await response.text();\n              if (!response.ok) throw new Error(body);\n              return body;\n            });\n          }\n        }\n      }\n    }\n  }\n});\n",
+    "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  elements: {\n    'plus-icon': {\n      properties: {\n        resolver: {\n          default: ({ name }) => {\n            const [, icon, type] = name.match(/^(.*)_(outline|round|sharp)$/);\n            const url = `https://cdn.jsdelivr.net/npm/@material-icons/svg/svg/${icon}/${type}.svg`;\n            return fetch(url).then(async (response) => {\n              const body = await response.text();\n              if (!response.ok) throw new Error(body);\n              return body;\n            });\n          }\n        }\n      }\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/icon.js';\nimport '@htmlplus/ui/stack.js';\n",
     "template": "<plus-stack gap=\"2rem\">\n  <plus-icon name=\"home_outline\"></plus-icon>\n  <plus-icon name=\"home_round\"></plus-icon>\n  <plus-icon name=\"home_sharp\"></plus-icon>\n</plus-stack>\n"
   },
@@ -6460,7 +6460,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/dialog-body.js';\nimport '@htmlplus/ui/dialog-content.js';\nimport '@htmlplus/ui/dialog-footer.js';\nimport '@htmlplus/ui/dialog-header.js';\nimport '@htmlplus/ui/dialog-toggler.js';\nimport '@htmlplus/ui/dialog.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('dialog')\n  dialogRef!: ElementRef;\n  show(size) {\n    this.dialogRef.nativeElement.size = size;\n    this.dialogRef.nativeElement.open = true;\n  }\n}\n",
-    "template": "<plus-stack gap=\"1rem\">\n  <button (click)=\"show('sm')\">Small</button>\n  <button (click)=\"show('md')\">Medium</button>\n  <button (click)=\"show('lg')\">Large</button>\n  <button (click)=\"show('xl')\">Extra Large</button>\n</plus-stack>\n<plus-dialog animation connector=\"dialog-size\" #dialog>\n  <plus-dialog-content>\n    <plus-dialog-header>Dialog Title</plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler>Close</plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
+    "template": "<plus-stack gap=\"1rem\">\n  <button type=\"button\" (click)=\"show('sm')\">Small</button>\n  <button type=\"button\" (click)=\"show('md')\">Medium</button>\n  <button type=\"button\" (click)=\"show('lg')\">Large</button>\n  <button type=\"button\" (click)=\"show('xl')\">Extra Large</button>\n</plus-stack>\n<plus-dialog animation connector=\"dialog-size\" #dialog>\n  <plus-dialog-content>\n    <plus-dialog-header>Dialog Title</plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler>Close</plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
     "key": "javascript/dialog/size",
@@ -6470,7 +6470,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/dialog-body.js';\nimport '@htmlplus/ui/dialog-content.js';\nimport '@htmlplus/ui/dialog-footer.js';\nimport '@htmlplus/ui/dialog-header.js';\nimport '@htmlplus/ui/dialog-toggler.js';\nimport '@htmlplus/ui/dialog.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nconst show = (size) => {\n  $dialog.size = size;\n  $dialog.open = true;\n};\n$button1.addEventListener('click', () => show('sm'));\n$button2.addEventListener('click', () => show('md'));\n$button3.addEventListener('click', () => show('lg'));\n$button4.addEventListener('click', () => show('xl'));\n",
-    "template": "<plus-stack gap=\"1rem\">\n  <button id=\"$button1\">Small</button>\n  <button id=\"$button2\">Medium</button>\n  <button id=\"$button3\">Large</button>\n  <button id=\"$button4\">Extra Large</button>\n</plus-stack>\n<plus-dialog animation connector=\"dialog-size\" id=\"$dialog\">\n  <plus-dialog-content>\n    <plus-dialog-header>Dialog Title</plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler>Close</plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
+    "template": "<plus-stack gap=\"1rem\">\n  <button type=\"button\" id=\"$button1\">Small</button>\n  <button type=\"button\" id=\"$button2\">Medium</button>\n  <button type=\"button\" id=\"$button3\">Large</button>\n  <button type=\"button\" id=\"$button4\">Extra Large</button>\n</plus-stack>\n<plus-dialog animation connector=\"dialog-size\" id=\"$dialog\">\n  <plus-dialog-content>\n    <plus-dialog-header>Dialog Title</plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler>Close</plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
     "key": "react/dialog/size",
@@ -6479,7 +6479,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/dialog-body.js';\nimport '@htmlplus/ui/dialog-content.js';\nimport '@htmlplus/ui/dialog-footer.js';\nimport '@htmlplus/ui/dialog-header.js';\nimport '@htmlplus/ui/dialog-toggler.js';\nimport '@htmlplus/ui/dialog.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const dialogRef = useRef();\n  const show = (size) => {\n    dialogRef.current.size = size;\n    dialogRef.current.open = true;\n  };\n  return (\n    <>\n      <plus-stack gap=\"1rem\">\n        <button onClick={() => show('sm')}>Small</button>\n        <button onClick={() => show('md')}>Medium</button>\n        <button onClick={() => show('lg')}>Large</button>\n        <button onClick={() => show('xl')}>Extra Large</button>\n      </plus-stack>\n      <plus-dialog animation connector=\"dialog-size\" ref={dialogRef}>\n        <plus-dialog-content>\n          <plus-dialog-header>Dialog Title</plus-dialog-header>\n          <plus-dialog-body>\n            <plus-faker></plus-faker>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/dialog-body.js';\nimport '@htmlplus/ui/dialog-content.js';\nimport '@htmlplus/ui/dialog-footer.js';\nimport '@htmlplus/ui/dialog-header.js';\nimport '@htmlplus/ui/dialog-toggler.js';\nimport '@htmlplus/ui/dialog.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const dialogRef = useRef();\n  const show = (size) => {\n    dialogRef.current.size = size;\n    dialogRef.current.open = true;\n  };\n  return (\n    <>\n      <plus-stack gap=\"1rem\">\n        <button type=\"button\" onClick={() => show('sm')}>\n          Small\n        </button>\n        <button type=\"button\" onClick={() => show('md')}>\n          Medium\n        </button>\n        <button type=\"button\" onClick={() => show('lg')}>\n          Large\n        </button>\n        <button type=\"button\" onClick={() => show('xl')}>\n          Extra Large\n        </button>\n      </plus-stack>\n      <plus-dialog animation connector=\"dialog-size\" ref={dialogRef}>\n        <plus-dialog-content>\n          <plus-dialog-header>Dialog Title</plus-dialog-header>\n          <plus-dialog-body>\n            <plus-faker></plus-faker>\n          </plus-dialog-body>\n          <plus-dialog-footer>\n            <plus-dialog-toggler>Close</plus-dialog-toggler>\n          </plus-dialog-footer>\n        </plus-dialog-content>\n      </plus-dialog>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/dialog/size",
@@ -6489,7 +6489,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/dialog-body.js';\nimport '@htmlplus/ui/dialog-content.js';\nimport '@htmlplus/ui/dialog-footer.js';\nimport '@htmlplus/ui/dialog-header.js';\nimport '@htmlplus/ui/dialog-toggler.js';\nimport '@htmlplus/ui/dialog.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nlet dialogRef;\nconst show = (size) => {\n  dialogRef.size = size;\n  dialogRef.open = true;\n};\n",
-    "template": "<plus-stack gap=\"1rem\">\n  <button on:click={() => show('sm')}>Small</button>\n  <button on:click={() => show('md')}>Medium</button>\n  <button on:click={() => show('lg')}>Large</button>\n  <button on:click={() => show('xl')}>Extra Large</button>\n</plus-stack>\n<plus-dialog animation connector=\"dialog-size\" bind:this={dialogRef}>\n  <plus-dialog-content>\n    <plus-dialog-header>Dialog Title</plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler>Close</plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
+    "template": "<plus-stack gap=\"1rem\">\n  <button type=\"button\" on:click={() => show('sm')}>Small</button>\n  <button type=\"button\" on:click={() => show('md')}>Medium</button>\n  <button type=\"button\" on:click={() => show('lg')}>Large</button>\n  <button type=\"button\" on:click={() => show('xl')}>Extra Large</button>\n</plus-stack>\n<plus-dialog animation connector=\"dialog-size\" bind:this={dialogRef}>\n  <plus-dialog-content>\n    <plus-dialog-header>Dialog Title</plus-dialog-header>\n    <plus-dialog-body>\n      <plus-faker></plus-faker>\n    </plus-dialog-body>\n    <plus-dialog-footer>\n      <plus-dialog-toggler>Close</plus-dialog-toggler>\n    </plus-dialog-footer>\n  </plus-dialog-content>\n</plus-dialog>\n"
   },
   {
     "key": "vue/dialog/size",
@@ -6499,7 +6499,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/dialog-body.js';\nimport '@htmlplus/ui/dialog-content.js';\nimport '@htmlplus/ui/dialog-footer.js';\nimport '@htmlplus/ui/dialog-header.js';\nimport '@htmlplus/ui/dialog-toggler.js';\nimport '@htmlplus/ui/dialog.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nconst dialogRef = ref();\nconst show = (size) => {\n  dialogRef.value.size = size;\n  dialogRef.value.open = true;\n};\n",
-    "template": "<div>\n  <plus-stack gap=\"1rem\">\n    <button @click=\"show('sm')\">Small</button>\n    <button @click=\"show('md')\">Medium</button>\n    <button @click=\"show('lg')\">Large</button>\n    <button @click=\"show('xl')\">Extra Large</button>\n  </plus-stack>\n  <plus-dialog animation connector=\"dialog-size\" ref=\"dialogRef\">\n    <plus-dialog-content>\n      <plus-dialog-header>Dialog Title</plus-dialog-header>\n      <plus-dialog-body>\n        <plus-faker></plus-faker>\n      </plus-dialog-body>\n      <plus-dialog-footer>\n        <plus-dialog-toggler>Close</plus-dialog-toggler>\n      </plus-dialog-footer>\n    </plus-dialog-content>\n  </plus-dialog>\n</div>\n"
+    "template": "<div>\n  <plus-stack gap=\"1rem\">\n    <button type=\"button\" @click=\"show('sm')\">Small</button>\n    <button type=\"button\" @click=\"show('md')\">Medium</button>\n    <button type=\"button\" @click=\"show('lg')\">Large</button>\n    <button type=\"button\" @click=\"show('xl')\">Extra Large</button>\n  </plus-stack>\n  <plus-dialog animation connector=\"dialog-size\" ref=\"dialogRef\">\n    <plus-dialog-content>\n      <plus-dialog-header>Dialog Title</plus-dialog-header>\n      <plus-dialog-body>\n        <plus-faker></plus-faker>\n      </plus-dialog-body>\n      <plus-dialog-footer>\n        <plus-dialog-toggler>Close</plus-dialog-toggler>\n      </plus-dialog-footer>\n    </plus-dialog-content>\n  </plus-dialog>\n</div>\n"
   },
   {
     "key": "angular/dialog/scrollable",
@@ -7161,7 +7161,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('cropper')\n  cropperRef!: ElementRef;\n  onClick() {\n    this.cropperRef.nativeElement.toCanvas().toBlob((blob) => {\n      open(URL.createObjectURL(blob), '_blank');\n    });\n  }\n}\n",
-    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    #cropper\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"onClick()\">To URL</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    #cropper\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button type=\"button\" (click)=\"onClick()\">To URL</button>\n</plus-center>\n"
   },
   {
     "key": "javascript/cropper/to-url",
@@ -7171,7 +7171,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\n$button.addEventListener('click', () => {\n  $cropper.toCanvas().toBlob((blob) => {\n    open(URL.createObjectURL(blob), '_blank');\n  });\n});\n",
-    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"$cropper\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button id=\"$button\">To URL</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"$cropper\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button type=\"button\" id=\"$button\">To URL</button>\n</plus-center>\n"
   },
   {
     "key": "react/cropper/to-url",
@@ -7180,7 +7180,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  const cropperRef = useRef();\n  function onClick() {\n    cropperRef.current.toCanvas().toBlob((blob) => {\n      open(URL.createObjectURL(blob), '_blank');\n    });\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          ref={cropperRef}\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={onClick}>To URL</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  const cropperRef = useRef();\n  function onClick() {\n    cropperRef.current.toCanvas().toBlob((blob) => {\n      open(URL.createObjectURL(blob), '_blank');\n    });\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          ref={cropperRef}\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button type=\"button\" onClick={onClick}>\n          To URL\n        </button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/cropper/to-url",
@@ -7190,7 +7190,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nlet cropperRef;\nfunction onClick() {\n  cropperRef.toCanvas().toBlob((blob) => {\n    open(URL.createObjectURL(blob), '_blank');\n  });\n}\n",
-    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    bind:this={cropperRef}\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click={onClick}>To URL</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    bind:this={cropperRef}\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button type=\"button\" on:click={onClick}>To URL</button>\n</plus-center>\n"
   },
   {
     "key": "vue/cropper/to-url",
@@ -7200,7 +7200,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nconst cropperRef = ref();\nfunction onClick() {\n  cropperRef.value.toCanvas().toBlob((blob) => {\n    open(URL.createObjectURL(blob), '_blank');\n  });\n}\n",
-    "template": "<div>\n  <plus-center>\n    <plus-cropper\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ref=\"cropperRef\"\n    ></plus-cropper>\n  </plus-center>\n  <br />\n  <plus-center>\n    <button @click=\"onClick\">To URL</button>\n  </plus-center>\n</div>\n"
+    "template": "<div>\n  <plus-center>\n    <plus-cropper\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ref=\"cropperRef\"\n    ></plus-cropper>\n  </plus-center>\n  <br />\n  <plus-center>\n    <button type=\"button\" @click=\"onClick\">To URL</button>\n  </plus-center>\n</div>\n"
   },
   {
     "key": "angular/cropper/to-blob",
@@ -7211,7 +7211,7 @@ export const examples = [
     },
     "description": "Open the developer console.",
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('cropper')\n  cropperRef!: ElementRef;\n  onClick() {\n    this.cropperRef.nativeElement.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  }\n}\n",
-    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    #cropper\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"onClick()\">To Blob</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    #cropper\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button type=\"button\" (click)=\"onClick()\">To Blob</button>\n</plus-center>\n"
   },
   {
     "key": "javascript/cropper/to-blob",
@@ -7222,7 +7222,7 @@ export const examples = [
     },
     "description": "Open the developer console.",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\n$button.addEventListener('click', () => {\n  $cropper.toCanvas().toBlob((blob) => {\n    console.log(blob);\n  });\n});\n",
-    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"$cropper\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button id=\"$button\">To Blob</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"$cropper\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button type=\"button\" id=\"$button\">To Blob</button>\n</plus-center>\n"
   },
   {
     "key": "react/cropper/to-blob",
@@ -7232,7 +7232,7 @@ export const examples = [
       "rtl": false
     },
     "description": "Open the developer console.",
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  const cropperRef = useRef();\n  function onClick() {\n    cropperRef.current.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          ref={cropperRef}\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={onClick}>To Blob</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  const cropperRef = useRef();\n  function onClick() {\n    cropperRef.current.toCanvas().toBlob((blob) => {\n      console.log(blob);\n    });\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          ref={cropperRef}\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button type=\"button\" onClick={onClick}>\n          To Blob\n        </button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/cropper/to-blob",
@@ -7243,7 +7243,7 @@ export const examples = [
     },
     "description": "Open the developer console.",
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nlet cropperRef;\nfunction onClick() {\n  cropperRef.toCanvas().toBlob((blob) => {\n    console.log(blob);\n  });\n}\n",
-    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    bind:this={cropperRef}\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click={onClick}>To Blob</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    bind:this={cropperRef}\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button type=\"button\" on:click={onClick}>To Blob</button>\n</plus-center>\n"
   },
   {
     "key": "vue/cropper/to-blob",
@@ -7254,7 +7254,7 @@ export const examples = [
     },
     "description": "Open the developer console.",
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nconst cropperRef = ref();\nfunction onClick() {\n  cropperRef.value.toCanvas().toBlob((blob) => {\n    console.log(blob);\n  });\n}\n",
-    "template": "<div>\n  <plus-center>\n    <plus-cropper\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ref=\"cropperRef\"\n    ></plus-cropper>\n  </plus-center>\n  <br />\n  <plus-center>\n    <button @click=\"onClick\">To Blob</button>\n  </plus-center>\n</div>\n"
+    "template": "<div>\n  <plus-center>\n    <plus-cropper\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ref=\"cropperRef\"\n    ></plus-cropper>\n  </plus-center>\n  <br />\n  <plus-center>\n    <button type=\"button\" @click=\"onClick\">To Blob</button>\n  </plus-center>\n</div>\n"
   },
   {
     "key": "angular/cropper/to-base64",
@@ -7264,7 +7264,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('cropper')\n  cropperRef!: ElementRef;\n  onClick() {\n    const image = new Image();\n    image.src = this.cropperRef.nativeElement.toCanvas().toDataURL();\n    const tab = open('', '_blank');\n    setTimeout(() => {\n      tab.document.write(image.outerHTML);\n    }, 250);\n  }\n}\n",
-    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    #cropper\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"onClick()\">To Base64</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    #cropper\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button type=\"button\" (click)=\"onClick()\">To Base64</button>\n</plus-center>\n"
   },
   {
     "key": "javascript/cropper/to-base64",
@@ -7274,7 +7274,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\n$button.addEventListener('click', () => {\n  const image = new Image();\n  image.src = $cropper.toCanvas().toDataURL();\n  const tab = open('', '_blank');\n  setTimeout(() => {\n    tab.document.write(image.outerHTML);\n  }, 250);\n});\n",
-    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"$cropper\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button id=\"$button\">To Base64</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    id=\"$cropper\"\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button type=\"button\" id=\"$button\">To Base64</button>\n</plus-center>\n"
   },
   {
     "key": "react/cropper/to-base64",
@@ -7283,7 +7283,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  const cropperRef = useRef();\n  function onClick() {\n    const image = new Image();\n    image.src = cropperRef.current.toCanvas().toDataURL();\n    const tab = open('', '_blank');\n    setTimeout(() => {\n      tab.document.write(image.outerHTML);\n    }, 250);\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          ref={cropperRef}\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={onClick}>To Base64</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nfunction App() {\n  const cropperRef = useRef();\n  function onClick() {\n    const image = new Image();\n    image.src = cropperRef.current.toCanvas().toDataURL();\n    const tab = open('', '_blank');\n    setTimeout(() => {\n      tab.document.write(image.outerHTML);\n    }, 250);\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-cropper\n          src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n          ref={cropperRef}\n        ></plus-cropper>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button type=\"button\" onClick={onClick}>\n          To Base64\n        </button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/cropper/to-base64",
@@ -7293,7 +7293,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nlet cropperRef;\nfunction onClick() {\n  const image = new Image();\n  image.src = cropperRef.toCanvas().toDataURL();\n  const tab = open('', '_blank');\n  setTimeout(() => {\n    tab.document.write(image.outerHTML);\n  }, 250);\n}\n",
-    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    bind:this={cropperRef}\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click={onClick}>To Base64</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-cropper\n    src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n    bind:this={cropperRef}\n  ></plus-cropper>\n</plus-center>\n<br />\n<plus-center>\n  <button type=\"button\" on:click={onClick}>To Base64</button>\n</plus-center>\n"
   },
   {
     "key": "vue/cropper/to-base64",
@@ -7303,7 +7303,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/cropper.js';\n\nconst cropperRef = ref();\nfunction onClick() {\n  const image = new Image();\n  image.src = cropperRef.value.toCanvas().toDataURL();\n  const tab = open('', '_blank');\n  setTimeout(() => {\n    tab.document.write(image.outerHTML);\n  }, 250);\n}\n",
-    "template": "<div>\n  <plus-center>\n    <plus-cropper\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ref=\"cropperRef\"\n    ></plus-cropper>\n  </plus-center>\n  <br />\n  <plus-center>\n    <button @click=\"onClick\">To Base64</button>\n  </plus-center>\n</div>\n"
+    "template": "<div>\n  <plus-center>\n    <plus-cropper\n      src=\"https://fengyuanchen.github.io/cropperjs/images/picture.jpg\"\n      ref=\"cropperRef\"\n    ></plus-cropper>\n  </plus-center>\n  <br />\n  <plus-center>\n    <button type=\"button\" @click=\"onClick\">To Base64</button>\n  </plus-center>\n</div>\n"
   },
   {
     "key": "angular/cropper/styles",
@@ -8368,7 +8368,7 @@ export const examples = [
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/click-outside.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  hidden = true;\n  onClick() {\n    this.hidden = !this.hidden;\n  }\n  onPlusClickOutside() {\n    this.hidden = true;\n  }\n}\n",
     "style": "plus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\nplus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n",
-    "template": "<plus-center>\n  <plus-click-outside (plus-click-outside)=\"onPlusClickOutside()\">\n    <button (click)=\"onClick()\">Open Menu Dropdown</button>\n    <plus-card [elevation]=\"10\" outlined [hidden]=\"hidden\">\n      <plus-card-body>It will stay visible until you click outside.</plus-card-body>\n    </plus-card>\n  </plus-click-outside>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-click-outside (plus-click-outside)=\"onPlusClickOutside()\">\n    <button type=\"button\" (click)=\"onClick()\">Open Menu Dropdown</button>\n    <plus-card [elevation]=\"10\" outlined [hidden]=\"hidden\">\n      <plus-card-body>It will stay visible until you click outside.</plus-card-body>\n    </plus-card>\n  </plus-click-outside>\n</plus-center>\n"
   },
   {
     "key": "javascript/click-outside/menu",
@@ -8379,7 +8379,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/click-outside.js';\n\n$button.addEventListener('click', () => {\n  $menu.hidden = !$menu.hidden;\n});\n$clickOutside.addEventListener('plus-click-outside', () => {\n  $menu.hidden = true;\n});\n",
     "style": "plus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\nplus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n",
-    "template": "<plus-center>\n  <plus-click-outside id=\"$clickOutside\">\n    <button id=\"$button\">Open Menu Dropdown</button>\n    <plus-card elevation=\"10\" id=\"$menu\" hidden outlined>\n      <plus-card-body>It will stay visible until you click outside.</plus-card-body>\n    </plus-card>\n  </plus-click-outside>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-click-outside id=\"$clickOutside\">\n    <button type=\"button\" id=\"$button\">Open Menu Dropdown</button>\n    <plus-card elevation=\"10\" id=\"$menu\" hidden outlined>\n      <plus-card-body>It will stay visible until you click outside.</plus-card-body>\n    </plus-card>\n  </plus-click-outside>\n</plus-center>\n"
   },
   {
     "key": "react/click-outside/menu",
@@ -8388,7 +8388,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useState } from 'react';\n\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/click-outside.js';\n\nfunction App() {\n  const [hidden, setHidden] = useState(true);\n  function onClick() {\n    setHidden(!hidden);\n  }\n  function onPlusClickOutside() {\n    setHidden(true);\n  }\n  return (\n    <plus-center>\n      <plus-click-outside onPlusClickOutside={onPlusClickOutside}>\n        <button onClick={onClick}>Open Menu Dropdown</button>\n        <plus-card elevation={10} hidden={hidden} outlined>\n          <plus-card-body>It will stay visible until you click outside.</plus-card-body>\n        </plus-card>\n      </plus-click-outside>\n    </plus-center>\n  );\n}\nexport default App;\n",
+    "script": "import { useState } from 'react';\n\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/click-outside.js';\n\nfunction App() {\n  const [hidden, setHidden] = useState(true);\n  function onClick() {\n    setHidden(!hidden);\n  }\n  function onPlusClickOutside() {\n    setHidden(true);\n  }\n  return (\n    <plus-center>\n      <plus-click-outside onPlusClickOutside={onPlusClickOutside}>\n        <button type=\"button\" onClick={onClick}>\n          Open Menu Dropdown\n        </button>\n        <plus-card elevation={10} hidden={hidden} outlined>\n          <plus-card-body>It will stay visible until you click outside.</plus-card-body>\n        </plus-card>\n      </plus-click-outside>\n    </plus-center>\n  );\n}\nexport default App;\n",
     "style": "plus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\nplus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n"
   },
   {
@@ -8400,7 +8400,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/click-outside.js';\n\nlet hidden = true;\nfunction onClick() {\n  hidden = !hidden;\n}\nfunction onPlusClickOutside() {\n  hidden = true;\n}\n",
     "style": "plus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\nplus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n",
-    "template": "<plus-center>\n  <plus-click-outside on:plus-click-outside={onPlusClickOutside}>\n    <button on:click={onClick}>Open Menu Dropdown</button>\n    <plus-card elevation={10} {hidden} outlined>\n      <plus-card-body>It will stay visible until you click outside.</plus-card-body>\n    </plus-card>\n  </plus-click-outside>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-click-outside on:plus-click-outside={onPlusClickOutside}>\n    <button type=\"button\" on:click={onClick}>Open Menu Dropdown</button>\n    <plus-card elevation={10} {hidden} outlined>\n      <plus-card-body>It will stay visible until you click outside.</plus-card-body>\n    </plus-card>\n  </plus-click-outside>\n</plus-center>\n"
   },
   {
     "key": "vue/click-outside/menu",
@@ -8411,7 +8411,7 @@ export const examples = [
     },
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/card-body.js';\nimport '@htmlplus/ui/card.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/click-outside.js';\n\nconst hidden = ref(true);\nfunction onClick() {\n  hidden.value = !hidden.value;\n}\nfunction onPlusClickOutside() {\n  hidden.value = true;\n}\n",
     "style": "plus-card {\n  position: absolute;\n  top: calc(100% + 0.25rem);\n}\nplus-click-outside {\n  display: inline-block;\n  position: relative;\n}\n",
-    "template": "<plus-center>\n  <plus-click-outside @plus-click-outside=\"onPlusClickOutside\">\n    <button @click=\"onClick\">Open Menu Dropdown</button>\n    <plus-card :elevation=\"10\" outlined :hidden=\"hidden\">\n      <plus-card-body>It will stay visible until you click outside.</plus-card-body>\n    </plus-card>\n  </plus-click-outside>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-click-outside @plus-click-outside=\"onPlusClickOutside\">\n    <button type=\"button\" @click=\"onClick\">Open Menu Dropdown</button>\n    <plus-card :elevation=\"10\" outlined :hidden=\"hidden\">\n      <plus-card-body>It will stay visible until you click outside.</plus-card-body>\n    </plus-card>\n  </plus-click-outside>\n</plus-center>\n"
   },
   {
     "key": "angular/click-outside/default",
@@ -8470,7 +8470,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"list\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <button type=\"button\">\n    <plus-center inline>\n      <plus-icon name=\"list\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
   },
   {
     "key": "javascript/center/inline",
@@ -8480,7 +8480,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
-    "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"list\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <button type=\"button\">\n    <plus-center inline>\n      <plus-icon name=\"list\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
   },
   {
     "key": "react/center/inline",
@@ -8489,7 +8489,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <button>\n        <plus-center inline>\n          <plus-icon name=\"list\" size=\"2x\"></plus-icon>\n          &nbsp; Menu\n        </plus-center>\n      </button>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <button type=\"button\">\n        <plus-center inline>\n          <plus-icon name=\"list\" size=\"2x\"></plus-icon>\n          &nbsp; Menu\n        </plus-center>\n      </button>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/center/inline",
@@ -8499,7 +8499,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
-    "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"list\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <button type=\"button\">\n    <plus-center inline>\n      <plus-icon name=\"list\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
   },
   {
     "key": "vue/center/inline",
@@ -8509,7 +8509,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/icon.js';\n",
-    "template": "<plus-center>\n  <button>\n    <plus-center inline>\n      <plus-icon name=\"list\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <button type=\"button\">\n    <plus-center inline>\n      <plus-icon name=\"list\" size=\"2x\"></plus-icon>\n      &nbsp; Menu\n    </plus-center>\n  </button>\n</plus-center>\n"
   },
   {
     "key": "angular/center/default",
@@ -8573,7 +8573,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-carousel variant=\"presentation\" axis=\"y\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" axis=\"y\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/y-axis",
@@ -8583,7 +8583,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\" axis=\"y\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" axis=\"y\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/y-axis",
@@ -8592,7 +8592,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" axis=\"y\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\" axis=\"y\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/carousel/y-axis",
@@ -8602,7 +8602,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\" axis=\"y\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" axis=\"y\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/y-axis",
@@ -8612,7 +8612,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\" axis=\"y\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" axis=\"y\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/variable-widths",
@@ -8622,7 +8622,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"flex-basis: 60%\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 40%\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 30%\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 90%\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%\">5</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 55%\">6</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 85%\">7</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 50%\">8</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%\">9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"flex-basis: 60%\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 40%\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 30%\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 90%\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%\">5</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 55%\">6</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 85%\">7</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 50%\">8</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%\">9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/variable-widths",
@@ -8632,7 +8632,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"flex-basis: 60%\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 40%\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 30%\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 90%\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%\">5</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 55%\">6</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 85%\">7</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 50%\">8</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%\">9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"flex-basis: 60%\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 40%\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 30%\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 90%\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%\">5</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 55%\">6</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 85%\">7</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 50%\">8</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%\">9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/variable-widths",
@@ -8641,7 +8641,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '60%'\n          }}\n        >\n          1\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '40%'\n          }}\n        >\n          2\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '30%'\n          }}\n        >\n          3\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '90%'\n          }}\n        >\n          4\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '35%'\n          }}\n        >\n          5\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '55%'\n          }}\n        >\n          6\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '85%'\n          }}\n        >\n          7\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '50%'\n          }}\n        >\n          8\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '35%'\n          }}\n        >\n          9\n        </plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '60%'\n          }}\n        >\n          1\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '40%'\n          }}\n        >\n          2\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '30%'\n          }}\n        >\n          3\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '90%'\n          }}\n        >\n          4\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '35%'\n          }}\n        >\n          5\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '55%'\n          }}\n        >\n          6\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '85%'\n          }}\n        >\n          7\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '50%'\n          }}\n        >\n          8\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            flexBasis: '35%'\n          }}\n        >\n          9\n        </plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/carousel/variable-widths",
@@ -8651,7 +8651,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"flex-basis: 60%;\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 40%;\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 30%;\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 90%;\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%;\">5</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 55%;\">6</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 85%;\">7</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 50%;\">8</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%;\">9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"flex-basis: 60%;\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 40%;\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 30%;\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 90%;\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%;\">5</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 55%;\">6</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 85%;\">7</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 50%;\">8</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%;\">9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/variable-widths",
@@ -8661,7 +8661,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"flex-basis: 60%\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 40%\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 30%\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 90%\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%\">5</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 55%\">6</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 85%\">7</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 50%\">8</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%\">9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"flex-basis: 60%\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 40%\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 30%\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 90%\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%\">5</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 55%\">6</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 85%\">7</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 50%\">8</plus-carousel-slide>\n    <plus-carousel-slide style=\"flex-basis: 35%\">9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/thumbnails",
@@ -8672,7 +8672,7 @@ export const examples = [
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-carousel.mirror plus-carousel-slide {\n  flex-basis: 6rem !important;\n  height: 6rem !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" id=\"my-carousel\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel\n  variant=\"presentation\"\n  class=\"mirror\"\n  draggable=\"free\"\n  mirror=\"my-carousel\"\n  mirror-type=\"click-smooth\"\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide clickable>1</plus-carousel-slide>\n    <plus-carousel-slide clickable>2</plus-carousel-slide>\n    <plus-carousel-slide clickable>3</plus-carousel-slide>\n    <plus-carousel-slide clickable>4</plus-carousel-slide>\n    <plus-carousel-slide clickable>5</plus-carousel-slide>\n    <plus-carousel-slide clickable>6</plus-carousel-slide>\n    <plus-carousel-slide clickable>7</plus-carousel-slide>\n    <plus-carousel-slide clickable>8</plus-carousel-slide>\n    <plus-carousel-slide clickable>9</plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" id=\"my-carousel\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel\n  preset=\"presentation\"\n  class=\"mirror\"\n  draggable=\"free\"\n  mirror=\"my-carousel\"\n  mirror-type=\"click-smooth\"\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide clickable>1</plus-carousel-slide>\n    <plus-carousel-slide clickable>2</plus-carousel-slide>\n    <plus-carousel-slide clickable>3</plus-carousel-slide>\n    <plus-carousel-slide clickable>4</plus-carousel-slide>\n    <plus-carousel-slide clickable>5</plus-carousel-slide>\n    <plus-carousel-slide clickable>6</plus-carousel-slide>\n    <plus-carousel-slide clickable>7</plus-carousel-slide>\n    <plus-carousel-slide clickable>8</plus-carousel-slide>\n    <plus-carousel-slide clickable>9</plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/thumbnails",
@@ -8683,7 +8683,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel.mirror plus-carousel-slide {\n  flex-basis: 6rem !important;\n  height: 6rem !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" id=\"my-carousel\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel\n  variant=\"presentation\"\n  class=\"mirror\"\n  draggable=\"free\"\n  mirror=\"my-carousel\"\n  mirror-type=\"click-smooth\"\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide clickable>1</plus-carousel-slide>\n    <plus-carousel-slide clickable>2</plus-carousel-slide>\n    <plus-carousel-slide clickable>3</plus-carousel-slide>\n    <plus-carousel-slide clickable>4</plus-carousel-slide>\n    <plus-carousel-slide clickable>5</plus-carousel-slide>\n    <plus-carousel-slide clickable>6</plus-carousel-slide>\n    <plus-carousel-slide clickable>7</plus-carousel-slide>\n    <plus-carousel-slide clickable>8</plus-carousel-slide>\n    <plus-carousel-slide clickable>9</plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" id=\"my-carousel\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel\n  preset=\"presentation\"\n  class=\"mirror\"\n  draggable=\"free\"\n  mirror=\"my-carousel\"\n  mirror-type=\"click-smooth\"\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide clickable>1</plus-carousel-slide>\n    <plus-carousel-slide clickable>2</plus-carousel-slide>\n    <plus-carousel-slide clickable>3</plus-carousel-slide>\n    <plus-carousel-slide clickable>4</plus-carousel-slide>\n    <plus-carousel-slide clickable>5</plus-carousel-slide>\n    <plus-carousel-slide clickable>6</plus-carousel-slide>\n    <plus-carousel-slide clickable>7</plus-carousel-slide>\n    <plus-carousel-slide clickable>8</plus-carousel-slide>\n    <plus-carousel-slide clickable>9</plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/thumbnails",
@@ -8692,7 +8692,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-carousel variant=\"presentation\" id=\"my-carousel\">\n        <plus-carousel-slides>\n          <plus-carousel-slide>1</plus-carousel-slide>\n          <plus-carousel-slide>2</plus-carousel-slide>\n          <plus-carousel-slide>3</plus-carousel-slide>\n          <plus-carousel-slide>4</plus-carousel-slide>\n          <plus-carousel-slide>5</plus-carousel-slide>\n          <plus-carousel-slide>6</plus-carousel-slide>\n          <plus-carousel-slide>7</plus-carousel-slide>\n          <plus-carousel-slide>8</plus-carousel-slide>\n          <plus-carousel-slide>9</plus-carousel-slide>\n        </plus-carousel-slides>\n        <plus-carousel-button type=\"previous\"></plus-carousel-button>\n        <plus-carousel-button type=\"next\"></plus-carousel-button>\n      </plus-carousel>\n      <br />\n      <plus-carousel\n        variant=\"presentation\"\n        className=\"mirror\"\n        draggable=\"free\"\n        mirror=\"my-carousel\"\n        mirror-type=\"click-smooth\"\n      >\n        <plus-carousel-slides>\n          <plus-carousel-slide clickable>1</plus-carousel-slide>\n          <plus-carousel-slide clickable>2</plus-carousel-slide>\n          <plus-carousel-slide clickable>3</plus-carousel-slide>\n          <plus-carousel-slide clickable>4</plus-carousel-slide>\n          <plus-carousel-slide clickable>5</plus-carousel-slide>\n          <plus-carousel-slide clickable>6</plus-carousel-slide>\n          <plus-carousel-slide clickable>7</plus-carousel-slide>\n          <plus-carousel-slide clickable>8</plus-carousel-slide>\n          <plus-carousel-slide clickable>9</plus-carousel-slide>\n        </plus-carousel-slides>\n      </plus-carousel>\n    </>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-carousel preset=\"presentation\" id=\"my-carousel\">\n        <plus-carousel-slides>\n          <plus-carousel-slide>1</plus-carousel-slide>\n          <plus-carousel-slide>2</plus-carousel-slide>\n          <plus-carousel-slide>3</plus-carousel-slide>\n          <plus-carousel-slide>4</plus-carousel-slide>\n          <plus-carousel-slide>5</plus-carousel-slide>\n          <plus-carousel-slide>6</plus-carousel-slide>\n          <plus-carousel-slide>7</plus-carousel-slide>\n          <plus-carousel-slide>8</plus-carousel-slide>\n          <plus-carousel-slide>9</plus-carousel-slide>\n        </plus-carousel-slides>\n        <plus-carousel-button type=\"previous\"></plus-carousel-button>\n        <plus-carousel-button type=\"next\"></plus-carousel-button>\n      </plus-carousel>\n      <br />\n      <plus-carousel\n        preset=\"presentation\"\n        className=\"mirror\"\n        draggable=\"free\"\n        mirror=\"my-carousel\"\n        mirror-type=\"click-smooth\"\n      >\n        <plus-carousel-slides>\n          <plus-carousel-slide clickable>1</plus-carousel-slide>\n          <plus-carousel-slide clickable>2</plus-carousel-slide>\n          <plus-carousel-slide clickable>3</plus-carousel-slide>\n          <plus-carousel-slide clickable>4</plus-carousel-slide>\n          <plus-carousel-slide clickable>5</plus-carousel-slide>\n          <plus-carousel-slide clickable>6</plus-carousel-slide>\n          <plus-carousel-slide clickable>7</plus-carousel-slide>\n          <plus-carousel-slide clickable>8</plus-carousel-slide>\n          <plus-carousel-slide clickable>9</plus-carousel-slide>\n        </plus-carousel-slides>\n      </plus-carousel>\n    </>\n  );\n}\nexport default App;\n",
     "style": "plus-carousel.mirror plus-carousel-slide {\n  flex-basis: 6rem !important;\n  height: 6rem !important;\n}\n"
   },
   {
@@ -8704,7 +8704,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel.mirror plus-carousel-slide {\n  flex-basis: 6rem !important;\n  height: 6rem !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" id=\"my-carousel\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel\n  variant=\"presentation\"\n  class=\"mirror\"\n  draggable=\"free\"\n  mirror=\"my-carousel\"\n  mirror-type=\"click-smooth\"\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide clickable>1</plus-carousel-slide>\n    <plus-carousel-slide clickable>2</plus-carousel-slide>\n    <plus-carousel-slide clickable>3</plus-carousel-slide>\n    <plus-carousel-slide clickable>4</plus-carousel-slide>\n    <plus-carousel-slide clickable>5</plus-carousel-slide>\n    <plus-carousel-slide clickable>6</plus-carousel-slide>\n    <plus-carousel-slide clickable>7</plus-carousel-slide>\n    <plus-carousel-slide clickable>8</plus-carousel-slide>\n    <plus-carousel-slide clickable>9</plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" id=\"my-carousel\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel\n  preset=\"presentation\"\n  class=\"mirror\"\n  draggable=\"free\"\n  mirror=\"my-carousel\"\n  mirror-type=\"click-smooth\"\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide clickable>1</plus-carousel-slide>\n    <plus-carousel-slide clickable>2</plus-carousel-slide>\n    <plus-carousel-slide clickable>3</plus-carousel-slide>\n    <plus-carousel-slide clickable>4</plus-carousel-slide>\n    <plus-carousel-slide clickable>5</plus-carousel-slide>\n    <plus-carousel-slide clickable>6</plus-carousel-slide>\n    <plus-carousel-slide clickable>7</plus-carousel-slide>\n    <plus-carousel-slide clickable>8</plus-carousel-slide>\n    <plus-carousel-slide clickable>9</plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/thumbnails",
@@ -8715,7 +8715,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel.mirror plus-carousel-slide {\n  flex-basis: 6rem !important;\n  height: 6rem !important;\n}\n",
-    "template": "<div>\n  <plus-carousel variant=\"presentation\" id=\"my-carousel\">\n    <plus-carousel-slides>\n      <plus-carousel-slide>1</plus-carousel-slide>\n      <plus-carousel-slide>2</plus-carousel-slide>\n      <plus-carousel-slide>3</plus-carousel-slide>\n      <plus-carousel-slide>4</plus-carousel-slide>\n      <plus-carousel-slide>5</plus-carousel-slide>\n      <plus-carousel-slide>6</plus-carousel-slide>\n      <plus-carousel-slide>7</plus-carousel-slide>\n      <plus-carousel-slide>8</plus-carousel-slide>\n      <plus-carousel-slide>9</plus-carousel-slide>\n    </plus-carousel-slides>\n    <plus-carousel-button type=\"previous\"></plus-carousel-button>\n    <plus-carousel-button type=\"next\"></plus-carousel-button>\n  </plus-carousel>\n  <br />\n  <plus-carousel\n    variant=\"presentation\"\n    class=\"mirror\"\n    draggable=\"free\"\n    mirror=\"my-carousel\"\n    mirror-type=\"click-smooth\"\n  >\n    <plus-carousel-slides>\n      <plus-carousel-slide clickable>1</plus-carousel-slide>\n      <plus-carousel-slide clickable>2</plus-carousel-slide>\n      <plus-carousel-slide clickable>3</plus-carousel-slide>\n      <plus-carousel-slide clickable>4</plus-carousel-slide>\n      <plus-carousel-slide clickable>5</plus-carousel-slide>\n      <plus-carousel-slide clickable>6</plus-carousel-slide>\n      <plus-carousel-slide clickable>7</plus-carousel-slide>\n      <plus-carousel-slide clickable>8</plus-carousel-slide>\n      <plus-carousel-slide clickable>9</plus-carousel-slide>\n    </plus-carousel-slides>\n  </plus-carousel>\n</div>\n"
+    "template": "<div>\n  <plus-carousel preset=\"presentation\" id=\"my-carousel\">\n    <plus-carousel-slides>\n      <plus-carousel-slide>1</plus-carousel-slide>\n      <plus-carousel-slide>2</plus-carousel-slide>\n      <plus-carousel-slide>3</plus-carousel-slide>\n      <plus-carousel-slide>4</plus-carousel-slide>\n      <plus-carousel-slide>5</plus-carousel-slide>\n      <plus-carousel-slide>6</plus-carousel-slide>\n      <plus-carousel-slide>7</plus-carousel-slide>\n      <plus-carousel-slide>8</plus-carousel-slide>\n      <plus-carousel-slide>9</plus-carousel-slide>\n    </plus-carousel-slides>\n    <plus-carousel-button type=\"previous\"></plus-carousel-button>\n    <plus-carousel-button type=\"next\"></plus-carousel-button>\n  </plus-carousel>\n  <br />\n  <plus-carousel\n    preset=\"presentation\"\n    class=\"mirror\"\n    draggable=\"free\"\n    mirror=\"my-carousel\"\n    mirror-type=\"click-smooth\"\n  >\n    <plus-carousel-slides>\n      <plus-carousel-slide clickable>1</plus-carousel-slide>\n      <plus-carousel-slide clickable>2</plus-carousel-slide>\n      <plus-carousel-slide clickable>3</plus-carousel-slide>\n      <plus-carousel-slide clickable>4</plus-carousel-slide>\n      <plus-carousel-slide clickable>5</plus-carousel-slide>\n      <plus-carousel-slide clickable>6</plus-carousel-slide>\n      <plus-carousel-slide clickable>7</plus-carousel-slide>\n      <plus-carousel-slide clickable>8</plus-carousel-slide>\n      <plus-carousel-slide clickable>9</plus-carousel-slide>\n    </plus-carousel-slides>\n  </plus-carousel>\n</div>\n"
   },
   {
     "key": "angular/carousel/start-index",
@@ -8726,7 +8726,7 @@ export const examples = [
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" [start-index]=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" [start-index]=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/start-index",
@@ -8737,7 +8737,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" start-index=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" start-index=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/start-index",
@@ -8746,7 +8746,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" start-index={2}>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\" start-index={2}>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n"
   },
   {
@@ -8758,7 +8758,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" start-index={2}>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" start-index={2}>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/start-index",
@@ -8769,7 +8769,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" :start-index=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" :start-index=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/slides-per-view",
@@ -8780,7 +8780,7 @@ export const examples = [
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "@media (min-width: 0px) {\n  plus-carousel-slide {\n    flex-basis: 100% !important;\n  }\n}\n@media (min-width: 750px) {\n  plus-carousel-slide {\n    flex-basis: 50% !important;\n  }\n}\n@media (min-width: 1200px) {\n  plus-carousel-slide {\n    flex-basis: calc(100% / 3) !important;\n  }\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/slides-per-view",
@@ -8791,7 +8791,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "@media (min-width: 0px) {\n  plus-carousel-slide {\n    flex-basis: 100% !important;\n  }\n}\n@media (min-width: 750px) {\n  plus-carousel-slide {\n    flex-basis: 50% !important;\n  }\n}\n@media (min-width: 1200px) {\n  plus-carousel-slide {\n    flex-basis: calc(100% / 3) !important;\n  }\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/slides-per-view",
@@ -8800,7 +8800,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" resizable>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n        <plus-carousel-slide>6</plus-carousel-slide>\n        <plus-carousel-slide>7</plus-carousel-slide>\n        <plus-carousel-slide>8</plus-carousel-slide>\n        <plus-carousel-slide>9</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\" resizable>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n        <plus-carousel-slide>6</plus-carousel-slide>\n        <plus-carousel-slide>7</plus-carousel-slide>\n        <plus-carousel-slide>8</plus-carousel-slide>\n        <plus-carousel-slide>9</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
     "style": "@media (min-width: 0px) {\n  plus-carousel-slide {\n    flex-basis: 100% !important;\n  }\n}\n@media (min-width: 750px) {\n  plus-carousel-slide {\n    flex-basis: 50% !important;\n  }\n}\n@media (min-width: 1200px) {\n  plus-carousel-slide {\n    flex-basis: calc(100% / 3) !important;\n  }\n}\n"
   },
   {
@@ -8812,7 +8812,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "@media (min-width: 0px) {\n  plus-carousel-slide {\n    flex-basis: 100% !important;\n  }\n}\n@media (min-width: 750px) {\n  plus-carousel-slide {\n    flex-basis: 50% !important;\n  }\n}\n@media (min-width: 1200px) {\n  plus-carousel-slide {\n    flex-basis: calc(100% / 3) !important;\n  }\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/slides-per-view",
@@ -8823,7 +8823,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "@media (min-width: 0px) {\n  plus-carousel-slide {\n    flex-basis: 100% !important;\n  }\n}\n@media (min-width: 750px) {\n  plus-carousel-slide {\n    flex-basis: 50% !important;\n  }\n}\n@media (min-width: 1200px) {\n  plus-carousel-slide {\n    flex-basis: calc(100% / 3) !important;\n  }\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/scale",
@@ -8834,7 +8834,7 @@ export const examples = [
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-carousel-slide {\n  flex-basis: 55% !important;\n  background-color: transparent !important;\n}\nplus-carousel-slide div {\n  background-color: whitesmoke;\n  border-radius: 0.5rem;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width: 100%;\n  transform: scale(var(--plus-carousel-factor-2));\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" loop [tween-factor-base]=\"0.52\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide><div>1</div></plus-carousel-slide>\n    <plus-carousel-slide><div>2</div></plus-carousel-slide>\n    <plus-carousel-slide><div>3</div></plus-carousel-slide>\n    <plus-carousel-slide><div>4</div></plus-carousel-slide>\n    <plus-carousel-slide><div>5</div></plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" loop [tween-factor-base]=\"0.52\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide><div>1</div></plus-carousel-slide>\n    <plus-carousel-slide><div>2</div></plus-carousel-slide>\n    <plus-carousel-slide><div>3</div></plus-carousel-slide>\n    <plus-carousel-slide><div>4</div></plus-carousel-slide>\n    <plus-carousel-slide><div>5</div></plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/scale",
@@ -8845,7 +8845,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 55% !important;\n  background-color: transparent !important;\n}\nplus-carousel-slide div {\n  background-color: whitesmoke;\n  border-radius: 0.5rem;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width: 100%;\n  transform: scale(var(--plus-carousel-factor-2));\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" loop tween-factor-base=\"0.52\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide><div>1</div></plus-carousel-slide>\n    <plus-carousel-slide><div>2</div></plus-carousel-slide>\n    <plus-carousel-slide><div>3</div></plus-carousel-slide>\n    <plus-carousel-slide><div>4</div></plus-carousel-slide>\n    <plus-carousel-slide><div>5</div></plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" loop tween-factor-base=\"0.52\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide><div>1</div></plus-carousel-slide>\n    <plus-carousel-slide><div>2</div></plus-carousel-slide>\n    <plus-carousel-slide><div>3</div></plus-carousel-slide>\n    <plus-carousel-slide><div>4</div></plus-carousel-slide>\n    <plus-carousel-slide><div>5</div></plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/scale",
@@ -8854,7 +8854,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" loop tween-factor-base={0.52} draggable=\"free\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>\n          <div>1</div>\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <div>2</div>\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <div>3</div>\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <div>4</div>\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <div>5</div>\n        </plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\" loop tween-factor-base={0.52} draggable=\"free\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>\n          <div>1</div>\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <div>2</div>\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <div>3</div>\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <div>4</div>\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <div>5</div>\n        </plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
     "style": "plus-carousel-slide {\n  flex-basis: 55% !important;\n  background-color: transparent !important;\n}\nplus-carousel-slide div {\n  background-color: whitesmoke;\n  border-radius: 0.5rem;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width: 100%;\n  transform: scale(var(--plus-carousel-factor-2));\n}\n"
   },
   {
@@ -8866,7 +8866,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 55% !important;\n  background-color: transparent !important;\n}\nplus-carousel-slide div {\n  background-color: whitesmoke;\n  border-radius: 0.5rem;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width: 100%;\n  transform: scale(var(--plus-carousel-factor-2));\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" loop tween-factor-base={0.52} draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide><div>1</div></plus-carousel-slide>\n    <plus-carousel-slide><div>2</div></plus-carousel-slide>\n    <plus-carousel-slide><div>3</div></plus-carousel-slide>\n    <plus-carousel-slide><div>4</div></plus-carousel-slide>\n    <plus-carousel-slide><div>5</div></plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" loop tween-factor-base={0.52} draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide><div>1</div></plus-carousel-slide>\n    <plus-carousel-slide><div>2</div></plus-carousel-slide>\n    <plus-carousel-slide><div>3</div></plus-carousel-slide>\n    <plus-carousel-slide><div>4</div></plus-carousel-slide>\n    <plus-carousel-slide><div>5</div></plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/scale",
@@ -8877,7 +8877,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 55% !important;\n  background-color: transparent !important;\n}\nplus-carousel-slide div {\n  background-color: whitesmoke;\n  border-radius: 0.5rem;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width: 100%;\n  transform: scale(var(--plus-carousel-factor-2));\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" loop :tween-factor-base=\"0.52\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide><div>1</div></plus-carousel-slide>\n    <plus-carousel-slide><div>2</div></plus-carousel-slide>\n    <plus-carousel-slide><div>3</div></plus-carousel-slide>\n    <plus-carousel-slide><div>4</div></plus-carousel-slide>\n    <plus-carousel-slide><div>5</div></plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" loop :tween-factor-base=\"0.52\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide><div>1</div></plus-carousel-slide>\n    <plus-carousel-slide><div>2</div></plus-carousel-slide>\n    <plus-carousel-slide><div>3</div></plus-carousel-slide>\n    <plus-carousel-slide><div>4</div></plus-carousel-slide>\n    <plus-carousel-slide><div>5</div></plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/resizable",
@@ -8888,7 +8888,7 @@ export const examples = [
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/resizable",
@@ -8899,7 +8899,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/resizable",
@@ -8908,7 +8908,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" resizable>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\" resizable>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n"
   },
   {
@@ -8920,7 +8920,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/resizable",
@@ -8931,7 +8931,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/progress",
@@ -8941,7 +8941,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/progress",
@@ -8951,7 +8951,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/progress",
@@ -8960,7 +8960,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-progress></plus-carousel-progress>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-progress></plus-carousel-progress>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/carousel/progress",
@@ -8970,7 +8970,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/progress",
@@ -8980,7 +8980,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/parallax",
@@ -8991,7 +8991,7 @@ export const examples = [
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-carousel-slide {\n  flex-basis: 80% !important;\n  overflow: hidden;\n}\nimg {\n  display: block;\n  height: 100%;\n  width: 100%;\n  max-width: none;\n  flex: 0 0 calc(115% + (1rem * 2));\n  object-fit: cover;\n  transform: translateX(calc(var(--plus-carousel-factor-1) * -80%));\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" draggable=\"snap\" loop [tween-factor-base]=\"0.2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/319/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/755/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/203/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/743/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/212/600/350\" />\n    </plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" draggable=\"snap\" loop [tween-factor-base]=\"0.2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>\n      <img alt=\" \" src=\"https://picsum.photos/id/319/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img alt=\" \" src=\"https://picsum.photos/id/755/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img alt=\" \" src=\"https://picsum.photos/id/203/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img alt=\" \" src=\"https://picsum.photos/id/743/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img alt=\" \" src=\"https://picsum.photos/id/212/600/350\" />\n    </plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/parallax",
@@ -9002,7 +9002,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 80% !important;\n  overflow: hidden;\n}\nimg {\n  display: block;\n  height: 100%;\n  width: 100%;\n  max-width: none;\n  flex: 0 0 calc(115% + (1rem * 2));\n  object-fit: cover;\n  transform: translateX(calc(var(--plus-carousel-factor-1) * -80%));\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" draggable=\"snap\" loop tween-factor-base=\"0.2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/319/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/755/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/203/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/743/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/212/600/350\" />\n    </plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" draggable=\"snap\" loop tween-factor-base=\"0.2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>\n      <img alt=\" \" src=\"https://picsum.photos/id/319/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img alt=\" \" src=\"https://picsum.photos/id/755/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img alt=\" \" src=\"https://picsum.photos/id/203/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img alt=\" \" src=\"https://picsum.photos/id/743/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img alt=\" \" src=\"https://picsum.photos/id/212/600/350\" />\n    </plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/parallax",
@@ -9011,7 +9011,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" draggable=\"snap\" loop tween-factor-base={0.2}>\n      <plus-carousel-slides>\n        <plus-carousel-slide>\n          <img src=\"https://picsum.photos/id/319/600/350\" />\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <img src=\"https://picsum.photos/id/755/600/350\" />\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <img src=\"https://picsum.photos/id/203/600/350\" />\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <img src=\"https://picsum.photos/id/743/600/350\" />\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <img src=\"https://picsum.photos/id/212/600/350\" />\n        </plus-carousel-slide>\n      </plus-carousel-slides>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\" draggable=\"snap\" loop tween-factor-base={0.2}>\n      <plus-carousel-slides>\n        <plus-carousel-slide>\n          <img alt=\" \" src=\"https://picsum.photos/id/319/600/350\" />\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <img alt=\" \" src=\"https://picsum.photos/id/755/600/350\" />\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <img alt=\" \" src=\"https://picsum.photos/id/203/600/350\" />\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <img alt=\" \" src=\"https://picsum.photos/id/743/600/350\" />\n        </plus-carousel-slide>\n        <plus-carousel-slide>\n          <img alt=\" \" src=\"https://picsum.photos/id/212/600/350\" />\n        </plus-carousel-slide>\n      </plus-carousel-slides>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
     "style": "plus-carousel-slide {\n  flex-basis: 80% !important;\n  overflow: hidden;\n}\nimg {\n  display: block;\n  height: 100%;\n  width: 100%;\n  max-width: none;\n  flex: 0 0 calc(115% + (1rem * 2));\n  object-fit: cover;\n  transform: translateX(calc(var(--plus-carousel-factor-1) * -80%));\n}\n"
   },
   {
@@ -9023,7 +9023,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 80% !important;\n  overflow: hidden;\n}\nimg {\n  display: block;\n  height: 100%;\n  width: 100%;\n  max-width: none;\n  flex: 0 0 calc(115% + (1rem * 2));\n  object-fit: cover;\n  transform: translateX(calc(var(--plus-carousel-factor-1) * -80%));\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" draggable=\"snap\" loop tween-factor-base={0.2}>\n  <plus-carousel-slides>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/319/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/755/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/203/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/743/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/212/600/350\" />\n    </plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" draggable=\"snap\" loop tween-factor-base={0.2}>\n  <plus-carousel-slides>\n    <plus-carousel-slide>\n      <img alt=\" \" src=\"https://picsum.photos/id/319/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img alt=\" \" src=\"https://picsum.photos/id/755/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img alt=\" \" src=\"https://picsum.photos/id/203/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img alt=\" \" src=\"https://picsum.photos/id/743/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img alt=\" \" src=\"https://picsum.photos/id/212/600/350\" />\n    </plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/parallax",
@@ -9034,7 +9034,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 80% !important;\n  overflow: hidden;\n}\nimg {\n  display: block;\n  height: 100%;\n  width: 100%;\n  max-width: none;\n  flex: 0 0 calc(115% + (1rem * 2));\n  object-fit: cover;\n  transform: translateX(calc(var(--plus-carousel-factor-1) * -80%));\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" draggable=\"snap\" loop :tween-factor-base=\"0.2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/319/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/755/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/203/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/743/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img src=\"https://picsum.photos/id/212/600/350\" />\n    </plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" draggable=\"snap\" loop :tween-factor-base=\"0.2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>\n      <img alt=\" \" src=\"https://picsum.photos/id/319/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img alt=\" \" src=\"https://picsum.photos/id/755/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img alt=\" \" src=\"https://picsum.photos/id/203/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img alt=\" \" src=\"https://picsum.photos/id/743/600/350\" />\n    </plus-carousel-slide>\n    <plus-carousel-slide>\n      <img alt=\" \" src=\"https://picsum.photos/id/212/600/350\" />\n    </plus-carousel-slide>\n  </plus-carousel-slides>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/opacity",
@@ -9045,7 +9045,7 @@ export const examples = [
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n  opacity: var(--plus-carousel-factor-2);\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\" [tween-factor-base]=\"0.84\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" draggable=\"free\" [tween-factor-base]=\"0.84\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/opacity",
@@ -9056,7 +9056,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n  opacity: var(--plus-carousel-factor-2);\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\" tween-factor-base=\"0.84\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" draggable=\"free\" tween-factor-base=\"0.84\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/opacity",
@@ -9065,7 +9065,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" draggable=\"free\" tween-factor-base={0.84} loop>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\" draggable=\"free\" tween-factor-base={0.84} loop>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n  opacity: var(--plus-carousel-factor-2);\n}\n"
   },
   {
@@ -9077,7 +9077,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n  opacity: var(--plus-carousel-factor-2);\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\" tween-factor-base={0.84} loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" draggable=\"free\" tween-factor-base={0.84} loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/opacity",
@@ -9088,7 +9088,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n  opacity: var(--plus-carousel-factor-2);\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\" :tween-factor-base=\"0.84\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" draggable=\"free\" :tween-factor-base=\"0.84\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/loop",
@@ -9099,7 +9099,7 @@ export const examples = [
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/loop",
@@ -9110,7 +9110,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/loop",
@@ -9119,7 +9119,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" loop>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\" loop>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n"
   },
   {
@@ -9131,7 +9131,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/loop",
@@ -9142,7 +9142,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" loop>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/indicators",
@@ -9152,7 +9152,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators></plus-carousel-indicators>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators></plus-carousel-indicators>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/indicators",
@@ -9162,7 +9162,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators></plus-carousel-indicators>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators></plus-carousel-indicators>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/indicators",
@@ -9171,7 +9171,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-indicators></plus-carousel-indicators>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-indicators></plus-carousel-indicators>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/carousel/indicators",
@@ -9181,7 +9181,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators></plus-carousel-indicators>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators></plus-carousel-indicators>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/indicators",
@@ -9191,7 +9191,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators></plus-carousel-indicators>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators></plus-carousel-indicators>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/indicators-numbers",
@@ -9201,7 +9201,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable numbers></plus-carousel-indicators>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable numbers></plus-carousel-indicators>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/indicators-numbers",
@@ -9211,7 +9211,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable numbers></plus-carousel-indicators>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable numbers></plus-carousel-indicators>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/indicators-numbers",
@@ -9220,7 +9220,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-indicators clickable numbers></plus-carousel-indicators>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-indicators clickable numbers></plus-carousel-indicators>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/carousel/indicators-numbers",
@@ -9230,7 +9230,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable numbers></plus-carousel-indicators>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable numbers></plus-carousel-indicators>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/indicators-numbers",
@@ -9240,7 +9240,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable numbers></plus-carousel-indicators>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable numbers></plus-carousel-indicators>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/indicators-infinity",
@@ -9250,7 +9250,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators infinity></plus-carousel-indicators>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators infinity></plus-carousel-indicators>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/indicators-infinity",
@@ -9260,7 +9260,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators infinity></plus-carousel-indicators>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators infinity></plus-carousel-indicators>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/indicators-infinity",
@@ -9269,7 +9269,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n        <plus-carousel-slide>6</plus-carousel-slide>\n        <plus-carousel-slide>7</plus-carousel-slide>\n        <plus-carousel-slide>8</plus-carousel-slide>\n        <plus-carousel-slide>9</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-indicators infinity></plus-carousel-indicators>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n        <plus-carousel-slide>6</plus-carousel-slide>\n        <plus-carousel-slide>7</plus-carousel-slide>\n        <plus-carousel-slide>8</plus-carousel-slide>\n        <plus-carousel-slide>9</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-indicators infinity></plus-carousel-indicators>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/carousel/indicators-infinity",
@@ -9279,7 +9279,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators infinity></plus-carousel-indicators>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators infinity></plus-carousel-indicators>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/indicators-infinity",
@@ -9289,7 +9289,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators infinity></plus-carousel-indicators>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n    <plus-carousel-slide>6</plus-carousel-slide>\n    <plus-carousel-slide>7</plus-carousel-slide>\n    <plus-carousel-slide>8</plus-carousel-slide>\n    <plus-carousel-slide>9</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators infinity></plus-carousel-indicators>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/indicators-clickable",
@@ -9299,7 +9299,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable></plus-carousel-indicators>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable></plus-carousel-indicators>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/indicators-clickable",
@@ -9309,7 +9309,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable></plus-carousel-indicators>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable></plus-carousel-indicators>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/indicators-clickable",
@@ -9318,7 +9318,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-indicators clickable></plus-carousel-indicators>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-indicators clickable></plus-carousel-indicators>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/carousel/indicators-clickable",
@@ -9328,7 +9328,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable></plus-carousel-indicators>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable></plus-carousel-indicators>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/indicators-clickable",
@@ -9338,7 +9338,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable></plus-carousel-indicators>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable></plus-carousel-indicators>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/indicators-clickable-jump",
@@ -9348,7 +9348,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable=\"jump\"></plus-carousel-indicators>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable=\"jump\"></plus-carousel-indicators>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/indicators-clickable-jump",
@@ -9358,7 +9358,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable=\"jump\"></plus-carousel-indicators>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable=\"jump\"></plus-carousel-indicators>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/indicators-clickable-jump",
@@ -9367,7 +9367,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-indicators clickable=\"jump\"></plus-carousel-indicators>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-indicators clickable=\"jump\"></plus-carousel-indicators>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/carousel/indicators-clickable-jump",
@@ -9377,7 +9377,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable=\"jump\"></plus-carousel-indicators>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable=\"jump\"></plus-carousel-indicators>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/indicators-clickable-jump",
@@ -9387,7 +9387,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable=\"jump\"></plus-carousel-indicators>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-indicators clickable=\"jump\"></plus-carousel-indicators>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/events",
@@ -9398,7 +9398,7 @@ export const examples = [
     },
     "description": "Open the developer console.",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-carousel\n  variant=\"presentation\"\n  draggable=\"free\"\n  focusable\n  resizable\n  (plus-destroy)=\"console.log('destroy')\"\n  (plus-init)=\"console.log('init')\"\n  (plus-pointer-down)=\"console.log('pointer-down')\"\n  (plus-pointer-up)=\"console.log('pointer-up')\"\n  (plus-re-init)=\"console.log('re-init')\"\n  (plus-resize)=\"console.log('resize')\"\n  (plus-scroll)=\"console.log('scroll')\"\n  (plus-select)=\"console.log('select')\"\n  (plus-settle)=\"console.log('settle')\"\n  (plus-slide-focus)=\"console.log('slide-focus')\"\n  (plus-slide-focus-start)=\"console.log('slide-focus-start')\"\n  (plus-slides-changed)=\"console.log('slides-changed')\"\n  (plus-slides-in-view)=\"console.log('slides-in-view')\"\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel\n  preset=\"presentation\"\n  draggable=\"free\"\n  focusable\n  resizable\n  (plus-destroy)=\"console.log('destroy')\"\n  (plus-init)=\"console.log('init')\"\n  (plus-pointer-down)=\"console.log('pointer-down')\"\n  (plus-pointer-up)=\"console.log('pointer-up')\"\n  (plus-re-init)=\"console.log('re-init')\"\n  (plus-resize)=\"console.log('resize')\"\n  (plus-scroll)=\"console.log('scroll')\"\n  (plus-select)=\"console.log('select')\"\n  (plus-settle)=\"console.log('settle')\"\n  (plus-slide-focus)=\"console.log('slide-focus')\"\n  (plus-slide-focus-start)=\"console.log('slide-focus-start')\"\n  (plus-slides-changed)=\"console.log('slides-changed')\"\n  (plus-slides-in-view)=\"console.log('slides-in-view')\"\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/events",
@@ -9409,7 +9409,7 @@ export const examples = [
     },
     "description": "Open the developer console.",
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n$carousel.addEventListener('plus-destroy', () => console.log('destroy'));\n$carousel.addEventListener('plus-init', () => console.log('init'));\n$carousel.addEventListener('plus-pointer-down', () => console.log('pointer-down'));\n$carousel.addEventListener('plus-pointer-up', () => console.log('pointer-up'));\n$carousel.addEventListener('plus-re-init', () => console.log('re-init'));\n$carousel.addEventListener('plus-resize', () => console.log('resize'));\n$carousel.addEventListener('plus-scroll', () => console.log('scroll'));\n$carousel.addEventListener('plus-select', () => console.log('select'));\n$carousel.addEventListener('plus-settle', () => console.log('settle'));\n$carousel.addEventListener('plus-slide-focus', () => console.log('slide-focus'));\n$carousel.addEventListener('plus-slide-focus-start', () => console.log('slide-focus-start'));\n$carousel.addEventListener('plus-slides-changed', () => console.log('slides-changed'));\n$carousel.addEventListener('plus-slides-in-view', () => console.log('slides-in-view'));\n",
-    "template": "<plus-carousel id=\"$carousel\" variant=\"presentation\" draggable=\"free\" focusable resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel id=\"$carousel\" preset=\"presentation\" draggable=\"free\" focusable resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/events",
@@ -9419,7 +9419,7 @@ export const examples = [
       "rtl": false
     },
     "description": "Open the developer console.",
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel\n      variant=\"presentation\"\n      draggable=\"free\"\n      focusable\n      resizable\n      onPlusDestroy={() => console.log('destroy')}\n      onPlusInit={() => console.log('init')}\n      onPlusPointerDown={() => console.log('pointer-down')}\n      onPlusPointerUp={() => console.log('pointer-up')}\n      onPlusReInit={() => console.log('re-init')}\n      onPlusResize={() => console.log('resize')}\n      onPlusScroll={() => console.log('scroll')}\n      onPlusSelect={() => console.log('select')}\n      onPlusSettle={() => console.log('settle')}\n      onPlusSlideFocus={() => console.log('slide-focus')}\n      onPlusSlideFocusStart={() => console.log('slide-focus-start')}\n      onPlusSlidesChanged={() => console.log('slides-changed')}\n      onPlusSlidesInView={() => console.log('slides-in-view')}\n    >\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel\n      preset=\"presentation\"\n      draggable=\"free\"\n      focusable\n      resizable\n      onPlusDestroy={() => console.log('destroy')}\n      onPlusInit={() => console.log('init')}\n      onPlusPointerDown={() => console.log('pointer-down')}\n      onPlusPointerUp={() => console.log('pointer-up')}\n      onPlusReInit={() => console.log('re-init')}\n      onPlusResize={() => console.log('resize')}\n      onPlusScroll={() => console.log('scroll')}\n      onPlusSelect={() => console.log('select')}\n      onPlusSettle={() => console.log('settle')}\n      onPlusSlideFocus={() => console.log('slide-focus')}\n      onPlusSlideFocusStart={() => console.log('slide-focus-start')}\n      onPlusSlidesChanged={() => console.log('slides-changed')}\n      onPlusSlidesInView={() => console.log('slides-in-view')}\n    >\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/carousel/events",
@@ -9430,7 +9430,7 @@ export const examples = [
     },
     "description": "Open the developer console.",
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel\n  variant=\"presentation\"\n  draggable=\"free\"\n  focusable\n  resizable\n  on:plus-destroy={() => console.log('destroy')}\n  on:plus-init={() => console.log('init')}\n  on:plus-pointer-down={() => console.log('pointer-down')}\n  on:plus-pointer-up={() => console.log('pointer-up')}\n  on:plus-re-init={() => console.log('re-init')}\n  on:plus-resize={() => console.log('resize')}\n  on:plus-scroll={() => console.log('scroll')}\n  on:plus-select={() => console.log('select')}\n  on:plus-settle={() => console.log('settle')}\n  on:plus-slide-focus={() => console.log('slide-focus')}\n  on:plus-slide-focus-start={() => console.log('slide-focus-start')}\n  on:plus-slides-changed={() => console.log('slides-changed')}\n  on:plus-slides-in-view={() => console.log('slides-in-view')}\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel\n  preset=\"presentation\"\n  draggable=\"free\"\n  focusable\n  resizable\n  on:plus-destroy={() => console.log('destroy')}\n  on:plus-init={() => console.log('init')}\n  on:plus-pointer-down={() => console.log('pointer-down')}\n  on:plus-pointer-up={() => console.log('pointer-up')}\n  on:plus-re-init={() => console.log('re-init')}\n  on:plus-resize={() => console.log('resize')}\n  on:plus-scroll={() => console.log('scroll')}\n  on:plus-select={() => console.log('select')}\n  on:plus-settle={() => console.log('settle')}\n  on:plus-slide-focus={() => console.log('slide-focus')}\n  on:plus-slide-focus-start={() => console.log('slide-focus-start')}\n  on:plus-slides-changed={() => console.log('slides-changed')}\n  on:plus-slides-in-view={() => console.log('slides-in-view')}\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/events",
@@ -9441,7 +9441,7 @@ export const examples = [
     },
     "description": "Open the developer console.",
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel\n  variant=\"presentation\"\n  draggable=\"free\"\n  focusable\n  resizable\n  @plus-destroy=\"console.log('destroy')\"\n  @plus-init=\"console.log('init')\"\n  @plus-pointer-down=\"console.log('pointer-down')\"\n  @plus-pointer-up=\"console.log('pointer-up')\"\n  @plus-re-init=\"console.log('re-init')\"\n  @plus-resize=\"console.log('resize')\"\n  @plus-scroll=\"console.log('scroll')\"\n  @plus-select=\"console.log('select')\"\n  @plus-settle=\"console.log('settle')\"\n  @plus-slide-focus=\"console.log('slide-focus')\"\n  @plus-slide-focus-start=\"console.log('slide-focus-start')\"\n  @plus-slides-changed=\"console.log('slides-changed')\"\n  @plus-slides-in-view=\"console.log('slides-in-view')\"\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel\n  preset=\"presentation\"\n  draggable=\"free\"\n  focusable\n  resizable\n  @plus-destroy=\"console.log('destroy')\"\n  @plus-init=\"console.log('init')\"\n  @plus-pointer-down=\"console.log('pointer-down')\"\n  @plus-pointer-up=\"console.log('pointer-up')\"\n  @plus-re-init=\"console.log('re-init')\"\n  @plus-resize=\"console.log('resize')\"\n  @plus-scroll=\"console.log('scroll')\"\n  @plus-select=\"console.log('select')\"\n  @plus-settle=\"console.log('settle')\"\n  @plus-slide-focus=\"console.log('slide-focus')\"\n  @plus-slide-focus-start=\"console.log('slide-focus-start')\"\n  @plus-slides-changed=\"console.log('slides-changed')\"\n  @plus-slides-in-view=\"console.log('slides-in-view')\"\n>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/duration",
@@ -9451,7 +9451,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-carousel variant=\"presentation\" [duration]=\"75\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" [duration]=\"75\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/duration",
@@ -9461,7 +9461,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\" duration=\"75\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" duration=\"75\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/duration",
@@ -9470,7 +9470,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" duration={75}>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\" duration={75}>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/carousel/duration",
@@ -9480,7 +9480,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\" duration={75}>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" duration={75}>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/duration",
@@ -9490,7 +9490,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\" :duration=\"75\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" :duration=\"75\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/draggable-snap",
@@ -9501,7 +9501,7 @@ export const examples = [
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" draggable=\"snap\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" draggable=\"snap\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/draggable-snap",
@@ -9512,7 +9512,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" draggable=\"snap\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" draggable=\"snap\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/draggable-snap",
@@ -9521,7 +9521,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" draggable=\"snap\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\" draggable=\"snap\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n"
   },
   {
@@ -9533,7 +9533,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" draggable=\"snap\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" draggable=\"snap\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/draggable-snap",
@@ -9544,7 +9544,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" draggable=\"snap\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" draggable=\"snap\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/draggable-free",
@@ -9555,7 +9555,7 @@ export const examples = [
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-carousel-slide {\n  flex-basis: 50% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/draggable-free",
@@ -9566,7 +9566,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 50% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/draggable-free",
@@ -9575,7 +9575,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" draggable=\"free\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\" draggable=\"free\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
     "style": "plus-carousel-slide {\n  flex-basis: 50% !important;\n}\n"
   },
   {
@@ -9587,7 +9587,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 50% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/draggable-free",
@@ -9598,7 +9598,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 50% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" draggable=\"free\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/direction",
@@ -9609,7 +9609,7 @@ export const examples = [
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" dir=\"rtl\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" dir=\"rtl\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/direction",
@@ -9620,7 +9620,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" dir=\"rtl\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" dir=\"rtl\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/direction",
@@ -9629,7 +9629,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" dir=\"rtl\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\" dir=\"rtl\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n"
   },
   {
@@ -9641,7 +9641,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" dir=\"rtl\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" dir=\"rtl\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/direction",
@@ -9652,7 +9652,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" dir=\"rtl\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" dir=\"rtl\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/default",
@@ -9662,7 +9662,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/default",
@@ -9672,7 +9672,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/default",
@@ -9681,7 +9681,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/carousel/default",
@@ -9691,7 +9691,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/default",
@@ -9701,7 +9701,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/counter-template",
@@ -9711,7 +9711,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter template=\"%CURRENT% of %TOTAL%\"></plus-carousel-counter>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter template=\"%CURRENT% of %TOTAL%\"></plus-carousel-counter>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/counter-template",
@@ -9721,7 +9721,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter template=\"%CURRENT% of %TOTAL%\"></plus-carousel-counter>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter template=\"%CURRENT% of %TOTAL%\"></plus-carousel-counter>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/counter-template",
@@ -9730,7 +9730,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-counter template=\"%CURRENT% of %TOTAL%\"></plus-carousel-counter>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\">\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-counter template=\"%CURRENT% of %TOTAL%\"></plus-carousel-counter>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/carousel/counter-template",
@@ -9740,7 +9740,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter template=\"%CURRENT% of %TOTAL%\"></plus-carousel-counter>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter template=\"%CURRENT% of %TOTAL%\"></plus-carousel-counter>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/counter-template",
@@ -9750,7 +9750,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter template=\"%CURRENT% of %TOTAL%\"></plus-carousel-counter>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter template=\"%CURRENT% of %TOTAL%\"></plus-carousel-counter>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/complex",
@@ -9760,7 +9760,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\" [start-index]=\"2\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter></plus-carousel-counter>\n  <plus-carousel-indicators></plus-carousel-indicators>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" draggable=\"free\" [start-index]=\"2\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter></plus-carousel-counter>\n  <plus-carousel-indicators></plus-carousel-indicators>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/complex",
@@ -9770,7 +9770,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\" start-index=\"2\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter></plus-carousel-counter>\n  <plus-carousel-indicators></plus-carousel-indicators>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" draggable=\"free\" start-index=\"2\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter></plus-carousel-counter>\n  <plus-carousel-indicators></plus-carousel-indicators>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/complex",
@@ -9779,7 +9779,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" draggable=\"free\" start-index={2} resizable>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-counter></plus-carousel-counter>\n      <plus-carousel-indicators></plus-carousel-indicators>\n      <plus-carousel-progress></plus-carousel-progress>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\" draggable=\"free\" start-index={2} resizable>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n      <plus-carousel-counter></plus-carousel-counter>\n      <plus-carousel-indicators></plus-carousel-indicators>\n      <plus-carousel-progress></plus-carousel-progress>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/carousel/complex",
@@ -9789,7 +9789,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\" start-index={2} resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter></plus-carousel-counter>\n  <plus-carousel-indicators></plus-carousel-indicators>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" draggable=\"free\" start-index={2} resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter></plus-carousel-counter>\n  <plus-carousel-indicators></plus-carousel-indicators>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/complex",
@@ -9799,7 +9799,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-counter.js';\nimport '@htmlplus/ui/carousel-indicators.js';\nimport '@htmlplus/ui/carousel-progress.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\" draggable=\"free\" :start-index=\"2\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter></plus-carousel-counter>\n  <plus-carousel-indicators></plus-carousel-indicators>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" draggable=\"free\" :start-index=\"2\" resizable>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n  <plus-carousel-counter></plus-carousel-counter>\n  <plus-carousel-indicators></plus-carousel-indicators>\n  <plus-carousel-progress></plus-carousel-progress>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/classes",
@@ -9810,7 +9810,7 @@ export const examples = [
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n  transition: opacity 0.25s ease-in-out;\n}\nplus-carousel-slide:not(.snapped) {\n  opacity: 0.25;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" classes>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" classes>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/classes",
@@ -9821,7 +9821,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n  transition: opacity 0.25s ease-in-out;\n}\nplus-carousel-slide:not(.snapped) {\n  opacity: 0.25;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" classes>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" classes>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/classes",
@@ -9830,7 +9830,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" classes>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\" classes>\n      <plus-carousel-slides>\n        <plus-carousel-slide>1</plus-carousel-slide>\n        <plus-carousel-slide>2</plus-carousel-slide>\n        <plus-carousel-slide>3</plus-carousel-slide>\n        <plus-carousel-slide>4</plus-carousel-slide>\n        <plus-carousel-slide>5</plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n  transition: opacity 0.25s ease-in-out;\n}\nplus-carousel-slide:not(.snapped) {\n  opacity: 0.25;\n}\n"
   },
   {
@@ -9842,7 +9842,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n  transition: opacity 0.25s ease-in-out;\n}\nplus-carousel-slide:not(.snapped) {\n  opacity: 0.25;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" classes>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" classes>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/classes",
@@ -9853,7 +9853,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n  transition: opacity 0.25s ease-in-out;\n}\nplus-carousel-slide:not(.snapped) {\n  opacity: 0.25;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" classes>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" classes>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/auto-height",
@@ -9863,7 +9863,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-carousel variant=\"presentation\" auto-height>\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"height: 12rem\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 15rem\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 10rem\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 14rem\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 12rem\">5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" auto-height>\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"height: 12rem\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 15rem\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 10rem\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 14rem\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 12rem\">5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/auto-height",
@@ -9873,7 +9873,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\" auto-height>\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"height: 12rem\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 15rem\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 10rem\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 14rem\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 12rem\">5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" auto-height>\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"height: 12rem\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 15rem\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 10rem\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 14rem\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 12rem\">5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/auto-height",
@@ -9882,7 +9882,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel variant=\"presentation\" auto-height>\n      <plus-carousel-slides>\n        <plus-carousel-slide\n          style={{\n            height: '12rem'\n          }}\n        >\n          1\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            height: '15rem'\n          }}\n        >\n          2\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            height: '10rem'\n          }}\n        >\n          3\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            height: '14rem'\n          }}\n        >\n          4\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            height: '12rem'\n          }}\n        >\n          5\n        </plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <plus-carousel preset=\"presentation\" auto-height>\n      <plus-carousel-slides>\n        <plus-carousel-slide\n          style={{\n            height: '12rem'\n          }}\n        >\n          1\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            height: '15rem'\n          }}\n        >\n          2\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            height: '10rem'\n          }}\n        >\n          3\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            height: '14rem'\n          }}\n        >\n          4\n        </plus-carousel-slide>\n        <plus-carousel-slide\n          style={{\n            height: '12rem'\n          }}\n        >\n          5\n        </plus-carousel-slide>\n      </plus-carousel-slides>\n      <plus-carousel-button type=\"previous\"></plus-carousel-button>\n      <plus-carousel-button type=\"next\"></plus-carousel-button>\n    </plus-carousel>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/carousel/auto-height",
@@ -9892,7 +9892,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\" auto-height>\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"height: 12rem\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 15rem\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 10rem\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 14rem\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 12rem\">5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" auto-height>\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"height: 12rem\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 15rem\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 10rem\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 14rem\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 12rem\">5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/auto-height",
@@ -9902,7 +9902,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
-    "template": "<plus-carousel variant=\"presentation\" auto-height>\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"height: 12rem\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 15rem\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 10rem\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 14rem\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 12rem\">5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" auto-height>\n  <plus-carousel-slides>\n    <plus-carousel-slide style=\"height: 12rem\">1</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 15rem\">2</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 10rem\">3</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 14rem\">4</plus-carousel-slide>\n    <plus-carousel-slide style=\"height: 12rem\">5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "angular/carousel/align",
@@ -9913,7 +9913,7 @@ export const examples = [
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" align=\"start\" [start-index]=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel variant=\"presentation\" align=\"center\" [start-index]=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel variant=\"presentation\" align=\"end\" [start-index]=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" align=\"start\" [start-index]=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel preset=\"presentation\" align=\"center\" [start-index]=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel preset=\"presentation\" align=\"end\" [start-index]=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "javascript/carousel/align",
@@ -9924,7 +9924,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" align=\"start\" start-index=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel variant=\"presentation\" align=\"center\" start-index=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel variant=\"presentation\" align=\"end\" start-index=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" align=\"start\" start-index=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel preset=\"presentation\" align=\"center\" start-index=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel preset=\"presentation\" align=\"end\" start-index=\"2\">\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "react/carousel/align",
@@ -9933,7 +9933,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-carousel variant=\"presentation\" align=\"start\" start-index={2}>\n        <plus-carousel-slides>\n          <plus-carousel-slide>1</plus-carousel-slide>\n          <plus-carousel-slide>2</plus-carousel-slide>\n          <plus-carousel-slide>3</plus-carousel-slide>\n          <plus-carousel-slide>4</plus-carousel-slide>\n          <plus-carousel-slide>5</plus-carousel-slide>\n        </plus-carousel-slides>\n        <plus-carousel-button type=\"previous\"></plus-carousel-button>\n        <plus-carousel-button type=\"next\"></plus-carousel-button>\n      </plus-carousel>\n      <br />\n      <plus-carousel variant=\"presentation\" align=\"center\" start-index={2}>\n        <plus-carousel-slides>\n          <plus-carousel-slide>1</plus-carousel-slide>\n          <plus-carousel-slide>2</plus-carousel-slide>\n          <plus-carousel-slide>3</plus-carousel-slide>\n          <plus-carousel-slide>4</plus-carousel-slide>\n          <plus-carousel-slide>5</plus-carousel-slide>\n        </plus-carousel-slides>\n        <plus-carousel-button type=\"previous\"></plus-carousel-button>\n        <plus-carousel-button type=\"next\"></plus-carousel-button>\n      </plus-carousel>\n      <br />\n      <plus-carousel variant=\"presentation\" align=\"end\" start-index={2}>\n        <plus-carousel-slides>\n          <plus-carousel-slide>1</plus-carousel-slide>\n          <plus-carousel-slide>2</plus-carousel-slide>\n          <plus-carousel-slide>3</plus-carousel-slide>\n          <plus-carousel-slide>4</plus-carousel-slide>\n          <plus-carousel-slide>5</plus-carousel-slide>\n        </plus-carousel-slides>\n        <plus-carousel-button type=\"previous\"></plus-carousel-button>\n        <plus-carousel-button type=\"next\"></plus-carousel-button>\n      </plus-carousel>\n    </>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n\nfunction App() {\n  return (\n    <>\n      <plus-carousel preset=\"presentation\" align=\"start\" start-index={2}>\n        <plus-carousel-slides>\n          <plus-carousel-slide>1</plus-carousel-slide>\n          <plus-carousel-slide>2</plus-carousel-slide>\n          <plus-carousel-slide>3</plus-carousel-slide>\n          <plus-carousel-slide>4</plus-carousel-slide>\n          <plus-carousel-slide>5</plus-carousel-slide>\n        </plus-carousel-slides>\n        <plus-carousel-button type=\"previous\"></plus-carousel-button>\n        <plus-carousel-button type=\"next\"></plus-carousel-button>\n      </plus-carousel>\n      <br />\n      <plus-carousel preset=\"presentation\" align=\"center\" start-index={2}>\n        <plus-carousel-slides>\n          <plus-carousel-slide>1</plus-carousel-slide>\n          <plus-carousel-slide>2</plus-carousel-slide>\n          <plus-carousel-slide>3</plus-carousel-slide>\n          <plus-carousel-slide>4</plus-carousel-slide>\n          <plus-carousel-slide>5</plus-carousel-slide>\n        </plus-carousel-slides>\n        <plus-carousel-button type=\"previous\"></plus-carousel-button>\n        <plus-carousel-button type=\"next\"></plus-carousel-button>\n      </plus-carousel>\n      <br />\n      <plus-carousel preset=\"presentation\" align=\"end\" start-index={2}>\n        <plus-carousel-slides>\n          <plus-carousel-slide>1</plus-carousel-slide>\n          <plus-carousel-slide>2</plus-carousel-slide>\n          <plus-carousel-slide>3</plus-carousel-slide>\n          <plus-carousel-slide>4</plus-carousel-slide>\n          <plus-carousel-slide>5</plus-carousel-slide>\n        </plus-carousel-slides>\n        <plus-carousel-button type=\"previous\"></plus-carousel-button>\n        <plus-carousel-button type=\"next\"></plus-carousel-button>\n      </plus-carousel>\n    </>\n  );\n}\nexport default App;\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n"
   },
   {
@@ -9945,7 +9945,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<plus-carousel variant=\"presentation\" align=\"start\" start-index={2}>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel variant=\"presentation\" align=\"center\" start-index={2}>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel variant=\"presentation\" align=\"end\" start-index={2}>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
+    "template": "<plus-carousel preset=\"presentation\" align=\"start\" start-index={2}>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel preset=\"presentation\" align=\"center\" start-index={2}>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n<br />\n<plus-carousel preset=\"presentation\" align=\"end\" start-index={2}>\n  <plus-carousel-slides>\n    <plus-carousel-slide>1</plus-carousel-slide>\n    <plus-carousel-slide>2</plus-carousel-slide>\n    <plus-carousel-slide>3</plus-carousel-slide>\n    <plus-carousel-slide>4</plus-carousel-slide>\n    <plus-carousel-slide>5</plus-carousel-slide>\n  </plus-carousel-slides>\n  <plus-carousel-button type=\"previous\"></plus-carousel-button>\n  <plus-carousel-button type=\"next\"></plus-carousel-button>\n</plus-carousel>\n"
   },
   {
     "key": "vue/carousel/align",
@@ -9956,7 +9956,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/carousel-button.js';\nimport '@htmlplus/ui/carousel-slide.js';\nimport '@htmlplus/ui/carousel-slides.js';\nimport '@htmlplus/ui/carousel.js';\n",
     "style": "plus-carousel-slide {\n  flex-basis: 70% !important;\n}\n",
-    "template": "<div>\n  <plus-carousel variant=\"presentation\" align=\"start\" :start-index=\"2\">\n    <plus-carousel-slides>\n      <plus-carousel-slide>1</plus-carousel-slide>\n      <plus-carousel-slide>2</plus-carousel-slide>\n      <plus-carousel-slide>3</plus-carousel-slide>\n      <plus-carousel-slide>4</plus-carousel-slide>\n      <plus-carousel-slide>5</plus-carousel-slide>\n    </plus-carousel-slides>\n    <plus-carousel-button type=\"previous\"></plus-carousel-button>\n    <plus-carousel-button type=\"next\"></plus-carousel-button>\n  </plus-carousel>\n  <br />\n  <plus-carousel variant=\"presentation\" align=\"center\" :start-index=\"2\">\n    <plus-carousel-slides>\n      <plus-carousel-slide>1</plus-carousel-slide>\n      <plus-carousel-slide>2</plus-carousel-slide>\n      <plus-carousel-slide>3</plus-carousel-slide>\n      <plus-carousel-slide>4</plus-carousel-slide>\n      <plus-carousel-slide>5</plus-carousel-slide>\n    </plus-carousel-slides>\n    <plus-carousel-button type=\"previous\"></plus-carousel-button>\n    <plus-carousel-button type=\"next\"></plus-carousel-button>\n  </plus-carousel>\n  <br />\n  <plus-carousel variant=\"presentation\" align=\"end\" :start-index=\"2\">\n    <plus-carousel-slides>\n      <plus-carousel-slide>1</plus-carousel-slide>\n      <plus-carousel-slide>2</plus-carousel-slide>\n      <plus-carousel-slide>3</plus-carousel-slide>\n      <plus-carousel-slide>4</plus-carousel-slide>\n      <plus-carousel-slide>5</plus-carousel-slide>\n    </plus-carousel-slides>\n    <plus-carousel-button type=\"previous\"></plus-carousel-button>\n    <plus-carousel-button type=\"next\"></plus-carousel-button>\n  </plus-carousel>\n</div>\n"
+    "template": "<div>\n  <plus-carousel preset=\"presentation\" align=\"start\" :start-index=\"2\">\n    <plus-carousel-slides>\n      <plus-carousel-slide>1</plus-carousel-slide>\n      <plus-carousel-slide>2</plus-carousel-slide>\n      <plus-carousel-slide>3</plus-carousel-slide>\n      <plus-carousel-slide>4</plus-carousel-slide>\n      <plus-carousel-slide>5</plus-carousel-slide>\n    </plus-carousel-slides>\n    <plus-carousel-button type=\"previous\"></plus-carousel-button>\n    <plus-carousel-button type=\"next\"></plus-carousel-button>\n  </plus-carousel>\n  <br />\n  <plus-carousel preset=\"presentation\" align=\"center\" :start-index=\"2\">\n    <plus-carousel-slides>\n      <plus-carousel-slide>1</plus-carousel-slide>\n      <plus-carousel-slide>2</plus-carousel-slide>\n      <plus-carousel-slide>3</plus-carousel-slide>\n      <plus-carousel-slide>4</plus-carousel-slide>\n      <plus-carousel-slide>5</plus-carousel-slide>\n    </plus-carousel-slides>\n    <plus-carousel-button type=\"previous\"></plus-carousel-button>\n    <plus-carousel-button type=\"next\"></plus-carousel-button>\n  </plus-carousel>\n  <br />\n  <plus-carousel preset=\"presentation\" align=\"end\" :start-index=\"2\">\n    <plus-carousel-slides>\n      <plus-carousel-slide>1</plus-carousel-slide>\n      <plus-carousel-slide>2</plus-carousel-slide>\n      <plus-carousel-slide>3</plus-carousel-slide>\n      <plus-carousel-slide>4</plus-carousel-slide>\n      <plus-carousel-slide>5</plus-carousel-slide>\n    </plus-carousel-slides>\n    <plus-carousel-button type=\"previous\"></plus-carousel-button>\n    <plus-carousel-button type=\"next\"></plus-carousel-button>\n  </plus-carousel>\n</div>\n"
   },
   {
     "key": "angular/card/tile",
@@ -11164,7 +11164,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <img src=\"https://picsum.photos/id/65/90/90\" />\n    <plus-avatar shape=\"circle\" size=\"xs\" slot=\"end-bottom\">\n      <img src=\"https://picsum.photos/id/65/90/90\" />\n    </plus-avatar>\n  </plus-avatar>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <img alt=\" \" src=\"https://picsum.photos/id/65/90/90\" />\n    <plus-avatar shape=\"circle\" size=\"xs\" slot=\"end-bottom\">\n      <img alt=\" \" src=\"https://picsum.photos/id/65/90/90\" />\n    </plus-avatar>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "javascript/avatar/with-avatar",
@@ -11174,7 +11174,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <img src=\"https://picsum.photos/id/65/90/90\" />\n    <plus-avatar shape=\"circle\" size=\"xs\" slot=\"end-bottom\">\n      <img src=\"https://picsum.photos/id/65/90/90\" />\n    </plus-avatar>\n  </plus-avatar>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <img alt=\" \" src=\"https://picsum.photos/id/65/90/90\" />\n    <plus-avatar shape=\"circle\" size=\"xs\" slot=\"end-bottom\">\n      <img alt=\" \" src=\"https://picsum.photos/id/65/90/90\" />\n    </plus-avatar>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "react/avatar/with-avatar",
@@ -11183,7 +11183,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar shape=\"circle\">\n        <img src=\"https://picsum.photos/id/65/90/90\" />\n        <plus-avatar shape=\"circle\" size=\"xs\" slot=\"end-bottom\">\n          <img src=\"https://picsum.photos/id/65/90/90\" />\n        </plus-avatar>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar shape=\"circle\">\n        <img alt=\" \" src=\"https://picsum.photos/id/65/90/90\" />\n        <plus-avatar shape=\"circle\" size=\"xs\" slot=\"end-bottom\">\n          <img alt=\" \" src=\"https://picsum.photos/id/65/90/90\" />\n        </plus-avatar>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/avatar/with-avatar",
@@ -11193,7 +11193,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <img src=\"https://picsum.photos/id/65/90/90\" />\n    <plus-avatar shape=\"circle\" size=\"xs\" slot=\"end-bottom\">\n      <img src=\"https://picsum.photos/id/65/90/90\" />\n    </plus-avatar>\n  </plus-avatar>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <img alt=\" \" src=\"https://picsum.photos/id/65/90/90\" />\n    <plus-avatar shape=\"circle\" size=\"xs\" slot=\"end-bottom\">\n      <img alt=\" \" src=\"https://picsum.photos/id/65/90/90\" />\n    </plus-avatar>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "vue/avatar/with-avatar",
@@ -11203,7 +11203,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <img src=\"https://picsum.photos/id/65/90/90\" />\n    <plus-avatar shape=\"circle\" size=\"xs\" slot=\"end-bottom\">\n      <img src=\"https://picsum.photos/id/65/90/90\" />\n    </plus-avatar>\n  </plus-avatar>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <img alt=\" \" src=\"https://picsum.photos/id/65/90/90\" />\n    <plus-avatar shape=\"circle\" size=\"xs\" slot=\"end-bottom\">\n      <img alt=\" \" src=\"https://picsum.photos/id/65/90/90\" />\n    </plus-avatar>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "angular/avatar/wildcard-size",
@@ -11311,7 +11311,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <title>User</title>\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "javascript/avatar/svg",
@@ -11321,7 +11321,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <title>User</title>\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "react/avatar/svg",
@@ -11330,7 +11330,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n          <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n          <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n          <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n        </svg>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n          <title>User</title>\n          <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n          <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n          <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n        </svg>\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/avatar/svg",
@@ -11340,7 +11340,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <title>User</title>\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "vue/avatar/svg",
@@ -11350,7 +11350,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar>\n    <svg viewBox=\"0 0 24 24\" stroke=\"currentColor\" fill=\"none\">\n      <title>User</title>\n      <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>\n      <circle cx=\"12\" cy=\"7\" r=\"4\"></circle>\n      <path d=\"M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2\"></path>\n    </svg>\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "angular/avatar/slots",
@@ -11566,7 +11566,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar>\n    <img alt=\" \" src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
   },
   {
     "key": "javascript/avatar/link-with-tooltip",
@@ -11576,7 +11576,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar>\n    <img alt=\" \" src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
   },
   {
     "key": "react/avatar/link-with-tooltip",
@@ -11585,7 +11585,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <img src=\"https://picsum.photos/id/177/90/90\" />\n        <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n      </plus-avatar>\n      <plus-tooltip>Tooltip</plus-tooltip>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <img alt=\" \" src=\"https://picsum.photos/id/177/90/90\" />\n        <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n      </plus-avatar>\n      <plus-tooltip>Tooltip</plus-tooltip>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/avatar/link-with-tooltip",
@@ -11595,7 +11595,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar>\n    <img alt=\" \" src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
   },
   {
     "key": "vue/avatar/link-with-tooltip",
@@ -11605,7 +11605,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar>\n    <img alt=\" \" src=\"https://picsum.photos/id/177/90/90\" />\n    <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n  </plus-avatar>\n  <plus-tooltip>Tooltip</plus-tooltip>\n</plus-center>\n"
   },
   {
     "key": "angular/avatar/image",
@@ -11615,7 +11615,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/65/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar>\n    <img alt=\" \" src=\"https://picsum.photos/id/65/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "javascript/avatar/image",
@@ -11625,7 +11625,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/65/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar>\n    <img alt=\" \" src=\"https://picsum.photos/id/65/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "react/avatar/image",
@@ -11634,7 +11634,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <img src=\"https://picsum.photos/id/65/90/90\" />\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar>\n        <img alt=\" \" src=\"https://picsum.photos/id/65/90/90\" />\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/avatar/image",
@@ -11644,7 +11644,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/65/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar>\n    <img alt=\" \" src=\"https://picsum.photos/id/65/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "vue/avatar/image",
@@ -11654,7 +11654,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar>\n    <img src=\"https://picsum.photos/id/65/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar>\n    <img alt=\" \" src=\"https://picsum.photos/id/65/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "angular/avatar/icon",
@@ -11811,7 +11811,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 1</plus-tooltip>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 2</plus-tooltip>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 3</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img alt=\" \" src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 1</plus-tooltip>\n    <plus-avatar>\n      <img alt=\" \" src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 2</plus-tooltip>\n    <plus-avatar>\n      <img alt=\" \" src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 3</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "javascript/avatar/group-link-with-tooltip",
@@ -11821,7 +11821,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 1</plus-tooltip>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 2</plus-tooltip>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 3</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img alt=\" \" src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 1</plus-tooltip>\n    <plus-avatar>\n      <img alt=\" \" src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 2</plus-tooltip>\n    <plus-avatar>\n      <img alt=\" \" src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 3</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "react/avatar/group-link-with-tooltip",
@@ -11830,7 +11830,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </plus-avatar>\n        <plus-tooltip>Tooltip 1</plus-tooltip>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </plus-avatar>\n        <plus-tooltip>Tooltip 2</plus-tooltip>\n        <plus-avatar>\n          <img src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </plus-avatar>\n        <plus-tooltip>Tooltip 3</plus-tooltip>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group>\n        <plus-avatar>\n          <img alt=\" \" src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </plus-avatar>\n        <plus-tooltip>Tooltip 1</plus-tooltip>\n        <plus-avatar>\n          <img alt=\" \" src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </plus-avatar>\n        <plus-tooltip>Tooltip 2</plus-tooltip>\n        <plus-avatar>\n          <img alt=\" \" src=\"https://picsum.photos/id/177/90/90\" />\n          <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n        </plus-avatar>\n        <plus-tooltip>Tooltip 3</plus-tooltip>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/avatar/group-link-with-tooltip",
@@ -11840,7 +11840,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 1</plus-tooltip>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 2</plus-tooltip>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 3</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img alt=\" \" src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 1</plus-tooltip>\n    <plus-avatar>\n      <img alt=\" \" src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 2</plus-tooltip>\n    <plus-avatar>\n      <img alt=\" \" src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 3</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "vue/avatar/group-link-with-tooltip",
@@ -11850,7 +11850,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\nimport '@htmlplus/ui/tooltip.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 1</plus-tooltip>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 2</plus-tooltip>\n    <plus-avatar>\n      <img src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 3</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar-group>\n    <plus-avatar>\n      <img alt=\" \" src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 1</plus-tooltip>\n    <plus-avatar>\n      <img alt=\" \" src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 2</plus-tooltip>\n    <plus-avatar>\n      <img alt=\" \" src=\"https://picsum.photos/id/177/90/90\" />\n      <a href=\"https://picsum.photos/id/177/90/90\" target=\"_blank\"></a>\n    </plus-avatar>\n    <plus-tooltip>Tooltip 3</plus-tooltip>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "angular/avatar/group-hoverable",
@@ -11860,7 +11860,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">+2</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img alt=\" \" src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img alt=\" \" src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img alt=\" \" src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img alt=\" \" src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">+2</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "javascript/avatar/group-hoverable",
@@ -11870,7 +11870,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">+2</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img alt=\" \" src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img alt=\" \" src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img alt=\" \" src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img alt=\" \" src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">+2</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "react/avatar/group-hoverable",
@@ -11879,7 +11879,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group stacked hoverable>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/548/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/628/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/660/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img src=\"https://picsum.photos/id/669/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">+2</plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar-group stacked hoverable>\n        <plus-avatar shape=\"circle\">\n          <img alt=\" \" src=\"https://picsum.photos/id/548/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img alt=\" \" src=\"https://picsum.photos/id/628/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img alt=\" \" src=\"https://picsum.photos/id/660/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">\n          <img alt=\" \" src=\"https://picsum.photos/id/669/90/90\" />\n        </plus-avatar>\n        <plus-avatar shape=\"circle\">+2</plus-avatar>\n      </plus-avatar-group>\n    </plus-center>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/avatar/group-hoverable",
@@ -11889,7 +11889,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">+2</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img alt=\" \" src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img alt=\" \" src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img alt=\" \" src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img alt=\" \" src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">+2</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "vue/avatar/group-hoverable",
@@ -11899,7 +11899,7 @@ export const examples = [
       "rtl": false
     },
     "script": "import '@htmlplus/ui/avatar-group.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
-    "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">+2</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar-group stacked hoverable>\n    <plus-avatar shape=\"circle\">\n      <img alt=\" \" src=\"https://picsum.photos/id/548/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img alt=\" \" src=\"https://picsum.photos/id/628/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img alt=\" \" src=\"https://picsum.photos/id/660/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">\n      <img alt=\" \" src=\"https://picsum.photos/id/669/90/90\" />\n    </plus-avatar>\n    <plus-avatar shape=\"circle\">+2</plus-avatar>\n  </plus-avatar-group>\n</plus-center>\n"
   },
   {
     "key": "angular/avatar/group-gutter",
@@ -12170,7 +12170,7 @@ export const examples = [
     },
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('appProgressBar')\n  appProgressBarRef!: ElementRef;\n  onClick1() {\n    this.appProgressBarRef.nativeElement?.start();\n  }\n  onClick2() {\n    this.appProgressBarRef.nativeElement?.set(0.4);\n  }\n  onClick3() {\n    this.appProgressBarRef.nativeElement?.increase();\n  }\n  onClick4() {\n    this.appProgressBarRef.nativeElement?.trickle();\n  }\n  onClick5() {\n    this.appProgressBarRef.nativeElement?.done();\n  }\n  onClick6() {\n    this.appProgressBarRef.nativeElement?.done(true);\n  }\n}\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
-    "template": "<plus-app-progress-bar #appProgressBar></plus-app-progress-bar>\n<br />\n<plus-stack gap=\"0.5rem\">\n  <button (click)=\"onClick1()\">Start</button>\n  <button (click)=\"onClick2()\">Set</button>\n  <button (click)=\"onClick3()\">Increase</button>\n  <button (click)=\"onClick4()\">Trickle</button>\n  <button (click)=\"onClick5()\">Done</button>\n  <button (click)=\"onClick6()\">Force Done</button>\n</plus-stack>\n"
+    "template": "<plus-app-progress-bar #appProgressBar></plus-app-progress-bar>\n<br />\n<plus-stack gap=\"0.5rem\">\n  <button type=\"button\" (click)=\"onClick1()\">Start</button>\n  <button type=\"button\" (click)=\"onClick2()\">Set</button>\n  <button type=\"button\" (click)=\"onClick3()\">Increase</button>\n  <button type=\"button\" (click)=\"onClick4()\">Trickle</button>\n  <button type=\"button\" (click)=\"onClick5()\">Done</button>\n  <button type=\"button\" (click)=\"onClick6()\">Force Done</button>\n</plus-stack>\n"
   },
   {
     "key": "javascript/app-progress-bar/methods",
@@ -12181,7 +12181,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\n$start.addEventListener('click', () => {\n  $appProgressBar?.start();\n});\n$set.addEventListener('click', () => {\n  $appProgressBar?.set(0.4);\n});\n$increase.addEventListener('click', () => {\n  $appProgressBar?.increase();\n});\n$trickle.addEventListener('click', () => {\n  $appProgressBar?.trickle();\n});\n$done.addEventListener('click', () => {\n  $appProgressBar?.done();\n});\n$forceDone.addEventListener('click', () => {\n  $appProgressBar?.done(true);\n});\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
-    "template": "<plus-app-progress-bar id=\"$appProgressBar\"></plus-app-progress-bar>\n<br />\n<plus-stack gap=\"0.5rem\">\n  <button id=\"$start\">Start</button>\n  <button id=\"$set\">Set</button>\n  <button id=\"$increase\">Increase</button>\n  <button id=\"$trickle\">Trickle</button>\n  <button id=\"$done\">Done</button>\n  <button id=\"$forceDone\">Force Done</button>\n</plus-stack>\n"
+    "template": "<plus-app-progress-bar id=\"$appProgressBar\"></plus-app-progress-bar>\n<br />\n<plus-stack gap=\"0.5rem\">\n  <button type=\"button\" id=\"$start\">Start</button>\n  <button type=\"button\" id=\"$set\">Set</button>\n  <button type=\"button\" id=\"$increase\">Increase</button>\n  <button type=\"button\" id=\"$trickle\">Trickle</button>\n  <button type=\"button\" id=\"$done\">Done</button>\n  <button type=\"button\" id=\"$forceDone\">Force Done</button>\n</plus-stack>\n"
   },
   {
     "key": "react/app-progress-bar/methods",
@@ -12190,7 +12190,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const appProgressBarRef = useRef();\n  function onClick1() {\n    appProgressBarRef.current?.start();\n  }\n  function onClick2() {\n    appProgressBarRef.current?.set(0.4);\n  }\n  function onClick3() {\n    appProgressBarRef.current?.increase();\n  }\n  function onClick4() {\n    appProgressBarRef.current?.trickle();\n  }\n  function onClick5() {\n    appProgressBarRef.current?.done();\n  }\n  function onClick6() {\n    appProgressBarRef.current?.done(true);\n  }\n  return (\n    <>\n      <plus-app-progress-bar ref={appProgressBarRef}></plus-app-progress-bar>\n      <br />\n      <plus-stack gap=\"0.5rem\">\n        <button onClick={onClick1}>Start</button>\n        <button onClick={onClick2}>Set</button>\n        <button onClick={onClick3}>Increase</button>\n        <button onClick={onClick4}>Trickle</button>\n        <button onClick={onClick5}>Done</button>\n        <button onClick={onClick6}>Force Done</button>\n      </plus-stack>\n    </>\n  );\n}\nexport default App;\n",
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const appProgressBarRef = useRef();\n  function onClick1() {\n    appProgressBarRef.current?.start();\n  }\n  function onClick2() {\n    appProgressBarRef.current?.set(0.4);\n  }\n  function onClick3() {\n    appProgressBarRef.current?.increase();\n  }\n  function onClick4() {\n    appProgressBarRef.current?.trickle();\n  }\n  function onClick5() {\n    appProgressBarRef.current?.done();\n  }\n  function onClick6() {\n    appProgressBarRef.current?.done(true);\n  }\n  return (\n    <>\n      <plus-app-progress-bar ref={appProgressBarRef}></plus-app-progress-bar>\n      <br />\n      <plus-stack gap=\"0.5rem\">\n        <button type=\"button\" onClick={onClick1}>\n          Start\n        </button>\n        <button type=\"button\" onClick={onClick2}>\n          Set\n        </button>\n        <button type=\"button\" onClick={onClick3}>\n          Increase\n        </button>\n        <button type=\"button\" onClick={onClick4}>\n          Trickle\n        </button>\n        <button type=\"button\" onClick={onClick5}>\n          Done\n        </button>\n        <button type=\"button\" onClick={onClick6}>\n          Force Done\n        </button>\n      </plus-stack>\n    </>\n  );\n}\nexport default App;\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n"
   },
   {
@@ -12202,7 +12202,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nlet appProgressBarRef;\nfunction onClick1() {\n  appProgressBarRef?.start();\n}\nfunction onClick2() {\n  appProgressBarRef?.set(0.4);\n}\nfunction onClick3() {\n  appProgressBarRef?.increase();\n}\nfunction onClick4() {\n  appProgressBarRef?.trickle();\n}\nfunction onClick5() {\n  appProgressBarRef?.done();\n}\nfunction onClick6() {\n  appProgressBarRef?.done(true);\n}\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
-    "template": "<plus-app-progress-bar bind:this={appProgressBarRef}></plus-app-progress-bar>\n<br />\n<plus-stack gap=\"0.5rem\">\n  <button on:click={onClick1}>Start</button>\n  <button on:click={onClick2}>Set</button>\n  <button on:click={onClick3}>Increase</button>\n  <button on:click={onClick4}>Trickle</button>\n  <button on:click={onClick5}>Done</button>\n  <button on:click={onClick6}>Force Done</button>\n</plus-stack>\n"
+    "template": "<plus-app-progress-bar bind:this={appProgressBarRef}></plus-app-progress-bar>\n<br />\n<plus-stack gap=\"0.5rem\">\n  <button type=\"button\" on:click={onClick1}>Start</button>\n  <button type=\"button\" on:click={onClick2}>Set</button>\n  <button type=\"button\" on:click={onClick3}>Increase</button>\n  <button type=\"button\" on:click={onClick4}>Trickle</button>\n  <button type=\"button\" on:click={onClick5}>Done</button>\n  <button type=\"button\" on:click={onClick6}>Force Done</button>\n</plus-stack>\n"
   },
   {
     "key": "vue/app-progress-bar/methods",
@@ -12213,7 +12213,7 @@ export const examples = [
     },
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/app-progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nconst appProgressBarRef = ref();\nfunction onClick1() {\n  appProgressBarRef.value?.start();\n}\nfunction onClick2() {\n  appProgressBarRef.value?.set(0.4);\n}\nfunction onClick3() {\n  appProgressBarRef.value?.increase();\n}\nfunction onClick4() {\n  appProgressBarRef.value?.trickle();\n}\nfunction onClick5() {\n  appProgressBarRef.value?.done();\n}\nfunction onClick6() {\n  appProgressBarRef.value?.done(true);\n}\n",
     "style": "plus-app-progress-bar {\n  /* This style is for demonstration purposes only and not for actual projects */\n  position: static;\n}\n",
-    "template": "<div>\n  <plus-app-progress-bar ref=\"appProgressBarRef\"></plus-app-progress-bar>\n  <br />\n  <plus-stack gap=\"0.5rem\">\n    <button @click=\"onClick1\">Start</button>\n    <button @click=\"onClick2\">Set</button>\n    <button @click=\"onClick3\">Increase</button>\n    <button @click=\"onClick4\">Trickle</button>\n    <button @click=\"onClick5\">Done</button>\n    <button @click=\"onClick6\">Force Done</button>\n  </plus-stack>\n</div>\n"
+    "template": "<div>\n  <plus-app-progress-bar ref=\"appProgressBarRef\"></plus-app-progress-bar>\n  <br />\n  <plus-stack gap=\"0.5rem\">\n    <button type=\"button\" @click=\"onClick1\">Start</button>\n    <button type=\"button\" @click=\"onClick2\">Set</button>\n    <button type=\"button\" @click=\"onClick3\">Increase</button>\n    <button type=\"button\" @click=\"onClick4\">Trickle</button>\n    <button type=\"button\" @click=\"onClick5\">Done</button>\n    <button type=\"button\" @click=\"onClick6\">Force Done</button>\n  </plus-stack>\n</div>\n"
   },
   {
     "key": "angular/app-progress-bar/default",
@@ -12387,7 +12387,7 @@ export const examples = [
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  assets: {\n    animations: {\n      'custom-pulse': [\n        {\n          offset: 0,\n          opacity: '0.6',\n          transform: 'scale(1.00)'\n        },\n        {\n          offset: 1,\n          opacity: '0.0',\n          transform: 'scale(1.60)'\n        }\n      ]\n    }\n  }\n});\n",
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
-    "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      [delay]=\"0000\"\n      [duration]=\"2000\"\n      [iterations]=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      [delay]=\"1000\"\n      [duration]=\"2000\"\n      [iterations]=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"https://picsum.photos/id/64/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      [delay]=\"0000\"\n      [duration]=\"2000\"\n      [iterations]=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      [delay]=\"1000\"\n      [duration]=\"2000\"\n      [iterations]=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img alt=\" \" src=\"https://picsum.photos/id/64/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "javascript/animation/register-a-custom-name",
@@ -12399,7 +12399,7 @@ export const examples = [
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  assets: {\n    animations: {\n      'custom-pulse': [\n        {\n          offset: 0,\n          opacity: '0.6',\n          transform: 'scale(1.00)'\n        },\n        {\n          offset: 1,\n          opacity: '0.0',\n          transform: 'scale(1.60)'\n        }\n      ]\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
     "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
-    "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"https://picsum.photos/id/64/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      delay=\"0000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      delay=\"1000\"\n      duration=\"2000\"\n      iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img alt=\" \" src=\"https://picsum.photos/id/64/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "react/animation/register-a-custom-name",
@@ -12409,7 +12409,7 @@ export const examples = [
       "rtl": false
     },
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  assets: {\n    animations: {\n      'custom-pulse': [\n        {\n          offset: 0,\n          opacity: '0.6',\n          transform: 'scale(1.00)'\n        },\n        {\n          offset: 1,\n          opacity: '0.0',\n          transform: 'scale(1.60)'\n        }\n      ]\n    }\n  }\n});\n",
-    "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar shape=\"circle\">\n        <plus-animation\n          delay={0}\n          duration={2000}\n          iterations={Infinity}\n          name=\"custom-pulse\"\n          run\n        ></plus-animation>\n        <plus-animation\n          delay={1000}\n          duration={2000}\n          iterations={Infinity}\n          name=\"custom-pulse\"\n          run\n        ></plus-animation>\n        <img src=\"https://picsum.photos/id/64/90/90\" />\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  return (\n    <plus-center>\n      <plus-avatar shape=\"circle\">\n        <plus-animation\n          delay={0}\n          duration={2000}\n          iterations={Infinity}\n          name=\"custom-pulse\"\n          run\n        ></plus-animation>\n        <plus-animation\n          delay={1000}\n          duration={2000}\n          iterations={Infinity}\n          name=\"custom-pulse\"\n          run\n        ></plus-animation>\n        <img alt=\" \" src=\"https://picsum.photos/id/64/90/90\" />\n      </plus-avatar>\n    </plus-center>\n  );\n}\nexport default App;\n",
     "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n"
   },
   {
@@ -12422,7 +12422,7 @@ export const examples = [
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  assets: {\n    animations: {\n      'custom-pulse': [\n        {\n          offset: 0,\n          opacity: '0.6',\n          transform: 'scale(1.00)'\n        },\n        {\n          offset: 1,\n          opacity: '0.0',\n          transform: 'scale(1.60)'\n        }\n      ]\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
     "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
-    "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation delay={0} duration={2000} iterations={Infinity} name=\"custom-pulse\" run\n    ></plus-animation>\n    <plus-animation delay={1000} duration={2000} iterations={Infinity} name=\"custom-pulse\" run\n    ></plus-animation>\n    <img src=\"https://picsum.photos/id/64/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation delay={0} duration={2000} iterations={Infinity} name=\"custom-pulse\" run\n    ></plus-animation>\n    <plus-animation delay={1000} duration={2000} iterations={Infinity} name=\"custom-pulse\" run\n    ></plus-animation>\n    <img alt=\" \" src=\"https://picsum.photos/id/64/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "vue/animation/register-a-custom-name",
@@ -12434,7 +12434,7 @@ export const examples = [
     "config": "import { setConfig } from '@htmlplus/ui/config.js';\n\nsetConfig({\n  assets: {\n    animations: {\n      'custom-pulse': [\n        {\n          offset: 0,\n          opacity: '0.6',\n          transform: 'scale(1.00)'\n        },\n        {\n          offset: 1,\n          opacity: '0.0',\n          transform: 'scale(1.60)'\n        }\n      ]\n    }\n  }\n});\n",
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/avatar.js';\nimport '@htmlplus/ui/center.js';\n",
     "style": "plus-avatar {\n  margin: 1.5rem;\n}\nplus-animation {\n  border: solid 3px black;\n  display: inline-block;\n  position: absolute;\n  inset: 0;\n  border-radius: 50%;\n  z-index: -1;\n}\n",
-    "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      :delay=\"0000\"\n      :duration=\"2000\"\n      :iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      :delay=\"1000\"\n      :duration=\"2000\"\n      :iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img src=\"https://picsum.photos/id/64/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-avatar shape=\"circle\">\n    <plus-animation\n      :delay=\"0000\"\n      :duration=\"2000\"\n      :iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <plus-animation\n      :delay=\"1000\"\n      :duration=\"2000\"\n      :iterations=\"Infinity\"\n      name=\"custom-pulse\"\n      run\n    ></plus-animation>\n    <img alt=\" \" src=\"https://picsum.photos/id/64/90/90\" />\n  </plus-avatar>\n</plus-center>\n"
   },
   {
     "key": "angular/animation/name",
@@ -12568,7 +12568,7 @@ export const examples = [
     },
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('animation')\n  animationRef!: ElementRef;\n  onClick1() {\n    this.animationRef.nativeElement.cancel();\n  }\n  onClick2() {\n    this.animationRef.nativeElement.finish();\n  }\n  onClick3() {\n    this.animationRef.nativeElement.pause();\n  }\n  onClick4() {\n    this.animationRef.nativeElement.play();\n  }\n}\n",
     "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-    "template": "<plus-center>\n  <plus-animation [iterations]=\"3\" name=\"fade-out\" #animation></plus-animation>\n</plus-center>\n<br />\n<plus-center>\n  <button (click)=\"onClick1()\">Cancel</button>\n  <button (click)=\"onClick2()\">Finish</button>\n  <button (click)=\"onClick3()\">Pause</button>\n  <button (click)=\"onClick4()\">Play</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-animation [iterations]=\"3\" name=\"fade-out\" #animation></plus-animation>\n</plus-center>\n<br />\n<plus-center>\n  <button type=\"button\" (click)=\"onClick1()\">Cancel</button>\n  <button type=\"button\" (click)=\"onClick2()\">Finish</button>\n  <button type=\"button\" (click)=\"onClick3()\">Pause</button>\n  <button type=\"button\" (click)=\"onClick4()\">Play</button>\n</plus-center>\n"
   },
   {
     "key": "javascript/animation/methods",
@@ -12579,7 +12579,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/center.js';\n\n$cancel.addEventListener('click', () => {\n  $animation.cancel();\n});\n$finish.addEventListener('click', () => {\n  $animation.finish();\n});\n$pause.addEventListener('click', () => {\n  $animation.pause();\n});\n$play.addEventListener('click', () => {\n  $animation.play();\n});\n",
     "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-    "template": "<plus-center>\n  <plus-animation id=\"$animation\" iterations=\"3\" name=\"fade-out\"></plus-animation>\n</plus-center>\n<br />\n<plus-center>\n  <button id=\"$cancel\">Cancel</button>\n  <button id=\"$finish\">Finish</button>\n  <button id=\"$pause\">Pause</button>\n  <button id=\"$play\">Play</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-animation id=\"$animation\" iterations=\"3\" name=\"fade-out\"></plus-animation>\n</plus-center>\n<br />\n<plus-center>\n  <button type=\"button\" id=\"$cancel\">Cancel</button>\n  <button type=\"button\" id=\"$finish\">Finish</button>\n  <button type=\"button\" id=\"$pause\">Pause</button>\n  <button type=\"button\" id=\"$play\">Play</button>\n</plus-center>\n"
   },
   {
     "key": "react/animation/methods",
@@ -12588,7 +12588,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  const animationRef = useRef();\n  function onClick1() {\n    animationRef.current.cancel();\n  }\n  function onClick2() {\n    animationRef.current.finish();\n  }\n  function onClick3() {\n    animationRef.current.pause();\n  }\n  function onClick4() {\n    animationRef.current.play();\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-animation iterations={3} name=\"fade-out\" ref={animationRef}></plus-animation>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button onClick={onClick1}>Cancel</button>\n        <button onClick={onClick2}>Finish</button>\n        <button onClick={onClick3}>Pause</button>\n        <button onClick={onClick4}>Play</button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n",
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  const animationRef = useRef();\n  function onClick1() {\n    animationRef.current.cancel();\n  }\n  function onClick2() {\n    animationRef.current.finish();\n  }\n  function onClick3() {\n    animationRef.current.pause();\n  }\n  function onClick4() {\n    animationRef.current.play();\n  }\n  return (\n    <>\n      <plus-center>\n        <plus-animation iterations={3} name=\"fade-out\" ref={animationRef}></plus-animation>\n      </plus-center>\n      <br />\n      <plus-center>\n        <button type=\"button\" onClick={onClick1}>\n          Cancel\n        </button>\n        <button type=\"button\" onClick={onClick2}>\n          Finish\n        </button>\n        <button type=\"button\" onClick={onClick3}>\n          Pause\n        </button>\n        <button type=\"button\" onClick={onClick4}>\n          Play\n        </button>\n      </plus-center>\n    </>\n  );\n}\nexport default App;\n",
     "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n"
   },
   {
@@ -12600,7 +12600,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/center.js';\n\nlet animationRef;\nfunction onClick1() {\n  animationRef.cancel();\n}\nfunction onClick2() {\n  animationRef.finish();\n}\nfunction onClick3() {\n  animationRef.pause();\n}\nfunction onClick4() {\n  animationRef.play();\n}\n",
     "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-    "template": "<plus-center>\n  <plus-animation iterations={3} name=\"fade-out\" bind:this={animationRef}></plus-animation>\n</plus-center>\n<br />\n<plus-center>\n  <button on:click={onClick1}>Cancel</button>\n  <button on:click={onClick2}>Finish</button>\n  <button on:click={onClick3}>Pause</button>\n  <button on:click={onClick4}>Play</button>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-animation iterations={3} name=\"fade-out\" bind:this={animationRef}></plus-animation>\n</plus-center>\n<br />\n<plus-center>\n  <button type=\"button\" on:click={onClick1}>Cancel</button>\n  <button type=\"button\" on:click={onClick2}>Finish</button>\n  <button type=\"button\" on:click={onClick3}>Pause</button>\n  <button type=\"button\" on:click={onClick4}>Play</button>\n</plus-center>\n"
   },
   {
     "key": "vue/animation/methods",
@@ -12611,7 +12611,7 @@ export const examples = [
     },
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/center.js';\n\nconst animationRef = ref();\nfunction onClick1() {\n  animationRef.value.cancel();\n}\nfunction onClick2() {\n  animationRef.value.finish();\n}\nfunction onClick3() {\n  animationRef.value.pause();\n}\nfunction onClick4() {\n  animationRef.value.play();\n}\n",
     "style": "button {\n  margin: 0 0.5rem;\n}\nplus-animation {\n  background: lightgray;\n  width: 100px;\n  height: 100px;\n}\n",
-    "template": "<div>\n  <plus-center>\n    <plus-animation :iterations=\"3\" name=\"fade-out\" ref=\"animationRef\"></plus-animation>\n  </plus-center>\n  <br />\n  <plus-center>\n    <button @click=\"onClick1\">Cancel</button>\n    <button @click=\"onClick2\">Finish</button>\n    <button @click=\"onClick3\">Pause</button>\n    <button @click=\"onClick4\">Play</button>\n  </plus-center>\n</div>\n"
+    "template": "<div>\n  <plus-center>\n    <plus-animation :iterations=\"3\" name=\"fade-out\" ref=\"animationRef\"></plus-animation>\n  </plus-center>\n  <br />\n  <plus-center>\n    <button type=\"button\" @click=\"onClick1\">Cancel</button>\n    <button type=\"button\" @click=\"onClick2\">Finish</button>\n    <button type=\"button\" @click=\"onClick3\">Pause</button>\n    <button type=\"button\" @click=\"onClick4\">Play</button>\n  </plus-center>\n</div>\n"
   },
   {
     "key": "angular/animation/keyframes",
@@ -12897,7 +12897,7 @@ export const examples = [
     },
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/attention-seekers/tada.js';\nimport '@htmlplus/ui/center.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('animation')\n  animationRef!: ElementRef;\n  onClick() {\n    this.animationRef.nativeElement.run = true;\n  }\n}\n",
     "style": "plus-animation {\n  display: inline-block;\n}\n",
-    "template": "<plus-center>\n  <plus-animation name=\"tada\" #animation>\n    <button (click)=\"onClick()\">Click Me</button>\n  </plus-animation>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-animation name=\"tada\" #animation>\n    <button type=\"button\" (click)=\"onClick()\">Click Me</button>\n  </plus-animation>\n</plus-center>\n"
   },
   {
     "key": "javascript/animation/button",
@@ -12908,7 +12908,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/attention-seekers/tada.js';\nimport '@htmlplus/ui/center.js';\n\n$button.addEventListener('click', () => {\n  $animation.run = true;\n});\n",
     "style": "plus-animation {\n  display: inline-block;\n}\n",
-    "template": "<plus-center>\n  <plus-animation id=\"$animation\" name=\"tada\">\n    <button id=\"$button\">Click Me</button>\n  </plus-animation>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-animation id=\"$animation\" name=\"tada\">\n    <button type=\"button\" id=\"$button\">Click Me</button>\n  </plus-animation>\n</plus-center>\n"
   },
   {
     "key": "react/animation/button",
@@ -12917,7 +12917,7 @@ export const examples = [
       "isolate": false,
       "rtl": false
     },
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/attention-seekers/tada.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  const animationRef = useRef();\n  function onClick() {\n    animationRef.current.run = true;\n  }\n  return (\n    <plus-center>\n      <plus-animation name=\"tada\" ref={animationRef}>\n        <button onClick={onClick}>Click Me</button>\n      </plus-animation>\n    </plus-center>\n  );\n}\nexport default App;\n",
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/attention-seekers/tada.js';\nimport '@htmlplus/ui/center.js';\n\nfunction App() {\n  const animationRef = useRef();\n  function onClick() {\n    animationRef.current.run = true;\n  }\n  return (\n    <plus-center>\n      <plus-animation name=\"tada\" ref={animationRef}>\n        <button type=\"button\" onClick={onClick}>\n          Click Me\n        </button>\n      </plus-animation>\n    </plus-center>\n  );\n}\nexport default App;\n",
     "style": "plus-animation {\n  display: inline-block;\n}\n"
   },
   {
@@ -12929,7 +12929,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/attention-seekers/tada.js';\nimport '@htmlplus/ui/center.js';\n\nlet animationRef;\nfunction onClick() {\n  animationRef.run = true;\n}\n",
     "style": "plus-animation {\n  display: inline-block;\n}\n",
-    "template": "<plus-center>\n  <plus-animation name=\"tada\" bind:this={animationRef}>\n    <button on:click={onClick}>Click Me</button>\n  </plus-animation>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-animation name=\"tada\" bind:this={animationRef}>\n    <button type=\"button\" on:click={onClick}>Click Me</button>\n  </plus-animation>\n</plus-center>\n"
   },
   {
     "key": "vue/animation/button",
@@ -12940,7 +12940,7 @@ export const examples = [
     },
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/animation.js';\nimport '@htmlplus/ui/animation/names/attention-seekers/tada.js';\nimport '@htmlplus/ui/center.js';\n\nconst animationRef = ref();\nfunction onClick() {\n  animationRef.value.run = true;\n}\n",
     "style": "plus-animation {\n  display: inline-block;\n}\n",
-    "template": "<plus-center>\n  <plus-animation name=\"tada\" ref=\"animationRef\">\n    <button @click=\"onClick\">Click Me</button>\n  </plus-animation>\n</plus-center>\n"
+    "template": "<plus-center>\n  <plus-animation name=\"tada\" ref=\"animationRef\">\n    <button type=\"button\" @click=\"onClick\">Click Me</button>\n  </plus-animation>\n</plus-center>\n"
   },
   {
     "key": "angular/accordion/slots",
@@ -12950,7 +12950,7 @@ export const examples = [
       "rtl": true
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
-    "template": "<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n    <plus-faker [seed]=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n<br />\n<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar\n      variant=\"indeterminate\"\n      style=\"height: 2px\"\n      slot=\"middle\"\n    ></plus-progress-bar>\n    <plus-faker [seed]=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n<br />\n<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar\n      variant=\"indeterminate\"\n      style=\"height: 2px\"\n      slot=\"bottom\"\n    ></plus-progress-bar>\n    <plus-faker [seed]=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n"
+    "template": "<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar indeterminate style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n    <plus-faker [seed]=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n<br />\n<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar indeterminate style=\"height: 2px\" slot=\"middle\"></plus-progress-bar>\n    <plus-faker [seed]=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n<br />\n<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar indeterminate style=\"height: 2px\" slot=\"bottom\"></plus-progress-bar>\n    <plus-faker [seed]=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n"
   },
   {
     "key": "javascript/accordion/slots",
@@ -12960,7 +12960,7 @@ export const examples = [
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n    <plus-faker seed=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n<br />\n<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar\n      variant=\"indeterminate\"\n      style=\"height: 2px\"\n      slot=\"middle\"\n    ></plus-progress-bar>\n    <plus-faker seed=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n<br />\n<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar\n      variant=\"indeterminate\"\n      style=\"height: 2px\"\n      slot=\"bottom\"\n    ></plus-progress-bar>\n    <plus-faker seed=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n"
+    "template": "<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar indeterminate style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n    <plus-faker seed=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n<br />\n<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar indeterminate style=\"height: 2px\" slot=\"middle\"></plus-progress-bar>\n    <plus-faker seed=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n<br />\n<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar indeterminate style=\"height: 2px\" slot=\"bottom\"></plus-progress-bar>\n    <plus-faker seed=\"0\"></plus-faker>\n  </plus-accordion>\n</div>\n"
   },
   {
     "key": "react/accordion/slots",
@@ -12969,7 +12969,7 @@ export const examples = [
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"top\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n      <br />\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"middle\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n      <br />\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            variant=\"indeterminate\"\n            style={{\n              height: '2px'\n            }}\n            slot=\"bottom\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <>\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            indeterminate\n            style={{\n              height: '2px'\n            }}\n            slot=\"top\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n      <br />\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            indeterminate\n            style={{\n              height: '2px'\n            }}\n            slot=\"middle\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n      <br />\n      <div>\n        <plus-accordion summary=\"Summary\" open>\n          <plus-progress-bar\n            indeterminate\n            style={{\n              height: '2px'\n            }}\n            slot=\"bottom\"\n          ></plus-progress-bar>\n          <plus-faker seed={0}></plus-faker>\n        </plus-accordion>\n      </div>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/accordion/slots",
@@ -12979,7 +12979,7 @@ export const examples = [
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"top\"></plus-progress-bar>\n    <plus-faker seed={0}></plus-faker>\n  </plus-accordion>\n</div>\n<br />\n<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"middle\"\n    ></plus-progress-bar>\n    <plus-faker seed={0}></plus-faker>\n  </plus-accordion>\n</div>\n<br />\n<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px;\" slot=\"bottom\"\n    ></plus-progress-bar>\n    <plus-faker seed={0}></plus-faker>\n  </plus-accordion>\n</div>\n"
+    "template": "<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar indeterminate style=\"height: 2px;\" slot=\"top\"></plus-progress-bar>\n    <plus-faker seed={0}></plus-faker>\n  </plus-accordion>\n</div>\n<br />\n<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar indeterminate style=\"height: 2px;\" slot=\"middle\"></plus-progress-bar>\n    <plus-faker seed={0}></plus-faker>\n  </plus-accordion>\n</div>\n<br />\n<div>\n  <plus-accordion summary=\"Summary\" open>\n    <plus-progress-bar indeterminate style=\"height: 2px;\" slot=\"bottom\"></plus-progress-bar>\n    <plus-faker seed={0}></plus-faker>\n  </plus-accordion>\n</div>\n"
   },
   {
     "key": "vue/accordion/slots",
@@ -12989,7 +12989,7 @@ export const examples = [
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\nimport '@htmlplus/ui/stack.js';\n",
-    "template": "<div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar variant=\"indeterminate\" style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <br />\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"middle\"\n      ></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <br />\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        style=\"height: 2px\"\n        slot=\"bottom\"\n      ></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n</div>\n"
+    "template": "<div>\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar indeterminate style=\"height: 2px\" slot=\"top\"></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <br />\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar indeterminate style=\"height: 2px\" slot=\"middle\"></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n  <br />\n  <div>\n    <plus-accordion summary=\"Summary\" open>\n      <plus-progress-bar indeterminate style=\"height: 2px\" slot=\"bottom\"></plus-progress-bar>\n      <plus-faker :seed=\"0\"></plus-faker>\n    </plus-accordion>\n  </div>\n</div>\n"
   },
   {
     "key": "angular/accordion/prevent-from-toggling",
@@ -13147,7 +13147,7 @@ export const examples = [
     },
     "description": "Open the developer console.",
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('accordion')\n  accordionRef!: ElementRef;\n  onClick1() {\n    this.accordionRef.nativeElement.collapse();\n  }\n  onClick2() {\n    this.accordionRef.nativeElement.expand();\n  }\n  onClick3() {\n    this.accordionRef.nativeElement.toggle();\n  }\n}\n",
-    "template": "<plus-stack gap=\"1rem\">\n  <button (click)=\"onClick1()\">Collapse</button>\n  <button (click)=\"onClick2()\">Expand</button>\n  <button (click)=\"onClick3()\">Toggle</button>\n</plus-stack>\n<br />\n<plus-accordion summary=\"Summary\" #accordion>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "template": "<plus-stack gap=\"1rem\">\n  <button type=\"button\" (click)=\"onClick1()\">Collapse</button>\n  <button type=\"button\" (click)=\"onClick2()\">Expand</button>\n  <button type=\"button\" (click)=\"onClick3()\">Toggle</button>\n</plus-stack>\n<br />\n<plus-accordion summary=\"Summary\" #accordion>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "javascript/accordion/methods",
@@ -13158,7 +13158,7 @@ export const examples = [
     },
     "description": "Open the developer console.",
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\n$collapse.addEventListener('click', () => {\n  $accordion.collapse();\n});\n$expand.addEventListener('click', () => {\n  $accordion.expand();\n});\n$toggle.addEventListener('click', () => {\n  $accordion.toggle();\n});\n",
-    "template": "<plus-stack gap=\"1rem\">\n  <button id=\"$collapse\">Collapse</button>\n  <button id=\"$expand\">Expand</button>\n  <button id=\"$toggle\">Toggle</button>\n</plus-stack>\n<br />\n<plus-accordion id=\"$accordion\" summary=\"Summary\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "template": "<plus-stack gap=\"1rem\">\n  <button type=\"button\" id=\"$collapse\">Collapse</button>\n  <button type=\"button\" id=\"$expand\">Expand</button>\n  <button type=\"button\" id=\"$toggle\">Toggle</button>\n</plus-stack>\n<br />\n<plus-accordion id=\"$accordion\" summary=\"Summary\">\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "react/accordion/methods",
@@ -13168,7 +13168,7 @@ export const examples = [
       "rtl": true
     },
     "description": "Open the developer console.",
-    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const accordionRef = useRef();\n  function onClick1() {\n    accordionRef.current.collapse();\n  }\n  function onClick2() {\n    accordionRef.current.expand();\n  }\n  function onClick3() {\n    accordionRef.current.toggle();\n  }\n  return (\n    <>\n      <plus-stack gap=\"1rem\">\n        <button onClick={onClick1}>Collapse</button>\n        <button onClick={onClick2}>Expand</button>\n        <button onClick={onClick3}>Toggle</button>\n      </plus-stack>\n      <br />\n      <plus-accordion summary=\"Summary\" ref={accordionRef}>\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef } from 'react';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  const accordionRef = useRef();\n  function onClick1() {\n    accordionRef.current.collapse();\n  }\n  function onClick2() {\n    accordionRef.current.expand();\n  }\n  function onClick3() {\n    accordionRef.current.toggle();\n  }\n  return (\n    <>\n      <plus-stack gap=\"1rem\">\n        <button type=\"button\" onClick={onClick1}>\n          Collapse\n        </button>\n        <button type=\"button\" onClick={onClick2}>\n          Expand\n        </button>\n        <button type=\"button\" onClick={onClick3}>\n          Toggle\n        </button>\n      </plus-stack>\n      <br />\n      <plus-accordion summary=\"Summary\" ref={accordionRef}>\n        <plus-faker></plus-faker>\n      </plus-accordion>\n    </>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/accordion/methods",
@@ -13179,7 +13179,7 @@ export const examples = [
     },
     "description": "Open the developer console.",
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nlet accordionRef;\nfunction onClick1() {\n  accordionRef.collapse();\n}\nfunction onClick2() {\n  accordionRef.expand();\n}\nfunction onClick3() {\n  accordionRef.toggle();\n}\n",
-    "template": "<plus-stack gap=\"1rem\">\n  <button on:click={onClick1}>Collapse</button>\n  <button on:click={onClick2}>Expand</button>\n  <button on:click={onClick3}>Toggle</button>\n</plus-stack>\n<br />\n<plus-accordion summary=\"Summary\" bind:this={accordionRef}>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "template": "<plus-stack gap=\"1rem\">\n  <button type=\"button\" on:click={onClick1}>Collapse</button>\n  <button type=\"button\" on:click={onClick2}>Expand</button>\n  <button type=\"button\" on:click={onClick3}>Toggle</button>\n</plus-stack>\n<br />\n<plus-accordion summary=\"Summary\" bind:this={accordionRef}>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "vue/accordion/methods",
@@ -13190,7 +13190,7 @@ export const examples = [
     },
     "description": "Open the developer console.",
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nconst accordionRef = ref();\nfunction onClick1() {\n  accordionRef.value.collapse();\n}\nfunction onClick2() {\n  accordionRef.value.expand();\n}\nfunction onClick3() {\n  accordionRef.value.toggle();\n}\n",
-    "template": "<div>\n  <plus-stack gap=\"1rem\">\n    <button @click=\"onClick1\">Collapse</button>\n    <button @click=\"onClick2\">Expand</button>\n    <button @click=\"onClick3\">Toggle</button>\n  </plus-stack>\n  <br />\n  <plus-accordion summary=\"Summary\" ref=\"accordionRef\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
+    "template": "<div>\n  <plus-stack gap=\"1rem\">\n    <button type=\"button\" @click=\"onClick1\">Collapse</button>\n    <button type=\"button\" @click=\"onClick2\">Expand</button>\n    <button type=\"button\" @click=\"onClick3\">Toggle</button>\n  </plus-stack>\n  <br />\n  <plus-accordion summary=\"Summary\" ref=\"accordionRef\">\n    <plus-faker></plus-faker>\n  </plus-accordion>\n</div>\n"
   },
   {
     "key": "angular/accordion/disabled",
@@ -13353,7 +13353,7 @@ export const examples = [
     },
     "script": "import { Component } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {}\n",
     "style": "plus-stack[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n",
-    "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify=\"between\">\n    <b>Summary</b>\n    <button>Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify=\"between\">\n    <b>Summary</b>\n    <button type=\"button\">Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "javascript/accordion/custom-summary-template",
@@ -13364,7 +13364,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-stack[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n",
-    "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify=\"between\">\n    <b>Summary</b>\n    <button>Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify=\"between\">\n    <b>Summary</b>\n    <button type=\"button\">Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "react/accordion/custom-summary-template",
@@ -13373,7 +13373,7 @@ export const examples = [
       "isolate": false,
       "rtl": true
     },
-    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-accordion>\n      <plus-stack slot=\"summary\" justify=\"between\">\n        <b>Summary</b>\n        <button>Action</button>\n      </plus-stack>\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n}\nexport default App;\n",
+    "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n\nfunction App() {\n  return (\n    <plus-accordion>\n      <plus-stack slot=\"summary\" justify=\"between\">\n        <b>Summary</b>\n        <button type=\"button\">Action</button>\n      </plus-stack>\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n}\nexport default App;\n",
     "style": "plus-stack[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n"
   },
   {
@@ -13385,7 +13385,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-stack[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n",
-    "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify=\"between\">\n    <b>Summary</b>\n    <button>Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify=\"between\">\n    <b>Summary</b>\n    <button type=\"button\">Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "vue/accordion/custom-summary-template",
@@ -13396,7 +13396,7 @@ export const examples = [
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/stack.js';\n",
     "style": "plus-stack[slot='summary'] {\n  flex-grow: 1;\n  margin-inline-end: 1rem;\n}\n",
-    "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify=\"between\">\n    <b>Summary</b>\n    <button>Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "template": "<plus-accordion>\n  <plus-stack slot=\"summary\" justify=\"between\">\n    <b>Summary</b>\n    <button type=\"button\">Action</button>\n  </plus-stack>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "angular/accordion/custom-icon",
@@ -13455,7 +13455,7 @@ export const examples = [
       "rtl": true
     },
     "script": "import { Component, ElementRef, ViewChild } from '@angular/core';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  @ViewChild('accordion')\n  accordionRef!: ElementRef;\n  hidden = true;\n  onPlusExpand(event) {\n    event.preventDefault();\n    this.hidden = false;\n    setTimeout(() => {\n      this.hidden = true;\n      this.accordionRef.nativeElement.open = true;\n    }, 2500);\n  }\n}\n",
-    "template": "<plus-accordion summary=\"Summary\" (plus-expand)=\"onPlusExpand($event)\" #accordion>\n  <plus-progress-bar\n    variant=\"indeterminate\"\n    slot=\"top\"\n    style=\"height: 2px\"\n    [hidden]=\"hidden\"\n  ></plus-progress-bar>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "template": "<plus-accordion summary=\"Summary\" (plus-expand)=\"onPlusExpand($event)\" #accordion>\n  <plus-progress-bar\n    indeterminate\n    slot=\"top\"\n    style=\"height: 2px\"\n    [hidden]=\"hidden\"\n  ></plus-progress-bar>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "javascript/accordion/async-content",
@@ -13465,7 +13465,7 @@ export const examples = [
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\n\n$accordion.addEventListener('plus-expand', (event) => {\n  event.preventDefault();\n  $progress.hidden = false;\n  setTimeout(() => {\n    $progress.hidden = true;\n    $accordion.open = true;\n  }, 2500);\n});\n",
-    "template": "<plus-accordion id=\"$accordion\" summary=\"Summary\">\n  <plus-progress-bar\n    id=\"$progress\"\n    variant=\"indeterminate\"\n    slot=\"top\"\n    style=\"height: 2px\"\n    hidden\n  ></plus-progress-bar>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "template": "<plus-accordion id=\"$accordion\" summary=\"Summary\">\n  <plus-progress-bar\n    id=\"$progress\"\n    indeterminate\n    slot=\"top\"\n    style=\"height: 2px\"\n    hidden\n  ></plus-progress-bar>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "react/accordion/async-content",
@@ -13474,7 +13474,7 @@ export const examples = [
       "isolate": false,
       "rtl": true
     },
-    "script": "import { useRef, useState } from 'react';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\n\nfunction App() {\n  const accordionRef = useRef();\n  const [hidden, setHidden] = useState(true);\n  function onPlusExpand(event) {\n    event.preventDefault();\n    setHidden(false);\n    setTimeout(() => {\n      setHidden(true);\n      accordionRef.current.open = true;\n    }, 2500);\n  }\n  return (\n    <plus-accordion summary=\"Summary\" onPlusExpand={onPlusExpand} ref={accordionRef}>\n      <plus-progress-bar\n        variant=\"indeterminate\"\n        slot=\"top\"\n        style={{\n          height: '2px'\n        }}\n        hidden={hidden}\n      ></plus-progress-bar>\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n}\nexport default App;\n"
+    "script": "import { useRef, useState } from 'react';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\n\nfunction App() {\n  const accordionRef = useRef();\n  const [hidden, setHidden] = useState(true);\n  function onPlusExpand(event) {\n    event.preventDefault();\n    setHidden(false);\n    setTimeout(() => {\n      setHidden(true);\n      accordionRef.current.open = true;\n    }, 2500);\n  }\n  return (\n    <plus-accordion summary=\"Summary\" onPlusExpand={onPlusExpand} ref={accordionRef}>\n      <plus-progress-bar\n        indeterminate\n        slot=\"top\"\n        style={{\n          height: '2px'\n        }}\n        hidden={hidden}\n      ></plus-progress-bar>\n      <plus-faker></plus-faker>\n    </plus-accordion>\n  );\n}\nexport default App;\n"
   },
   {
     "key": "svelte/accordion/async-content",
@@ -13484,7 +13484,7 @@ export const examples = [
       "rtl": true
     },
     "script": "import '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\n\nlet accordionRef;\nlet hidden = true;\nfunction onPlusExpand(event) {\n  event.preventDefault();\n  hidden = false;\n  setTimeout(() => {\n    hidden = true;\n    accordionRef.open = true;\n  }, 2500);\n}\n",
-    "template": "<plus-accordion summary=\"Summary\" on:plus-expand={onPlusExpand} bind:this={accordionRef}>\n  <plus-progress-bar variant=\"indeterminate\" slot=\"top\" style=\"height: 2px;\" {hidden}\n  ></plus-progress-bar>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "template": "<plus-accordion summary=\"Summary\" on:plus-expand={onPlusExpand} bind:this={accordionRef}>\n  <plus-progress-bar indeterminate slot=\"top\" style=\"height: 2px;\" {hidden}></plus-progress-bar>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   },
   {
     "key": "vue/accordion/async-content",
@@ -13494,6 +13494,6 @@ export const examples = [
       "rtl": true
     },
     "script": "import { ref } from 'vue';\n\nimport '@htmlplus/ui/accordion.js';\nimport '@htmlplus/ui/faker.js';\nimport '@htmlplus/ui/progress-bar.js';\n\nconst accordionRef = ref();\nconst hidden = ref(true);\nfunction onPlusExpand(event) {\n  event.preventDefault();\n  hidden.value = false;\n  setTimeout(() => {\n    hidden.value = true;\n    accordionRef.value.open = true;\n  }, 2500);\n}\n",
-    "template": "<plus-accordion summary=\"Summary\" @plus-expand=\"onPlusExpand\" ref=\"accordionRef\">\n  <plus-progress-bar\n    variant=\"indeterminate\"\n    slot=\"top\"\n    style=\"height: 2px\"\n    :hidden=\"hidden\"\n  ></plus-progress-bar>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
+    "template": "<plus-accordion summary=\"Summary\" @plus-expand=\"onPlusExpand\" ref=\"accordionRef\">\n  <plus-progress-bar\n    indeterminate\n    slot=\"top\"\n    style=\"height: 2px\"\n    :hidden=\"hidden\"\n  ></plus-progress-bar>\n  <plus-faker></plus-faker>\n</plus-accordion>\n"
   }
 ];

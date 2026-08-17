@@ -22,7 +22,7 @@ function App() {
   return (
     <plus-accordion summary="Summary" onPlusExpand={onPlusExpand} ref={accordionRef}>
       <plus-progress-bar
-        variant="indeterminate"
+        indeterminate
         slot="top"
         style={{
           height: '2px'

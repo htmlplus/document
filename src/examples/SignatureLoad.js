@@ -72,7 +72,9 @@ function App() {
       </plus-center>
       <br />
       <plus-center>
-        <button onClick={onClick}>Load</button>
+        <button type="button" onClick={onClick}>
+          Load
+        </button>
       </plus-center>
     </>
   );

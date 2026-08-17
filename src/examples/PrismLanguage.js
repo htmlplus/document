@@ -13,7 +13,7 @@ setConfig({
       properties: {
         resolver: {
           default: async ({ key, value }) => {
-            if (key == 'language') {
+            if (key === 'language') {
               await import(`prismjs/components/prism-${value}.js`);
             }
           }

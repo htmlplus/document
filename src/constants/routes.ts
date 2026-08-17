@@ -12,7 +12,7 @@ export const ROUTES = {
 	GLOBAL_CONFIGURATION: '/global-configuration',
 	OVERRIDABLE_PROPERTIES: '/overridable-properties',
 	OVERRIDES_PROPERTY: '/overrides-property',
-	VARIANT_PROPERTY: '/variant-property',
+	PRESET_PROPERTY: '/preset-property',
 	COLOR_PROPERTIES: '/color-properties',
 	DISABLE_APIS: '/disable-apis',
 	OVERVIEW: '/overview',

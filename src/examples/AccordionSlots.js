@@ -13,7 +13,7 @@ function App() {
       <div>
         <plus-accordion summary="Summary" open>
           <plus-progress-bar
-            variant="indeterminate"
+            indeterminate
             style={{
               height: '2px'
             }}
@@ -26,7 +26,7 @@ function App() {
       <div>
         <plus-accordion summary="Summary" open>
           <plus-progress-bar
-            variant="indeterminate"
+            indeterminate
             style={{
               height: '2px'
             }}
@@ -39,7 +39,7 @@ function App() {
       <div>
         <plus-accordion summary="Summary" open>
           <plus-progress-bar
-            variant="indeterminate"
+            indeterminate
             style={{
               height: '2px'
             }}

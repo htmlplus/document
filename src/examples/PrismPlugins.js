@@ -13,7 +13,7 @@ setConfig({
       properties: {
         resolver: {
           default: async ({ key, value }) => {
-            if (key == 'plugin') {
+            if (key === 'plugin') {
               await import(`prismjs/plugins/${value}/prism-${value}.js`);
               try {
                 const url = `https://cdn.jsdelivr.net/npm/prismjs/plugins/${value}/prism-${value}.css`;
